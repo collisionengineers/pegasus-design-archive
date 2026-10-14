@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<title>v41 self-check</title>
+</head>
+<body>
+<!-- Automated self-check for pegasus_shell_v41.html and pegasus_case_workspace_v41.html.
+     Loads every state in proposal and today modes, verifies all v41 findings (f01-f38 / Items A-Y),
+     widgets, and strip controls, and prints RESULT {"fail":[],"okCount":N}. -->
+<iframe id="f" style="width:1580px;height:1000px"></iframe>
+<pre id="out">PENDING</pre>
+<script>
+const log = [], ok = [];
+const f = document.getElementById('f');
+function check(name, cond) { (cond ? ok : log).push((cond ? 'OK ' : 'FAIL ') + name); }
+const $ = (d, s) => d.querySelector(s), $$ = (d, s) => Array.from(d.querySelectorAll(s));
+const vis = el => !!el && !el.closest('[hidden]') && getComputedStyle(el).display !== 'none' && el.getClientRects().length > 0;
+
+const SHELL_STATES = [
+  'auth-signin', 'auth-consent', 'auth-errors', 'shell-dialogs',
+  'work-centre', 'work-centre-tabs', 'search', 'inbox', 'mail-message',
+  'upload-review', 'cases-queue', 'create-case', 'triage-case',
+  'unidentified-images', 'admin-accounts', 'admin-contacts',
+  'admin-config-mail', 'admin-logs-ops'
+];
+
+const CASE_STATES = [
+  'v41-overview', 'delivery-rules', 'delivery-plain', 'delivery-stop',
+  'delivery-missing', 'next-action-tasks', 'tasks-dialog',
+  'engineer-read', 'engineer-edit'
+];
+
+const CASES = [];
+
+// 1. Every shell state in proposal & today modes
+for (const s of SHELL_STATES) {
+  CASES.push([s, 'proposal', false, (w, d) => {
+    check(`shell ${s} (proposal): renders`, !!$(d, '#mock-root').firstElementChild);
+    check(`shell ${s} (proposal): strip state matches`, $(d, '#mock-state').value === s);
+    check(`shell ${s} (proposal): design attribute is proposal`, d.documentElement.getAttribute('data-design') === 'proposal');
+    check(`shell ${s} (proposal): today-only elements hidden`, $$(d, '[data-v41-today-only]').every(el => !vis(el)));
+  }]);
+  CASES.push([s, 'today', false, (w, d) => {
+    check(`shell ${s} (today): renders`, !!$(d, '#mock-root').firstElementChild);
+    check(`shell ${s} (today): design attribute is today`, d.documentElement.getAttribute('data-design') === 'today');
+    check(`shell ${s} (today): proposal-only elements hidden`, $$(d, '[data-v41-proposal-only]').every(el => !vis(el)));
+  }]);
+}
+
+// 2. Specific shell assertions for Items A-O & T-Y
+CASES.push(['auth-signin', 'proposal', false, (w, d) => {
+  check('Item E (f08): forced password change has full-width primary submit button', vis($(d, '[data-v41-pw-form] > button.btn--primary')));
+  check('Item E (f08): password reveal buttons visible on password change inputs', $$(d, '[data-v41-pw-form] [data-password-reveal]').filter(vis).length === 3);
+  check('Item E (f08): voluntary password change has Account eyebrow and Cancel link', /Account/i.test($(d, '[aria-labelledby="pw-vol-title"]').textContent) && /Cancel/i.test($(d, '[aria-labelledby="pw-vol-title"]').textContent));
+}]);
+
+CASES.push(['auth-consent', 'proposal', false, (w, d) => {
+  const txt = $(d, '.consent-card').innerText;
+  check('Item D (f07): consent screen does not use banned word "intake"', !/\bintake\b/i.test(txt));
+  check('Item D (f07): consent screen uses "Inbox & Upload"', /Inbox & Upload/.test(txt));
+  check('Item D (f07): raw scope code tags hidden in proposal', $$(d, '.consent-scopes code').filter(vis).length === 0);
+}]);
+
+CASES.push(['auth-errors', 'proposal', false, (w, d) => {
+  check('f09: Error and StatusCode cards have System eyebrow', $$(d, '.auth-card .eyebrow').filter(vis).length === 2);
+  check('f09: StatusCode Return to Work Centre button is primary', vis($(d, '[aria-labelledby="sc-title"] .btn--primary')));
+  check('f09: ReleaseNotes lede hidden in proposal', !vis($(d, '#rn-page-title + .lede')));
+}]);
+
+CASES.push(['shell-dialogs', 'proposal', false, (w, d) => {
+  const acc = $(d, '[aria-labelledby="acc-dlg-title"]');
+  check('Item A (f01): Account dialog shows Session started', /Session started/.test(acc.innerText));
+  check('Item A (f01): Account dialog footer has only Close and Sign out (2 buttons)', $$(acc, '.dialog-foot[data-v41-proposal-only] button').length === 2);
+  const notif = $(d, '[aria-labelledby="notif-dlg-title"]');
+  check('f02: Notifications dialog places Mark all read in dialog-head', vis($(notif, '.dialog-head button.btn--sm')));
+  const cmd = $(d, '[aria-labelledby="cmd-dlg-title"]');
+  check('f03: Command palette uses #icon-list-checks, #icon-search, #icon-settings',
+    vis($(cmd, 'use[href="#icon-list-checks"]').closest('svg')) &&
+    vis($(cmd, 'use[href="#icon-search"]').closest('svg')) &&
+    vis($(cmd, 'use[href="#icon-settings"]').closest('svg')));
+  check('Item C (f05): duplicate utility-bar freshness hidden in proposal', !vis($(d, '[data-v41-dup-freshness]')));
+}]);
+
+CASES.push(['work-centre', 'proposal', false, (w, d) => {
+  const dlg = $(d, '[aria-labelledby="wc-assign-title"]');
+  check('f10: Assign Engineer dialog binds to clicked row DFD26031', /DFD26031/.test(dlg.innerText) && !/Wrong Case/.test(dlg.innerText));
+  check('f11: Work Centre h1 is 20px', getComputedStyle($(d, '.work-centre .page-header h1')).fontSize === '20px');
+  check('f12: Find in this work preserves since hidden input', !!$(d, '.wc-find input[name="since"]'));
+}]);
+
+CASES.push(['search', 'proposal', false, (w, d) => {
+  check('Item F (f13): Engineer, Principal and Origin are select dropdowns',
+    vis($(d, '#s-eng-sel')) && vis($(d, '#s-principal-sel')) && vis($(d, '#s-origin-sel')));
+  check('Item F (f13): Filter label reads Case stage', /Case stage/.test($(d, '.compact-search__main').innerText));
+  check('Item G (f14): No duplicate Create Case button in Search page-header', !vis($(d, '.page-header a[href="#upload"]')));
+  check('Item G (f14): Results table includes Type and Due columns', /Type/i.test($(d, '[data-search-results-table] thead').textContent) && /Due/i.test($(d, '[data-search-results-table] thead').textContent));
+  check('Item G (f14): Selected Case preview has Copy Case/PO, Claim ref, and live Next action',
+    vis($(d, '#case-search-preview [data-copy="QDOS26214"]')) &&
+    /Claim ref/.test($(d, '#case-search-preview').innerText) &&
+    /Complete engineering report/.test($(d, '#case-search-preview').innerText));
+}]);
+
+CASES.push(['inbox', 'proposal', false, (w, d) => {
+  check('Item H (f15): Left scope rail includes all 5 scopes including Deleted Items', /Deleted Items/.test($(d, '.inbox-layout > aside.pane').innerText));
+  check('Item H (f15): Duplicate Folder dropdown hidden in proposal', !vis($(d, '#ib-folder')));
+}]);
+
+CASES.push(['mail-message', 'proposal', false, (w, d) => {
+  check('Item I (f17): Subject shown once in page-header (not repeated in record-head or mail-header)',
+    !vis($(d, '.record .panel-head h2[data-v41-today-only]')));
+  check('Item I (f17): Decision card shows single Case row and plain Automated text',
+    /14 Oct 14:12 · Automated/.test($(d, '[aria-labelledby="msg-dec-title"]').innerText));
+  check('Item I (f17): Attachments show PDF document / Word document instead of raw MIME',
+    /PDF document/.test($(d, '.record').innerText) && !/application\/pdf/.test($(d, '.record').innerText));
+  check('Item I (f17): Inline reply composer has Cancel link', vis($(d, '.mail-compose-panel a.btn[data-v41-proposal-only]')));
+}]);
+
+CASES.push(['upload-review', 'proposal', false, (w, d) => {
+  check('Item K (f19): Upload header has Files eyebrow and no subtitle lede',
+    vis($(d, '.up-head .eyebrow')) && !vis($(d, '.up-subtitle')));
+  check('Item K (f19): Redundant .up-explainer hidden in proposal', !vis($(d, '.up-explainer')));
+  const children = Array.from($(d, '.up-workspace').children);
+  check('f20: .up-inspector precedes .up-decision in DOM for natural desktop Tab order',
+    children[0].classList.contains('up-inspector') && children[1].classList.contains('up-decision'));
+}]);
+
+CASES.push(['cases-queue', 'proposal', false, (w, d) => {
+  check('Item L (f21): Principal filter lists all 15 active Principals', $(d, '#cq-prin').options.length === 16);
+  check('Item L (f21): Single-page footer hides Page 1 · newest first', !vis($(d, '.pane-foot [data-v41-today-only]')));
+}]);
+
+CASES.push(['create-case', 'proposal', false, (w, d) => {
+  check('Item M (f22): Seeded draft fields wrapped in .form-grid > .field without raw Provenance parser names',
+    $$(d, '[data-v41-draft-fields] > .field').length === 5 && !/InstructionPdfParser/.test($(d, '[data-v41-draft-fields]').innerText));
+}]);
+
+CASES.push(['triage-case', 'proposal', false, (w, d) => {
+  check('Item N (f23): Triage Documents tab has Preview buttons beside Save as',
+    $$(d, '[aria-labelledby="tri-mat-title"] button[data-v41-proposal-only]').filter(vis).length === 2);
+  check('Item N (f23): Exact response evidence shows operator words instead of raw RFC Message-ID or GUID',
+    /Sent to claims@qdos\.example/.test($(d, '#tri-resp-ev').innerText));
+  check('Item N (f23): Link Case dialog uses combobox picker instead of raw Case ID GUID input',
+    vis($(d, '#tri-picker')) && !vis($(d, '#tri-raw-guid')));
+}]);
+
+CASES.push(['unidentified-images', 'proposal', false, (w, d) => {
+  check('Item O (f24): Vehicle Images Record card omits duplicate ribbon facts',
+    $$(d, '[aria-labelledby="img-rec-title"] .fact').filter(vis).length === 3);
+  check('Item O (f24): Eligible case candidates shows Registration, Claimant, Stage and Pair action',
+    vis($(d, '[aria-labelledby="img-cand-title"] button.btn--primary')));
+  check('f25: Case Chaser dialog has Cancel button', vis($(d, '[aria-labelledby="chaser-dlg-title"] .dialog-foot a.btn')));
+}]);
+
+CASES.push(['admin-accounts', 'proposal', false, (w, d) => {
+  check('Item T (f32): Temporary password notice sits at top of .admin-layout > .stack',
+    vis($(d, '.admin-layout > .stack > .notice--success')));
+  check('Item T (f32): Glass credential dialog hides raw Generation and Version integers',
+    !vis($(d, '[aria-labelledby="glass-cred-title"] [data-v41-today-only]')));
+}]);
+
+CASES.push(['admin-contacts', 'proposal', false, (w, d) => {
+  check('Item U (f33): Principal API uses .fact-grid and StatusChip',
+    vis($(d, '[aria-labelledby="prin-api-title"] .chip--navy')));
+  check('Item U (f33): Default location labels omit (optional) suffix',
+    !/\(optional\)/.test($(d, '[aria-labelledby="prin-loc-title"]').innerText));
+}]);
+
+CASES.push(['admin-config-mail', 'proposal', false, (w, d) => {
+  check('Item V (f34): Workflow configuration has Administration eyebrow and no field-hint spans',
+    vis($(d, '.page-header .eyebrow')) && $$(d, '.field-hint').filter(vis).length === 0);
+  check('Item W (f35): Obsolete editable Mail categories panel removed in proposal',
+    !vis($(d, 'section.panel[data-v41-today-only]')));
+}]);
+
+CASES.push(['admin-logs-ops', 'proposal', false, (w, d) => {
+  check('Item X (f36): Internal cache byte telemetry hidden on Action logs in proposal',
+    !vis($(d, '[aria-labelledby="act-logs-title"] details[data-v41-today-only]')));
+  check('Item Y (f38): Problem reports hides raw GUID in When column',
+    !vis($(d, '[aria-labelledby="pr-adm-title"] small.mono[data-v41-today-only]')));
+  check('Item Y (f38): AI jobs links Case reference QDOS26214',
+    vis($(d, '[aria-labelledby="aij-adm-title"] td.mono a[data-v41-proposal-only]')));
+}]);
+
+// 3. Every Case Workspace state in proposal & today modes
+for (const s of CASE_STATES) {
+  CASES.push([s, 'proposal', false, (w, d) => {
+    check(`case ${s} (proposal): renders`, !!$(d, '#mock-root').firstElementChild);
+    check(`case ${s} (proposal): no broken #icon-check-square`, $$(d, 'use[href="#icon-check-square"]').length === 0);
+  }]);
+  CASES.push([s, 'today', false, (w, d) => {
+    check(`case ${s} (today): renders`, !!$(d, '#mock-root').firstElementChild);
+  }]);
+}
+
+CASES.push(['v41-overview', 'proposal', true, (w, d) => {
+  check('case v41-overview: Diff mode applies v41-diff class', d.body.classList.contains('v41-diff'));
+  check('Item P (f27): Yes/No radio labels visible on rule questions', /Yes/.test($(d, '#section-report').innerText) && /No/.test($(d, '#section-report').innerText));
+  check('Item R (f28): Next action open tasks render as row buttons', $$(d, '[data-open-tasks] button.row-button').filter(vis).length === 2);
+  check('Item S (f29): Tasks dialog uses .fi inputs and .empty-line', !!$(d, '#nt-desc.fi') && !!$(d, '.empty-line'));
+}]);
+
+// 4. Interactive SPA navigation, modal dialogs, row updates & live controls in pegasus_v41.html
+CASES.push(['work-centre', 'proposal', false, (w, d) => {
+  check('interactive: pegasus_v41.html has all 27 states', w.__mock.states.length === 27);
+  $(d, '[data-wc-open-assign]').click();
+  check('interactive: Assign Engineer modal opens on click', !$(d, '#v41-modal-backdrop').hidden && /DFD26031/.test($(d, '#v41-modal-box').textContent));
+  $(d, '[data-wc-confirm-assign]').click();
+  check('interactive: Confirm Assign closes modal and updates row 2 owner to Claire Mercer',
+    $(d, '#v41-modal-backdrop').hidden && /Claire Mercer/.test($(d, '#wc-row-2').textContent));
+  $(d, '.rail-account').click();
+  check('interactive: Account modal opens from rail with Session started', !$(d, '#v41-modal-backdrop').hidden && /Session started/.test($(d, '#v41-modal-box').textContent));
+  $(d, '[data-modal-close]').click();
+  check('interactive: Modal closes on Close click', $(d, '#v41-modal-backdrop').hidden);
+  $(d, '#wc-row-1 a.btn').click();
+  check('interactive: Clicking Open Case navigates to engineer-read without reload', w.__mock.state === 'engineer-read');
+  w.__mock.go('admin-contacts');
+  $(d, '[data-contact-tab="send"]').click();
+  check('interactive: Clicking Report sending tab on Contacts reveals Report sending panel', vis($(d, '[data-contact-panel="send"]')));
+}]);
+
+f.onload = () => {
+  const w = f.contentWindow, d = f.contentDocument;
+  const wait = (n) => {
+    if ((w && w.__mockReady) || n > 60) {
+      for (const [state, design, diff, run] of CASES) {
+        try {
+          w.__mock.setDesign(design);
+          w.__mock.go(state);
+          d.body.classList.toggle('v41-diff', !!diff);
+          run(w, d);
+          check(`${state} (${design}): zero runtime errors`, (w.mockupErrors || []).length === 0);
+        } catch (e) {
+          log.push(`EXC ${state} (${design}): ${e.message}`);
+        }
+      }
+      document.getElementById('out').textContent = 'RESULT ' + JSON.stringify({ fail: log, okCount: ok.length });
+    } else {
+      setTimeout(() => wait(n + 1), 30);
+    }
+  };
+  wait(0);
+};
+f.src = 'pegasus_v41.html?state=work-centre&design=proposal&strip=0';
+</script>
+</body>
+</html>

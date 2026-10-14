@@ -1,0 +1,733 @@
+{
+  "checkedAtUtc": "2026-10-14T18:55:21.718006+00:00",
+  "selfcheck": {
+    "fail": [],
+    "okCount": 286
+  },
+  "result": {
+    "fail": [],
+    "okCount": 376
+  },
+  "shots": [
+    {
+      "shot": "01-auth-signin-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=auth-signin&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "01-auth-signin-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=auth-signin&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "01-auth-signin-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=auth-signin&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "01-auth-signin-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=auth-signin&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "02-auth-consent-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=auth-consent&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "02-auth-consent-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=auth-consent&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "02-auth-consent-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=auth-consent&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "02-auth-consent-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=auth-consent&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "03-auth-consent-today-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=auth-consent&design=today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "03-auth-consent-today-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=auth-consent&design=today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "03-auth-consent-today-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=auth-consent&design=today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "03-auth-consent-today-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=auth-consent&design=today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "04-auth-errors-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=auth-errors&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "04-auth-errors-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=auth-errors&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "04-auth-errors-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=auth-errors&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "04-auth-errors-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=auth-errors&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "05-shell-dialogs-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=shell-dialogs&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "05-shell-dialogs-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=shell-dialogs&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "05-shell-dialogs-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=shell-dialogs&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "05-shell-dialogs-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=shell-dialogs&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "06-work-centre-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=work-centre&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "06-work-centre-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=work-centre&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "06-work-centre-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=work-centre&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "06-work-centre-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=work-centre&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "07-work-centre-tabs-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=work-centre-tabs&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "07-work-centre-tabs-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=work-centre-tabs&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "07-work-centre-tabs-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=work-centre-tabs&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "07-work-centre-tabs-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=work-centre-tabs&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "08-search-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=search&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "08-search-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=search&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "08-search-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=search&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "08-search-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=search&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "09-search-today-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=search&design=today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "09-search-today-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=search&design=today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "09-search-today-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=search&design=today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "09-search-today-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=search&design=today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "10-inbox-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=inbox&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "10-inbox-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=inbox&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "10-inbox-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=inbox&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "10-inbox-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=inbox&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "11-inbox-today-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=inbox&design=today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "11-inbox-today-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=inbox&design=today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "11-inbox-today-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=inbox&design=today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "11-inbox-today-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=inbox&design=today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "12-mail-message-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=mail-message&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "12-mail-message-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=mail-message&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "12-mail-message-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=mail-message&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "12-mail-message-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=mail-message&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "13-upload-review-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=upload-review&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "13-upload-review-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=upload-review&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "13-upload-review-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=upload-review&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "13-upload-review-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=upload-review&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "14-cases-queue-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=cases-queue&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "14-cases-queue-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=cases-queue&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "14-cases-queue-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=cases-queue&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "14-cases-queue-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=cases-queue&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "15-create-case-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=create-case&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "15-create-case-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=create-case&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "15-create-case-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=create-case&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "15-create-case-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=create-case&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "16-triage-case-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=triage-case&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "16-triage-case-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=triage-case&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "16-triage-case-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=triage-case&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "16-triage-case-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=triage-case&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "17-unidentified-images-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=unidentified-images&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "17-unidentified-images-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=unidentified-images&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "17-unidentified-images-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=unidentified-images&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "17-unidentified-images-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=unidentified-images&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "18-admin-accounts-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=admin-accounts&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "18-admin-accounts-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=admin-accounts&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "18-admin-accounts-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=admin-accounts&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "18-admin-accounts-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=admin-accounts&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "19-admin-contacts-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=admin-contacts&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "19-admin-contacts-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=admin-contacts&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "19-admin-contacts-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=admin-contacts&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "19-admin-contacts-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=admin-contacts&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "20-admin-config-mail-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=admin-config-mail&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "20-admin-config-mail-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=admin-config-mail&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "20-admin-config-mail-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=admin-config-mail&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "20-admin-config-mail-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=admin-config-mail&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "21-admin-logs-ops-1580.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=admin-logs-ops&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "21-admin-logs-ops-full.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=admin-logs-ops&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "21-admin-logs-ops-1440.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=admin-logs-ops&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "21-admin-logs-ops-760.png",
+      "mock": "pegasus_shell_v41.html",
+      "query": "state=admin-logs-ops&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "22-case-overview-1580.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=v41-overview&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "22-case-overview-full.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=v41-overview&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "22-case-overview-1440.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=v41-overview&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "22-case-overview-760.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=v41-overview&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "23-case-delivery-rules-1580.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=delivery-rules&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "23-case-delivery-rules-full.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=delivery-rules&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "23-case-delivery-rules-1440.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=delivery-rules&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "23-case-delivery-rules-760.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=delivery-rules&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "24-case-delivery-plain-1580.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=delivery-plain&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "24-case-delivery-plain-full.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=delivery-plain&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "24-case-delivery-plain-1440.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=delivery-plain&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "24-case-delivery-plain-760.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=delivery-plain&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "25-case-delivery-stop-1580.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=delivery-stop&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "25-case-delivery-stop-full.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=delivery-stop&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "25-case-delivery-stop-1440.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=delivery-stop&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "25-case-delivery-stop-760.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=delivery-stop&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "26-case-delivery-missing-1580.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=delivery-missing&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "26-case-delivery-missing-full.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=delivery-missing&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "26-case-delivery-missing-1440.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=delivery-missing&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "26-case-delivery-missing-760.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=delivery-missing&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "27-case-next-action-tasks-1580.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=next-action-tasks&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "27-case-next-action-tasks-full.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=next-action-tasks&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "27-case-next-action-tasks-1440.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=next-action-tasks&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "27-case-next-action-tasks-760.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=next-action-tasks&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "28-case-tasks-dialog-1580.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=tasks-dialog&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "28-case-tasks-dialog-full.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=tasks-dialog&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "28-case-tasks-dialog-1440.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=tasks-dialog&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "28-case-tasks-dialog-760.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=tasks-dialog&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "29-case-engineer-read-1580.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=engineer-read&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "29-case-engineer-read-full.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=engineer-read&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "29-case-engineer-read-1440.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=engineer-read&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "29-case-engineer-read-760.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=engineer-read&design=proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "30-case-engineer-edit-1580.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=engineer-edit&design=proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "30-case-engineer-edit-full.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=engineer-edit&design=proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "30-case-engineer-edit-1440.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=engineer-edit&design=proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "30-case-engineer-edit-760.png",
+      "mock": "pegasus_case_workspace_v41.html",
+      "query": "state=engineer-edit&design=proposal",
+      "viewport": "760x1000"
+    }
+  ]
+}
