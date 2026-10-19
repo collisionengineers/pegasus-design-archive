@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" data-busy-label="Working&#x2026;" data-busy-still="Still" data-icon-sprite="/images/lucide-sprite.04agn8pzs5.svg">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload · Pegasus</title>
+    <link rel="stylesheet" href="/css/site.qz2wg1x280.css" />
+    
+    <link rel="stylesheet" href="/css/upload.irbk9eyc49.css" />
+
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell" data-app-shell>
+        <header class="app-rail">
+            <a class="brand" aria-label="Pegasus home" href="/">
+                <img src="/images/pegasus-mark-refined-128.tctmpgz0uo.png" alt="" aria-hidden="true" />
+                <span class="brand-copy"><strong>PEGASUS</strong><span>Case management</span></span>
+            </a>
+            <nav class="primary-nav" aria-label="Primary">
+                <div class="nav-label">Work</div>
+                <a class="nav-link" href="/">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                    <span>Work Centre</span>
+                </a>
+                    <a class="nav-link" href="/Inbox">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                        <span>Inbox</span>
+                    </a>
+                    <a class="nav-link" href="/Upload">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                        <span>Upload</span>
+                    </a>
+                <a class="nav-link" href="/Cases">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list-checks" /></svg>
+                    <span>Cases</span>
+                </a>
+                <a class="nav-link" href="/Search">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <span>Search</span>
+                </a>
+                    <div class="nav-label">Manage</div>
+                    <a class="nav-link" href="/Administration">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+                        <span>Administration</span>
+                    </a>
+            </nav>
+            <div class="rail-spacer"></div>
+            <button type="button" class="rail-collapse" data-rail-toggle aria-expanded="true" aria-label="Collapse navigation"
+                    data-label-collapse="Collapse navigation" data-label-expand="Expand navigation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-left" /></svg>
+                <span>Collapse</span>
+            </button>
+            <div class="rail-health">
+                <div class="rail-health-line"><span class="health-dot"></span><span>Current · 11:30</span></div>
+            </div>
+                <div class="rail-user" role="group" aria-label="User">
+                    <span class="avatar" aria-hidden="true">IU</span>
+                    <div><strong>integration-user</strong><small>Administrator</small></div>
+                    <button type="button" class="icon-button" data-dialog-open="account-dialog" aria-label="Account menu">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                    </button>
+                </div>
+        </header>
+        <div class="app-column">
+            <section class="utility-bar" aria-label="Utility bar">
+                <div class="utility-freshness"><span class="health-dot"></span><span>Current · 11:30</span></div>
+                <form class="utility-search" role="search" method="get" action="/Search">
+                    <label class="sr-only" for="global-search">Search Pegasus</label>
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <input id="global-search" type="search" name="query" data-command-input aria-label="Search Pegasus" placeholder="Search cases, references or people" autocomplete="off" />
+                    <span class="shortcut-hint" aria-hidden="true">Ctrl K</span>
+                </form>
+                <div class="utility-actions">
+                    <a class="btn btn--primary" href="/Cases/Create">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-plus" /></svg>
+                        <span>New case</span>
+                    </a>
+                    <span class="bell-wrap">
+                        <button type="button" class="icon-button" data-dialog-open="notifications-dialog" aria-label="Notifications">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bell" /></svg>
+                        </button>
+                    </span>
+                        <button type="button" class="icon-button utility-account" data-dialog-open="account-dialog" aria-label="Account menu">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                        </button>
+                </div>
+            </section>
+            <main id="main-content" class="app-main" tabindex="-1">
+                <div class="content">
+                    
+
+
+<header class="page-header up-head">
+    <div class="page-title">
+        <h1>Upload</h1>
+        <p class="up-subtitle">Review your upload and its destination.</p>
+    </div>
+    <div class="page-actions">
+        <span class="up-meta">Received today, 11:30</span>
+            <a class="btn" href="/Upload">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-plus" /></svg>
+                <span>New upload</span>
+            </a>
+    </div>
+</header>
+
+<div class="up-surface" data-upload-review data-auto-refresh="" data-status-url="/Upload/Group/1fb49407-8220-4e4e-aca9-6239ac6ba0be?handler=Status">
+    <div class="up-workspace">
+        <section class="up-decision" aria-labelledby="up-decision-title" data-upload-phase="decision">
+                    <div class="up-decision-head">
+                        <p class="up-eyebrow">Choose a destination</p>
+                        <h2 id="up-decision-title">Which Case do these files belong to?</h2>
+                        <p class="up-explainer">One possible Case for AB12CDE. Check the details before adding the files.</p>
+                    </div>
+                    <div class="up-choice">
+                        <form method="post" id="upload-decision-form" class="up-decision-form" data-upload-decision action="/Upload/Group/1fb49407-8220-4e4e-aca9-6239ac6ba0be?handler=AttachGroup">
+                            <input type="hidden" name="operationId" value="3484045a-5c0b-4c7b-9fbb-34f7ff733017" />
+                                    <input type="hidden" name="receiptVersions[341f347b-86f6-4b16-8b46-e64ddedec2bc]" value="0" />
+                                    <input type="hidden" name="receiptVersions[21e869f9-b16e-4917-84cf-12ae6de439f0]" value="0" />
+                                    <input type="hidden" name="receiptVersions[72e866eb-871f-47a0-b93e-098ad3160dcd]" value="0" />
+                                <div class="up-candidates">
+                                        <label class="up-case" for="upload-case-451dfe717c9b4346bd2c7d6f5109784d" data-upload-candidate="QDOS26222">
+    <input id="upload-case-451dfe717c9b4346bd2c7d6f5109784d"
+           type="radio"
+           name="caseId"
+           value="451dfe71-7c9b-4346-bd2c-7d6f5109784d"
+           data-version="0"
+           data-reference="QDOS26222"
+           data-registration="AB12CDE"
+           data-claimant="A. Hargreaves"
+           data-principal="QDOS"
+           data-stage="Review" />
+    <span class="up-radio" aria-hidden="true"></span>
+    <span class="up-case-top">
+        <strong class="up-case-ref mono">QDOS26222</strong>
+            <span class="status status--navy">Review</span>
+
+    </span>
+        <span class="up-case-person">
+                <span>AB12CDE</span>
+                <span>A. Hargreaves</span>
+        </span>
+        <span class="up-case-detail">QDOS</span>
+</label>
+
+                                </div>
+                            <div class="up-action-slot">
+                                <button type="submit" class="btn btn--primary up-review" data-upload-review-button>
+                                    <span>Review and add to Case</span>
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-arrow-right" /></svg>
+                                </button>
+                                    <p class="up-choice-hint">Select a Case to continue.</p>
+                            </div>
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAzkFUnZsLmsUjzYh2KzjCqpoWC8HTYn6PPrTUO6sCYvjIQkGE0KUph1q6kU6engeHpJjF38hVTgcNu6V1QxPQWxW7h39uzIvUCMptQTK6tZV9-2eXbJsXKbRhqY9fkZ60" /></form>
+                        <details class="up-search" data-refresh-hold>
+                            <summary>Find another Case<svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-right" /></svg></summary>
+                            <form class="up-search-form" method="get" action="/Upload/Group/1fb49407-8220-4e4e-aca9-6239ac6ba0be" role="search">
+                                <label class="sr-only" for="up-case-query">Search by Case/PO, registration or claimant</label>
+                                <input id="up-case-query" type="search" name="q" placeholder="Case/PO, registration or claimant" autocomplete="off" maxlength="80" data-upload-search />
+                                <button class="btn" type="submit">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                                    <span>Search</span>
+                                </button>
+                            </form>
+                            <div class="up-search-results" aria-live="polite">
+                            </div>
+                        </details>
+                    </div>
+                    <div class="up-side-actions">
+                        <div class="up-leave">
+        <a class="btn" data-upload-leave href="/Upload">Leave undecided</a>
+        <a class="up-discard" href="/Upload/Group/1fb49407-8220-4e4e-aca9-6239ac6ba0be?discard=true" data-upload-dialog="upload-discard">Discard upload</a>
+</div>
+
+                    </div>
+        </section>
+
+        <section class="up-inspector" aria-label="File inspection" data-upload-inspector data-files="[{&quot;name&quot;:&quot;front-offside.png&quot;,&quot;size&quot;:&quot;under 0.1 MB&quot;,&quot;kind&quot;:&quot;PNG image&quot;,&quot;image&quot;:&quot;/Received/341f347b-86f6-4b16-8b46-e64ddedec2bc/Image?v=234C0EB7D79333D4158208ADA148497A12E6E5C0EC301DDDF5228E4E4AC5430C&quot;,&quot;original&quot;:&quot;/Received/341f347b-86f6-4b16-8b46-e64ddedec2bc/Source&quot;,&quot;unreadable&quot;:false,&quot;photos&quot;:[],&quot;photosLabel&quot;:null},{&quot;name&quot;:&quot;rear-quarter.png&quot;,&quot;size&quot;:&quot;under 0.1 MB&quot;,&quot;kind&quot;:&quot;PNG image&quot;,&quot;image&quot;:&quot;/Received/21e869f9-b16e-4917-84cf-12ae6de439f0/Image?v=C985E3011BDC848350AAFC166C1F8CDE17638891FCED7A60C4F633612733F3DC&quot;,&quot;original&quot;:&quot;/Received/21e869f9-b16e-4917-84cf-12ae6de439f0/Source&quot;,&quot;unreadable&quot;:false,&quot;photos&quot;:[],&quot;photosLabel&quot;:null},{&quot;name&quot;:&quot;Bodyshopsuppreport.pdf&quot;,&quot;size&quot;:&quot;under 0.1 MB&quot;,&quot;kind&quot;:&quot;PDF document&quot;,&quot;image&quot;:null,&quot;original&quot;:&quot;/Received/72e866eb-871f-47a0-b93e-098ad3160dcd/Source&quot;,&quot;unreadable&quot;:false,&quot;photos&quot;:[],&quot;photosLabel&quot;:null}]">
+            <header class="up-inspect-top">
+                <strong>Files in this upload</strong>
+                <span data-inspect-count>1 of 3</span>
+            </header>
+            <div class="up-inspect-media">
+                <div class="up-inspect-photo" data-inspect-photo>
+                        <img src="/Received/341f347b-86f6-4b16-8b46-e64ddedec2bc/Image?v=234C0EB7D79333D4158208ADA148497A12E6E5C0EC301DDDF5228E4E4AC5430C" alt="" />
+                </div>
+            </div>
+            <div class="up-inspect-caption">
+                <span data-inspect-name title="front-offside.png">front-offside.png</span>
+                    <a class="btn" href="/Received/341f347b-86f6-4b16-8b46-e64ddedec2bc/Image?v=234C0EB7D79333D4158208ADA148497A12E6E5C0EC301DDDF5228E4E4AC5430C" target="_blank" rel="noopener" data-upload-preview data-inspect-open>
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-zoom-in" /></svg>
+                        <span>Open</span>
+                    </a>
+            </div>
+            <div class="up-inspect-photos" data-inspect-photos hidden="hidden">
+                <p class="up-inspect-photos-count" data-inspect-photos-count></p>
+                <div class="up-inspect-photos-strip" data-inspect-photos-strip>
+                </div>
+            </div>
+            <div class="up-filmstrip" aria-label="Choose a file to inspect">
+                    <a class="up-film" href="/Upload/Group/1fb49407-8220-4e4e-aca9-6239ac6ba0be?inspect=1" data-upload-inspect="0" aria-pressed="true" aria-label="Inspect file 1: front-offside.png">
+                            <img src="/Received/341f347b-86f6-4b16-8b46-e64ddedec2bc/Image?v=234C0EB7D79333D4158208ADA148497A12E6E5C0EC301DDDF5228E4E4AC5430C" loading="lazy" alt="" />
+                        <small>1</small>
+                    </a>
+                    <a class="up-film" href="/Upload/Group/1fb49407-8220-4e4e-aca9-6239ac6ba0be?inspect=2" data-upload-inspect="1" aria-pressed="false" aria-label="Inspect file 2: rear-quarter.png">
+                            <img src="/Received/21e869f9-b16e-4917-84cf-12ae6de439f0/Image?v=C985E3011BDC848350AAFC166C1F8CDE17638891FCED7A60C4F633612733F3DC" loading="lazy" alt="" />
+                        <small>2</small>
+                    </a>
+                    <a class="up-film" href="/Upload/Group/1fb49407-8220-4e4e-aca9-6239ac6ba0be?inspect=3" data-upload-inspect="2" aria-pressed="false" aria-label="Inspect file 3: Bodyshopsuppreport.pdf">
+                            <span class="up-file-icon"><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-file-text" /></svg></span>
+                        <small>3</small>
+                    </a>
+            </div>
+            <details class="up-files">
+                <summary>File names and outcomes · 3 files</summary>
+                <ul class="up-file-list">
+                        <li class="up-file" data-upload-file="ca96ffa6-1050-4670-b548-a624c71c0f32" >
+                            <span class="up-thumb">
+                                    <img src="/Received/341f347b-86f6-4b16-8b46-e64ddedec2bc/Image?v=234C0EB7D79333D4158208ADA148497A12E6E5C0EC301DDDF5228E4E4AC5430C" loading="lazy" alt="" />
+                            </span>
+                            <div class="up-file-name">
+                                    <a href="/Received/341f347b-86f6-4b16-8b46-e64ddedec2bc/Image?v=234C0EB7D79333D4158208ADA148497A12E6E5C0EC301DDDF5228E4E4AC5430C" target="_blank" rel="noopener" title="front-offside.png" data-upload-preview="0">front-offside.png</a>
+                                <small>under 0.1 MB &#xB7; PNG image</small>
+                            </div>
+                            <span class="up-file-state " data-upload-file-state>
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-check" /></svg>
+                                Ready
+                            </span>
+                        </li>
+                        <li class="up-file" data-upload-file="71dd26e8-801b-49fd-91da-ec15cdbaa28e" >
+                            <span class="up-thumb">
+                                    <img src="/Received/21e869f9-b16e-4917-84cf-12ae6de439f0/Image?v=C985E3011BDC848350AAFC166C1F8CDE17638891FCED7A60C4F633612733F3DC" loading="lazy" alt="" />
+                            </span>
+                            <div class="up-file-name">
+                                    <a href="/Received/21e869f9-b16e-4917-84cf-12ae6de439f0/Image?v=C985E3011BDC848350AAFC166C1F8CDE17638891FCED7A60C4F633612733F3DC" target="_blank" rel="noopener" title="rear-quarter.png" data-upload-preview="1">rear-quarter.png</a>
+                                <small>under 0.1 MB &#xB7; PNG image</small>
+                            </div>
+                            <span class="up-file-state " data-upload-file-state>
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-check" /></svg>
+                                Ready
+                            </span>
+                        </li>
+                        <li class="up-file" data-upload-file="be47e678-cfdb-4625-b765-f639644d615d" >
+                            <span class="up-thumb">
+                                    <span class="up-file-icon"><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-file" /></svg></span>
+                            </span>
+                            <div class="up-file-name">
+                                    <a href="/Received/72e866eb-871f-47a0-b93e-098ad3160dcd/Source" target="_blank" rel="noopener" title="Bodyshopsuppreport.pdf" data-upload-preview="2">Bodyshopsuppreport.pdf</a>
+                                <small>under 0.1 MB &#xB7; PDF document</small>
+                            </div>
+                            <span class="up-file-state " data-upload-file-state>
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-check" /></svg>
+                                Ready
+                            </span>
+                        </li>
+                </ul>
+            </details>
+        </section>
+    </div>
+</div>
+
+    <div id="upload-confirm" class="dialog-backdrop" data-dialog="upload-confirm" hidden>
+        <section class="dialog dialog--compact" role="dialog" aria-modal="true" aria-labelledby="upload-confirm-title">
+            <div class="dialog-head">
+                <h2 id="upload-confirm-title" tabindex="-1">Add 3 files to this Case?</h2>
+                <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                </button>
+            </div>
+            <form method="post" id="upload-confirm-form" class="dialog-body stack" data-upload-confirm action="/Upload/Group/1fb49407-8220-4e4e-aca9-6239ac6ba0be?handler=AttachGroup">
+                <input type="hidden" name="operationId" value="3484045a-5c0b-4c7b-9fbb-34f7ff733017" />
+                        <input type="hidden" name="receiptVersions[341f347b-86f6-4b16-8b46-e64ddedec2bc]" value="0" />
+                        <input type="hidden" name="receiptVersions[21e869f9-b16e-4917-84cf-12ae6de439f0]" value="0" />
+                        <input type="hidden" name="receiptVersions[72e866eb-871f-47a0-b93e-098ad3160dcd]" value="0" />
+                <input type="hidden" name="caseId" data-confirm-case />
+                <input type="hidden" name="caseVersion" data-confirm-version />
+                <input type="hidden" name="reference" data-confirm-reference />
+                <p>Confirm the exact destination for this upload.</p>
+                <div class="up-confirm-case">
+                    <strong class="mono" data-confirm-ref></strong>
+                    <dl>
+                        <dt>Registration</dt><dd class="mono" data-confirm-registration></dd>
+                        <dt>Claimant</dt><dd data-confirm-claimant></dd>
+                        <dt>Principal</dt><dd data-confirm-principal></dd>
+                        <dt>Stage</dt><dd data-confirm-stage></dd>
+                    </dl>
+                </div>
+                <p>3 original files &#xB7; under 0.1 MB</p>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAzkFUnZsLmsUjzYh2KzjCqpoWC8HTYn6PPrTUO6sCYvjIQkGE0KUph1q6kU6engeHpJjF38hVTgcNu6V1QxPQWxW7h39uzIvUCMptQTK6tZV9-2eXbJsXKbRhqY9fkZ60" /></form>
+            <div class="dialog-foot">
+                <a class="btn" href="/Upload/Group/1fb49407-8220-4e4e-aca9-6239ac6ba0be" data-dialog-close data-dialog-initial-focus>Cancel</a>
+                <button type="submit" form="upload-confirm-form" class="btn btn--primary" data-confirm-submit data-busy-label="Adding&#x2026;">Confirm and add to </button>
+            </div>
+        </section>
+    </div>
+
+    <div id="upload-discard" class="dialog-backdrop" data-dialog="upload-discard" hidden>
+        <section class="dialog dialog--compact" role="dialog" aria-modal="true" aria-labelledby="upload-discard-title">
+            <div class="dialog-head">
+                <h2 id="upload-discard-title" tabindex="-1">Discard this upload?</h2>
+                <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                </button>
+            </div>
+            <form method="post" id="upload-discard-form" class="dialog-body stack" data-upload-discard action="/Upload/Group/1fb49407-8220-4e4e-aca9-6239ac6ba0be?handler=DiscardGroup">
+                <input type="hidden" name="groupVersion" value="3" />
+                <input type="hidden" name="operationId" value="1d27f795-3673-49f0-9bf1-85f0fca58c3f" />
+                    <input type="hidden" name="receiptVersions[341f347b-86f6-4b16-8b46-e64ddedec2bc]" value="0" />
+                    <input type="hidden" name="receiptVersions[21e869f9-b16e-4917-84cf-12ae6de439f0]" value="0" />
+                    <input type="hidden" name="receiptVersions[72e866eb-871f-47a0-b93e-098ad3160dcd]" value="0" />
+                <p>Discard all 3 files in this upload. The source files and processing record will be retained.</p>
+                <label class="up-confirm-check" for="upload-discard-check">
+                    <input id="upload-discard-check" name="consequencesConfirmed" type="checkbox" value="true" data-dialog-initial-focus />
+                    <span>I understand that every file in this upload will be discarded.</span>
+                </label>
+                <p class="field-error" role="alert" hidden data-discard-error>Select the confirmation before discarding.</p>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAzkFUnZsLmsUjzYh2KzjCqpoWC8HTYn6PPrTUO6sCYvjIQkGE0KUph1q6kU6engeHpJjF38hVTgcNu6V1QxPQWxW7h39uzIvUCMptQTK6tZV9-2eXbJsXKbRhqY9fkZ60" /></form>
+            <div class="dialog-foot">
+                <a class="btn" href="/Upload/Group/1fb49407-8220-4e4e-aca9-6239ac6ba0be" data-dialog-close>Cancel</a>
+                <button type="submit" form="upload-discard-form" class="btn btn--danger" data-busy-label="Discarding&#x2026;">Discard upload</button>
+            </div>
+        </section>
+    </div>
+<div id="upload-preview" class="dialog-backdrop" data-dialog="upload-preview" hidden>
+    <section class="dialog dialog--wide up-preview" role="dialog" aria-modal="true" aria-labelledby="upload-preview-title">
+        <div class="dialog-head">
+            <h2 id="upload-preview-title" tabindex="-1" data-preview-title></h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body">
+            <div class="up-preview-image" data-preview-image></div>
+            <p class="up-preview-name" data-preview-name></p>
+            <p class="muted" data-preview-meta></p>
+        </div>
+        <div class="dialog-foot up-preview-foot">
+            <button type="button" class="btn" data-preview-previous data-dialog-initial-focus>
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-left" /></svg>
+                <span>Previous</span>
+            </button>
+            <a class="btn" href="#" target="_blank" rel="noopener" data-preview-original>Open original</a>
+            <button type="button" class="btn" data-preview-next>
+                <span>Next</span>
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-right" /></svg>
+            </button>
+        </div>
+    </section>
+</div>
+
+
+
+                </div>
+            </main>
+        </div>
+    </div>
+    
+<div class="dialog-backdrop" data-dialog="account-dialog" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="account-dialog-title">
+        <div class="dialog-head">
+            <h2 id="account-dialog-title" tabindex="-1">Account</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body">
+            <div class="definition-list">
+                <dl class="definition"><dt>Name</dt><dd>integration-user</dd></dl>
+                <dl class="definition"><dt>Role</dt><dd>Administrator</dd></dl>
+                <dl class="definition"><dt>Idle lock</dt><dd>2 hours</dd></dl>
+            </div>
+        </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn" data-dialog-close>Close</button>
+            <a class="btn" href="/ReleaseNotes">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-flag" /></svg>
+                <span>Release notes</span>
+            </a>
+            <button type="button" class="btn" data-dialog-open="problem-dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-alert-triangle" /></svg>
+                <span>Report a problem</span>
+            </button>
+            <a class="btn" href="/Account/PasswordChange">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-key" /></svg>
+                <span>Change password</span>
+            </a>
+            <form method="post" action="/Account/SignOut">
+                <button type="submit" class="btn btn--danger" data-busy-label="Signing out&#x2026;">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-log-out" /></svg>
+                    <span>Sign out</span>
+                </button>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAzkFUnZsLmsUjzYh2KzjCqpoWC8HTYn6PPrTUO6sCYvjIQkGE0KUph1q6kU6engeHpJjF38hVTgcNu6V1QxPQWxW7h39uzIvUCMptQTK6tZV9-2eXbJsXKbRhqY9fkZ60" /></form>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="notifications-dialog" data-dialog-open-on-load="" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="notifications-dialog-title">
+        <div class="dialog-head">
+            <h2 id="notifications-dialog-title" tabindex="-1">Notifications</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body dialog-body--list">
+                <p class="empty-state" role="status">No notifications</p>
+        </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn btn--dark" data-dialog-close>Close</button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="command-dialog" hidden>
+    <section class="dialog command-dialog" role="dialog" aria-modal="true" aria-labelledby="command-dialog-title">
+        <div class="dialog-head">
+            <h2 id="command-dialog-title" tabindex="-1">Search Pegasus</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="command-search">
+            <label class="sr-only" for="command-input">Search</label>
+            <input id="command-input" type="search" autocomplete="off" data-command-palette-input aria-controls="command-results" />
+        </div>
+        <div id="command-results" class="command-results" role="listbox" aria-label="Search results" data-command-results>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                <span><strong>Work Centre</strong></span>
+            </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Inbox">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                    <span><strong>Inbox</strong></span>
+                </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Upload">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                    <span><strong>Upload</strong></span>
+                </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Cases">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list" /></svg>
+                <span><strong>Cases</strong></span>
+            </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Search">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-folder-open" /></svg>
+                <span><strong>Search</strong></span>
+            </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Administration">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-grid" /></svg>
+                    <span><strong>Administration</strong></span>
+                </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Search?query=" data-command-fallback>
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                <span><strong>Search Cases for <span data-command-fallback-term></span></strong></span>
+                <span class="kbd" aria-hidden="true">Enter</span>
+            </button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="problem-dialog" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="problem-dialog-title">
+        <form method="post" data-problem-form data-problem-case-sections="overview,claim,original-report,inspection,vehicle,damage,valuation,estimate,settlement,report,files,notes,queries" action="/ProblemReports?handler=Report">
+            <input type="hidden" name="operationKey" value="18c79e8a04ca48439e625c7c32a4b794" />
+            <div class="dialog-head">
+                <h2 id="problem-dialog-title" tabindex="-1">Report a problem</h2>
+                <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                </button>
+            </div>
+            <div class="dialog-body stack">
+                <input type="hidden" name="returnUrl" value="" data-problem-return />
+                <input type="hidden" name="route" value="" data-problem-route />
+                <input type="hidden" name="method" value="GET" />
+                <input type="hidden" name="traceId" value="00-e808b0f4d70e4349643cdbb677f60292-a7a2097b416a4099-00" />
+                <input type="hidden" name="caseReference" value="" data-problem-case />
+                <input type="hidden" name="viewport" value="" data-problem-viewport />
+                <input type="hidden" name="editing" value="false" data-problem-editing />
+                <input type="hidden" name="errors" value="" data-problem-errors />
+                <div class="field">
+                    <label for="problem-description">What happened</label>
+                    <textarea id="problem-description" name="description" rows="6" maxlength="4000" required></textarea>
+                </div>
+            </div>
+            <div class="dialog-foot">
+                <button type="button" class="btn" data-dialog-close>Cancel</button>
+                <button type="submit" class="btn btn--primary" data-busy-label="Sending&#x2026;">Send</button>
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAzkFUnZsLmsUjzYh2KzjCqpoWC8HTYn6PPrTUO6sCYvjIQkGE0KUph1q6kU6engeHpJjF38hVTgcNu6V1QxPQWxW7h39uzIvUCMptQTK6tZV9-2eXbJsXKbRhqY9fkZ60" /></form>
+    </section>
+</div>
+
+    <div class="toast-region" aria-live="polite" data-toast-region></div>
+
+    <script src="/js/site.vubujkpeou.js"></script>
+    
+    <script src="/js/upload.k620k72vbb.js"></script>
+
+</body>
+</html>

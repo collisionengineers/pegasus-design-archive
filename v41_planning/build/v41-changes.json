@@ -1,0 +1,3541 @@
+[
+  {
+    "key": "work-centre",
+    "label": "Work Centre \u00b7 Needs attention",
+    "group": "Work Centre and Search",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S2",
+        "summary": "Mark all read moves to the Notifications dialog head."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "W1",
+        "summary": "The Work Centre scope switch takes the shared control height and the ledger table header takes the 11px table header."
+      },
+      {
+        "id": "W5",
+        "summary": "Row actions are quiet buttons and the dismiss \u00d7 loses its box; only the opened row's action stays dark, so the table is no longer a column of black buttons."
+      },
+      {
+        "id": "W6",
+        "summary": "Activity figures are set at table size, so the panel takes half the height."
+      },
+      {
+        "id": "W8",
+        "summary": "An Unassigned row carries Take, a small primary button, beside Assign Engineer."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "work-centre-selected",
+    "label": "Work Centre \u00b7 row open",
+    "group": "Work Centre and Search",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S2",
+        "summary": "Mark all read moves to the Notifications dialog head."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "W1",
+        "summary": "The Work Centre scope switch takes the shared control height and the ledger table header takes the 11px table header."
+      },
+      {
+        "id": "W5",
+        "summary": "Row actions are quiet buttons and the dismiss \u00d7 loses its box; only the opened row's action stays dark, so the table is no longer a column of black buttons."
+      },
+      {
+        "id": "W6",
+        "summary": "Activity figures are set at table size, so the panel takes half the height."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "work-centre-assign",
+    "label": "Work Centre \u00b7 Assign Engineer",
+    "group": "Work Centre and Search",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S2",
+        "summary": "Mark all read moves to the Notifications dialog head."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "W1",
+        "summary": "The Work Centre scope switch takes the shared control height and the ledger table header takes the 11px table header."
+      },
+      {
+        "id": "W5",
+        "summary": "Row actions are quiet buttons and the dismiss \u00d7 loses its box; only the opened row's action stays dark, so the table is no longer a column of black buttons."
+      },
+      {
+        "id": "W6",
+        "summary": "Activity figures are set at table size, so the panel takes half the height."
+      },
+      {
+        "id": "W8",
+        "summary": "An Unassigned row carries Take, a small primary button, beside Assign Engineer. The open row carries it too. The Assign Engineer list shows the signed-in person first as Name (you) and gains an Unassigned option; the dialog has no Reason box."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "work-centre-mine",
+    "label": "Work Centre \u00b7 Mine",
+    "group": "Work Centre and Search",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S2",
+        "summary": "Mark all read moves to the Notifications dialog head."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "W1",
+        "summary": "The Work Centre scope switch takes the shared control height and the ledger table header takes the 11px table header."
+      },
+      {
+        "id": "W5",
+        "summary": "Row actions are quiet buttons and the dismiss \u00d7 loses its box; only the opened row's action stays dark, so the table is no longer a column of black buttons."
+      },
+      {
+        "id": "W6",
+        "summary": "Activity figures are set at table size, so the panel takes half the height."
+      },
+      {
+        "id": "W8",
+        "summary": "An Unassigned row carries Take, a small primary button, beside Assign Engineer. Mine gains a With Engineer row: its kind chip reads With Engineer, its Owner is the Engineer and its action is Open Case. It repeats the Review row's layout; its Case is the oldest one in this page's New cases list that has no row here. The capture holds no due instant for that Case, so Due reads No due date, last in Later (question: FRD-15 says every kind but Open tasks has a due instant)."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "work-centre-new-cases",
+    "label": "Work Centre \u00b7 New cases",
+    "group": "Work Centre and Search",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S2",
+        "summary": "Mark all read moves to the Notifications dialog head."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "W1",
+        "summary": "The Work Centre scope switch takes the shared control height and the ledger table header takes the 11px table header."
+      },
+      {
+        "id": "W5",
+        "summary": "Row actions are quiet buttons and the dismiss \u00d7 loses its box; only the opened row's action stays dark, so the table is no longer a column of black buttons."
+      },
+      {
+        "id": "W6",
+        "summary": "Activity figures are set at table size, so the panel takes half the height."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "work-centre-ai-jobs",
+    "label": "Work Centre \u00b7 AI jobs",
+    "group": "Work Centre and Search",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S2",
+        "summary": "Mark all read moves to the Notifications dialog head."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "W1",
+        "summary": "The Work Centre scope switch takes the shared control height and the ledger table header takes the 11px table header."
+      },
+      {
+        "id": "W5",
+        "summary": "Row actions are quiet buttons and the dismiss \u00d7 loses its box; only the opened row's action stays dark, so the table is no longer a column of black buttons."
+      },
+      {
+        "id": "W6",
+        "summary": "Activity figures are set at table size, so the panel takes half the height."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "search",
+    "label": "Search",
+    "group": "Work Centre and Search",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S2",
+        "summary": "Mark all read moves to the Notifications dialog head."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "W2",
+        "summary": "Search: Engineer and Principal are selects, and State is relabelled Case stage."
+      },
+      {
+        "id": "W3",
+        "summary": "Search: results gain Type and Due columns, the preview gains Copy Case/PO, and its Our ref label reads Claim reference."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "search-filters",
+    "label": "Search \u00b7 more filters",
+    "group": "Work Centre and Search",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S2",
+        "summary": "Mark all read moves to the Notifications dialog head."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "W2",
+        "summary": "Search: Engineer and Principal are selects, and State is relabelled Case stage."
+      },
+      {
+        "id": "W3",
+        "summary": "Search: results gain Type and Due columns, the preview gains Copy Case/PO, and its Our ref label reads Claim reference."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "inbox",
+    "label": "Inbox",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "I1",
+        "summary": "Scopes: All incoming, No Case Found, Sent Items, Dismissed and Deleted Items all sit on the rail. The Folder select goes, the filter's columns take its width, and Category holds the eleven categories only."
+      },
+      {
+        "id": "I2",
+        "summary": "The message opens as a dialog over the Inbox, not the /Inbox/{id} page (brief, 13 Oct). /Inbox/{id} stays for a new tab and with no script (R159)."
+      },
+      {
+        "id": "I4",
+        "summary": "The quick preview goes, because the dialog is the reader. The list takes the width the preview had."
+      },
+      {
+        "id": "I6",
+        "summary": "Previous and Next message buttons sit in the dialog head beside Close, so the list can be read without closing the dialog."
+      },
+      {
+        "id": "I9",
+        "summary": "The Case tab folds into Decision, the dialog's right column. Classification is the eleven categories as chips, one pressed, applied at once as an image tag is. The Case is its link, with the Case / PO picker under it, then Decided once; Change linked Case and Unlink (or Link to Case) are one row of small buttons under the picker. The tabs are Message, Attachments and Thread. Question for the operator: a chip applies at once, but Correct classification needs a Reason for correction (and a Case type for New instruction), and no field for them is drawn. Where are they entered? Tag as query is the one existing one-click correction, and it records a fixed reason."
+      },
+      {
+        "id": "I10",
+        "summary": "Dismiss in the dialog moves on to the next message."
+      },
+      {
+        "id": "I11",
+        "summary": "The Classified chip goes from the head. Classification is shown once, in Decision."
+      },
+      {
+        "id": "I12",
+        "summary": "Decision shows Decided as plain text with its actor (no provenance icon) and the linked Case once (no Destination and Filed to)."
+      },
+      {
+        "id": "I13",
+        "summary": "Link, Change linked Case and Unlink open their reason dialog in one step. There is no prepare round trip."
+      },
+      {
+        "id": "I15",
+        "summary": "Reply, Reply all and Forward compose inside the dialog: the tabs step aside, From, To and Case sit on one line, and the foot is Cancel and Send. On a query the composer carries PR 1331's AI draft: the AI line, the prefilled Message and Also resolve query."
+      },
+      {
+        "id": "I16",
+        "summary": "A query's record bar names its classification, Query, instead of Post-report, which the glossary avoids. Draft reply with AI, AI draft \u00b7 Queued and Reply with AI draft (PR 1331) stay as they are."
+      },
+      {
+        "id": "I17",
+        "summary": "The dialog has one head (subject; From, To and received beneath; Previous/Next and close at the right), the tabs, then the message beside Decision. The foot carries Dismiss apart on the left, and Reply, Reply all and Forward as plain buttons. The classification's next action (Create case, Register images, PR 1331's Draft reply with AI or Reply with AI draft) is the one dark button, at the far right, in place of the record bar."
+      },
+      {
+        "id": "I18",
+        "summary": "Bulk actions on the list (R36, R140). In All incoming, No Case Found and Dismissed each row carries a checkbox in its left gutter; ticking it neither opens nor pins the row. One bulk form sits above the list, outside the rows: the ticked count and, in the incoming scopes, Dismiss and Correct classification, or, in Dismissed, Restore. Sent Items and Deleted Items have none. Correct classification opens the existing dialog once, so Classification, Case type and Reason for correction are entered once for every ticked row (R140 c); each row keeps its own Reply, Dismiss and Restore. The bulk buttons are always enabled, because a post with nothing ticked writes nothing (finding-mail-bulk-actions criterion 5) and a disabled button cannot be enabled without script (criterion 11). The pressed bulk control says its existing busy word (Dismissing\u2026, Restoring\u2026, and Saving\u2026 on the dialog's Save correction) with the loader glyph, as the single-message controls do; inbox-rows-ticked-busy draws bulk Dismiss pressed. Questions for the operator (R140 b): the words for the bulk controls (drawn with the single-message labels Dismiss, Restore and Correct classification), the count (drawn as a bare number), the failure line for a message that is not changed (not drawn), the checkbox's accessible name (drawn as the message's subject), and where the no-script path enters the classify inputs."
+      }
+    ],
+    "ibx": true
+  },
+  {
+    "key": "inbox-no-case-found",
+    "label": "Inbox \u00b7 No Case Found",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "I1",
+        "summary": "Scopes: All incoming, No Case Found, Sent Items, Dismissed and Deleted Items all sit on the rail. The Folder select goes, the filter's columns take its width, and Category holds the eleven categories only."
+      },
+      {
+        "id": "I2",
+        "summary": "The message opens as a dialog over the Inbox, not the /Inbox/{id} page (brief, 13 Oct). /Inbox/{id} stays for a new tab and with no script (R159)."
+      },
+      {
+        "id": "I4",
+        "summary": "The quick preview goes, because the dialog is the reader. The list takes the width the preview had."
+      },
+      {
+        "id": "I6",
+        "summary": "Previous and Next message buttons sit in the dialog head beside Close, so the list can be read without closing the dialog."
+      },
+      {
+        "id": "I9",
+        "summary": "The Case tab folds into Decision, the dialog's right column. Classification is the eleven categories as chips, one pressed, applied at once as an image tag is. The Case is its link, with the Case / PO picker under it, then Decided once; Change linked Case and Unlink (or Link to Case) are one row of small buttons under the picker. The tabs are Message, Attachments and Thread. Question for the operator: a chip applies at once, but Correct classification needs a Reason for correction (and a Case type for New instruction), and no field for them is drawn. Where are they entered? Tag as query is the one existing one-click correction, and it records a fixed reason."
+      },
+      {
+        "id": "I10",
+        "summary": "Dismiss in the dialog moves on to the next message."
+      },
+      {
+        "id": "I11",
+        "summary": "The Classified chip goes from the head. Classification is shown once, in Decision."
+      },
+      {
+        "id": "I12",
+        "summary": "Decision shows Decided as plain text with its actor (no provenance icon) and the linked Case once (no Destination and Filed to)."
+      },
+      {
+        "id": "I13",
+        "summary": "Link, Change linked Case and Unlink open their reason dialog in one step. There is no prepare round trip."
+      },
+      {
+        "id": "I15",
+        "summary": "Reply, Reply all and Forward compose inside the dialog: the tabs step aside, From, To and Case sit on one line, and the foot is Cancel and Send. On a query the composer carries PR 1331's AI draft: the AI line, the prefilled Message and Also resolve query."
+      },
+      {
+        "id": "I16",
+        "summary": "A query's record bar names its classification, Query, instead of Post-report, which the glossary avoids. Draft reply with AI, AI draft \u00b7 Queued and Reply with AI draft (PR 1331) stay as they are."
+      },
+      {
+        "id": "I17",
+        "summary": "The dialog has one head (subject; From, To and received beneath; Previous/Next and close at the right), the tabs, then the message beside Decision. The foot carries Dismiss apart on the left, and Reply, Reply all and Forward as plain buttons. The classification's next action (Create case, Register images, PR 1331's Draft reply with AI or Reply with AI draft) is the one dark button, at the far right, in place of the record bar."
+      },
+      {
+        "id": "I18",
+        "summary": "Bulk actions on the list (R36, R140). In All incoming, No Case Found and Dismissed each row carries a checkbox in its left gutter; ticking it neither opens nor pins the row. One bulk form sits above the list, outside the rows: the ticked count and, in the incoming scopes, Dismiss and Correct classification, or, in Dismissed, Restore. Sent Items and Deleted Items have none. Correct classification opens the existing dialog once, so Classification, Case type and Reason for correction are entered once for every ticked row (R140 c); each row keeps its own Reply, Dismiss and Restore. The bulk buttons are always enabled, because a post with nothing ticked writes nothing (finding-mail-bulk-actions criterion 5) and a disabled button cannot be enabled without script (criterion 11). The pressed bulk control says its existing busy word (Dismissing\u2026, Restoring\u2026, and Saving\u2026 on the dialog's Save correction) with the loader glyph, as the single-message controls do; inbox-rows-ticked-busy draws bulk Dismiss pressed. Questions for the operator (R140 b): the words for the bulk controls (drawn with the single-message labels Dismiss, Restore and Correct classification), the count (drawn as a bare number), the failure line for a message that is not changed (not drawn), the checkbox's accessible name (drawn as the message's subject), and where the no-script path enters the classify inputs."
+      }
+    ],
+    "ibx": true
+  },
+  {
+    "key": "inbox-sent",
+    "label": "Inbox \u00b7 Sent Items",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "I1",
+        "summary": "Scopes: All incoming, No Case Found, Sent Items, Dismissed and Deleted Items all sit on the rail. The Folder select goes, the filter's columns take its width, and Category holds the eleven categories only."
+      },
+      {
+        "id": "I2",
+        "summary": "The message opens as a dialog over the Inbox, not the /Inbox/{id} page (brief, 13 Oct). /Inbox/{id} stays for a new tab and with no script (R159)."
+      },
+      {
+        "id": "I4",
+        "summary": "The quick preview goes, because the dialog is the reader. The list takes the width the preview had."
+      },
+      {
+        "id": "I6",
+        "summary": "Previous and Next message buttons sit in the dialog head beside Close, so the list can be read without closing the dialog."
+      },
+      {
+        "id": "I9",
+        "summary": "The Case tab folds into Decision, the dialog's right column. Classification is the eleven categories as chips, one pressed, applied at once as an image tag is. The Case is its link, with the Case / PO picker under it, then Decided once; Change linked Case and Unlink (or Link to Case) are one row of small buttons under the picker. The tabs are Message, Attachments and Thread. Question for the operator: a chip applies at once, but Correct classification needs a Reason for correction (and a Case type for New instruction), and no field for them is drawn. Where are they entered? Tag as query is the one existing one-click correction, and it records a fixed reason."
+      },
+      {
+        "id": "I10",
+        "summary": "Dismiss in the dialog moves on to the next message."
+      },
+      {
+        "id": "I11",
+        "summary": "The Classified chip goes from the head. Classification is shown once, in Decision."
+      },
+      {
+        "id": "I12",
+        "summary": "Decision shows Decided as plain text with its actor (no provenance icon) and the linked Case once (no Destination and Filed to)."
+      },
+      {
+        "id": "I13",
+        "summary": "Link, Change linked Case and Unlink open their reason dialog in one step. There is no prepare round trip."
+      },
+      {
+        "id": "I15",
+        "summary": "Reply, Reply all and Forward compose inside the dialog: the tabs step aside, From, To and Case sit on one line, and the foot is Cancel and Send. On a query the composer carries PR 1331's AI draft: the AI line, the prefilled Message and Also resolve query."
+      },
+      {
+        "id": "I16",
+        "summary": "A query's record bar names its classification, Query, instead of Post-report, which the glossary avoids. Draft reply with AI, AI draft \u00b7 Queued and Reply with AI draft (PR 1331) stay as they are."
+      },
+      {
+        "id": "I17",
+        "summary": "The dialog has one head (subject; From, To and received beneath; Previous/Next and close at the right), the tabs, then the message beside Decision. The foot carries Dismiss apart on the left, and Reply, Reply all and Forward as plain buttons. The classification's next action (Create case, Register images, PR 1331's Draft reply with AI or Reply with AI draft) is the one dark button, at the far right, in place of the record bar."
+      },
+      {
+        "id": "I18",
+        "summary": "Bulk actions on the list (R36, R140). In All incoming, No Case Found and Dismissed each row carries a checkbox in its left gutter; ticking it neither opens nor pins the row. One bulk form sits above the list, outside the rows: the ticked count and, in the incoming scopes, Dismiss and Correct classification, or, in Dismissed, Restore. Sent Items and Deleted Items have none. Correct classification opens the existing dialog once, so Classification, Case type and Reason for correction are entered once for every ticked row (R140 c); each row keeps its own Reply, Dismiss and Restore. The bulk buttons are always enabled, because a post with nothing ticked writes nothing (finding-mail-bulk-actions criterion 5) and a disabled button cannot be enabled without script (criterion 11). The pressed bulk control says its existing busy word (Dismissing\u2026, Restoring\u2026, and Saving\u2026 on the dialog's Save correction) with the loader glyph, as the single-message controls do; inbox-rows-ticked-busy draws bulk Dismiss pressed. Questions for the operator (R140 b): the words for the bulk controls (drawn with the single-message labels Dismiss, Restore and Correct classification), the count (drawn as a bare number), the failure line for a message that is not changed (not drawn), the checkbox's accessible name (drawn as the message's subject), and where the no-script path enters the classify inputs."
+      }
+    ],
+    "ibx": true
+  },
+  {
+    "key": "inbox-dismissed",
+    "label": "Inbox \u00b7 Dismissed",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "I1",
+        "summary": "Scopes: All incoming, No Case Found, Sent Items, Dismissed and Deleted Items all sit on the rail. The Folder select goes, the filter's columns take its width, and Category holds the eleven categories only."
+      },
+      {
+        "id": "I2",
+        "summary": "The message opens as a dialog over the Inbox, not the /Inbox/{id} page (brief, 13 Oct). /Inbox/{id} stays for a new tab and with no script (R159)."
+      },
+      {
+        "id": "I4",
+        "summary": "The quick preview goes, because the dialog is the reader. The list takes the width the preview had."
+      },
+      {
+        "id": "I6",
+        "summary": "Previous and Next message buttons sit in the dialog head beside Close, so the list can be read without closing the dialog."
+      },
+      {
+        "id": "I9",
+        "summary": "The Case tab folds into Decision, the dialog's right column. Classification is the eleven categories as chips, one pressed, applied at once as an image tag is. The Case is its link, with the Case / PO picker under it, then Decided once; Change linked Case and Unlink (or Link to Case) are one row of small buttons under the picker. The tabs are Message, Attachments and Thread. Question for the operator: a chip applies at once, but Correct classification needs a Reason for correction (and a Case type for New instruction), and no field for them is drawn. Where are they entered? Tag as query is the one existing one-click correction, and it records a fixed reason."
+      },
+      {
+        "id": "I10",
+        "summary": "Dismiss in the dialog moves on to the next message."
+      },
+      {
+        "id": "I11",
+        "summary": "The Classified chip goes from the head. Classification is shown once, in Decision."
+      },
+      {
+        "id": "I12",
+        "summary": "Decision shows Decided as plain text with its actor (no provenance icon) and the linked Case once (no Destination and Filed to)."
+      },
+      {
+        "id": "I13",
+        "summary": "Link, Change linked Case and Unlink open their reason dialog in one step. There is no prepare round trip."
+      },
+      {
+        "id": "I15",
+        "summary": "Reply, Reply all and Forward compose inside the dialog: the tabs step aside, From, To and Case sit on one line, and the foot is Cancel and Send. On a query the composer carries PR 1331's AI draft: the AI line, the prefilled Message and Also resolve query."
+      },
+      {
+        "id": "I16",
+        "summary": "A query's record bar names its classification, Query, instead of Post-report, which the glossary avoids. Draft reply with AI, AI draft \u00b7 Queued and Reply with AI draft (PR 1331) stay as they are."
+      },
+      {
+        "id": "I17",
+        "summary": "The dialog has one head (subject; From, To and received beneath; Previous/Next and close at the right), the tabs, then the message beside Decision. The foot carries Dismiss apart on the left, and Reply, Reply all and Forward as plain buttons. The classification's next action (Create case, Register images, PR 1331's Draft reply with AI or Reply with AI draft) is the one dark button, at the far right, in place of the record bar."
+      },
+      {
+        "id": "I18",
+        "summary": "Bulk actions on the list (R36, R140). In All incoming, No Case Found and Dismissed each row carries a checkbox in its left gutter; ticking it neither opens nor pins the row. One bulk form sits above the list, outside the rows: the ticked count and, in the incoming scopes, Dismiss and Correct classification, or, in Dismissed, Restore. Sent Items and Deleted Items have none. Correct classification opens the existing dialog once, so Classification, Case type and Reason for correction are entered once for every ticked row (R140 c); each row keeps its own Reply, Dismiss and Restore. The bulk buttons are always enabled, because a post with nothing ticked writes nothing (finding-mail-bulk-actions criterion 5) and a disabled button cannot be enabled without script (criterion 11). The pressed bulk control says its existing busy word (Dismissing\u2026, Restoring\u2026, and Saving\u2026 on the dialog's Save correction) with the loader glyph, as the single-message controls do; inbox-rows-ticked-busy draws bulk Dismiss pressed. Questions for the operator (R140 b): the words for the bulk controls (drawn with the single-message labels Dismiss, Restore and Correct classification), the count (drawn as a bare number), the failure line for a message that is not changed (not drawn), the checkbox's accessible name (drawn as the message's subject), and where the no-script path enters the classify inputs."
+      }
+    ],
+    "ibx": true
+  },
+  {
+    "key": "inbox-deleted",
+    "label": "Inbox \u00b7 Deleted Items",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "I1",
+        "summary": "Scopes: All incoming, No Case Found, Sent Items, Dismissed and Deleted Items all sit on the rail. The Folder select goes, the filter's columns take its width, and Category holds the eleven categories only."
+      },
+      {
+        "id": "I2",
+        "summary": "The message opens as a dialog over the Inbox, not the /Inbox/{id} page (brief, 13 Oct). /Inbox/{id} stays for a new tab and with no script (R159)."
+      },
+      {
+        "id": "I4",
+        "summary": "The quick preview goes, because the dialog is the reader. The list takes the width the preview had."
+      },
+      {
+        "id": "I6",
+        "summary": "Previous and Next message buttons sit in the dialog head beside Close, so the list can be read without closing the dialog."
+      },
+      {
+        "id": "I9",
+        "summary": "The Case tab folds into Decision, the dialog's right column. Classification is the eleven categories as chips, one pressed, applied at once as an image tag is. The Case is its link, with the Case / PO picker under it, then Decided once; Change linked Case and Unlink (or Link to Case) are one row of small buttons under the picker. The tabs are Message, Attachments and Thread. Question for the operator: a chip applies at once, but Correct classification needs a Reason for correction (and a Case type for New instruction), and no field for them is drawn. Where are they entered? Tag as query is the one existing one-click correction, and it records a fixed reason."
+      },
+      {
+        "id": "I10",
+        "summary": "Dismiss in the dialog moves on to the next message."
+      },
+      {
+        "id": "I11",
+        "summary": "The Classified chip goes from the head. Classification is shown once, in Decision."
+      },
+      {
+        "id": "I12",
+        "summary": "Decision shows Decided as plain text with its actor (no provenance icon) and the linked Case once (no Destination and Filed to)."
+      },
+      {
+        "id": "I13",
+        "summary": "Link, Change linked Case and Unlink open their reason dialog in one step. There is no prepare round trip."
+      },
+      {
+        "id": "I15",
+        "summary": "Reply, Reply all and Forward compose inside the dialog: the tabs step aside, From, To and Case sit on one line, and the foot is Cancel and Send. On a query the composer carries PR 1331's AI draft: the AI line, the prefilled Message and Also resolve query."
+      },
+      {
+        "id": "I16",
+        "summary": "A query's record bar names its classification, Query, instead of Post-report, which the glossary avoids. Draft reply with AI, AI draft \u00b7 Queued and Reply with AI draft (PR 1331) stay as they are."
+      },
+      {
+        "id": "I17",
+        "summary": "The dialog has one head (subject; From, To and received beneath; Previous/Next and close at the right), the tabs, then the message beside Decision. The foot carries Dismiss apart on the left, and Reply, Reply all and Forward as plain buttons. The classification's next action (Create case, Register images, PR 1331's Draft reply with AI or Reply with AI draft) is the one dark button, at the far right, in place of the record bar."
+      },
+      {
+        "id": "I18",
+        "summary": "Bulk actions on the list (R36, R140). In All incoming, No Case Found and Dismissed each row carries a checkbox in its left gutter; ticking it neither opens nor pins the row. One bulk form sits above the list, outside the rows: the ticked count and, in the incoming scopes, Dismiss and Correct classification, or, in Dismissed, Restore. Sent Items and Deleted Items have none. Correct classification opens the existing dialog once, so Classification, Case type and Reason for correction are entered once for every ticked row (R140 c); each row keeps its own Reply, Dismiss and Restore. The bulk buttons are always enabled, because a post with nothing ticked writes nothing (finding-mail-bulk-actions criterion 5) and a disabled button cannot be enabled without script (criterion 11). The pressed bulk control says its existing busy word (Dismissing\u2026, Restoring\u2026, and Saving\u2026 on the dialog's Save correction) with the loader glyph, as the single-message controls do; inbox-rows-ticked-busy draws bulk Dismiss pressed. Questions for the operator (R140 b): the words for the bulk controls (drawn with the single-message labels Dismiss, Restore and Correct classification), the count (drawn as a bare number), the failure line for a message that is not changed (not drawn), the checkbox's accessible name (drawn as the message's subject), and where the no-script path enters the classify inputs."
+      }
+    ],
+    "ibx": true
+  },
+  {
+    "key": "inbox-rows-ticked",
+    "label": "Inbox \u00b7 rows ticked",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "I1",
+        "summary": "Scopes: All incoming, No Case Found, Sent Items, Dismissed and Deleted Items all sit on the rail. The Folder select goes, the filter's columns take its width, and Category holds the eleven categories only."
+      },
+      {
+        "id": "I2",
+        "summary": "The message opens as a dialog over the Inbox, not the /Inbox/{id} page (brief, 13 Oct). /Inbox/{id} stays for a new tab and with no script (R159)."
+      },
+      {
+        "id": "I4",
+        "summary": "The quick preview goes, because the dialog is the reader. The list takes the width the preview had."
+      },
+      {
+        "id": "I6",
+        "summary": "Previous and Next message buttons sit in the dialog head beside Close, so the list can be read without closing the dialog."
+      },
+      {
+        "id": "I9",
+        "summary": "The Case tab folds into Decision, the dialog's right column. Classification is the eleven categories as chips, one pressed, applied at once as an image tag is. The Case is its link, with the Case / PO picker under it, then Decided once; Change linked Case and Unlink (or Link to Case) are one row of small buttons under the picker. The tabs are Message, Attachments and Thread. Question for the operator: a chip applies at once, but Correct classification needs a Reason for correction (and a Case type for New instruction), and no field for them is drawn. Where are they entered? Tag as query is the one existing one-click correction, and it records a fixed reason."
+      },
+      {
+        "id": "I10",
+        "summary": "Dismiss in the dialog moves on to the next message."
+      },
+      {
+        "id": "I11",
+        "summary": "The Classified chip goes from the head. Classification is shown once, in Decision."
+      },
+      {
+        "id": "I12",
+        "summary": "Decision shows Decided as plain text with its actor (no provenance icon) and the linked Case once (no Destination and Filed to)."
+      },
+      {
+        "id": "I13",
+        "summary": "Link, Change linked Case and Unlink open their reason dialog in one step. There is no prepare round trip."
+      },
+      {
+        "id": "I15",
+        "summary": "Reply, Reply all and Forward compose inside the dialog: the tabs step aside, From, To and Case sit on one line, and the foot is Cancel and Send. On a query the composer carries PR 1331's AI draft: the AI line, the prefilled Message and Also resolve query."
+      },
+      {
+        "id": "I16",
+        "summary": "A query's record bar names its classification, Query, instead of Post-report, which the glossary avoids. Draft reply with AI, AI draft \u00b7 Queued and Reply with AI draft (PR 1331) stay as they are."
+      },
+      {
+        "id": "I17",
+        "summary": "The dialog has one head (subject; From, To and received beneath; Previous/Next and close at the right), the tabs, then the message beside Decision. The foot carries Dismiss apart on the left, and Reply, Reply all and Forward as plain buttons. The classification's next action (Create case, Register images, PR 1331's Draft reply with AI or Reply with AI draft) is the one dark button, at the far right, in place of the record bar."
+      },
+      {
+        "id": "I18",
+        "summary": "Bulk actions on the list (R36, R140). In All incoming, No Case Found and Dismissed each row carries a checkbox in its left gutter; ticking it neither opens nor pins the row. One bulk form sits above the list, outside the rows: the ticked count and, in the incoming scopes, Dismiss and Correct classification, or, in Dismissed, Restore. Sent Items and Deleted Items have none. Correct classification opens the existing dialog once, so Classification, Case type and Reason for correction are entered once for every ticked row (R140 c); each row keeps its own Reply, Dismiss and Restore. The bulk buttons are always enabled, because a post with nothing ticked writes nothing (finding-mail-bulk-actions criterion 5) and a disabled button cannot be enabled without script (criterion 11). The pressed bulk control says its existing busy word (Dismissing\u2026, Restoring\u2026, and Saving\u2026 on the dialog's Save correction) with the loader glyph, as the single-message controls do; inbox-rows-ticked-busy draws bulk Dismiss pressed. Questions for the operator (R140 b): the words for the bulk controls (drawn with the single-message labels Dismiss, Restore and Correct classification), the count (drawn as a bare number), the failure line for a message that is not changed (not drawn), the checkbox's accessible name (drawn as the message's subject), and where the no-script path enters the classify inputs."
+      }
+    ],
+    "ibx": true
+  },
+  {
+    "key": "inbox-rows-ticked-classify",
+    "label": "Inbox \u00b7 Correct classification for the ticked rows",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "I1",
+        "summary": "Scopes: All incoming, No Case Found, Sent Items, Dismissed and Deleted Items all sit on the rail. The Folder select goes, the filter's columns take its width, and Category holds the eleven categories only."
+      },
+      {
+        "id": "I2",
+        "summary": "The message opens as a dialog over the Inbox, not the /Inbox/{id} page (brief, 13 Oct). /Inbox/{id} stays for a new tab and with no script (R159)."
+      },
+      {
+        "id": "I4",
+        "summary": "The quick preview goes, because the dialog is the reader. The list takes the width the preview had."
+      },
+      {
+        "id": "I6",
+        "summary": "Previous and Next message buttons sit in the dialog head beside Close, so the list can be read without closing the dialog."
+      },
+      {
+        "id": "I9",
+        "summary": "The Case tab folds into Decision, the dialog's right column. Classification is the eleven categories as chips, one pressed, applied at once as an image tag is. The Case is its link, with the Case / PO picker under it, then Decided once; Change linked Case and Unlink (or Link to Case) are one row of small buttons under the picker. The tabs are Message, Attachments and Thread. Question for the operator: a chip applies at once, but Correct classification needs a Reason for correction (and a Case type for New instruction), and no field for them is drawn. Where are they entered? Tag as query is the one existing one-click correction, and it records a fixed reason."
+      },
+      {
+        "id": "I10",
+        "summary": "Dismiss in the dialog moves on to the next message."
+      },
+      {
+        "id": "I11",
+        "summary": "The Classified chip goes from the head. Classification is shown once, in Decision."
+      },
+      {
+        "id": "I12",
+        "summary": "Decision shows Decided as plain text with its actor (no provenance icon) and the linked Case once (no Destination and Filed to)."
+      },
+      {
+        "id": "I13",
+        "summary": "Link, Change linked Case and Unlink open their reason dialog in one step. There is no prepare round trip."
+      },
+      {
+        "id": "I15",
+        "summary": "Reply, Reply all and Forward compose inside the dialog: the tabs step aside, From, To and Case sit on one line, and the foot is Cancel and Send. On a query the composer carries PR 1331's AI draft: the AI line, the prefilled Message and Also resolve query."
+      },
+      {
+        "id": "I16",
+        "summary": "A query's record bar names its classification, Query, instead of Post-report, which the glossary avoids. Draft reply with AI, AI draft \u00b7 Queued and Reply with AI draft (PR 1331) stay as they are."
+      },
+      {
+        "id": "I17",
+        "summary": "The dialog has one head (subject; From, To and received beneath; Previous/Next and close at the right), the tabs, then the message beside Decision. The foot carries Dismiss apart on the left, and Reply, Reply all and Forward as plain buttons. The classification's next action (Create case, Register images, PR 1331's Draft reply with AI or Reply with AI draft) is the one dark button, at the far right, in place of the record bar."
+      },
+      {
+        "id": "I18",
+        "summary": "Bulk actions on the list (R36, R140). In All incoming, No Case Found and Dismissed each row carries a checkbox in its left gutter; ticking it neither opens nor pins the row. One bulk form sits above the list, outside the rows: the ticked count and, in the incoming scopes, Dismiss and Correct classification, or, in Dismissed, Restore. Sent Items and Deleted Items have none. Correct classification opens the existing dialog once, so Classification, Case type and Reason for correction are entered once for every ticked row (R140 c); each row keeps its own Reply, Dismiss and Restore. The bulk buttons are always enabled, because a post with nothing ticked writes nothing (finding-mail-bulk-actions criterion 5) and a disabled button cannot be enabled without script (criterion 11). The pressed bulk control says its existing busy word (Dismissing\u2026, Restoring\u2026, and Saving\u2026 on the dialog's Save correction) with the loader glyph, as the single-message controls do; inbox-rows-ticked-busy draws bulk Dismiss pressed. Questions for the operator (R140 b): the words for the bulk controls (drawn with the single-message labels Dismiss, Restore and Correct classification), the count (drawn as a bare number), the failure line for a message that is not changed (not drawn), the checkbox's accessible name (drawn as the message's subject), and where the no-script path enters the classify inputs."
+      }
+    ],
+    "ibx": true
+  },
+  {
+    "key": "inbox-rows-ticked-busy",
+    "label": "Inbox \u00b7 bulk Dismiss pressed",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "I1",
+        "summary": "Scopes: All incoming, No Case Found, Sent Items, Dismissed and Deleted Items all sit on the rail. The Folder select goes, the filter's columns take its width, and Category holds the eleven categories only."
+      },
+      {
+        "id": "I2",
+        "summary": "The message opens as a dialog over the Inbox, not the /Inbox/{id} page (brief, 13 Oct). /Inbox/{id} stays for a new tab and with no script (R159)."
+      },
+      {
+        "id": "I4",
+        "summary": "The quick preview goes, because the dialog is the reader. The list takes the width the preview had."
+      },
+      {
+        "id": "I6",
+        "summary": "Previous and Next message buttons sit in the dialog head beside Close, so the list can be read without closing the dialog."
+      },
+      {
+        "id": "I9",
+        "summary": "The Case tab folds into Decision, the dialog's right column. Classification is the eleven categories as chips, one pressed, applied at once as an image tag is. The Case is its link, with the Case / PO picker under it, then Decided once; Change linked Case and Unlink (or Link to Case) are one row of small buttons under the picker. The tabs are Message, Attachments and Thread. Question for the operator: a chip applies at once, but Correct classification needs a Reason for correction (and a Case type for New instruction), and no field for them is drawn. Where are they entered? Tag as query is the one existing one-click correction, and it records a fixed reason."
+      },
+      {
+        "id": "I10",
+        "summary": "Dismiss in the dialog moves on to the next message."
+      },
+      {
+        "id": "I11",
+        "summary": "The Classified chip goes from the head. Classification is shown once, in Decision."
+      },
+      {
+        "id": "I12",
+        "summary": "Decision shows Decided as plain text with its actor (no provenance icon) and the linked Case once (no Destination and Filed to)."
+      },
+      {
+        "id": "I13",
+        "summary": "Link, Change linked Case and Unlink open their reason dialog in one step. There is no prepare round trip."
+      },
+      {
+        "id": "I15",
+        "summary": "Reply, Reply all and Forward compose inside the dialog: the tabs step aside, From, To and Case sit on one line, and the foot is Cancel and Send. On a query the composer carries PR 1331's AI draft: the AI line, the prefilled Message and Also resolve query."
+      },
+      {
+        "id": "I16",
+        "summary": "A query's record bar names its classification, Query, instead of Post-report, which the glossary avoids. Draft reply with AI, AI draft \u00b7 Queued and Reply with AI draft (PR 1331) stay as they are."
+      },
+      {
+        "id": "I17",
+        "summary": "The dialog has one head (subject; From, To and received beneath; Previous/Next and close at the right), the tabs, then the message beside Decision. The foot carries Dismiss apart on the left, and Reply, Reply all and Forward as plain buttons. The classification's next action (Create case, Register images, PR 1331's Draft reply with AI or Reply with AI draft) is the one dark button, at the far right, in place of the record bar."
+      },
+      {
+        "id": "I18",
+        "summary": "Bulk actions on the list (R36, R140). In All incoming, No Case Found and Dismissed each row carries a checkbox in its left gutter; ticking it neither opens nor pins the row. One bulk form sits above the list, outside the rows: the ticked count and, in the incoming scopes, Dismiss and Correct classification, or, in Dismissed, Restore. Sent Items and Deleted Items have none. Correct classification opens the existing dialog once, so Classification, Case type and Reason for correction are entered once for every ticked row (R140 c); each row keeps its own Reply, Dismiss and Restore. The bulk buttons are always enabled, because a post with nothing ticked writes nothing (finding-mail-bulk-actions criterion 5) and a disabled button cannot be enabled without script (criterion 11). The pressed bulk control says its existing busy word (Dismissing\u2026, Restoring\u2026, and Saving\u2026 on the dialog's Save correction) with the loader glyph, as the single-message controls do; inbox-rows-ticked-busy draws bulk Dismiss pressed. Questions for the operator (R140 b): the words for the bulk controls (drawn with the single-message labels Dismiss, Restore and Correct classification), the count (drawn as a bare number), the failure line for a message that is not changed (not drawn), the checkbox's accessible name (drawn as the message's subject), and where the no-script path enters the classify inputs."
+      }
+    ],
+    "ibx": true
+  },
+  {
+    "key": "inbox-dismissed-rows-ticked",
+    "label": "Inbox \u00b7 Dismissed, bulk Restore",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "I1",
+        "summary": "Scopes: All incoming, No Case Found, Sent Items, Dismissed and Deleted Items all sit on the rail. The Folder select goes, the filter's columns take its width, and Category holds the eleven categories only."
+      },
+      {
+        "id": "I2",
+        "summary": "The message opens as a dialog over the Inbox, not the /Inbox/{id} page (brief, 13 Oct). /Inbox/{id} stays for a new tab and with no script (R159)."
+      },
+      {
+        "id": "I4",
+        "summary": "The quick preview goes, because the dialog is the reader. The list takes the width the preview had."
+      },
+      {
+        "id": "I6",
+        "summary": "Previous and Next message buttons sit in the dialog head beside Close, so the list can be read without closing the dialog."
+      },
+      {
+        "id": "I9",
+        "summary": "The Case tab folds into Decision, the dialog's right column. Classification is the eleven categories as chips, one pressed, applied at once as an image tag is. The Case is its link, with the Case / PO picker under it, then Decided once; Change linked Case and Unlink (or Link to Case) are one row of small buttons under the picker. The tabs are Message, Attachments and Thread. Question for the operator: a chip applies at once, but Correct classification needs a Reason for correction (and a Case type for New instruction), and no field for them is drawn. Where are they entered? Tag as query is the one existing one-click correction, and it records a fixed reason."
+      },
+      {
+        "id": "I10",
+        "summary": "Dismiss in the dialog moves on to the next message."
+      },
+      {
+        "id": "I11",
+        "summary": "The Classified chip goes from the head. Classification is shown once, in Decision."
+      },
+      {
+        "id": "I12",
+        "summary": "Decision shows Decided as plain text with its actor (no provenance icon) and the linked Case once (no Destination and Filed to)."
+      },
+      {
+        "id": "I13",
+        "summary": "Link, Change linked Case and Unlink open their reason dialog in one step. There is no prepare round trip."
+      },
+      {
+        "id": "I15",
+        "summary": "Reply, Reply all and Forward compose inside the dialog: the tabs step aside, From, To and Case sit on one line, and the foot is Cancel and Send. On a query the composer carries PR 1331's AI draft: the AI line, the prefilled Message and Also resolve query."
+      },
+      {
+        "id": "I16",
+        "summary": "A query's record bar names its classification, Query, instead of Post-report, which the glossary avoids. Draft reply with AI, AI draft \u00b7 Queued and Reply with AI draft (PR 1331) stay as they are."
+      },
+      {
+        "id": "I17",
+        "summary": "The dialog has one head (subject; From, To and received beneath; Previous/Next and close at the right), the tabs, then the message beside Decision. The foot carries Dismiss apart on the left, and Reply, Reply all and Forward as plain buttons. The classification's next action (Create case, Register images, PR 1331's Draft reply with AI or Reply with AI draft) is the one dark button, at the far right, in place of the record bar."
+      },
+      {
+        "id": "I18",
+        "summary": "Bulk actions on the list (R36, R140). In All incoming, No Case Found and Dismissed each row carries a checkbox in its left gutter; ticking it neither opens nor pins the row. One bulk form sits above the list, outside the rows: the ticked count and, in the incoming scopes, Dismiss and Correct classification, or, in Dismissed, Restore. Sent Items and Deleted Items have none. Correct classification opens the existing dialog once, so Classification, Case type and Reason for correction are entered once for every ticked row (R140 c); each row keeps its own Reply, Dismiss and Restore. The bulk buttons are always enabled, because a post with nothing ticked writes nothing (finding-mail-bulk-actions criterion 5) and a disabled button cannot be enabled without script (criterion 11). The pressed bulk control says its existing busy word (Dismissing\u2026, Restoring\u2026, and Saving\u2026 on the dialog's Save correction) with the loader glyph, as the single-message controls do; inbox-rows-ticked-busy draws bulk Dismiss pressed. Questions for the operator (R140 b): the words for the bulk controls (drawn with the single-message labels Dismiss, Restore and Correct classification), the count (drawn as a bare number), the failure line for a message that is not changed (not drawn), the checkbox's accessible name (drawn as the message's subject), and where the no-script path enters the classify inputs."
+      }
+    ],
+    "ibx": true
+  },
+  {
+    "key": "mail-message",
+    "label": "Message \u00b7 Case update, linked",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "I1",
+        "summary": "Scopes: All incoming, No Case Found, Sent Items, Dismissed and Deleted Items all sit on the rail. The Folder select goes, the filter's columns take its width, and Category holds the eleven categories only."
+      },
+      {
+        "id": "I2",
+        "summary": "The message opens as a dialog over the Inbox, not the /Inbox/{id} page (brief, 13 Oct). /Inbox/{id} stays for a new tab and with no script (R159)."
+      },
+      {
+        "id": "I4",
+        "summary": "The quick preview goes, because the dialog is the reader. The list takes the width the preview had."
+      },
+      {
+        "id": "I6",
+        "summary": "Previous and Next message buttons sit in the dialog head beside Close, so the list can be read without closing the dialog."
+      },
+      {
+        "id": "I9",
+        "summary": "The Case tab folds into Decision, the dialog's right column. Classification is the eleven categories as chips, one pressed, applied at once as an image tag is. The Case is its link, with the Case / PO picker under it, then Decided once; Change linked Case and Unlink (or Link to Case) are one row of small buttons under the picker. The tabs are Message, Attachments and Thread. Question for the operator: a chip applies at once, but Correct classification needs a Reason for correction (and a Case type for New instruction), and no field for them is drawn. Where are they entered? Tag as query is the one existing one-click correction, and it records a fixed reason."
+      },
+      {
+        "id": "I10",
+        "summary": "Dismiss in the dialog moves on to the next message."
+      },
+      {
+        "id": "I11",
+        "summary": "The Classified chip goes from the head. Classification is shown once, in Decision."
+      },
+      {
+        "id": "I12",
+        "summary": "Decision shows Decided as plain text with its actor (no provenance icon) and the linked Case once (no Destination and Filed to)."
+      },
+      {
+        "id": "I13",
+        "summary": "Link, Change linked Case and Unlink open their reason dialog in one step. There is no prepare round trip."
+      },
+      {
+        "id": "I15",
+        "summary": "Reply, Reply all and Forward compose inside the dialog: the tabs step aside, From, To and Case sit on one line, and the foot is Cancel and Send. On a query the composer carries PR 1331's AI draft: the AI line, the prefilled Message and Also resolve query."
+      },
+      {
+        "id": "I16",
+        "summary": "A query's record bar names its classification, Query, instead of Post-report, which the glossary avoids. Draft reply with AI, AI draft \u00b7 Queued and Reply with AI draft (PR 1331) stay as they are."
+      },
+      {
+        "id": "I17",
+        "summary": "The dialog has one head (subject; From, To and received beneath; Previous/Next and close at the right), the tabs, then the message beside Decision. The foot carries Dismiss apart on the left, and Reply, Reply all and Forward as plain buttons. The classification's next action (Create case, Register images, PR 1331's Draft reply with AI or Reply with AI draft) is the one dark button, at the far right, in place of the record bar."
+      },
+      {
+        "id": "I18",
+        "summary": "Bulk actions on the list (R36, R140). In All incoming, No Case Found and Dismissed each row carries a checkbox in its left gutter; ticking it neither opens nor pins the row. One bulk form sits above the list, outside the rows: the ticked count and, in the incoming scopes, Dismiss and Correct classification, or, in Dismissed, Restore. Sent Items and Deleted Items have none. Correct classification opens the existing dialog once, so Classification, Case type and Reason for correction are entered once for every ticked row (R140 c); each row keeps its own Reply, Dismiss and Restore. The bulk buttons are always enabled, because a post with nothing ticked writes nothing (finding-mail-bulk-actions criterion 5) and a disabled button cannot be enabled without script (criterion 11). The pressed bulk control says its existing busy word (Dismissing\u2026, Restoring\u2026, and Saving\u2026 on the dialog's Save correction) with the loader glyph, as the single-message controls do; inbox-rows-ticked-busy draws bulk Dismiss pressed. Questions for the operator (R140 b): the words for the bulk controls (drawn with the single-message labels Dismiss, Restore and Correct classification), the count (drawn as a bare number), the failure line for a message that is not changed (not drawn), the checkbox's accessible name (drawn as the message's subject), and where the no-script path enters the classify inputs."
+      }
+    ],
+    "ibx": true
+  },
+  {
+    "key": "mail-message-new-instruction",
+    "label": "Message \u00b7 New instruction",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "I1",
+        "summary": "Scopes: All incoming, No Case Found, Sent Items, Dismissed and Deleted Items all sit on the rail. The Folder select goes, the filter's columns take its width, and Category holds the eleven categories only."
+      },
+      {
+        "id": "I2",
+        "summary": "The message opens as a dialog over the Inbox, not the /Inbox/{id} page (brief, 13 Oct). /Inbox/{id} stays for a new tab and with no script (R159)."
+      },
+      {
+        "id": "I4",
+        "summary": "The quick preview goes, because the dialog is the reader. The list takes the width the preview had."
+      },
+      {
+        "id": "I6",
+        "summary": "Previous and Next message buttons sit in the dialog head beside Close, so the list can be read without closing the dialog."
+      },
+      {
+        "id": "I9",
+        "summary": "The Case tab folds into Decision, the dialog's right column. Classification is the eleven categories as chips, one pressed, applied at once as an image tag is. The Case is its link, with the Case / PO picker under it, then Decided once; Change linked Case and Unlink (or Link to Case) are one row of small buttons under the picker. The tabs are Message, Attachments and Thread. Question for the operator: a chip applies at once, but Correct classification needs a Reason for correction (and a Case type for New instruction), and no field for them is drawn. Where are they entered? Tag as query is the one existing one-click correction, and it records a fixed reason."
+      },
+      {
+        "id": "I10",
+        "summary": "Dismiss in the dialog moves on to the next message."
+      },
+      {
+        "id": "I11",
+        "summary": "The Classified chip goes from the head. Classification is shown once, in Decision."
+      },
+      {
+        "id": "I12",
+        "summary": "Decision shows Decided as plain text with its actor (no provenance icon) and the linked Case once (no Destination and Filed to)."
+      },
+      {
+        "id": "I13",
+        "summary": "Link, Change linked Case and Unlink open their reason dialog in one step. There is no prepare round trip."
+      },
+      {
+        "id": "I15",
+        "summary": "Reply, Reply all and Forward compose inside the dialog: the tabs step aside, From, To and Case sit on one line, and the foot is Cancel and Send. On a query the composer carries PR 1331's AI draft: the AI line, the prefilled Message and Also resolve query."
+      },
+      {
+        "id": "I16",
+        "summary": "A query's record bar names its classification, Query, instead of Post-report, which the glossary avoids. Draft reply with AI, AI draft \u00b7 Queued and Reply with AI draft (PR 1331) stay as they are."
+      },
+      {
+        "id": "I17",
+        "summary": "The dialog has one head (subject; From, To and received beneath; Previous/Next and close at the right), the tabs, then the message beside Decision. The foot carries Dismiss apart on the left, and Reply, Reply all and Forward as plain buttons. The classification's next action (Create case, Register images, PR 1331's Draft reply with AI or Reply with AI draft) is the one dark button, at the far right, in place of the record bar."
+      },
+      {
+        "id": "I18",
+        "summary": "Bulk actions on the list (R36, R140). In All incoming, No Case Found and Dismissed each row carries a checkbox in its left gutter; ticking it neither opens nor pins the row. One bulk form sits above the list, outside the rows: the ticked count and, in the incoming scopes, Dismiss and Correct classification, or, in Dismissed, Restore. Sent Items and Deleted Items have none. Correct classification opens the existing dialog once, so Classification, Case type and Reason for correction are entered once for every ticked row (R140 c); each row keeps its own Reply, Dismiss and Restore. The bulk buttons are always enabled, because a post with nothing ticked writes nothing (finding-mail-bulk-actions criterion 5) and a disabled button cannot be enabled without script (criterion 11). The pressed bulk control says its existing busy word (Dismissing\u2026, Restoring\u2026, and Saving\u2026 on the dialog's Save correction) with the loader glyph, as the single-message controls do; inbox-rows-ticked-busy draws bulk Dismiss pressed. Questions for the operator (R140 b): the words for the bulk controls (drawn with the single-message labels Dismiss, Restore and Correct classification), the count (drawn as a bare number), the failure line for a message that is not changed (not drawn), the checkbox's accessible name (drawn as the message's subject), and where the no-script path enters the classify inputs."
+      }
+    ],
+    "ibx": true
+  },
+  {
+    "key": "mail-message-no-case",
+    "label": "Message \u00b7 No Case Found",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "I1",
+        "summary": "Scopes: All incoming, No Case Found, Sent Items, Dismissed and Deleted Items all sit on the rail. The Folder select goes, the filter's columns take its width, and Category holds the eleven categories only."
+      },
+      {
+        "id": "I2",
+        "summary": "The message opens as a dialog over the Inbox, not the /Inbox/{id} page (brief, 13 Oct). /Inbox/{id} stays for a new tab and with no script (R159)."
+      },
+      {
+        "id": "I4",
+        "summary": "The quick preview goes, because the dialog is the reader. The list takes the width the preview had."
+      },
+      {
+        "id": "I6",
+        "summary": "Previous and Next message buttons sit in the dialog head beside Close, so the list can be read without closing the dialog."
+      },
+      {
+        "id": "I9",
+        "summary": "The Case tab folds into Decision, the dialog's right column. Classification is the eleven categories as chips, one pressed, applied at once as an image tag is. The Case is its link, with the Case / PO picker under it, then Decided once; Change linked Case and Unlink (or Link to Case) are one row of small buttons under the picker. The tabs are Message, Attachments and Thread. Question for the operator: a chip applies at once, but Correct classification needs a Reason for correction (and a Case type for New instruction), and no field for them is drawn. Where are they entered? Tag as query is the one existing one-click correction, and it records a fixed reason."
+      },
+      {
+        "id": "I10",
+        "summary": "Dismiss in the dialog moves on to the next message."
+      },
+      {
+        "id": "I11",
+        "summary": "The Classified chip goes from the head. Classification is shown once, in Decision."
+      },
+      {
+        "id": "I12",
+        "summary": "Decision shows Decided as plain text with its actor (no provenance icon) and the linked Case once (no Destination and Filed to)."
+      },
+      {
+        "id": "I13",
+        "summary": "Link, Change linked Case and Unlink open their reason dialog in one step. There is no prepare round trip."
+      },
+      {
+        "id": "I15",
+        "summary": "Reply, Reply all and Forward compose inside the dialog: the tabs step aside, From, To and Case sit on one line, and the foot is Cancel and Send. On a query the composer carries PR 1331's AI draft: the AI line, the prefilled Message and Also resolve query."
+      },
+      {
+        "id": "I16",
+        "summary": "A query's record bar names its classification, Query, instead of Post-report, which the glossary avoids. Draft reply with AI, AI draft \u00b7 Queued and Reply with AI draft (PR 1331) stay as they are."
+      },
+      {
+        "id": "I17",
+        "summary": "The dialog has one head (subject; From, To and received beneath; Previous/Next and close at the right), the tabs, then the message beside Decision. The foot carries Dismiss apart on the left, and Reply, Reply all and Forward as plain buttons. The classification's next action (Create case, Register images, PR 1331's Draft reply with AI or Reply with AI draft) is the one dark button, at the far right, in place of the record bar."
+      },
+      {
+        "id": "I18",
+        "summary": "Bulk actions on the list (R36, R140). In All incoming, No Case Found and Dismissed each row carries a checkbox in its left gutter; ticking it neither opens nor pins the row. One bulk form sits above the list, outside the rows: the ticked count and, in the incoming scopes, Dismiss and Correct classification, or, in Dismissed, Restore. Sent Items and Deleted Items have none. Correct classification opens the existing dialog once, so Classification, Case type and Reason for correction are entered once for every ticked row (R140 c); each row keeps its own Reply, Dismiss and Restore. The bulk buttons are always enabled, because a post with nothing ticked writes nothing (finding-mail-bulk-actions criterion 5) and a disabled button cannot be enabled without script (criterion 11). The pressed bulk control says its existing busy word (Dismissing\u2026, Restoring\u2026, and Saving\u2026 on the dialog's Save correction) with the loader glyph, as the single-message controls do; inbox-rows-ticked-busy draws bulk Dismiss pressed. Questions for the operator (R140 b): the words for the bulk controls (drawn with the single-message labels Dismiss, Restore and Correct classification), the count (drawn as a bare number), the failure line for a message that is not changed (not drawn), the checkbox's accessible name (drawn as the message's subject), and where the no-script path enters the classify inputs."
+      }
+    ],
+    "ibx": true
+  },
+  {
+    "key": "mail-message-reply",
+    "label": "Message \u00b7 Reply",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "I1",
+        "summary": "Scopes: All incoming, No Case Found, Sent Items, Dismissed and Deleted Items all sit on the rail. The Folder select goes, the filter's columns take its width, and Category holds the eleven categories only."
+      },
+      {
+        "id": "I2",
+        "summary": "The message opens as a dialog over the Inbox, not the /Inbox/{id} page (brief, 13 Oct). /Inbox/{id} stays for a new tab and with no script (R159)."
+      },
+      {
+        "id": "I4",
+        "summary": "The quick preview goes, because the dialog is the reader. The list takes the width the preview had."
+      },
+      {
+        "id": "I6",
+        "summary": "Previous and Next message buttons sit in the dialog head beside Close, so the list can be read without closing the dialog."
+      },
+      {
+        "id": "I9",
+        "summary": "The Case tab folds into Decision, the dialog's right column. Classification is the eleven categories as chips, one pressed, applied at once as an image tag is. The Case is its link, with the Case / PO picker under it, then Decided once; Change linked Case and Unlink (or Link to Case) are one row of small buttons under the picker. The tabs are Message, Attachments and Thread. Question for the operator: a chip applies at once, but Correct classification needs a Reason for correction (and a Case type for New instruction), and no field for them is drawn. Where are they entered? Tag as query is the one existing one-click correction, and it records a fixed reason."
+      },
+      {
+        "id": "I10",
+        "summary": "Dismiss in the dialog moves on to the next message."
+      },
+      {
+        "id": "I11",
+        "summary": "The Classified chip goes from the head. Classification is shown once, in Decision."
+      },
+      {
+        "id": "I12",
+        "summary": "Decision shows Decided as plain text with its actor (no provenance icon) and the linked Case once (no Destination and Filed to)."
+      },
+      {
+        "id": "I13",
+        "summary": "Link, Change linked Case and Unlink open their reason dialog in one step. There is no prepare round trip."
+      },
+      {
+        "id": "I15",
+        "summary": "Reply, Reply all and Forward compose inside the dialog: the tabs step aside, From, To and Case sit on one line, and the foot is Cancel and Send. On a query the composer carries PR 1331's AI draft: the AI line, the prefilled Message and Also resolve query."
+      },
+      {
+        "id": "I16",
+        "summary": "A query's record bar names its classification, Query, instead of Post-report, which the glossary avoids. Draft reply with AI, AI draft \u00b7 Queued and Reply with AI draft (PR 1331) stay as they are."
+      },
+      {
+        "id": "I17",
+        "summary": "The dialog has one head (subject; From, To and received beneath; Previous/Next and close at the right), the tabs, then the message beside Decision. The foot carries Dismiss apart on the left, and Reply, Reply all and Forward as plain buttons. The classification's next action (Create case, Register images, PR 1331's Draft reply with AI or Reply with AI draft) is the one dark button, at the far right, in place of the record bar."
+      },
+      {
+        "id": "I18",
+        "summary": "Bulk actions on the list (R36, R140). In All incoming, No Case Found and Dismissed each row carries a checkbox in its left gutter; ticking it neither opens nor pins the row. One bulk form sits above the list, outside the rows: the ticked count and, in the incoming scopes, Dismiss and Correct classification, or, in Dismissed, Restore. Sent Items and Deleted Items have none. Correct classification opens the existing dialog once, so Classification, Case type and Reason for correction are entered once for every ticked row (R140 c); each row keeps its own Reply, Dismiss and Restore. The bulk buttons are always enabled, because a post with nothing ticked writes nothing (finding-mail-bulk-actions criterion 5) and a disabled button cannot be enabled without script (criterion 11). The pressed bulk control says its existing busy word (Dismissing\u2026, Restoring\u2026, and Saving\u2026 on the dialog's Save correction) with the loader glyph, as the single-message controls do; inbox-rows-ticked-busy draws bulk Dismiss pressed. Questions for the operator (R140 b): the words for the bulk controls (drawn with the single-message labels Dismiss, Restore and Correct classification), the count (drawn as a bare number), the failure line for a message that is not changed (not drawn), the checkbox's accessible name (drawn as the message's subject), and where the no-script path enters the classify inputs."
+      }
+    ],
+    "ibx": true
+  },
+  {
+    "key": "mail-message-query",
+    "label": "Message \u00b7 Query, Draft reply with AI",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "I1",
+        "summary": "Scopes: All incoming, No Case Found, Sent Items, Dismissed and Deleted Items all sit on the rail. The Folder select goes, the filter's columns take its width, and Category holds the eleven categories only."
+      },
+      {
+        "id": "I2",
+        "summary": "The message opens as a dialog over the Inbox, not the /Inbox/{id} page (brief, 13 Oct). /Inbox/{id} stays for a new tab and with no script (R159)."
+      },
+      {
+        "id": "I4",
+        "summary": "The quick preview goes, because the dialog is the reader. The list takes the width the preview had."
+      },
+      {
+        "id": "I6",
+        "summary": "Previous and Next message buttons sit in the dialog head beside Close, so the list can be read without closing the dialog."
+      },
+      {
+        "id": "I9",
+        "summary": "The Case tab folds into Decision, the dialog's right column. Classification is the eleven categories as chips, one pressed, applied at once as an image tag is. The Case is its link, with the Case / PO picker under it, then Decided once; Change linked Case and Unlink (or Link to Case) are one row of small buttons under the picker. The tabs are Message, Attachments and Thread. Question for the operator: a chip applies at once, but Correct classification needs a Reason for correction (and a Case type for New instruction), and no field for them is drawn. Where are they entered? Tag as query is the one existing one-click correction, and it records a fixed reason."
+      },
+      {
+        "id": "I10",
+        "summary": "Dismiss in the dialog moves on to the next message."
+      },
+      {
+        "id": "I11",
+        "summary": "The Classified chip goes from the head. Classification is shown once, in Decision."
+      },
+      {
+        "id": "I12",
+        "summary": "Decision shows Decided as plain text with its actor (no provenance icon) and the linked Case once (no Destination and Filed to)."
+      },
+      {
+        "id": "I13",
+        "summary": "Link, Change linked Case and Unlink open their reason dialog in one step. There is no prepare round trip."
+      },
+      {
+        "id": "I15",
+        "summary": "Reply, Reply all and Forward compose inside the dialog: the tabs step aside, From, To and Case sit on one line, and the foot is Cancel and Send. On a query the composer carries PR 1331's AI draft: the AI line, the prefilled Message and Also resolve query."
+      },
+      {
+        "id": "I16",
+        "summary": "A query's record bar names its classification, Query, instead of Post-report, which the glossary avoids. Draft reply with AI, AI draft \u00b7 Queued and Reply with AI draft (PR 1331) stay as they are."
+      },
+      {
+        "id": "I17",
+        "summary": "The dialog has one head (subject; From, To and received beneath; Previous/Next and close at the right), the tabs, then the message beside Decision. The foot carries Dismiss apart on the left, and Reply, Reply all and Forward as plain buttons. The classification's next action (Create case, Register images, PR 1331's Draft reply with AI or Reply with AI draft) is the one dark button, at the far right, in place of the record bar."
+      },
+      {
+        "id": "I18",
+        "summary": "Bulk actions on the list (R36, R140). In All incoming, No Case Found and Dismissed each row carries a checkbox in its left gutter; ticking it neither opens nor pins the row. One bulk form sits above the list, outside the rows: the ticked count and, in the incoming scopes, Dismiss and Correct classification, or, in Dismissed, Restore. Sent Items and Deleted Items have none. Correct classification opens the existing dialog once, so Classification, Case type and Reason for correction are entered once for every ticked row (R140 c); each row keeps its own Reply, Dismiss and Restore. The bulk buttons are always enabled, because a post with nothing ticked writes nothing (finding-mail-bulk-actions criterion 5) and a disabled button cannot be enabled without script (criterion 11). The pressed bulk control says its existing busy word (Dismissing\u2026, Restoring\u2026, and Saving\u2026 on the dialog's Save correction) with the loader glyph, as the single-message controls do; inbox-rows-ticked-busy draws bulk Dismiss pressed. Questions for the operator (R140 b): the words for the bulk controls (drawn with the single-message labels Dismiss, Restore and Correct classification), the count (drawn as a bare number), the failure line for a message that is not changed (not drawn), the checkbox's accessible name (drawn as the message's subject), and where the no-script path enters the classify inputs."
+      }
+    ],
+    "ibx": true
+  },
+  {
+    "key": "mail-message-query-queued",
+    "label": "Message \u00b7 Query, AI draft queued",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "I1",
+        "summary": "Scopes: All incoming, No Case Found, Sent Items, Dismissed and Deleted Items all sit on the rail. The Folder select goes, the filter's columns take its width, and Category holds the eleven categories only."
+      },
+      {
+        "id": "I2",
+        "summary": "The message opens as a dialog over the Inbox, not the /Inbox/{id} page (brief, 13 Oct). /Inbox/{id} stays for a new tab and with no script (R159)."
+      },
+      {
+        "id": "I4",
+        "summary": "The quick preview goes, because the dialog is the reader. The list takes the width the preview had."
+      },
+      {
+        "id": "I6",
+        "summary": "Previous and Next message buttons sit in the dialog head beside Close, so the list can be read without closing the dialog."
+      },
+      {
+        "id": "I9",
+        "summary": "The Case tab folds into Decision, the dialog's right column. Classification is the eleven categories as chips, one pressed, applied at once as an image tag is. The Case is its link, with the Case / PO picker under it, then Decided once; Change linked Case and Unlink (or Link to Case) are one row of small buttons under the picker. The tabs are Message, Attachments and Thread. Question for the operator: a chip applies at once, but Correct classification needs a Reason for correction (and a Case type for New instruction), and no field for them is drawn. Where are they entered? Tag as query is the one existing one-click correction, and it records a fixed reason."
+      },
+      {
+        "id": "I10",
+        "summary": "Dismiss in the dialog moves on to the next message."
+      },
+      {
+        "id": "I11",
+        "summary": "The Classified chip goes from the head. Classification is shown once, in Decision."
+      },
+      {
+        "id": "I12",
+        "summary": "Decision shows Decided as plain text with its actor (no provenance icon) and the linked Case once (no Destination and Filed to)."
+      },
+      {
+        "id": "I13",
+        "summary": "Link, Change linked Case and Unlink open their reason dialog in one step. There is no prepare round trip."
+      },
+      {
+        "id": "I15",
+        "summary": "Reply, Reply all and Forward compose inside the dialog: the tabs step aside, From, To and Case sit on one line, and the foot is Cancel and Send. On a query the composer carries PR 1331's AI draft: the AI line, the prefilled Message and Also resolve query."
+      },
+      {
+        "id": "I16",
+        "summary": "A query's record bar names its classification, Query, instead of Post-report, which the glossary avoids. Draft reply with AI, AI draft \u00b7 Queued and Reply with AI draft (PR 1331) stay as they are."
+      },
+      {
+        "id": "I17",
+        "summary": "The dialog has one head (subject; From, To and received beneath; Previous/Next and close at the right), the tabs, then the message beside Decision. The foot carries Dismiss apart on the left, and Reply, Reply all and Forward as plain buttons. The classification's next action (Create case, Register images, PR 1331's Draft reply with AI or Reply with AI draft) is the one dark button, at the far right, in place of the record bar."
+      },
+      {
+        "id": "I18",
+        "summary": "Bulk actions on the list (R36, R140). In All incoming, No Case Found and Dismissed each row carries a checkbox in its left gutter; ticking it neither opens nor pins the row. One bulk form sits above the list, outside the rows: the ticked count and, in the incoming scopes, Dismiss and Correct classification, or, in Dismissed, Restore. Sent Items and Deleted Items have none. Correct classification opens the existing dialog once, so Classification, Case type and Reason for correction are entered once for every ticked row (R140 c); each row keeps its own Reply, Dismiss and Restore. The bulk buttons are always enabled, because a post with nothing ticked writes nothing (finding-mail-bulk-actions criterion 5) and a disabled button cannot be enabled without script (criterion 11). The pressed bulk control says its existing busy word (Dismissing\u2026, Restoring\u2026, and Saving\u2026 on the dialog's Save correction) with the loader glyph, as the single-message controls do; inbox-rows-ticked-busy draws bulk Dismiss pressed. Questions for the operator (R140 b): the words for the bulk controls (drawn with the single-message labels Dismiss, Restore and Correct classification), the count (drawn as a bare number), the failure line for a message that is not changed (not drawn), the checkbox's accessible name (drawn as the message's subject), and where the no-script path enters the classify inputs."
+      }
+    ],
+    "ibx": true
+  },
+  {
+    "key": "mail-message-query-ready",
+    "label": "Message \u00b7 Query, Reply with AI draft",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "I1",
+        "summary": "Scopes: All incoming, No Case Found, Sent Items, Dismissed and Deleted Items all sit on the rail. The Folder select goes, the filter's columns take its width, and Category holds the eleven categories only."
+      },
+      {
+        "id": "I2",
+        "summary": "The message opens as a dialog over the Inbox, not the /Inbox/{id} page (brief, 13 Oct). /Inbox/{id} stays for a new tab and with no script (R159)."
+      },
+      {
+        "id": "I4",
+        "summary": "The quick preview goes, because the dialog is the reader. The list takes the width the preview had."
+      },
+      {
+        "id": "I6",
+        "summary": "Previous and Next message buttons sit in the dialog head beside Close, so the list can be read without closing the dialog."
+      },
+      {
+        "id": "I9",
+        "summary": "The Case tab folds into Decision, the dialog's right column. Classification is the eleven categories as chips, one pressed, applied at once as an image tag is. The Case is its link, with the Case / PO picker under it, then Decided once; Change linked Case and Unlink (or Link to Case) are one row of small buttons under the picker. The tabs are Message, Attachments and Thread. Question for the operator: a chip applies at once, but Correct classification needs a Reason for correction (and a Case type for New instruction), and no field for them is drawn. Where are they entered? Tag as query is the one existing one-click correction, and it records a fixed reason."
+      },
+      {
+        "id": "I10",
+        "summary": "Dismiss in the dialog moves on to the next message."
+      },
+      {
+        "id": "I11",
+        "summary": "The Classified chip goes from the head. Classification is shown once, in Decision."
+      },
+      {
+        "id": "I12",
+        "summary": "Decision shows Decided as plain text with its actor (no provenance icon) and the linked Case once (no Destination and Filed to)."
+      },
+      {
+        "id": "I13",
+        "summary": "Link, Change linked Case and Unlink open their reason dialog in one step. There is no prepare round trip."
+      },
+      {
+        "id": "I15",
+        "summary": "Reply, Reply all and Forward compose inside the dialog: the tabs step aside, From, To and Case sit on one line, and the foot is Cancel and Send. On a query the composer carries PR 1331's AI draft: the AI line, the prefilled Message and Also resolve query."
+      },
+      {
+        "id": "I16",
+        "summary": "A query's record bar names its classification, Query, instead of Post-report, which the glossary avoids. Draft reply with AI, AI draft \u00b7 Queued and Reply with AI draft (PR 1331) stay as they are."
+      },
+      {
+        "id": "I17",
+        "summary": "The dialog has one head (subject; From, To and received beneath; Previous/Next and close at the right), the tabs, then the message beside Decision. The foot carries Dismiss apart on the left, and Reply, Reply all and Forward as plain buttons. The classification's next action (Create case, Register images, PR 1331's Draft reply with AI or Reply with AI draft) is the one dark button, at the far right, in place of the record bar."
+      },
+      {
+        "id": "I18",
+        "summary": "Bulk actions on the list (R36, R140). In All incoming, No Case Found and Dismissed each row carries a checkbox in its left gutter; ticking it neither opens nor pins the row. One bulk form sits above the list, outside the rows: the ticked count and, in the incoming scopes, Dismiss and Correct classification, or, in Dismissed, Restore. Sent Items and Deleted Items have none. Correct classification opens the existing dialog once, so Classification, Case type and Reason for correction are entered once for every ticked row (R140 c); each row keeps its own Reply, Dismiss and Restore. The bulk buttons are always enabled, because a post with nothing ticked writes nothing (finding-mail-bulk-actions criterion 5) and a disabled button cannot be enabled without script (criterion 11). The pressed bulk control says its existing busy word (Dismissing\u2026, Restoring\u2026, and Saving\u2026 on the dialog's Save correction) with the loader glyph, as the single-message controls do; inbox-rows-ticked-busy draws bulk Dismiss pressed. Questions for the operator (R140 b): the words for the bulk controls (drawn with the single-message labels Dismiss, Restore and Correct classification), the count (drawn as a bare number), the failure line for a message that is not changed (not drawn), the checkbox's accessible name (drawn as the message's subject), and where the no-script path enters the classify inputs."
+      }
+    ],
+    "ibx": true
+  },
+  {
+    "key": "mail-message-query-ai-reply",
+    "label": "Message \u00b7 Query, composer on the AI draft",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "I1",
+        "summary": "Scopes: All incoming, No Case Found, Sent Items, Dismissed and Deleted Items all sit on the rail. The Folder select goes, the filter's columns take its width, and Category holds the eleven categories only."
+      },
+      {
+        "id": "I2",
+        "summary": "The message opens as a dialog over the Inbox, not the /Inbox/{id} page (brief, 13 Oct). /Inbox/{id} stays for a new tab and with no script (R159)."
+      },
+      {
+        "id": "I4",
+        "summary": "The quick preview goes, because the dialog is the reader. The list takes the width the preview had."
+      },
+      {
+        "id": "I6",
+        "summary": "Previous and Next message buttons sit in the dialog head beside Close, so the list can be read without closing the dialog."
+      },
+      {
+        "id": "I9",
+        "summary": "The Case tab folds into Decision, the dialog's right column. Classification is the eleven categories as chips, one pressed, applied at once as an image tag is. The Case is its link, with the Case / PO picker under it, then Decided once; Change linked Case and Unlink (or Link to Case) are one row of small buttons under the picker. The tabs are Message, Attachments and Thread. Question for the operator: a chip applies at once, but Correct classification needs a Reason for correction (and a Case type for New instruction), and no field for them is drawn. Where are they entered? Tag as query is the one existing one-click correction, and it records a fixed reason."
+      },
+      {
+        "id": "I10",
+        "summary": "Dismiss in the dialog moves on to the next message."
+      },
+      {
+        "id": "I11",
+        "summary": "The Classified chip goes from the head. Classification is shown once, in Decision."
+      },
+      {
+        "id": "I12",
+        "summary": "Decision shows Decided as plain text with its actor (no provenance icon) and the linked Case once (no Destination and Filed to)."
+      },
+      {
+        "id": "I13",
+        "summary": "Link, Change linked Case and Unlink open their reason dialog in one step. There is no prepare round trip."
+      },
+      {
+        "id": "I15",
+        "summary": "Reply, Reply all and Forward compose inside the dialog: the tabs step aside, From, To and Case sit on one line, and the foot is Cancel and Send. On a query the composer carries PR 1331's AI draft: the AI line, the prefilled Message and Also resolve query."
+      },
+      {
+        "id": "I16",
+        "summary": "A query's record bar names its classification, Query, instead of Post-report, which the glossary avoids. Draft reply with AI, AI draft \u00b7 Queued and Reply with AI draft (PR 1331) stay as they are."
+      },
+      {
+        "id": "I17",
+        "summary": "The dialog has one head (subject; From, To and received beneath; Previous/Next and close at the right), the tabs, then the message beside Decision. The foot carries Dismiss apart on the left, and Reply, Reply all and Forward as plain buttons. The classification's next action (Create case, Register images, PR 1331's Draft reply with AI or Reply with AI draft) is the one dark button, at the far right, in place of the record bar."
+      },
+      {
+        "id": "I18",
+        "summary": "Bulk actions on the list (R36, R140). In All incoming, No Case Found and Dismissed each row carries a checkbox in its left gutter; ticking it neither opens nor pins the row. One bulk form sits above the list, outside the rows: the ticked count and, in the incoming scopes, Dismiss and Correct classification, or, in Dismissed, Restore. Sent Items and Deleted Items have none. Correct classification opens the existing dialog once, so Classification, Case type and Reason for correction are entered once for every ticked row (R140 c); each row keeps its own Reply, Dismiss and Restore. The bulk buttons are always enabled, because a post with nothing ticked writes nothing (finding-mail-bulk-actions criterion 5) and a disabled button cannot be enabled without script (criterion 11). The pressed bulk control says its existing busy word (Dismissing\u2026, Restoring\u2026, and Saving\u2026 on the dialog's Save correction) with the loader glyph, as the single-message controls do; inbox-rows-ticked-busy draws bulk Dismiss pressed. Questions for the operator (R140 b): the words for the bulk controls (drawn with the single-message labels Dismiss, Restore and Correct classification), the count (drawn as a bare number), the failure line for a message that is not changed (not drawn), the checkbox's accessible name (drawn as the message's subject), and where the no-script path enters the classify inputs."
+      }
+    ],
+    "ibx": true
+  },
+  {
+    "key": "case-correspondence",
+    "label": "Case \u00b7 Correspondence and Queries",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "K1",
+        "summary": "The Tasks icon points at a symbol the sprite does not have, so it draws nothing. It now uses the symbol the sprite has, #icon-square-check."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "upload",
+    "label": "Upload",
+    "group": "Upload and Cases",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "upload-review",
+    "label": "Upload \u00b7 review",
+    "group": "Upload and Cases",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "U1",
+        "summary": "The page subtitle and the narration sentences that carry no consequence go; the Attached, Discarded and Pending sentences stay as they are."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "upload-review-new-case",
+    "label": "Upload \u00b7 review, new Case",
+    "group": "Upload and Cases",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "U1",
+        "summary": "The page subtitle and the narration sentences that carry no consequence go; the Attached, Discarded and Pending sentences stay as they are."
+      },
+      {
+        "id": "U9",
+        "summary": "Review new Case proposal is the decision's primary button; Find a Case and Leave undecided stay secondary."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "cases-not-ready",
+    "label": "Cases \u00b7 Not ready",
+    "group": "Upload and Cases",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "U3",
+        "summary": "The Principal filter lists every Principal that appears in the queues, and Page N shows only when there is a previous or next page."
+      },
+      {
+        "id": "U7",
+        "summary": "The Principal filter sits in the list head beside the count, so the band that held one select goes."
+      },
+      {
+        "id": "U8",
+        "summary": "Quick detail shows what the row does not: one compact fact grid without repeating Case/PO, registration and claimant."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "cases-unassigned",
+    "label": "Cases \u00b7 Unassigned",
+    "group": "Upload and Cases",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "U3",
+        "summary": "The Principal filter lists every Principal that appears in the queues, and Page N shows only when there is a previous or next page."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "cases-unassigned-unidentified",
+    "label": "Cases \u00b7 Unassigned, Unidentified",
+    "group": "Upload and Cases",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "U3",
+        "summary": "The Principal filter lists every Principal that appears in the queues, and Page N shows only when there is a previous or next page."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "cases-review",
+    "label": "Cases \u00b7 Review",
+    "group": "Upload and Cases",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "U3",
+        "summary": "The Principal filter lists every Principal that appears in the queues, and Page N shows only when there is a previous or next page."
+      },
+      {
+        "id": "U7",
+        "summary": "The Principal filter sits in the list head beside the count, so the band that held one select goes."
+      },
+      {
+        "id": "U8",
+        "summary": "Quick detail shows what the row does not: one compact fact grid without repeating Case/PO, registration and claimant."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "cases-with-engineer",
+    "label": "Cases \u00b7 With Engineer",
+    "group": "Upload and Cases",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "W8",
+        "summary": "Cases \u00b7 With Engineer: the Engineer cell reads Unassigned where the Case has no Engineer."
+      },
+      {
+        "id": "U3",
+        "summary": "The Principal filter lists every Principal that appears in the queues, and Page N shows only when there is a previous or next page."
+      },
+      {
+        "id": "U7",
+        "summary": "The Principal filter sits in the list head beside the count, so the band that held one select goes."
+      },
+      {
+        "id": "U8",
+        "summary": "Quick detail shows what the row does not: one compact fact grid without repeating Case/PO, registration and claimant."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "cases-query",
+    "label": "Cases \u00b7 Queries",
+    "group": "Upload and Cases",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "U3",
+        "summary": "The Principal filter lists every Principal that appears in the queues, and Page N shows only when there is a previous or next page."
+      },
+      {
+        "id": "U7",
+        "summary": "The Principal filter sits in the list head beside the count, so the band that held one select goes."
+      },
+      {
+        "id": "U8",
+        "summary": "Quick detail shows what the row does not: one compact fact grid without repeating Case/PO, registration and claimant."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "cases-triage",
+    "label": "Cases \u00b7 Triage",
+    "group": "Upload and Cases",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "U3",
+        "summary": "The Principal filter lists every Principal that appears in the queues, and Page N shows only when there is a previous or next page."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "cases-held",
+    "label": "Cases \u00b7 Held",
+    "group": "Upload and Cases",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "U3",
+        "summary": "The Principal filter lists every Principal that appears in the queues, and Page N shows only when there is a previous or next page."
+      },
+      {
+        "id": "U7",
+        "summary": "The Principal filter sits in the list head beside the count, so the band that held one select goes."
+      },
+      {
+        "id": "U8",
+        "summary": "Quick detail shows what the row does not: one compact fact grid without repeating Case/PO, registration and claimant."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "cases-selected",
+    "label": "Cases \u00b7 Quick detail",
+    "group": "Upload and Cases",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "U3",
+        "summary": "The Principal filter lists every Principal that appears in the queues, and Page N shows only when there is a previous or next page."
+      },
+      {
+        "id": "U7",
+        "summary": "The Principal filter sits in the list head beside the count, so the band that held one select goes."
+      },
+      {
+        "id": "U8",
+        "summary": "Quick detail shows what the row does not: one compact fact grid without repeating Case/PO, registration and claimant."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "create-manual",
+    "label": "Create case \u00b7 manual",
+    "group": "Upload and Cases",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "U10",
+        "summary": "The form is bounded and short fields share rows, so controls are not stretched across the page; Create case sits at the form's end."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "create-seeded",
+    "label": "Create case \u00b7 from an instruction",
+    "group": "Upload and Cases",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "U4",
+        "summary": "Create case: each field is a label and input pair in the form grid, the Extracted from sentences and the provenance word go, and a value taken from the file carries the Extracted pill."
+      },
+      {
+        "id": "U10",
+        "summary": "The form is bounded and short fields share rows, so controls are not stretched across the page; Create case sits at the form's end."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "triage",
+    "label": "Triage",
+    "group": "Upload and Cases",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "U5",
+        "summary": "Triage: Link case uses the Case picker with the label Case / PO, response evidence options read time and mailbox only, and Documents rows gain the View button beside Save as."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "triage-finding",
+    "label": "Triage \u00b7 finding recorded",
+    "group": "Upload and Cases",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "U5",
+        "summary": "Triage: Link case uses the Case picker with the label Case / PO, response evidence options read time and mailbox only, and Documents rows gain the View button beside Save as."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "unidentified",
+    "label": "Unidentified",
+    "group": "Upload and Cases",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "U6",
+        "summary": "The first card no longer repeats the facts the ribbon above it already shows."
+      },
+      {
+        "id": "U12",
+        "summary": "Resolve lists its actions as one even column, Link to Case first, with Close with reason set apart at the bottom."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "vehicle-images",
+    "label": "Vehicle images",
+    "group": "Upload and Cases",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "U6",
+        "summary": "The first card no longer repeats the facts the ribbon above it already shows."
+      },
+      {
+        "id": "U11",
+        "summary": "Add to an existing case is the one strong action and its eligible Cases sit right under it; Edit record is a plain button."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "chaser",
+    "label": "Chaser",
+    "group": "Upload and Cases",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "case-read",
+    "label": "Case \u00b7 With Engineer",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "K1",
+        "summary": "The Tasks icon points at a symbol the sprite does not have, so it draws nothing. It now uses the symbol the sprite has, #icon-square-check."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "case-edit",
+    "label": "Case \u00b7 editing",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "K1",
+        "summary": "The Tasks icon points at a symbol the sprite does not have, so it draws nothing. It now uses the symbol the sprite has, #icon-square-check."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "case-not-ready",
+    "label": "Case \u00b7 report not ready",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "K1",
+        "summary": "The Tasks icon points at a symbol the sprite does not have, so it draws nothing. It now uses the symbol the sprite has, #icon-square-check."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "case-delivery-rules",
+    "label": "Case \u00b7 Report, rules to answer",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "K1",
+        "summary": "The Tasks icon points at a symbol the sprite does not have, so it draws nothing. It now uses the symbol the sprite has, #icon-square-check."
+      },
+      {
+        "id": "K2",
+        "summary": "The Yes and No answers on a rule question show their labels. The radios were stretched to the full width of the form and pushed the labels out of sight."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "case-delivery-plain",
+    "label": "Case \u00b7 Report, ready to send",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "K1",
+        "summary": "The Tasks icon points at a symbol the sprite does not have, so it draws nothing. It now uses the symbol the sprite has, #icon-square-check."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "case-delivery-stop",
+    "label": "Case \u00b7 Report, a rule stops sending",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "K1",
+        "summary": "The Tasks icon points at a symbol the sprite does not have, so it draws nothing. It now uses the symbol the sprite has, #icon-square-check."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "case-delivery-missing",
+    "label": "Case \u00b7 Report, missing attachment",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "K1",
+        "summary": "The Tasks icon points at a symbol the sprite does not have, so it draws nothing. It now uses the symbol the sprite has, #icon-square-check."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "case-report-sent",
+    "label": "Case \u00b7 Report sent, open query",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "K1",
+        "summary": "The Tasks icon points at a symbol the sprite does not have, so it draws nothing. It now uses the symbol the sprite has, #icon-square-check."
+      },
+      {
+        "id": "K5",
+        "summary": "Reading a Case whose report was sent, To shows the recipient of the report that was sent instead of Not recorded; Cc keeps Not recorded, because the send history is one joined list and names no Cc. The capture seeds that history with claims@northline.example, the sender of the instruction e-mail that the Sent item replies to, and read mode prints it nowhere today, so the address is read from the Case's own correspondence."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "case-audit",
+    "label": "Case \u00b7 Inspection and Audit",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "K1",
+        "summary": "The Tasks icon points at a symbol the sprite does not have, so it draws nothing. It now uses the symbol the sprite has, #icon-square-check."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "case-tasks",
+    "label": "Case \u00b7 Tasks dialog",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "K1",
+        "summary": "The Tasks icon points at a symbol the sprite does not have, so it draws nothing. It now uses the symbol the sprite has, #icon-square-check."
+      },
+      {
+        "id": "K3",
+        "summary": "Each open task in Next action opens the Tasks dialog itself, so the repeated Tasks button on every row goes."
+      },
+      {
+        "id": "K4",
+        "summary": "The add-task box takes the field style the other Case inputs use."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "case-with-engineer-unassigned",
+    "label": "Case \u00b7 With Engineer, no Engineer",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "K1",
+        "summary": "The Tasks icon points at a symbol the sprite does not have, so it draws nothing. It now uses the symbol the sprite has, #icon-square-check."
+      },
+      {
+        "id": "K9",
+        "summary": "A With Engineer Case that has no Engineer reads Unassigned on the ribbon and in the Overview (the Overview's only Engineer fact is Sign-off Engineer, which is the fact drawn). Next action opens with Assign Engineer and Take beside it, the Actions menu lists Assign Engineer, and the Assign Engineer dialog lists the signed-in person first as Name (you), then the other Engineers, then Unassigned, with no Reason box."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "case-closed",
+    "label": "Case \u00b7 Closed, Return to work",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "K1",
+        "summary": "The Tasks icon points at a symbol the sprite does not have, so it draws nothing. It now uses the symbol the sprite has, #icon-square-check."
+      },
+      {
+        "id": "K10",
+        "summary": "A closed Case offers Return to work in the Actions menu. Its dialog posts the Closure page's Reopen handler with the stage to return to and a reason; the stage options read the existing stage names. Question: the stage field's label is given by no ruling and no live label, so it reads Case stage, the word W2 gives the Search State filter."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "admin-hub",
+    "label": "Administration",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A1",
+        "summary": "The hub's cards are its navigation: their descriptions go, the Automation icon matches, and the duplicate side nav leaves the hub page."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "accounts",
+    "label": "Staff accounts",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A9",
+        "summary": "Bare Administration tables take the compact table style used by the other Administration lists."
+      },
+      {
+        "id": "A20",
+        "summary": "Administration, across pages: notices share one success treatment (success tone and check-circle), the local Confirmation copy that repeats the layout's goes, a panel heading that repeats the page title goes, empty lists use the empty state, and Apply / Add buttons use the one primary class."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "accounts-settings",
+    "label": "Staff accounts \u00b7 settings",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A2",
+        "summary": "Staff accounts: the temporary password panel sits at the top of the right-hand column, \"Manage this account's login.\" goes, and the Glass's login dialog no longer shows Generation and Version."
+      },
+      {
+        "id": "A9",
+        "summary": "Bare Administration tables take the compact table style used by the other Administration lists."
+      },
+      {
+        "id": "A10",
+        "summary": "Account settings has one foot: Disable and Delete set apart on the left, Cancel and Save on the right; Force logout and Reset password sit in the body as small actions."
+      },
+      {
+        "id": "A14",
+        "summary": "Staff accounts: the settings dialog's Username and State fact grid goes, the Delete confirmation takes the shared dialog classes, the Glass's login dialog keeps its one close (the x) and its legend-less fieldset is a plain stack, and the dialog's \"Not configured\" reads \"Not set\" like the list."
+      },
+      {
+        "id": "A20",
+        "summary": "Administration, across pages: notices share one success treatment (success tone and check-circle), the local Confirmation copy that repeats the layout's goes, a panel heading that repeats the page title goes, empty lists use the empty state, and Apply / Add buttons use the one primary class."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "accounts-glass",
+    "label": "Staff accounts \u00b7 Glass's login",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A2",
+        "summary": "Staff accounts: the temporary password panel sits at the top of the right-hand column, \"Manage this account's login.\" goes, and the Glass's login dialog no longer shows Generation and Version."
+      },
+      {
+        "id": "A9",
+        "summary": "Bare Administration tables take the compact table style used by the other Administration lists."
+      },
+      {
+        "id": "A14",
+        "summary": "Staff accounts: the settings dialog's Username and State fact grid goes, the Delete confirmation takes the shared dialog classes, the Glass's login dialog keeps its one close (the x) and its legend-less fieldset is a plain stack, and the dialog's \"Not configured\" reads \"Not set\" like the list."
+      },
+      {
+        "id": "A20",
+        "summary": "Administration, across pages: notices share one success treatment (success tone and check-circle), the local Confirmation copy that repeats the layout's goes, a panel heading that repeats the page title goes, empty lists use the empty state, and Apply / Add buttons use the one primary class."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "accounts-glass-empty",
+    "label": "Staff accounts \u00b7 Glass's login, not set",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A14",
+        "summary": "Staff accounts: the settings dialog's Username and State fact grid goes, the Delete confirmation takes the shared dialog classes, the Glass's login dialog keeps its one close (the x) and its legend-less fieldset is a plain stack, and the dialog's \"Not configured\" reads \"Not set\" like the list."
+      },
+      {
+        "id": "A20",
+        "summary": "Administration, across pages: notices share one success treatment (success tone and check-circle), the local Confirmation copy that repeats the layout's goes, a panel heading that repeats the page title goes, empty lists use the empty state, and Apply / Add buttons use the one primary class."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "accounts-temp-password",
+    "label": "Staff accounts \u00b7 temporary password",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A2",
+        "summary": "Staff accounts: the temporary password panel sits at the top of the right-hand column, \"Manage this account's login.\" goes, and the Glass's login dialog no longer shows Generation and Version."
+      },
+      {
+        "id": "A9",
+        "summary": "Bare Administration tables take the compact table style used by the other Administration lists."
+      },
+      {
+        "id": "A20",
+        "summary": "Administration, across pages: notices share one success treatment (success tone and check-circle), the local Confirmation copy that repeats the layout's goes, a panel heading that repeats the page title goes, empty lists use the empty state, and Apply / Add buttons use the one primary class."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "contacts",
+    "label": "Contacts",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A9",
+        "summary": "Bare Administration tables take the compact table style used by the other Administration lists."
+      },
+      {
+        "id": "A15",
+        "summary": "Contacts list: Add contact carries the plus icon, the panel's Contacts heading goes and the panel head keeps the filter toolbar, Default inspection reads Inspection mode with the full Image Based Assessment, and the Add dialog closes the way the Type dialog does (x and a Cancel button)."
+      },
+      {
+        "id": "A30",
+        "summary": "Contacts list: Apply renders only without script (noscript), as FRD-17 says, for no-script use; the Proposal hides it."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "contacts-create",
+    "label": "Contacts \u00b7 Add Repairer",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A15",
+        "summary": "Contacts list: Add contact carries the plus icon, the panel's Contacts heading goes and the panel head keeps the filter toolbar, Default inspection reads Inspection mode with the full Image Based Assessment, and the Add dialog closes the way the Type dialog does (x and a Cancel button)."
+      },
+      {
+        "id": "A30",
+        "summary": "Contacts list: Apply renders only without script (noscript), as FRD-17 says, for no-script use; the Proposal hides it."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "contacts-principal-contact",
+    "label": "Contacts \u00b7 Principal",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A3",
+        "summary": "Contacts: the \"(optional)\" label suffixes and the Linked principals note go, Principal API state shows the status chip, Replace code moves from the foot of every tab to the head of the Contact tab, and hint lines take the field-hint style."
+      },
+      {
+        "id": "A16",
+        "summary": "Contacts edit: the inactive-Principal panel goes, the browser fieldsets become plain stacks, the Replace dialog takes the shared dialog classes, each Rule legend is numbered, Add rule / Add band are small buttons, the API sentence goes, Report generation, Location and API are bounded like the Contact tab, the spacer field goes and every tab's foot is Cancel then Save."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "contacts-principal-report-generation",
+    "label": "Contacts \u00b7 Principal, Report generation",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A3",
+        "summary": "Contacts: the \"(optional)\" label suffixes and the Linked principals note go, Principal API state shows the status chip, Replace code moves from the foot of every tab to the head of the Contact tab, and hint lines take the field-hint style."
+      },
+      {
+        "id": "A16",
+        "summary": "Contacts edit: the inactive-Principal panel goes, the browser fieldsets become plain stacks, the Replace dialog takes the shared dialog classes, each Rule legend is numbered, Add rule / Add band are small buttons, the API sentence goes, Report generation, Location and API are bounded like the Contact tab, the spacer field goes and every tab's foot is Cancel then Save."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "contacts-principal-report-sending",
+    "label": "Contacts \u00b7 Principal, Report sending",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A3",
+        "summary": "Contacts: the \"(optional)\" label suffixes and the Linked principals note go, Principal API state shows the status chip, Replace code moves from the foot of every tab to the head of the Contact tab, and hint lines take the field-hint style."
+      },
+      {
+        "id": "A11",
+        "summary": "Report sending reads as a form, not nested boxes: fieldsets lose their browser borders and Add address / Add reminder are small buttons at their natural width."
+      },
+      {
+        "id": "A16",
+        "summary": "Contacts edit: the inactive-Principal panel goes, the browser fieldsets become plain stacks, the Replace dialog takes the shared dialog classes, each Rule legend is numbered, Add rule / Add band are small buttons, the API sentence goes, Report generation, Location and API are bounded like the Contact tab, the spacer field goes and every tab's foot is Cancel then Save."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "contacts-principal-salvage-matrix",
+    "label": "Contacts \u00b7 Principal, Salvage matrix",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A3",
+        "summary": "Contacts: the \"(optional)\" label suffixes and the Linked principals note go, Principal API state shows the status chip, Replace code moves from the foot of every tab to the head of the Contact tab, and hint lines take the field-hint style."
+      },
+      {
+        "id": "A9",
+        "summary": "Bare Administration tables take the compact table style used by the other Administration lists."
+      },
+      {
+        "id": "A16",
+        "summary": "Contacts edit: the inactive-Principal panel goes, the browser fieldsets become plain stacks, the Replace dialog takes the shared dialog classes, each Rule legend is numbered, Add rule / Add band are small buttons, the API sentence goes, Report generation, Location and API are bounded like the Contact tab, the spacer field goes and every tab's foot is Cancel then Save."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "contacts-principal-default-inspection-location",
+    "label": "Contacts \u00b7 Principal, Inspection location",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A3",
+        "summary": "Contacts: the \"(optional)\" label suffixes and the Linked principals note go, Principal API state shows the status chip, Replace code moves from the foot of every tab to the head of the Contact tab, and hint lines take the field-hint style."
+      },
+      {
+        "id": "A16",
+        "summary": "Contacts edit: the inactive-Principal panel goes, the browser fieldsets become plain stacks, the Replace dialog takes the shared dialog classes, each Rule legend is numbered, Add rule / Add band are small buttons, the API sentence goes, Report generation, Location and API are bounded like the Contact tab, the spacer field goes and every tab's foot is Cancel then Save."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "contacts-principal-principal-api",
+    "label": "Contacts \u00b7 Principal, Principal API",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A3",
+        "summary": "Contacts: the \"(optional)\" label suffixes and the Linked principals note go, Principal API state shows the status chip, Replace code moves from the foot of every tab to the head of the Contact tab, and hint lines take the field-hint style."
+      },
+      {
+        "id": "A16",
+        "summary": "Contacts edit: the inactive-Principal panel goes, the browser fieldsets become plain stacks, the Replace dialog takes the shared dialog classes, each Rule legend is numbered, Add rule / Add band are small buttons, the API sentence goes, Report generation, Location and API are bounded like the Contact tab, the spacer field goes and every tab's foot is Cancel then Save."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "contacts-other",
+    "label": "Contacts \u00b7 Repairer",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A16",
+        "summary": "Contacts edit: the inactive-Principal panel goes, the browser fieldsets become plain stacks, the Replace dialog takes the shared dialog classes, each Rule legend is numbered, Add rule / Add band are small buttons, the API sentence goes, Report generation, Location and API are bounded like the Contact tab, the spacer field goes and every tab's foot is Cancel then Save."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "configuration",
+    "label": "Workflow configuration",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A4",
+        "summary": "Workflow configuration: the Administration eyebrow is added, the labour-rate table is compact with right-aligned figures, the fieldset border is reset, and the range hint lines go (the minimum and maximum stay)."
+      },
+      {
+        "id": "A17",
+        "summary": "Workflow configuration: the Reset buttons (form and each rate row) go; Save is the form's last control."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "mailboxes",
+    "label": "Mail settings",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A18",
+        "summary": "Mail settings: Last checked shows the time only (or Not polled / Not activated without full stops), the dialog keeps Last success / Freshness / Last error with Last error in words, Add mailbox is the primary button and the panel head gains the count meta as Staff accounts has, the Add and Settings dialogs share one width, Used for loses its fieldset border and uses the choice label, and the literal x is the sprite icon. QUESTION: the count meta's unit word is drawn as the plural of the label Mailbox; confirm it."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "mailboxes-settings",
+    "label": "Mail settings \u00b7 mailbox",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A18",
+        "summary": "Mail settings: Last checked shows the time only (or Not polled / Not activated without full stops), the dialog keeps Last success / Freshness / Last error with Last error in words, Add mailbox is the primary button and the panel head gains the count meta as Staff accounts has, the Add and Settings dialogs share one width, Used for loses its fieldset border and uses the choice label, and the literal x is the sprite icon. QUESTION: the count meta's unit word is drawn as the plural of the label Mailbox; confirm it."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "mailboxes-new",
+    "label": "Mail settings \u00b7 Add mailbox",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A18",
+        "summary": "Mail settings: Last checked shows the time only (or Not polled / Not activated without full stops), the dialog keeps Last success / Freshness / Last error with Last error in words, Add mailbox is the primary button and the panel head gains the count meta as Staff accounts has, the Add and Settings dialogs share one width, Used for loses its fieldset border and uses the choice label, and the literal x is the sprite icon. QUESTION: the count meta's unit word is drawn as the plural of the label Mailbox; confirm it."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "email-templates",
+    "label": "E-mail templates",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A19",
+        "summary": "E-mail templates: built-in rows read Built-in wording, the panel heading goes, the action cell is right-aligned like Staff accounts, and the placeholder chip row is labelled with the existing label Placeholders."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "valuation-presets",
+    "label": "Valuation presets",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A21",
+        "summary": "Valuation presets: the head reads Presets, the State column reads Enabled, the amount inputs sit inside the .input-money wrapper (the pound sign shows and figures right-align), and the count takes panel-title-meta."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "health",
+    "label": "Service health",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A20",
+        "summary": "Administration, across pages: notices share one success treatment (success tone and check-circle), the local Confirmation copy that repeats the layout's goes, a panel heading that repeats the page title goes, empty lists use the empty state, and Apply / Add buttons use the one primary class."
+      },
+      {
+        "id": "A22",
+        "summary": "Service health: Working chips take the green tone. A Needs attention row shows its mapped reason under the chip the way the Intake log does (small.admin-service-area, which Stage 2 treats as shared and moves to site.css); no captured row carries a failure code, so none is drawn here."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "logs",
+    "label": "Logs",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A6",
+        "summary": "Logs: the AI actor chip is the shared status chip."
+      },
+      {
+        "id": "A13",
+        "summary": "Logs reads in words: action codes become plain wording and results share one spelling."
+      },
+      {
+        "id": "A24",
+        "summary": "Logs: the Recorded counts and processing times panel goes (Service health owns service facts). Action logs: the filter labels match their column headers (Keywords to Search, Activity to Action, Case/reference to Reference, Outcome to Result). Intake log: the tiles read Failed files and Oldest file waiting and take the shared metric strip, and the filter takes the Action logs structure with a primary Apply. The drawer takes the shared dialog frame with one close (the x) and drops the facts the row already shows (Received, Source, Outcome, Became), keeping Attempts and the evidence. Stage 2: the logs-tabs class and the logs.css colour fallbacks go."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "logs-intake",
+    "label": "Logs \u00b7 intake",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A20",
+        "summary": "Administration, across pages: notices share one success treatment (success tone and check-circle), the local Confirmation copy that repeats the layout's goes, a panel heading that repeats the page title goes, empty lists use the empty state, and Apply / Add buttons use the one primary class."
+      },
+      {
+        "id": "A24",
+        "summary": "Logs: the Recorded counts and processing times panel goes (Service health owns service facts). Action logs: the filter labels match their column headers (Keywords to Search, Activity to Action, Case/reference to Reference, Outcome to Result). Intake log: the tiles read Failed files and Oldest file waiting and take the shared metric strip, and the filter takes the Action logs structure with a primary Apply. The drawer takes the shared dialog frame with one close (the x) and drops the facts the row already shows (Received, Source, Outcome, Became), keeping Attempts and the evidence. Stage 2: the logs-tabs class and the logs.css colour fallbacks go."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "logs-intake-drawer",
+    "label": "Logs \u00b7 intake, drawer open",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A20",
+        "summary": "Administration, across pages: notices share one success treatment (success tone and check-circle), the local Confirmation copy that repeats the layout's goes, a panel heading that repeats the page title goes, empty lists use the empty state, and Apply / Add buttons use the one primary class."
+      },
+      {
+        "id": "A24",
+        "summary": "Logs: the Recorded counts and processing times panel goes (Service health owns service facts). Action logs: the filter labels match their column headers (Keywords to Search, Activity to Action, Case/reference to Reference, Outcome to Result). Intake log: the tiles read Failed files and Oldest file waiting and take the shared metric strip, and the filter takes the Action logs structure with a primary Apply. The drawer takes the shared dialog frame with one close (the x) and drops the facts the row already shows (Received, Source, Outcome, Became), keeping Attempts and the evidence. Stage 2: the logs-tabs class and the logs.css colour fallbacks go."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "reports",
+    "label": "Management reports \u00b7 Engineers tab",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A7",
+        "summary": "Management reports: the sentence above the Case list controls goes."
+      },
+      {
+        "id": "A20",
+        "summary": "Administration, across pages: notices share one success treatment (success tone and check-circle), the local Confirmation copy that repeats the layout's goes, a panel heading that repeats the page title goes, empty lists use the empty state, and Apply / Add buttons use the one primary class."
+      },
+      {
+        "id": "A26",
+        "summary": "Management reports: four tabs under the period bar, Engineers / Principals / Queues / Case list, as ?tab= links like Logs; Download workbook stays in the header; the six Case-list fieldsets lose their borders. Stage 2: LoadAsync scopes its reads by tab through the existing Reads flags; the header uses the shared page-header pattern (_PageHeader secondary action, eyebrow from the label)."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "reports-principals",
+    "label": "Management reports \u00b7 Principals tab",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A7",
+        "summary": "Management reports: the sentence above the Case list controls goes."
+      },
+      {
+        "id": "A20",
+        "summary": "Administration, across pages: notices share one success treatment (success tone and check-circle), the local Confirmation copy that repeats the layout's goes, a panel heading that repeats the page title goes, empty lists use the empty state, and Apply / Add buttons use the one primary class."
+      },
+      {
+        "id": "A26",
+        "summary": "Management reports: four tabs under the period bar, Engineers / Principals / Queues / Case list, as ?tab= links like Logs; Download workbook stays in the header; the six Case-list fieldsets lose their borders. Stage 2: LoadAsync scopes its reads by tab through the existing Reads flags; the header uses the shared page-header pattern (_PageHeader secondary action, eyebrow from the label)."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "reports-queues",
+    "label": "Management reports \u00b7 Queues tab",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A7",
+        "summary": "Management reports: the sentence above the Case list controls goes."
+      },
+      {
+        "id": "A20",
+        "summary": "Administration, across pages: notices share one success treatment (success tone and check-circle), the local Confirmation copy that repeats the layout's goes, a panel heading that repeats the page title goes, empty lists use the empty state, and Apply / Add buttons use the one primary class."
+      },
+      {
+        "id": "A26",
+        "summary": "Management reports: four tabs under the period bar, Engineers / Principals / Queues / Case list, as ?tab= links like Logs; Download workbook stays in the header; the six Case-list fieldsets lose their borders. Stage 2: LoadAsync scopes its reads by tab through the existing Reads flags; the header uses the shared page-header pattern (_PageHeader secondary action, eyebrow from the label)."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "reports-case-list",
+    "label": "Management reports \u00b7 Case list tab",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A7",
+        "summary": "Management reports: the sentence above the Case list controls goes."
+      },
+      {
+        "id": "A20",
+        "summary": "Administration, across pages: notices share one success treatment (success tone and check-circle), the local Confirmation copy that repeats the layout's goes, a panel heading that repeats the page title goes, empty lists use the empty state, and Apply / Add buttons use the one primary class."
+      },
+      {
+        "id": "A26",
+        "summary": "Management reports: four tabs under the period bar, Engineers / Principals / Queues / Case list, as ?tab= links like Logs; Download workbook stays in the header; the six Case-list fieldsets lose their borders. Stage 2: LoadAsync scopes its reads by tab through the existing Reads flags; the header uses the shared page-header pattern (_PageHeader secondary action, eyebrow from the label)."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "admin-release-notes",
+    "label": "Release notes (Administration)",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A20",
+        "summary": "Administration, across pages: notices share one success treatment (success tone and check-circle), the local Confirmation copy that repeats the layout's goes, a panel heading that repeats the page title goes, empty lists use the empty state, and Apply / Add buttons use the one primary class."
+      },
+      {
+        "id": "A27",
+        "summary": "Release notes: the list heading goes (A20), the edit page's eyebrow reads Administration like its siblings, a draft row's three Not recorded cells read an em dash, and the page for a new note does not repeat its title in the panel head."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "release-note-edit",
+    "label": "Release note \u00b7 edit",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A27",
+        "summary": "Release notes: the list heading goes (A20), the edit page's eyebrow reads Administration like its siblings, a draft row's three Not recorded cells read an em dash, and the page for a new note does not repeat its title in the panel head."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "release-note-new",
+    "label": "Release note \u00b7 new",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A27",
+        "summary": "Release notes: the list heading goes (A20), the edit page's eyebrow reads Administration like its siblings, a draft row's three Not recorded cells read an em dash, and the page for a new note does not repeat its title in the panel head."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "release-note-published",
+    "label": "Release note \u00b7 published",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A27",
+        "summary": "Release notes: the list heading goes (A20), the edit page's eyebrow reads Administration like its siblings, a draft row's three Not recorded cells read an em dash, and the page for a new note does not repeat its title in the panel head."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "problem-reports",
+    "label": "Problem reports",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A12",
+        "summary": "Problem reports keeps the reconciliation form compact on one line, and the report ID shows only on the row that needs it."
+      },
+      {
+        "id": "A20",
+        "summary": "Administration, across pages: notices share one success treatment (success tone and check-circle), the local Confirmation copy that repeats the layout's goes, a panel heading that repeats the page title goes, empty lists use the empty state, and Apply / Add buttons use the one primary class."
+      },
+      {
+        "id": "A25",
+        "summary": "Problem reports: the Unknown chip reads Delivery unknown, Page shows the page name instead of a route, and the table caption that repeats the page title goes (A20 takes the panel heading). Stage 2: a failed Retry gives no feedback."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "ai-jobs",
+    "label": "AI jobs",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A20",
+        "summary": "Administration, across pages: notices share one success treatment (success tone and check-circle), the local Confirmation copy that repeats the layout's goes, a panel heading that repeats the page title goes, empty lists use the empty state, and Apply / Add buttons use the one primary class."
+      },
+      {
+        "id": "A28",
+        "summary": "AI jobs: Stop is one small danger button with no reason form, the kind reads AI Proposal (no captured job is an Estimate), the meta reads Send to AI on or off, a stopped job reads Cancelled (the state's own word, R160; no captured job is stopped) and the Action header aligns over its buttons. The status notice takes the shared tone (A20) and a Case subject links to the Case (A8). Stage 2: Stop posts no reason; the reason is optional (R160, FRD-27)."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "automation",
+    "label": "Automation & AI",
+    "group": "Administration",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "A8",
+        "summary": "Automation: the checkbox uses the shared choice label."
+      },
+      {
+        "id": "A23",
+        "summary": "Automation and AI: the scope reads Received files, the checkbox reads Send to AI, the AI settings panel shows its state once (the chip goes, the checkbox states it) and Stop automation sits at the end of its panel on the right like Save AI settings. Registered clients and Client identifier collapse to one fact when they are equal (they differ on the capture, so nothing is drawn). QUESTION: the label of that one fact; the plan writes Client and no existing label is that word. Stage 2: the notice and the error summary sit inside the admin column (neither is on the capture), the dead Reason binding goes and FRD-17's optional-reason line is aligned, since no reason is captured."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "auth-signin",
+    "label": "Sign in",
+    "group": "Shell and sign-in",
+    "changes": [],
+    "ibx": false
+  },
+  {
+    "key": "auth-signin-failed",
+    "label": "Sign in \u00b7 refused",
+    "group": "Shell and sign-in",
+    "changes": [],
+    "ibx": false
+  },
+  {
+    "key": "auth-signed-out",
+    "label": "Signed out",
+    "group": "Shell and sign-in",
+    "changes": [],
+    "ibx": false
+  },
+  {
+    "key": "auth-password-forced",
+    "label": "Password change \u00b7 required",
+    "group": "Shell and sign-in",
+    "changes": [
+      {
+        "id": "S6",
+        "summary": "Change password: the submit button sits directly in the form, full width as on sign-in, and each password field gets the Show/Hide control."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "auth-password-voluntary",
+    "label": "Password change",
+    "group": "Shell and sign-in",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      },
+      {
+        "id": "S6",
+        "summary": "Change password: the submit button sits directly in the form, full width as on sign-in, and each password field gets the Show/Hide control."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "auth-access-denied",
+    "label": "Access denied",
+    "group": "Shell and sign-in",
+    "changes": [],
+    "ibx": false
+  },
+  {
+    "key": "consent",
+    "label": "Connector consent",
+    "group": "Shell and sign-in",
+    "changes": [
+      {
+        "id": "S5",
+        "summary": "The raw scope identifiers go from the connector request; the descriptions stay. One scope's description (the intake scope's, not requested here) contains the word intake, which the interface does not use; its wording is left to Stage 2 PR 1 and is put to the operator when that PR is drafted."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "error",
+    "label": "Error",
+    "group": "Shell and sign-in",
+    "changes": [],
+    "ibx": false
+  },
+  {
+    "key": "status-404",
+    "label": "Not found",
+    "group": "Shell and sign-in",
+    "changes": [
+      {
+        "id": "S7",
+        "summary": "The Not found page's one action is the primary button."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "release-notes",
+    "label": "Release notes",
+    "group": "Shell and sign-in",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S2",
+        "summary": "Mark all read moves to the Notifications dialog head."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      }
+    ],
+    "ibx": false
+  },
+  {
+    "key": "whats-new",
+    "label": "What's new",
+    "group": "Shell and sign-in",
+    "changes": [
+      {
+        "id": "S1",
+        "summary": "Release notes, Report a problem and Change password move into the Account dialog body; the foot keeps Close and Sign out."
+      },
+      {
+        "id": "S2",
+        "summary": "Mark all read moves to the Notifications dialog head."
+      },
+      {
+        "id": "S3",
+        "summary": "The command palette's Cases icon matches the rail's Cases icon."
+      },
+      {
+        "id": "S4",
+        "summary": "The utility bar's freshness line goes; the rail health line keeps the one clock."
+      }
+    ],
+    "ibx": false
+  }
+]

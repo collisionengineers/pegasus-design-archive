@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en" data-busy-label="Working&#x2026;" data-busy-still="Still" data-icon-sprite="/images/lucide-sprite.04agn8pzs5.svg">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search · Pegasus</title>
+    <link rel="stylesheet" href="/css/site.qz2wg1x280.css" />
+    
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell" data-app-shell>
+        <header class="app-rail">
+            <a class="brand" aria-label="Pegasus home" href="/">
+                <img src="/images/pegasus-mark-refined-128.tctmpgz0uo.png" alt="" aria-hidden="true" />
+                <span class="brand-copy"><strong>PEGASUS</strong><span>Case management</span></span>
+            </a>
+            <nav class="primary-nav" aria-label="Primary">
+                <div class="nav-label">Work</div>
+                <a class="nav-link" href="/">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                    <span>Work Centre</span>
+                </a>
+                    <a class="nav-link" href="/Inbox">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                        <span>Inbox</span>
+                    </a>
+                    <a class="nav-link" href="/Upload">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                        <span>Upload</span>
+                    </a>
+                <a class="nav-link" href="/Cases">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list-checks" /></svg>
+                    <span>Cases</span>
+                </a>
+                <a class="nav-link" aria-current="page" href="/Search">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <span>Search</span>
+                </a>
+                    <div class="nav-label">Manage</div>
+                    <a class="nav-link" href="/Administration">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+                        <span>Administration</span>
+                    </a>
+            </nav>
+            <div class="rail-spacer"></div>
+            <button type="button" class="rail-collapse" data-rail-toggle aria-expanded="true" aria-label="Collapse navigation"
+                    data-label-collapse="Collapse navigation" data-label-expand="Expand navigation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-left" /></svg>
+                <span>Collapse</span>
+            </button>
+            <div class="rail-health">
+                <div class="rail-health-line"><span class="health-dot"></span><span>Current · 09:47</span></div>
+            </div>
+                <div class="rail-user" role="group" aria-label="User">
+                    <span class="avatar" aria-hidden="true">EM</span>
+                    <div><strong>e.mawdsley</strong><small>Administrator</small></div>
+                    <button type="button" class="icon-button" data-dialog-open="account-dialog" aria-label="Account menu">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                    </button>
+                </div>
+        </header>
+        <div class="app-column">
+            <section class="utility-bar" aria-label="Utility bar">
+                <div class="utility-freshness"><span class="health-dot"></span><span>Current · 09:47</span></div>
+                <form class="utility-search" role="search" method="get" action="/Search">
+                    <label class="sr-only" for="global-search">Search Pegasus</label>
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <input id="global-search" type="search" name="query" data-command-input aria-label="Search Pegasus" placeholder="Search cases, references or people" autocomplete="off" />
+                    <span class="shortcut-hint" aria-hidden="true">Ctrl K</span>
+                </form>
+                <div class="utility-actions">
+                    <a class="btn btn--primary" href="/Cases/Create">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-plus" /></svg>
+                        <span>New case</span>
+                    </a>
+                    <span class="bell-wrap">
+                        <button type="button" class="icon-button" data-dialog-open="notifications-dialog" aria-label="Notifications &#xB7; 3 unread">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bell" /></svg>
+                        </button>
+                            <span class="bell-count" aria-hidden="true">3</span>
+                    </span>
+                        <button type="button" class="icon-button utility-account" data-dialog-open="account-dialog" aria-label="Account menu">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                        </button>
+                </div>
+            </section>
+            <main id="main-content" class="app-main" tabindex="-1">
+                <div class="content">
+                    
+<header class="page-header">
+    <div class="page-title">
+        <h1>Search</h1>
+    </div>
+    <div class="page-actions">
+        <div class="freshness">
+    <span class="freshness-status">
+        <span class="health-dot"></span>
+            <span><time datetime="2026-10-19T08:47:56.3437942&#x2B;00:00">Current · 09:47</time></span>
+    </span>
+    <div class="refresh-button" data-refresh-region role="status" aria-live="polite">
+    <form method="get" data-refresh-form>
+                <input type="hidden" name="page" value="1" data-refresh-field="page" />
+                <input type="hidden" name="query" value="QDOS262" data-refresh-field="query" />
+                <input type="hidden" name="selected" value="d00ec788-4a8e-4d43-843b-e5eb4b5991c1" data-refresh-field="selected" />
+        <button type="submit" class="btn btn--small" title="Refresh">
+            <svg class="icon icon--spin" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-refresh-cw" /></svg>
+            <span data-refresh-label>Refresh</span>
+        </button>
+    </form>
+</div>
+
+</div>
+
+    </div>
+</header>
+
+<form method="get" class="panel section-gap compact-search" aria-label="Filter cases">
+    
+    <div class="panel-body compact-search__main">
+        <div class="field">
+            <label for="search-query">Case or reference</label>
+            <input id="search-query" name="query" value="QDOS262" maxlength="300" />
+        </div>
+        <div class="field">
+            <label for="search-registration">Registration</label>
+            <input id="search-registration" name="registration" maxlength="20" />
+        </div>
+        <div class="field">
+            <label for="search-claimant">Claimant</label>
+            <input id="search-claimant" name="claimant" maxlength="300" />
+        </div>
+        <div class="field">
+            <label for="search-claim-number">Claim reference</label>
+            <input id="search-claim-number" name="claimNumber" maxlength="100" />
+        </div>
+        <div class="field">
+            <label for="search-principal">Principal</label>
+            <input id="search-principal" name="principal" maxlength="20" />
+        </div>
+        <div class="field">
+            <label for="search-state">State</label>
+            <select id="search-state" name="state">
+                <option value="">All states</option>
+                    <option value="NotReady">Not ready</option>
+                    <option value="Review">Review</option>
+                    <option value="ReportPreparation">With Engineer</option>
+                    <option value="ReportSent">Report sent</option>
+                    <option value="Query">Query</option>
+                    <option value="Held">Held</option>
+                    <option value="Closed">Closed</option>
+            </select>
+        </div>
+        <div class="button-row">
+            <button type="submit" class="btn btn--dark">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                <span>Search</span>
+            </button>
+            <a class="btn" href="/Search">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                <span>Clear</span>
+            </a>
+        </div>
+    </div>
+    <details class="compact-search__more">
+        <summary>More filters</summary>
+        <div class="compact-search__more-fields">
+            <div class="field">
+                <label for="search-engineer">Engineer</label>
+                <input id="search-engineer" name="engineerId" />
+                <span class="field-validation-error field-validation-valid" data-valmsg-for="EngineerId" data-valmsg-replace="true"></span>
+            </div>
+            <div class="field">
+                <label for="search-from-date">Received from</label>
+                <input id="search-from-date" name="fromDate" type="date" />
+                <span class="field-validation-error field-validation-valid" data-valmsg-for="FromDate" data-valmsg-replace="true"></span>
+            </div>
+            <div class="field">
+                <label for="search-to-date">Received to</label>
+                <input id="search-to-date" name="toDate" type="date" />
+                <span class="field-validation-error field-validation-valid" data-valmsg-for="ToDate" data-valmsg-replace="true"></span>
+            </div>
+            <div class="field">
+                <label for="search-origin">Origin</label>
+                <input id="search-origin" name="origin" maxlength="100" />
+            </div>
+        </div>
+    </details>
+</form>
+
+
+    <section class="pane-layout pane-layout--2 case-search-layout section-gap">
+        <div class="pane">
+            <div class="pane-head">
+                <div>
+                    <h2>Case results</h2>
+                    <span class="muted">6 results</span>
+                </div>
+            </div>
+            <div class="pane-body pane-scroll" data-row-list>
+                    <div class="table-wrap">
+                        <table>
+                            <caption class="sr-only">Case search results</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Case/PO</th>
+                                    <th scope="col">Vehicle</th>
+                                    <th scope="col">Claimant</th>
+                                    <th scope="col">Principal</th>
+                                    <th scope="col">State</th>
+                                    <th scope="col">Editing</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr data-select-href="/Search?page=1&amp;query=QDOS262&amp;selected=a2afb591-dd70-4d26-9156-1e0ddcec03ed" data-select-id="a2afb591-dd70-4d26-9156-1e0ddcec03ed" data-select-view=""
+                                        aria-selected="false">
+                                        <td>
+                                            <a class="table-row-link" href="/Cases/a2afb591-dd70-4d26-9156-1e0ddcec03ed">QDOS26221</a>
+                                                <span class="secondary">NL-4821390</span>
+                                        </td>
+                                        <td>
+                                            FD70NJK
+                                                <span class="secondary">Skoda Octavia</span>
+                                        </td>
+                                        <td>T. Nowak</td>
+                                        <td>QDOS</td>
+                                        <td><span class="status status--amber">Not ready</span>
+</td>
+                                        <td></td>
+                                        <template>
+                                            
+<div class="detail-canvas">
+    <p class="eyebrow">Inspection</p>
+    <h2>QDOS26221 &#xB7; FD70NJK</h2>
+    <p class="muted">T. Nowak &#xB7; QDOS</p>
+    <span class="status status--amber">Not ready</span>
+
+    <section class="section-gap">
+        <h3 class="section-label">Accident circumstances</h3>
+            <p data-circumstances-url="/Search?id=a2afb591-dd70-4d26-9156-1e0ddcec03ed&amp;handler=Circumstances" data-circumstances-failed="Circumstances unavailable.">Loading&#x2026;</p>
+    </section>
+    <div class="fact-grid">
+        <dl class="fact"><dt>Our ref</dt><dd>NL-4821390</dd></dl>
+        <dl class="fact"><dt>Engineer</dt><dd>Unassigned</dd></dl>
+        <dl class="fact"><dt>Due</dt><dd>20 Oct 2026</dd></dl>
+        <dl class="fact"><dt>Next action</dt><dd>Receive the instruction</dd></dl>
+    </div>
+        <section class="section-gap">
+            <h3 class="section-label">Outstanding (2)</h3>
+            <ul class="blocker-list">
+                    <li class="blocker">
+                        <strong>Instructions</strong>
+                        <small>Receive the instruction</small>
+                    </li>
+                    <li class="blocker">
+                        <strong>Images</strong>
+                        <small>Receive the vehicle images</small>
+                    </li>
+            </ul>
+        </section>
+    <div class="button-row section-gap">
+        <a class="btn btn--dark" href="/Cases/a2afb591-dd70-4d26-9156-1e0ddcec03ed">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-arrow-right" /></svg>
+            <span>Open Case</span>
+        </a>
+    </div>
+</div>
+
+                                        </template>
+                                    </tr>
+                                    <tr data-select-href="/Search?page=1&amp;query=QDOS262&amp;selected=89eb28dd-29b4-45f1-89ff-f2bb3a0e043b" data-select-id="89eb28dd-29b4-45f1-89ff-f2bb3a0e043b" data-select-view=""
+                                        aria-selected="false">
+                                        <td>
+                                            <a class="table-row-link" href="/Cases/89eb28dd-29b4-45f1-89ff-f2bb3a0e043b">QDOS26217</a>
+                                                <span class="secondary">NL-4821377</span>
+                                        </td>
+                                        <td>
+                                            AB12CDE
+                                                <span class="secondary">Vauxhall Corsa</span>
+                                        </td>
+                                        <td>S. Whitfield</td>
+                                        <td>QDOS</td>
+                                        <td><span class="status status--navy">Review</span>
+</td>
+                                        <td></td>
+                                        <template>
+                                            
+<div class="detail-canvas">
+    <p class="eyebrow">Inspection</p>
+    <h2>QDOS26217 &#xB7; AB12CDE</h2>
+    <p class="muted">S. Whitfield &#xB7; QDOS</p>
+    <span class="status status--navy">Review</span>
+
+    <section class="section-gap">
+        <h3 class="section-label">Accident circumstances</h3>
+            <p data-circumstances-url="/Search?id=89eb28dd-29b4-45f1-89ff-f2bb3a0e043b&amp;handler=Circumstances" data-circumstances-failed="Circumstances unavailable.">Loading&#x2026;</p>
+    </section>
+    <div class="fact-grid">
+        <dl class="fact"><dt>Our ref</dt><dd>NL-4821377</dd></dl>
+        <dl class="fact"><dt>Engineer</dt><dd>Unassigned</dd></dl>
+        <dl class="fact"><dt>Due</dt><dd>20 Oct 2026</dd></dl>
+        <dl class="fact"><dt>Next action</dt><dd>Not recorded</dd></dl>
+    </div>
+    <div class="button-row section-gap">
+        <a class="btn btn--dark" href="/Cases/89eb28dd-29b4-45f1-89ff-f2bb3a0e043b">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-arrow-right" /></svg>
+            <span>Open Case</span>
+        </a>
+    </div>
+</div>
+
+                                        </template>
+                                    </tr>
+                                    <tr data-select-href="/Search?page=1&amp;query=QDOS262&amp;selected=d00ec788-4a8e-4d43-843b-e5eb4b5991c1" data-select-id="d00ec788-4a8e-4d43-843b-e5eb4b5991c1" data-select-view=""
+                                        aria-selected="true">
+                                        <td>
+                                            <a class="table-row-link" href="/Cases/d00ec788-4a8e-4d43-843b-e5eb4b5991c1">QDOS26214</a>
+                                                <span class="secondary">NL-4821352</span>
+                                        </td>
+                                        <td>
+                                            MA59BDY
+                                                <span class="secondary">Ford Focus</span>
+                                        </td>
+                                        <td>J. Patel</td>
+                                        <td>QDOS</td>
+                                        <td><span class="status status--navy">Review</span>
+</td>
+                                        <td></td>
+                                        <template>
+                                            
+<div class="detail-canvas">
+    <p class="eyebrow">Inspection</p>
+    <h2>QDOS26214 &#xB7; MA59BDY</h2>
+    <p class="muted">J. Patel &#xB7; QDOS</p>
+    <span class="status status--navy">Review</span>
+
+    <section class="section-gap">
+        <h3 class="section-label">Accident circumstances</h3>
+            <p>Rear impact at a junction on 24 September</p>
+    </section>
+    <div class="fact-grid">
+        <dl class="fact"><dt>Our ref</dt><dd>NL-4821352</dd></dl>
+        <dl class="fact"><dt>Engineer</dt><dd>r.okafor</dd></dl>
+        <dl class="fact"><dt>Due</dt><dd>20 Oct 2026</dd></dl>
+        <dl class="fact"><dt>Next action</dt><dd>Not recorded</dd></dl>
+    </div>
+    <div class="button-row section-gap">
+        <a class="btn btn--dark" href="/Cases/d00ec788-4a8e-4d43-843b-e5eb4b5991c1">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-arrow-right" /></svg>
+            <span>Open Case</span>
+        </a>
+    </div>
+</div>
+
+                                        </template>
+                                    </tr>
+                                    <tr data-select-href="/Search?page=1&amp;query=QDOS262&amp;selected=c0e8675d-c412-4399-a3e5-7f02fbc76afb&amp;selectedView=inspection" data-select-id="c0e8675d-c412-4399-a3e5-7f02fbc76afb" data-select-view="inspection"
+                                        aria-selected="false">
+                                        <td>
+                                            <a class="table-row-link" href="/Cases/c0e8675d-c412-4399-a3e5-7f02fbc76afb?view=inspection">QDOS26208</a>
+                                                <span class="secondary">NL-4821301</span>
+                                        </td>
+                                        <td>
+                                            KP68LHT
+                                                <span class="secondary">Toyota Yaris</span>
+                                        </td>
+                                        <td>M. Brennan</td>
+                                        <td>QDOS</td>
+                                        <td><span class="status status--navy">With Engineer</span>
+</td>
+                                        <td></td>
+                                        <template>
+                                            
+<div class="detail-canvas">
+    <p class="eyebrow">Inspection and audit</p>
+    <h2>QDOS26208 &#xB7; KP68LHT</h2>
+    <p class="muted">M. Brennan &#xB7; QDOS</p>
+    <span class="status status--navy">With Engineer</span>
+
+    <section class="section-gap">
+        <h3 class="section-label">Accident circumstances</h3>
+            <p data-circumstances-url="/Search?id=c0e8675d-c412-4399-a3e5-7f02fbc76afb&amp;handler=Circumstances" data-circumstances-failed="Circumstances unavailable.">Loading&#x2026;</p>
+    </section>
+    <div class="fact-grid">
+        <dl class="fact"><dt>Our ref</dt><dd>NL-4821301</dd></dl>
+        <dl class="fact"><dt>Engineer</dt><dd>d.price</dd></dl>
+        <dl class="fact"><dt>Due</dt><dd>20 Oct 2026</dd></dl>
+        <dl class="fact"><dt>Next action</dt><dd>Not recorded</dd></dl>
+    </div>
+    <div class="button-row section-gap">
+        <a class="btn btn--dark" href="/Cases/c0e8675d-c412-4399-a3e5-7f02fbc76afb?view=inspection">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-arrow-right" /></svg>
+            <span>Open Case</span>
+        </a>
+    </div>
+</div>
+
+                                        </template>
+                                    </tr>
+                                    <tr data-select-href="/Search?page=1&amp;query=QDOS262&amp;selected=c0e8675d-c412-4399-a3e5-7f02fbc76afb&amp;selectedView=audit" data-select-id="c0e8675d-c412-4399-a3e5-7f02fbc76afb" data-select-view="audit"
+                                        aria-selected="false">
+                                        <td>
+                                            <a class="table-row-link" href="/Cases/c0e8675d-c412-4399-a3e5-7f02fbc76afb?view=audit">a.QDOS26208</a>
+                                                <span class="secondary">NL-4821301</span>
+                                        </td>
+                                        <td>
+                                            KP68LHT
+                                                <span class="secondary">Toyota Yaris</span>
+                                        </td>
+                                        <td>M. Brennan</td>
+                                        <td>QDOS</td>
+                                        <td><span class="status status--navy">With Engineer</span>
+</td>
+                                        <td></td>
+                                        <template>
+                                            
+<div class="detail-canvas">
+    <p class="eyebrow">Inspection and audit</p>
+    <h2>a.QDOS26208 &#xB7; KP68LHT</h2>
+    <p class="muted">M. Brennan &#xB7; QDOS</p>
+    <span class="status status--navy">With Engineer</span>
+
+    <section class="section-gap">
+        <h3 class="section-label">Accident circumstances</h3>
+            <p data-circumstances-url="/Search?id=c0e8675d-c412-4399-a3e5-7f02fbc76afb&amp;handler=Circumstances" data-circumstances-failed="Circumstances unavailable.">Loading&#x2026;</p>
+    </section>
+    <div class="fact-grid">
+        <dl class="fact"><dt>Our ref</dt><dd>NL-4821301</dd></dl>
+        <dl class="fact"><dt>Engineer</dt><dd>d.price</dd></dl>
+        <dl class="fact"><dt>Due</dt><dd>20 Oct 2026</dd></dl>
+        <dl class="fact"><dt>Next action</dt><dd>Not recorded</dd></dl>
+    </div>
+    <div class="button-row section-gap">
+        <a class="btn btn--dark" href="/Cases/c0e8675d-c412-4399-a3e5-7f02fbc76afb?view=audit">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-arrow-right" /></svg>
+            <span>Open Case</span>
+        </a>
+    </div>
+</div>
+
+                                        </template>
+                                    </tr>
+                                    <tr data-select-href="/Search?page=1&amp;query=QDOS262&amp;selected=b18d8063-a1c4-4998-b148-c332172ca922" data-select-id="b18d8063-a1c4-4998-b148-c332172ca922" data-select-view=""
+                                        aria-selected="false">
+                                        <td>
+                                            <a class="table-row-link" href="/Cases/b18d8063-a1c4-4998-b148-c332172ca922">QDOS26203</a>
+                                                <span class="secondary">NL-4821288</span>
+                                        </td>
+                                        <td>
+                                            LB19XRT
+                                                <span class="secondary">BMW 1 Series</span>
+                                        </td>
+                                        <td>A. Hussain</td>
+                                        <td>QDOS</td>
+                                        <td><span class="status status--amber">Not ready</span>
+</td>
+                                        <td></td>
+                                        <template>
+                                            
+<div class="detail-canvas">
+    <p class="eyebrow">Inspection</p>
+    <h2>QDOS26203 &#xB7; LB19XRT</h2>
+    <p class="muted">A. Hussain &#xB7; QDOS</p>
+    <span class="status status--amber">Not ready</span>
+
+    <section class="section-gap">
+        <h3 class="section-label">Accident circumstances</h3>
+            <p data-circumstances-url="/Search?id=b18d8063-a1c4-4998-b148-c332172ca922&amp;handler=Circumstances" data-circumstances-failed="Circumstances unavailable.">Loading&#x2026;</p>
+    </section>
+    <div class="fact-grid">
+        <dl class="fact"><dt>Our ref</dt><dd>NL-4821288</dd></dl>
+        <dl class="fact"><dt>Engineer</dt><dd>Unassigned</dd></dl>
+        <dl class="fact"><dt>Due</dt><dd>20 Oct 2026</dd></dl>
+        <dl class="fact"><dt>Next action</dt><dd>Receive the instruction</dd></dl>
+    </div>
+        <section class="section-gap">
+            <h3 class="section-label">Outstanding (2)</h3>
+            <ul class="blocker-list">
+                    <li class="blocker">
+                        <strong>Instructions</strong>
+                        <small>Receive the instruction</small>
+                    </li>
+                    <li class="blocker">
+                        <strong>Images</strong>
+                        <small>Receive the vehicle images</small>
+                    </li>
+            </ul>
+        </section>
+    <div class="button-row section-gap">
+        <a class="btn btn--dark" href="/Cases/b18d8063-a1c4-4998-b148-c332172ca922">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-arrow-right" /></svg>
+            <span>Open Case</span>
+        </a>
+    </div>
+</div>
+
+                                        </template>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+        </div>
+        <div class="pane">
+            <div class="pane-head">
+                <h2>Selected Case</h2>
+            </div>
+            <div class="pane-body pane-scroll">
+                <div data-preview-target>
+                        
+<div class="detail-canvas">
+    <p class="eyebrow">Inspection</p>
+    <h2>QDOS26214 &#xB7; MA59BDY</h2>
+    <p class="muted">J. Patel &#xB7; QDOS</p>
+    <span class="status status--navy">Review</span>
+
+    <section class="section-gap">
+        <h3 class="section-label">Accident circumstances</h3>
+            <p>Rear impact at a junction on 24 September</p>
+    </section>
+    <div class="fact-grid">
+        <dl class="fact"><dt>Our ref</dt><dd>NL-4821352</dd></dl>
+        <dl class="fact"><dt>Engineer</dt><dd>r.okafor</dd></dl>
+        <dl class="fact"><dt>Due</dt><dd>20 Oct 2026</dd></dl>
+        <dl class="fact"><dt>Next action</dt><dd>Not recorded</dd></dl>
+    </div>
+    <div class="button-row section-gap">
+        <a class="btn btn--dark" href="/Cases/d00ec788-4a8e-4d43-843b-e5eb4b5991c1">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-arrow-right" /></svg>
+            <span>Open Case</span>
+        </a>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+                </div>
+            </main>
+        </div>
+    </div>
+    
+<div class="dialog-backdrop" data-dialog="account-dialog" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="account-dialog-title">
+        <div class="dialog-head">
+            <h2 id="account-dialog-title" tabindex="-1">Account</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body">
+            <div class="definition-list">
+                <dl class="definition"><dt>Name</dt><dd>e.mawdsley</dd></dl>
+                <dl class="definition"><dt>Role</dt><dd>Administrator</dd></dl>
+                <dl class="definition"><dt>Idle lock</dt><dd>2 hours</dd></dl>
+            </div>
+        </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn" data-dialog-close>Close</button>
+            <a class="btn" href="/ReleaseNotes">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-flag" /></svg>
+                <span>Release notes</span>
+            </a>
+            <button type="button" class="btn" data-dialog-open="problem-dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-alert-triangle" /></svg>
+                <span>Report a problem</span>
+            </button>
+            <a class="btn" href="/Account/PasswordChange">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-key" /></svg>
+                <span>Change password</span>
+            </a>
+            <form method="post" action="/Account/SignOut">
+                <button type="submit" class="btn btn--danger" data-busy-label="Signing out&#x2026;">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-log-out" /></svg>
+                    <span>Sign out</span>
+                </button>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABVjX9cceOQy7APvyFwdUiQetxE08I3zYcjLpIFRG6TrhXWSuLHOrEfE7vrsnX3NM9eLMbBNZzTCOeqAlu1kwI3KTmotjkgFfKTMyrpB1GijGiherWxOV32u8c6Bf0NmpY" /></form>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="notifications-dialog" data-dialog-open-on-load="" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="notifications-dialog-title">
+        <div class="dialog-head">
+            <h2 id="notifications-dialog-title" tabindex="-1">Notifications</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body dialog-body--list">
+                <div class="row-list" data-row-list data-notification-list>
+                        <form method="post" class="row-form" action="/Notifications?id=87a6da0b-ff08-4f77-bf2a-7c8c8f33f371&amp;handler=Open">
+                            <input type="hidden" name="returnUrl" value="/Search?query=QDOS262&amp;selected=d00ec788-4a8e-4d43-843b-e5eb4b5991c1" />
+                            <button type="submit" class="row-button row-button--unread" data-notification="87a6da0b-ff08-4f77-bf2a-7c8c8f33f371" data-busy-label="Opening&#x2026;">
+                                <span class="title">AI Proposal ready</span>
+                                <span class="sub"><span class="ref">QDOS26208</span> · <span class="mono">KP68LHT</span></span>
+                                <span class="side">
+                                        <span class="status status--navy">Unread</span>
+                                    <time datetime="2026-10-19T08:29:54.2058081&#x2B;00:00" title="19 Oct 2026 09:29">18 min ago</time>
+                                </span>
+                            </button>
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABVjX9cceOQy7APvyFwdUiQetxE08I3zYcjLpIFRG6TrhXWSuLHOrEfE7vrsnX3NM9eLMbBNZzTCOeqAlu1kwI3KTmotjkgFfKTMyrpB1GijGiherWxOV32u8c6Bf0NmpY" /></form>
+                        <form method="post" class="row-form" action="/Notifications?id=f4160c46-8739-4ce3-b74a-3ac21e493d8c&amp;handler=Open">
+                            <input type="hidden" name="returnUrl" value="/Search?query=QDOS262&amp;selected=d00ec788-4a8e-4d43-843b-e5eb4b5991c1" />
+                            <button type="submit" class="row-button row-button--unread" data-notification="f4160c46-8739-4ce3-b74a-3ac21e493d8c" data-busy-label="Opening&#x2026;">
+                                <span class="title">Assigned to you</span>
+                                <span class="sub"><span class="ref">QDOS26214</span> · <span class="mono">MA59BDY</span></span>
+                                <span class="side">
+                                        <span class="status status--navy">Unread</span>
+                                    <time datetime="2026-10-19T06:47:54.2058081&#x2B;00:00" title="19 Oct 2026 07:47">2 h ago</time>
+                                </span>
+                            </button>
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABVjX9cceOQy7APvyFwdUiQetxE08I3zYcjLpIFRG6TrhXWSuLHOrEfE7vrsnX3NM9eLMbBNZzTCOeqAlu1kwI3KTmotjkgFfKTMyrpB1GijGiherWxOV32u8c6Bf0NmpY" /></form>
+                        <form method="post" class="row-form" action="/Notifications?id=1733ddb4-2953-444e-a29e-97af42c8c8ef&amp;handler=Open">
+                            <input type="hidden" name="returnUrl" value="/Search?query=QDOS262&amp;selected=d00ec788-4a8e-4d43-843b-e5eb4b5991c1" />
+                            <button type="submit" class="row-button row-button--unread" data-notification="1733ddb4-2953-444e-a29e-97af42c8c8ef" data-busy-label="Opening&#x2026;">
+                                <span class="title">E-mail received</span>
+                                <span class="sub"><span class="ref">QDOS26198</span> · <span class="mono">VN71ULZ</span></span>
+                                <span class="side">
+                                        <span class="status status--navy">Unread</span>
+                                    <time datetime="2026-10-19T03:47:54.2058081&#x2B;00:00" title="19 Oct 2026 04:47">5 h ago</time>
+                                </span>
+                            </button>
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABVjX9cceOQy7APvyFwdUiQetxE08I3zYcjLpIFRG6TrhXWSuLHOrEfE7vrsnX3NM9eLMbBNZzTCOeqAlu1kwI3KTmotjkgFfKTMyrpB1GijGiherWxOV32u8c6Bf0NmpY" /></form>
+                        <form method="post" class="row-form" action="/Notifications?id=2f4f23f3-3703-44ec-8026-24c582b280a5&amp;handler=Open">
+                            <input type="hidden" name="returnUrl" value="/Search?query=QDOS262&amp;selected=d00ec788-4a8e-4d43-843b-e5eb4b5991c1" />
+                            <button type="submit" class="row-button" data-notification="2f4f23f3-3703-44ec-8026-24c582b280a5" data-busy-label="Opening&#x2026;">
+                                <span class="title">Query received</span>
+                                <span class="sub"><span class="ref">QDOS26190</span> · <span class="mono">PO16DDF</span></span>
+                                <span class="side">
+                                    <time datetime="2026-10-17T08:47:54.2058081&#x2B;00:00" title="17 Oct 2026 09:47">2 days ago</time>
+                                </span>
+                            </button>
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABVjX9cceOQy7APvyFwdUiQetxE08I3zYcjLpIFRG6TrhXWSuLHOrEfE7vrsnX3NM9eLMbBNZzTCOeqAlu1kwI3KTmotjkgFfKTMyrpB1GijGiherWxOV32u8c6Bf0NmpY" /></form>
+                </div>
+        </div>
+        <div class="dialog-foot">
+                <form method="post" class="left" action="/Notifications?handler=MarkAllRead">
+                    <input type="hidden" name="returnUrl" value="/Search?query=QDOS262&amp;selected=d00ec788-4a8e-4d43-843b-e5eb4b5991c1" />
+                    <button type="submit" class="btn" data-busy-label="Marking&#x2026;">Mark all read</button>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABVjX9cceOQy7APvyFwdUiQetxE08I3zYcjLpIFRG6TrhXWSuLHOrEfE7vrsnX3NM9eLMbBNZzTCOeqAlu1kwI3KTmotjkgFfKTMyrpB1GijGiherWxOV32u8c6Bf0NmpY" /></form>
+            <button type="button" class="btn btn--dark" data-dialog-close>Close</button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="command-dialog" hidden>
+    <section class="dialog command-dialog" role="dialog" aria-modal="true" aria-labelledby="command-dialog-title">
+        <div class="dialog-head">
+            <h2 id="command-dialog-title" tabindex="-1">Search Pegasus</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="command-search">
+            <label class="sr-only" for="command-input">Search</label>
+            <input id="command-input" type="search" autocomplete="off" data-command-palette-input aria-controls="command-results" />
+        </div>
+        <div id="command-results" class="command-results" role="listbox" aria-label="Search results" data-command-results>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                <span><strong>Work Centre</strong></span>
+            </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Inbox">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                    <span><strong>Inbox</strong></span>
+                </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Upload">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                    <span><strong>Upload</strong></span>
+                </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Cases">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list" /></svg>
+                <span><strong>Cases</strong></span>
+            </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Search">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-folder-open" /></svg>
+                <span><strong>Search</strong></span>
+            </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Administration">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-grid" /></svg>
+                    <span><strong>Administration</strong></span>
+                </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Search?query=" data-command-fallback>
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                <span><strong>Search Cases for <span data-command-fallback-term></span></strong></span>
+                <span class="kbd" aria-hidden="true">Enter</span>
+            </button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="problem-dialog" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="problem-dialog-title">
+        <form method="post" data-problem-form data-problem-case-sections="overview,claim,original-report,inspection,vehicle,damage,valuation,estimate,settlement,report,files,notes,queries" action="/ProblemReports?handler=Report">
+            <input type="hidden" name="operationKey" value="d8cd94e07881492b99e92be284ea770e" />
+            <div class="dialog-head">
+                <h2 id="problem-dialog-title" tabindex="-1">Report a problem</h2>
+                <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                </button>
+            </div>
+            <div class="dialog-body stack">
+                <input type="hidden" name="returnUrl" value="" data-problem-return />
+                <input type="hidden" name="route" value="" data-problem-route />
+                <input type="hidden" name="method" value="GET" />
+                <input type="hidden" name="traceId" value="00-26930d41a52371b7fac14819a4cc766b-9d75a2eeb8a62b99-00" />
+                <input type="hidden" name="caseReference" value="" data-problem-case />
+                <input type="hidden" name="viewport" value="" data-problem-viewport />
+                <input type="hidden" name="editing" value="false" data-problem-editing />
+                <input type="hidden" name="errors" value="" data-problem-errors />
+                <div class="field">
+                    <label for="problem-description">What happened</label>
+                    <textarea id="problem-description" name="description" rows="6" maxlength="4000" required></textarea>
+                </div>
+            </div>
+            <div class="dialog-foot">
+                <button type="button" class="btn" data-dialog-close>Cancel</button>
+                <button type="submit" class="btn btn--primary" data-busy-label="Sending&#x2026;">Send</button>
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABVjX9cceOQy7APvyFwdUiQetxE08I3zYcjLpIFRG6TrhXWSuLHOrEfE7vrsnX3NM9eLMbBNZzTCOeqAlu1kwI3KTmotjkgFfKTMyrpB1GijGiherWxOV32u8c6Bf0NmpY" /></form>
+    </section>
+</div>
+
+    <div class="toast-region" aria-live="polite" data-toast-region></div>
+
+    <script src="/js/site.vubujkpeou.js"></script>
+    
+</body>
+</html>

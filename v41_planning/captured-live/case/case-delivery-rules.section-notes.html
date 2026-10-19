@@ -1,0 +1,72 @@
+
+<section class="record-section panel" id="section-notes" data-section="notes" data-collapse="case.notes" aria-labelledby="section-notes-title">
+    <div class="panel-head">
+        <h2 id="section-notes-title">Notes</h2>
+        <div class="panel-actions">
+            <button type="button" class="icon-button panel-collapse" data-collapse-toggle
+        aria-expanded="true"
+        aria-label="Collapse section"
+        data-label-collapse="Collapse section"
+        data-label-expand="Expand section"
+        title="Collapse section">
+    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-down" /></svg>
+</button>
+
+        </div>
+    </div>
+    <div class="panel-body stack">
+            <form method="post" class="note-form" data-case-note-form action="/Cases/21ee29f3-2fa4-4824-bbe2-3c1477f912cf/Tasks?handler=AddNote">
+                <input type="hidden" name="id" value="21ee29f3-2fa4-4824-bbe2-3c1477f912cf" />
+                <input type="hidden" name="operationKey" value="73f5d36120db4bba93a7deb0e4d9b6c3" />
+                <input type="hidden" name="view" />
+                <label class="lbl" for="case-note">Case note</label>
+                <textarea id="case-note" name="note" rows="2" required
+                          maxlength="2000"></textarea>
+                <div class="button-row">
+                    <button type="submit" data-busy-label="Adding&#x2026;" class="btn">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-plus" /></svg>
+                        <span>Add Case note</span>
+                    </button>
+                        <button type="button" class="btn" data-dialog-open="case-chase-dialog">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-clock" /></svg>
+                            <span>Record chase</span>
+                        </button>
+                </div>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABS_dHTBKvqmugDmsEkd-IXeCZuVYCeWyTBcUrKYNc581n7LdJ9WfUUJZYkX4zcJHXtxOTfN_As_rtD8mzmWAXRZH4iIA_jBfvuybIIIdh68RsYnK8PpHja5t-ODJVWx68" /></form>
+
+            <p class="empty-line" data-notes-empty>No notes</p>
+    </div>
+</section>
+
+    <div id="case-chase-dialog" class="dialog-backdrop" data-dialog="case-chase-dialog" hidden>
+        <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="case-chase-dialog-title">
+            <div class="dialog-head">
+                <h2 id="case-chase-dialog-title" tabindex="-1">Record chase</h2>
+                <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                </button>
+            </div>
+            <form method="post" action="/Cases/21ee29f3-2fa4-4824-bbe2-3c1477f912cf/Tasks?handler=RecordManualChase">
+                <input type="hidden" name="id" value="21ee29f3-2fa4-4824-bbe2-3c1477f912cf" />
+                <input type="hidden" name="expectedVersion" value="7" />
+                <input type="hidden" name="operationKey" value="9f46d7baf8fb41ceb48bd791ac96fb1b" />
+                <input type="hidden" name="editLeaseToken" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+                <input type="hidden" name="view" />
+                <div class="dialog-body stack">
+                    <div class="form-grid form-grid--2">
+                        <div class="field"><label class="req" for="chase-recipient">Recipient</label><input id="chase-recipient" name="recipient" required maxlength="500" data-dialog-initial-focus /></div>
+                        <div class="field"><label class="req" for="chase-channel">Channel</label><input id="chase-channel" name="channel" required maxlength="100" /></div>
+                        <div class="field"><label for="chase-content">Content</label><input id="chase-content" name="content" maxlength="1000" /></div>
+                        <div class="field"><label class="req" for="chase-outcome">Outcome</label><input id="chase-outcome" name="outcome" required maxlength="500" /></div>
+                    </div>
+                </div>
+                <div class="dialog-foot">
+                    <button type="button" class="btn" data-dialog-close>Cancel</button>
+                    <button type="submit" data-busy-label="Recording&#x2026;" class="btn btn--primary">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-send" /></svg>
+                        <span>Record chase</span>
+                    </button>
+                </div>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABS_dHTBKvqmugDmsEkd-IXeCZuVYCeWyTBcUrKYNc581n7LdJ9WfUUJZYkX4zcJHXtxOTfN_As_rtD8mzmWAXRZH4iIA_jBfvuybIIIdh68RsYnK8PpHja5t-ODJVWx68" /></form>
+        </section>
+    </div>

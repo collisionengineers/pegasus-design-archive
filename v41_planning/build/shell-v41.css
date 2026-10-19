@@ -1,0 +1,28 @@
+/* v41 mockup page: the frame fills the window; the strip is demo control, not product UI. */
+html, body { margin: 0; height: 100%; background: #e9ecef; }
+#mock-frame { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; background: #fff; }
+body.mock-expanded #mock-frame { position: absolute; height: auto; }
+body.mock-strip-hidden #mock-strip { display: none; }
+#mock-strip {
+  position: fixed; left: 12px; bottom: 12px; z-index: 10; width: 360px; max-height: 80vh; overflow: auto;
+  background: #1d2229; color: #e6e9ee; border-radius: 8px; box-shadow: 0 8px 28px rgba(0, 0, 0, .4);
+  font: 12px/1.4 "Segoe UI", system-ui, sans-serif;
+}
+#mock-strip summary { cursor: pointer; padding: 9px 12px; font-weight: 700; display: flex; justify-content: space-between; }
+#mock-strip .mock-body { padding: 0 12px 12px; display: grid; gap: 8px; }
+#mock-strip label { display: grid; gap: 4px; }
+#mock-strip small { color: #9aa4b2; }
+#mock-strip select, #mock-strip button {
+  font: inherit; padding: 5px 8px; border-radius: 4px; border: 1px solid #3a424d; background: #2a313a; color: #e6e9ee; cursor: pointer;
+}
+#mock-strip select { width: 100%; }
+#mock-strip .mock-seg { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+#mock-strip button[aria-pressed="true"] { background: #c8102e; border-color: #c8102e; color: #fff; font-weight: 600; }
+#mock-changes { margin: 0; padding-left: 16px; display: grid; gap: 4px; max-height: 220px; overflow: auto; }
+#mock-changes .mock-none { list-style: none; margin-left: -16px; color: #9aa4b2; }
+#mock-toast {
+  position: fixed; right: 18px; bottom: 18px; z-index: 11; background: #1b2228; color: #fff; padding: 10px 16px;
+  border-radius: 6px; border-left: 4px solid #c8102e; font: 600 13px/1.35 "Segoe UI", system-ui, sans-serif;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .3);
+}
+#mock-toast[hidden] { display: none; }

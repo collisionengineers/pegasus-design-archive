@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en" data-busy-label="Working&#x2026;" data-busy-still="Still" data-icon-sprite="/images/lucide-sprite.04agn8pzs5.svg">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logs · Pegasus</title>
+    <link rel="stylesheet" href="/css/site.qz2wg1x280.css" />
+    
+    <link rel="stylesheet" href="/css/logs.trncs75pl7.css" />
+
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell" data-app-shell>
+        <header class="app-rail">
+            <a class="brand" aria-label="Pegasus home" href="/">
+                <img src="/images/pegasus-mark-refined-128.tctmpgz0uo.png" alt="" aria-hidden="true" />
+                <span class="brand-copy"><strong>PEGASUS</strong><span>Case management</span></span>
+            </a>
+            <nav class="primary-nav" aria-label="Primary">
+                <div class="nav-label">Work</div>
+                <a class="nav-link" href="/">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                    <span>Work Centre</span>
+                </a>
+                    <a class="nav-link" href="/Inbox">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                        <span>Inbox</span>
+                    </a>
+                    <a class="nav-link" href="/Upload">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                        <span>Upload</span>
+                    </a>
+                <a class="nav-link" href="/Cases">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list-checks" /></svg>
+                    <span>Cases</span>
+                </a>
+                <a class="nav-link" href="/Search">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <span>Search</span>
+                </a>
+                    <div class="nav-label">Manage</div>
+                    <a class="nav-link" aria-current="page" href="/Administration">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+                        <span>Administration</span>
+                    </a>
+            </nav>
+            <div class="rail-spacer"></div>
+            <button type="button" class="rail-collapse" data-rail-toggle aria-expanded="true" aria-label="Collapse navigation"
+                    data-label-collapse="Collapse navigation" data-label-expand="Expand navigation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-left" /></svg>
+                <span>Collapse</span>
+            </button>
+            <div class="rail-health">
+                <div class="rail-health-line"><span class="health-dot"></span><span>Current · 11:30</span></div>
+            </div>
+                <div class="rail-user" role="group" aria-label="User">
+                    <span class="avatar" aria-hidden="true">IU</span>
+                    <div><strong>alex</strong><small>Administrator</small></div>
+                    <button type="button" class="icon-button" data-dialog-open="account-dialog" aria-label="Account menu">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                    </button>
+                </div>
+        </header>
+        <div class="app-column">
+            <section class="utility-bar" aria-label="Utility bar">
+                <div class="utility-freshness"><span class="health-dot"></span><span>Current · 11:30</span></div>
+                <form class="utility-search" role="search" method="get" action="/Search">
+                    <label class="sr-only" for="global-search">Search Pegasus</label>
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <input id="global-search" type="search" name="query" data-command-input aria-label="Search Pegasus" placeholder="Search cases, references or people" autocomplete="off" />
+                    <span class="shortcut-hint" aria-hidden="true">Ctrl K</span>
+                </form>
+                <div class="utility-actions">
+                    <a class="btn btn--primary" href="/Cases/Create">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-plus" /></svg>
+                        <span>New case</span>
+                    </a>
+                    <span class="bell-wrap">
+                        <button type="button" class="icon-button" data-dialog-open="notifications-dialog" aria-label="Notifications">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bell" /></svg>
+                        </button>
+                    </span>
+                        <button type="button" class="icon-button utility-account" data-dialog-open="account-dialog" aria-label="Account menu">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                        </button>
+                </div>
+            </section>
+            <main id="main-content" class="app-main" tabindex="-1">
+                <div class="content">
+                    <header class="page-header">
+    <div class="page-title">
+            <p class="eyebrow">Administration</p>
+        <h1>Logs</h1>
+    </div>
+</header>
+
+
+<div class="admin-layout">
+    <nav class="admin-nav panel" aria-label="Administration areas">
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-people">
+        <span class="admin-nav__label" id="admin-nav-people">People and access</span>
+        <a href="/Administration/Accounts">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-user" /></svg>
+            <span>Staff accounts &amp; roles</span>
+        </a>
+        <a href="/Administration/Contacts">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-shield" /></svg>
+            <span>Contacts</span>
+        </a>
+    </div>
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-configuration">
+        <span class="admin-nav__label" id="admin-nav-configuration">Configuration</span>
+        <a href="/Administration/Configuration">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+            <span>Workflow configuration</span>
+        </a>
+        <a href="/Administration/Mailboxes">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-mail" /></svg>
+            <span>Mail settings</span>
+        </a>
+        <a href="/Administration/EmailTemplates">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-mail-open" /></svg>
+            <span>E-mail templates</span>
+        </a>
+        <a href="/Administration/ValuationPresets">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-pound-sterling" /></svg>
+            <span>Valuation presets</span>
+        </a>
+    </div>
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-oversight">
+        <span class="admin-nav__label" id="admin-nav-oversight">Operations and oversight</span>
+        <a href="/Administration/Health">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-heart-pulse" /></svg>
+            <span>Service health</span>
+        </a>
+        <a aria-current="page" href="/Administration/Logs">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-scroll-text" /></svg>
+            <span>Logs</span>
+        </a>
+        <a href="/Administration/Reports">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bar-chart" /></svg>
+            <span>Management Reports</span>
+        </a>
+        <a href="/Administration/ReleaseNotes">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-flag" /></svg>
+            <span>Release notes</span>
+        </a>
+        <a href="/Administration/ProblemReports">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-alert-triangle" /></svg>
+            <span>Problem reports</span>
+        </a>
+        <a href="/Administration/AiJobs">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-sparkles" /></svg>
+            <span>AI jobs</span>
+        </a>
+            <a href="/Administration/Automation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bot" /></svg>
+                <span>Automation &amp; AI</span>
+            </a>
+    </div>
+</nav>
+
+    <div class="stack">
+        <nav class="tabs logs-tabs" aria-label="Logs">
+            <a class="tab" href="/Administration/Logs">Action logs</a>
+            <a class="tab" href="/Administration/Logs?tab=intake" aria-current="page" data-logs-tab="intake">Intake log</a>
+        </nav>
+
+                <div class="figures logs-figures" data-intake-counts>
+                    <div class="figure logs-figure">
+                        <span class="label">Failed intake</span>
+                        <span class="value" data-failed-intake>3</span>
+                    </div>
+                    <div class="figure logs-figure logs-figure--pending">
+                        <span class="label">Oldest pending intake</span>
+                        <span class="value" data-oldest-pending-intake>19 Oct 2026</span>
+                    </div>
+                </div>
+            <form method="get" class="panel logs-filter" aria-label="Filter the intake log">
+                <input type="hidden" name="tab" value="intake" />
+                <div class="panel-body logs-filter__fields">
+                    <div class="field logs-filter__search"><label for="intake-text">Search</label><input id="intake-text" name="IntakeText" maxlength="200" placeholder="Reference, registration, claim number, sender, file name" /></div>
+                    <div class="field">
+                        <label for="intake-outcome">Outcome</label>
+                        <select id="intake-outcome" name="IntakeOutcome">
+                            <option value="">All outcomes</option>
+                                <option value="CaseCreated">Case created</option>
+                                <option value="Unidentified">Unidentified</option>
+                                <option value="NoCaseFound">No Case Found</option>
+                                <option value="Triage">Triage</option>
+                                <option value="VehicleImages">Vehicle images</option>
+                                <option value="CouldNotBeRead">Could not be read</option>
+                                <option value="ProcessingFailed">Processing failed</option>
+                                <option value="Closed">Closed</option>
+                                <option value="AllocationFailed">Allocation failed</option>
+                                <option value="OcrFailed">OCR failed</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="intake-source">Source</label>
+                        <select id="intake-source" name="IntakeSource">
+                            <option value="">All sources</option>
+                                <option value="ManualUpload">Manual upload</option>
+                                <option value="Mailbox">E-mail</option>
+                                <option value="Automation">Automation</option>
+                                <option value="PrincipalApi">Principal API</option>
+                        </select>
+                    </div>
+                    <div class="field"><label for="intake-principal">Principal</label><input id="intake-principal" name="IntakePrincipal" maxlength="20" autocomplete="off" /></div>
+                    <div class="field"><label for="intake-from">From</label><input id="intake-from" name="IntakeFrom" type="date" /></div>
+                    <div class="field"><label for="intake-to">To</label><input id="intake-to" name="IntakeTo" type="date" /></div>
+                    <div class="button-row">
+                        <button class="btn btn--dark" type="submit">Apply</button>
+                        <a class="btn" href="/Administration/Logs?tab=intake">Clear</a>
+                    </div>
+                </div>
+            </form>
+            <section class="panel" aria-labelledby="intake-log-title">
+                <div class="panel-head">
+                    <h2 id="intake-log-title">Intake log</h2>
+                    <span class="meta">10 items · Newest first</span>
+                </div>
+                    <div class="table-wrap no-border">
+                        <table class="table table--compact" data-intake-log>
+                            <caption class="sr-only">Intake log</caption>
+                            <thead><tr><th scope="col">Received</th><th scope="col">Source</th><th scope="col">Item</th><th scope="col">Outcome</th><th scope="col">Became</th><th scope="col">Attempts</th><th scope="col"><span class="sr-only">Open</span></th></tr></thead>
+                            <tbody>
+                                <tr data-intake-row="42a2081d-6786-48a4-b752-e8e10fedb973">
+                                    <td><time datetime="2026-10-19T10:18:12.0219436&#x2B;00:00">19 Oct 2026 11:18</time></td>
+                                    <td>E-mail &#xB7; desk@collisionengineers.co.uk &#xB7; instructions@northline.example</td>
+                                    <td class="logs-item"><a href="/Received/42a2081d-6786-48a4-b752-e8e10fedb973/Source" target="_blank" rel="noopener">New instruction - MA59 BDY.pdf</a></td>
+                                    <td>
+                                        <span class="status status--green">Case created</span>
+
+                                    </td>
+                                    <td class="mono">
+                                            <a href="/Cases/154a001e-1639-4824-9a47-661ee482e4bb">QDOS26214</a>
+                                    </td>
+                                    <td>&#x2014;</td>
+                                    <td class="row-actions"><a class="btn btn--small" href="/Administration/Logs?tab=intake&amp;Receipt=42a2081d-6786-48a4-b752-e8e10fedb973">Open</a></td>
+                                </tr>
+                                <tr data-intake-row="272f9859-7b9b-461d-94dd-e6b0f9fbcb33">
+                                    <td><time datetime="2026-10-19T09:59:12.0219436&#x2B;00:00">19 Oct 2026 10:59</time></td>
+                                    <td>E-mail &#xB7; desk@collisionengineers.co.uk &#xB7; photos@northline.example</td>
+                                    <td class="logs-item"><a href="/Received/272f9859-7b9b-461d-94dd-e6b0f9fbcb33/Source" target="_blank" rel="noopener">IMG_0001.jpg</a></td>
+                                    <td>
+                                        <span class="status status--green">Vehicle images</span>
+
+                                    </td>
+                                    <td class="mono">
+                                            <a href="/VehicleImages/a41b9c8d-2ed0-4f38-975b-1016993a66c9">MA59 BDY</a>
+                                    </td>
+                                    <td>&#x2014;</td>
+                                    <td class="row-actions"><a class="btn btn--small" href="/Administration/Logs?tab=intake&amp;Receipt=272f9859-7b9b-461d-94dd-e6b0f9fbcb33">Open</a></td>
+                                </tr>
+                                <tr data-intake-row="7920210b-527f-45b3-a1f8-a447e2793d26">
+                                    <td><time datetime="2026-10-19T09:35:12.0219436&#x2B;00:00">19 Oct 2026 10:35</time></td>
+                                    <td>Manual upload &#xB7; alex</td>
+                                    <td class="logs-item"><a href="/Received/7920210b-527f-45b3-a1f8-a447e2793d26/Source" target="_blank" rel="noopener">57709_1_LtrtoEngineerIn.pdf</a></td>
+                                    <td>
+                                        <span class="status status--green">Triage</span>
+
+                                    </td>
+                                    <td class="mono">
+                                            <a href="/Cases/3e88c83f-6d36-4717-b589-fa79327a5888">QDOS26215</a>
+                                    </td>
+                                    <td>&#x2014;</td>
+                                    <td class="row-actions"><a class="btn btn--small" href="/Administration/Logs?tab=intake&amp;Receipt=7920210b-527f-45b3-a1f8-a447e2793d26">Open</a></td>
+                                </tr>
+                                <tr data-intake-row="f8063d70-e74f-4bd0-8ec7-ef2413bcc9bc">
+                                    <td><time datetime="2026-10-19T09:10:12.0219436&#x2B;00:00">19 Oct 2026 10:10</time></td>
+                                    <td>E-mail &#xB7; desk@collisionengineers.co.uk &#xB7; claims@northline.example</td>
+                                    <td class="logs-item"><a href="/Received/f8063d70-e74f-4bd0-8ec7-ef2413bcc9bc/Source" target="_blank" rel="noopener">scan-0042.jpg</a></td>
+                                    <td>
+                                        <span class="status status--amber">Unidentified</span>
+
+                                    </td>
+                                    <td class="mono">
+                                            <a href="/Unidentified/6c56c783-d230-4d31-b8ba-659eba16246e">U777</a>
+                                    </td>
+                                    <td>&#x2014;</td>
+                                    <td class="row-actions"><a class="btn btn--small" href="/Administration/Logs?tab=intake&amp;Receipt=f8063d70-e74f-4bd0-8ec7-ef2413bcc9bc">Open</a></td>
+                                </tr>
+                                <tr data-intake-row="ef7bb071-883b-4e6e-bb4f-ec7dd78cc230">
+                                    <td><time datetime="2026-10-19T08:53:12.0219436&#x2B;00:00">19 Oct 2026 09:53</time></td>
+                                    <td>E-mail &#xB7; desk@collisionengineers.co.uk &#xB7; accounts@supplier.example</td>
+                                    <td class="logs-item"><a href="/Received/ef7bb071-883b-4e6e-bb4f-ec7dd78cc230/Source" target="_blank" rel="noopener">Invoice October.pdf</a></td>
+                                    <td>
+                                        <span class="status status--amber">No Case Found</span>
+
+                                    </td>
+                                    <td class="mono">
+                                            <span class="muted">—</span>
+                                    </td>
+                                    <td>&#x2014;</td>
+                                    <td class="row-actions"><a class="btn btn--small" href="/Administration/Logs?tab=intake&amp;Receipt=ef7bb071-883b-4e6e-bb4f-ec7dd78cc230">Open</a></td>
+                                </tr>
+                                <tr data-intake-row="00000000-0000-4000-8000-0000000c0de1" aria-selected="true">
+                                    <td><time datetime="2026-10-19T08:32:12.0219436&#x2B;00:00">19 Oct 2026 09:32</time></td>
+                                    <td>E-mail &#xB7; desk@collisionengineers.co.uk &#xB7; nduncombe@example.invalid</td>
+                                    <td class="logs-item"><a href="/Received/00000000-0000-4000-8000-0000000c0de1/Source" target="_blank" rel="noopener">57709_1_LtrtoEngineerIn.pdf</a></td>
+                                    <td>
+                                        <span class="status status--red">Processing failed</span>
+
+                                            <span class="logs-reason">The PDF text layer was empty.</span>
+                                    </td>
+                                    <td class="mono">
+                                            <span class="muted">—</span>
+                                    </td>
+                                    <td>2 processing &#xB7; 3 allocation</td>
+                                    <td class="row-actions"><a class="btn btn--small" href="/Administration/Logs?tab=intake&amp;Receipt=00000000-0000-4000-8000-0000000c0de1">Open</a></td>
+                                </tr>
+                                <tr data-intake-row="0880d327-4f68-4111-aab2-ebd6c25ea8dd">
+                                    <td><time datetime="2026-10-19T08:10:12.0219436&#x2B;00:00">19 Oct 2026 09:10</time></td>
+                                    <td>Principal API &#xB7; QDOS &#xB7; api</td>
+                                    <td class="logs-item"><a href="/Received/0880d327-4f68-4111-aab2-ebd6c25ea8dd/Source" target="_blank" rel="noopener">Instruction QDOS-API-118.json</a></td>
+                                    <td>
+                                        <span class="status status--red">Allocation failed</span>
+
+                                    </td>
+                                    <td class="mono">
+                                            <span class="muted">—</span>
+                                    </td>
+                                    <td>1 processing &#xB7; 3 allocation</td>
+                                    <td class="row-actions"><a class="btn btn--small" href="/Administration/Logs?tab=intake&amp;Receipt=0880d327-4f68-4111-aab2-ebd6c25ea8dd">Open</a></td>
+                                </tr>
+                                <tr data-intake-row="b76b0d31-ba7e-418a-bbe4-4bdfc11361e9">
+                                    <td><time datetime="2026-10-19T07:44:12.0219436&#x2B;00:00">19 Oct 2026 08:44</time></td>
+                                    <td>E-mail &#xB7; desk@collisionengineers.co.uk &#xB7; claims@northline.example</td>
+                                    <td class="logs-item"><a href="/Received/b76b0d31-ba7e-418a-bbe4-4bdfc11361e9/Source" target="_blank" rel="noopener">Estimate scan.pdf</a></td>
+                                    <td>
+                                        <span class="status status--red">OCR failed</span>
+
+                                    </td>
+                                    <td class="mono">
+                                            <span class="muted">—</span>
+                                    </td>
+                                    <td>&#x2014;</td>
+                                    <td class="row-actions"><a class="btn btn--small" href="/Administration/Logs?tab=intake&amp;Receipt=b76b0d31-ba7e-418a-bbe4-4bdfc11361e9">Open</a></td>
+                                </tr>
+                                <tr data-intake-row="3c59955e-df3c-42b2-9ac9-b33aa9ba853a">
+                                    <td><time datetime="2026-10-19T07:00:12.0219436&#x2B;00:00">19 Oct 2026 08:00</time></td>
+                                    <td>E-mail &#xB7; desk@collisionengineers.co.uk &#xB7; unknown@example.invalid</td>
+                                    <td class="logs-item"><a href="/Received/3c59955e-df3c-42b2-9ac9-b33aa9ba853a/Source" target="_blank" rel="noopener">Repair authority.docx</a></td>
+                                    <td>
+                                        <span class="status status--red">Could not be read</span>
+
+                                            <span class="logs-reason">This file type cannot be read.</span>
+                                    </td>
+                                    <td class="mono">
+                                            <span class="muted">—</span>
+                                    </td>
+                                    <td>&#x2014;</td>
+                                    <td class="row-actions"><a class="btn btn--small" href="/Administration/Logs?tab=intake&amp;Receipt=3c59955e-df3c-42b2-9ac9-b33aa9ba853a">Open</a></td>
+                                </tr>
+                                <tr data-intake-row="9a49c35d-5726-4850-991c-53b0c2a37ffb">
+                                    <td><time datetime="2026-10-19T06:10:12.0219436&#x2B;00:00">19 Oct 2026 07:10</time></td>
+                                    <td>Automation &#xB7; pegasus-automation</td>
+                                    <td class="logs-item"><a href="/Received/9a49c35d-5726-4850-991c-53b0c2a37ffb/Source" target="_blank" rel="noopener">Forwarded instruction.eml</a></td>
+                                    <td>
+                                        <span class="status status--neutral">Closed</span>
+
+                                            <span class="logs-reason">Closed as a duplicate of QDOS26201.</span>
+                                    </td>
+                                    <td class="mono">
+                                            <span class="muted">—</span>
+                                    </td>
+                                    <td>&#x2014;</td>
+                                    <td class="row-actions"><a class="btn btn--small" href="/Administration/Logs?tab=intake&amp;Receipt=9a49c35d-5726-4850-991c-53b0c2a37ffb">Open</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </section>
+                <aside class="logs-drawer" role="dialog" aria-modal="false" aria-labelledby="intake-drawer-title" data-intake-drawer="00000000-0000-4000-8000-0000000c0de1">
+                    <div class="logs-drawer__head">
+                        <h2 id="intake-drawer-title">57709_1_LtrtoEngineerIn.pdf</h2>
+                        <a class="icon-button" href="/Administration/Logs?tab=intake" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg></a>
+                    </div>
+                    <div class="logs-drawer__body">
+                        <dl class="logs-facts">
+                            <dt>Received</dt><dd>19 Oct 2026 09:32</dd>
+                            <dt>Source</dt><dd>E-mail &#xB7; desk@collisionengineers.co.uk &#xB7; nduncombe@example.invalid</dd>
+                            <dt>Outcome</dt><dd><span class="status status--red">Processing failed</span>
+</dd>
+                            <dt>Became</dt><dd class="mono"> <span class="muted">—</span> </dd>
+                            <dt>Attempts</dt><dd>2 processing · 3 allocation</dd>
+                        </dl>
+                        <section class="panel">
+                            <div class="panel-head"><h3>Retained original</h3></div>
+                            <div class="panel-body button-row">
+                                <a class="btn" href="/Received/00000000-0000-4000-8000-0000000c0de1/Source" target="_blank" rel="noopener" data-intake-open-file>
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-eye" /></svg><span>Open file</span>
+                                </a>
+                            </div>
+                        </section>
+                        <section class="panel">
+                            <div class="panel-head"><h3>Processing evidence</h3></div>
+                            <ul class="logs-evidence">
+                                    <li><strong>Decision</strong><span>Processing could not complete.</span></li>
+                                    <li><strong>Failure</strong><span>The PDF text layer was empty.</span></li>
+                                    <li><strong>Registration reading</strong><span class="mono">AB12CDE</span></li>
+                                    <li><strong>Allocation 19 Oct 2026 09:32</strong><span>Failed recoverable &#xB7; The principal code was not recognised.</span></li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="logs-drawer__foot">
+                            <form method="post" class="logs-action" data-intake-action="reevaluate" action="/Administration/Logs?handler=ReevaluateIntake">
+                                <input type="hidden" name="receiptId" value="00000000-0000-4000-8000-0000000c0de1" />
+                                <input type="hidden" name="expectedVersion" value="7" />
+                                <input type="hidden" name="operationKey" value="1bf92afceef94cd5a2f5a8e9c985332c" />
+                                <input type="hidden" name="returnUrl" value="/Administration/Logs?tab=intake&amp;Receipt=00000000-0000-4000-8000-0000000c0de1" />
+                                <label class="sr-only" for="reevaluate-reason">Reason</label>
+                                <input id="reevaluate-reason" name="reason" maxlength="500" required placeholder="Reason" />
+                                <button class="btn" type="submit" data-busy-label="Checking&#x2026;">Re-evaluate with current policy</button>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAADe01gS-6BtEQ-x7PozKDYXAxVQQb-tim9ekIGNbElZqFhmS0wfr_JaJ7hJeZPguu2ZsPY2GNbRSsyMksDEOYb1ubJBy29Fk6PuIk8pcu34mZnXH-JTEyxZcWNwK1udMuQ" /></form>
+                            <form method="post" class="logs-action" data-intake-action="retry-ocr" action="/Administration/Logs?handler=RetryIntakeOcr">
+                                <input type="hidden" name="receiptId" value="00000000-0000-4000-8000-0000000c0de1" />
+                                <input type="hidden" name="expectedVersion" value="7" />
+                                <input type="hidden" name="operationKey" value="a101f0d8e03c427cab9de988f6562c71" />
+                                <input type="hidden" name="returnUrl" value="/Administration/Logs?tab=intake&amp;Receipt=00000000-0000-4000-8000-0000000c0de1" />
+                                <label class="sr-only" for="retry-ocr-reason">Reason</label>
+                                <input id="retry-ocr-reason" name="reason" maxlength="500" required placeholder="Reason" />
+                                <button class="btn" type="submit" data-busy-label="Retrying&#x2026;">Retry OCR</button>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAADe01gS-6BtEQ-x7PozKDYXAxVQQb-tim9ekIGNbElZqFhmS0wfr_JaJ7hJeZPguu2ZsPY2GNbRSsyMksDEOYb1ubJBy29Fk6PuIk8pcu34mZnXH-JTEyxZcWNwK1udMuQ" /></form>
+                        <a class="btn" href="/Administration/Logs?tab=intake">Close</a>
+                    </div>
+                </aside>
+    </div>
+</div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+    
+<div class="dialog-backdrop" data-dialog="account-dialog" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="account-dialog-title">
+        <div class="dialog-head">
+            <h2 id="account-dialog-title" tabindex="-1">Account</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body">
+            <div class="definition-list">
+                <dl class="definition"><dt>Name</dt><dd>alex</dd></dl>
+                <dl class="definition"><dt>Role</dt><dd>Administrator</dd></dl>
+                <dl class="definition"><dt>Idle lock</dt><dd>2 hours</dd></dl>
+            </div>
+        </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn" data-dialog-close>Close</button>
+            <a class="btn" href="/ReleaseNotes">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-flag" /></svg>
+                <span>Release notes</span>
+            </a>
+            <button type="button" class="btn" data-dialog-open="problem-dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-alert-triangle" /></svg>
+                <span>Report a problem</span>
+            </button>
+            <a class="btn" href="/Account/PasswordChange">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-key" /></svg>
+                <span>Change password</span>
+            </a>
+            <form method="post" action="/Account/SignOut">
+                <button type="submit" class="btn btn--danger" data-busy-label="Signing out&#x2026;">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-log-out" /></svg>
+                    <span>Sign out</span>
+                </button>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAADe01gS-6BtEQ-x7PozKDYXAxVQQb-tim9ekIGNbElZqFhmS0wfr_JaJ7hJeZPguu2ZsPY2GNbRSsyMksDEOYb1ubJBy29Fk6PuIk8pcu34mZnXH-JTEyxZcWNwK1udMuQ" /></form>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="notifications-dialog" data-dialog-open-on-load="" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="notifications-dialog-title">
+        <div class="dialog-head">
+            <h2 id="notifications-dialog-title" tabindex="-1">Notifications</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body dialog-body--list">
+                <p class="empty-state" role="status">No notifications</p>
+        </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn btn--dark" data-dialog-close>Close</button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="command-dialog" hidden>
+    <section class="dialog command-dialog" role="dialog" aria-modal="true" aria-labelledby="command-dialog-title">
+        <div class="dialog-head">
+            <h2 id="command-dialog-title" tabindex="-1">Search Pegasus</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="command-search">
+            <label class="sr-only" for="command-input">Search</label>
+            <input id="command-input" type="search" autocomplete="off" data-command-palette-input aria-controls="command-results" />
+        </div>
+        <div id="command-results" class="command-results" role="listbox" aria-label="Search results" data-command-results>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                <span><strong>Work Centre</strong></span>
+            </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Inbox">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                    <span><strong>Inbox</strong></span>
+                </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Upload">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                    <span><strong>Upload</strong></span>
+                </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Cases">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list" /></svg>
+                <span><strong>Cases</strong></span>
+            </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Search">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-folder-open" /></svg>
+                <span><strong>Search</strong></span>
+            </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Administration">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-grid" /></svg>
+                    <span><strong>Administration</strong></span>
+                </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Search?query=" data-command-fallback>
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                <span><strong>Search Cases for <span data-command-fallback-term></span></strong></span>
+                <span class="kbd" aria-hidden="true">Enter</span>
+            </button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="problem-dialog" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="problem-dialog-title">
+        <form method="post" data-problem-form data-problem-case-sections="overview,claim,original-report,inspection,vehicle,damage,valuation,estimate,settlement,report,files,notes,queries" action="/ProblemReports?handler=Report">
+            <input type="hidden" name="operationKey" value="869f923db6894944a91eb5c23968bfb3" />
+            <div class="dialog-head">
+                <h2 id="problem-dialog-title" tabindex="-1">Report a problem</h2>
+                <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                </button>
+            </div>
+            <div class="dialog-body stack">
+                <input type="hidden" name="returnUrl" value="" data-problem-return />
+                <input type="hidden" name="route" value="" data-problem-route />
+                <input type="hidden" name="method" value="GET" />
+                <input type="hidden" name="traceId" value="00-99f91c17ecddfd643d23b108e63096f6-3697314bca2efcd9-00" />
+                <input type="hidden" name="caseReference" value="" data-problem-case />
+                <input type="hidden" name="viewport" value="" data-problem-viewport />
+                <input type="hidden" name="editing" value="false" data-problem-editing />
+                <input type="hidden" name="errors" value="" data-problem-errors />
+                <div class="field">
+                    <label for="problem-description">What happened</label>
+                    <textarea id="problem-description" name="description" rows="6" maxlength="4000" required></textarea>
+                </div>
+            </div>
+            <div class="dialog-foot">
+                <button type="button" class="btn" data-dialog-close>Cancel</button>
+                <button type="submit" class="btn btn--primary" data-busy-label="Sending&#x2026;">Send</button>
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAADe01gS-6BtEQ-x7PozKDYXAxVQQb-tim9ekIGNbElZqFhmS0wfr_JaJ7hJeZPguu2ZsPY2GNbRSsyMksDEOYb1ubJBy29Fk6PuIk8pcu34mZnXH-JTEyxZcWNwK1udMuQ" /></form>
+    </section>
+</div>
+
+    <div class="toast-region" aria-live="polite" data-toast-region></div>
+
+    <script src="/js/site.vubujkpeou.js"></script>
+    
+</body>
+</html>

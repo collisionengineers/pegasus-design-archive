@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en" data-busy-label="Working&#x2026;" data-busy-still="Still" data-icon-sprite="/images/lucide-sprite.04agn8pzs5.svg">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Management Reports · Pegasus</title>
+    <link rel="stylesheet" href="/css/site.qz2wg1x280.css" />
+    
+    <link rel="stylesheet" href="/css/admin.2u90t9pd6a.css" />
+
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell" data-app-shell>
+        <header class="app-rail">
+            <a class="brand" aria-label="Pegasus home" href="/">
+                <img src="/images/pegasus-mark-refined-128.tctmpgz0uo.png" alt="" aria-hidden="true" />
+                <span class="brand-copy"><strong>PEGASUS</strong><span>Case management</span></span>
+            </a>
+            <nav class="primary-nav" aria-label="Primary">
+                <div class="nav-label">Work</div>
+                <a class="nav-link" href="/">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                    <span>Work Centre</span>
+                </a>
+                    <a class="nav-link" href="/Inbox">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                        <span>Inbox</span>
+                    </a>
+                    <a class="nav-link" href="/Upload">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                        <span>Upload</span>
+                    </a>
+                <a class="nav-link" href="/Cases">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list-checks" /></svg>
+                    <span>Cases</span>
+                </a>
+                <a class="nav-link" href="/Search">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <span>Search</span>
+                </a>
+                    <div class="nav-label">Manage</div>
+                    <a class="nav-link" aria-current="page" href="/Administration">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+                        <span>Administration</span>
+                    </a>
+            </nav>
+            <div class="rail-spacer"></div>
+            <button type="button" class="rail-collapse" data-rail-toggle aria-expanded="true" aria-label="Collapse navigation"
+                    data-label-collapse="Collapse navigation" data-label-expand="Expand navigation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-left" /></svg>
+                <span>Collapse</span>
+            </button>
+            <div class="rail-health">
+                <div class="rail-health-line"><span class="health-dot"></span><span>Current · 11:30</span></div>
+            </div>
+                <div class="rail-user" role="group" aria-label="User">
+                    <span class="avatar" aria-hidden="true">IU</span>
+                    <div><strong>alex</strong><small>Administrator</small></div>
+                    <button type="button" class="icon-button" data-dialog-open="account-dialog" aria-label="Account menu">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                    </button>
+                </div>
+        </header>
+        <div class="app-column">
+            <section class="utility-bar" aria-label="Utility bar">
+                <div class="utility-freshness"><span class="health-dot"></span><span>Current · 11:30</span></div>
+                <form class="utility-search" role="search" method="get" action="/Search">
+                    <label class="sr-only" for="global-search">Search Pegasus</label>
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <input id="global-search" type="search" name="query" data-command-input aria-label="Search Pegasus" placeholder="Search cases, references or people" autocomplete="off" />
+                    <span class="shortcut-hint" aria-hidden="true">Ctrl K</span>
+                </form>
+                <div class="utility-actions">
+                    <a class="btn btn--primary" href="/Cases/Create">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-plus" /></svg>
+                        <span>New case</span>
+                    </a>
+                    <span class="bell-wrap">
+                        <button type="button" class="icon-button" data-dialog-open="notifications-dialog" aria-label="Notifications">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bell" /></svg>
+                        </button>
+                    </span>
+                        <button type="button" class="icon-button utility-account" data-dialog-open="account-dialog" aria-label="Account menu">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                        </button>
+                </div>
+            </section>
+            <main id="main-content" class="app-main" tabindex="-1">
+                <div class="content">
+                    <header class="page-header">
+    <div class="page-title">
+        <p class="eyebrow">Administration</p>
+        <h1>Management Reports</h1>
+    </div>
+        <div class="page-actions">        <a class="btn" href="/Administration/Reports?from=2026-09-18T11%3A30&amp;to=2026-10-19T11%3A30&amp;handler=Workbook" data-busy-download data-busy-label="Downloading&#x2026;" data-busy-done="Downloaded" data-busy-download-failed="The file could not be downloaded. Try again."><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-file-spreadsheet" /></svg><span>Download workbook</span></a>
+</div>
+</header>
+<div class="admin-layout">
+    <nav class="admin-nav panel" aria-label="Administration areas">
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-people">
+        <span class="admin-nav__label" id="admin-nav-people">People and access</span>
+        <a href="/Administration/Accounts">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-user" /></svg>
+            <span>Staff accounts &amp; roles</span>
+        </a>
+        <a href="/Administration/Contacts">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-shield" /></svg>
+            <span>Contacts</span>
+        </a>
+    </div>
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-configuration">
+        <span class="admin-nav__label" id="admin-nav-configuration">Configuration</span>
+        <a href="/Administration/Configuration">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+            <span>Workflow configuration</span>
+        </a>
+        <a href="/Administration/Mailboxes">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-mail" /></svg>
+            <span>Mail settings</span>
+        </a>
+        <a href="/Administration/EmailTemplates">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-mail-open" /></svg>
+            <span>E-mail templates</span>
+        </a>
+        <a href="/Administration/ValuationPresets">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-pound-sterling" /></svg>
+            <span>Valuation presets</span>
+        </a>
+    </div>
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-oversight">
+        <span class="admin-nav__label" id="admin-nav-oversight">Operations and oversight</span>
+        <a href="/Administration/Health">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-heart-pulse" /></svg>
+            <span>Service health</span>
+        </a>
+        <a href="/Administration/Logs">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-scroll-text" /></svg>
+            <span>Logs</span>
+        </a>
+        <a aria-current="page" href="/Administration/Reports">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bar-chart" /></svg>
+            <span>Management Reports</span>
+        </a>
+        <a href="/Administration/ReleaseNotes">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-flag" /></svg>
+            <span>Release notes</span>
+        </a>
+        <a href="/Administration/ProblemReports">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-alert-triangle" /></svg>
+            <span>Problem reports</span>
+        </a>
+        <a href="/Administration/AiJobs">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-sparkles" /></svg>
+            <span>AI jobs</span>
+        </a>
+            <a href="/Administration/Automation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bot" /></svg>
+                <span>Automation &amp; AI</span>
+            </a>
+    </div>
+</nav>
+
+    <div class="stack">
+        <form method="get" class="panel admin-report-period" aria-label="Period">
+            <div class="panel-body">
+                <div class="form-grid form-grid--auto admin-report-filter">
+                    <div class="field">
+                        <label for="report-period">Period</label>
+                        <select id="report-period" name="period" data-period-preset>
+                                <option value="this-month">This month</option>
+                                <option value="last-month">Last month</option>
+                                <option value="this-quarter">This quarter</option>
+                                <option value="last-12-months">Last 12 months</option>
+                                <option value="custom" selected="selected">Custom</option>
+                        </select>
+                    </div>
+                    <div class="field"><label for="report-from">From</label><input id="report-from" name="from" type="datetime-local" step="60" data-period-custom value="2026-09-18T11:30" /><input name="__Invariant" type="hidden" value="From" /></div>
+                    <div class="field"><label for="report-to">To</label><input id="report-to" name="to" type="datetime-local" step="60" data-period-custom value="2026-10-19T11:30" /><input name="__Invariant" type="hidden" value="To" /></div>
+                    <div class="cluster"><button class="btn btn--dark" type="submit">Apply</button></div>
+                </div>
+            </div>
+        </form>
+
+            <section class="panel" aria-labelledby="mi01-title">
+                <div class="panel-head">
+                    <h2 id="mi01-title">Engineer activity</h2>
+                    <div class="panel-actions">
+                        <form method="get" class="admin-report-head-field" data-auto-submit>
+            <input type="hidden" name="from" value="2026-09-18T11:30" />
+            <input type="hidden" name="to" value="2026-10-19T11:30" />
+                            <label for="report-engineer">Person</label>
+                            <select id="report-engineer" name="engineerId">
+                                <option value="">All people</option>
+                                    <option value="d47fbbae-ea22-4ca6-b983-01e2ed1fbd13">alex</option>
+                                    <option value="b218bcaa-8a86-4e16-bd06-eb1086b95065">apatel</option>
+                                    <option value="50275d87-49a6-40d1-94bf-0c65d15dc04a">dsmith</option>
+                            </select>
+                            <noscript><button type="submit" class="btn btn--small">Apply</button></noscript>
+                        </form>
+        <a class="btn btn--small" href="/Administration/Reports?from=2026-09-18T11%3A30&amp;to=2026-10-19T11%3A30&amp;handler=Csv" data-busy-download data-busy-label="Downloading&#x2026;" data-busy-done="Downloaded" data-busy-download-failed="The file could not be downloaded. Try again."><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-download" /></svg><span>Download CSV</span></a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="metric-strip metric-strip--3" aria-label="Engineer activity totals">
+        <div class="metric"><span class="metric-label">Queries received</span><span class="metric-value">13</span> <span class="metric-meta">Previous period 13</span> </div>
+        <div class="metric"><span class="metric-label">Reports sent</span><span class="metric-value">44</span> <span class="metric-meta">Previous period 38</span> </div>
+        <div class="metric"><span class="metric-label">Audit reports sent</span><span class="metric-value">6</span> <span class="metric-meta">Previous period 6</span> </div>
+                    </div>
+                    <div class="table-wrap section-gap">
+                        <table class="table table--compact">
+                            <thead>
+                                <tr>
+        <th scope="col"><a class="admin-report-sort" href="/Administration/Reports?from=2026-09-18T11%3A30&amp;to=2026-10-19T11%3A30&amp;sort=person&amp;dir=asc">Person</a></th>
+        <th scope="col" class="num"><a class="admin-report-sort" href="/Administration/Reports?from=2026-09-18T11%3A30&amp;to=2026-10-19T11%3A30&amp;sort=queries&amp;dir=desc">Queries received</a></th>
+        <th scope="col" class="num"><a class="admin-report-sort" href="/Administration/Reports?from=2026-09-18T11%3A30&amp;to=2026-10-19T11%3A30&amp;sort=reports&amp;dir=desc">Reports sent</a></th>
+                                    <th scope="col" class="num">Audit reports sent</th>
+                                    <th scope="col">Received to sent</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                        <td>alex</td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="7" value="2" aria-hidden="true"></meter><span class="tabular">2</span></span></td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="18" value="5" aria-hidden="true"></meter><span class="tabular">5</span></span></td>
+                                        <td class="num tabular">0</td>
+                                        <td>20 hours</td>
+                                    </tr>
+                                    <tr>
+                                        <td>apatel</td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="7" value="4" aria-hidden="true"></meter><span class="tabular">4</span></span></td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="18" value="12" aria-hidden="true"></meter><span class="tabular">12</span></span></td>
+                                        <td class="num tabular">2</td>
+                                        <td>1 day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Automation</td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="7" value="0" aria-hidden="true"></meter><span class="tabular">0</span></span></td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="18" value="9" aria-hidden="true"></meter><span class="tabular">9</span></span></td>
+                                        <td class="num tabular">1</td>
+                                        <td>6 hours</td>
+                                    </tr>
+                                    <tr>
+                                        <td>dsmith</td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="7" value="7" aria-hidden="true"></meter><span class="tabular">7</span></span></td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="18" value="18" aria-hidden="true"></meter><span class="tabular">18</span></span></td>
+                                        <td class="num tabular">3</td>
+                                        <td>1 day</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section class="panel" aria-labelledby="mi02-title">
+                <div class="panel-head">
+                    <h2 id="mi02-title">Reports by Principal</h2>
+                    <div class="panel-actions">
+        <form method="get" class="admin-report-head-field" data-auto-submit>
+            <input type="hidden" name="from" value="2026-09-18T11:30" />
+            <input type="hidden" name="to" value="2026-10-19T11:30" />
+            <label for="report-work">Work</label>
+            <select id="report-work" name="work">
+                    <option value="all" selected="selected">All</option>
+                    <option value="inspection">Inspection</option>
+                    <option value="audit">Audit</option>
+            </select>
+            <noscript><button type="submit" class="btn btn--small">Apply</button></noscript>
+        </form>
+        <a class="btn btn--small" href="/Administration/Reports?from=2026-09-18T11%3A30&amp;to=2026-10-19T11%3A30&amp;handler=PrincipalCsv" data-busy-download data-busy-label="Downloading&#x2026;" data-busy-done="Downloaded" data-busy-download-failed="The file could not be downloaded. Try again."><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-download" /></svg><span>Download CSV</span></a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="metric-strip metric-strip--3" aria-label="Reports by Principal totals">
+        <div class="metric"><span class="metric-label">Reports produced</span><span class="metric-value">53</span> <span class="metric-meta">Previous period 41</span> </div>
+        <div class="metric"><span class="metric-label">Reports sent</span><span class="metric-value">47</span> <span class="metric-meta">Previous period 35</span> </div>
+        <div class="metric"><span class="metric-label">Agreed fees</span><span class="metric-value">&#xA3;10,335.00</span> <span class="metric-meta">Previous period &#xA3;7,995.00</span> </div>
+                    </div>
+                    <div class="table-wrap section-gap">
+                        <table class="table table--compact">
+                            <thead>
+                                <tr>
+        <th scope="col"><a class="admin-report-sort" href="/Administration/Reports?from=2026-09-18T11%3A30&amp;to=2026-10-19T11%3A30&amp;msort=code&amp;mdir=asc">Principal</a></th>
+        <th scope="col" class="num"><a class="admin-report-sort" href="/Administration/Reports?from=2026-09-18T11%3A30&amp;to=2026-10-19T11%3A30&amp;msort=produced&amp;mdir=desc">Reports produced</a></th>
+        <th scope="col" class="num"><a class="admin-report-sort" href="/Administration/Reports?from=2026-09-18T11%3A30&amp;to=2026-10-19T11%3A30&amp;msort=sent&amp;mdir=desc">Reports sent</a></th>
+        <th scope="col" class="num"><a class="admin-report-sort" href="/Administration/Reports?from=2026-09-18T11%3A30&amp;to=2026-10-19T11%3A30&amp;msort=fees&amp;mdir=desc">Agreed fees</a></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                        <td class="mono">ABRAHAMS</td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="16" value="10" aria-hidden="true"></meter><span class="tabular">10</span></span></td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="15" value="9" aria-hidden="true"></meter><span class="tabular">9</span></span></td>
+                                        <td class="num tabular">&#xA3;1,950.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mono">ACSP</td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="16" value="7" aria-hidden="true"></meter><span class="tabular">7</span></span></td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="15" value="6" aria-hidden="true"></meter><span class="tabular">6</span></span></td>
+                                        <td class="num tabular">&#xA3;1,365.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mono">ALISON</td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="16" value="4" aria-hidden="true"></meter><span class="tabular">4</span></span></td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="15" value="3" aria-hidden="true"></meter><span class="tabular">3</span></span></td>
+                                        <td class="num tabular">&#xA3;780.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mono">ALL</td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="16" value="3" aria-hidden="true"></meter><span class="tabular">3</span></span></td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="15" value="2" aria-hidden="true"></meter><span class="tabular">2</span></span></td>
+                                        <td class="num tabular">&#xA3;585.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mono">KERR</td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="16" value="13" aria-hidden="true"></meter><span class="tabular">13</span></span></td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="15" value="12" aria-hidden="true"></meter><span class="tabular">12</span></span></td>
+                                        <td class="num tabular">&#xA3;2,535.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mono">QDOS</td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="16" value="16" aria-hidden="true"></meter><span class="tabular">16</span></span></td>
+                                        <td class="num"><span class="admin-report-measure"><meter min="0" max="15" value="15" aria-hidden="true"></meter><span class="tabular">15</span></span></td>
+                                        <td class="num tabular">&#xA3;3,120.00</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section class="panel" aria-labelledby="months-title">
+                <div class="panel-head">
+                    <h2 id="months-title">By month</h2>
+                    <div class="panel-actions">
+        <form method="get" class="admin-report-head-field" data-auto-submit>
+            <input type="hidden" name="from" value="2026-09-18T11:30" />
+            <input type="hidden" name="to" value="2026-10-19T11:30" />
+            <label for="report-workm">Work</label>
+            <select id="report-workm" name="workm">
+                    <option value="all" selected="selected">All</option>
+                    <option value="inspection">Inspection</option>
+                    <option value="audit">Audit</option>
+            </select>
+            <noscript><button type="submit" class="btn btn--small">Apply</button></noscript>
+        </form>
+        <a class="btn btn--small" href="/Administration/Reports?from=2026-09-18T11%3A30&amp;to=2026-10-19T11%3A30&amp;handler=MonthsCsv" data-busy-download data-busy-label="Downloading&#x2026;" data-busy-done="Downloaded" data-busy-download-failed="The file could not be downloaded. Try again."><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-download" /></svg><span>Download CSV</span></a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="table-wrap">
+                        <table class="table table--compact" aria-labelledby="months-title" data-reports-by-month>
+                            <thead><tr><th scope="col">Month</th><th scope="col">Principal</th><th scope="col" class="num">Reports produced</th><th scope="col" class="num">Fee notes produced</th><th scope="col" class="num">Reports sent</th><th scope="col" class="num">Agreed fees</th></tr></thead>
+                            <tbody>
+                                    <tr>
+                                        <td>Oct 2026</td>
+                                        <td class="mono">ABRAHAMS</td>
+                                        <td class="num tabular">10</td>
+                                        <td class="num tabular">9</td>
+                                        <td class="num tabular">9</td>
+                                        <td class="num tabular">&#xA3;1,950.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Oct 2026</td>
+                                        <td class="mono">KERR</td>
+                                        <td class="num tabular">9</td>
+                                        <td class="num tabular">8</td>
+                                        <td class="num tabular">8</td>
+                                        <td class="num tabular">&#xA3;1,755.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Oct 2026</td>
+                                        <td class="mono">QDOS</td>
+                                        <td class="num tabular">9</td>
+                                        <td class="num tabular">8</td>
+                                        <td class="num tabular">8</td>
+                                        <td class="num tabular">&#xA3;1,755.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sep 2026</td>
+                                        <td class="mono">ABRAHAMS</td>
+                                        <td class="num tabular">9</td>
+                                        <td class="num tabular">8</td>
+                                        <td class="num tabular">8</td>
+                                        <td class="num tabular">&#xA3;1,755.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sep 2026</td>
+                                        <td class="mono">KERR</td>
+                                        <td class="num tabular">8</td>
+                                        <td class="num tabular">7</td>
+                                        <td class="num tabular">7</td>
+                                        <td class="num tabular">&#xA3;1,560.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sep 2026</td>
+                                        <td class="mono">QDOS</td>
+                                        <td class="num tabular">8</td>
+                                        <td class="num tabular">7</td>
+                                        <td class="num tabular">7</td>
+                                        <td class="num tabular">&#xA3;1,560.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aug 2026</td>
+                                        <td class="mono">ABRAHAMS</td>
+                                        <td class="num tabular">8</td>
+                                        <td class="num tabular">7</td>
+                                        <td class="num tabular">7</td>
+                                        <td class="num tabular">&#xA3;1,560.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aug 2026</td>
+                                        <td class="mono">KERR</td>
+                                        <td class="num tabular">7</td>
+                                        <td class="num tabular">6</td>
+                                        <td class="num tabular">6</td>
+                                        <td class="num tabular">&#xA3;1,365.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aug 2026</td>
+                                        <td class="mono">QDOS</td>
+                                        <td class="num tabular">7</td>
+                                        <td class="num tabular">6</td>
+                                        <td class="num tabular">6</td>
+                                        <td class="num tabular">&#xA3;1,365.00</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section class="panel" aria-labelledby="outcomes-title">
+                <div class="panel-head">
+                    <h2 id="outcomes-title">Outcomes</h2>
+                    <div class="panel-actions">        <a class="btn btn--small" href="/Administration/Reports?from=2026-09-18T11%3A30&amp;to=2026-10-19T11%3A30&amp;handler=OutcomesCsv" data-busy-download data-busy-label="Downloading&#x2026;" data-busy-done="Downloaded" data-busy-download-failed="The file could not be downloaded. Try again."><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-download" /></svg><span>Download CSV</span></a>
+</div>
+                </div>
+                <div class="panel-body">
+                    <div class="table-wrap">
+                        <table class="table table--compact">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Principal</th>
+                                        <th scope="col" class="num">Repairable</th>
+                                        <th scope="col" class="num">Total loss</th>
+                                        <th scope="col" class="num">Cash in lieu</th>
+                                        <th scope="col" class="num">Contract repair</th>
+                                    <th scope="col" class="num">Agrees</th>
+                                    <th scope="col" class="num">Differs</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                        <td class="mono">ABRAHAMS</td>
+                                        <td class="num tabular">5</td>
+                                        <td class="num tabular">1</td>
+                                        <td class="num tabular">2</td>
+                                        <td class="num tabular">2</td>
+                                        <td class="num tabular">1</td>
+                                        <td class="num tabular">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mono">ACSP</td>
+                                        <td class="num tabular">3</td>
+                                        <td class="num tabular">1</td>
+                                        <td class="num tabular">2</td>
+                                        <td class="num tabular">1</td>
+                                        <td class="num tabular">0</td>
+                                        <td class="num tabular">2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mono">ALISON</td>
+                                        <td class="num tabular">2</td>
+                                        <td class="num tabular">1</td>
+                                        <td class="num tabular">0</td>
+                                        <td class="num tabular">1</td>
+                                        <td class="num tabular">1</td>
+                                        <td class="num tabular">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mono">ALL</td>
+                                        <td class="num tabular">1</td>
+                                        <td class="num tabular">1</td>
+                                        <td class="num tabular">0</td>
+                                        <td class="num tabular">1</td>
+                                        <td class="num tabular">0</td>
+                                        <td class="num tabular">2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mono">KERR</td>
+                                        <td class="num tabular">6</td>
+                                        <td class="num tabular">3</td>
+                                        <td class="num tabular">2</td>
+                                        <td class="num tabular">2</td>
+                                        <td class="num tabular">0</td>
+                                        <td class="num tabular">2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mono">QDOS</td>
+                                        <td class="num tabular">8</td>
+                                        <td class="num tabular">3</td>
+                                        <td class="num tabular">3</td>
+                                        <td class="num tabular">2</td>
+                                        <td class="num tabular">2</td>
+                                        <td class="num tabular">0</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section class="panel" aria-labelledby="mi03-title">
+                <div class="panel-head">
+                    <h2 id="mi03-title">Turnaround</h2>
+                    <div class="panel-actions">        <a class="btn btn--small" href="/Administration/Reports?from=2026-09-18T11%3A30&amp;to=2026-10-19T11%3A30&amp;handler=TurnaroundCsv" data-busy-download data-busy-label="Downloading&#x2026;" data-busy-done="Downloaded" data-busy-download-failed="The file could not be downloaded. Try again."><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-download" /></svg><span>Download CSV</span></a>
+</div>
+                </div>
+                <div class="panel-body">
+                    <div class="table-wrap">
+                        <table class="table table--compact">
+                            <thead><tr><th scope="col">Principal</th><th scope="col">Time to produce</th><th scope="col">Time to ready</th><th scope="col">Time to send</th></tr></thead>
+                            <tbody>
+                                    <tr>
+                                        <td class="mono">ABRAHAMS</td>
+                                        <td>20 hours</td>
+                                        <td>1 day</td>
+                                        <td>1 day</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mono">ACSP</td>
+                                        <td>20 hours</td>
+                                        <td>1 day</td>
+                                        <td>1 day</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mono">ALISON</td>
+                                        <td>20 hours</td>
+                                        <td>1 day</td>
+                                        <td>1 day</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mono">ALL</td>
+                                        <td>20 hours</td>
+                                        <td>1 day</td>
+                                        <td>1 day</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mono">KERR</td>
+                                        <td>20 hours</td>
+                                        <td>1 day</td>
+                                        <td>1 day</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mono">QDOS</td>
+                                        <td>20 hours</td>
+                                        <td>1 day</td>
+                                        <td>1 day</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section class="panel" aria-labelledby="queues-title">
+                <div class="panel-head">
+                    <h2 id="queues-title">Queues</h2>
+                    <span class="meta">Now</span>
+                    <div class="panel-actions">        <a class="btn btn--small" href="/Administration/Reports?from=2026-09-18T11%3A30&amp;to=2026-10-19T11%3A30&amp;handler=QueuesCsv" data-busy-download data-busy-label="Downloading&#x2026;" data-busy-done="Downloaded" data-busy-download-failed="The file could not be downloaded. Try again."><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-download" /></svg><span>Download CSV</span></a>
+</div>
+                </div>
+                <div class="panel-body">
+                    <div class="metric-strip metric-strip--3" aria-label="Queues totals">
+        <div class="metric"><span class="metric-label">Cases currently held</span><span class="metric-value">1</span></div>
+        <div class="metric"><span class="metric-label">Triages</span><span class="metric-value">2</span></div>
+                        <div class="metric">
+                            <span class="metric-label">Unidentified</span>
+                            <span class="metric-value">0</span>
+                        </div>
+                    </div>
+                    <div class="table-wrap section-gap">
+                        <table class="table table--compact">
+                            <thead><tr><th scope="col">Principal</th><th scope="col" class="num">Currently held</th><th scope="col">Oldest held since</th><th scope="col" class="num">Triages</th><th scope="col">Oldest Triage since</th></tr></thead>
+                            <tbody>
+                                    <tr>
+                                        <td class="mono">KERR</td>
+                                        <td class="num tabular">1</td>
+                                        <td>14 Oct 2026 11:30</td>
+                                        <td class="num tabular">0</td>
+                                        <td>&#x2014;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mono">QDOS</td>
+                                        <td class="num tabular">0</td>
+                                        <td>&#x2014;</td>
+                                        <td class="num tabular">2</td>
+                                        <td>17 Oct 2026 11:30</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+        <section class="panel" aria-labelledby="mi04-title" data-case-list>
+            <div class="panel-head"><h2 id="mi04-title">Case list</h2></div>
+            <div class="panel-body stack">
+                <p class="muted admin-report-note">One row per Case received in the period, open or closed. N/A means the column does not apply to that Case type; a blank cell means nothing is recorded yet.</p>
+                    <form method="get" class="form-grid form-grid--auto admin-report-filter" aria-label="Preset">
+            <input type="hidden" name="from" value="2026-09-18T11:30" />
+            <input type="hidden" name="to" value="2026-10-19T11:30" />
+                        <div class="field">
+                            <label for="case-list-preset">Preset</label>
+                            <select id="case-list-preset" name="preset">
+                                <option value="">No preset</option>
+                            </select>
+                        </div>
+                        <div class="cluster"><button class="btn" type="submit">Use preset</button></div>
+                    </form>
+                <form method="post" class="stack" aria-label="Case list">
+                    <input type="hidden" name="PresetId" />
+                    <input type="hidden" name="ExpectedVersion" value="0" />
+                    <input type="hidden" name="NewPresetId" value="1784bf21-ce17-4c26-b210-68966daab86a" />
+                    <input type="hidden" name="OperationKey" value="acb5878b0e6a46368f96f96a6bf2b07f" />
+                    <div class="form-grid form-grid--auto admin-report-filter">
+                        <div class="field"><label for="case-list-from">Received from</label><input id="case-list-from" name="ReceivedFrom" type="date" value="2026-09-18" /></div>
+                        <div class="field"><label for="case-list-to">Received to</label><input id="case-list-to" name="ReceivedTo" type="date" value="2026-10-19" /></div>
+                        <label class="choice"><input type="checkbox" name="AllTime" value="true" /> All time</label>
+                        <label class="choice"><input type="checkbox" name="IncludeTriage" value="true" /> Include Triage Cases</label>
+                    </div>
+                        <fieldset class="stack">
+                            <legend>Case</legend>
+                            <div class="form-grid form-grid--auto">
+                                    <label class="choice"><input type="checkbox" name="Columns" value="case.reference" checked="checked" /> Case/PO</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="case.audit_reference" checked="checked" /> Audit reference</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="case.principal" checked="checked" /> Principal</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="case.type" checked="checked" /> Case type</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="case.received" checked="checked" /> Received date</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="case.stage" checked="checked" /> Stage</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="sent.inspection" checked="checked" /> Report first sent &#xB7; Inspection</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="sent.audit" checked="checked" /> Report first sent &#xB7; Audit</label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="stack">
+                            <legend>Outcomes</legend>
+                            <div class="form-grid form-grid--auto">
+                                    <label class="choice"><input type="checkbox" name="Columns" value="outcome.inspection" /> Outcome &#xB7; Inspection</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="outcome.audit" /> Outcome &#xB7; Audit</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="salvage_category.inspection" /> Salvage category &#xB7; Inspection</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="salvage_category.audit" /> Salvage category &#xB7; Audit</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="original.firm" /> Original firm</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="original.outcome" /> Original outcome</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="original.agrees" /> Audit agrees with original</label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="stack">
+                            <legend>Engineers</legend>
+                            <div class="form-grid form-grid--auto">
+                                    <label class="choice"><input type="checkbox" name="Columns" value="engineer.assigned" /> Assigned engineer</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="engineer.sign_off" /> Sign-off engineer</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="sent_by.inspection" /> Report sent by &#xB7; Inspection</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="sent_by.audit" /> Report sent by &#xB7; Audit</label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="stack">
+                            <legend>Claim and vehicle</legend>
+                            <div class="form-grid form-grid--auto">
+                                    <label class="choice"><input type="checkbox" name="Columns" value="claim.number" /> Claim number</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="claim.claimant_name" /> Claimant name</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="claim.claimant_contact_number" /> Claimant contact number</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="claim.claimant_address" /> Claimant address</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="claim.incident_date" /> Incident date</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="vehicle.registration" /> Registration</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="vehicle.make" /> Make</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="vehicle.model" /> Model</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="vehicle.year" /> Year</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="vehicle.mileage" /> Mileage</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="inspection.date" /> Inspection date</label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="stack">
+                            <legend>Money</legend>
+                            <div class="form-grid form-grid--auto">
+                                    <label class="choice"><input type="checkbox" name="Columns" value="agreed_fee.inspection" /> Agreed fee &#xB7; Inspection</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="agreed_fee.audit" /> Agreed fee &#xB7; Audit</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="engineers_value.inspection" /> Engineer&#x27;s Value &#xB7; Inspection</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="engineers_value.audit" /> Engineer&#x27;s Value &#xB7; Audit</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="retail_value.inspection" /> Retail value &#xB7; Inspection</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="retail_value.audit" /> Retail value &#xB7; Audit</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="trade_value.inspection" /> Trade value &#xB7; Inspection</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="trade_value.audit" /> Trade value &#xB7; Audit</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="repair_cost.inspection" /> Repair cost &#xB7; Inspection</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="repair_cost.audit" /> Repair cost &#xB7; Audit</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="salvage_value.inspection" /> Salvage value &#xB7; Inspection</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="salvage_value.audit" /> Salvage value &#xB7; Audit</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="recovery_charge.inspection" /> Recovery charge &#xB7; Inspection</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="recovery_charge.audit" /> Recovery charge &#xB7; Audit</label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="stack">
+                            <legend>Parties and activity</legend>
+                            <div class="form-grid form-grid--auto">
+                                    <label class="choice"><input type="checkbox" name="Columns" value="party.repairer" /> Repairer</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="party.claim_source" /> Claim source</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="party.storage" /> Storage</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="activity.images" /> Images</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="activity.images_in_report" /> Images in report</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="activity.documents" /> Documents</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="activity.queries" /> Queries</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="activity.emails_sent" /> E-mails sent</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="activity.chases" /> Chases</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="activity.open_tasks" /> Open tasks</label>
+                                    <label class="choice"><input type="checkbox" name="Columns" value="activity.notes" /> Notes</label>
+                            </div>
+                        </fieldset>
+                    <div class="button-row">
+                        <button class="btn btn--dark" type="submit" data-busy-download data-busy-label="Downloading&#x2026;" data-busy-done="Downloaded" data-busy-download-failed="The file could not be downloaded. Try again." formaction="/Administration/Reports?handler=CaseListCsv"><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-download" /></svg><span>Download CSV</span></button>
+                        <button class="btn" type="submit" data-busy-download data-busy-label="Downloading&#x2026;" data-busy-done="Downloaded" data-busy-download-failed="The file could not be downloaded. Try again." formaction="/Administration/Reports?handler=CaseListWorkbook"><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-file-spreadsheet" /></svg><span>Download workbook</span></button>
+                    </div>
+                        <div class="form-grid form-grid--auto admin-report-filter">
+                            <div class="field"><label for="case-list-preset-name">Preset name</label><input id="case-list-preset-name" name="PresetName" maxlength="100" /></div>
+                            <div class="button-row">
+                                <button class="btn" type="submit" data-busy-label="Saving&#x2026;" formaction="/Administration/Reports?handler=CaseListPresetCreate">Save as new preset</button>
+                            </div>
+                        </div>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAXfyxCABwvFQG5Bo79lswlpuc1dSDZlnC2TUmaadb3CfyiPLNwMplnSemnkmlMx83XRDXqFTCd9EHXIHMkxxVA09oIJSx4fDp59KiQDxgESGrnWPgOLcLxXVZffVqFUbg" /></form>
+            </div>
+        </section>
+    </div>
+</div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+    
+<div class="dialog-backdrop" data-dialog="account-dialog" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="account-dialog-title">
+        <div class="dialog-head">
+            <h2 id="account-dialog-title" tabindex="-1">Account</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body">
+            <div class="definition-list">
+                <dl class="definition"><dt>Name</dt><dd>alex</dd></dl>
+                <dl class="definition"><dt>Role</dt><dd>Administrator</dd></dl>
+                <dl class="definition"><dt>Idle lock</dt><dd>2 hours</dd></dl>
+            </div>
+        </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn" data-dialog-close>Close</button>
+            <a class="btn" href="/ReleaseNotes">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-flag" /></svg>
+                <span>Release notes</span>
+            </a>
+            <button type="button" class="btn" data-dialog-open="problem-dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-alert-triangle" /></svg>
+                <span>Report a problem</span>
+            </button>
+            <a class="btn" href="/Account/PasswordChange">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-key" /></svg>
+                <span>Change password</span>
+            </a>
+            <form method="post" action="/Account/SignOut">
+                <button type="submit" class="btn btn--danger" data-busy-label="Signing out&#x2026;">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-log-out" /></svg>
+                    <span>Sign out</span>
+                </button>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAXfyxCABwvFQG5Bo79lswlpuc1dSDZlnC2TUmaadb3CfyiPLNwMplnSemnkmlMx83XRDXqFTCd9EHXIHMkxxVA09oIJSx4fDp59KiQDxgESGrnWPgOLcLxXVZffVqFUbg" /></form>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="notifications-dialog" data-dialog-open-on-load="" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="notifications-dialog-title">
+        <div class="dialog-head">
+            <h2 id="notifications-dialog-title" tabindex="-1">Notifications</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body dialog-body--list">
+                <p class="empty-state" role="status">No notifications</p>
+        </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn btn--dark" data-dialog-close>Close</button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="command-dialog" hidden>
+    <section class="dialog command-dialog" role="dialog" aria-modal="true" aria-labelledby="command-dialog-title">
+        <div class="dialog-head">
+            <h2 id="command-dialog-title" tabindex="-1">Search Pegasus</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="command-search">
+            <label class="sr-only" for="command-input">Search</label>
+            <input id="command-input" type="search" autocomplete="off" data-command-palette-input aria-controls="command-results" />
+        </div>
+        <div id="command-results" class="command-results" role="listbox" aria-label="Search results" data-command-results>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                <span><strong>Work Centre</strong></span>
+            </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Inbox">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                    <span><strong>Inbox</strong></span>
+                </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Upload">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                    <span><strong>Upload</strong></span>
+                </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Cases">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list" /></svg>
+                <span><strong>Cases</strong></span>
+            </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Search">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-folder-open" /></svg>
+                <span><strong>Search</strong></span>
+            </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Administration">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-grid" /></svg>
+                    <span><strong>Administration</strong></span>
+                </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Search?query=" data-command-fallback>
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                <span><strong>Search Cases for <span data-command-fallback-term></span></strong></span>
+                <span class="kbd" aria-hidden="true">Enter</span>
+            </button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="problem-dialog" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="problem-dialog-title">
+        <form method="post" data-problem-form data-problem-case-sections="overview,claim,original-report,inspection,vehicle,damage,valuation,estimate,settlement,report,files,notes,queries" action="/ProblemReports?handler=Report">
+            <input type="hidden" name="operationKey" value="a530e0f497e843e5a676c4adafd2178e" />
+            <div class="dialog-head">
+                <h2 id="problem-dialog-title" tabindex="-1">Report a problem</h2>
+                <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                </button>
+            </div>
+            <div class="dialog-body stack">
+                <input type="hidden" name="returnUrl" value="" data-problem-return />
+                <input type="hidden" name="route" value="" data-problem-route />
+                <input type="hidden" name="method" value="GET" />
+                <input type="hidden" name="traceId" value="00-9e075abba19105ea23666f64066db619-cb5b40e551e48f97-00" />
+                <input type="hidden" name="caseReference" value="" data-problem-case />
+                <input type="hidden" name="viewport" value="" data-problem-viewport />
+                <input type="hidden" name="editing" value="false" data-problem-editing />
+                <input type="hidden" name="errors" value="" data-problem-errors />
+                <div class="field">
+                    <label for="problem-description">What happened</label>
+                    <textarea id="problem-description" name="description" rows="6" maxlength="4000" required></textarea>
+                </div>
+            </div>
+            <div class="dialog-foot">
+                <button type="button" class="btn" data-dialog-close>Cancel</button>
+                <button type="submit" class="btn btn--primary" data-busy-label="Sending&#x2026;">Send</button>
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAXfyxCABwvFQG5Bo79lswlpuc1dSDZlnC2TUmaadb3CfyiPLNwMplnSemnkmlMx83XRDXqFTCd9EHXIHMkxxVA09oIJSx4fDp59KiQDxgESGrnWPgOLcLxXVZffVqFUbg" /></form>
+    </section>
+</div>
+
+    <div class="toast-region" aria-live="polite" data-toast-region></div>
+
+    <script src="/js/site.vubujkpeou.js"></script>
+    
+</body>
+</html>

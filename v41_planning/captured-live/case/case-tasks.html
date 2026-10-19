@@ -1,0 +1,161 @@
+
+<div id="case-tasks-dialog" class="dialog-backdrop" data-dialog="case-tasks-dialog" hidden>
+<section class="dialog dialog--wide" role="dialog" aria-modal="true" aria-labelledby="case-tasks-dialog-title">
+    <div class="dialog-head">
+        <h2 id="case-tasks-dialog-title" tabindex="-1">Tasks</h2>
+        <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+        </button>
+    </div>
+    <div class="dialog-body stack" data-case-tasks-body >
+            <form method="post" class="note-form" data-case-task-form action="/Cases/17648863-e047-471e-a469-997af89c58a9?handler=CreateCaseTask">
+                <input type="hidden" name="id" value="17648863-e047-471e-a469-997af89c58a9" />
+                <input type="hidden" name="taskId" value="ad218cb8-0bb8-430d-bf1b-6252fc1eb1b1" />
+                <input type="hidden" name="expectedVersion" value="7" />
+                <input type="hidden" name="operationKey" value="6a2d5f494de14f658c8065972554470a" />
+                <input type="hidden" name="editLeaseToken" />
+                <input type="hidden" name="view" />
+                <input type="hidden" name="section" value="overview" />
+                <label class="lbl" for="case-task-description">New task</label>
+                <input id="case-task-description" name="description" required />
+                <div class="button-row">
+                    <button type="submit" data-busy-label="Adding&#x2026;" class="btn btn--primary">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-plus" /></svg>
+                        <span>Add task</span>
+                    </button>
+                </div>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAaj6rBqDB2S-rE_U1FeYfa_If1q__H3zn328xWpnvHLu9EUKxNKkmnvlNf-0ACfaYvDluzonV-EEOfjolK3gQudzwKv3ZsFFz9i-_Areg8n-cwZlzX9uTpI69d9WPRo6w" /></form>
+            <div class="table-wrap">
+                <table class="table table--compact" data-case-tasks>
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Assignee</th>
+                            <th>State</th>
+                                <th><span class="sr-only">Actions</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr data-case-task="d3f9d2f7-c3d9-457b-a5c3-76dc229fc92f" data-task-state="Open">
+                                <td>Send the figures to the garage.</td>
+                                <td>Unassigned</td>
+                                <td><span class="status status--plain status--amber">Open</span></td>
+                                    <td>
+                                            <div class="button-row">
+                                                    <form method="post" class="button-row" data-case-task-assign action="/Cases/17648863-e047-471e-a469-997af89c58a9?handler=AssignCaseTask">
+                                                        <input type="hidden" name="id" value="17648863-e047-471e-a469-997af89c58a9" />
+                                                        <input type="hidden" name="taskId" value="d3f9d2f7-c3d9-457b-a5c3-76dc229fc92f" />
+                                                        <input type="hidden" name="expectedVersion" value="7" />
+                                                        <input type="hidden" name="expectedTaskVersion" value="0" />
+                                                        <input type="hidden" name="operationKey" value="5b1704670ec04173a0c90641c424260b" />
+                                                        <input type="hidden" name="editLeaseToken" />
+                                                        <input type="hidden" name="view" />
+                                                        <input type="hidden" name="section" value="overview" />
+                                                        <select name="assigneeId" aria-label="Assignee" required>
+                                                            <option value="" selected="selected"></option>
+                                                                <option value="f0b97839-2ab2-4606-95d4-ff5559dabbb6">Sam Okafor</option>
+                                                                <option value="2e7b7770-9d29-4ee0-bc91-0cf2f586009f">andy.patterson</option>
+                                                        </select>
+                                                        <button type="submit" data-busy-label="Working&#x2026;" class="btn btn--small">
+                                                            <span>Assign</span>
+                                                        </button>
+                                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAaj6rBqDB2S-rE_U1FeYfa_If1q__H3zn328xWpnvHLu9EUKxNKkmnvlNf-0ACfaYvDluzonV-EEOfjolK3gQudzwKv3ZsFFz9i-_Areg8n-cwZlzX9uTpI69d9WPRo6w" /></form>
+                                                    <form method="post" action="/Cases/17648863-e047-471e-a469-997af89c58a9?handler=CompleteCaseTask">
+                                                        <input type="hidden" name="id" value="17648863-e047-471e-a469-997af89c58a9" />
+                                                        <input type="hidden" name="taskId" value="d3f9d2f7-c3d9-457b-a5c3-76dc229fc92f" />
+                                                        <input type="hidden" name="expectedVersion" value="7" />
+                                                        <input type="hidden" name="expectedTaskVersion" value="0" />
+                                                        <input type="hidden" name="operationKey" value="57b8255739a143d09efc45727a635e68" />
+                                                        <input type="hidden" name="editLeaseToken" />
+                                                        <input type="hidden" name="view" />
+                                                        <input type="hidden" name="section" value="overview" />
+                                                        <button type="submit" data-busy-label="Completing&#x2026;" class="btn btn--small">
+                                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-check" /></svg>
+                                                            <span>Complete</span>
+                                                        </button>
+                                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAaj6rBqDB2S-rE_U1FeYfa_If1q__H3zn328xWpnvHLu9EUKxNKkmnvlNf-0ACfaYvDluzonV-EEOfjolK3gQudzwKv3ZsFFz9i-_Areg8n-cwZlzX9uTpI69d9WPRo6w" /></form>
+                                                    <form method="post" action="/Cases/17648863-e047-471e-a469-997af89c58a9?handler=CancelCaseTask">
+                                                        <input type="hidden" name="id" value="17648863-e047-471e-a469-997af89c58a9" />
+                                                        <input type="hidden" name="taskId" value="d3f9d2f7-c3d9-457b-a5c3-76dc229fc92f" />
+                                                        <input type="hidden" name="expectedVersion" value="7" />
+                                                        <input type="hidden" name="expectedTaskVersion" value="0" />
+                                                        <input type="hidden" name="operationKey" value="2d3af2f46d28477fb2e3cb02e825fbb9" />
+                                                        <input type="hidden" name="editLeaseToken" />
+                                                        <input type="hidden" name="view" />
+                                                        <input type="hidden" name="section" value="overview" />
+                                                        <button type="submit" data-busy-label="Working&#x2026;" class="btn btn--small btn--danger">
+                                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                                            <span>Cancel task</span>
+                                                        </button>
+                                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAaj6rBqDB2S-rE_U1FeYfa_If1q__H3zn328xWpnvHLu9EUKxNKkmnvlNf-0ACfaYvDluzonV-EEOfjolK3gQudzwKv3ZsFFz9i-_Areg8n-cwZlzX9uTpI69d9WPRo6w" /></form>
+                                            </div>
+                                    </td>
+                            </tr>
+                            <tr data-case-task="aa2d1d82-5b09-420f-ae4c-c9fccc4910a7" data-task-state="Open">
+                                <td>Phone the claimant about storage charges.</td>
+                                <td>Sam Okafor</td>
+                                <td><span class="status status--plain status--amber">Open</span></td>
+                                    <td>
+                                            <div class="button-row">
+                                                    <form method="post" class="button-row" data-case-task-assign action="/Cases/17648863-e047-471e-a469-997af89c58a9?handler=AssignCaseTask">
+                                                        <input type="hidden" name="id" value="17648863-e047-471e-a469-997af89c58a9" />
+                                                        <input type="hidden" name="taskId" value="aa2d1d82-5b09-420f-ae4c-c9fccc4910a7" />
+                                                        <input type="hidden" name="expectedVersion" value="7" />
+                                                        <input type="hidden" name="expectedTaskVersion" value="1" />
+                                                        <input type="hidden" name="operationKey" value="7782a7d8499643a2ac6172b1d9f9fbfa" />
+                                                        <input type="hidden" name="editLeaseToken" />
+                                                        <input type="hidden" name="view" />
+                                                        <input type="hidden" name="section" value="overview" />
+                                                        <select name="assigneeId" aria-label="Assignee" required>
+                                                            <option value=""></option>
+                                                                <option value="f0b97839-2ab2-4606-95d4-ff5559dabbb6" selected="selected">Sam Okafor</option>
+                                                                <option value="2e7b7770-9d29-4ee0-bc91-0cf2f586009f">andy.patterson</option>
+                                                        </select>
+                                                        <button type="submit" data-busy-label="Working&#x2026;" class="btn btn--small">
+                                                            <span>Assign</span>
+                                                        </button>
+                                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAaj6rBqDB2S-rE_U1FeYfa_If1q__H3zn328xWpnvHLu9EUKxNKkmnvlNf-0ACfaYvDluzonV-EEOfjolK3gQudzwKv3ZsFFz9i-_Areg8n-cwZlzX9uTpI69d9WPRo6w" /></form>
+                                                    <form method="post" action="/Cases/17648863-e047-471e-a469-997af89c58a9?handler=CompleteCaseTask">
+                                                        <input type="hidden" name="id" value="17648863-e047-471e-a469-997af89c58a9" />
+                                                        <input type="hidden" name="taskId" value="aa2d1d82-5b09-420f-ae4c-c9fccc4910a7" />
+                                                        <input type="hidden" name="expectedVersion" value="7" />
+                                                        <input type="hidden" name="expectedTaskVersion" value="1" />
+                                                        <input type="hidden" name="operationKey" value="8c93a9d9e4c6491897311756afc85082" />
+                                                        <input type="hidden" name="editLeaseToken" />
+                                                        <input type="hidden" name="view" />
+                                                        <input type="hidden" name="section" value="overview" />
+                                                        <button type="submit" data-busy-label="Completing&#x2026;" class="btn btn--small">
+                                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-check" /></svg>
+                                                            <span>Complete</span>
+                                                        </button>
+                                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAaj6rBqDB2S-rE_U1FeYfa_If1q__H3zn328xWpnvHLu9EUKxNKkmnvlNf-0ACfaYvDluzonV-EEOfjolK3gQudzwKv3ZsFFz9i-_Areg8n-cwZlzX9uTpI69d9WPRo6w" /></form>
+                                                    <form method="post" action="/Cases/17648863-e047-471e-a469-997af89c58a9?handler=CancelCaseTask">
+                                                        <input type="hidden" name="id" value="17648863-e047-471e-a469-997af89c58a9" />
+                                                        <input type="hidden" name="taskId" value="aa2d1d82-5b09-420f-ae4c-c9fccc4910a7" />
+                                                        <input type="hidden" name="expectedVersion" value="7" />
+                                                        <input type="hidden" name="expectedTaskVersion" value="1" />
+                                                        <input type="hidden" name="operationKey" value="b026aa4010c747e88d23e559aab5b324" />
+                                                        <input type="hidden" name="editLeaseToken" />
+                                                        <input type="hidden" name="view" />
+                                                        <input type="hidden" name="section" value="overview" />
+                                                        <button type="submit" data-busy-label="Working&#x2026;" class="btn btn--small btn--danger">
+                                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                                            <span>Cancel task</span>
+                                                        </button>
+                                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAaj6rBqDB2S-rE_U1FeYfa_If1q__H3zn328xWpnvHLu9EUKxNKkmnvlNf-0ACfaYvDluzonV-EEOfjolK3gQudzwKv3ZsFFz9i-_Areg8n-cwZlzX9uTpI69d9WPRo6w" /></form>
+                                            </div>
+                                    </td>
+                            </tr>
+                            <tr data-case-task="ce1db5e5-359a-41a0-87a8-cd0c3df2963b" data-task-state="Completed">
+                                <td>Confirm the repair authority with the Principal.</td>
+                                <td>andy.patterson</td>
+                                <td><span class="status status--plain status--green">Completed</span></td>
+                                    <td>
+                                    </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+</section>
+</div>

@@ -1,0 +1,10 @@
+alex	d47fbbae-ea22-4ca6-b983-01e2ed1fbd13
+dsmith	50275d87-49a6-40d1-94bf-0c65d15dc04a
+apatel	b218bcaa-8a86-4e16-bd06-eb1086b95065
+mwalker	e66dadab-222c-4acb-bf88-2c80c5436508
+tgreen	2b96a53a-48f9-40c4-a49f-ab341aead48a
+qdos-contact	00000000-0000-4000-8000-00000000d001
+redfern	a868eed1-302d-46b3-82d2-4e6a5bdf2377
+desk-mailbox	7a41be49-40d7-a080-031b-636b44cfc26f
+draft-note	11e7a01b-4e61-46d7-8306-0f2883edc339
+published-note	851676f9-cb4b-44db-88d4-869dfd13149f

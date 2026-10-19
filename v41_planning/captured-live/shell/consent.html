@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-busy-label="Working&#x2026;" data-busy-still="Still" data-icon-sprite="/images/lucide-sprite.04agn8pzs5.svg">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authorise an automation connector · Pegasus</title>
+    <link rel="stylesheet" href="/css/site.qz2wg1x280.css" />
+    
+    <link rel="stylesheet" href="/css/admin.2u90t9pd6a.css" />
+
+</head>
+<body>
+    <div class="external-shell">
+        <aside class="auth-identity">
+            <div class="auth-brand">
+                <img src="/images/pegasus-mark-refined-256.jgdrxnh7gm.png" alt="" width="96" height="96" />
+                <div class="brand-copy">
+                    <strong>PEGASUS</strong>
+                    <span>Case management</span>
+                </div>
+            </div>
+            <p class="auth-company">Collision Engineers</p>
+        </aside>
+        <main id="main-content" class="auth-panel" tabindex="-1">
+            <section class="auth-card auth-card--wide consent-card">
+                
+<p class="eyebrow">Administration</p>
+<h1>Authorise an automation connector</h1>
+
+<div class="notice" data-connector-notice>
+    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-shield" /></svg>
+    <span>The connector never receives staff rights; every action it takes runs as <strong>Pegasus Automation Actor</strong> through the approved tool inventory, within the scopes below, and both the action and your decision are permanently recorded.</span>
+</div>
+
+<section class="panel" aria-labelledby="connector-heading">
+    <div class="panel-head"><h2 id="connector-heading">Connection request</h2></div>
+    <div class="panel-body">
+        <dl class="detail-list">
+            <div><dt>Connector</dt><dd>https://connector.example</dd></div>
+            <div><dt>Acts as</dt><dd>Pegasus Automation Actor</dd></div>
+            <div>
+                <dt>Requested access</dt>
+                <dd>
+                        <ul class="plain">
+                                <li><code>automation.cases</code> — Search and read cases, take and renew edit leases, update case details.</li>
+                                <li><code>automation.documents</code> — Add and download case documents.</li>
+                        </ul>
+                </dd>
+            </div>
+        </dl>
+
+        <form method="post" class="cluster mt-2">
+                <input type="hidden" name="response_type" value="code" />
+                <input type="hidden" name="client_id" value="pegasus-automation" />
+                <input type="hidden" name="redirect_uri" value="https://connector.example/api/mcp/auth_callback" />
+                <input type="hidden" name="scope" value="automation.cases automation.documents" />
+                <input type="hidden" name="state" value="state-4c1c0d0f" />
+                <input type="hidden" name="resource" value="http://localhost/mcp" />
+                <input type="hidden" name="code_challenge" value="WRdvnJgNhEwFZ3pD-GxPu-Xsr2tF4ep2UzEGmPSEgkM" />
+                <input type="hidden" name="code_challenge_method" value="S256" />
+            <input type="hidden" data-val="true" data-val-required="The OperationKey field is required." id="OperationKey" name="OperationKey" value="f5f5cfa03d9b459ab7b796bca5ea61fb" />
+            <button type="submit" class="btn btn--primary" data-busy-label="Authorising&#x2026;" formaction="/authorize?handler=Accept">Authorise the connector</button>
+            <button type="submit" class="btn" data-busy-label="Refusing&#x2026;" formaction="/authorize?handler=Deny">Refuse</button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABKz1UXzEMpCcoKS_Wgvu9PLf3SO6gFknIT17z3DHnfiapkT7pqcEBWQK8Knwxr6H5_VYjl4ktUQcIijdfWtfK1RmdI9NqzaHgr31-rF0rOS2HwNSgwu7K-NAaeKALAPPM" /></form>
+    </div>
+</section>
+
+            </section>
+        </main>
+    </div>
+    <script src="/js/site.vubujkpeou.js"></script>
+    
+</body>
+</html>

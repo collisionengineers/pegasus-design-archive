@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" data-busy-label="Working&#x2026;" data-busy-still="Still" data-icon-sprite="/images/lucide-sprite.04agn8pzs5.svg">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QDOS · Pegasus</title>
+    <link rel="stylesheet" href="/css/site.qz2wg1x280.css" />
+    
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell" data-app-shell>
+        <header class="app-rail">
+            <a class="brand" aria-label="Pegasus home" href="/">
+                <img src="/images/pegasus-mark-refined-128.tctmpgz0uo.png" alt="" aria-hidden="true" />
+                <span class="brand-copy"><strong>PEGASUS</strong><span>Case management</span></span>
+            </a>
+            <nav class="primary-nav" aria-label="Primary">
+                <div class="nav-label">Work</div>
+                <a class="nav-link" href="/">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                    <span>Work Centre</span>
+                </a>
+                    <a class="nav-link" href="/Inbox">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                        <span>Inbox</span>
+                    </a>
+                    <a class="nav-link" href="/Upload">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                        <span>Upload</span>
+                    </a>
+                <a class="nav-link" href="/Cases">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list-checks" /></svg>
+                    <span>Cases</span>
+                </a>
+                <a class="nav-link" href="/Search">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <span>Search</span>
+                </a>
+                    <div class="nav-label">Manage</div>
+                    <a class="nav-link" aria-current="page" href="/Administration">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+                        <span>Administration</span>
+                    </a>
+            </nav>
+            <div class="rail-spacer"></div>
+            <button type="button" class="rail-collapse" data-rail-toggle aria-expanded="true" aria-label="Collapse navigation"
+                    data-label-collapse="Collapse navigation" data-label-expand="Expand navigation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-left" /></svg>
+                <span>Collapse</span>
+            </button>
+            <div class="rail-health">
+                <div class="rail-health-line"><span class="health-dot"></span><span>Current · 11:30</span></div>
+            </div>
+                <div class="rail-user" role="group" aria-label="User">
+                    <span class="avatar" aria-hidden="true">IU</span>
+                    <div><strong>alex</strong><small>Administrator</small></div>
+                    <button type="button" class="icon-button" data-dialog-open="account-dialog" aria-label="Account menu">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                    </button>
+                </div>
+        </header>
+        <div class="app-column">
+            <section class="utility-bar" aria-label="Utility bar">
+                <div class="utility-freshness"><span class="health-dot"></span><span>Current · 11:30</span></div>
+                <form class="utility-search" role="search" method="get" action="/Search">
+                    <label class="sr-only" for="global-search">Search Pegasus</label>
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <input id="global-search" type="search" name="query" data-command-input aria-label="Search Pegasus" placeholder="Search cases, references or people" autocomplete="off" />
+                    <span class="shortcut-hint" aria-hidden="true">Ctrl K</span>
+                </form>
+                <div class="utility-actions">
+                    <a class="btn btn--primary" href="/Cases/Create">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-plus" /></svg>
+                        <span>New case</span>
+                    </a>
+                    <span class="bell-wrap">
+                        <button type="button" class="icon-button" data-dialog-open="notifications-dialog" aria-label="Notifications">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bell" /></svg>
+                        </button>
+                    </span>
+                        <button type="button" class="icon-button utility-account" data-dialog-open="account-dialog" aria-label="Account menu">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                        </button>
+                </div>
+            </section>
+            <main id="main-content" class="app-main" tabindex="-1">
+                <div class="content">
+                    <header class="page-header">
+    <div class="page-title">
+            <p class="eyebrow">Administration</p>
+        <h1>QDOS</h1>
+    </div>
+</header>
+
+<div class="admin-layout"><nav class="admin-nav panel" aria-label="Administration areas">
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-people">
+        <span class="admin-nav__label" id="admin-nav-people">People and access</span>
+        <a href="/Administration/Accounts">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-user" /></svg>
+            <span>Staff accounts &amp; roles</span>
+        </a>
+        <a aria-current="page" href="/Administration/Contacts">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-shield" /></svg>
+            <span>Contacts</span>
+        </a>
+    </div>
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-configuration">
+        <span class="admin-nav__label" id="admin-nav-configuration">Configuration</span>
+        <a href="/Administration/Configuration">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+            <span>Workflow configuration</span>
+        </a>
+        <a href="/Administration/Mailboxes">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-mail" /></svg>
+            <span>Mail settings</span>
+        </a>
+        <a href="/Administration/EmailTemplates">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-mail-open" /></svg>
+            <span>E-mail templates</span>
+        </a>
+        <a href="/Administration/ValuationPresets">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-pound-sterling" /></svg>
+            <span>Valuation presets</span>
+        </a>
+    </div>
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-oversight">
+        <span class="admin-nav__label" id="admin-nav-oversight">Operations and oversight</span>
+        <a href="/Administration/Health">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-heart-pulse" /></svg>
+            <span>Service health</span>
+        </a>
+        <a href="/Administration/Logs">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-scroll-text" /></svg>
+            <span>Logs</span>
+        </a>
+        <a href="/Administration/Reports">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bar-chart" /></svg>
+            <span>Management Reports</span>
+        </a>
+        <a href="/Administration/ReleaseNotes">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-flag" /></svg>
+            <span>Release notes</span>
+        </a>
+        <a href="/Administration/ProblemReports">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-alert-triangle" /></svg>
+            <span>Problem reports</span>
+        </a>
+        <a href="/Administration/AiJobs">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-sparkles" /></svg>
+            <span>AI jobs</span>
+        </a>
+            <a href="/Administration/Automation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bot" /></svg>
+                <span>Automation &amp; AI</span>
+            </a>
+    </div>
+</nav>
+<div class="stack">
+        <nav class="tabs" aria-label="QDOS"> <a class="tab" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d001">Contact</a>  <a class="tab" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d001?tab=report-generation">Report generation</a>  <a class="tab" aria-current="page" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d001?tab=report-sending">Report sending</a>  <a class="tab" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d001?tab=salvage-matrix">Salvage matrix</a>  <a class="tab" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d001?tab=default-inspection-location">Default inspection location</a>  <a class="tab" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d001?tab=principal-api">Principal API</a> </nav>
+            <section class="panel" aria-labelledby="principal-sending-title"><div class="panel-head"><h2 id="principal-sending-title">Report sending</h2></div><form method="post" class="panel-body stack" data-report-sending-editor action="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d001?handler=UpdateReportSending"> <div class="validation-summary validation-summary-valid" role="alert" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul></div> <input type="hidden" name="ExpectedVersion" value="5" /><input type="hidden" name="PrincipalExpectedVersion" value="4" /><input type="hidden" id="ReportSendingOperationKey" name="ReportSendingOperationKey" value="778639b16f5a4bd2b541f560031c0236" /><fieldset class="stack">
+                <div class="form-grid form-grid--2">
+                    <div class="field"><label for="rs-send-from">Send from</label><select id="rs-send-from" name="RsSendFrom"><option value="">Not set</option> <option value="desk@collisionengineers.co.uk" selected="selected">desk@collisionengineers.co.uk</option>  <option value="engineers@collisionengineers.co.uk">engineers@collisionengineers.co.uk</option> </select></div>
+                    <fieldset class="field"><legend>Send to</legend><div class="stack" data-rs-items="RsSendTo"> <input name="RsSendTo" type="email" value="claims@northline.example" aria-label="Send to" autocomplete="off" /> </div><button type="button" class="btn" data-rs-add="RsSendTo" data-rs-label="Send to" data-rs-type="email">Add address</button><p class="hint">Empty: the original instruction sender.</p></fieldset>
+                    <fieldset class="field"><legend>Cc</legend><div class="stack" data-rs-items="RsCc"> <input name="RsCc" type="email" value="engineers@collisionengineers.co.uk" aria-label="Cc" autocomplete="off" /> </div><button type="button" class="btn" data-rs-add="RsCc" data-rs-label="Cc" data-rs-type="email">Add address</button></fieldset>
+                    <fieldset class="field"><legend>Never cc</legend><div class="stack" data-rs-items="RsNeverCc"> <input name="RsNeverCc" type="email" value="noreply@northline.example" aria-label="Never cc" autocomplete="off" /> </div><button type="button" class="btn" data-rs-add="RsNeverCc" data-rs-label="Never cc" data-rs-type="email">Add address</button></fieldset>
+                    <div class="field stack"><label class="choice"><input type="checkbox" name="RsSendToOnly" value="true" /> <span>Send to only</span></label><label class="choice"><input type="checkbox" name="RsReplyAll" value="true" checked="checked" /> <span>Reply all</span></label><label class="choice"><input type="checkbox" name="RsGarageFigures" value="true" checked="checked" /> <span>Garage figures</span></label></div>
+                    <fieldset class="field"><legend>Attach</legend><div class="stack"><label class="choice"><input type="checkbox" name="RsFeeNoteSeparate" value="true" checked="checked" /> <span>Fee note is a separate PDF</span></label><label class="choice"><input type="checkbox" name="RsEstimate" value="true" checked="checked" /> <span>Estimate</span></label><label class="choice"><input type="checkbox" name="RsAudatex" value="true" /> <span>Audatex</span></label><label class="choice"><input type="checkbox" name="RsReportImages" value="true" checked="checked" /> <span>Report carries vehicle images</span></label><label class="choice"><input type="checkbox" name="RsVehicleImagesDocument" value="true" checked="checked" /> <span>Vehicle images document required</span></label><label class="choice"><input type="checkbox" name="RsFigureBreakdown" value="true" /> <span>Figure breakdown required</span></label></div></fieldset>
+                    <div class="field"><label for="rs-hold">Hold</label><input id="rs-hold" name="RsHold" value="Estimate agreed with the garage" autocomplete="off" /><p class="hint">Send stays off until staff tick this as done.</p></div>
+                    <fieldset class="field"><legend>Reminders</legend><div class="stack" data-rs-items="RsReminders"> <input name="RsReminders" value="Chase the claim source for payment confirmation" aria-label="Reminders" autocomplete="off" /> </div><button type="button" class="btn" data-rs-add="RsReminders" data-rs-label="Reminders" data-rs-type="text">Add reminder</button></fieldset>
+                    <fieldset class="field"><legend>Attachment name</legend><div class="form-grid form-grid--2"><div class="field"><label for="rs-name-first">First send</label><input id="rs-name-first" name="RsNameFirst" value="{ref}_{reg}_report" autocomplete="off" /></div><div class="field"><label for="rs-name-resend">Re-send</label><input id="rs-name-resend" name="RsNameResend" value="{ref}_{reg}_report_amended" autocomplete="off" /></div></div><p class="hint">Use {ref}, {reg} and {outcome}. Empty: the standard name.</p></fieldset>
+                </div>
+                <section class="contact-section stack" aria-labelledby="principal-sending-rules-title">
+                    <h3 id="principal-sending-rules-title">Rules</h3>
+                    <div class="stack" data-rs-rules>
+                        <fieldset class="contact-section stack" data-rs-rule>
+                            <legend>Rule</legend>
+                            <input type="hidden" name="RuleIndex" value="0" />
+                            <div class="field"><label for="Rule0Match">Match</label><select id="Rule0Match" name="Rule0Match"><option value="All" selected="selected">All conditions</option><option value="Any">Any condition</option></select></div>
+                                <div class="form-grid form-grid--2" data-rs-condition>
+                                    <div class="field"><label for="Rule0Cond0Kind">Condition</label><select id="Rule0Cond0Kind" name="Rule0Cond0Kind" data-rs-kind><option value="">No condition</option> <option value="ClaimSource">Claim Source</option>  <option value="Repairer">Repairer</option>  <option value="ImagesFrom">Images from</option>  <option value="Mentions">Instruction mentions</option>  <option value="SenderNot">Sender is not</option>  <option value="Outcome">Outcome</option>  <option value="BodyshopMentions">Bodyshop mentions</option>  <option value="CaseType" selected="selected">Case type</option>  <option value="RefPrefix">Reference prefix</option>  <option value="PreviousJob">Previous job</option> </select></div>
+                                    <div class="field" data-rs-value="ClaimSource" hidden="hidden"><label for="Rule0Cond0ClaimSource">Claim Source</label><select id="Rule0Cond0ClaimSource" name="Rule0Cond0ClaimSource" multiple size="3"> <option value="00000000-0000-4000-8000-00000000f001">Car 2 Go</option>  <option value="00000000-0000-4000-8000-00000000f003">CarClaims</option>  <option value="00000000-0000-4000-8000-00000000f006">Easdons</option>  <option value="00000000-0000-4000-8000-00000000f004">Expert Claims</option>  <option value="00000000-0000-4000-8000-00000000f007">Guardian Accident Claims</option>  <option value="00000000-0000-4000-8000-00000000f008">Hackney Solutions</option>  <option value="00000000-0000-4000-8000-00000000f00b">iRevolution Repair Network</option>  <option value="00000000-0000-4000-8000-00000000f009">James Claims</option>  <option value="551691a7-72a8-41c9-93b9-aba02269c503">Northline Claims</option>  <option value="00000000-0000-4000-8000-00000000f005">Rapid Rental Solutions</option>  <option value="00000000-0000-4000-8000-00000000f002">SMC</option>  <option value="00000000-0000-4000-8000-00000000f00a">Swinton</option> </select></div>
+                                    <div class="field" data-rs-value="Repairer" hidden="hidden"><label for="Rule0Cond0Repairer">Repairer</label><select id="Rule0Cond0Repairer" name="Rule0Cond0Repairer" multiple size="3"> <option value="adb5500d-8b45-4dc3-b3c1-d007d2f60c94">Harbour Garage Group</option>  <option value="a868eed1-302d-46b3-82d2-4e6a5bdf2377">Redfern Bodyworks</option> </select></div>
+                                    <div class="field" data-rs-value="Outcome" hidden="hidden"><label for="Rule0Cond0Outcome">Outcome</label><select id="Rule0Cond0Outcome" name="Rule0Cond0Outcome" multiple size="4"> <option value="total_loss">Total loss</option>  <option value="repairable">Repairable</option>  <option value="cash_in_lieu">Cash in lieu</option>  <option value="contract_repair">Contract repair</option> </select></div>
+                                    <div class="field" data-rs-value="CaseType"><label for="Rule0Cond0CaseType">Case type</label><select id="Rule0Cond0CaseType" name="Rule0Cond0CaseType" multiple size="3"> <option value="Inspection">Inspection</option>  <option value="Audit" selected="selected">Audit</option>  <option value="InspectionAndAudit">Inspection and audit</option> </select></div>
+                                    <div class="field" data-rs-value="Text" hidden="hidden"><label for="Rule0Cond0Text">Condition</label><input id="Rule0Cond0Text" name="Rule0Cond0Text" autocomplete="off" /><p class="hint">Separate several with commas.</p></div>
+                                </div>
+                                <div class="form-grid form-grid--2" data-rs-condition>
+                                    <div class="field"><label for="Rule0Cond1Kind">Condition</label><select id="Rule0Cond1Kind" name="Rule0Cond1Kind" data-rs-kind><option value="">No condition</option> <option value="ClaimSource">Claim Source</option>  <option value="Repairer">Repairer</option>  <option value="ImagesFrom">Images from</option>  <option value="Mentions">Instruction mentions</option>  <option value="SenderNot">Sender is not</option>  <option value="Outcome">Outcome</option>  <option value="BodyshopMentions">Bodyshop mentions</option>  <option value="CaseType">Case type</option>  <option value="RefPrefix">Reference prefix</option>  <option value="PreviousJob">Previous job</option> </select></div>
+                                    <div class="field" data-rs-value="ClaimSource"><label for="Rule0Cond1ClaimSource">Claim Source</label><select id="Rule0Cond1ClaimSource" name="Rule0Cond1ClaimSource" multiple size="3"> <option value="00000000-0000-4000-8000-00000000f001">Car 2 Go</option>  <option value="00000000-0000-4000-8000-00000000f003">CarClaims</option>  <option value="00000000-0000-4000-8000-00000000f006">Easdons</option>  <option value="00000000-0000-4000-8000-00000000f004">Expert Claims</option>  <option value="00000000-0000-4000-8000-00000000f007">Guardian Accident Claims</option>  <option value="00000000-0000-4000-8000-00000000f008">Hackney Solutions</option>  <option value="00000000-0000-4000-8000-00000000f00b">iRevolution Repair Network</option>  <option value="00000000-0000-4000-8000-00000000f009">James Claims</option>  <option value="551691a7-72a8-41c9-93b9-aba02269c503">Northline Claims</option>  <option value="00000000-0000-4000-8000-00000000f005">Rapid Rental Solutions</option>  <option value="00000000-0000-4000-8000-00000000f002">SMC</option>  <option value="00000000-0000-4000-8000-00000000f00a">Swinton</option> </select></div>
+                                    <div class="field" data-rs-value="Repairer"><label for="Rule0Cond1Repairer">Repairer</label><select id="Rule0Cond1Repairer" name="Rule0Cond1Repairer" multiple size="3"> <option value="adb5500d-8b45-4dc3-b3c1-d007d2f60c94">Harbour Garage Group</option>  <option value="a868eed1-302d-46b3-82d2-4e6a5bdf2377">Redfern Bodyworks</option> </select></div>
+                                    <div class="field" data-rs-value="Outcome"><label for="Rule0Cond1Outcome">Outcome</label><select id="Rule0Cond1Outcome" name="Rule0Cond1Outcome" multiple size="4"> <option value="total_loss">Total loss</option>  <option value="repairable">Repairable</option>  <option value="cash_in_lieu">Cash in lieu</option>  <option value="contract_repair">Contract repair</option> </select></div>
+                                    <div class="field" data-rs-value="CaseType"><label for="Rule0Cond1CaseType">Case type</label><select id="Rule0Cond1CaseType" name="Rule0Cond1CaseType" multiple size="3"> <option value="Inspection">Inspection</option>  <option value="Audit">Audit</option>  <option value="InspectionAndAudit">Inspection and audit</option> </select></div>
+                                    <div class="field" data-rs-value="Text"><label for="Rule0Cond1Text">Condition</label><input id="Rule0Cond1Text" name="Rule0Cond1Text" autocomplete="off" /><p class="hint">Separate several with commas.</p></div>
+                                </div>
+                                <div class="form-grid form-grid--2" data-rs-condition>
+                                    <div class="field"><label for="Rule0Cond2Kind">Condition</label><select id="Rule0Cond2Kind" name="Rule0Cond2Kind" data-rs-kind><option value="">No condition</option> <option value="ClaimSource">Claim Source</option>  <option value="Repairer">Repairer</option>  <option value="ImagesFrom">Images from</option>  <option value="Mentions">Instruction mentions</option>  <option value="SenderNot">Sender is not</option>  <option value="Outcome">Outcome</option>  <option value="BodyshopMentions">Bodyshop mentions</option>  <option value="CaseType">Case type</option>  <option value="RefPrefix">Reference prefix</option>  <option value="PreviousJob">Previous job</option> </select></div>
+                                    <div class="field" data-rs-value="ClaimSource"><label for="Rule0Cond2ClaimSource">Claim Source</label><select id="Rule0Cond2ClaimSource" name="Rule0Cond2ClaimSource" multiple size="3"> <option value="00000000-0000-4000-8000-00000000f001">Car 2 Go</option>  <option value="00000000-0000-4000-8000-00000000f003">CarClaims</option>  <option value="00000000-0000-4000-8000-00000000f006">Easdons</option>  <option value="00000000-0000-4000-8000-00000000f004">Expert Claims</option>  <option value="00000000-0000-4000-8000-00000000f007">Guardian Accident Claims</option>  <option value="00000000-0000-4000-8000-00000000f008">Hackney Solutions</option>  <option value="00000000-0000-4000-8000-00000000f00b">iRevolution Repair Network</option>  <option value="00000000-0000-4000-8000-00000000f009">James Claims</option>  <option value="551691a7-72a8-41c9-93b9-aba02269c503">Northline Claims</option>  <option value="00000000-0000-4000-8000-00000000f005">Rapid Rental Solutions</option>  <option value="00000000-0000-4000-8000-00000000f002">SMC</option>  <option value="00000000-0000-4000-8000-00000000f00a">Swinton</option> </select></div>
+                                    <div class="field" data-rs-value="Repairer"><label for="Rule0Cond2Repairer">Repairer</label><select id="Rule0Cond2Repairer" name="Rule0Cond2Repairer" multiple size="3"> <option value="adb5500d-8b45-4dc3-b3c1-d007d2f60c94">Harbour Garage Group</option>  <option value="a868eed1-302d-46b3-82d2-4e6a5bdf2377">Redfern Bodyworks</option> </select></div>
+                                    <div class="field" data-rs-value="Outcome"><label for="Rule0Cond2Outcome">Outcome</label><select id="Rule0Cond2Outcome" name="Rule0Cond2Outcome" multiple size="4"> <option value="total_loss">Total loss</option>  <option value="repairable">Repairable</option>  <option value="cash_in_lieu">Cash in lieu</option>  <option value="contract_repair">Contract repair</option> </select></div>
+                                    <div class="field" data-rs-value="CaseType"><label for="Rule0Cond2CaseType">Case type</label><select id="Rule0Cond2CaseType" name="Rule0Cond2CaseType" multiple size="3"> <option value="Inspection">Inspection</option>  <option value="Audit">Audit</option>  <option value="InspectionAndAudit">Inspection and audit</option> </select></div>
+                                    <div class="field" data-rs-value="Text"><label for="Rule0Cond2Text">Condition</label><input id="Rule0Cond2Text" name="Rule0Cond2Text" autocomplete="off" /><p class="hint">Separate several with commas.</p></div>
+                                </div>
+                            <div class="form-grid form-grid--2">
+                                <div class="field"><label for="Rule0CcAdd">Cc add</label><input id="Rule0CcAdd" name="Rule0CcAdd" value="engineers@collisionengineers.co.uk" autocomplete="off" /></div>
+                                <div class="field"><label for="Rule0CcRemove">Cc remove</label><input id="Rule0CcRemove" name="Rule0CcRemove" value="" autocomplete="off" /></div>
+                                <div class="field"><label for="Rule0Remind">Remind</label><input id="Rule0Remind" name="Rule0Remind" value="Confirm repair authority with the claim source" autocomplete="off" /></div>
+                                <div class="field"><label for="Rule0Hold">Hold</label><input id="Rule0Hold" name="Rule0Hold" autocomplete="off" /></div>
+                                <div class="field field-wide"><label for="Rule0Stop">Stop</label><input id="Rule0Stop" name="Rule0Stop" autocomplete="off" /><p class="hint">Send is refused; staff may override with a reason.</p></div>
+                                <div class="field"><label class="choice"><input type="checkbox" name="Rule0RateCard" value="true" /> <span>Rate card</span></label></div>
+                                <fieldset class="field field-wide"><legend>Attach</legend><div class="form-grid form-grid--2">                    <div class="field"><label for="Rule0AttachFeeNoteSeparate">Fee note is a separate PDF</label><select id="Rule0AttachFeeNoteSeparate" name="Rule0AttachFeeNoteSeparate"><option value="">As the Principal</option><option value="true">Attach</option><option value="false">Do not attach</option></select></div>
+                    <div class="field"><label for="Rule0AttachEstimate">Estimate</label><select id="Rule0AttachEstimate" name="Rule0AttachEstimate"><option value="">As the Principal</option><option value="true">Attach</option><option value="false">Do not attach</option></select></div>
+                    <div class="field"><label for="Rule0AttachAudatex">Audatex</label><select id="Rule0AttachAudatex" name="Rule0AttachAudatex"><option value="">As the Principal</option><option value="true">Attach</option><option value="false">Do not attach</option></select></div>
+                    <div class="field"><label for="Rule0AttachVehicleImagesDocument">Vehicle images document required</label><select id="Rule0AttachVehicleImagesDocument" name="Rule0AttachVehicleImagesDocument"><option value="">As the Principal</option><option value="true">Attach</option><option value="false">Do not attach</option></select></div>
+                    <div class="field"><label for="Rule0AttachFigureBreakdown">Figure breakdown required</label><select id="Rule0AttachFigureBreakdown" name="Rule0AttachFigureBreakdown"><option value="">As the Principal</option><option value="true">Attach</option><option value="false">Do not attach</option></select></div>
+</div></fieldset>
+                            </div>
+                            <div class="button-row"><button type="button" class="btn btn--small" data-remove-rs-rule>Remove rule</button></div>
+                        </fieldset>
+                        <fieldset class="contact-section stack" data-rs-rule>
+                            <legend>Rule</legend>
+                            <input type="hidden" name="RuleIndex" value="1" />
+                            <div class="field"><label for="Rule1Match">Match</label><select id="Rule1Match" name="Rule1Match"><option value="All">All conditions</option><option value="Any" selected="selected">Any condition</option></select></div>
+                                <div class="form-grid form-grid--2" data-rs-condition>
+                                    <div class="field"><label for="Rule1Cond0Kind">Condition</label><select id="Rule1Cond0Kind" name="Rule1Cond0Kind" data-rs-kind><option value="">No condition</option> <option value="ClaimSource">Claim Source</option>  <option value="Repairer">Repairer</option>  <option value="ImagesFrom">Images from</option>  <option value="Mentions" selected="selected">Instruction mentions</option>  <option value="SenderNot">Sender is not</option>  <option value="Outcome">Outcome</option>  <option value="BodyshopMentions">Bodyshop mentions</option>  <option value="CaseType">Case type</option>  <option value="RefPrefix">Reference prefix</option>  <option value="PreviousJob">Previous job</option> </select></div>
+                                    <div class="field" data-rs-value="ClaimSource" hidden="hidden"><label for="Rule1Cond0ClaimSource">Claim Source</label><select id="Rule1Cond0ClaimSource" name="Rule1Cond0ClaimSource" multiple size="3"> <option value="00000000-0000-4000-8000-00000000f001">Car 2 Go</option>  <option value="00000000-0000-4000-8000-00000000f003">CarClaims</option>  <option value="00000000-0000-4000-8000-00000000f006">Easdons</option>  <option value="00000000-0000-4000-8000-00000000f004">Expert Claims</option>  <option value="00000000-0000-4000-8000-00000000f007">Guardian Accident Claims</option>  <option value="00000000-0000-4000-8000-00000000f008">Hackney Solutions</option>  <option value="00000000-0000-4000-8000-00000000f00b">iRevolution Repair Network</option>  <option value="00000000-0000-4000-8000-00000000f009">James Claims</option>  <option value="551691a7-72a8-41c9-93b9-aba02269c503">Northline Claims</option>  <option value="00000000-0000-4000-8000-00000000f005">Rapid Rental Solutions</option>  <option value="00000000-0000-4000-8000-00000000f002">SMC</option>  <option value="00000000-0000-4000-8000-00000000f00a">Swinton</option> </select></div>
+                                    <div class="field" data-rs-value="Repairer" hidden="hidden"><label for="Rule1Cond0Repairer">Repairer</label><select id="Rule1Cond0Repairer" name="Rule1Cond0Repairer" multiple size="3"> <option value="adb5500d-8b45-4dc3-b3c1-d007d2f60c94">Harbour Garage Group</option>  <option value="a868eed1-302d-46b3-82d2-4e6a5bdf2377">Redfern Bodyworks</option> </select></div>
+                                    <div class="field" data-rs-value="Outcome" hidden="hidden"><label for="Rule1Cond0Outcome">Outcome</label><select id="Rule1Cond0Outcome" name="Rule1Cond0Outcome" multiple size="4"> <option value="total_loss">Total loss</option>  <option value="repairable">Repairable</option>  <option value="cash_in_lieu">Cash in lieu</option>  <option value="contract_repair">Contract repair</option> </select></div>
+                                    <div class="field" data-rs-value="CaseType" hidden="hidden"><label for="Rule1Cond0CaseType">Case type</label><select id="Rule1Cond0CaseType" name="Rule1Cond0CaseType" multiple size="3"> <option value="Inspection">Inspection</option>  <option value="Audit">Audit</option>  <option value="InspectionAndAudit">Inspection and audit</option> </select></div>
+                                    <div class="field" data-rs-value="Text"><label for="Rule1Cond0Text">Condition</label><input id="Rule1Cond0Text" name="Rule1Cond0Text" value="total loss, write-off" autocomplete="off" /><p class="hint">Separate several with commas.</p></div>
+                                </div>
+                                <div class="form-grid form-grid--2" data-rs-condition>
+                                    <div class="field"><label for="Rule1Cond1Kind">Condition</label><select id="Rule1Cond1Kind" name="Rule1Cond1Kind" data-rs-kind><option value="">No condition</option> <option value="ClaimSource">Claim Source</option>  <option value="Repairer">Repairer</option>  <option value="ImagesFrom">Images from</option>  <option value="Mentions">Instruction mentions</option>  <option value="SenderNot">Sender is not</option>  <option value="Outcome">Outcome</option>  <option value="BodyshopMentions">Bodyshop mentions</option>  <option value="CaseType">Case type</option>  <option value="RefPrefix">Reference prefix</option>  <option value="PreviousJob">Previous job</option> </select></div>
+                                    <div class="field" data-rs-value="ClaimSource"><label for="Rule1Cond1ClaimSource">Claim Source</label><select id="Rule1Cond1ClaimSource" name="Rule1Cond1ClaimSource" multiple size="3"> <option value="00000000-0000-4000-8000-00000000f001">Car 2 Go</option>  <option value="00000000-0000-4000-8000-00000000f003">CarClaims</option>  <option value="00000000-0000-4000-8000-00000000f006">Easdons</option>  <option value="00000000-0000-4000-8000-00000000f004">Expert Claims</option>  <option value="00000000-0000-4000-8000-00000000f007">Guardian Accident Claims</option>  <option value="00000000-0000-4000-8000-00000000f008">Hackney Solutions</option>  <option value="00000000-0000-4000-8000-00000000f00b">iRevolution Repair Network</option>  <option value="00000000-0000-4000-8000-00000000f009">James Claims</option>  <option value="551691a7-72a8-41c9-93b9-aba02269c503">Northline Claims</option>  <option value="00000000-0000-4000-8000-00000000f005">Rapid Rental Solutions</option>  <option value="00000000-0000-4000-8000-00000000f002">SMC</option>  <option value="00000000-0000-4000-8000-00000000f00a">Swinton</option> </select></div>
+                                    <div class="field" data-rs-value="Repairer"><label for="Rule1Cond1Repairer">Repairer</label><select id="Rule1Cond1Repairer" name="Rule1Cond1Repairer" multiple size="3"> <option value="adb5500d-8b45-4dc3-b3c1-d007d2f60c94">Harbour Garage Group</option>  <option value="a868eed1-302d-46b3-82d2-4e6a5bdf2377">Redfern Bodyworks</option> </select></div>
+                                    <div class="field" data-rs-value="Outcome"><label for="Rule1Cond1Outcome">Outcome</label><select id="Rule1Cond1Outcome" name="Rule1Cond1Outcome" multiple size="4"> <option value="total_loss">Total loss</option>  <option value="repairable">Repairable</option>  <option value="cash_in_lieu">Cash in lieu</option>  <option value="contract_repair">Contract repair</option> </select></div>
+                                    <div class="field" data-rs-value="CaseType"><label for="Rule1Cond1CaseType">Case type</label><select id="Rule1Cond1CaseType" name="Rule1Cond1CaseType" multiple size="3"> <option value="Inspection">Inspection</option>  <option value="Audit">Audit</option>  <option value="InspectionAndAudit">Inspection and audit</option> </select></div>
+                                    <div class="field" data-rs-value="Text"><label for="Rule1Cond1Text">Condition</label><input id="Rule1Cond1Text" name="Rule1Cond1Text" autocomplete="off" /><p class="hint">Separate several with commas.</p></div>
+                                </div>
+                                <div class="form-grid form-grid--2" data-rs-condition>
+                                    <div class="field"><label for="Rule1Cond2Kind">Condition</label><select id="Rule1Cond2Kind" name="Rule1Cond2Kind" data-rs-kind><option value="">No condition</option> <option value="ClaimSource">Claim Source</option>  <option value="Repairer">Repairer</option>  <option value="ImagesFrom">Images from</option>  <option value="Mentions">Instruction mentions</option>  <option value="SenderNot">Sender is not</option>  <option value="Outcome">Outcome</option>  <option value="BodyshopMentions">Bodyshop mentions</option>  <option value="CaseType">Case type</option>  <option value="RefPrefix">Reference prefix</option>  <option value="PreviousJob">Previous job</option> </select></div>
+                                    <div class="field" data-rs-value="ClaimSource"><label for="Rule1Cond2ClaimSource">Claim Source</label><select id="Rule1Cond2ClaimSource" name="Rule1Cond2ClaimSource" multiple size="3"> <option value="00000000-0000-4000-8000-00000000f001">Car 2 Go</option>  <option value="00000000-0000-4000-8000-00000000f003">CarClaims</option>  <option value="00000000-0000-4000-8000-00000000f006">Easdons</option>  <option value="00000000-0000-4000-8000-00000000f004">Expert Claims</option>  <option value="00000000-0000-4000-8000-00000000f007">Guardian Accident Claims</option>  <option value="00000000-0000-4000-8000-00000000f008">Hackney Solutions</option>  <option value="00000000-0000-4000-8000-00000000f00b">iRevolution Repair Network</option>  <option value="00000000-0000-4000-8000-00000000f009">James Claims</option>  <option value="551691a7-72a8-41c9-93b9-aba02269c503">Northline Claims</option>  <option value="00000000-0000-4000-8000-00000000f005">Rapid Rental Solutions</option>  <option value="00000000-0000-4000-8000-00000000f002">SMC</option>  <option value="00000000-0000-4000-8000-00000000f00a">Swinton</option> </select></div>
+                                    <div class="field" data-rs-value="Repairer"><label for="Rule1Cond2Repairer">Repairer</label><select id="Rule1Cond2Repairer" name="Rule1Cond2Repairer" multiple size="3"> <option value="adb5500d-8b45-4dc3-b3c1-d007d2f60c94">Harbour Garage Group</option>  <option value="a868eed1-302d-46b3-82d2-4e6a5bdf2377">Redfern Bodyworks</option> </select></div>
+                                    <div class="field" data-rs-value="Outcome"><label for="Rule1Cond2Outcome">Outcome</label><select id="Rule1Cond2Outcome" name="Rule1Cond2Outcome" multiple size="4"> <option value="total_loss">Total loss</option>  <option value="repairable">Repairable</option>  <option value="cash_in_lieu">Cash in lieu</option>  <option value="contract_repair">Contract repair</option> </select></div>
+                                    <div class="field" data-rs-value="CaseType"><label for="Rule1Cond2CaseType">Case type</label><select id="Rule1Cond2CaseType" name="Rule1Cond2CaseType" multiple size="3"> <option value="Inspection">Inspection</option>  <option value="Audit">Audit</option>  <option value="InspectionAndAudit">Inspection and audit</option> </select></div>
+                                    <div class="field" data-rs-value="Text"><label for="Rule1Cond2Text">Condition</label><input id="Rule1Cond2Text" name="Rule1Cond2Text" autocomplete="off" /><p class="hint">Separate several with commas.</p></div>
+                                </div>
+                            <div class="form-grid form-grid--2">
+                                <div class="field"><label for="Rule1CcAdd">Cc add</label><input id="Rule1CcAdd" name="Rule1CcAdd" value="" autocomplete="off" /></div>
+                                <div class="field"><label for="Rule1CcRemove">Cc remove</label><input id="Rule1CcRemove" name="Rule1CcRemove" value="" autocomplete="off" /></div>
+                                <div class="field"><label for="Rule1Remind">Remind</label><input id="Rule1Remind" name="Rule1Remind" autocomplete="off" /></div>
+                                <div class="field"><label for="Rule1Hold">Hold</label><input id="Rule1Hold" name="Rule1Hold" value="Check the salvage category before sending" autocomplete="off" /></div>
+                                <div class="field field-wide"><label for="Rule1Stop">Stop</label><input id="Rule1Stop" name="Rule1Stop" autocomplete="off" /><p class="hint">Send is refused; staff may override with a reason.</p></div>
+                                <div class="field"><label class="choice"><input type="checkbox" name="Rule1RateCard" value="true" /> <span>Rate card</span></label></div>
+                                <fieldset class="field field-wide"><legend>Attach</legend><div class="form-grid form-grid--2">                    <div class="field"><label for="Rule1AttachFeeNoteSeparate">Fee note is a separate PDF</label><select id="Rule1AttachFeeNoteSeparate" name="Rule1AttachFeeNoteSeparate"><option value="">As the Principal</option><option value="true">Attach</option><option value="false">Do not attach</option></select></div>
+                    <div class="field"><label for="Rule1AttachEstimate">Estimate</label><select id="Rule1AttachEstimate" name="Rule1AttachEstimate"><option value="">As the Principal</option><option value="true">Attach</option><option value="false">Do not attach</option></select></div>
+                    <div class="field"><label for="Rule1AttachAudatex">Audatex</label><select id="Rule1AttachAudatex" name="Rule1AttachAudatex"><option value="">As the Principal</option><option value="true">Attach</option><option value="false">Do not attach</option></select></div>
+                    <div class="field"><label for="Rule1AttachVehicleImagesDocument">Vehicle images document required</label><select id="Rule1AttachVehicleImagesDocument" name="Rule1AttachVehicleImagesDocument"><option value="">As the Principal</option><option value="true">Attach</option><option value="false">Do not attach</option></select></div>
+                    <div class="field"><label for="Rule1AttachFigureBreakdown">Figure breakdown required</label><select id="Rule1AttachFigureBreakdown" name="Rule1AttachFigureBreakdown"><option value="">As the Principal</option><option value="true">Attach</option><option value="false">Do not attach</option></select></div>
+</div></fieldset>
+                            </div>
+                            <div class="button-row"><button type="button" class="btn btn--small" data-remove-rs-rule>Remove rule</button></div>
+                        </fieldset>
+                        <fieldset class="contact-section stack" data-rs-rule>
+                            <legend>Rule</legend>
+                            <input type="hidden" name="RuleIndex" value="2" />
+                            <div class="field"><label for="Rule2Match">Match</label><select id="Rule2Match" name="Rule2Match"><option value="All" selected="selected">All conditions</option><option value="Any">Any condition</option></select></div>
+                                <div class="form-grid form-grid--2" data-rs-condition>
+                                    <div class="field"><label for="Rule2Cond0Kind">Condition</label><select id="Rule2Cond0Kind" name="Rule2Cond0Kind" data-rs-kind><option value="">No condition</option> <option value="ClaimSource">Claim Source</option>  <option value="Repairer">Repairer</option>  <option value="ImagesFrom">Images from</option>  <option value="Mentions">Instruction mentions</option>  <option value="SenderNot">Sender is not</option>  <option value="Outcome">Outcome</option>  <option value="BodyshopMentions">Bodyshop mentions</option>  <option value="CaseType">Case type</option>  <option value="RefPrefix">Reference prefix</option>  <option value="PreviousJob">Previous job</option> </select></div>
+                                    <div class="field" data-rs-value="ClaimSource"><label for="Rule2Cond0ClaimSource">Claim Source</label><select id="Rule2Cond0ClaimSource" name="Rule2Cond0ClaimSource" multiple size="3"> <option value="00000000-0000-4000-8000-00000000f001">Car 2 Go</option>  <option value="00000000-0000-4000-8000-00000000f003">CarClaims</option>  <option value="00000000-0000-4000-8000-00000000f006">Easdons</option>  <option value="00000000-0000-4000-8000-00000000f004">Expert Claims</option>  <option value="00000000-0000-4000-8000-00000000f007">Guardian Accident Claims</option>  <option value="00000000-0000-4000-8000-00000000f008">Hackney Solutions</option>  <option value="00000000-0000-4000-8000-00000000f00b">iRevolution Repair Network</option>  <option value="00000000-0000-4000-8000-00000000f009">James Claims</option>  <option value="551691a7-72a8-41c9-93b9-aba02269c503">Northline Claims</option>  <option value="00000000-0000-4000-8000-00000000f005">Rapid Rental Solutions</option>  <option value="00000000-0000-4000-8000-00000000f002">SMC</option>  <option value="00000000-0000-4000-8000-00000000f00a">Swinton</option> </select></div>
+                                    <div class="field" data-rs-value="Repairer"><label for="Rule2Cond0Repairer">Repairer</label><select id="Rule2Cond0Repairer" name="Rule2Cond0Repairer" multiple size="3"> <option value="adb5500d-8b45-4dc3-b3c1-d007d2f60c94">Harbour Garage Group</option>  <option value="a868eed1-302d-46b3-82d2-4e6a5bdf2377">Redfern Bodyworks</option> </select></div>
+                                    <div class="field" data-rs-value="Outcome"><label for="Rule2Cond0Outcome">Outcome</label><select id="Rule2Cond0Outcome" name="Rule2Cond0Outcome" multiple size="4"> <option value="total_loss">Total loss</option>  <option value="repairable">Repairable</option>  <option value="cash_in_lieu">Cash in lieu</option>  <option value="contract_repair">Contract repair</option> </select></div>
+                                    <div class="field" data-rs-value="CaseType"><label for="Rule2Cond0CaseType">Case type</label><select id="Rule2Cond0CaseType" name="Rule2Cond0CaseType" multiple size="3"> <option value="Inspection">Inspection</option>  <option value="Audit">Audit</option>  <option value="InspectionAndAudit">Inspection and audit</option> </select></div>
+                                    <div class="field" data-rs-value="Text"><label for="Rule2Cond0Text">Condition</label><input id="Rule2Cond0Text" name="Rule2Cond0Text" autocomplete="off" /><p class="hint">Separate several with commas.</p></div>
+                                </div>
+                                <div class="form-grid form-grid--2" data-rs-condition>
+                                    <div class="field"><label for="Rule2Cond1Kind">Condition</label><select id="Rule2Cond1Kind" name="Rule2Cond1Kind" data-rs-kind><option value="">No condition</option> <option value="ClaimSource">Claim Source</option>  <option value="Repairer">Repairer</option>  <option value="ImagesFrom">Images from</option>  <option value="Mentions">Instruction mentions</option>  <option value="SenderNot">Sender is not</option>  <option value="Outcome">Outcome</option>  <option value="BodyshopMentions">Bodyshop mentions</option>  <option value="CaseType">Case type</option>  <option value="RefPrefix">Reference prefix</option>  <option value="PreviousJob">Previous job</option> </select></div>
+                                    <div class="field" data-rs-value="ClaimSource"><label for="Rule2Cond1ClaimSource">Claim Source</label><select id="Rule2Cond1ClaimSource" name="Rule2Cond1ClaimSource" multiple size="3"> <option value="00000000-0000-4000-8000-00000000f001">Car 2 Go</option>  <option value="00000000-0000-4000-8000-00000000f003">CarClaims</option>  <option value="00000000-0000-4000-8000-00000000f006">Easdons</option>  <option value="00000000-0000-4000-8000-00000000f004">Expert Claims</option>  <option value="00000000-0000-4000-8000-00000000f007">Guardian Accident Claims</option>  <option value="00000000-0000-4000-8000-00000000f008">Hackney Solutions</option>  <option value="00000000-0000-4000-8000-00000000f00b">iRevolution Repair Network</option>  <option value="00000000-0000-4000-8000-00000000f009">James Claims</option>  <option value="551691a7-72a8-41c9-93b9-aba02269c503">Northline Claims</option>  <option value="00000000-0000-4000-8000-00000000f005">Rapid Rental Solutions</option>  <option value="00000000-0000-4000-8000-00000000f002">SMC</option>  <option value="00000000-0000-4000-8000-00000000f00a">Swinton</option> </select></div>
+                                    <div class="field" data-rs-value="Repairer"><label for="Rule2Cond1Repairer">Repairer</label><select id="Rule2Cond1Repairer" name="Rule2Cond1Repairer" multiple size="3"> <option value="adb5500d-8b45-4dc3-b3c1-d007d2f60c94">Harbour Garage Group</option>  <option value="a868eed1-302d-46b3-82d2-4e6a5bdf2377">Redfern Bodyworks</option> </select></div>
+                                    <div class="field" data-rs-value="Outcome"><label for="Rule2Cond1Outcome">Outcome</label><select id="Rule2Cond1Outcome" name="Rule2Cond1Outcome" multiple size="4"> <option value="total_loss">Total loss</option>  <option value="repairable">Repairable</option>  <option value="cash_in_lieu">Cash in lieu</option>  <option value="contract_repair">Contract repair</option> </select></div>
+                                    <div class="field" data-rs-value="CaseType"><label for="Rule2Cond1CaseType">Case type</label><select id="Rule2Cond1CaseType" name="Rule2Cond1CaseType" multiple size="3"> <option value="Inspection">Inspection</option>  <option value="Audit">Audit</option>  <option value="InspectionAndAudit">Inspection and audit</option> </select></div>
+                                    <div class="field" data-rs-value="Text"><label for="Rule2Cond1Text">Condition</label><input id="Rule2Cond1Text" name="Rule2Cond1Text" autocomplete="off" /><p class="hint">Separate several with commas.</p></div>
+                                </div>
+                                <div class="form-grid form-grid--2" data-rs-condition>
+                                    <div class="field"><label for="Rule2Cond2Kind">Condition</label><select id="Rule2Cond2Kind" name="Rule2Cond2Kind" data-rs-kind><option value="">No condition</option> <option value="ClaimSource">Claim Source</option>  <option value="Repairer">Repairer</option>  <option value="ImagesFrom">Images from</option>  <option value="Mentions">Instruction mentions</option>  <option value="SenderNot">Sender is not</option>  <option value="Outcome">Outcome</option>  <option value="BodyshopMentions">Bodyshop mentions</option>  <option value="CaseType">Case type</option>  <option value="RefPrefix">Reference prefix</option>  <option value="PreviousJob">Previous job</option> </select></div>
+                                    <div class="field" data-rs-value="ClaimSource"><label for="Rule2Cond2ClaimSource">Claim Source</label><select id="Rule2Cond2ClaimSource" name="Rule2Cond2ClaimSource" multiple size="3"> <option value="00000000-0000-4000-8000-00000000f001">Car 2 Go</option>  <option value="00000000-0000-4000-8000-00000000f003">CarClaims</option>  <option value="00000000-0000-4000-8000-00000000f006">Easdons</option>  <option value="00000000-0000-4000-8000-00000000f004">Expert Claims</option>  <option value="00000000-0000-4000-8000-00000000f007">Guardian Accident Claims</option>  <option value="00000000-0000-4000-8000-00000000f008">Hackney Solutions</option>  <option value="00000000-0000-4000-8000-00000000f00b">iRevolution Repair Network</option>  <option value="00000000-0000-4000-8000-00000000f009">James Claims</option>  <option value="551691a7-72a8-41c9-93b9-aba02269c503">Northline Claims</option>  <option value="00000000-0000-4000-8000-00000000f005">Rapid Rental Solutions</option>  <option value="00000000-0000-4000-8000-00000000f002">SMC</option>  <option value="00000000-0000-4000-8000-00000000f00a">Swinton</option> </select></div>
+                                    <div class="field" data-rs-value="Repairer"><label for="Rule2Cond2Repairer">Repairer</label><select id="Rule2Cond2Repairer" name="Rule2Cond2Repairer" multiple size="3"> <option value="adb5500d-8b45-4dc3-b3c1-d007d2f60c94">Harbour Garage Group</option>  <option value="a868eed1-302d-46b3-82d2-4e6a5bdf2377">Redfern Bodyworks</option> </select></div>
+                                    <div class="field" data-rs-value="Outcome"><label for="Rule2Cond2Outcome">Outcome</label><select id="Rule2Cond2Outcome" name="Rule2Cond2Outcome" multiple size="4"> <option value="total_loss">Total loss</option>  <option value="repairable">Repairable</option>  <option value="cash_in_lieu">Cash in lieu</option>  <option value="contract_repair">Contract repair</option> </select></div>
+                                    <div class="field" data-rs-value="CaseType"><label for="Rule2Cond2CaseType">Case type</label><select id="Rule2Cond2CaseType" name="Rule2Cond2CaseType" multiple size="3"> <option value="Inspection">Inspection</option>  <option value="Audit">Audit</option>  <option value="InspectionAndAudit">Inspection and audit</option> </select></div>
+                                    <div class="field" data-rs-value="Text"><label for="Rule2Cond2Text">Condition</label><input id="Rule2Cond2Text" name="Rule2Cond2Text" autocomplete="off" /><p class="hint">Separate several with commas.</p></div>
+                                </div>
+                            <div class="form-grid form-grid--2">
+                                <div class="field"><label for="Rule2CcAdd">Cc add</label><input id="Rule2CcAdd" name="Rule2CcAdd" value="" autocomplete="off" /></div>
+                                <div class="field"><label for="Rule2CcRemove">Cc remove</label><input id="Rule2CcRemove" name="Rule2CcRemove" value="" autocomplete="off" /></div>
+                                <div class="field"><label for="Rule2Remind">Remind</label><input id="Rule2Remind" name="Rule2Remind" autocomplete="off" /></div>
+                                <div class="field"><label for="Rule2Hold">Hold</label><input id="Rule2Hold" name="Rule2Hold" autocomplete="off" /></div>
+                                <div class="field field-wide"><label for="Rule2Stop">Stop</label><input id="Rule2Stop" name="Rule2Stop" autocomplete="off" /><p class="hint">Send is refused; staff may override with a reason.</p></div>
+                                <div class="field"><label class="choice"><input type="checkbox" name="Rule2RateCard" value="true" /> <span>Rate card</span></label></div>
+                                <fieldset class="field field-wide"><legend>Attach</legend><div class="form-grid form-grid--2">                    <div class="field"><label for="Rule2AttachFeeNoteSeparate">Fee note is a separate PDF</label><select id="Rule2AttachFeeNoteSeparate" name="Rule2AttachFeeNoteSeparate"><option value="">As the Principal</option><option value="true">Attach</option><option value="false">Do not attach</option></select></div>
+                    <div class="field"><label for="Rule2AttachEstimate">Estimate</label><select id="Rule2AttachEstimate" name="Rule2AttachEstimate"><option value="">As the Principal</option><option value="true">Attach</option><option value="false">Do not attach</option></select></div>
+                    <div class="field"><label for="Rule2AttachAudatex">Audatex</label><select id="Rule2AttachAudatex" name="Rule2AttachAudatex"><option value="">As the Principal</option><option value="true">Attach</option><option value="false">Do not attach</option></select></div>
+                    <div class="field"><label for="Rule2AttachVehicleImagesDocument">Vehicle images document required</label><select id="Rule2AttachVehicleImagesDocument" name="Rule2AttachVehicleImagesDocument"><option value="">As the Principal</option><option value="true">Attach</option><option value="false">Do not attach</option></select></div>
+                    <div class="field"><label for="Rule2AttachFigureBreakdown">Figure breakdown required</label><select id="Rule2AttachFigureBreakdown" name="Rule2AttachFigureBreakdown"><option value="">As the Principal</option><option value="true">Attach</option><option value="false">Do not attach</option></select></div>
+</div></fieldset>
+                            </div>
+                            <div class="button-row"><button type="button" class="btn btn--small" data-remove-rs-rule>Remove rule</button></div>
+                        </fieldset>
+                    </div>
+                    <div class="button-row"><button type="button" class="btn" data-add-rs-rule>Add rule</button></div>
+                </section>
+                <div class="button-row"><button type="submit" class="btn btn--primary" data-busy-label="Saving&#x2026;">Save report sending</button></div></fieldset><input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABm5kqgL9RYH1RLfNvWwmP0Ej63q1iM41xcoQFCga5NKvWx0CY2ni8T6jQ8xzYkmT7ubN0LBDNC4516-t7H5BbXO49M-SLPeSBND3MKbNlQATreao52TqlONizNbhWLAhk" /></form></section>
+            <div class="button-row"><button class="btn btn--danger" type="button" data-dialog-open="replace-principal">Replace code</button></div>
+            <dialog id="replace-principal" aria-labelledby="replace-principal-title"><form method="post" class="stack" action="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d001?handler=Replace"><h2 id="replace-principal-title">Replace QDOS</h2><p>0 allocated cases remain with their existing references.</p><input type="hidden" name="ExpectedVersion" value="5" /><input type="hidden" name="Tab" value="report-sending" /><input type="hidden" data-val="true" data-val-required="The ReplacementExpectedVersion field is required." id="ReplacementExpectedVersion" name="ReplacementExpectedVersion" value="4" /><input type="hidden" id="ReplacementOperationKey" name="ReplacementOperationKey" value="a0a609bb14334243b5733604b4860f06" /><fieldset class="stack"><div class="field"><label class="req" for="SuccessorCode">New principal code</label><input autocomplete="off" type="text" data-val="true" data-val-length="The field SuccessorCode must be a string with a maximum length of 20." data-val-length-max="20" data-val-required="The SuccessorCode field is required." id="SuccessorCode" maxlength="20" name="SuccessorCode" value="" /><span class="field-validation-valid" data-valmsg-for="SuccessorCode" data-valmsg-replace="true"></span></div><div class="button-row"><button class="btn" type="button" data-dialog-close="replace-principal">Cancel</button><button type="submit" class="btn btn--danger" data-busy-label="Replacing&#x2026;">Replace code</button></div></fieldset><input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABm5kqgL9RYH1RLfNvWwmP0Ej63q1iM41xcoQFCga5NKvWx0CY2ni8T6jQ8xzYkmT7ubN0LBDNC4516-t7H5BbXO49M-SLPeSBND3MKbNlQATreao52TqlONizNbhWLAhk" /></form></dialog>
+</div></div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+    
+<div class="dialog-backdrop" data-dialog="account-dialog" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="account-dialog-title">
+        <div class="dialog-head">
+            <h2 id="account-dialog-title" tabindex="-1">Account</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body">
+            <div class="definition-list">
+                <dl class="definition"><dt>Name</dt><dd>alex</dd></dl>
+                <dl class="definition"><dt>Role</dt><dd>Administrator</dd></dl>
+                <dl class="definition"><dt>Idle lock</dt><dd>2 hours</dd></dl>
+            </div>
+        </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn" data-dialog-close>Close</button>
+            <a class="btn" href="/ReleaseNotes">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-flag" /></svg>
+                <span>Release notes</span>
+            </a>
+            <button type="button" class="btn" data-dialog-open="problem-dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-alert-triangle" /></svg>
+                <span>Report a problem</span>
+            </button>
+            <a class="btn" href="/Account/PasswordChange">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-key" /></svg>
+                <span>Change password</span>
+            </a>
+            <form method="post" action="/Account/SignOut">
+                <button type="submit" class="btn btn--danger" data-busy-label="Signing out&#x2026;">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-log-out" /></svg>
+                    <span>Sign out</span>
+                </button>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABm5kqgL9RYH1RLfNvWwmP0Ej63q1iM41xcoQFCga5NKvWx0CY2ni8T6jQ8xzYkmT7ubN0LBDNC4516-t7H5BbXO49M-SLPeSBND3MKbNlQATreao52TqlONizNbhWLAhk" /></form>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="notifications-dialog" data-dialog-open-on-load="" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="notifications-dialog-title">
+        <div class="dialog-head">
+            <h2 id="notifications-dialog-title" tabindex="-1">Notifications</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body dialog-body--list">
+                <p class="empty-state" role="status">No notifications</p>
+        </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn btn--dark" data-dialog-close>Close</button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="command-dialog" hidden>
+    <section class="dialog command-dialog" role="dialog" aria-modal="true" aria-labelledby="command-dialog-title">
+        <div class="dialog-head">
+            <h2 id="command-dialog-title" tabindex="-1">Search Pegasus</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="command-search">
+            <label class="sr-only" for="command-input">Search</label>
+            <input id="command-input" type="search" autocomplete="off" data-command-palette-input aria-controls="command-results" />
+        </div>
+        <div id="command-results" class="command-results" role="listbox" aria-label="Search results" data-command-results>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                <span><strong>Work Centre</strong></span>
+            </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Inbox">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                    <span><strong>Inbox</strong></span>
+                </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Upload">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                    <span><strong>Upload</strong></span>
+                </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Cases">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list" /></svg>
+                <span><strong>Cases</strong></span>
+            </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Search">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-folder-open" /></svg>
+                <span><strong>Search</strong></span>
+            </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Administration">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-grid" /></svg>
+                    <span><strong>Administration</strong></span>
+                </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Search?query=" data-command-fallback>
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                <span><strong>Search Cases for <span data-command-fallback-term></span></strong></span>
+                <span class="kbd" aria-hidden="true">Enter</span>
+            </button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="problem-dialog" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="problem-dialog-title">
+        <form method="post" data-problem-form data-problem-case-sections="overview,claim,original-report,inspection,vehicle,damage,valuation,estimate,settlement,report,files,notes,queries" action="/ProblemReports?handler=Report">
+            <input type="hidden" name="operationKey" value="0806cb2a56024f928d2a7a276b288eb8" />
+            <div class="dialog-head">
+                <h2 id="problem-dialog-title" tabindex="-1">Report a problem</h2>
+                <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                </button>
+            </div>
+            <div class="dialog-body stack">
+                <input type="hidden" name="returnUrl" value="" data-problem-return />
+                <input type="hidden" name="route" value="" data-problem-route />
+                <input type="hidden" name="method" value="GET" />
+                <input type="hidden" name="traceId" value="00-67dd3b0c7762ba59675396046328dd23-344e3c7fd0db47f9-00" />
+                <input type="hidden" name="caseReference" value="" data-problem-case />
+                <input type="hidden" name="viewport" value="" data-problem-viewport />
+                <input type="hidden" name="editing" value="false" data-problem-editing />
+                <input type="hidden" name="errors" value="" data-problem-errors />
+                <div class="field">
+                    <label for="problem-description">What happened</label>
+                    <textarea id="problem-description" name="description" rows="6" maxlength="4000" required></textarea>
+                </div>
+            </div>
+            <div class="dialog-foot">
+                <button type="button" class="btn" data-dialog-close>Cancel</button>
+                <button type="submit" class="btn btn--primary" data-busy-label="Sending&#x2026;">Send</button>
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABm5kqgL9RYH1RLfNvWwmP0Ej63q1iM41xcoQFCga5NKvWx0CY2ni8T6jQ8xzYkmT7ubN0LBDNC4516-t7H5BbXO49M-SLPeSBND3MKbNlQATreao52TqlONizNbhWLAhk" /></form>
+    </section>
+</div>
+
+    <div class="toast-region" aria-live="polite" data-toast-region></div>
+
+    <script src="/js/site.vubujkpeou.js"></script>
+    
+    <script src="/js/contacts-edit.5xqaomaje1.js"></script>
+
+</body>
+</html>

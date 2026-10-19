@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" data-busy-label="Working&#x2026;" data-busy-still="Still" data-icon-sprite="/images/lucide-sprite.04agn8pzs5.svg">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Staff accounts &amp; roles · Pegasus</title>
+    <link rel="stylesheet" href="/css/site.qz2wg1x280.css" />
+    
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell" data-app-shell>
+        <header class="app-rail">
+            <a class="brand" aria-label="Pegasus home" href="/">
+                <img src="/images/pegasus-mark-refined-128.tctmpgz0uo.png" alt="" aria-hidden="true" />
+                <span class="brand-copy"><strong>PEGASUS</strong><span>Case management</span></span>
+            </a>
+            <nav class="primary-nav" aria-label="Primary">
+                <div class="nav-label">Work</div>
+                <a class="nav-link" href="/">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                    <span>Work Centre</span>
+                </a>
+                    <a class="nav-link" href="/Inbox">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                        <span>Inbox</span>
+                    </a>
+                    <a class="nav-link" href="/Upload">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                        <span>Upload</span>
+                    </a>
+                <a class="nav-link" href="/Cases">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list-checks" /></svg>
+                    <span>Cases</span>
+                </a>
+                <a class="nav-link" href="/Search">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <span>Search</span>
+                </a>
+                    <div class="nav-label">Manage</div>
+                    <a class="nav-link" aria-current="page" href="/Administration">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+                        <span>Administration</span>
+                    </a>
+            </nav>
+            <div class="rail-spacer"></div>
+            <button type="button" class="rail-collapse" data-rail-toggle aria-expanded="true" aria-label="Collapse navigation"
+                    data-label-collapse="Collapse navigation" data-label-expand="Expand navigation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-left" /></svg>
+                <span>Collapse</span>
+            </button>
+            <div class="rail-health">
+                <div class="rail-health-line"><span class="health-dot"></span><span>Current · 11:30</span></div>
+            </div>
+                <div class="rail-user" role="group" aria-label="User">
+                    <span class="avatar" aria-hidden="true">IU</span>
+                    <div><strong>alex</strong><small>Administrator</small></div>
+                    <button type="button" class="icon-button" data-dialog-open="account-dialog" aria-label="Account menu">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                    </button>
+                </div>
+        </header>
+        <div class="app-column">
+            <section class="utility-bar" aria-label="Utility bar">
+                <div class="utility-freshness"><span class="health-dot"></span><span>Current · 11:30</span></div>
+                <form class="utility-search" role="search" method="get" action="/Search">
+                    <label class="sr-only" for="global-search">Search Pegasus</label>
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <input id="global-search" type="search" name="query" data-command-input aria-label="Search Pegasus" placeholder="Search cases, references or people" autocomplete="off" />
+                    <span class="shortcut-hint" aria-hidden="true">Ctrl K</span>
+                </form>
+                <div class="utility-actions">
+                    <a class="btn btn--primary" href="/Cases/Create">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-plus" /></svg>
+                        <span>New case</span>
+                    </a>
+                    <span class="bell-wrap">
+                        <button type="button" class="icon-button" data-dialog-open="notifications-dialog" aria-label="Notifications">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bell" /></svg>
+                        </button>
+                    </span>
+                        <button type="button" class="icon-button utility-account" data-dialog-open="account-dialog" aria-label="Account menu">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                        </button>
+                </div>
+            </section>
+            <main id="main-content" class="app-main" tabindex="-1">
+                <div class="content">
+                    
+<header class="page-header">
+    <div class="page-title">
+            <p class="eyebrow">Administration</p>
+        <h1>Staff accounts &amp; roles</h1>
+    </div>
+</header>
+
+
+<div class="admin-layout">
+    <nav class="admin-nav panel" aria-label="Administration areas">
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-people">
+        <span class="admin-nav__label" id="admin-nav-people">People and access</span>
+        <a aria-current="page" href="/Administration/Accounts">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-user" /></svg>
+            <span>Staff accounts &amp; roles</span>
+        </a>
+        <a href="/Administration/Contacts">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-shield" /></svg>
+            <span>Contacts</span>
+        </a>
+    </div>
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-configuration">
+        <span class="admin-nav__label" id="admin-nav-configuration">Configuration</span>
+        <a href="/Administration/Configuration">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+            <span>Workflow configuration</span>
+        </a>
+        <a href="/Administration/Mailboxes">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-mail" /></svg>
+            <span>Mail settings</span>
+        </a>
+        <a href="/Administration/EmailTemplates">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-mail-open" /></svg>
+            <span>E-mail templates</span>
+        </a>
+        <a href="/Administration/ValuationPresets">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-pound-sterling" /></svg>
+            <span>Valuation presets</span>
+        </a>
+    </div>
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-oversight">
+        <span class="admin-nav__label" id="admin-nav-oversight">Operations and oversight</span>
+        <a href="/Administration/Health">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-heart-pulse" /></svg>
+            <span>Service health</span>
+        </a>
+        <a href="/Administration/Logs">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-scroll-text" /></svg>
+            <span>Logs</span>
+        </a>
+        <a href="/Administration/Reports">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bar-chart" /></svg>
+            <span>Management Reports</span>
+        </a>
+        <a href="/Administration/ReleaseNotes">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-flag" /></svg>
+            <span>Release notes</span>
+        </a>
+        <a href="/Administration/ProblemReports">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-alert-triangle" /></svg>
+            <span>Problem reports</span>
+        </a>
+        <a href="/Administration/AiJobs">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-sparkles" /></svg>
+            <span>AI jobs</span>
+        </a>
+            <a href="/Administration/Automation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bot" /></svg>
+                <span>Automation &amp; AI</span>
+            </a>
+    </div>
+</nav>
+
+    <div class="stack">
+        <section class="panel" aria-labelledby="staff-accounts-title">
+            <div class="panel-head">
+                <div>
+                    <h2 id="staff-accounts-title">Staff accounts</h2>
+                    <p class="panel-title-meta">5 accounts</p>
+                </div>
+                <button type="button" class="btn btn--primary" data-dialog-open="create-account-dialog">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-plus" /></svg><span>Create staff account</span>
+                </button>
+            </div>
+                <div class="table-wrap no-border">
+                    <table>
+                        <caption class="sr-only">Staff accounts</caption>
+                        <thead><tr><th scope="col">Username</th><th scope="col">Role</th><th scope="col">Sign-off</th><th scope="col">Glass's</th><th scope="col">State</th><th scope="col"><span class="sr-only">Settings</span></th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td class="mono">alex</td>
+                                <td>Administrator</td>
+                                <td>No</td>
+                                <td data-account-glass="d47fbbae-ea22-4ca6-b983-01e2ed1fbd13">
+                                    <span class="cluster">
+                                        <span class="muted">Not set</span>
+                                        <a class="link-button" href="/Administration/Accounts?glassStaffId=d47fbbae-ea22-4ca6-b983-01e2ed1fbd13">Manage login</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="status status--navy">Enabled</span>
+
+                                </td>
+                                <td class="right">
+                                    <span class="cluster">
+                                        <a class="btn btn--small" href="/Administration/Accounts?editStaffId=d47fbbae-ea22-4ca6-b983-01e2ed1fbd13&amp;expectedVersion=0">Settings</a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="mono">apatel</td>
+                                <td>Engineer</td>
+                                <td>No</td>
+                                <td data-account-glass="b218bcaa-8a86-4e16-bd06-eb1086b95065">
+                                    <span class="cluster">
+                                        <span class="muted">Not set</span>
+                                        <a class="link-button" href="/Administration/Accounts?glassStaffId=b218bcaa-8a86-4e16-bd06-eb1086b95065">Manage login</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="status status--navy">Enabled</span>
+
+                                </td>
+                                <td class="right">
+                                    <span class="cluster">
+                                        <a class="btn btn--small" href="/Administration/Accounts?editStaffId=b218bcaa-8a86-4e16-bd06-eb1086b95065&amp;expectedVersion=1">Settings</a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="mono">dsmith</td>
+                                <td>Engineer</td>
+                                <td>Signature missing</td>
+                                <td data-account-glass="50275d87-49a6-40d1-94bf-0c65d15dc04a">
+                                    <span class="cluster">
+                                        <span class="mono">dsmith.engineer</span>
+                                        <a class="link-button" href="/Administration/Accounts?glassStaffId=50275d87-49a6-40d1-94bf-0c65d15dc04a">Manage login</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="status status--navy">Enabled</span>
+
+                                </td>
+                                <td class="right">
+                                    <span class="cluster">
+                                        <a class="btn btn--small" href="/Administration/Accounts?editStaffId=50275d87-49a6-40d1-94bf-0c65d15dc04a&amp;expectedVersion=2">Settings</a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="mono">mwalker</td>
+                                <td>User</td>
+                                <td>No</td>
+                                <td data-account-glass="e66dadab-222c-4acb-bf88-2c80c5436508">
+                                    <span class="cluster">
+                                        <span class="muted">Not set</span>
+                                        <a class="link-button" href="/Administration/Accounts?glassStaffId=e66dadab-222c-4acb-bf88-2c80c5436508">Manage login</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="status status--navy">Enabled</span>
+
+ <span class="status status--amber">Password change required</span>
+                                 </td>
+                                <td class="right">
+                                    <span class="cluster">
+                                        <a class="btn btn--small" href="/Administration/Accounts?editStaffId=e66dadab-222c-4acb-bf88-2c80c5436508&amp;expectedVersion=0">Settings</a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="mono">tgreen</td>
+                                <td>User</td>
+                                <td>No</td>
+                                <td data-account-glass="2b96a53a-48f9-40c4-a49f-ab341aead48a">
+                                    <span class="cluster">
+                                        <span class="muted">Not set</span>
+                                        <a class="link-button" href="/Administration/Accounts?glassStaffId=2b96a53a-48f9-40c4-a49f-ab341aead48a">Manage login</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="status status--neutral">Disabled</span>
+
+                                </td>
+                                <td class="right">
+                                    <span class="cluster">
+                                        <a class="btn btn--small" href="/Administration/Accounts?editStaffId=2b96a53a-48f9-40c4-a49f-ab341aead48a&amp;expectedVersion=1">Settings</a>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </section>
+    </div>
+</div>
+
+
+<div class="dialog-backdrop" data-dialog="create-account-dialog" data-dialog-open-on-load="false" hidden="hidden">
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="create-account-title">
+        <div class="dialog-head"><h2 id="create-account-title" tabindex="-1" data-dialog-initial-focus>Create staff account</h2><button type="button" class="dialog-close" data-dialog-close aria-label="Close"><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg></button></div>
+        <form method="post" action="/Administration/Accounts?handler=Create">
+            <input type="hidden" name="operationKey" value="e214197538a1453fa02521a044debfe7" />
+            <div class="dialog-body stack">
+                <div class="field"><label class="req" for="create-username">Username</label><input id="create-username" name="userName" value="" required maxlength="256" autocomplete="off" /></div>
+                <div class="field"><label class="req" for="create-password">Temporary password</label><input id="create-password" name="temporaryPassword" type="password" required minlength="8" maxlength="256" autocomplete="new-password" /></div>
+            </div>
+            <div class="dialog-foot"><button type="button" class="btn" data-dialog-close>Cancel</button><button type="submit" class="btn btn--primary" data-busy-label="Creating&#x2026;">Create staff account</button></div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABQnDUZd6y_ymJoTpNkmC3jXVMhiwRrQoC7Z0eSeXngth4KmdhAc26DdBKyShFV7pvxCre1x4mEFTNL3u1iCzJCmkODuTdmnJAR4TsTxdZqiJfmpFguvW1tzyji5jyrn18" /></form>
+    </section>
+</div>
+
+    <div class="dialog-backdrop" data-dialog="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a" data-dialog-open-on-load="true">
+        <section class="dialog dialog--wide account-settings-dialog" role="dialog" aria-modal="true" aria-labelledby="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-title">
+            <div class="dialog-head"><h2 id="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-title" tabindex="-1" data-dialog-initial-focus>dsmith</h2><button type="button" class="dialog-close" data-dialog-close data-account-settings-cancel aria-label="Close"><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg></button></div>
+            <form method="post" enctype="multipart/form-data" data-account-settings action="/Administration/Accounts?handler=Settings">
+                <input type="hidden" name="staffId" value="50275d87-49a6-40d1-94bf-0c65d15dc04a" /><input type="hidden" name="expectedVersion" value="2" /><input type="hidden" name="operationKey" value="d5df55e1cb6c402fa6fc7fd7c73cf14b" />
+                <div class="dialog-body stack">
+                    
+                    <dl class="fact-grid account-settings-facts"><div class="fact"><dt>Username</dt><dd class="mono">dsmith</dd></div><div class="fact"><dt>State</dt><dd>Enabled</dd></div></dl>
+                    <div class="account-signoff-fields">
+                        <div class="field"><label for="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-role">Role</label><select id="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-role" name="role" data-account-role> <option value="Administrator">Administrator</option>  <option value="Engineer" selected="selected">Engineer</option>  <option value="User">User</option> </select></div>
+                        <div class="field"><label for="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-signoff">Sign-off Engineer</label><select id="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-signoff" name="isSignOffEngineer" data-account-signoff><option value="false">No</option><option value="true" selected="selected">Yes</option></select></div>
+                        <div class="field" data-account-signoff-field><label for="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-name">Printed name</label><input id="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-name" name="printedName" value="David Smith" maxlength="256" /></div>
+                        <div class="field" data-account-signoff-field><label for="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-qualifications">Qualifications</label><input id="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-qualifications" name="qualifications" value="BEng (Hons) MIMI" maxlength="500" /></div>
+                    </div>
+                    <section class="account-settings-section" aria-labelledby="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-glass-title"><div class="settings-line"><div><strong id="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-glass-title">Glass's repair estimates</strong><span class="meta">Manage this account's login.</span></div><a class="btn" data-account-glass-login href="/Administration/Accounts?glassStaffId=50275d87-49a6-40d1-94bf-0c65d15dc04a">Manage login</a></div></section>
+                    <div class="field" data-account-signoff-field><label for="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-signature">Signature image</label><input id="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-signature" name="signature" type="file" accept="image/png" /></div>
+                    <label class="choice" for="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-default" data-account-signoff-field><input id="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-default" name="isDefaultSignOffEngineer" type="checkbox" value="true" data-account-default /><span>Default sign-off Engineer</span></label>
+                </div>
+                <div class="dialog-foot"><button type="button" class="btn" data-dialog-close data-account-settings-cancel>Cancel</button><button type="submit" class="btn btn--primary" data-busy-label="Saving&#x2026;">Save settings</button></div>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABQnDUZd6y_ymJoTpNkmC3jXVMhiwRrQoC7Z0eSeXngth4KmdhAc26DdBKyShFV7pvxCre1x4mEFTNL3u1iCzJCmkODuTdmnJAR4TsTxdZqiJfmpFguvW1tzyji5jyrn18" /></form>
+                <div class="dialog-foot">
+                    <div class="left">
+                            <form method="post" action="/Administration/Accounts?handler=Disable"><input type="hidden" name="staffId" value="50275d87-49a6-40d1-94bf-0c65d15dc04a" /><input type="hidden" name="expectedVersion" value="2" /><input type="hidden" name="operationKey" value="3f67806745c5424bb942cff40526b93e" /><button type="submit" class="btn btn--danger" data-busy-label="Disabling&#x2026;">Disable</button><input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABQnDUZd6y_ymJoTpNkmC3jXVMhiwRrQoC7Z0eSeXngth4KmdhAc26DdBKyShFV7pvxCre1x4mEFTNL3u1iCzJCmkODuTdmnJAR4TsTxdZqiJfmpFguvW1tzyji5jyrn18" /></form>
+                        <button type="button" class="btn btn--danger" data-dialog-open="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-delete">Delete</button>
+                    </div>
+                        <form method="post" action="/Administration/Accounts?handler=ForceLogout"><input type="hidden" name="staffId" value="50275d87-49a6-40d1-94bf-0c65d15dc04a" /><input type="hidden" name="expectedVersion" value="2" /><input type="hidden" name="operationKey" value="0c287c4176d54dfaa11d58879b7a811f" /><button type="submit" class="btn" data-busy-label="Signing out&#x2026;">Force logout</button><input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABQnDUZd6y_ymJoTpNkmC3jXVMhiwRrQoC7Z0eSeXngth4KmdhAc26DdBKyShFV7pvxCre1x4mEFTNL3u1iCzJCmkODuTdmnJAR4TsTxdZqiJfmpFguvW1tzyji5jyrn18" /></form>
+                        <form method="post" action="/Administration/Accounts?handler=ResetPassword"><input type="hidden" name="staffId" value="50275d87-49a6-40d1-94bf-0c65d15dc04a" /><input type="hidden" name="expectedVersion" value="2" /><input type="hidden" name="operationKey" value="9a4632f9bb684d7daa6f6c46487cebab" /><button type="submit" class="btn" data-busy-label="Resetting&#x2026;">Reset password</button><input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABQnDUZd6y_ymJoTpNkmC3jXVMhiwRrQoC7Z0eSeXngth4KmdhAc26DdBKyShFV7pvxCre1x4mEFTNL3u1iCzJCmkODuTdmnJAR4TsTxdZqiJfmpFguvW1tzyji5jyrn18" /></form>
+                </div>
+        </section>
+    </div>
+        <dialog id="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-delete" aria-labelledby="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-delete-title">
+            <form method="post" class="stack" action="/Administration/Accounts?handler=Delete">
+                <h2 id="settings-50275d87-49a6-40d1-94bf-0c65d15dc04a-delete-title" tabindex="-1" data-dialog-initial-focus>Delete dsmith</h2>
+                <input type="hidden" name="staffId" value="50275d87-49a6-40d1-94bf-0c65d15dc04a" /><input type="hidden" name="expectedVersion" value="2" /><input type="hidden" name="operationKey" value="cef38e34007041ac8826b338d7160190" />
+                <div class="button-row"><button class="btn" type="button" data-dialog-close>Cancel</button><button type="submit" class="btn btn--danger" data-busy-label="Deleting&#x2026;">Delete</button></div>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABQnDUZd6y_ymJoTpNkmC3jXVMhiwRrQoC7Z0eSeXngth4KmdhAc26DdBKyShFV7pvxCre1x4mEFTNL3u1iCzJCmkODuTdmnJAR4TsTxdZqiJfmpFguvW1tzyji5jyrn18" /></form>
+        </dialog>
+
+
+
+                </div>
+            </main>
+        </div>
+    </div>
+    
+<div class="dialog-backdrop" data-dialog="account-dialog" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="account-dialog-title">
+        <div class="dialog-head">
+            <h2 id="account-dialog-title" tabindex="-1">Account</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body">
+            <div class="definition-list">
+                <dl class="definition"><dt>Name</dt><dd>alex</dd></dl>
+                <dl class="definition"><dt>Role</dt><dd>Administrator</dd></dl>
+                <dl class="definition"><dt>Idle lock</dt><dd>2 hours</dd></dl>
+            </div>
+        </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn" data-dialog-close>Close</button>
+            <a class="btn" href="/ReleaseNotes">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-flag" /></svg>
+                <span>Release notes</span>
+            </a>
+            <button type="button" class="btn" data-dialog-open="problem-dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-alert-triangle" /></svg>
+                <span>Report a problem</span>
+            </button>
+            <a class="btn" href="/Account/PasswordChange">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-key" /></svg>
+                <span>Change password</span>
+            </a>
+            <form method="post" action="/Account/SignOut">
+                <button type="submit" class="btn btn--danger" data-busy-label="Signing out&#x2026;">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-log-out" /></svg>
+                    <span>Sign out</span>
+                </button>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABQnDUZd6y_ymJoTpNkmC3jXVMhiwRrQoC7Z0eSeXngth4KmdhAc26DdBKyShFV7pvxCre1x4mEFTNL3u1iCzJCmkODuTdmnJAR4TsTxdZqiJfmpFguvW1tzyji5jyrn18" /></form>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="notifications-dialog" data-dialog-open-on-load="" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="notifications-dialog-title">
+        <div class="dialog-head">
+            <h2 id="notifications-dialog-title" tabindex="-1">Notifications</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body dialog-body--list">
+                <p class="empty-state" role="status">No notifications</p>
+        </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn btn--dark" data-dialog-close>Close</button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="command-dialog" hidden>
+    <section class="dialog command-dialog" role="dialog" aria-modal="true" aria-labelledby="command-dialog-title">
+        <div class="dialog-head">
+            <h2 id="command-dialog-title" tabindex="-1">Search Pegasus</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="command-search">
+            <label class="sr-only" for="command-input">Search</label>
+            <input id="command-input" type="search" autocomplete="off" data-command-palette-input aria-controls="command-results" />
+        </div>
+        <div id="command-results" class="command-results" role="listbox" aria-label="Search results" data-command-results>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                <span><strong>Work Centre</strong></span>
+            </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Inbox">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                    <span><strong>Inbox</strong></span>
+                </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Upload">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                    <span><strong>Upload</strong></span>
+                </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Cases">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list" /></svg>
+                <span><strong>Cases</strong></span>
+            </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Search">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-folder-open" /></svg>
+                <span><strong>Search</strong></span>
+            </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Administration">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-grid" /></svg>
+                    <span><strong>Administration</strong></span>
+                </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Search?query=" data-command-fallback>
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                <span><strong>Search Cases for <span data-command-fallback-term></span></strong></span>
+                <span class="kbd" aria-hidden="true">Enter</span>
+            </button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="problem-dialog" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="problem-dialog-title">
+        <form method="post" data-problem-form data-problem-case-sections="overview,claim,original-report,inspection,vehicle,damage,valuation,estimate,settlement,report,files,notes,queries" action="/ProblemReports?handler=Report">
+            <input type="hidden" name="operationKey" value="444715a582f449d9a24762a12053a993" />
+            <div class="dialog-head">
+                <h2 id="problem-dialog-title" tabindex="-1">Report a problem</h2>
+                <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                </button>
+            </div>
+            <div class="dialog-body stack">
+                <input type="hidden" name="returnUrl" value="" data-problem-return />
+                <input type="hidden" name="route" value="" data-problem-route />
+                <input type="hidden" name="method" value="GET" />
+                <input type="hidden" name="traceId" value="00-1e990028891d4c452215a6e120109f6b-6d0b8e917e71c89a-00" />
+                <input type="hidden" name="caseReference" value="" data-problem-case />
+                <input type="hidden" name="viewport" value="" data-problem-viewport />
+                <input type="hidden" name="editing" value="false" data-problem-editing />
+                <input type="hidden" name="errors" value="" data-problem-errors />
+                <div class="field">
+                    <label for="problem-description">What happened</label>
+                    <textarea id="problem-description" name="description" rows="6" maxlength="4000" required></textarea>
+                </div>
+            </div>
+            <div class="dialog-foot">
+                <button type="button" class="btn" data-dialog-close>Cancel</button>
+                <button type="submit" class="btn btn--primary" data-busy-label="Sending&#x2026;">Send</button>
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABQnDUZd6y_ymJoTpNkmC3jXVMhiwRrQoC7Z0eSeXngth4KmdhAc26DdBKyShFV7pvxCre1x4mEFTNL3u1iCzJCmkODuTdmnJAR4TsTxdZqiJfmpFguvW1tzyji5jyrn18" /></form>
+    </section>
+</div>
+
+    <div class="toast-region" aria-live="polite" data-toast-region></div>
+
+    <script src="/js/site.vubujkpeou.js"></script>
+    
+    <script src="/js/accounts.l1kccqj7rf.js"></script>
+
+</body>
+</html>

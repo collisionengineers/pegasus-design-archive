@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" data-busy-label="Working&#x2026;" data-busy-still="Still" data-icon-sprite="/images/lucide-sprite.04agn8pzs5.svg">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workflow configuration · Pegasus</title>
+    <link rel="stylesheet" href="/css/site.qz2wg1x280.css" />
+    
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell" data-app-shell>
+        <header class="app-rail">
+            <a class="brand" aria-label="Pegasus home" href="/">
+                <img src="/images/pegasus-mark-refined-128.tctmpgz0uo.png" alt="" aria-hidden="true" />
+                <span class="brand-copy"><strong>PEGASUS</strong><span>Case management</span></span>
+            </a>
+            <nav class="primary-nav" aria-label="Primary">
+                <div class="nav-label">Work</div>
+                <a class="nav-link" href="/">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                    <span>Work Centre</span>
+                </a>
+                    <a class="nav-link" href="/Inbox">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                        <span>Inbox</span>
+                    </a>
+                    <a class="nav-link" href="/Upload">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                        <span>Upload</span>
+                    </a>
+                <a class="nav-link" href="/Cases">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list-checks" /></svg>
+                    <span>Cases</span>
+                </a>
+                <a class="nav-link" href="/Search">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <span>Search</span>
+                </a>
+                    <div class="nav-label">Manage</div>
+                    <a class="nav-link" aria-current="page" href="/Administration">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+                        <span>Administration</span>
+                    </a>
+            </nav>
+            <div class="rail-spacer"></div>
+            <button type="button" class="rail-collapse" data-rail-toggle aria-expanded="true" aria-label="Collapse navigation"
+                    data-label-collapse="Collapse navigation" data-label-expand="Expand navigation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-left" /></svg>
+                <span>Collapse</span>
+            </button>
+            <div class="rail-health">
+                <div class="rail-health-line"><span class="health-dot"></span><span>Current · 11:30</span></div>
+            </div>
+                <div class="rail-user" role="group" aria-label="User">
+                    <span class="avatar" aria-hidden="true">IU</span>
+                    <div><strong>alex</strong><small>Administrator</small></div>
+                    <button type="button" class="icon-button" data-dialog-open="account-dialog" aria-label="Account menu">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                    </button>
+                </div>
+        </header>
+        <div class="app-column">
+            <section class="utility-bar" aria-label="Utility bar">
+                <div class="utility-freshness"><span class="health-dot"></span><span>Current · 11:30</span></div>
+                <form class="utility-search" role="search" method="get" action="/Search">
+                    <label class="sr-only" for="global-search">Search Pegasus</label>
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <input id="global-search" type="search" name="query" data-command-input aria-label="Search Pegasus" placeholder="Search cases, references or people" autocomplete="off" />
+                    <span class="shortcut-hint" aria-hidden="true">Ctrl K</span>
+                </form>
+                <div class="utility-actions">
+                    <a class="btn btn--primary" href="/Cases/Create">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-plus" /></svg>
+                        <span>New case</span>
+                    </a>
+                    <span class="bell-wrap">
+                        <button type="button" class="icon-button" data-dialog-open="notifications-dialog" aria-label="Notifications">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bell" /></svg>
+                        </button>
+                    </span>
+                        <button type="button" class="icon-button utility-account" data-dialog-open="account-dialog" aria-label="Account menu">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                        </button>
+                </div>
+            </section>
+            <main id="main-content" class="app-main" tabindex="-1">
+                <div class="content">
+                    <header class="page-header">
+    <div class="page-title">
+        <h1>Workflow configuration</h1>
+    </div>
+</header>
+
+<div class="admin-layout">
+    <nav class="admin-nav panel" aria-label="Administration areas">
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-people">
+        <span class="admin-nav__label" id="admin-nav-people">People and access</span>
+        <a href="/Administration/Accounts">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-user" /></svg>
+            <span>Staff accounts &amp; roles</span>
+        </a>
+        <a href="/Administration/Contacts">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-shield" /></svg>
+            <span>Contacts</span>
+        </a>
+    </div>
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-configuration">
+        <span class="admin-nav__label" id="admin-nav-configuration">Configuration</span>
+        <a aria-current="page" href="/Administration/Configuration">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+            <span>Workflow configuration</span>
+        </a>
+        <a href="/Administration/Mailboxes">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-mail" /></svg>
+            <span>Mail settings</span>
+        </a>
+        <a href="/Administration/EmailTemplates">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-mail-open" /></svg>
+            <span>E-mail templates</span>
+        </a>
+        <a href="/Administration/ValuationPresets">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-pound-sterling" /></svg>
+            <span>Valuation presets</span>
+        </a>
+    </div>
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-oversight">
+        <span class="admin-nav__label" id="admin-nav-oversight">Operations and oversight</span>
+        <a href="/Administration/Health">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-heart-pulse" /></svg>
+            <span>Service health</span>
+        </a>
+        <a href="/Administration/Logs">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-scroll-text" /></svg>
+            <span>Logs</span>
+        </a>
+        <a href="/Administration/Reports">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bar-chart" /></svg>
+            <span>Management Reports</span>
+        </a>
+        <a href="/Administration/ReleaseNotes">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-flag" /></svg>
+            <span>Release notes</span>
+        </a>
+        <a href="/Administration/ProblemReports">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-alert-triangle" /></svg>
+            <span>Problem reports</span>
+        </a>
+        <a href="/Administration/AiJobs">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-sparkles" /></svg>
+            <span>AI jobs</span>
+        </a>
+            <a href="/Administration/Automation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bot" /></svg>
+                <span>Automation &amp; AI</span>
+            </a>
+    </div>
+</nav>
+
+    <div class="stack">
+        
+        <section class="panel" aria-labelledby="workflow-title">
+            <div class="panel-head"><h2 id="workflow-title">Case workflow</h2></div>
+            <form method="post" class="panel-body stack" action="/Administration/Configuration?handler=SaveWorkflow">
+                <input type="hidden" name="WorkflowExpectedVersion" value="1" />
+                <input type="hidden" name="WorkflowOperationKey" value="4e6afbd8ac6e407ba2ea01a07e836475" />
+                <fieldset class="stack">
+                    <legend>Required before Review</legend>
+                    <div class="form-grid form-grid--2">
+                        <label class="choice"><input type="checkbox" name="RequireInstructions" value="true" checked="checked" /> Instructions</label>
+                        <label class="choice"><input type="checkbox" name="RequireImages" value="true" checked="checked" /> Images</label>
+                    </div>
+                    <div class="form-grid form-grid--3" data-workflow-settings-edit>
+                            <div class="field">
+                                <label for="setting-ChaseIntervalDays">Chase interval (days)</label>
+                                <input id="setting-ChaseIntervalDays" name="ChaseIntervalDays" type="number" min="1" max="365" step="1" value="7" required class="chase-interval-input" />
+                                <span class="field-hint">1 to 365</span>
+                                <span class="field-error field-validation-valid" data-valmsg-for="setting.Field" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="field">
+                                <label for="setting-UnidentifiedTargetDays">Unidentified target (days)</label>
+                                <input id="setting-UnidentifiedTargetDays" name="UnidentifiedTargetDays" type="number" min="0" max="365" step="1" value="0" required />
+                                <span class="field-hint">0 to 365</span>
+                                <span class="field-error field-validation-valid" data-valmsg-for="setting.Field" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="field">
+                                <label for="setting-TriageTargetDays">Triage target (days)</label>
+                                <input id="setting-TriageTargetDays" name="TriageTargetDays" type="number" min="0" max="365" step="1" value="1" required />
+                                <span class="field-hint">0 to 365</span>
+                                <span class="field-error field-validation-valid" data-valmsg-for="setting.Field" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="field">
+                                <label for="setting-HeldTargetDays">Held decision target (days)</label>
+                                <input id="setting-HeldTargetDays" name="HeldTargetDays" type="number" min="0" max="365" step="1" value="7" required />
+                                <span class="field-hint">0 to 365</span>
+                                <span class="field-error field-validation-valid" data-valmsg-for="setting.Field" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="field">
+                                <label for="setting-ReviewTargetDays">Review target (days)</label>
+                                <input id="setting-ReviewTargetDays" name="ReviewTargetDays" type="number" min="0" max="365" step="1" value="1" required />
+                                <span class="field-hint">0 to 365</span>
+                                <span class="field-error field-validation-valid" data-valmsg-for="setting.Field" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="field">
+                                <label for="setting-AiDraftTargetDays">AI draft target (days)</label>
+                                <input id="setting-AiDraftTargetDays" name="AiDraftTargetDays" type="number" min="0" max="365" step="1" value="1" required />
+                                <span class="field-hint">0 to 365</span>
+                                <span class="field-error field-validation-valid" data-valmsg-for="setting.Field" data-valmsg-replace="true"></span>
+                            </div>
+                    </div>
+                </fieldset>
+                <div class="button-row"><button type="reset" class="btn">Reset</button><button type="submit" class="btn btn--primary" data-busy-label="Saving&#x2026;">Save workflow settings</button></div>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAPvkdxyP1h1t4IqAcar-P0Bt86CaqXxUU9mYpz3DXLjBixbcKjP80L89exEl_Jh3cTNQQ0aawEdW3aLRxERc-dwDJST9PsIyXL8nhABFTDEutaqKMGK6it4zVTfD5qbAQ" /></form>
+        </section>
+        <section class="panel" aria-labelledby="rates-title">
+            <div class="panel-head"><h2 id="rates-title">Labour-rate cards</h2></div>
+            <div class="table-wrap no-border"><table>
+                <caption class="sr-only">Labour-rate cards</caption>
+                <thead><tr><th scope="col">Name</th><th scope="col">Panel and paint (£/hour)</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td>Standard</td>
+                        <td><input form="rate-card-5b0f3c1e8f4a4d2b9a571c3e2f6a7b01" name="HourlyRate" type="number" min="0" max="999999" step="0.01" value="83.28" aria-label="Standard panel and paint hourly rate" required /></td>
+                        <td><form id="rate-card-5b0f3c1e8f4a4d2b9a571c3e2f6a7b01" method="post" action="/Administration/Configuration?handler=SaveCard">
+                            <input type="hidden" name="CardId" value="5b0f3c1e-8f4a-4d2b-9a57-1c3e2f6a7b01" />
+                            <input type="hidden" name="CardExpectedVersion" value="1" />
+                            <input type="hidden" name="CardOperationKey" value="751b240e3ac34feaa0bb764014b01bad" />
+                            <div class="button-row"><button type="reset" class="btn btn--small">Reset</button><button type="submit" class="btn btn--small btn--primary" data-busy-label="Saving&#x2026;">Save</button></div>
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAPvkdxyP1h1t4IqAcar-P0Bt86CaqXxUU9mYpz3DXLjBixbcKjP80L89exEl_Jh3cTNQQ0aawEdW3aLRxERc-dwDJST9PsIyXL8nhABFTDEutaqKMGK6it4zVTfD5qbAQ" /></form></td>
+                    </tr>
+                    <tr>
+                        <td>Prestige/Aluminium</td>
+                        <td><input form="rate-card-5b0f3c1e8f4a4d2b9a571c3e2f6a7b02" name="HourlyRate" type="number" min="0" max="999999" step="0.01" value="103.06" aria-label="Prestige/Aluminium panel and paint hourly rate" required /></td>
+                        <td><form id="rate-card-5b0f3c1e8f4a4d2b9a571c3e2f6a7b02" method="post" action="/Administration/Configuration?handler=SaveCard">
+                            <input type="hidden" name="CardId" value="5b0f3c1e-8f4a-4d2b-9a57-1c3e2f6a7b02" />
+                            <input type="hidden" name="CardExpectedVersion" value="1" />
+                            <input type="hidden" name="CardOperationKey" value="a02feca82895488d8e4957b7e6c2becb" />
+                            <div class="button-row"><button type="reset" class="btn btn--small">Reset</button><button type="submit" class="btn btn--small btn--primary" data-busy-label="Saving&#x2026;">Save</button></div>
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAPvkdxyP1h1t4IqAcar-P0Bt86CaqXxUU9mYpz3DXLjBixbcKjP80L89exEl_Jh3cTNQQ0aawEdW3aLRxERc-dwDJST9PsIyXL8nhABFTDEutaqKMGK6it4zVTfD5qbAQ" /></form></td>
+                    </tr>
+                </tbody>
+            </table></div>
+        </section>
+    </div>
+</div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+    
+<div class="dialog-backdrop" data-dialog="account-dialog" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="account-dialog-title">
+        <div class="dialog-head">
+            <h2 id="account-dialog-title" tabindex="-1">Account</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body">
+            <div class="definition-list">
+                <dl class="definition"><dt>Name</dt><dd>alex</dd></dl>
+                <dl class="definition"><dt>Role</dt><dd>Administrator</dd></dl>
+                <dl class="definition"><dt>Idle lock</dt><dd>2 hours</dd></dl>
+            </div>
+        </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn" data-dialog-close>Close</button>
+            <a class="btn" href="/ReleaseNotes">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-flag" /></svg>
+                <span>Release notes</span>
+            </a>
+            <button type="button" class="btn" data-dialog-open="problem-dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-alert-triangle" /></svg>
+                <span>Report a problem</span>
+            </button>
+            <a class="btn" href="/Account/PasswordChange">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-key" /></svg>
+                <span>Change password</span>
+            </a>
+            <form method="post" action="/Account/SignOut">
+                <button type="submit" class="btn btn--danger" data-busy-label="Signing out&#x2026;">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-log-out" /></svg>
+                    <span>Sign out</span>
+                </button>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAPvkdxyP1h1t4IqAcar-P0Bt86CaqXxUU9mYpz3DXLjBixbcKjP80L89exEl_Jh3cTNQQ0aawEdW3aLRxERc-dwDJST9PsIyXL8nhABFTDEutaqKMGK6it4zVTfD5qbAQ" /></form>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="notifications-dialog" data-dialog-open-on-load="" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="notifications-dialog-title">
+        <div class="dialog-head">
+            <h2 id="notifications-dialog-title" tabindex="-1">Notifications</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body dialog-body--list">
+                <p class="empty-state" role="status">No notifications</p>
+        </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn btn--dark" data-dialog-close>Close</button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="command-dialog" hidden>
+    <section class="dialog command-dialog" role="dialog" aria-modal="true" aria-labelledby="command-dialog-title">
+        <div class="dialog-head">
+            <h2 id="command-dialog-title" tabindex="-1">Search Pegasus</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="command-search">
+            <label class="sr-only" for="command-input">Search</label>
+            <input id="command-input" type="search" autocomplete="off" data-command-palette-input aria-controls="command-results" />
+        </div>
+        <div id="command-results" class="command-results" role="listbox" aria-label="Search results" data-command-results>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                <span><strong>Work Centre</strong></span>
+            </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Inbox">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                    <span><strong>Inbox</strong></span>
+                </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Upload">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                    <span><strong>Upload</strong></span>
+                </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Cases">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list" /></svg>
+                <span><strong>Cases</strong></span>
+            </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Search">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-folder-open" /></svg>
+                <span><strong>Search</strong></span>
+            </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Administration">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-grid" /></svg>
+                    <span><strong>Administration</strong></span>
+                </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Search?query=" data-command-fallback>
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                <span><strong>Search Cases for <span data-command-fallback-term></span></strong></span>
+                <span class="kbd" aria-hidden="true">Enter</span>
+            </button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="problem-dialog" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="problem-dialog-title">
+        <form method="post" data-problem-form data-problem-case-sections="overview,claim,original-report,inspection,vehicle,damage,valuation,estimate,settlement,report,files,notes,queries" action="/ProblemReports?handler=Report">
+            <input type="hidden" name="operationKey" value="89ab92edf5c84678be855e9a997ff44e" />
+            <div class="dialog-head">
+                <h2 id="problem-dialog-title" tabindex="-1">Report a problem</h2>
+                <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                </button>
+            </div>
+            <div class="dialog-body stack">
+                <input type="hidden" name="returnUrl" value="" data-problem-return />
+                <input type="hidden" name="route" value="" data-problem-route />
+                <input type="hidden" name="method" value="GET" />
+                <input type="hidden" name="traceId" value="00-c599fbfd782de08a364070be43574b1b-e1a848dd70c472df-00" />
+                <input type="hidden" name="caseReference" value="" data-problem-case />
+                <input type="hidden" name="viewport" value="" data-problem-viewport />
+                <input type="hidden" name="editing" value="false" data-problem-editing />
+                <input type="hidden" name="errors" value="" data-problem-errors />
+                <div class="field">
+                    <label for="problem-description">What happened</label>
+                    <textarea id="problem-description" name="description" rows="6" maxlength="4000" required></textarea>
+                </div>
+            </div>
+            <div class="dialog-foot">
+                <button type="button" class="btn" data-dialog-close>Cancel</button>
+                <button type="submit" class="btn btn--primary" data-busy-label="Sending&#x2026;">Send</button>
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAPvkdxyP1h1t4IqAcar-P0Bt86CaqXxUU9mYpz3DXLjBixbcKjP80L89exEl_Jh3cTNQQ0aawEdW3aLRxERc-dwDJST9PsIyXL8nhABFTDEutaqKMGK6it4zVTfD5qbAQ" /></form>
+    </section>
+</div>
+
+    <div class="toast-region" aria-live="polite" data-toast-region></div>
+
+    <script src="/js/site.vubujkpeou.js"></script>
+    
+</body>
+</html>

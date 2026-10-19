@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" data-busy-label="Working&#x2026;" data-busy-still="Still" data-icon-sprite="/images/lucide-sprite.04agn8pzs5.svg">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QDOS · Pegasus</title>
+    <link rel="stylesheet" href="/css/site.qz2wg1x280.css" />
+    
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell" data-app-shell>
+        <header class="app-rail">
+            <a class="brand" aria-label="Pegasus home" href="/">
+                <img src="/images/pegasus-mark-refined-128.tctmpgz0uo.png" alt="" aria-hidden="true" />
+                <span class="brand-copy"><strong>PEGASUS</strong><span>Case management</span></span>
+            </a>
+            <nav class="primary-nav" aria-label="Primary">
+                <div class="nav-label">Work</div>
+                <a class="nav-link" href="/">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                    <span>Work Centre</span>
+                </a>
+                    <a class="nav-link" href="/Inbox">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                        <span>Inbox</span>
+                    </a>
+                    <a class="nav-link" href="/Upload">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                        <span>Upload</span>
+                    </a>
+                <a class="nav-link" href="/Cases">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list-checks" /></svg>
+                    <span>Cases</span>
+                </a>
+                <a class="nav-link" href="/Search">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <span>Search</span>
+                </a>
+                    <div class="nav-label">Manage</div>
+                    <a class="nav-link" aria-current="page" href="/Administration">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+                        <span>Administration</span>
+                    </a>
+            </nav>
+            <div class="rail-spacer"></div>
+            <button type="button" class="rail-collapse" data-rail-toggle aria-expanded="true" aria-label="Collapse navigation"
+                    data-label-collapse="Collapse navigation" data-label-expand="Expand navigation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-left" /></svg>
+                <span>Collapse</span>
+            </button>
+            <div class="rail-health">
+                <div class="rail-health-line"><span class="health-dot"></span><span>Current · 11:30</span></div>
+            </div>
+                <div class="rail-user" role="group" aria-label="User">
+                    <span class="avatar" aria-hidden="true">IU</span>
+                    <div><strong>alex</strong><small>Administrator</small></div>
+                    <button type="button" class="icon-button" data-dialog-open="account-dialog" aria-label="Account menu">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                    </button>
+                </div>
+        </header>
+        <div class="app-column">
+            <section class="utility-bar" aria-label="Utility bar">
+                <div class="utility-freshness"><span class="health-dot"></span><span>Current · 11:30</span></div>
+                <form class="utility-search" role="search" method="get" action="/Search">
+                    <label class="sr-only" for="global-search">Search Pegasus</label>
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <input id="global-search" type="search" name="query" data-command-input aria-label="Search Pegasus" placeholder="Search cases, references or people" autocomplete="off" />
+                    <span class="shortcut-hint" aria-hidden="true">Ctrl K</span>
+                </form>
+                <div class="utility-actions">
+                    <a class="btn btn--primary" href="/Cases/Create">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-plus" /></svg>
+                        <span>New case</span>
+                    </a>
+                    <span class="bell-wrap">
+                        <button type="button" class="icon-button" data-dialog-open="notifications-dialog" aria-label="Notifications">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bell" /></svg>
+                        </button>
+                    </span>
+                        <button type="button" class="icon-button utility-account" data-dialog-open="account-dialog" aria-label="Account menu">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                        </button>
+                </div>
+            </section>
+            <main id="main-content" class="app-main" tabindex="-1">
+                <div class="content">
+                    <header class="page-header">
+    <div class="page-title">
+            <p class="eyebrow">Administration</p>
+        <h1>QDOS</h1>
+    </div>
+</header>
+
+<div class="admin-layout"><nav class="admin-nav panel" aria-label="Administration areas">
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-people">
+        <span class="admin-nav__label" id="admin-nav-people">People and access</span>
+        <a href="/Administration/Accounts">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-user" /></svg>
+            <span>Staff accounts &amp; roles</span>
+        </a>
+        <a aria-current="page" href="/Administration/Contacts">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-shield" /></svg>
+            <span>Contacts</span>
+        </a>
+    </div>
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-configuration">
+        <span class="admin-nav__label" id="admin-nav-configuration">Configuration</span>
+        <a href="/Administration/Configuration">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+            <span>Workflow configuration</span>
+        </a>
+        <a href="/Administration/Mailboxes">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-mail" /></svg>
+            <span>Mail settings</span>
+        </a>
+        <a href="/Administration/EmailTemplates">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-mail-open" /></svg>
+            <span>E-mail templates</span>
+        </a>
+        <a href="/Administration/ValuationPresets">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-pound-sterling" /></svg>
+            <span>Valuation presets</span>
+        </a>
+    </div>
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-oversight">
+        <span class="admin-nav__label" id="admin-nav-oversight">Operations and oversight</span>
+        <a href="/Administration/Health">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-heart-pulse" /></svg>
+            <span>Service health</span>
+        </a>
+        <a href="/Administration/Logs">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-scroll-text" /></svg>
+            <span>Logs</span>
+        </a>
+        <a href="/Administration/Reports">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bar-chart" /></svg>
+            <span>Management Reports</span>
+        </a>
+        <a href="/Administration/ReleaseNotes">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-flag" /></svg>
+            <span>Release notes</span>
+        </a>
+        <a href="/Administration/ProblemReports">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-alert-triangle" /></svg>
+            <span>Problem reports</span>
+        </a>
+        <a href="/Administration/AiJobs">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-sparkles" /></svg>
+            <span>AI jobs</span>
+        </a>
+            <a href="/Administration/Automation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bot" /></svg>
+                <span>Automation &amp; AI</span>
+            </a>
+    </div>
+</nav>
+<div class="stack">
+        <nav class="tabs" aria-label="QDOS"> <a class="tab" aria-current="page" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d001">Contact</a>  <a class="tab" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d001?tab=report-generation">Report generation</a>  <a class="tab" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d001?tab=report-sending">Report sending</a>  <a class="tab" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d001?tab=salvage-matrix">Salvage matrix</a>  <a class="tab" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d001?tab=default-inspection-location">Default inspection location</a>  <a class="tab" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d001?tab=principal-api">Principal API</a> </nav>
+    <section class="panel" aria-labelledby="contact-title">
+        <div class="panel-head"><div><h2 id="contact-title">QDOS</h2></div><span class="status status--navy">Active</span>
+</div>
+        <form method="post" class="panel-body stack contact-editor" action="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d001?handler=Save">
+              <input type="hidden" data-val="true" data-val-required="The ContactId field is required." id="ContactId" name="ContactId" value="00000000-0000-4000-8000-00000000d001" /><input type="hidden" name="ExpectedVersion" value="5" /><input type="hidden" data-val="true" data-val-required="The OperationKey field is required." id="OperationKey" name="OperationKey" value="665417733a1b463e85b038c2d4d14aa6" />
+ <input type="hidden" name="PrincipalInspectionMode" value="ImageBasedAssessment" />             <fieldset class="stack">
+            <div class="form-grid form-grid--2">
+                <div class="field field-wide"><label class="req" for="Name">Organisation name</label><input autocomplete="organization" type="text" data-val="true" data-val-length="The field Name must be a string with a maximum length of 300." data-val-length-max="300" data-val-required="The Name field is required." id="Name" maxlength="300" name="Name" value="QDOS" /><span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span></div>
+                <div class="field"><label for="contact-type">Type</label><input id="contact-type" value="Principal" readonly /></div>
+                    <div class="field"><label for="PrincipalCode">Principal code</label><input class="mono" readonly type="text" data-val="true" data-val-length="The field PrincipalCode must be a string with a maximum length of 20." data-val-length-max="20" id="PrincipalCode" maxlength="20" name="PrincipalCode" value="QDOS" /></div>
+                <div class="field"><label for="ContactPerson">Contact person</label><input autocomplete="name" type="text" data-val="true" data-val-length="The field ContactPerson must be a string with a maximum length of 200." data-val-length-max="200" id="ContactPerson" maxlength="200" name="ContactPerson" value="" /></div>
+                <div class="field"><label for="Telephone">Phone</label><input type="tel" inputmode="tel" pattern="^\+?[0-9 ]+$" autocomplete="tel" data-val="true" data-val-length="The field Telephone must be a string with a maximum length of 50." data-val-length-max="50" id="Telephone" maxlength="50" name="Telephone" value="" /><span class="field-validation-valid" data-valmsg-for="Telephone" data-valmsg-replace="true"></span></div>
+                <div class="field field-wide"><label for="Email">Email</label><input type="email" autocomplete="email" data-val="true" data-val-length="The field Email must be a string with a maximum length of 320." data-val-length-max="320" id="Email" maxlength="320" name="Email" value="" /></div>
+                <div class="field"><label for="Address">Address</label><textarea rows="3" autocomplete="street-address" data-val="true" data-val-length="The field Address must be a string with a maximum length of 1000." data-val-length-max="1000" id="Address" maxlength="1000" name="Address">
+</textarea></div>
+                <div class="field"><label for="Postcode">Postcode</label><input autocomplete="postal-code" type="text" data-val="true" data-val-length="The field Postcode must be a string with a maximum length of 20." data-val-length-max="20" id="Postcode" maxlength="20" name="Postcode" value="" /></div>
+                    <div class="field"><label for="principal-inspection-mode">Inspection mode</label><input id="principal-inspection-mode" value="Image Based Assessment" readonly /></div>
+                    <div class="field"><label for="principal-accepted-identities">Accepted e-mail identities</label><input id="principal-accepted-identities" value="qdosassist.co.uk, qdoslaw.co.uk, qdosassists.co.uk" readonly /></div>
+            </div>
+            <section class="contact-section">
+                <div class="field" data-notes-on-every-case><label for="NotesOnEveryCase">Notes on every Case</label><textarea rows="4" maxlength="2000" data-val="true" data-val-length="The field NotesOnEveryCase must be a string with a maximum length of 2000." data-val-length-max="2000" id="NotesOnEveryCase" name="NotesOnEveryCase">
+Check the policyholder&#x27;s contact number before booking the inspection.</textarea><span class="field-validation-valid" data-valmsg-for="NotesOnEveryCase" data-valmsg-replace="true"></span></div>
+            </section>
+            <label class="choice"><input type="checkbox" checked="checked" data-val="true" data-val-required="The Active field is required." id="Active" name="Active" value="true" /> <span>Active</span></label>
+            </fieldset>
+            <div class="button-row"><button type="submit" class="btn btn--primary" data-busy-label="Saving&#x2026;">Save contact</button><a class="btn" href="/Administration/Contacts">Cancel</a></div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAADNGqzxXOAHTmIqAubs7vZ83QZzRah4VtxAqtqnAlucZCQJSOdYODR6UFFVxhSpC8rUDCefigPrIVh9RA9RFLjd_e-WGCIIKtwOC6axUZaPaD1I38OfT-AZFPuQDjQfQ1A" /><input name="Active" type="hidden" value="false" /></form>
+    </section>
+            <div class="button-row"><button class="btn btn--danger" type="button" data-dialog-open="replace-principal">Replace code</button></div>
+            <dialog id="replace-principal" aria-labelledby="replace-principal-title"><form method="post" class="stack" action="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d001?handler=Replace"><h2 id="replace-principal-title">Replace QDOS</h2><p>0 allocated cases remain with their existing references.</p><input type="hidden" name="ExpectedVersion" value="5" /><input type="hidden" name="Tab" value="contact" /><input type="hidden" data-val="true" data-val-required="The ReplacementExpectedVersion field is required." id="ReplacementExpectedVersion" name="ReplacementExpectedVersion" value="4" /><input type="hidden" id="ReplacementOperationKey" name="ReplacementOperationKey" value="a449d79fe69e4e3ebeaaa4bfc0abd950" /><fieldset class="stack"><div class="field"><label class="req" for="SuccessorCode">New principal code</label><input autocomplete="off" type="text" data-val="true" data-val-length="The field SuccessorCode must be a string with a maximum length of 20." data-val-length-max="20" data-val-required="The SuccessorCode field is required." id="SuccessorCode" maxlength="20" name="SuccessorCode" value="" /><span class="field-validation-valid" data-valmsg-for="SuccessorCode" data-valmsg-replace="true"></span></div><div class="button-row"><button class="btn" type="button" data-dialog-close="replace-principal">Cancel</button><button type="submit" class="btn btn--danger" data-busy-label="Replacing&#x2026;">Replace code</button></div></fieldset><input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAADNGqzxXOAHTmIqAubs7vZ83QZzRah4VtxAqtqnAlucZCQJSOdYODR6UFFVxhSpC8rUDCefigPrIVh9RA9RFLjd_e-WGCIIKtwOC6axUZaPaD1I38OfT-AZFPuQDjQfQ1A" /></form></dialog>
+</div></div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+    
+<div class="dialog-backdrop" data-dialog="account-dialog" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="account-dialog-title">
+        <div class="dialog-head">
+            <h2 id="account-dialog-title" tabindex="-1">Account</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body">
+            <div class="definition-list">
+                <dl class="definition"><dt>Name</dt><dd>alex</dd></dl>
+                <dl class="definition"><dt>Role</dt><dd>Administrator</dd></dl>
+                <dl class="definition"><dt>Idle lock</dt><dd>2 hours</dd></dl>
+            </div>
+        </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn" data-dialog-close>Close</button>
+            <a class="btn" href="/ReleaseNotes">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-flag" /></svg>
+                <span>Release notes</span>
+            </a>
+            <button type="button" class="btn" data-dialog-open="problem-dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-alert-triangle" /></svg>
+                <span>Report a problem</span>
+            </button>
+            <a class="btn" href="/Account/PasswordChange">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-key" /></svg>
+                <span>Change password</span>
+            </a>
+            <form method="post" action="/Account/SignOut">
+                <button type="submit" class="btn btn--danger" data-busy-label="Signing out&#x2026;">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-log-out" /></svg>
+                    <span>Sign out</span>
+                </button>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAADNGqzxXOAHTmIqAubs7vZ83QZzRah4VtxAqtqnAlucZCQJSOdYODR6UFFVxhSpC8rUDCefigPrIVh9RA9RFLjd_e-WGCIIKtwOC6axUZaPaD1I38OfT-AZFPuQDjQfQ1A" /></form>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="notifications-dialog" data-dialog-open-on-load="" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="notifications-dialog-title">
+        <div class="dialog-head">
+            <h2 id="notifications-dialog-title" tabindex="-1">Notifications</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body dialog-body--list">
+                <p class="empty-state" role="status">No notifications</p>
+        </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn btn--dark" data-dialog-close>Close</button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="command-dialog" hidden>
+    <section class="dialog command-dialog" role="dialog" aria-modal="true" aria-labelledby="command-dialog-title">
+        <div class="dialog-head">
+            <h2 id="command-dialog-title" tabindex="-1">Search Pegasus</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="command-search">
+            <label class="sr-only" for="command-input">Search</label>
+            <input id="command-input" type="search" autocomplete="off" data-command-palette-input aria-controls="command-results" />
+        </div>
+        <div id="command-results" class="command-results" role="listbox" aria-label="Search results" data-command-results>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                <span><strong>Work Centre</strong></span>
+            </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Inbox">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                    <span><strong>Inbox</strong></span>
+                </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Upload">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                    <span><strong>Upload</strong></span>
+                </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Cases">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list" /></svg>
+                <span><strong>Cases</strong></span>
+            </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Search">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-folder-open" /></svg>
+                <span><strong>Search</strong></span>
+            </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Administration">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-grid" /></svg>
+                    <span><strong>Administration</strong></span>
+                </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Search?query=" data-command-fallback>
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                <span><strong>Search Cases for <span data-command-fallback-term></span></strong></span>
+                <span class="kbd" aria-hidden="true">Enter</span>
+            </button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="problem-dialog" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="problem-dialog-title">
+        <form method="post" data-problem-form data-problem-case-sections="overview,claim,original-report,inspection,vehicle,damage,valuation,estimate,settlement,report,files,notes,queries" action="/ProblemReports?handler=Report">
+            <input type="hidden" name="operationKey" value="f19461bf41984d69b1ca961ea810e420" />
+            <div class="dialog-head">
+                <h2 id="problem-dialog-title" tabindex="-1">Report a problem</h2>
+                <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                </button>
+            </div>
+            <div class="dialog-body stack">
+                <input type="hidden" name="returnUrl" value="" data-problem-return />
+                <input type="hidden" name="route" value="" data-problem-route />
+                <input type="hidden" name="method" value="GET" />
+                <input type="hidden" name="traceId" value="00-8fe700ea9e791d863c5e39d9d5167b29-07d1b8b678afbbd8-00" />
+                <input type="hidden" name="caseReference" value="" data-problem-case />
+                <input type="hidden" name="viewport" value="" data-problem-viewport />
+                <input type="hidden" name="editing" value="false" data-problem-editing />
+                <input type="hidden" name="errors" value="" data-problem-errors />
+                <div class="field">
+                    <label for="problem-description">What happened</label>
+                    <textarea id="problem-description" name="description" rows="6" maxlength="4000" required></textarea>
+                </div>
+            </div>
+            <div class="dialog-foot">
+                <button type="button" class="btn" data-dialog-close>Cancel</button>
+                <button type="submit" class="btn btn--primary" data-busy-label="Sending&#x2026;">Send</button>
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAADNGqzxXOAHTmIqAubs7vZ83QZzRah4VtxAqtqnAlucZCQJSOdYODR6UFFVxhSpC8rUDCefigPrIVh9RA9RFLjd_e-WGCIIKtwOC6axUZaPaD1I38OfT-AZFPuQDjQfQ1A" /></form>
+    </section>
+</div>
+
+    <div class="toast-region" aria-live="polite" data-toast-region></div>
+
+    <script src="/js/site.vubujkpeou.js"></script>
+    
+    <script src="/js/contacts-edit.5xqaomaje1.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en" data-busy-label="Working&#x2026;" data-busy-still="Still" data-icon-sprite="/images/lucide-sprite.04agn8pzs5.svg">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts · Pegasus</title>
+    <link rel="stylesheet" href="/css/site.qz2wg1x280.css" />
+    
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell" data-app-shell>
+        <header class="app-rail">
+            <a class="brand" aria-label="Pegasus home" href="/">
+                <img src="/images/pegasus-mark-refined-128.tctmpgz0uo.png" alt="" aria-hidden="true" />
+                <span class="brand-copy"><strong>PEGASUS</strong><span>Case management</span></span>
+            </a>
+            <nav class="primary-nav" aria-label="Primary">
+                <div class="nav-label">Work</div>
+                <a class="nav-link" href="/">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                    <span>Work Centre</span>
+                </a>
+                    <a class="nav-link" href="/Inbox">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                        <span>Inbox</span>
+                    </a>
+                    <a class="nav-link" href="/Upload">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                        <span>Upload</span>
+                    </a>
+                <a class="nav-link" href="/Cases">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list-checks" /></svg>
+                    <span>Cases</span>
+                </a>
+                <a class="nav-link" href="/Search">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <span>Search</span>
+                </a>
+                    <div class="nav-label">Manage</div>
+                    <a class="nav-link" aria-current="page" href="/Administration">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+                        <span>Administration</span>
+                    </a>
+            </nav>
+            <div class="rail-spacer"></div>
+            <button type="button" class="rail-collapse" data-rail-toggle aria-expanded="true" aria-label="Collapse navigation"
+                    data-label-collapse="Collapse navigation" data-label-expand="Expand navigation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-left" /></svg>
+                <span>Collapse</span>
+            </button>
+            <div class="rail-health">
+                <div class="rail-health-line"><span class="health-dot"></span><span>Current · 11:30</span></div>
+            </div>
+                <div class="rail-user" role="group" aria-label="User">
+                    <span class="avatar" aria-hidden="true">IU</span>
+                    <div><strong>alex</strong><small>Administrator</small></div>
+                    <button type="button" class="icon-button" data-dialog-open="account-dialog" aria-label="Account menu">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                    </button>
+                </div>
+        </header>
+        <div class="app-column">
+            <section class="utility-bar" aria-label="Utility bar">
+                <div class="utility-freshness"><span class="health-dot"></span><span>Current · 11:30</span></div>
+                <form class="utility-search" role="search" method="get" action="/Search">
+                    <label class="sr-only" for="global-search">Search Pegasus</label>
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <input id="global-search" type="search" name="query" data-command-input aria-label="Search Pegasus" placeholder="Search cases, references or people" autocomplete="off" />
+                    <span class="shortcut-hint" aria-hidden="true">Ctrl K</span>
+                </form>
+                <div class="utility-actions">
+                    <a class="btn btn--primary" href="/Cases/Create">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-plus" /></svg>
+                        <span>New case</span>
+                    </a>
+                    <span class="bell-wrap">
+                        <button type="button" class="icon-button" data-dialog-open="notifications-dialog" aria-label="Notifications">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bell" /></svg>
+                        </button>
+                    </span>
+                        <button type="button" class="icon-button utility-account" data-dialog-open="account-dialog" aria-label="Account menu">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                        </button>
+                </div>
+            </section>
+            <main id="main-content" class="app-main" tabindex="-1">
+                <div class="content">
+                    <header class="page-header">
+    <div class="page-title">
+            <p class="eyebrow">Administration</p>
+        <h1>Contacts</h1>
+    </div>
+</header>
+
+<div class="admin-layout">
+    <nav class="admin-nav panel" aria-label="Administration areas">
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-people">
+        <span class="admin-nav__label" id="admin-nav-people">People and access</span>
+        <a href="/Administration/Accounts">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-user" /></svg>
+            <span>Staff accounts &amp; roles</span>
+        </a>
+        <a aria-current="page" href="/Administration/Contacts">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-shield" /></svg>
+            <span>Contacts</span>
+        </a>
+    </div>
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-configuration">
+        <span class="admin-nav__label" id="admin-nav-configuration">Configuration</span>
+        <a href="/Administration/Configuration">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+            <span>Workflow configuration</span>
+        </a>
+        <a href="/Administration/Mailboxes">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-mail" /></svg>
+            <span>Mail settings</span>
+        </a>
+        <a href="/Administration/EmailTemplates">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-mail-open" /></svg>
+            <span>E-mail templates</span>
+        </a>
+        <a href="/Administration/ValuationPresets">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-pound-sterling" /></svg>
+            <span>Valuation presets</span>
+        </a>
+    </div>
+    <div class="admin-nav__group" role="group" aria-labelledby="admin-nav-oversight">
+        <span class="admin-nav__label" id="admin-nav-oversight">Operations and oversight</span>
+        <a href="/Administration/Health">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-heart-pulse" /></svg>
+            <span>Service health</span>
+        </a>
+        <a href="/Administration/Logs">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-scroll-text" /></svg>
+            <span>Logs</span>
+        </a>
+        <a href="/Administration/Reports">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bar-chart" /></svg>
+            <span>Management Reports</span>
+        </a>
+        <a href="/Administration/ReleaseNotes">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-flag" /></svg>
+            <span>Release notes</span>
+        </a>
+        <a href="/Administration/ProblemReports">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-alert-triangle" /></svg>
+            <span>Problem reports</span>
+        </a>
+        <a href="/Administration/AiJobs">
+            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-sparkles" /></svg>
+            <span>AI jobs</span>
+        </a>
+            <a href="/Administration/Automation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bot" /></svg>
+                <span>Automation &amp; AI</span>
+            </a>
+    </div>
+</nav>
+
+    <div class="stack">
+        <section class="panel" aria-labelledby="contacts-title">
+            <div class="panel-head">
+                <h2 id="contacts-title">Contacts</h2>
+                <button class="btn btn--primary" type="button" data-dialog-open="contact-type-dialog">Add contact</button>
+            </div>
+            <form method="get" class="contact-toolbar" data-auto-submit>
+                <div class="field"><label for="Search">Name or contact</label><input type="search" autocomplete="off" id="Search" name="Search" value="" /></div>
+                <div class="field"><label for="Type">Type</label><select id="Type" name="Type"><option value="">All types</option> <option value="Principal">Principal</option>  <option value="ClaimSource">Claim Source</option>  <option value="Repairer">Repairer</option>  <option value="Storage">Storage</option>  <option value="ThirdPartyEngineer">Third Party Engineer</option> </select></div>
+                <button class="btn" type="submit">Apply</button>
+            </form>
+        </section>
+            <section class="panel" aria-labelledby="contacts-Principal-title">
+                <div class="panel-head"><h2 id="contacts-Principal-title">Principals</h2></div>
+                <div class="table-wrap no-border"><table><caption class="sr-only">Principals</caption><thead><tr> <th>Principal code</th> <th>Name</th><th>Contact person</th><th>Email</th><th>Phone</th><th>Last case</th><th>Status</th><th><span class="sr-only">Open</span></th></tr></thead><tbody>
+                    <tr> <td class="mono">ABRAHAMS</td> <td>Abrahams Solicitors</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d021">Open</a></td></tr>
+                    <tr> <td class="mono">ACSP</td> <td>Accident Specialists</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d011">Open</a></td></tr>
+                    <tr> <td class="mono">ASLS</td> <td>Affinity Seven Law Solicitors</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d022">Open</a></td></tr>
+                    <tr> <td class="mono">ALISON</td> <td>Alison Law Solicitors</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d012">Open</a></td></tr>
+                    <tr> <td class="mono">ALL</td> <td>Alliance &amp; Cooper</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d023">Open</a></td></tr>
+                    <tr> <td class="mono">AS</td> <td>Aman Solicitors Advocates</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d024">Open</a></td></tr>
+                    <tr> <td class="mono">AMS</td> <td>AMS Solicitors</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d010">Open</a></td></tr>
+                    <tr> <td class="mono">ALS</td> <td>Auto Logistic Solutions Ltd</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d00e">Open</a></td></tr>
+                    <tr> <td class="mono">AVI</td> <td>Avisons Solicitors</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d025">Open</a></td></tr>
+                    <tr> <td class="mono">AX</td> <td>AX</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d003">Open</a></td></tr>
+                    <tr> <td class="mono">BC</td> <td>Baker Coleman</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d00f">Open</a></td></tr>
+                    <tr> <td class="mono">BAKER</td> <td>Baker Hardman</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d026">Open</a></td></tr>
+                    <tr> <td class="mono">BLACK</td> <td>Blackstone Legal</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d008">Open</a></td></tr>
+                    <tr> <td class="mono">CASTLE</td> <td>Castle</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d027">Open</a></td></tr>
+                    <tr> <td class="mono">CS</td> <td>Claim Specialists</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d013">Open</a></td></tr>
+                    <tr> <td class="mono">CW</td> <td>Countrywide</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d028">Open</a></td></tr>
+                    <tr> <td class="mono">DFD</td> <td>Davison Flynn Duke Solicitors</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d00a">Open</a></td></tr>
+                    <tr> <td class="mono">FW</td> <td>Fairway Legal</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d004">Open</a></td></tr>
+                    <tr> <td class="mono">FRZ</td> <td>Fraz</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--neutral">Disabled</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d035">Open</a></td></tr>
+                    <tr> <td class="mono">GG</td> <td>Graham Coffey</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d029">Open</a></td></tr>
+                    <tr> <td class="mono">HTU</td> <td>HTU Assessors Ltd</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d014">Open</a></td></tr>
+                    <tr> <td class="mono">KERR</td> <td>Kerr Brown Partnership</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d015">Open</a></td></tr>
+                    <tr> <td class="mono">KMR</td> <td>KMR Law Ltd</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d016">Open</a></td></tr>
+                    <tr> <td class="mono">KBS</td> <td>Knightsbridge Solicitors</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d00b">Open</a></td></tr>
+                    <tr> <td class="mono">LEX</td> <td>LEX Solicitors</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d02a">Open</a></td></tr>
+                    <tr> <td class="mono">LPS</td> <td>LPS Solicitors</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d02b">Open</a></td></tr>
+                    <tr> <td class="mono">MATT</td> <td>Matt Rowland Solicitors</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d02c">Open</a></td></tr>
+                    <tr> <td class="mono">MBH</td> <td>MBH Solicitors</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d02d">Open</a></td></tr>
+                    <tr> <td class="mono">MIDAS</td> <td>Midas</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d017">Open</a></td></tr>
+                    <tr> <td class="mono">MP</td> <td>Montreal Prestige</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d00c">Open</a></td></tr>
+                    <tr> <td class="mono">MOTORX</td> <td>Motor X Assistance Ltd</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d018">Open</a></td></tr>
+                    <tr> <td class="mono">OAK</td> <td>Oakwood Solicitors</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d006">Open</a></td></tr>
+                    <tr> <td class="mono">PCH</td> <td>PCH / Connexus</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d002">Open</a></td></tr>
+                    <tr> <td class="mono">QCL</td> <td>QC Law</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d005">Open</a></td></tr>
+                    <tr> <td class="mono">QDOS</td> <td>QDOS</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d001">Open</a></td></tr>
+                    <tr> <td class="mono">RL</td> <td>Regent Law Ltd</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d02e">Open</a></td></tr>
+                    <tr> <td class="mono">RELAY</td> <td>Relay Motor Group</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d02f">Open</a></td></tr>
+                    <tr> <td class="mono">RJS</td> <td>Robert James Solicitors</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d009">Open</a></td></tr>
+                    <tr> <td class="mono">ROZZII</td> <td>ROZZII/Green Destinations</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d030">Open</a></td></tr>
+                    <tr> <td class="mono">SS</td> <td>Savas &amp; Savage Solicitors Ltd</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d01a">Open</a></td></tr>
+                    <tr> <td class="mono">SIX</td> <td>Six Ways Marketing Ltd</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d019">Open</a></td></tr>
+                    <tr> <td class="mono">SBL</td> <td>Smart Business Link</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d007">Open</a></td></tr>
+                    <tr> <td class="mono">STALLION</td> <td>Stallion</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d031">Open</a></td></tr>
+                    <tr> <td class="mono">SWADE</td> <td>Swade Solutions Ltd</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d01b">Open</a></td></tr>
+                    <tr> <td class="mono">SWAN</td> <td>Swan Solicitors</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d01c">Open</a></td></tr>
+                    <tr> <td class="mono">TP</td> <td>Taylor Price Solicitors</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d01e">Open</a></td></tr>
+                    <tr> <td class="mono">TEN</td> <td>Ten Legal</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d01d">Open</a></td></tr>
+                    <tr> <td class="mono">TA</td> <td>Turnams</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d032">Open</a></td></tr>
+                    <tr> <td class="mono">WALKER</td> <td>Walker Prestons</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d01f">Open</a></td></tr>
+                    <tr> <td class="mono">WIL</td> <td>Williams &amp; Co</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td><td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000d033">Open</a></td></tr>
+                </tbody></table></div>
+                    <div class="panel-foot">
+                        <nav class="pagination" aria-label="Principals pages">
+                            <span>Page 1</span>
+                                <a class="btn btn--small" href="/Administration/Contacts?type=Principal&amp;pageNumber=2">Next</a>
+                        </nav>
+                    </div>
+            </section>
+            <section class="panel" aria-labelledby="contacts-ClaimSource-title">
+                <div class="panel-head"><h2 id="contacts-ClaimSource-title">Claim Sources</h2></div>
+                <div class="table-wrap no-border"><table><caption class="sr-only">Claim Sources</caption><thead><tr><th>Name</th><th>Contact person</th><th>Email</th><th>Phone</th> <th>Linked principals</th> <th>Last case</th><th>Status</th><th><span class="sr-only">Open</span></th></tr></thead><tbody>
+                    <tr><td>Car 2 Go</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td> <td class="mono">&#x2014;</td> <td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000f001">Open</a></td></tr>
+                    <tr><td>CarClaims</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td> <td class="mono">&#x2014;</td> <td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000f003">Open</a></td></tr>
+                    <tr><td>Easdons</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td> <td class="mono">&#x2014;</td> <td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000f006">Open</a></td></tr>
+                    <tr><td>Expert Claims</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td> <td class="mono">&#x2014;</td> <td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000f004">Open</a></td></tr>
+                    <tr><td>Guardian Accident Claims</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td> <td class="mono">&#x2014;</td> <td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000f007">Open</a></td></tr>
+                    <tr><td>Hackney Solutions</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td> <td class="mono">&#x2014;</td> <td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000f008">Open</a></td></tr>
+                    <tr><td>iRevolution Repair Network</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td> <td class="mono">&#x2014;</td> <td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000f00b">Open</a></td></tr>
+                    <tr><td>James Claims</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td> <td class="mono">&#x2014;</td> <td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000f009">Open</a></td></tr>
+                    <tr><td>Northline Claims</td><td>Claims desk</td><td class="mono">claims@northline.example</td><td class="mono">01612345670</td> <td class="mono">QDOS</td> <td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/551691a7-72a8-41c9-93b9-aba02269c503">Open</a></td></tr>
+                    <tr><td>Rapid Rental Solutions</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td> <td class="mono">&#x2014;</td> <td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000f005">Open</a></td></tr>
+                    <tr><td>SMC</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td> <td class="mono">&#x2014;</td> <td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000f002">Open</a></td></tr>
+                    <tr><td>Swinton</td><td>&#x2014;</td><td class="mono">&#x2014;</td><td class="mono">&#x2014;</td> <td class="mono">&#x2014;</td> <td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/00000000-0000-4000-8000-00000000f00a">Open</a></td></tr>
+                </tbody></table></div>
+            </section>
+            <section class="panel" aria-labelledby="contacts-Repairer-title">
+                <div class="panel-head"><h2 id="contacts-Repairer-title">Repairers</h2></div>
+                <div class="table-wrap no-border"><table><caption class="sr-only">Repairers</caption><thead><tr><th>Name</th><th>Contact person</th><th>Email</th><th>Phone</th> <th>Postcode</th>  <th>Linked principals</th> <th>Last case</th><th>Status</th><th><span class="sr-only">Open</span></th></tr></thead><tbody>
+                    <tr><td>Harbour Garage Group</td><td>Priya Nair</td><td class="mono">repairs@harbourgarage.example</td><td class="mono">01914567890</td> <td>SR1 2AB</td>  <td class="mono">&#x2014;</td> <td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/adb5500d-8b45-4dc3-b3c1-d007d2f60c94">Open</a></td></tr>
+                    <tr><td>Redfern Bodyworks</td><td>Sam Redfern</td><td class="mono">sam@redfernbodyworks.example</td><td class="mono">01132345678</td> <td>LS11 5DB</td>  <td class="mono">QDOS</td> <td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/a868eed1-302d-46b3-82d2-4e6a5bdf2377">Open</a></td></tr>
+                </tbody></table></div>
+            </section>
+            <section class="panel" aria-labelledby="contacts-Storage-title">
+                <div class="panel-head"><h2 id="contacts-Storage-title">Storage</h2></div>
+                <div class="table-wrap no-border"><table><caption class="sr-only">Storage</caption><thead><tr><th>Name</th><th>Contact person</th><th>Email</th><th>Phone</th> <th>Postcode</th>  <th>Linked principals</th> <th>Last case</th><th>Status</th><th><span class="sr-only">Open</span></th></tr></thead><tbody>
+                    <tr><td>Wakefield Vehicle Storage</td><td>Yard office</td><td class="mono">yard@wakefieldstorage.example</td><td class="mono">01924765432</td> <td>WF1 5PF</td>  <td class="mono">&#x2014;</td> <td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/1c8ffcc7-680e-412f-a145-dd50a9d8c8be">Open</a></td></tr>
+                </tbody></table></div>
+            </section>
+            <section class="panel" aria-labelledby="contacts-ThirdPartyEngineer-title">
+                <div class="panel-head"><h2 id="contacts-ThirdPartyEngineer-title">Third Party Engineers</h2></div>
+                <div class="table-wrap no-border"><table><caption class="sr-only">Third Party Engineers</caption><thead><tr><th>Name</th><th>Contact person</th><th>Email</th><th>Phone</th> <th>Linked principals</th> <th>Last case</th><th>Status</th><th><span class="sr-only">Open</span></th></tr></thead><tbody>
+                    <tr><td>Tees Valley Engineering</td><td>Ian Brook</td><td class="mono">ian@teesvalleyeng.example</td><td class="mono">01642123456</td> <td class="mono">&#x2014;</td> <td>&#x2014;</td><td><span class="status status--navy">Active</span>
+</td><td class="right"><a class="btn btn--small" href="/Administration/Contacts/Edit/0eb96906-d56b-4f52-a219-25268d4ea663">Open</a></td></tr>
+                </tbody></table></div>
+            </section>
+    </div>
+</div>
+
+<div class="dialog-backdrop" data-dialog="contact-type-dialog" hidden>
+    <section class="dialog dialog--compact" role="dialog" aria-modal="true" aria-labelledby="contact-type-title">
+        <div class="dialog-head"><h2 id="contact-type-title" tabindex="-1" data-dialog-initial-focus>Add contact</h2><button class="dialog-close" type="button" data-dialog-close aria-label="Close"><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg></button></div>
+        <div class="dialog-body"><div class="contact-kind-grid"> <a class="contact-kind" href="/Administration/Contacts?createType=Principal&amp;pageNumber=1"><strong>Principal</strong></a>  <a class="contact-kind" href="/Administration/Contacts?createType=ClaimSource&amp;pageNumber=1"><strong>Claim Source</strong></a>  <a class="contact-kind" href="/Administration/Contacts?createType=Repairer&amp;pageNumber=1"><strong>Repairer</strong></a>  <a class="contact-kind" href="/Administration/Contacts?createType=Storage&amp;pageNumber=1"><strong>Storage</strong></a>  <a class="contact-kind" href="/Administration/Contacts?createType=ThirdPartyEngineer&amp;pageNumber=1"><strong>Third Party Engineer</strong></a> </div></div>
+        <div class="dialog-foot"><button class="btn" type="button" data-dialog-close>Cancel</button></div>
+    </section>
+</div>
+
+    <div class="dialog-backdrop" data-dialog="contact-create-dialog" data-dialog-open-on-load="true" hidden>
+    <section class="dialog dialog--wide dialog--contact" role="dialog" aria-modal="true" aria-labelledby="contact-create-title">
+        <div class="dialog-head"><h2 id="contact-create-title" tabindex="-1" data-dialog-initial-focus>New Repairer</h2><a class="dialog-close" aria-label="Close" href="/Administration/Contacts?pageNumber=1"><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg></a></div>
+        <form id="contact-create-form" method="post" action="/Administration/Contacts?handler=Create">
+            <input type="hidden" id="Search" name="Search" value="" /><input type="hidden" id="Type" name="Type" value="" /><input type="hidden" data-val="true" data-val-required="The PageNumber field is required." id="PageNumber" name="PageNumber" value="1" />
+            <input type="hidden" id="CreateType" name="CreateType" value="Repairer" /><input type="hidden" data-val="true" data-val-required="The ContactId field is required." id="ContactId" name="ContactId" value="a587b7e8-4d38-4e4b-bc6c-7fed1cfa0fb7" /><input type="hidden" data-val="true" data-val-required="The OperationKey field is required." id="OperationKey" name="OperationKey" value="d969f8e71ad44dd58d4343db813c2fe3" />
+            <div class="dialog-body stack">
+                
+                <div class="form-grid form-grid--2">
+                    <div class="field field-wide"><label class="req" for="Name">Organisation name</label><input autocomplete="organization" type="text" data-val="true" data-val-length="The field Name must be a string with a maximum length of 300." data-val-length-max="300" data-val-required="The Name field is required." id="Name" maxlength="300" name="Name" value="" /><span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span></div>
+                    <div class="field"><label for="ContactPerson">Contact person</label><input autocomplete="name" type="text" data-val="true" data-val-length="The field ContactPerson must be a string with a maximum length of 200." data-val-length-max="200" id="ContactPerson" maxlength="200" name="ContactPerson" value="" /><span class="field-validation-valid" data-valmsg-for="ContactPerson" data-valmsg-replace="true"></span></div>
+                    <div class="field"><label for="Email">Email</label><input type="email" autocomplete="email" data-val="true" data-val-length="The field Email must be a string with a maximum length of 320." data-val-length-max="320" id="Email" maxlength="320" name="Email" value="" /><span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span></div>
+                    <div class="field"><label for="Telephone">Phone</label><input type="tel" inputmode="tel" pattern="^\+?[0-9 ]+$" autocomplete="tel" data-val="true" data-val-length="The field Telephone must be a string with a maximum length of 50." data-val-length-max="50" id="Telephone" maxlength="50" name="Telephone" value="" /><span class="field-validation-valid" data-valmsg-for="Telephone" data-valmsg-replace="true"></span></div>
+                    <div class="field field-tall"><label for="Address">Address</label><textarea rows="2" autocomplete="street-address" data-val="true" data-val-length="The field Address must be a string with a maximum length of 1000." data-val-length-max="1000" id="Address" maxlength="1000" name="Address">
+</textarea><span class="field-validation-valid" data-valmsg-for="Address" data-valmsg-replace="true"></span></div>
+                    <div class="field"><label for="Postcode">Postcode</label><input autocomplete="postal-code" type="text" data-val="true" data-val-length="The field Postcode must be a string with a maximum length of 20." data-val-length-max="20" id="Postcode" maxlength="20" name="Postcode" value="" /><span class="field-validation-valid" data-valmsg-for="Postcode" data-valmsg-replace="true"></span></div>
+                        <div class="field"><label for="AssociatedPrincipalIds">Linked principals</label><select multiple size="4" data-val="true" data-val-required="The AssociatedPrincipalIds field is required." id="AssociatedPrincipalIds" name="AssociatedPrincipalIds"> <option value="00000000-0000-4000-8000-00000000c021">Abrahams Solicitors · ABRAHAMS</option>  <option value="00000000-0000-4000-8000-00000000c011">Accident Specialists · ACSP</option>  <option value="00000000-0000-4000-8000-00000000c022">Affinity Seven Law Solicitors · ASLS</option>  <option value="00000000-0000-4000-8000-00000000c012">Alison Law Solicitors · ALISON</option>  <option value="00000000-0000-4000-8000-00000000c023">Alliance &amp; Cooper · ALL</option>  <option value="00000000-0000-4000-8000-00000000c024">Aman Solicitors Advocates · AS</option>  <option value="00000000-0000-4000-8000-00000000c010">AMS Solicitors · AMS</option>  <option value="00000000-0000-4000-8000-00000000c00e">Auto Logistic Solutions Ltd · ALS</option>  <option value="00000000-0000-4000-8000-00000000c025">Avisons Solicitors · AVI</option>  <option value="00000000-0000-4000-8000-00000000c003">AX · AX</option>  <option value="00000000-0000-4000-8000-00000000c00f">Baker Coleman · BC</option>  <option value="00000000-0000-4000-8000-00000000c026">Baker Hardman · BAKER</option>  <option value="00000000-0000-4000-8000-00000000c008">Blackstone Legal · BLACK</option>  <option value="00000000-0000-4000-8000-00000000c027">Castle · CASTLE</option>  <option value="00000000-0000-4000-8000-00000000c013">Claim Specialists · CS</option>  <option value="00000000-0000-4000-8000-00000000c028">Countrywide · CW</option>  <option value="00000000-0000-4000-8000-00000000c00a">Davison Flynn Duke Solicitors · DFD</option>  <option value="00000000-0000-4000-8000-00000000c004">Fairway Legal · FW</option>  <option value="00000000-0000-4000-8000-00000000c029">Graham Coffey · GG</option>  <option value="00000000-0000-4000-8000-00000000c014">HTU Assessors Ltd · HTU</option>  <option value="00000000-0000-4000-8000-00000000c015">Kerr Brown Partnership · KERR</option>  <option value="00000000-0000-4000-8000-00000000c016">KMR Law Ltd · KMR</option>  <option value="00000000-0000-4000-8000-00000000c00b">Knightsbridge Solicitors · KBS</option>  <option value="00000000-0000-4000-8000-00000000c02a">LEX Solicitors · LEX</option>  <option value="00000000-0000-4000-8000-00000000c02b">LPS Solicitors · LPS</option>  <option value="00000000-0000-4000-8000-00000000c02c">Matt Rowland Solicitors · MATT</option>  <option value="00000000-0000-4000-8000-00000000c02d">MBH Solicitors · MBH</option>  <option value="00000000-0000-4000-8000-00000000c017">Midas · MIDAS</option>  <option value="00000000-0000-4000-8000-00000000c00c">Montreal Prestige · MP</option>  <option value="00000000-0000-4000-8000-00000000c018">Motor X Assistance Ltd · MOTORX</option>  <option value="00000000-0000-4000-8000-00000000c006">Oakwood Solicitors · OAK</option>  <option value="00000000-0000-4000-8000-00000000c002">PCH / Connexus · PCH</option>  <option value="00000000-0000-4000-8000-00000000c005">QC Law · QCL</option>  <option value="00000000-0000-4000-8000-00000000c001">QDOS · QDOS</option>  <option value="00000000-0000-4000-8000-00000000c02e">Regent Law Ltd · RL</option>  <option value="00000000-0000-4000-8000-00000000c02f">Relay Motor Group · RELAY</option>  <option value="00000000-0000-4000-8000-00000000c009">Robert James Solicitors · RJS</option>  <option value="00000000-0000-4000-8000-00000000c030">ROZZII/Green Destinations · ROZZII</option>  <option value="00000000-0000-4000-8000-00000000c01a">Savas &amp; Savage Solicitors Ltd · SS</option>  <option value="00000000-0000-4000-8000-00000000c019">Six Ways Marketing Ltd · SIX</option>  <option value="00000000-0000-4000-8000-00000000c007">Smart Business Link · SBL</option>  <option value="00000000-0000-4000-8000-00000000c031">Stallion · STALLION</option>  <option value="00000000-0000-4000-8000-00000000c01b">Swade Solutions Ltd · SWADE</option>  <option value="00000000-0000-4000-8000-00000000c01c">Swan Solicitors · SWAN</option>  <option value="00000000-0000-4000-8000-00000000c01e">Taylor Price Solicitors · TP</option>  <option value="00000000-0000-4000-8000-00000000c01d">Ten Legal · TEN</option>  <option value="00000000-0000-4000-8000-00000000c032">Turnams · TA</option>  <option value="00000000-0000-4000-8000-00000000c01f">Walker Prestons · WALKER</option>  <option value="00000000-0000-4000-8000-00000000c033">Williams &amp; Co · WIL</option>  <option value="00000000-0000-4000-8000-00000000c020">Woodlands Solicitors · WLS</option>  <option value="00000000-0000-4000-8000-00000000c00d">YM Law / Network HD UK · YML</option>  <option value="00000000-0000-4000-8000-00000000c034">Zenith Lawyers · ZEN</option> </select><small>Optional. Select every Principal this repairer works with.</small></div>
+                </div>
+                <div class="button-row"><button class="btn btn--small" type="submit" formaction="?handler=FindMatches" formnovalidate data-busy-label="Checking&#x2026;">Check existing contacts</button></div>
+            </div>
+            <div class="dialog-foot"><a class="btn" href="/Administration/Contacts?pageNumber=1">Cancel</a><button class="btn btn--primary" type="submit" data-busy-label="Saving&#x2026;">Save Repairer</button></div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAL3jpbzH3O583Ze1qj-0CWHjaO_h8nTfkDW5PhFWIZvgD5Xx4IJG_eDMaikpHDoi_DBxRZaM_Cilk6UqqBV2TTAME48Dhh2fuguVx8hEhXekOgvinE8I6sc1nCRIz7Mio" /></form>
+    </section>
+    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+    
+<div class="dialog-backdrop" data-dialog="account-dialog" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="account-dialog-title">
+        <div class="dialog-head">
+            <h2 id="account-dialog-title" tabindex="-1">Account</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body">
+            <div class="definition-list">
+                <dl class="definition"><dt>Name</dt><dd>alex</dd></dl>
+                <dl class="definition"><dt>Role</dt><dd>Administrator</dd></dl>
+                <dl class="definition"><dt>Idle lock</dt><dd>2 hours</dd></dl>
+            </div>
+        </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn" data-dialog-close>Close</button>
+            <a class="btn" href="/ReleaseNotes">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-flag" /></svg>
+                <span>Release notes</span>
+            </a>
+            <button type="button" class="btn" data-dialog-open="problem-dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-alert-triangle" /></svg>
+                <span>Report a problem</span>
+            </button>
+            <a class="btn" href="/Account/PasswordChange">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-key" /></svg>
+                <span>Change password</span>
+            </a>
+            <form method="post" action="/Account/SignOut">
+                <button type="submit" class="btn btn--danger" data-busy-label="Signing out&#x2026;">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-log-out" /></svg>
+                    <span>Sign out</span>
+                </button>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAL3jpbzH3O583Ze1qj-0CWHjaO_h8nTfkDW5PhFWIZvgD5Xx4IJG_eDMaikpHDoi_DBxRZaM_Cilk6UqqBV2TTAME48Dhh2fuguVx8hEhXekOgvinE8I6sc1nCRIz7Mio" /></form>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="notifications-dialog" data-dialog-open-on-load="" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="notifications-dialog-title">
+        <div class="dialog-head">
+            <h2 id="notifications-dialog-title" tabindex="-1">Notifications</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body dialog-body--list">
+                <p class="empty-state" role="status">No notifications</p>
+        </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn btn--dark" data-dialog-close>Close</button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="command-dialog" hidden>
+    <section class="dialog command-dialog" role="dialog" aria-modal="true" aria-labelledby="command-dialog-title">
+        <div class="dialog-head">
+            <h2 id="command-dialog-title" tabindex="-1">Search Pegasus</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="command-search">
+            <label class="sr-only" for="command-input">Search</label>
+            <input id="command-input" type="search" autocomplete="off" data-command-palette-input aria-controls="command-results" />
+        </div>
+        <div id="command-results" class="command-results" role="listbox" aria-label="Search results" data-command-results>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                <span><strong>Work Centre</strong></span>
+            </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Inbox">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                    <span><strong>Inbox</strong></span>
+                </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Upload">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                    <span><strong>Upload</strong></span>
+                </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Cases">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list" /></svg>
+                <span><strong>Cases</strong></span>
+            </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Search">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-folder-open" /></svg>
+                <span><strong>Search</strong></span>
+            </button>
+                <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Administration">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-grid" /></svg>
+                    <span><strong>Administration</strong></span>
+                </button>
+            <button type="button" class="command-result" role="option" aria-selected="false" data-route="/Search?query=" data-command-fallback>
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                <span><strong>Search Cases for <span data-command-fallback-term></span></strong></span>
+                <span class="kbd" aria-hidden="true">Enter</span>
+            </button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="problem-dialog" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="problem-dialog-title">
+        <form method="post" data-problem-form data-problem-case-sections="overview,claim,original-report,inspection,vehicle,damage,valuation,estimate,settlement,report,files,notes,queries" action="/ProblemReports?handler=Report">
+            <input type="hidden" name="operationKey" value="6b67f03f81be4d7fa351c32c0c605386" />
+            <div class="dialog-head">
+                <h2 id="problem-dialog-title" tabindex="-1">Report a problem</h2>
+                <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                </button>
+            </div>
+            <div class="dialog-body stack">
+                <input type="hidden" name="returnUrl" value="" data-problem-return />
+                <input type="hidden" name="route" value="" data-problem-route />
+                <input type="hidden" name="method" value="GET" />
+                <input type="hidden" name="traceId" value="00-41fc6d6300456893be7d103c85419bf9-cc92914c00810e73-00" />
+                <input type="hidden" name="caseReference" value="" data-problem-case />
+                <input type="hidden" name="viewport" value="" data-problem-viewport />
+                <input type="hidden" name="editing" value="false" data-problem-editing />
+                <input type="hidden" name="errors" value="" data-problem-errors />
+                <div class="field">
+                    <label for="problem-description">What happened</label>
+                    <textarea id="problem-description" name="description" rows="6" maxlength="4000" required></textarea>
+                </div>
+            </div>
+            <div class="dialog-foot">
+                <button type="button" class="btn" data-dialog-close>Cancel</button>
+                <button type="submit" class="btn btn--primary" data-busy-label="Sending&#x2026;">Send</button>
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAL3jpbzH3O583Ze1qj-0CWHjaO_h8nTfkDW5PhFWIZvgD5Xx4IJG_eDMaikpHDoi_DBxRZaM_Cilk6UqqBV2TTAME48Dhh2fuguVx8hEhXekOgvinE8I6sc1nCRIz7Mio" /></form>
+    </section>
+</div>
+
+    <div class="toast-region" aria-live="polite" data-toast-region></div>
+
+    <script src="/js/site.vubujkpeou.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,811 @@
+/* Case record (v26). Composes the shared v26 components in site.css (.fc
+   cells, panel heads, menus, notices, chips, collapse, sticky, workspace
+   grid); every rule here is Case-only. Sections follow the frame block. */
+
+/* ---- frame ---------------------------------------------------------------- */
+.case-record{min-width:0}
+.case-record .sticky-block{border-radius:var(--radius-lg) var(--radius-lg) 0 0}
+.case-record .ribbon-ref .ribbon-value{display:block}
+/* The reference and the registration keep their whole width and the other
+   facts hold a basis; chips that do not fit beside the facts take their own
+   row under them rather than squeezing the facts or running under the
+   actions. Below 1100px the ribbon's own wrap takes over. */
+@media(min-width:1101px){
+  .case-record .ribbon-facts{flex-wrap:wrap}
+  .case-record .ribbon .ribbon-item{flex-basis:96px}
+  .case-record .ribbon .ribbon-ref{flex:1.2 0 auto}
+  .case-record .ribbon .ribbon-registration{flex:0 0 auto}
+  .case-record .ribbon-chips{flex:0 1 auto;flex-wrap:wrap;align-content:center;row-gap:4px;padding-block:4px}
+}
+.case-record .ribbon-chips .status .icon{width:12px;height:12px}
+.case-record .lease-line{font-size:11px;color:var(--muted);font-family:var(--mono);white-space:nowrap}
+.case-record .lease-line.is-refused{color:var(--red);font-weight:700}
+.case-record .case-edit-badge{margin-right:2px}
+.case-record .ribbon-actions form{display:contents}
+.case-record .ribbon-actions .menu-body form{display:contents}
+
+/* Sections are panels; the head carries the title, an optional meta and the
+   actions cluster (primary, menu, Edit, availability, collapse). */
+.record-section.panel{scroll-margin-top:calc(var(--utility-h) + var(--sticky-h,97px) + 8px)}
+.record-section>.panel-head>.meta{font-size:12px;color:var(--quiet);font-weight:400;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.record-section .panel-actions form{display:contents}
+#section-estimate [data-glass-controls="launch"]:not([hidden]){display:contents}
+.record-section .panel-actions .btn--small .icon{width:13px;height:13px}
+.record-section .gated.avail{margin-left:0}
+.section-placeholder{min-height:120px;display:grid;place-items:center;color:var(--quiet);font-size:12.5px}
+.section-placeholder[data-lazy-state="failed"]{color:var(--danger)}
+
+/* Read-mode economy: the section-head Edit goes while a session is open;
+   a locked section keeps its availability sentence. */
+.case-record.is-editing [data-section-edit]{display:none}
+
+/* Source tags (.src-tag) are the shared site.css component. */
+.fc .fv.derived{color:var(--muted)}
+/* The record's Save form holds only hidden fields: it takes no place in the
+   section, so entering edit moves nothing. */
+.case-record #case-edit-form{display:contents}
+
+/* Aside: Figures and Next action. */
+.next-row{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:12.5px}
+.next-row+.next-row{margin-top:8px}
+.next-row.ai-next{border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:8px}
+.next-row .src-tag{margin-right:4px}
+/* Create audit as the next step, greyed with its reason as the Actions menu's item is. */
+.next-row .menu-gated{cursor:not-allowed}
+/* Views (v29 option 4): the aside's first card once the Case has its Audit;
+   the current view reads plain and strong, the other is a link. */
+[data-case-views] .next-row{gap:8px}
+[data-case-views] [aria-current="page"]{font-weight:600;color:var(--ink)}
+/* Linked cases: the finding wraps onto its own line rather than clipping in the 285px aside. */
+[data-case-linked-triage] .next-row{flex-wrap:wrap;justify-content:flex-start}
+[data-case-linked-triage] .linked-finding{flex-basis:100%}
+/* Next action (v35 design 8, operator, 8 October 2026) stacks the AI
+   drafts, Cancellation received, a stale generation's notice and its one
+   step. A Case requirement or report blocker as the step is drawn in full,
+   marked amber as incomplete; its control spans the card. */
+[data-next-action] .panel-body>*+*{margin-top:8px}
+.next-step{display:grid;gap:3px;overflow-wrap:anywhere}
+.next-step--item{padding:10px 12px;border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:var(--radius)}
+.next-step strong{font-size:13.5px;font-weight:650}
+.next-step small{font-size:11px;line-height:1.4;color:var(--muted)}
+.next-step .next-step-how{color:var(--quiet)}
+.next-step-go{width:100%}
+.next-step>*+.next-step-go,.next-step>*+form,.next-step>*+.menu-gated{margin-top:6px}
+.next-step form,.next-step .menu-gated{display:block}
+/* Report not ready: everything outstanding, folded until opened. The
+   requirement is the link; an amber dot marks each item, never a fill. */
+.report-not-ready>.panel-head h2{display:flex;align-items:center;gap:6px}
+.report-not-ready>.panel-head h2 .icon{width:15px;height:15px;color:var(--amber);flex:none}
+.report-not-ready>.panel-head .panel-collapse{margin-left:auto}
+.report-not-ready .outstanding-block+.outstanding-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
+.report-not-ready h3{display:flex;align-items:center;gap:6px;margin:0 0 8px;font-size:10.5px;color:var(--quiet);font-weight:650;text-transform:uppercase;letter-spacing:.08em}
+.report-not-ready h3 .icon{width:13px;height:13px;color:var(--amber);flex:none}
+.report-not-ready .blocker-group+.blocker-group{margin-top:10px}
+.report-not-ready .blocker-group-head{padding:0 0 4px;border-bottom:1px solid var(--line);font-size:11.5px;font-weight:650;color:var(--muted)}
+.report-not-ready .blocker-list{gap:0}
+.report-not-ready .blocker{position:relative;padding:6px 0 6px 12px;border:0;background:none;overflow-wrap:anywhere}
+.report-not-ready .blocker+.blocker{border-top:1px dashed var(--line)}
+.report-not-ready .blocker::before{content:"";position:absolute;left:1px;top:12px;width:6px;height:6px;border-radius:50%;background:var(--amber)}
+.report-not-ready .blocker small{font-size:11px;color:var(--muted);margin-top:2px}
+.report-not-ready .blocker small.blocker-how{color:var(--quiet)}
+.blocker-name{display:inline;padding:0;border:0;background:none;font:inherit;font-size:12px;font-weight:650;color:var(--ink);text-align:left;cursor:pointer;text-decoration:underline;text-decoration-color:var(--line-strong);text-underline-offset:2px}
+.blocker-name:hover{text-decoration-color:currentColor}
+span.blocker-name{cursor:default;text-decoration:none}
+.report-not-ready form{display:inline}
+/* A long list stays reachable (operator, 28 September 2026): beside the
+   sections the sticky aside is never taller than the space below the
+   sticky block and scrolls on its own; folded above them, the card's list
+   scrolls inside it so the sections stay near the top. */
+@media(min-width:1441px){.case-record .workspace-aside{max-height:calc(100vh - var(--utility-h) - var(--sticky-h,97px) - 32px);overflow-y:auto;overscroll-behavior:contain}}
+@media(max-width:1440px){.case-record .report-not-ready>.panel-body{max-height:400px;overflow-y:auto;overscroll-behavior:contain}}
+
+/* Overview */
+/* Nested sections (v28 P26): Damage and Valuation read inside Vehicle, one rule apart. */
+.record-section--nested{margin-top:-4px;border-top-left-radius:0;border-top-right-radius:0;border-top:0}
+.record-section--nested>.panel-head>h2{font-size:12.5px}
+/* Sub-card folds (v28 P45): the card's own chevron, remembered like the sections. */
+.sub-panel>h3 .panel-collapse{margin-left:auto;width:24px;height:24px}
+.sub-panel>h3 .rt+.panel-collapse{margin-left:8px}
+.sub-panel.is-collapsed>*:not(h3){display:none}
+.sub-panel.is-collapsed>h3{margin-bottom:0}
+.sub-panel.is-collapsed>h3 .panel-collapse .icon{transform:rotate(-90deg)}
+.overview-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:10px}
+.accident{border:1px solid var(--line);padding:10px 12px;border-radius:var(--radius)}
+.notes-band .fg.g2{column-gap:14px}
+.fc .fv.multi{white-space:pre-wrap}
+.audit-facts{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;margin:0;align-items:baseline}
+.audit-facts dt{font:600 10.5px var(--font);letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.audit-facts dd{margin:0;font-size:13px}
+.mono{font-family:var(--mono)}
+
+@media(max-width:1180px){.overview-grid{grid-template-columns:1fr 1fr}.notes-band .fg.g2{grid-template-columns:1fr}}
+@media(max-width:760px){.overview-grid{grid-template-columns:1fr}}
+/* A section head keeps its title whole; a long label in the actions truncates. */
+.case-record .record-section>.panel-head>h2{flex:0 0 auto}
+.case-record .record-section>.panel-head .panel-actions{min-width:0;display:flex;align-items:center;justify-content:flex-end;gap:6px;flex:1 1 auto}
+.case-record .record-section>.panel-head .gated{min-width:0;max-width:100%}
+.case-record .record-section>.panel-head .gated>span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+/* An empty value reads as the absent word, never in the figure face. */
+.case-record .fc .fv.empty.mono{font-family:var(--font)}
+
+/* Estimate import: the panel itself is the generous drop surface. The
+   temporary layer echoes the shared upload zone and stays out of layout. */
+/* Expanded, the shared .panel.is-expanded fixes the panel to the viewport. */
+#section-estimate[data-estimate-drop-target]:not(.is-expanded){position:relative}
+#section-estimate .estimate-import-drop-overlay{position:absolute;inset:0;z-index:5;display:grid;place-items:center;padding:18px;pointer-events:none;background:rgba(248,249,249,.88)}
+#section-estimate .estimate-import-drop-overlay[hidden]{display:none}
+#section-estimate .estimate-import-drop-card{display:grid;justify-items:center;gap:6px;width:min(100%,520px);padding:24px;border:2px dashed #aeb8bd;border-radius:8px;background:var(--surface);box-shadow:0 8px 22px rgba(20,30,35,.08);text-align:center}
+#section-estimate .estimate-import-drop-card>.icon{width:45px;height:45px;padding:10px;color:var(--red);border:1px solid #e2c0c2;border-radius:12px;background:rgba(255,244,244,.92)}
+#section-estimate .estimate-import-drop-card strong{font-size:17px}
+#section-estimate .estimate-import-drop-card span{max-width:470px;color:var(--muted);font-size:11px}
+#section-estimate.is-dragover .estimate-import-drop-card{border-color:var(--red);background:#fff5f3}
+#section-estimate.is-import-unavailable .estimate-import-drop-card{border-style:solid;border-color:var(--line-strong);background:var(--surface-2);color:var(--muted)}
+#section-estimate .estimate-import-control{display:flex;align-items:center;gap:6px}
+#section-estimate .estimate-import-fallback{display:grid;gap:4px}
+#section-estimate .estimate-import-picker[hidden],#section-estimate .estimate-import-fallback[hidden]{display:none}
+#section-estimate .estimate-import-status{font-size:11px;color:var(--muted)}
+#section-estimate[data-estimate-importing="true"] .estimate-import-picker{opacity:.65}
+#section-estimate[data-estimate-importing="true"] .estimate-import-drop-card{border-style:solid;border-color:var(--line-strong);background:var(--surface-2);color:var(--muted)}
+
+
+/* ==== vehicle ==== */
+/* ---- Inspection details and Vehicle (lane A) ---- */
+.record-section>.panel-head>.meta.empty{color:var(--quiet)}
+.record-section>.panel-head>.meta[data-vehicle-lookup-line]{flex:1 1 auto;text-align:right;padding-right:6px}
+.vehicle-history .fc .fv.multi{white-space:pre-wrap}
+[data-inspection-principal-default][hidden]{display:none}
+@media(max-width:1180px){.record-section>.panel-head>.meta[data-vehicle-lookup-line]{flex-basis:100%;text-align:left;padding-right:0}}
+
+
+/* ==== damage ==== */
+/* ---- Damage: the Plan clicker (v26) ---------------------------------------- */
+#section-damage .damage-workbench{display:grid;grid-template-columns:minmax(220px,300px) minmax(260px,1fr);gap:14px;align-items:start}
+#section-damage .damage-view{margin:0 auto;width:100%;max-width:300px}
+#section-damage .damage-facts{min-width:0}
+#section-damage .damage-diagram{display:block;inline-size:100%;block-size:auto;margin:0 auto;overflow:hidden}
+#section-damage .damage-diagram-label{fill:var(--quiet);font:650 8px/1 var(--font);letter-spacing:.1em}
+#section-damage .dv-hit path{fill:none;stroke:none;pointer-events:none}
+#section-damage[data-damage-editable="true"] svg.damage-diagram{cursor:crosshair;touch-action:none}
+#section-damage .dm-guides path{fill:none;stroke:var(--navy);stroke-width:.6;stroke-dasharray:3 3;opacity:.45;pointer-events:none}
+#section-damage .damage-plan-area{color:var(--navy);cursor:pointer}
+#section-damage .damage-plan-area-hit{fill:none;stroke:transparent;stroke-width:2;vector-effect:non-scaling-stroke;pointer-events:none}
+#section-damage .damage-plan-area:focus .damage-plan-area-hit{stroke:currentColor;stroke-dasharray:2 2}
+#section-damage .damage-marks .dm{pointer-events:none}
+#section-damage[data-damage-editable="true"] .damage-marks .dm{pointer-events:auto;cursor:grab}
+#section-damage .damage-marks .dm .area{fill:transparent;stroke:none}
+#section-damage .damage-marks .dm.is-hover .burst{stroke:var(--navy)}
+#section-damage [data-damage-reset]{display:flex;margin:6px auto 0}
+#section-damage .dv-readout{min-height:18px;margin-top:6px;text-align:center;font-size:12px;font-weight:600;color:var(--navy)}
+#section-damage .damage-extra{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:8px}
+#section-damage .damage-extra .btn.is-damaged{border-color:var(--red);background:var(--red);color:#fff}
+/* Read mode: the same chips, greyed and inert; a recorded one keeps its fill. */
+#section-damage .damage-extra .btn.is-static{cursor:default;pointer-events:none;border-color:var(--line);background:var(--surface-2);color:var(--muted)}
+#section-damage .damage-extra .btn.is-static.is-damaged{border-color:var(--red);background:var(--red);color:#fff}
+#section-damage .impact-list{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}
+#section-damage .impact-list .muted{font-size:12.5px}
+#section-damage .impact-row{display:grid;grid-template-columns:1fr 150px 1fr 30px;gap:8px;align-items:center;padding:6px 8px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
+#section-damage .impact-row.is-hover{border-color:var(--navy)}
+#section-damage .impact-row .zc{font:600 11px var(--mono);color:var(--ink);display:inline-flex;align-items:center;min-width:0}
+#section-damage .impact-row .zn{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--ink);color:#fff;font:700 10px/1 var(--font);margin-right:6px;flex:none}
+#section-damage .impact-row .fc{margin:0;min-width:0}
+#section-damage .impact-row .fv,#section-damage .impact-row .fi{min-height:32px;padding:4px 8px}
+#section-damage .impact-row .del{border:0;background:none;color:var(--quiet);font-size:16px;padding:0;cursor:pointer;display:none}
+#section-damage .impact-row .del:hover{color:var(--red)}
+.case-record.is-editing #section-damage[data-damage-editable="true"] .impact-row .del{display:block}
+#section-damage .thumbs.evidence{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+#section-damage .thumbs.evidence .th{position:relative;display:flex;align-items:flex-end;aspect-ratio:4/3;border:1px solid var(--line);border-radius:3px;overflow:hidden;padding:5px;background:var(--surface-3);color:#fff;font:600 9.5px var(--mono);text-shadow:0 1px 2px rgba(0,0,0,.5);text-decoration:none;cursor:zoom-in}
+#section-damage .thumbs.evidence .th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#section-damage .thumbs.evidence .th-name{position:relative;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+@media(max-width:1180px){#section-damage .thumbs.evidence{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:900px){#section-damage .damage-workbench{grid-template-columns:1fr}#section-damage .damage-view{max-width:320px}}
+@media(max-width:760px){#section-damage .impact-row{grid-template-columns:1fr 1fr}#section-damage .thumbs.evidence{grid-template-columns:repeat(3,1fr)}}
+
+
+/* ==== valuation ==== */
+/* ---- Valuation (v34, operator, 8 October 2026): the sources as guide cards, then the value increases, the deductions, the Engineer's Value and On the report ---- */
+#section-valuation .valuation-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;min-width:0}
+/* A guide card: its name with the chosen word and Get valuation, then
+   Retail, Trade and Guide month as text while reading and boxes while
+   editing, in the same place. The whole card is the click target. */
+#section-valuation .valuation-card{display:grid;align-content:start;gap:6px;min-width:0;padding:10px 12px 11px;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--surface)}
+#section-valuation .valuation-card.sel{border-color:var(--red-dark);box-shadow:inset 0 0 0 1px var(--red-dark);background:#fff9f8}
+.case-record.is-editing #section-valuation .valuation-card[tabindex="0"],.case-record.is-editing #section-valuation .valuation-card[tabindex="0"] label{cursor:pointer}
+.case-record.is-editing #section-valuation .valuation-card input{cursor:text}
+.case-record.is-editing #section-valuation .valuation-card[tabindex="0"]:hover{border-color:var(--line-strong)}
+.case-record.is-editing #section-valuation .valuation-card.sel[tabindex="0"]:hover{border-color:var(--red-dark)}
+.case-record.is-editing #section-valuation .valuation-card[tabindex="0"]:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
+#section-valuation .valuation-card-head{display:flex;align-items:center;gap:6px;min-height:28px;min-width:0}
+#section-valuation .valuation-card-head h3{margin:0;font-size:13px;font-weight:700;line-height:1.3;min-width:0}
+#section-valuation .valuation-card-word{margin-left:auto;font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red-dark)}
+#section-valuation .valuation-card-head .btn{margin-left:auto;white-space:nowrap}
+#section-valuation .valuation-card-word:not([hidden])+.btn{margin-left:8px}
+#section-valuation .valuation-card-figs{display:grid;gap:2px}
+#section-valuation .valuation-card-fig{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,120px);align-items:center;gap:8px;min-height:28px;font-size:12.5px}
+#section-valuation .valuation-card-fig>.lbl,#section-valuation .valuation-card-fig>label{color:var(--muted);font-size:12.5px;font-weight:400;margin:0}
+#section-valuation .valuation-card-value{justify-self:end;font-weight:600;color:var(--ink)}
+#section-valuation .valuation-card-value.is-blank{color:var(--quiet);font-weight:400}
+#section-valuation .valuation-card-value.derived{opacity:.65}
+#section-valuation .valuation-card-fig .fi{min-height:28px;padding:2px 8px;font-size:12.5px;text-align:right;width:100%;min-width:0}
+#section-valuation .valuation-card-month,#section-valuation .valuation-card-month>.lbl,#section-valuation .valuation-card-month>label{font-size:11.5px}
+#section-valuation .valuation-card-month .valuation-card-value{font-weight:400;color:var(--muted)}
+#section-valuation .valuation-card-month .fi{text-align:left;font-size:12px}
+#section-valuation .valuation-card-meta{font-size:11px;color:var(--muted)}
+#section-valuation .valuation-card-meta.researching::before{content:"";display:inline-block;width:9px;height:9px;border:2px solid var(--navy);border-right-color:transparent;border-radius:50%;margin-right:6px;vertical-align:-1px;animation:pegasus-spin .8s linear infinite}
+#section-valuation .valuation-card-note{margin:2px 0 0;padding:5px 8px;font-size:12px}
+#section-valuation .valuation-card-note .link-button{color:inherit;text-decoration:underline}
+/* The value increases and the deductions: dashed panels under the cards. */
+#section-valuation .valuation-increases,#section-valuation .valuation-deductions{border-style:dashed;background:var(--surface)}
+#section-valuation .adds-head{font-size:10.5px;color:var(--quiet);font-weight:650;text-transform:uppercase;letter-spacing:.08em;margin:0 0 8px}
+#section-valuation .adds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 28px}
+#section-valuation .add{display:grid;grid-template-columns:20px minmax(0,1fr) 96px;gap:8px;align-items:center;min-height:32px;font-size:12.5px}
+#section-valuation .add input[type=checkbox]{width:15px;height:15px;min-height:0;margin:0;accent-color:var(--red)}
+#section-valuation .add input[type=number],#section-valuation .add input[type=text]{min-height:30px;padding:3px 8px;font-size:12px;border:1px solid var(--line-strong);border-radius:var(--radius);width:100%;min-width:0}
+#section-valuation .add .amt{text-align:right;font-family:var(--mono)}
+#section-valuation .add:not(.on) .amt,#section-valuation .add:not(.on) input[type=text]{opacity:.55}
+#section-valuation .add .add-check{display:inline-grid;place-items:center;width:15px;height:15px;color:var(--green)}
+#section-valuation .add .add-check .icon{width:13px;height:13px}
+#section-valuation .add--vat label{display:flex;align-items:center;flex-wrap:wrap;gap:4px 6px}
+#section-valuation .add--vat .calc-amount{float:none;justify-self:end;margin:0}
+#section-valuation .valuation-deductions{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:12px 24px;align-items:start}
+/* Previous total loss: the tick box, then −10 % / −20 % on the
+   case-layout-switch look; a percentage is a radio of the field. */
+#section-valuation .valuation-ptl>.lbl{min-height:13px}
+#section-valuation .fc .fi.valuation-ptl-row{border:0;padding:0;background:transparent;align-items:center;flex-wrap:wrap;gap:8px 12px}
+#section-valuation .valuation-ptl-row .choice{min-height:var(--control)}
+#section-valuation .valuation-ptl-switch{margin:0}
+#section-valuation .valuation-ptl-switch label{position:relative;display:inline-flex;align-items:center;height:24px;padding:0 8px;border-radius:2px;font:600 11.5px var(--mono);color:var(--muted);cursor:pointer}
+#section-valuation .valuation-ptl-switch input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+#section-valuation .valuation-ptl-switch label:has(input:checked){background:var(--nav-2);color:var(--nav-text)}
+#section-valuation .valuation-ptl-switch label:has(input:disabled){opacity:.45;cursor:default}
+#section-valuation .valuation-ptl-switch label:has(input:focus-visible){outline:2px solid var(--focus);outline-offset:1px}
+/* What an adjustment comes to, beside its control. */
+#section-valuation .calc-amount{float:right;margin-left:8px;font:600 11px var(--mono);letter-spacing:0;text-transform:none;color:var(--ink)}
+#section-valuation .valuation-calc[aria-busy="true"] .calc-amount{opacity:.65}
+#section-valuation .valuation-calc{display:grid;gap:12px}
+/* The Engineer's Value: the one box, the calculation's basis beside it. */
+#section-valuation .valuation-value{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:8px 24px;align-items:end;padding:12px 14px;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--surface)}
+#section-valuation .valuation-value .fc .fv,#section-valuation .valuation-value .fc .fi{min-height:40px;font-size:17px;font-weight:650;justify-content:flex-end;text-align:right}
+#section-valuation .valuation-value .fc .fv.empty{font-weight:400;color:var(--quiet)}
+#section-valuation .valuation-value-calc{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;min-height:40px;padding-bottom:9px;font-size:12.5px;color:var(--muted)}
+#section-valuation .valuation-value-calc>.lbl{font-size:10.5px;color:var(--quiet);font-weight:650;text-transform:uppercase;letter-spacing:.08em}
+#section-valuation [data-valuation-preview-host]{flex-basis:100%}
+#section-valuation [data-valuation-preview-host]:empty{display:none}
+#section-valuation [data-valuation-preview-host] .notice{margin:0}
+/* On the report: one line, the switches in the summary's place while editing. */
+#section-valuation .valuation-report{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px}
+#section-valuation .valuation-report>.lbl{margin:0}
+#section-valuation .valuation-report .fv{min-height:0;padding:0;border:0;background:transparent;font-size:12.5px;width:auto}
+#section-valuation .valuation-report .fi.switches{border:0;padding:0;background:transparent;flex-wrap:wrap;gap:6px 20px;width:auto}
+@media(max-width:1180px){
+  #section-valuation .valuation-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+  #section-valuation .valuation-cards,#section-valuation .adds,#section-valuation .valuation-deductions,#section-valuation .valuation-value{grid-template-columns:minmax(0,1fr)}
+  #section-valuation .valuation-value-calc{min-height:0;padding-bottom:0}
+}
+
+
+#section-settlement select.fi.is-driven{display:none}
+#section-settlement .radiorow{display:flex;flex-wrap:wrap;gap:4px}
+#section-settlement .pick-radio{display:inline-flex;align-items:center;gap:6px;min-height:var(--control);padding:0 10px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;color:var(--ink);font:inherit;font-size:12.5px;cursor:pointer}
+#section-settlement .pick-radio:hover{border-color:var(--navy);color:var(--navy)}
+#section-settlement .pick-radio .dot{width:11px;height:11px;border-radius:50%;border:1px solid var(--line-strong);flex:none}
+#section-settlement .pick-radio[aria-checked="true"]{border-color:var(--navy);background:#f4f7fa;font-weight:600}
+#section-settlement .pick-radio[aria-checked="true"] .dot{border-color:var(--navy);background:var(--navy);box-shadow:inset 0 0 0 2px #fff}
+#section-settlement .pick-radio:focus-visible{outline:2px solid var(--navy);outline-offset:1px}
+/* Reading, the same group is greyed and still. */
+#section-settlement .radiorow.is-static .pick-radio{background:var(--surface-2);color:var(--muted);cursor:default}
+#section-settlement .radiorow.is-static .pick-radio:hover{border-color:var(--line);color:var(--muted)}
+#section-settlement .radiorow.is-static .pick-radio[data-on="true"]{border-color:var(--line-strong);color:var(--ink)}
+#section-settlement .radiorow.is-static .pick-radio[data-on="true"] .dot{border-color:var(--muted);background:var(--muted)}
+#section-settlement .salvage-share{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:6px}
+#section-settlement .salvage-share input[type="range"]{flex:1;min-width:120px;accent-color:var(--navy)}
+#section-settlement .salvage-share .snaps{display:inline-flex;gap:4px}
+#section-settlement .salvage-share .snaps button{min-height:24px;padding:0 7px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;font:600 11px var(--mono);color:var(--muted);cursor:pointer}
+#section-settlement .salvage-share .snaps button.on{border-color:var(--navy);color:var(--navy);background:#f4f7fa}
+#section-settlement .salvage-share .read{font-size:11.5px;color:var(--muted)}
+#section-settlement .reason-bank{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;grid-column:-2/-1}
+#section-settlement .reason-bank .btn{font-size:11.5px;text-align:left}
+
+#section-report .report-tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);padding-bottom:0}
+#section-report .report-tab{appearance:none;border:1px solid transparent;border-bottom:0;background:none;color:var(--muted);font:600 12.5px var(--font);padding:6px 12px;border-radius:var(--radius) var(--radius) 0 0;cursor:pointer}
+#section-report .report-tab:hover{color:var(--navy)}
+#section-report .report-tab[aria-selected="true"]{border-color:var(--line);background:#fff;color:var(--ink);box-shadow:inset 0 -3px var(--navy)}
+#section-report .report-tab:focus-visible{outline:2px solid var(--navy);outline-offset:-2px}
+#section-report [data-report-fee-note] dd.empty{color:var(--quiet)}
+
+/* The image tile's tool panel while editing: it hangs from the thumbnail as
+   one bordered block, the report decision and its order first, then one
+   toolbar of same-size icon buttons. */
+.image-tile--tools{row-gap:0}
+.image-tile--tools>.th{border-radius:3px 3px 0 0}
+.image-tile--tools>.tag-chips{margin-top:6px}
+.image-tile-panel{border:1px solid var(--line);border-top:0;border-radius:0 0 3px 3px;background:#fff;min-width:0;container-type:inline-size}
+.image-tile-row{display:flex;align-items:center;gap:4px;min-height:34px;padding:3px 4px;min-width:0}
+.image-tile-row+.image-tile-row{border-top:1px solid var(--line)}
+.image-tile-row>form{display:contents}
+.image-tile-toggle{display:inline-flex;align-items:center;gap:5px;min-height:28px;padding:2px 4px;border:1px solid transparent;border-radius:3px;background:none;color:var(--ink);font:600 11.5px var(--font);white-space:nowrap;cursor:pointer}
+.image-tile-toggle:hover{border-color:var(--line);background:var(--surface-3)}
+.image-tile-toggle .icon{width:16px;height:16px;color:var(--muted)}
+.image-tile-toggle[aria-pressed="true"] .icon{color:var(--green)}
+.image-tile-order{display:inline-flex;align-items:center;gap:4px;margin-left:auto;font-size:11px;color:var(--muted);white-space:nowrap}
+.image-tile-order .fi.num{width:42px;min-height:28px;padding:2px 5px;font-size:12px;text-align:right}
+.image-tile-tools{display:inline-flex;gap:2px;align-items:center}
+/* A narrow tile keeps the order box and names it on hover instead. */
+@container (max-width:175px){.image-tile-order>span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}}
+.image-tile-toolbar .icon-button,.image-tile-toolbar .tag-picker>summary{display:inline-grid;place-items:center;width:28px;height:28px;min-width:28px;min-height:28px;padding:0;border:1px solid transparent;border-radius:3px;background:none;color:var(--muted);cursor:pointer}
+.image-tile-toolbar .icon-button:hover,.image-tile-toolbar .tag-picker>summary:hover,.image-tile-toolbar .tag-picker[open]>summary{border-color:var(--line);background:var(--surface-3);color:var(--navy)}
+.image-tile-toolbar .icon-button[aria-pressed="true"]{border-color:var(--navy);color:var(--navy);background:#f4f7fa}
+.image-tile-toolbar .icon{width:16px;height:16px}
+.image-tile-toolbar .grip{display:inline-grid;place-items:center;width:22px;height:28px;margin-left:auto;color:var(--quiet);cursor:grab}
+.image-tile-status{display:flex;flex-wrap:wrap;align-items:center;gap:0 8px;margin:6px 0 0;font-size:11.5px;color:var(--muted)}
+.image-tile-status-in{font-weight:600;color:var(--navy)}
+.image-tile .tag-chips{display:flex;flex-wrap:wrap;gap:4px}
+.image-tile.is-dragging{opacity:.5}
+.image-tile.is-drop{outline:2px solid var(--navy);outline-offset:2px}
+.image-grid-count{margin:6px 0 0;font-size:12px}
+
+.wording .stack{gap:8px}
+.wb{border:1px solid var(--line);border-radius:4px;padding:6px 8px;background:var(--surface)}
+.wb.is-off{opacity:.55}
+.wbh{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:4px}
+.wb .fi.wbt{flex:1 1 180px;min-width:0;font-weight:600}
+.wb .icon-button{display:inline-grid;place-items:center;width:22px;height:22px;border:1px solid transparent;border-radius:3px;background:none;color:var(--muted);cursor:pointer}
+.wb .icon-button:hover{border-color:var(--line);color:var(--navy)}
+.wb-tools{display:inline-flex;align-items:center;gap:4px;margin-left:auto}
+.wb-tools .choice{display:inline-flex;align-items:center;gap:5px;font-size:12px;white-space:nowrap}
+.wb textarea.fi{width:100%}
+/* Reading, a block's heading and wording are ordinary read-only cells. */
+.wbh>.fc.wbt{flex:1 1 180px}
+.wbh>.fc.wbt .fv{font-weight:600}
+.wb-tools .choice .icon{width:13px;height:13px}
+
+/* ==== estimate ==== */
+/* ---- Estimate (v26 § Estimate) ---------------------------------------------- */
+#section-estimate .estimate-tabs{display:flex;flex-wrap:wrap;gap:6px;padding:8px 10px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface-2)}
+#section-estimate .estimate-tab{appearance:none;border:1px solid var(--line);background:#fff;color:var(--ink);padding:6px 10px;font:inherit;font-size:11px;font-weight:700;cursor:pointer;border-radius:var(--radius);display:inline-flex;align-items:center;gap:7px;text-decoration:none}
+#section-estimate .estimate-tab:hover{border-color:var(--navy);color:var(--navy);background:#f4f7fa;text-decoration:none}
+#section-estimate .estimate-tab[aria-selected="true"]{border-color:var(--navy);box-shadow:inset 0 -3px var(--navy);background:#f4f7fa;color:var(--navy)}
+#section-estimate .estimate-tab .status{min-height:18px;padding:0 6px;font-size:9px}
+#section-estimate .estimate-empty{padding:12px;color:var(--quiet);font-size:12.5px;border:1px dashed var(--line);border-radius:var(--radius)}
+#section-estimate .est-actions{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+#section-estimate .est-actions form{display:contents}
+
+/* The Glass's session line and its guarded close (FRD-25). */
+#section-estimate .glass-session{display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:6px 10px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface-2)}
+#section-estimate .glass-session .grow{flex:1;min-width:0}
+#section-estimate .glass-session form{display:contents}
+#section-estimate .glass-fail{font-family:var(--mono);font-size:11.5px;color:var(--danger)}
+#section-estimate .glass-close{width:100%;border-top:1px solid var(--line);padding-top:8px}
+#section-estimate .glass-close>summary{list-style:none;cursor:pointer;font-size:12.5px;font-weight:600;color:var(--danger);display:inline-flex;align-items:center;gap:6px}
+#section-estimate .glass-close>summary::-webkit-details-marker{display:none}
+#section-estimate .glass-close>summary .icon{width:14px;height:14px}
+#section-estimate .glass-close-form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 12px;align-items:end;margin-top:8px}
+#section-estimate .glass-close-form .fc .fi{display:block}
+#section-estimate .glass-close-form .choice,#section-estimate .glass-close-form .consequence{grid-column:1/-1}
+#section-estimate .glass-close-form .consequence{font-size:12px;color:var(--muted);font-weight:400;margin:0}
+
+/* One layout for reading and editing (23 September 2026): where the spec
+   cannot be changed, a grid cell or a discount holds a greyed value in its
+   control's place, and a choice reads as its box, ticked or not. */
+#section-estimate .grid .gv{display:flex;align-items:center;min-height:30px;padding:3px 6px;font-size:12px;border:1px solid var(--line);border-radius:3px;background:var(--surface-2);overflow-wrap:anywhere}
+#section-estimate .grid td.num .gv{justify-content:flex-end;font-family:var(--mono)}
+#section-estimate .grid .gv.mono{font-family:var(--mono)}
+#section-estimate .grid .gv.viol{border-color:var(--amber);background:var(--amber-bg)}
+#section-estimate .bar .dsc .dsl{font-size:12px;color:var(--muted)}
+#section-estimate .bar .dsc .gv{display:inline-flex;align-items:center;justify-content:flex-end;min-width:64px;min-height:30px;padding:3px 8px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface-2);font:600 12.5px var(--mono)}
+#section-estimate .choice.is-static{cursor:default;color:var(--muted)}
+#section-estimate .choice.is-static[data-on="true"]{color:var(--ink)}
+#section-estimate .choice.is-static .tick{display:inline-grid;place-items:center;width:15px;height:15px;flex:none;border:1px solid var(--line-strong);border-radius:2px;background:var(--surface-2)}
+#section-estimate .choice.is-static .tick .icon{width:11px;height:11px}
+
+/* The grid: transparent inputs that read as cells; the phantom row at the foot. */
+#section-estimate .grid{overflow:auto}
+#section-estimate .grid table{width:100%;border-collapse:collapse;font-size:12.5px}
+#section-estimate .grid th{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--quiet);font-weight:600;padding:6px 6px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap;background:var(--surface-2)}
+#section-estimate .grid th.num{text-align:right}
+#section-estimate .grid td{padding:2px 4px;border-bottom:1px solid var(--line);vertical-align:middle}
+#section-estimate .grid td.num{text-align:right;font-variant-numeric:tabular-nums}
+#section-estimate .grid .col-type{width:120px}
+#section-estimate .grid .col-part{width:120px}
+#section-estimate .grid .col-qty{width:64px}
+#section-estimate .grid .col-money{width:90px}
+#section-estimate .grid .col-hours{width:72px}
+#section-estimate .grid .col-source{width:110px}
+#section-estimate .grid .col-del{width:30px}
+#section-estimate .grid input{width:100%;min-height:30px;border:1px solid transparent;border-radius:3px;padding:3px 6px;font-size:12px;background:transparent}
+#section-estimate .grid input.num{text-align:right;font-family:var(--mono)}
+#section-estimate .grid input.viol{border-color:var(--amber);background:var(--amber-bg)}
+#section-estimate input.is-previewed{border-color:var(--amber);background:var(--amber-bg)}
+#section-estimate .rate-pair{display:grid;grid-template-columns:minmax(0,1fr) 96px;gap:6px}
+#section-estimate .uplift{display:flex;align-items:center;gap:8px;min-height:32px}
+#section-estimate .estimate-tab [contenteditable="true"]{outline:1px solid var(--navy);outline-offset:2px;border-radius:2px}
+#section-estimate .est-add-line{justify-content:flex-end}
+#section-estimate .est-origin{margin:6px 0 0;font-size:12px}
+#section-estimate .est-scale input[type="range"]{flex:1;min-width:120px;accent-color:var(--navy)}
+#section-estimate .est-floors{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
+#section-estimate .est-contract{flex-wrap:wrap}
+#section-estimate .est-contract .est-contract-sentence{flex-basis:100%;margin:4px 0 0}
+#section-estimate .est-contract .dsc input{width:120px}
+.est-diff-sum{font-size:12.5px;margin:6px 0}
+.est-diff td.diff{font-weight:700}
+.est-diff tr.added td:first-child{color:var(--red)}
+.est-diff tr.changed td:first-child{color:var(--amber)}
+.est-diff tr.removed td:first-child{color:var(--quiet)}
+.versions-table tr.cur td{background:var(--surface-2,#f6f8f9)}
+#section-estimate .grid input:hover{border-color:var(--line)}
+#section-estimate .grid input:focus{border-color:var(--navy);background:#fff}
+#section-estimate .grid select{min-height:30px;border:1px solid transparent;padding:2px 4px;font-size:12px;background:transparent;width:100%}
+#section-estimate .grid select:hover{border-color:var(--line)}
+#section-estimate .grid .del{border:0;background:none;color:var(--quiet);font-size:15px;padding:0 4px;cursor:pointer}
+#section-estimate .grid .del:hover{color:var(--red)}
+#section-estimate .grid tr.phantom td{background:var(--surface-2)}
+#section-estimate .grid tr.phantom input::placeholder{color:var(--quiet)}
+#section-estimate .grid tr.phantom .del{visibility:hidden}
+#section-estimate .est-add-line{justify-content:flex-end}
+
+/* Columns by line type (v38 P1): a cell the type does not price reads as one
+   quiet dash where the box would be; its input posts blank, unseen. */
+#section-estimate .grid td.na{color:var(--quiet);text-align:right;padding-right:10px;font-family:var(--mono);font-variant-numeric:tabular-nums}
+#section-estimate .grid td.na input{display:none}
+#section-estimate .grid td.na::before{content:"\2014"}
+
+/* The labour rate bar (v38 P5), as the reference draws it: one segment per
+   rate card and Custom · typed; the uplift tick and its chip; the figure the
+   spec prices at in the box at the right with its working and Manual. The
+   chosen segment is ink on white; the segments share the 36px row. */
+#section-estimate .est-rate{flex-wrap:wrap;gap:12px}
+#section-estimate .rseg{display:inline-flex;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+#section-estimate .rseg-btn{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:1px;min-height:36px;padding:5px 11px;border-right:1px solid var(--line);background:#fff;color:var(--muted);font-size:12px;line-height:1.15;cursor:pointer}
+#section-estimate .rseg-btn:last-child{border-right:0}
+#section-estimate .rseg-btn small{font-family:var(--mono);font-size:10px;color:var(--quiet)}
+#section-estimate .rseg-btn:hover{color:var(--ink)}
+#section-estimate .rseg-btn input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+#section-estimate .rseg-btn:has(input:checked),#section-estimate .rseg-btn.is-static[aria-current="true"]{background:var(--ink);color:#fff}
+#section-estimate .rseg-btn:has(input:checked) small,#section-estimate .rseg-btn.is-static[aria-current="true"] small{color:rgba(255,255,255,.7)}
+#section-estimate .rseg-btn:has(input:focus-visible){outline:3px solid rgba(219,8,22,.38);outline-offset:-3px}
+#section-estimate .rseg-btn.is-static{cursor:default}
+#section-estimate .est-rate .ratebox{margin-left:auto;gap:6px}
+#section-estimate .est-rate .ratebox input{width:104px;text-align:right;font-weight:600;padding-right:8px}
+#section-estimate .est-rate .ratebox input::-webkit-inner-spin-button,#section-estimate .est-rate .ratebox input::-webkit-outer-spin-button{-webkit-appearance:none;appearance:none;margin:0}
+#section-estimate .est-rate .ratebox input[type=number]{-moz-appearance:textfield;appearance:textfield}
+#section-estimate .est-rate .ratebox .gv{min-width:104px;justify-content:flex-end;font-weight:600}
+#section-estimate .est-rate [data-rate-work]:empty{display:none}
+#section-estimate .est-rate .choice input[disabled]+input+span{color:var(--quiet)}
+
+/* The scaling bar as the reference scales (v38 P6): the slider and its box
+   alone on the first row, so it keeps one length while previewing (operator,
+   13 October 2026); the floors, the readout, Remove scaling and Apply on a
+   second row under it; the readout wraps before Remove scaling does. */
+#section-estimate .est-scale{flex-wrap:wrap}
+#section-estimate .est-scale .est-scale-row{flex-basis:100%;display:flex;align-items:center;gap:12px;margin-top:4px}
+#section-estimate .est-scale .est-scale-row [data-scale-read]{min-width:0}
+#section-estimate .est-scale .dsc input[data-scale-percent]{width:84px}
+#section-estimate .est-scale .est-scale-row [data-scale-apply]{margin-left:auto}
+#section-estimate .est-scale [data-scale-remove]{white-space:nowrap}
+
+/* The agreed sum's box in the contract bar (v38 P4); the mismatch chip is a button. */
+#section-estimate .est-contract .dsc input[data-contract-sum]{width:110px}
+#section-estimate .chip-button{font:inherit;cursor:pointer}
+#section-estimate .chip-button:hover{background:var(--amber);color:#fff}
+
+/* The Supplementary panel at the top of the section (v38 P3): the version it
+   changes against with the cost movement and the full comparison; one line
+   per change with its tag, the words and the line's value; then the Explain
+   tick, the reason and Dismiss. */
+#section-estimate .est-supp{border-left:3px solid var(--red)}
+#section-estimate .est-supp>h3{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+#section-estimate .est-supp>h3 .rt{font-weight:400;text-transform:none;letter-spacing:0;font-size:12px;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
+#section-estimate .est-supp>h3 .est-supp-sum{margin-left:auto;color:var(--muted)}
+#section-estimate .est-supp>h3 .est-supp-sum b{color:var(--ink)}
+#section-estimate .est-supp>h3 .est-supp-sum a{color:var(--muted);text-decoration:underline dotted}
+#section-estimate .est-supp-list{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:3px;font-size:12.5px}
+#section-estimate .est-supp-list li{display:flex;gap:8px;align-items:baseline}
+#section-estimate .est-supp-tag{font-size:10.5px;font-weight:650;text-transform:uppercase;letter-spacing:.06em;min-width:64px}
+#section-estimate .est-supp-list .added .est-supp-tag{color:var(--red)}
+#section-estimate .est-supp-list .changed .est-supp-tag{color:var(--amber)}
+#section-estimate .est-supp-list .removed .est-supp-tag{color:var(--quiet)}
+#section-estimate .est-supp-list .removed .est-supp-desc{color:var(--muted)}
+#section-estimate .est-supp-num{margin-left:auto;color:var(--muted);font-variant-numeric:tabular-nums}
+#section-estimate .est-supp-row{align-items:center;gap:12px}
+#section-estimate .est-supp-row .choice{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;min-height:var(--control)}
+#section-estimate .est-supp-row .choice input{width:15px;height:15px;min-height:0;accent-color:var(--red)}
+#section-estimate .est-supp-row select.fi{width:auto;min-width:260px}
+#section-estimate .est-supp-row [data-supp-dismiss]{margin-left:auto}
+
+/* Compare side by side (v38 P2): a rule between the groups, the group heads
+   centred over their five columns; the versions dialog's two actions. */
+.dialog--compare{width:min(100%,1100px)}
+.est-diff--sides th.side-head{text-align:center;border-left:1px solid var(--line)}
+.est-diff--sides th.side-first,.est-diff--sides td:nth-child(4),.est-diff--sides td:nth-child(9){border-left:1px solid var(--line)}
+.version-acts{gap:6px;justify-content:flex-end;flex-wrap:nowrap}
+.version-acts .btn{white-space:nowrap}
+@media print{
+  body.is-printing-compare>*:not(#compare-estimates-dialog){display:none}
+  body.is-printing-compare #compare-estimates-dialog{position:static;background:none;padding:0;display:block}
+  body.is-printing-compare #compare-estimates-dialog .dialog{width:100%;max-height:none;overflow:visible;border:0;box-shadow:none}
+  body.is-printing-compare #compare-estimates-dialog .noprint,body.is-printing-compare #compare-estimates-dialog .dialog-close{display:none!important}
+}
+
+/* Discounts and VAT bars. */
+#section-estimate .bar .dsc{display:flex;align-items:center;gap:7px;font-size:12.5px}
+#section-estimate .bar .dsc label{font-size:12px;color:var(--muted)}
+#section-estimate .bar .dsc input{width:64px;min-height:30px;padding:3px 8px;font:600 12.5px var(--mono);text-align:right}
+#section-estimate .bar .choice{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;min-height:var(--control)}
+#section-estimate .bar .choice input{width:15px;height:15px;min-height:0;accent-color:var(--red)}
+#section-estimate .bar .vat-reset{margin-left:auto}
+
+/* Work-lists and the rollup. */
+#section-estimate .est-bottom{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:14px;align-items:start}
+#section-estimate .wl{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+#section-estimate .wl .wcol{border:1px solid var(--line);border-radius:var(--radius);padding:8px 10px;min-width:0}
+#section-estimate .wl .wt{font-size:10px;color:var(--quiet);font-weight:650;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+#section-estimate .wl ul{list-style:none;margin:0;padding:0;display:grid;gap:3px}
+#section-estimate .wl li{font-size:12px;overflow-wrap:anywhere}
+#section-estimate .wl li::before{content:"·";color:var(--quiet);margin-right:6px}
+#section-estimate .rollup{border-top:2px solid var(--ink);padding-top:8px;display:grid;gap:4px;margin:0}
+#section-estimate .rollup .rr{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin:0}
+#section-estimate .rollup .rr dt{color:var(--muted)}
+#section-estimate .rollup .rr dd{margin:0;font-family:var(--mono);font-weight:600;font-variant-numeric:tabular-nums}
+#section-estimate .rollup .rr.tot{border-top:1px solid var(--line);padding-top:6px;margin-top:2px}
+#section-estimate .rollup .rr.tot dt{color:var(--ink);font-weight:700}
+#section-estimate .rollup .rr.tot dd{color:var(--red);font-size:15px;font-weight:700}
+#section-estimate .cmp-table small{font-weight:400}
+
+/* Full-screen presentation (v25 C4): the section covers the viewport and the
+   shell's fixed rows hide behind it; Escape restores. */
+body.has-expanded{overflow:hidden}
+body.has-expanded .sticky-block,body.has-expanded .utility-bar,body.has-expanded .app-rail{visibility:hidden}
+#section-estimate.is-expanded{background:var(--surface)}
+#section-estimate.is-expanded>.panel-head{background:var(--surface-2)}
+#section-estimate.is-expanded .grid table{min-width:0}
+
+@media(max-width:1180px){#section-estimate .est-bottom{grid-template-columns:1fr}}
+@media(max-width:900px){#section-estimate .wl{grid-template-columns:1fr}}
+
+
+/* ==== report ==== */
+/* ---- Settlement (v26): figures strip and the Decisions strip ---------------- */
+#section-settlement .metric-strip{grid-template-columns:repeat(4,minmax(0,1fr));border-radius:var(--radius);overflow:hidden}
+#section-settlement .metric{min-height:64px;padding:10px 12px;gap:4px}
+#section-settlement .metric-label{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+#section-settlement .metric-value{font-size:20px;letter-spacing:-.03em;font-family:var(--mono);font-variant-numeric:tabular-nums}
+#section-settlement .metric-value.red{color:var(--red)}
+#section-settlement .metric-meta{font-size:10.5px}
+.decisions{border:1px solid var(--line);border-radius:var(--radius);background:#fff}
+.dec-head{display:flex;align-items:center;gap:10px;padding:7px 12px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.dec-head h3{font-size:10.5px;color:var(--quiet);font-weight:650;text-transform:uppercase;letter-spacing:.08em;margin:0}
+.dec{display:grid;grid-template-columns:160px minmax(0,1fr);gap:10px;align-items:center;padding:5px 12px;border-bottom:1px solid var(--line)}
+.dec:last-child{border-bottom:0}
+.dec .dl{font-size:10.5px;color:var(--quiet);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.dec .fc>label,.dec .fc>.lbl{display:none}
+.dec .fc{margin:0}
+.dec .fv .src-tag{margin-left:6px}
+@media(max-width:900px){.dec{grid-template-columns:1fr}.dec .dl{padding-top:4px}}
+@media(max-width:760px){#section-settlement .metric-strip{grid-template-columns:repeat(2,1fr)}#section-settlement .metric:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+/* ---- Report (v26): preview card, generation, recipients, image strip -------- */
+#section-report .panel-actions .choice,#section-report .recip-form .choice{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;white-space:nowrap}
+#section-report .panel-actions .choice input,#section-report .recip-form .choice input{width:15px;height:15px;min-height:0;accent-color:var(--red)}
+#section-report .pv{display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:var(--radius);padding:10px 12px;flex-wrap:wrap}
+#section-report .pv-thumb{width:56px;height:76px;border-radius:2px;background:#fdfcfa;border:1px solid #e4dfd8;position:relative;flex-shrink:0}
+#section-report .pv-thumb::before{content:"";position:absolute;inset:7px 7px auto;height:6px;background:var(--red)}
+#section-report .pv-thumb::after{content:"";position:absolute;inset:19px 7px 8px;background:repeating-linear-gradient(#eae6e0 0 2px,transparent 2px 7px)}
+#section-report .pv-meta{flex:1;min-width:0}
+#section-report .pv-meta .pt{font-weight:700}
+#section-report .pv-meta .ps{font-size:12px;color:var(--muted);margin-top:2px}
+#section-report .pv .cluster{display:flex;gap:6px;flex-wrap:wrap}
+#section-report .detail-list{display:grid;gap:4px;margin:0}
+#section-report .detail-list>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px;font-size:12.5px;margin:0}
+#section-report .detail-list dt{color:var(--quiet);font-size:10.5px;font-weight:650;text-transform:uppercase;letter-spacing:.06em;align-self:center}
+#section-report .detail-list dd{margin:0;min-width:0;overflow-wrap:anywhere}
+#section-report .recip-form{display:grid;gap:8px;border:1px solid var(--line);border-radius:var(--radius);padding:10px 12px}
+#section-report .recip-form .lg,#section-report .recip-form .lbl{font-size:10.5px;color:var(--quiet);font-weight:650;text-transform:uppercase;letter-spacing:.06em}
+#section-report .recip-form .stack{gap:4px}
+#section-report .recip-form input:not([type=checkbox]),#section-report .recip-form select{min-height:var(--control);padding:6px 9px;border:1px solid var(--line-strong);border-radius:var(--radius);font-size:13px;width:100%;background:#fff}
+#section-report .recip-form .btn{justify-self:start}
+#section-report .thumbs{display:grid;grid-template-columns:repeat(8,1fr);gap:8px}
+#section-report .th{aspect-ratio:4/3;border-radius:3px;position:relative;cursor:zoom-in;overflow:hidden;border:1px solid var(--line);display:flex;align-items:flex-end;padding:5px;font:600 9.5px var(--mono);color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.5);background:var(--surface-3);text-decoration:none}
+#section-report .th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#section-report .th .th-name{position:relative;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+#section-report .th .inc{position:absolute;top:4px;right:5px;width:17px;height:17px;border-radius:3px;background:var(--green);color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center}
+#section-report .th.off{opacity:.42}
+#section-report .th.off .inc{background:#fff;color:var(--quiet);border:1px solid var(--line)}
+#section-report .th .tag{position:absolute;top:4px;left:5px;font:600 8.5px var(--font);padding:1px 6px;border-radius:999px;background:rgba(255,255,255,.92);color:var(--ink);text-shadow:none}
+#section-report .fc .fv.derived.multi{font-size:12.5px}
+#section-report [data-report-prepared-message]{white-space:pre-wrap}
+@media(max-width:1180px){#section-report .thumbs{grid-template-columns:repeat(6,1fr)}}
+@media(max-width:760px){#section-report .thumbs{grid-template-columns:repeat(3,1fr)}#section-report .detail-list>div{grid-template-columns:1fr}}
+
+
+/* ==== files ==== */
+/* ---- Files (v26 § Files): tabs, document rows, image tiles, tag picker ---- */
+#section-files .tabs{display:flex;border-bottom:1px solid var(--line);flex-wrap:wrap}
+#section-files .tab{flex:0 0 auto;min-height:36px;padding:7px 11px;border:0;border-bottom:3px solid transparent;background:transparent;color:var(--ink);font-size:11px;font-weight:760;cursor:pointer}
+#section-files .tab[aria-selected="true"]{border-bottom-color:var(--red);color:var(--red)}
+#section-files .tab-panel-title{margin:4px 0 0;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.doc-list{gap:6px}
+.doc-row{display:grid;grid-template-columns:28px minmax(0,1fr) auto auto;gap:9px;align-items:center;padding:7px 9px;border:1px solid var(--line);border-radius:3px;font-size:12px}
+.doc-row>.icon{color:var(--muted);width:18px;height:18px}
+.doc-row .doc-row-name{min-width:0}
+.doc-row .doc-row-name b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.doc-row small{color:var(--muted);font-size:10.5px}
+.doc-row-tags{display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.doc-row-actions{display:flex;align-items:center;gap:4px}
+
+/* Image tiles, shared by Files and the Report strip. */
+.thumbs{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px;list-style:none;margin:0;padding:0}
+.thumbs.evidence{grid-template-columns:repeat(6,minmax(0,1fr))}
+.thumbs.image-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));align-items:start}
+.image-tile{display:grid;gap:4px;min-width:0}
+.th{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;width:100%;border-radius:3px;overflow:hidden;border:1px solid var(--line);background:var(--surface-3);color:#fff;text-decoration:none;cursor:pointer;padding:0}
+.th img{display:block;width:100%;height:100%;object-fit:contain;transform-origin:center center}
+.th.is-staged img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;transition:none}
+.th .th-name{position:absolute;left:0;right:0;bottom:0;padding:4px 5px;font:600 9.5px var(--mono);color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.6);background:linear-gradient(transparent,rgba(0,0,0,.45));white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:left}
+.th .inc{position:absolute;top:4px;right:5px;width:17px;height:17px;border-radius:3px;background:var(--green);color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;z-index:1}
+.th.off{opacity:.42}
+.th.off .inc{background:#fff;color:var(--quiet);border:1px solid var(--line)}
+.th .tag{position:absolute;top:4px;left:5px;font:600 8.5px var(--font);padding:1px 6px;border-radius:999px;background:rgba(255,255,255,.92);color:var(--ink);text-shadow:none;z-index:1}
+.th .rot{position:absolute;bottom:22px;right:5px;font:600 8.5px var(--font);padding:1px 5px;border-radius:999px;background:rgba(255,255,255,.92);color:var(--ink);text-shadow:none;z-index:1}
+.th .th-view,.th [data-tile-view]{position:absolute;top:4px;right:26px;width:17px;height:17px;border-radius:3px;border:0;background:rgba(255,255,255,.92);color:var(--ink);display:none;place-items:center;padding:0;cursor:pointer;z-index:1}
+.th .th-view .icon,.th [data-tile-view] .icon{width:11px;height:11px}
+.case-record.is-editing .th:hover .th-view,.case-record.is-editing .th:hover [data-tile-view]{display:grid}
+.evidence .th{cursor:zoom-in}
+.th.th--placeholder{flex-direction:column;justify-content:flex-end;border:1px dashed var(--line-strong);background:repeating-linear-gradient(135deg,var(--surface-2) 0 6px,#fff 6px 12px);padding:5px;font-size:9.5px;color:var(--muted);cursor:default}
+.th.th--placeholder .gallery-caption{display:grid;gap:1px;background:rgba(255,255,255,.9);padding:3px 5px;border-radius:3px;width:100%}
+.th.th--placeholder strong{font:600 9.5px var(--mono);color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.th.th--placeholder small{color:var(--muted)}
+.image-tile-source{font-size:10.5px}
+.image-tile-source a{color:var(--navy);font-weight:600}
+.intake-group h3 a{color:var(--navy);font-weight:700;text-transform:none;letter-spacing:0;font-size:12px}
+
+/* The per-tile tag picker: a disclosure, so it opens and closes without script. */
+.tag-picker{position:relative}
+.tag-picker>summary{display:inline-flex;align-items:center;list-style:none;cursor:pointer}
+.tag-picker>summary::-webkit-details-marker{display:none}
+.tag-picker-body{position:absolute;left:0;top:calc(100% + 4px);z-index:60;min-width:200px;padding:6px;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow);border-radius:var(--radius-lg);display:grid;gap:2px}
+.tag-picker-body form{display:contents}
+.tag-option{display:flex;align-items:center;gap:8px;width:100%;border:0;background:transparent;padding:5px 8px;border-radius:var(--radius);font:inherit;font-size:12px;text-align:left;cursor:pointer;color:var(--ink)}
+.tag-option:hover{background:var(--surface-2)}
+.tag-option[aria-pressed="true"]{font-weight:700}
+.tag-option .icon{width:12px;height:12px;margin-left:auto;color:var(--green)}
+.tag-swatch{width:10px;height:10px;border-radius:50%;flex-shrink:0;border:1px solid rgba(0,0,0,.15)}
+.tag-swatch--blue{background:var(--blue)}.tag-swatch--green{background:var(--green)}.tag-swatch--amber{background:var(--amber)}.tag-swatch--navy{background:var(--navy)}.tag-swatch--red{background:var(--danger)}.tag-swatch--grey{background:#9aa3ad}
+.tag-picker-body form.tag-picker-new{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:4px;border-top:1px solid var(--line);margin-top:4px;padding-top:6px}
+.tag-picker-new input,.tag-picker-new select{min-height:28px;border:1px solid var(--line-strong);border-radius:var(--radius);padding:2px 6px;font-size:11.5px;min-width:0}
+
+@media(max-width:1180px){.thumbs{grid-template-columns:repeat(6,minmax(0,1fr))}.thumbs.evidence{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:760px){.thumbs,.thumbs.evidence{grid-template-columns:repeat(3,minmax(0,1fr))}.doc-row{grid-template-columns:28px minmax(0,1fr)}.doc-row-tags,.doc-row-actions{grid-column:2;justify-content:flex-start}}
+
+/* ---- The Case viewer (v26 § Image viewer): full screen, crop on the stage ---- */
+.case-viewer{position:fixed;inset:0;z-index:1200;background:rgba(14,17,19,.96);display:grid;grid-template-rows:auto minmax(0,1fr) 88px;grid-template-columns:56px minmax(0,1fr) 56px;color:#fff;outline:0}
+.case-viewer[hidden]{display:none}
+/* The viewer takes focus when it opens; the shared [tabindex]:focus-visible
+   rule must not pull it into the flow or ring it when that focus came from
+   script or a key (the images window, Enter on a tile). */
+.case-viewer:focus-visible{position:fixed;outline:0}
+.case-viewer-top{grid-column:1/-1;display:flex;align-items:center;gap:12px;min-height:48px;padding:8px 14px;border-bottom:1px solid rgba(255,255,255,.1);min-width:0}
+.case-viewer-title{display:flex;align-items:center;gap:10px;min-width:0;flex:1}
+.case-viewer-title b{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.case-viewer-title .tag{font:600 10px var(--font);padding:2px 8px;border-radius:999px;background:rgba(255,255,255,.14);color:#fff}
+.case-viewer-n{font:500 11.5px var(--mono);color:#aab2b8;white-space:nowrap}
+.case-viewer-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.case-viewer-set{display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap}
+.case-viewer .btn{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:#fff}
+.case-viewer .btn:hover{background:rgba(255,255,255,.16);color:#fff}
+.case-viewer .btn--primary{background:var(--red);border-color:var(--red)}
+.case-viewer .icon-button{color:#fff;background:transparent;border:0;width:32px;height:32px;display:grid;place-items:center;border-radius:3px;cursor:pointer}
+.case-viewer .icon-button:hover{background:rgba(255,255,255,.12)}
+.case-viewer-inc{display:flex;align-items:center;gap:6px;font-size:12px;white-space:nowrap;padding:0 4px 0 8px;border-left:1px solid rgba(255,255,255,.14);margin-left:4px;cursor:pointer}
+.case-viewer-inc input{accent-color:var(--red)}
+.case-viewer-select{flex:none;height:28px;font-size:12px;background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:3px;padding:0 6px}
+.case-viewer-select option{color:#000}
+.case-viewer-nav{background:none;border:0;color:#fff;opacity:.6;cursor:pointer;display:grid;place-items:center}
+.case-viewer-nav:hover{opacity:1}
+.case-viewer-nav:disabled{opacity:.15;cursor:default}
+.case-viewer-nav .icon{width:30px;height:30px}
+.case-viewer-stage{position:relative;display:grid;place-items:center;overflow:hidden;cursor:zoom-in;padding:14px;min-width:0;min-height:0}
+.case-viewer-stage.is-zoomed{cursor:zoom-out;overflow:auto}
+.case-viewer-stage.is-cropping{cursor:crosshair}
+.case-viewer-stage img{max-width:100%;max-height:100%;transition:transform .18s ease;box-shadow:0 24px 60px rgba(0,0,0,.6);border-radius:2px;transform-origin:center center}
+.case-viewer-stage.is-cropping img{transition:none}
+.case-viewer-stage iframe{width:100%;height:100%;border:0;background:#fff;border-radius:2px}
+.case-viewer-stage video{max-width:100%;max-height:100%}
+.case-viewer-stage[aria-busy="true"]::after{content:"";position:absolute;width:2rem;height:2rem;border:3px solid rgba(255,255,255,.25);border-top-color:#fff;border-radius:50%;animation:pegasus-spin .9s linear infinite;pointer-events:none}
+.case-viewer-strip{grid-column:1/-1;display:flex;gap:6px;padding:12px 14px;overflow-x:auto;border-top:1px solid rgba(255,255,255,.1)}
+.case-viewer-strip[hidden]{display:none}
+.case-viewer-strip button{flex:0 0 84px;height:63px;border:2px solid transparent;border-radius:3px;background:rgba(255,255,255,.06);opacity:.5;cursor:pointer;padding:0;overflow:hidden;color:#fff;font:600 9px var(--mono)}
+.case-viewer-strip button img{width:100%;height:100%;object-fit:cover;display:block}
+.case-viewer-strip button.on{opacity:1;border-color:#fff}
+.case-viewer-strip button:hover{opacity:.9}
+.case-viewer-strip button.off{filter:grayscale(.7)}
+.case-viewer-strip button.doc{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 6px}
+body.has-viewer{overflow:hidden}
+/* The images window (/Cases/{id}/Images): the read-mode tiles under the
+   same viewer, in a window with no shell. */
+body.case-images-window{margin:0;background:var(--surface-2)}
+.case-images-main{padding:18px;outline:0}
+.case-images-title{margin:0 0 12px;font-size:15px;font-weight:700;color:var(--ink)}
+/* crop on the stage */
+.case-viewer .crop-layer{position:absolute;cursor:crosshair;touch-action:none;z-index:2}
+.case-viewer .crop-sel{position:absolute;border:1px solid #fff;box-shadow:0 0 0 9999px rgba(0,0,0,.55);pointer-events:auto;cursor:move}
+.case-viewer .crop-sel.is-full{cursor:crosshair}
+.case-viewer .crop-sel[hidden]{display:none}
+.case-viewer .crop-sel::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.35) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.35) 1px,transparent 1px);background-size:33.34% 33.34%;pointer-events:none}
+.case-viewer .crop-sel.is-full .crop-handle{display:none}
+.case-viewer .crop-handle{position:absolute;width:12px;height:12px;background:#fff;border:1px solid #333;z-index:3;pointer-events:auto}
+.case-viewer .crop-handle--nw{left:-6px;top:-6px;cursor:nwse-resize}.case-viewer .crop-handle--se{right:-6px;bottom:-6px;cursor:nwse-resize}.case-viewer .crop-handle--ne{right:-6px;top:-6px;cursor:nesw-resize}.case-viewer .crop-handle--sw{left:-6px;bottom:-6px;cursor:nesw-resize}
+@media(max-width:760px){.case-viewer{grid-template-rows:auto minmax(0,1fr) 72px;grid-template-columns:40px minmax(0,1fr) 40px}.case-viewer-top{flex-wrap:wrap;padding:6px 10px}.case-viewer-strip button{flex-basis:64px;height:48px}}
+
+
+/* ==== notes ==== */
+/* ---- Notes ---------------------------------------------------------------- */
+#section-notes .note-form,#case-tasks-dialog .note-form{display:grid;gap:6px}
+#section-notes .note-form textarea{min-height:64px;padding:6px 9px;border:1px solid var(--line-strong);border-radius:var(--radius);font-size:13px;resize:vertical}
+#section-notes .note-form .lbl,#case-tasks-dialog .note-form .lbl{font-size:10.5px;color:var(--quiet);font-weight:650;text-transform:uppercase;letter-spacing:.06em}
+.notes-timeline{display:grid}
+.notes-timeline .note{display:grid;grid-template-columns:118px 1fr;gap:12px;padding:8px 0;border-bottom:1px solid var(--line);font-size:12.5px}
+.notes-timeline .note:last-child{border-bottom:0}
+.notes-timeline .nw{color:var(--quiet);font-family:var(--mono);font-size:11px}
+.notes-timeline .nb{overflow-wrap:anywhere;white-space:pre-wrap}
+.notes-timeline .nb b{color:var(--ink)}
+.notes-timeline .note.sys .nb{color:var(--muted)}
+@media(max-width:760px){.notes-timeline .note{grid-template-columns:1fr}}
+
+/* ---- v36 sharpening (operator, 9 October 2026) ----------------------------- */
+/* f01 · the section row never clips: no icons below 1500px, tighter links, and it wraps below 980px. */
+@media (max-width:1500px){.case-record .section-link .icon{display:none}.case-record .section-link{padding:0 7px}}
+@media (max-width:980px){.case-record .section-nav{flex-wrap:wrap;overflow:visible}.case-record .section-link{min-height:36px}}
+/* f02 · the Saving / Saved word: body size, sans, a fixed cell so Done never moves. */
+.case-record .lease-line{font-family:inherit;font-size:12px;min-width:96px;text-align:right}
+/* f03 · Principal is a code: natural width, so Claimant and Engineer get the room. */
+@media (min-width:1101px){.case-record .ribbon .ribbon-item.ribbon-principal{flex:0 0 auto}}
+/* f53 · below 980px only the section row stays sticky; the ribbon scrolls with the page. */
+@media (max-width:980px){.case-record .sticky-block{position:static}.case-record .sticky-block .section-row{position:sticky;top:var(--utility-h);background:var(--surface);z-index:20;border-bottom:1px solid var(--line)}}
+/* f06 · an absent figure is one glyph in one weight. */
+.figures dd.absent{font-weight:400;color:var(--muted)}
+/* f07 · the folded strip: cards keep their own height; Report not ready spans the strip. */
+@media (max-width:1440px){.case-record .workspace-aside{align-items:start}.case-record .workspace-aside>.report-not-ready{grid-column:1/-1}}
+/* f08 · aside card heads share the section head height. */
+.case-record .workspace-aside>.panel>.panel-head{min-height:51px}
+/* f23 · Reset sits with the area chips under the plan. */
+#section-damage .damage-extra{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+#section-damage .damage-extra [data-damage-reset]{margin-left:auto}
+/* f25 · Get valuation: a small button centred at the card's foot. */
+.valuation-card-foot{display:flex;justify-content:center;margin-top:8px}
+/* f26 · an unconnected card states the approved sentence as one quiet line, not a notice box. */
+.valuation-card-note[data-valuation-not-connected]{background:none;border:0;padding:4px 0 0;font-size:11.5px;color:var(--muted)}
+.valuation-card-note[data-valuation-not-connected] .icon{display:none}
+/* f27 · card boxes on the 32px small-control step, not 28px. */
+.valuation-card-fig{min-height:32px}
+.valuation-card-fig .fi,.valuation-card-fig input{min-height:32px;height:32px}
+/* f28 · reading, a value increase that was not applied reads greyed with an empty mark. */
+.valuation-increases .add.is-static{color:var(--muted)}
+.valuation-increases .add.is-static .add-check{visibility:hidden}
+/* f32 · the line grid: figures and their headers on one right edge, two decimals; a number
+   input's hidden spin buttons no longer hold the figure short of the edge. */
+#section-estimate .grid th.num{padding-right:10px}
+#section-estimate .grid td.num input,#section-estimate .grid td.num .gv{display:block;width:100%;box-sizing:border-box;text-align:right;padding-right:6px;font-variant-numeric:tabular-nums}
+#section-estimate .grid td.num .gv{display:flex;justify-content:flex-end}
+#section-estimate .grid td.num input::-webkit-inner-spin-button,#section-estimate .grid td.num input::-webkit-outer-spin-button{-webkit-appearance:none;appearance:none;margin:0}
+#section-estimate .grid td.num input[type=number]{-moz-appearance:textfield;appearance:textfield}
+/* f60 · a Glass's included operation: indented under the row it belongs to, its stored note across the figure columns. */
+#section-estimate .grid td.incl-indent{padding-left:30px;position:relative}
+#section-estimate .grid td.incl-indent::before{content:"";position:absolute;left:12px;top:-2px;height:50%;width:9px;border-left:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
+#section-estimate .grid td.incl-note{font-size:11.5px;color:var(--muted);text-align:left;padding-left:10px}
+/* f43 · a read-mode tile keeps the edit panel's height, so Edit moves nothing. */
+.image-tile-status{min-height:74px;display:flex;align-items:flex-start;padding-top:8px}
+/* f45 · a timeline entry is one line: when, who, what. */
+.notes-timeline .note .nb b{display:inline;font-weight:650}
+/* f46 · one empty state: a muted sentence in a 36px row; no dashed box, no icon. */
+.empty-line,#section-estimate .estimate-empty{padding:6px 9px;min-height:36px;display:flex;align-items:center;color:var(--muted);font-size:13.5px;border:0;background:none;text-align:left;margin:0}
+/* f40 · reading, the delivery cells draw greyed with static ticks, as the estimate's bars do. */
+#section-report .choice.is-static{cursor:default;color:var(--muted);display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500}
+#section-report .choice.is-static[data-on="true"]{color:var(--ink)}
+#section-report .choice.is-static .tick{display:inline-grid;place-items:center;width:15px;height:15px;flex:none;border:1px solid var(--line-strong);border-radius:2px;background:var(--surface-2)}
+#section-report .choice.is-static .tick .icon{width:11px;height:11px}
+/* A Next action or Report not ready jump outlines the cell recording the blocker's field, in the amber of incomplete. */
+.case-record .is-jump-target{outline:2px solid var(--amber-line);outline-offset:3px;border-radius:var(--radius)}
+@media (forced-colors: active) {
+    .case-record .is-jump-target{outline-color:Highlight}
+}

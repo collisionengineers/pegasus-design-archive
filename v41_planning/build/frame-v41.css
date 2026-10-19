@@ -1,0 +1,10 @@
+/* Inside each composed page: the Diff badges overlay only. Proposal changes are in the patched markup. */
+html[data-v41-diff] [data-v41-change] { outline: 2px dashed #c8102e; outline-offset: 2px; }
+html[data-v41-diff] [data-v41-change]::after {
+  content: attr(data-v41-change);
+  position: absolute; z-index: 30; transform: translateY(-100%);
+  background: #c8102e; color: #fff; font: 700 10px/1 system-ui, sans-serif; padding: 3px 6px; border-radius: 3px;
+  pointer-events: none; white-space: nowrap;
+}
+html[data-v41-diff] [data-v41-change]:not(input):not(select):not(textarea):not(img) { position: relative; }
+html[data-v41-diff] [data-v41-change]:not(input):not(select):not(textarea):not(img)::after { top: 0; left: 4px; }
