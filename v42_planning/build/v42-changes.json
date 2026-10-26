@@ -30,6 +30,10 @@
       {
         "id": "A",
         "summary": "Row category text only for New instruction, Triage request and Cancellation."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
       }
     ]
   },
@@ -54,89 +58,113 @@
   },
   {
     "key": "message-m1",
-    "label": "Message \u00b7 New instruction, no Case",
+    "label": "Message dialog \u00b7 New instruction, no Case (settings open)",
     "group": "Inbox",
     "changes": [
       {
-        "id": "H",
-        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
+        "id": "I",
+        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+      },
+      {
+        "id": "A",
+        "summary": "Row category text only for New instruction, Triage request and Cancellation."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
       },
       {
         "id": "G",
-        "summary": "Decision order: Case, Type, Query, Change case."
+        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Type, Query, Change case, with an at-a-glance context bar above the full-width message."
+      },
+      {
+        "id": "H",
+        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
       }
     ]
   },
   {
     "key": "message-m2",
-    "label": "Message \u00b7 Case update on a Report sent Case",
+    "label": "Message dialog \u00b7 Case update on a Report sent Case (settings open)",
     "group": "Inbox",
     "changes": [
       {
+        "id": "I",
+        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+      },
+      {
         "id": "A",
-        "summary": "Case update removed: this e-mail is Case correspondence when linked, No Case Found when not."
+        "summary": "Row category text only for New instruction, Triage request and Cancellation."
       },
       {
-        "id": "H",
-        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
-      },
-      {
-        "id": "G",
-        "summary": "Decision order: Case, Type, Query, Change case."
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
       },
       {
         "id": "N",
-        "summary": "Query row: Open query on an e-mail on a Report sent Case that holds no query."
+        "summary": "Query row in Message settings: Open query on an e-mail on a Report sent Case that holds no query."
       },
       {
         "id": "C",
         "summary": "Joining a Report sent Case opens no query by itself; criteria and the AI classifier may."
+      },
+      {
+        "id": "G",
+        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Type, Query, Change case, with an at-a-glance context bar above the full-width message."
+      },
+      {
+        "id": "H",
+        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
       }
     ]
   },
   {
     "key": "message-m4",
-    "label": "Message \u00b7 Query on a Report sent Case",
+    "label": "Message dialog \u00b7 Query on a Report sent Case (settings open)",
     "group": "Inbox",
     "changes": [
       {
+        "id": "I",
+        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+      },
+      {
         "id": "A",
-        "summary": "Query removed: this e-mail is Case correspondence when linked, No Case Found when not."
+        "summary": "Row category text only for New instruction, Triage request and Cancellation."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
+      },
+      {
+        "id": "K",
+        "summary": "Query row in Message settings: open query, Unassigned, Mark done marks this query done."
+      },
+      {
+        "id": "G",
+        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Type, Query, Change case, with an at-a-glance context bar above the full-width message."
       },
       {
         "id": "H",
         "summary": "Row label Type; default chip Correspondence replaces Unclassified."
-      },
-      {
-        "id": "G",
-        "summary": "Decision order: Case, Type, Query, Change case."
-      },
-      {
-        "id": "K",
-        "summary": "Query row: open query, Unassigned, Mark done marks this query done."
       }
     ]
   },
   {
     "key": "message-m4-ai-reply",
-    "label": "Message \u00b7 Query, composer on the AI draft",
+    "label": "Message dialog \u00b7 Query, composer on the AI draft",
     "group": "Inbox",
     "changes": [
       {
+        "id": "I",
+        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+      },
+      {
         "id": "A",
-        "summary": "Query removed: this e-mail is Case correspondence when linked, No Case Found when not."
+        "summary": "Row category text only for New instruction, Triage request and Cancellation."
       },
       {
-        "id": "H",
-        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
-      },
-      {
-        "id": "G",
-        "summary": "Decision order: Case, Type, Query, Change case."
-      },
-      {
-        "id": "K",
-        "summary": "Query row: open query, Unassigned, Mark done marks this query done."
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
       },
       {
         "id": "L",
@@ -146,20 +174,28 @@
   },
   {
     "key": "message-m3",
-    "label": "Message \u00b7 photographs, no Case",
+    "label": "Message dialog \u00b7 photographs, no Case",
     "group": "Inbox",
     "changes": [
       {
+        "id": "I",
+        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+      },
+      {
         "id": "A",
-        "summary": "Unclassified removed: this e-mail is Case correspondence when linked, No Case Found when not."
+        "summary": "Row category text only for New instruction, Triage request and Cancellation."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
+      },
+      {
+        "id": "G",
+        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Type, Query, Change case, with an at-a-glance context bar above the full-width message."
       },
       {
         "id": "H",
         "summary": "Row label Type; default chip Correspondence replaces Unclassified."
-      },
-      {
-        "id": "G",
-        "summary": "Decision order: Case, Type, Query, Change case."
       },
       {
         "id": "R",
@@ -169,66 +205,94 @@
   },
   {
     "key": "message-m7",
-    "label": "Message \u00b7 Billing, no Case",
+    "label": "Message dialog \u00b7 Billing, no Case (settings open)",
     "group": "Inbox",
     "changes": [
       {
+        "id": "I",
+        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+      },
+      {
         "id": "A",
-        "summary": "Billing removed: this e-mail is Case correspondence when linked, No Case Found when not."
+        "summary": "Row category text only for New instruction, Triage request and Cancellation."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
+      },
+      {
+        "id": "G",
+        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Type, Query, Change case, with an at-a-glance context bar above the full-width message."
       },
       {
         "id": "H",
         "summary": "Row label Type; default chip Correspondence replaces Unclassified."
-      },
-      {
-        "id": "G",
-        "summary": "Decision order: Case, Type, Query, Change case."
       }
     ]
   },
   {
     "key": "message-m11",
-    "label": "Message \u00b7 Cancellation on a Case in Report preparation",
+    "label": "Message dialog \u00b7 Cancellation on a Case in Report preparation (settings open)",
     "group": "Inbox",
     "changes": [
       {
-        "id": "H",
-        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
+        "id": "I",
+        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+      },
+      {
+        "id": "A",
+        "summary": "Row category text only for New instruction, Triage request and Cancellation."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
       },
       {
         "id": "G",
-        "summary": "Decision order: Case, Type, Query, Change case."
+        "summary": "Change case in Message settings: Place on Hold and Close case open the Case with that dialog."
       },
       {
         "id": "E",
         "summary": "The Cancellation type stays, with its Case aside row and notification."
+      },
+      {
+        "id": "H",
+        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
       }
     ]
   },
   {
     "key": "message-m12",
-    "label": "Message \u00b7 thank-you on a Report sent Case",
+    "label": "Message dialog \u00b7 thank-you on a Report sent Case (settings open)",
     "group": "Inbox",
     "changes": [
       {
+        "id": "I",
+        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+      },
+      {
         "id": "A",
-        "summary": "Case update removed: this e-mail is Case correspondence when linked, No Case Found when not."
+        "summary": "Row category text only for New instruction, Triage request and Cancellation."
       },
       {
-        "id": "H",
-        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
-      },
-      {
-        "id": "G",
-        "summary": "Decision order: Case, Type, Query, Change case."
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
       },
       {
         "id": "N",
-        "summary": "Query row: Open query on an e-mail on a Report sent Case that holds no query."
+        "summary": "Query row in Message settings: Open query on an e-mail on a Report sent Case that holds no query."
       },
       {
         "id": "C",
         "summary": "Joining a Report sent Case opens no query by itself; criteria and the AI classifier may."
+      },
+      {
+        "id": "G",
+        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Type, Query, Change case, with an at-a-glance context bar above the full-width message."
+      },
+      {
+        "id": "H",
+        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
       }
     ]
   },

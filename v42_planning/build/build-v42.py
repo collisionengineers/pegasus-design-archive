@@ -33,7 +33,9 @@ WWWROOT = SOURCE / "wwwroot"
 OUT = ROOT / "pegasus_v42.html"
 
 sys.path.insert(0, str(HERE))
+import mail_dialogs  # noqa: E402
 import proposals_v42 as proposals  # noqa: E402
+import proposals_inbox  # noqa: E402
 from states_v42 import ROUTES, STATES  # noqa: E402
 
 
@@ -204,20 +206,79 @@ def sprite_html() -> str:
 # Build
 # ---------------------------------------------------------------------------
 
+def build_mail_dialogs() -> tuple[dict[str, dict[str, dict[str, str]]], dict[str, Tag], dict[str, str]]:
+    """Build Today and Proposal #mailMessageDialog fragments for m1..m12 across all views."""
+    ids = mail_dialogs.load_ids()
+    m7_capture = Capture("inbox", "message-m7")
+    m7_id = ids["m7"]
+    today_wrappers: dict[str, Tag] = {}
+    for key in mail_dialogs.FIXTURES:
+        msg_id = ids[key]
+        cap_file = CAPTURED / "inbox" / f"message-{key}.html"
+        if cap_file.exists():
+            page_body = Capture("inbox", f"message-{key}").body
+        else:
+            page_body = mail_dialogs._synthesize_message_page(key, msg_id, m7_capture.body, m7_id)
+        today_wrappers[key] = mail_dialogs.page_to_dialog_wrapper(page_body, key, msg_id)
+    # Also build the AI-reply composer dialog wrapper for m4-ai-reply
+    m4_ai_body = Capture("inbox", "message-m4-ai-reply").body
+    today_wrappers["m4-ai-reply"] = mail_dialogs.page_to_dialog_wrapper(
+        m4_ai_body, "m4", ids["m4"], composing_mode="reply"
+    )
+
+    dialogs: dict[str, dict[str, dict[str, str]]] = {"today": {}, "proposal": {}}
+    for key in mail_dialogs.FIXTURES:
+        msg_id = ids[key]
+        t_msg = today_wrappers[key]
+        p_msg = proposals_inbox.transform_dialog_to_proposal(copy.copy(t_msg), key, settings_open=False)
+        dialogs["today"][msg_id] = {
+            "key": key,
+            "message": t_msg.decode_contents(),
+            "attachments": mail_dialogs.build_attachments_view(t_msg, key, msg_id).decode_contents(),
+            "thread": mail_dialogs.build_thread_view(t_msg, key, msg_id, ids).decode_contents(),
+            "reply": mail_dialogs.build_compose_view(key, msg_id, "reply", proposal=False).decode_contents(),
+            "reply-all": mail_dialogs.build_compose_view(key, msg_id, "reply-all", proposal=False).decode_contents(),
+            "forward": mail_dialogs.build_compose_view(key, msg_id, "forward", proposal=False).decode_contents(),
+            "ai-reply": mail_dialogs.build_compose_view(key, msg_id, "reply", proposal=False, ai_draft=True).decode_contents(),
+        }
+        dialogs["proposal"][msg_id] = {
+            "key": key,
+            "message": p_msg.decode_contents(),
+            "attachments": mail_dialogs.build_attachments_view(p_msg, key, msg_id).decode_contents(),
+            "thread": mail_dialogs.build_thread_view(p_msg, key, msg_id, ids).decode_contents(),
+            "reply": mail_dialogs.build_compose_view(key, msg_id, "reply", proposal=True).decode_contents(),
+            "reply-all": mail_dialogs.build_compose_view(key, msg_id, "reply-all", proposal=True).decode_contents(),
+            "forward": mail_dialogs.build_compose_view(key, msg_id, "forward", proposal=True).decode_contents(),
+            "ai-reply": mail_dialogs.build_compose_view(key, msg_id, "reply", proposal=True, ai_draft=True).decode_contents(),
+        }
+    return dialogs, today_wrappers, ids
+
+
+def prepare_capture(state: dict, today_wrappers: dict[str, Tag] | None = None, ids: dict[str, str] | None = None) -> Capture:
+    capture = Capture(state["lane"], state["capture"])
+    proposals.preset(state["key"], capture.body, state)
+    dialog_key = state.get("dialog")
+    if dialog_key:
+        if today_wrappers is None or ids is None:
+            _, today_wrappers, ids = build_mail_dialogs()
+        base_key = "m4" if dialog_key.startswith("m4") else dialog_key
+        mail_dialogs.mount_dialog_on_inbox(capture.body, today_wrappers[dialog_key], ids[base_key])
+    return capture
+
+
 def build() -> None:
     entries, missing = [], []
     bodies: dict[str, str] = {}
     css_names, js_names = {"site.css"}, {"site.js"}
     routes: list[list[str]] = []
+    dialogs, today_wrappers, ids = build_mail_dialogs()
 
     for state in STATES:
         try:
-            capture = Capture(state["lane"], state["capture"])
+            capture = prepare_capture(state, today_wrappers, ids)
         except FileNotFoundError as error:
             missing.append(f'{state["key"]}: {error}')
             continue
-        # A preset (a ticked row, an open dialog) sets the sub-state both views open on.
-        proposals.preset(state["key"], capture.body, state)
         today_html = capture.html()
         proposal_doc = copy.copy(capture.body)
         changes = proposals.apply(state["key"], proposal_doc, state)
@@ -228,12 +289,13 @@ def build() -> None:
         bodies[f'{state["key"]}-today'] = pack(today_html)
         if has_proposal:
             bodies[f'{state["key"]}-proposal'] = pack(proposal_html)
-        index = CAPTURED / state["lane"] / "index.tsv"
-        if index.exists():
-            for line in read(index).splitlines():
-                parts = line.split("\t")
-                if len(parts) >= 3 and parts[0] == state["capture"] and parts[1] == "200":
-                    routes.append([parts[2].split("?")[0], state["key"]])
+        if not state.get("dialog"):
+            index = CAPTURED / state["lane"] / "index.tsv"
+            if index.exists():
+                for line in read(index).splitlines():
+                    parts = line.split("\t")
+                    if len(parts) >= 3 and parts[0] == state["capture"] and parts[1] == "200":
+                        routes.append([parts[2].split("?")[0], state["key"]])
         entries.append({
             "key": state["key"],
             "label": state["label"],
@@ -267,7 +329,8 @@ def build() -> None:
     runtime = (read(HERE / "runtime-v42.js")
                .replace("__STATES__", json.dumps(entries).replace("</", "<\\/"))
                .replace("__ROUTES__", json.dumps(routes))
-               .replace("__FRAGMENTS__", json.dumps(fragments).replace("</", "<\\/")))
+               .replace("__FRAGMENTS__", json.dumps(fragments).replace("</", "<\\/"))
+               .replace("__DIALOGS__", json.dumps(dialogs).replace("</", "<\\/")))
     doc = (
         "<!DOCTYPE html>\n<html lang=\"en-GB\">\n<head>\n<meta charset=\"utf-8\" />\n"
         "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n"

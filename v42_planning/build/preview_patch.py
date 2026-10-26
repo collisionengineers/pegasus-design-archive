@@ -23,10 +23,10 @@ args = sys.argv[1:]
 write_html = "--html" in args
 args = [a for a in args if a != "--html"]
 keys = list(states) if args == ["--all"] else args
+_dialogs, _wrappers, _ids = build.build_mail_dialogs()
 for key in keys:
     state = states[key]
-    capture = build.Capture(state["lane"], state["capture"])
-    build.proposals.preset(key, capture.body, state)
+    capture = build.prepare_capture(state, _wrappers, _ids)
     today = capture.html()
     body = copy.copy(capture.body)
     changes = build.proposals.apply(key, body, state)

@@ -72,3 +72,25 @@ Five design choices that materially affected the mockup were put to the operator
 - Ran `ZzMockupCaptureInbox`, `ZzMockupCaptureIntake` and `ZzMockupCaptureShell` with `MOCKUP_CAPTURE=1` (5 of 5 passed, 1 m 20 s; `notes/capture-run-2026-10-26.log`). Copied `inbox`, `intake`, `shell` and `wwwroot` into `v42_planning/captured-live/`.
 - Built `pegasus_v42.html` (19 states, 18 with Proposals) and ran `check-v42.py`: `RESULT {"fail": [], "okCount": 316}`, 148 screenshots in `shots/`.
 - Raised sign-off items **G** to **AA** in [v42-notes.md §6](v42-notes.md#6-sign-off).
+
+## 26 October 2026: `#mailMessageDialog` over `/Inbox`, cog settings menu and interactive fake emails
+
+The operator reviewed the initial v42 drawing and directed:
+
+> *"the mockup, particularly with regards to emails, is wrong to the current live state.*
+>
+> *additionally we will just replace the 'decision' with a settings menu (cog icon) on the email dialogue (its not its own page anymore, though the mockup has it like this).*
+>
+> *Make sure the mockup is fully interactive with fake emails etc that i can open.*
+>
+> *Improve the overall design and UX on this emails part and view.*
+>
+> *Push when done. This is mockup only so far."*
+
+What changed:
+
+- **True live Today state (`#mailMessageDialog` over `/Inbox`):** Every `message-m*` state now renders `/Inbox` (or `/Inbox?queue=no_case_found` for `m3` and `m7`) with `#mailMessageDialog` (`_MessageDialog.cshtml`) open in `[data-mail-dialog-root]`, instead of the standalone `/Inbox/{id}` fallback page. In Today, `#mailMessageDialog` shows the live 1080px split layout with the 380px right-hand `Decision` column and 12 `Classification` chips.
+- **Decision replaced by the cog settings menu (`#icon-settings`) in Proposal:** In Proposal, the right-hand `Decision` column is removed so the message body reads at full width (`880px` dialog) with an inline attachment strip (`.mail-inline-attachments`). An at-a-glance context pill bar (`.mail-context-bar`) beneath the `From · To · Time` route line shows the linked **Case** (or `No Case Found` + `Link to Case`), **Type**, and **Query** status (`Query · Unassigned` or `Open query`). A cog button (`#icon-settings`, `details[data-mail-settings]`) in `.mail-dialog-tools` opens the settings popover ordered **Case** (with interactive `Case / PO` autocomplete and `Link to Case` / `Change linked Case` / `Unlink`), **Type** (four chips + `Case type`), **Query** (`Open query` or `Query` + `Unassigned` + `Mark done`), **Change case** (`Place on Hold`, `Close case`), and `Decided`.
+- **Inbox list & filter UX:** Fixed `.inbox-filter` to a 3-column grid once `Category` is removed so the `Search` input fills the bar and the `Search` button stays compact; surfaced prominent Case reference pills (`.mail-row-case`) and open `Query` chips directly in each linked row's status cluster; made clicking anywhere on an `.inbox-row` open `#mailMessageDialog`.
+- **Full interactivity across all 12 fake emails (`m1`–`m12`):** Built `mail_dialogs.py` and updated `bridge-v42.js` (including a `window.URL` wrapper and `<base href>` for `about:srcdoc`) so clicking any email row on `/Inbox`, stepping with `Previous`/`Next`, switching `Message`/`Attachments`/`Thread` tabs, composing `Reply`/`Reply all`/`Forward`, searching/filtering/sorting, dismissing rows, and changing `Case`, `Type` or `Query` inside the cog settings menu all work live in the browser.
+- Re-ran `python build/build-v42.py && python build/pagedocs-v42.py && python build/check-v42.py`: `RESULT {"fail": [], "okCount": 335}`, 148 screenshots updated in `shots/`.

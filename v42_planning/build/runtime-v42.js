@@ -4,6 +4,7 @@
   var STATES = __STATES__;
   var ROUTES = __ROUTES__;
   window.__mockFragments = __FRAGMENTS__;
+  window.__mockDialogs = __DIALOGS__;
 
   var byKey = {};
   STATES.forEach(function (s) { byKey[s.key] = s; });
@@ -47,6 +48,7 @@
 
   function compose(state, body) {
     var head = '<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">'
+      + '<base href="https://localhost:7139/">'
       + '<title>' + esc(state.label) + '</title>'
       + state.css.map(function (c) { return asset('a-css-' + c); }).join('')
       + asset('a-css-frame');

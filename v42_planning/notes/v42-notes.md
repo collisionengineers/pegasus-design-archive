@@ -24,7 +24,7 @@ one at a time and reopenable.
 | Eleven mail categories plus Unclassified clutter the Inbox list, filter bar, bulk bar and message Decision panel with labels that carry no workflow behaviour (`Pre-instruction`, `Images received`, `Case update`, `Query`, `Billing`, `General`, `Not client related`, `Internal CC`). | Three categories remain: `New instruction` (with Case type), `Triage request` and `Cancellation`. Every other e-mail has no category: linked it is **Case correspondence**, unlinked it waits in **No Case Found**. The Decision panel's **Type** row offers four chips (`Correspondence`, `New instruction`, `Triage request`, `Cancellation`). (**A**, **H**) | `001`–`004`, `007`–`022` |
 | Unlinked noise (`Billing`, `Not client related`, `Internal CC`, `Pre-instruction`, unlinked photographs) sits in **All incoming** alongside live instructions and Case mail. | Unlinked e-mail that is neither a `New instruction` nor a `Triage request` appears **only in No Case Found**, where staff link it to a Case or Dismiss it. **All incoming** lists instructions, triage requests and Case-linked mail. (**B**) | `001`–`004`, `017`–`018` |
 | The Inbox **Category** select and bulk **Correct classification** dialog exist only to sort or relabel the eleven categories. | Both are removed from the Inbox. Mailbox and Search remain on the filter bar; bulk **Dismiss** (and **Restore** in Dismissed) remains on the bulk bar. (**I**) | `001`–`006` |
-| Linking any e-mail to a Report sent Case (`CaseStateMailClassification`) or tagging it as `Query` raises a query, and the Decision panel puts Classification before Case with no route to open a query or change the Case's state. | Automatic queries come from deterministic criteria (the QDOS PAV-dispute sentence) and the AI classifier only; any other e-mail joining a Report sent Case is plain correspondence. Decision order becomes **Case**, **Type**, **Query** (`Open query` or the open query's chip, assignee and `Mark done`), **Change case** (`Place on Hold`, `Close case`). (**C**, **E**, **G**, **K**, **N**) | `007`–`012`, `019`–`022` |
+| Linking any e-mail to a Report sent Case (`CaseStateMailClassification`) or tagging it as `Query` raises a query, and `#mailMessageDialog` devotes a permanent 380px right-hand `Decision` column to Classification chips before Case, with no route to open a query or change the Case's state. | Automatic queries come from deterministic criteria (the QDOS PAV-dispute sentence) and the AI classifier only; any other e-mail joining a Report sent Case is plain correspondence. On `#mailMessageDialog`, the right-hand `Decision` column is replaced by a **settings menu (cog icon `#icon-settings`, `[data-mail-settings]`)** in the dialog header paired with an at-a-glance context pill bar (`.mail-context-bar`) above the full-width message. Inside the cog menu, the order is **Case**, **Type**, **Query** (`Open query` or the open query's chip, assignee and `Mark done`), **Change case** (`Place on Hold`, `Close case`). (**C**, **E**, **G**, **K**, **N**) | `007`–`012`, `019`–`022` |
 | `Images received` is a separate category required before **Register images** is offered on an unlinked image e-mail. | `Images received` is removed; **Register images** is offered on any image-only, unlinked e-mail whose Type is `Correspondence` (no instruction, triage or cancellation type). (**R**) | `015`–`016` |
 | The reply composer's `Also resolve query` checkbox resolves every open query on the Case when the Sent item is observed. | Renamed **Mark query done**; offered only when replying to an e-mail that holds an open query, and marks only that e-mail's query done on observed Sent. (**L**) | `013`–`014` |
 | Case **Correspondence** calls its column `Classification` and offers `Tag as query` (a classification correction). | Column header becomes **Type**, showing `Correspondence` (or one of the three types) plus the e-mail's query chip (`Query` or `Done`), and **Open query** replaces `Tag as query` once the report is sent. (**N**, **X**, **AA**) | `023`–`024`, `031`–`032` |
@@ -53,7 +53,7 @@ Unchanged from v41 (`captured-live/_source/wwwroot/css/site.css`):
 | --- | --- |
 | Top utility bar height | `48px` |
 | Left navigation rail width | `220px` expanded, `56px` collapsed |
-| Message dialog (`.dialog--mail`) max-width | `1080px` |
+| Message dialog (`.dialog--mail`) max-width | `1080px` Today (with 380px Decision sidebar), `880px` Proposal (full-width body + `364px` cog settings popover) |
 | Standard dialog (`.dialog`) max-width | `720px` |
 | Compact dialog (`.dialog--compact`, Log query / Assign query) max-width | `480px` |
 | Table header (`th`) height | `34px` (`11px` uppercase, `padding: 0 12px`) |
@@ -74,6 +74,7 @@ Settled with the operator on 26 October 2026 before the mockup was built (see
 | **D** | A new query is **Unassigned until taken or assigned**. | Operator, 26 October 2026 |
 | **E** | **Keep a cancellation marker** (the `Cancellation` category) with its existing Case aside row and notification, alongside new options to change the Case from the message. | Operator, 26 October 2026 |
 | **F** | **Widen linking**: thread (conversation or `In-Reply-To`/`References` to a message already on exactly one Case), Principal claim reference found in subject/body, VRM narrowed by accident date. | Operator, 26 October 2026 |
+| **G (cog menu)** | **Replace the `Decision` sidebar on `#mailMessageDialog` with a settings menu (cog icon `#icon-settings`)** in the dialog header over `/Inbox` (emails open in `#mailMessageDialog`, not a standalone page). | Operator, 26 October 2026 |
 
 ## 5. Deliberate departures from live, with reasons
 
@@ -93,7 +94,7 @@ Items **G** to **AA** are open: confirm each item as drawn, or state the change.
 - **D** *(Settled 26 October 2026 — a new query is Unassigned until taken or assigned.)*
 - **E** *(Settled 26 October 2026 — keep the Cancellation category, its Case aside row and its notification alongside the new Change case options.)*
 - **F** *(Settled 26 October 2026 — widen automatic linking to conversation thread or In-Reply-To/References, Principal claim reference in subject/body, and VRM narrowed by accident date.)*
-- **G** Confirm Decision panel order (**Case**, **Type**, **Query**, **Change case**) and that **Change case** links (**Place on Hold**, **Close case**) open `/Cases/{id}?dialog=case-hold-dialog|case-close-dialog`, shown only when the linked Case allows the act, or specify another order or interaction.
+- **G** *(Cog settings menu settled 26 October 2026 — `#mailMessageDialog` replaces the right-hand `Decision` column with the `#icon-settings` cog menu in `.mail-dialog-tools` and an at-a-glance `.mail-context-bar` strip above the full-width message.)* Confirm the order inside the cog menu (**Case**, **Type**, **Query**, **Change case**) and that **Change case** links (**Place on Hold**, **Close case**) open `/Cases/{id}?dialog=case-hold-dialog|case-close-dialog`, shown only when the linked Case allows the act, or specify another order or interaction.
 - **H** Confirm the row label **Type** and the default chip **Correspondence** (replacing `Classification` and `Unclassified`), or give another label.
 - **I** Confirm removing the Inbox **Category** filter select and the bulk **Correct classification** button and dialog while keeping bulk **Dismiss** and **Restore**, or say which filter/bulk control should stay.
 - **J** Confirm that query acts (open, mark done, reopen, assign) need no Case edit lease, no expected Case version and no reason, so a colleague editing the Case does not block them, or specify which gate should remain.
@@ -120,13 +121,13 @@ Items **G** to **AA** are open: confirm each item as drawn, or state the change.
 `python build/build-v42.py && python build/pagedocs-v42.py && python build/check-v42.py`
 run on **26 October 2026** against captures from `origin/dev` `373dcc81aedd7ff1415090b4fb50486652ebc595`:
 
-- **Result:** `RESULT {"fail": [], "okCount": 316}`, zero page or console errors.
+- **Result:** `RESULT {"fail": [], "okCount": 335}`, zero page or console errors.
 - **States:** 19 states registered in `build/states_v42.py`; 18 have a Proposal (`cases-query` is captured unchanged to show **P**'s one-row-per-Case invariant).
 - **Screenshots:** 148 PNG files in `shots/` (`001`–`037` across `1580×1000`, `1580` whole page, `1440×900` and `760×1000`) plus `shots/verification.json`.
 
 ## 8. Known limits
 
 - Captured fixtures are synthetic (`ZzMockupCaptureInbox.cs`, `ZzMockupCaptureIntake.cs`, `ZzMockupCaptureShell.cs`). The staff-logged `Phone` query on `QDOS26214` carries the test store's clock (`06 May 2031 11:30`) and the offline administrator username (`development-offline-administrator`), while the shell lane signs in as `e.mawdsley`.
-- Form submissions and uncaptured links are stubbed by `bridge-v42.js` and display a toast; links between captured states navigate within the mockup.
+- All twelve seeded emails (`m1`–`m12`) are interactively openable from `/Inbox` in `#mailMessageDialog`, with working `Previous`/`Next` buttons, `Message`/`Attachments`/`Thread` tabs, `Reply`/`Reply all`/`Forward` composer, and live cog settings menu actions (`Type` chips, `Case / PO` autocomplete and Link/Change/Unlink, `Open query`/`Mark done`, `Dismiss`, search and sort). Uncaptured routes outside the 19 states display a toast.
 - Photographs served by application handlers render as a grey placeholder image.
 - Linking v2 (**F**, **T**–**W**: reply headers, claim reference in subject/body, VRM narrowed by accident date, signal intersection) runs inside `EfIntakeMutationStore` / `AutomaticMailCaseAssociation` during intake and has no separate UI surface beyond the resulting Case link on the message.
