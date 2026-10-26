@@ -1,8 +1,8 @@
 {
-  "checkedAtUtc": "2026-10-26T20:32:44.529242+00:00",
+  "checkedAtUtc": "2026-10-26T20:56:40.730571+00:00",
   "result": {
     "fail": [],
-    "okCount": 335
+    "okCount": 339
   },
   "shots": [
     {
@@ -102,793 +102,841 @@
       "viewport": "760x1000"
     },
     {
-      "shot": "005-inbox-rows-ticked-today-1580.png",
+      "shot": "005-inbox-dismissed-today-1580.png",
+      "state": "inbox-dismissed",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "005-inbox-dismissed-today-full.png",
+      "state": "inbox-dismissed",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "005-inbox-dismissed-today-1440.png",
+      "state": "inbox-dismissed",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "005-inbox-dismissed-today-760.png",
+      "state": "inbox-dismissed",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "006-inbox-dismissed-proposal-1580.png",
+      "state": "inbox-dismissed",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "006-inbox-dismissed-proposal-full.png",
+      "state": "inbox-dismissed",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "006-inbox-dismissed-proposal-1440.png",
+      "state": "inbox-dismissed",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "006-inbox-dismissed-proposal-760.png",
+      "state": "inbox-dismissed",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "007-inbox-rows-ticked-today-1580.png",
       "state": "inbox-rows-ticked",
       "mode": "today",
       "viewport": "1580x1000"
     },
     {
-      "shot": "005-inbox-rows-ticked-today-full.png",
+      "shot": "007-inbox-rows-ticked-today-full.png",
       "state": "inbox-rows-ticked",
       "mode": "today",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "005-inbox-rows-ticked-today-1440.png",
+      "shot": "007-inbox-rows-ticked-today-1440.png",
       "state": "inbox-rows-ticked",
       "mode": "today",
       "viewport": "1440x900"
     },
     {
-      "shot": "005-inbox-rows-ticked-today-760.png",
+      "shot": "007-inbox-rows-ticked-today-760.png",
       "state": "inbox-rows-ticked",
       "mode": "today",
       "viewport": "760x1000"
     },
     {
-      "shot": "006-inbox-rows-ticked-proposal-1580.png",
+      "shot": "008-inbox-rows-ticked-proposal-1580.png",
       "state": "inbox-rows-ticked",
       "mode": "proposal",
       "viewport": "1580x1000"
     },
     {
-      "shot": "006-inbox-rows-ticked-proposal-full.png",
+      "shot": "008-inbox-rows-ticked-proposal-full.png",
       "state": "inbox-rows-ticked",
       "mode": "proposal",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "006-inbox-rows-ticked-proposal-1440.png",
+      "shot": "008-inbox-rows-ticked-proposal-1440.png",
       "state": "inbox-rows-ticked",
       "mode": "proposal",
       "viewport": "1440x900"
     },
     {
-      "shot": "006-inbox-rows-ticked-proposal-760.png",
+      "shot": "008-inbox-rows-ticked-proposal-760.png",
       "state": "inbox-rows-ticked",
       "mode": "proposal",
       "viewport": "760x1000"
     },
     {
-      "shot": "007-message-m1-today-1580.png",
+      "shot": "009-message-m1-today-1580.png",
       "state": "message-m1",
       "mode": "today",
       "viewport": "1580x1000"
     },
     {
-      "shot": "007-message-m1-today-full.png",
+      "shot": "009-message-m1-today-full.png",
       "state": "message-m1",
       "mode": "today",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "007-message-m1-today-1440.png",
+      "shot": "009-message-m1-today-1440.png",
       "state": "message-m1",
       "mode": "today",
       "viewport": "1440x900"
     },
     {
-      "shot": "007-message-m1-today-760.png",
+      "shot": "009-message-m1-today-760.png",
       "state": "message-m1",
       "mode": "today",
       "viewport": "760x1000"
     },
     {
-      "shot": "008-message-m1-proposal-1580.png",
+      "shot": "010-message-m1-proposal-1580.png",
       "state": "message-m1",
       "mode": "proposal",
       "viewport": "1580x1000"
     },
     {
-      "shot": "008-message-m1-proposal-full.png",
+      "shot": "010-message-m1-proposal-full.png",
       "state": "message-m1",
       "mode": "proposal",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "008-message-m1-proposal-1440.png",
+      "shot": "010-message-m1-proposal-1440.png",
       "state": "message-m1",
       "mode": "proposal",
       "viewport": "1440x900"
     },
     {
-      "shot": "008-message-m1-proposal-760.png",
+      "shot": "010-message-m1-proposal-760.png",
       "state": "message-m1",
       "mode": "proposal",
       "viewport": "760x1000"
     },
     {
-      "shot": "009-message-m2-today-1580.png",
+      "shot": "011-message-m2-today-1580.png",
       "state": "message-m2",
       "mode": "today",
       "viewport": "1580x1000"
     },
     {
-      "shot": "009-message-m2-today-full.png",
+      "shot": "011-message-m2-today-full.png",
       "state": "message-m2",
       "mode": "today",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "009-message-m2-today-1440.png",
+      "shot": "011-message-m2-today-1440.png",
       "state": "message-m2",
       "mode": "today",
       "viewport": "1440x900"
     },
     {
-      "shot": "009-message-m2-today-760.png",
+      "shot": "011-message-m2-today-760.png",
       "state": "message-m2",
       "mode": "today",
       "viewport": "760x1000"
     },
     {
-      "shot": "010-message-m2-proposal-1580.png",
+      "shot": "012-message-m2-proposal-1580.png",
       "state": "message-m2",
       "mode": "proposal",
       "viewport": "1580x1000"
     },
     {
-      "shot": "010-message-m2-proposal-full.png",
+      "shot": "012-message-m2-proposal-full.png",
       "state": "message-m2",
       "mode": "proposal",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "010-message-m2-proposal-1440.png",
+      "shot": "012-message-m2-proposal-1440.png",
       "state": "message-m2",
       "mode": "proposal",
       "viewport": "1440x900"
     },
     {
-      "shot": "010-message-m2-proposal-760.png",
+      "shot": "012-message-m2-proposal-760.png",
       "state": "message-m2",
       "mode": "proposal",
       "viewport": "760x1000"
     },
     {
-      "shot": "011-message-m4-today-1580.png",
+      "shot": "013-message-m4-today-1580.png",
       "state": "message-m4",
       "mode": "today",
       "viewport": "1580x1000"
     },
     {
-      "shot": "011-message-m4-today-full.png",
+      "shot": "013-message-m4-today-full.png",
       "state": "message-m4",
       "mode": "today",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "011-message-m4-today-1440.png",
+      "shot": "013-message-m4-today-1440.png",
       "state": "message-m4",
       "mode": "today",
       "viewport": "1440x900"
     },
     {
-      "shot": "011-message-m4-today-760.png",
+      "shot": "013-message-m4-today-760.png",
       "state": "message-m4",
       "mode": "today",
       "viewport": "760x1000"
     },
     {
-      "shot": "012-message-m4-proposal-1580.png",
+      "shot": "014-message-m4-proposal-1580.png",
       "state": "message-m4",
       "mode": "proposal",
       "viewport": "1580x1000"
     },
     {
-      "shot": "012-message-m4-proposal-full.png",
+      "shot": "014-message-m4-proposal-full.png",
       "state": "message-m4",
       "mode": "proposal",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "012-message-m4-proposal-1440.png",
+      "shot": "014-message-m4-proposal-1440.png",
       "state": "message-m4",
       "mode": "proposal",
       "viewport": "1440x900"
     },
     {
-      "shot": "012-message-m4-proposal-760.png",
+      "shot": "014-message-m4-proposal-760.png",
       "state": "message-m4",
       "mode": "proposal",
       "viewport": "760x1000"
     },
     {
-      "shot": "013-message-m4-ai-reply-today-1580.png",
+      "shot": "015-message-m4-ai-reply-today-1580.png",
       "state": "message-m4-ai-reply",
       "mode": "today",
       "viewport": "1580x1000"
     },
     {
-      "shot": "013-message-m4-ai-reply-today-full.png",
+      "shot": "015-message-m4-ai-reply-today-full.png",
       "state": "message-m4-ai-reply",
       "mode": "today",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "013-message-m4-ai-reply-today-1440.png",
+      "shot": "015-message-m4-ai-reply-today-1440.png",
       "state": "message-m4-ai-reply",
       "mode": "today",
       "viewport": "1440x900"
     },
     {
-      "shot": "013-message-m4-ai-reply-today-760.png",
+      "shot": "015-message-m4-ai-reply-today-760.png",
       "state": "message-m4-ai-reply",
       "mode": "today",
       "viewport": "760x1000"
     },
     {
-      "shot": "014-message-m4-ai-reply-proposal-1580.png",
+      "shot": "016-message-m4-ai-reply-proposal-1580.png",
       "state": "message-m4-ai-reply",
       "mode": "proposal",
       "viewport": "1580x1000"
     },
     {
-      "shot": "014-message-m4-ai-reply-proposal-full.png",
+      "shot": "016-message-m4-ai-reply-proposal-full.png",
       "state": "message-m4-ai-reply",
       "mode": "proposal",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "014-message-m4-ai-reply-proposal-1440.png",
+      "shot": "016-message-m4-ai-reply-proposal-1440.png",
       "state": "message-m4-ai-reply",
       "mode": "proposal",
       "viewport": "1440x900"
     },
     {
-      "shot": "014-message-m4-ai-reply-proposal-760.png",
+      "shot": "016-message-m4-ai-reply-proposal-760.png",
       "state": "message-m4-ai-reply",
       "mode": "proposal",
       "viewport": "760x1000"
     },
     {
-      "shot": "015-message-m3-today-1580.png",
+      "shot": "017-message-m3-today-1580.png",
       "state": "message-m3",
       "mode": "today",
       "viewport": "1580x1000"
     },
     {
-      "shot": "015-message-m3-today-full.png",
+      "shot": "017-message-m3-today-full.png",
       "state": "message-m3",
       "mode": "today",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "015-message-m3-today-1440.png",
+      "shot": "017-message-m3-today-1440.png",
       "state": "message-m3",
       "mode": "today",
       "viewport": "1440x900"
     },
     {
-      "shot": "015-message-m3-today-760.png",
+      "shot": "017-message-m3-today-760.png",
       "state": "message-m3",
       "mode": "today",
       "viewport": "760x1000"
     },
     {
-      "shot": "016-message-m3-proposal-1580.png",
+      "shot": "018-message-m3-proposal-1580.png",
       "state": "message-m3",
       "mode": "proposal",
       "viewport": "1580x1000"
     },
     {
-      "shot": "016-message-m3-proposal-full.png",
+      "shot": "018-message-m3-proposal-full.png",
       "state": "message-m3",
       "mode": "proposal",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "016-message-m3-proposal-1440.png",
+      "shot": "018-message-m3-proposal-1440.png",
       "state": "message-m3",
       "mode": "proposal",
       "viewport": "1440x900"
     },
     {
-      "shot": "016-message-m3-proposal-760.png",
+      "shot": "018-message-m3-proposal-760.png",
       "state": "message-m3",
       "mode": "proposal",
       "viewport": "760x1000"
     },
     {
-      "shot": "017-message-m7-today-1580.png",
+      "shot": "019-message-m7-today-1580.png",
       "state": "message-m7",
       "mode": "today",
       "viewport": "1580x1000"
     },
     {
-      "shot": "017-message-m7-today-full.png",
+      "shot": "019-message-m7-today-full.png",
       "state": "message-m7",
       "mode": "today",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "017-message-m7-today-1440.png",
+      "shot": "019-message-m7-today-1440.png",
       "state": "message-m7",
       "mode": "today",
       "viewport": "1440x900"
     },
     {
-      "shot": "017-message-m7-today-760.png",
+      "shot": "019-message-m7-today-760.png",
       "state": "message-m7",
       "mode": "today",
       "viewport": "760x1000"
     },
     {
-      "shot": "018-message-m7-proposal-1580.png",
+      "shot": "020-message-m7-proposal-1580.png",
       "state": "message-m7",
       "mode": "proposal",
       "viewport": "1580x1000"
     },
     {
-      "shot": "018-message-m7-proposal-full.png",
+      "shot": "020-message-m7-proposal-full.png",
       "state": "message-m7",
       "mode": "proposal",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "018-message-m7-proposal-1440.png",
+      "shot": "020-message-m7-proposal-1440.png",
       "state": "message-m7",
       "mode": "proposal",
       "viewport": "1440x900"
     },
     {
-      "shot": "018-message-m7-proposal-760.png",
+      "shot": "020-message-m7-proposal-760.png",
       "state": "message-m7",
       "mode": "proposal",
       "viewport": "760x1000"
     },
     {
-      "shot": "019-message-m11-today-1580.png",
+      "shot": "021-message-m11-today-1580.png",
       "state": "message-m11",
       "mode": "today",
       "viewport": "1580x1000"
     },
     {
-      "shot": "019-message-m11-today-full.png",
+      "shot": "021-message-m11-today-full.png",
       "state": "message-m11",
       "mode": "today",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "019-message-m11-today-1440.png",
+      "shot": "021-message-m11-today-1440.png",
       "state": "message-m11",
       "mode": "today",
       "viewport": "1440x900"
     },
     {
-      "shot": "019-message-m11-today-760.png",
+      "shot": "021-message-m11-today-760.png",
       "state": "message-m11",
       "mode": "today",
       "viewport": "760x1000"
     },
     {
-      "shot": "020-message-m11-proposal-1580.png",
+      "shot": "022-message-m11-proposal-1580.png",
       "state": "message-m11",
       "mode": "proposal",
       "viewport": "1580x1000"
     },
     {
-      "shot": "020-message-m11-proposal-full.png",
+      "shot": "022-message-m11-proposal-full.png",
       "state": "message-m11",
       "mode": "proposal",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "020-message-m11-proposal-1440.png",
+      "shot": "022-message-m11-proposal-1440.png",
       "state": "message-m11",
       "mode": "proposal",
       "viewport": "1440x900"
     },
     {
-      "shot": "020-message-m11-proposal-760.png",
+      "shot": "022-message-m11-proposal-760.png",
       "state": "message-m11",
       "mode": "proposal",
       "viewport": "760x1000"
     },
     {
-      "shot": "021-message-m12-today-1580.png",
+      "shot": "023-message-m12-today-1580.png",
       "state": "message-m12",
       "mode": "today",
       "viewport": "1580x1000"
     },
     {
-      "shot": "021-message-m12-today-full.png",
+      "shot": "023-message-m12-today-full.png",
       "state": "message-m12",
       "mode": "today",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "021-message-m12-today-1440.png",
+      "shot": "023-message-m12-today-1440.png",
       "state": "message-m12",
       "mode": "today",
       "viewport": "1440x900"
     },
     {
-      "shot": "021-message-m12-today-760.png",
+      "shot": "023-message-m12-today-760.png",
       "state": "message-m12",
       "mode": "today",
       "viewport": "760x1000"
     },
     {
-      "shot": "022-message-m12-proposal-1580.png",
+      "shot": "024-message-m12-proposal-1580.png",
       "state": "message-m12",
       "mode": "proposal",
       "viewport": "1580x1000"
     },
     {
-      "shot": "022-message-m12-proposal-full.png",
+      "shot": "024-message-m12-proposal-full.png",
       "state": "message-m12",
       "mode": "proposal",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "022-message-m12-proposal-1440.png",
+      "shot": "024-message-m12-proposal-1440.png",
       "state": "message-m12",
       "mode": "proposal",
       "viewport": "1440x900"
     },
     {
-      "shot": "022-message-m12-proposal-760.png",
+      "shot": "024-message-m12-proposal-760.png",
       "state": "message-m12",
       "mode": "proposal",
       "viewport": "760x1000"
     },
     {
-      "shot": "023-case-today-1580.png",
+      "shot": "025-case-today-1580.png",
       "state": "case",
       "mode": "today",
       "viewport": "1580x1000"
     },
     {
-      "shot": "023-case-today-full.png",
+      "shot": "025-case-today-full.png",
       "state": "case",
       "mode": "today",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "023-case-today-1440.png",
+      "shot": "025-case-today-1440.png",
       "state": "case",
       "mode": "today",
       "viewport": "1440x900"
     },
     {
-      "shot": "023-case-today-760.png",
+      "shot": "025-case-today-760.png",
       "state": "case",
       "mode": "today",
       "viewport": "760x1000"
     },
     {
-      "shot": "024-case-proposal-1580.png",
+      "shot": "026-case-proposal-1580.png",
       "state": "case",
       "mode": "proposal",
       "viewport": "1580x1000"
     },
     {
-      "shot": "024-case-proposal-full.png",
+      "shot": "026-case-proposal-full.png",
       "state": "case",
       "mode": "proposal",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "024-case-proposal-1440.png",
+      "shot": "026-case-proposal-1440.png",
       "state": "case",
       "mode": "proposal",
       "viewport": "1440x900"
     },
     {
-      "shot": "024-case-proposal-760.png",
+      "shot": "026-case-proposal-760.png",
       "state": "case",
       "mode": "proposal",
       "viewport": "760x1000"
     },
     {
-      "shot": "025-case-queries-today-1580.png",
+      "shot": "027-case-queries-today-1580.png",
       "state": "case-queries",
       "mode": "today",
       "viewport": "1580x1000"
     },
     {
-      "shot": "025-case-queries-today-full.png",
+      "shot": "027-case-queries-today-full.png",
       "state": "case-queries",
       "mode": "today",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "025-case-queries-today-1440.png",
+      "shot": "027-case-queries-today-1440.png",
       "state": "case-queries",
       "mode": "today",
       "viewport": "1440x900"
     },
     {
-      "shot": "025-case-queries-today-760.png",
+      "shot": "027-case-queries-today-760.png",
       "state": "case-queries",
       "mode": "today",
       "viewport": "760x1000"
     },
     {
-      "shot": "026-case-queries-proposal-1580.png",
+      "shot": "028-case-queries-proposal-1580.png",
       "state": "case-queries",
       "mode": "proposal",
       "viewport": "1580x1000"
     },
     {
-      "shot": "026-case-queries-proposal-full.png",
+      "shot": "028-case-queries-proposal-full.png",
       "state": "case-queries",
       "mode": "proposal",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "026-case-queries-proposal-1440.png",
+      "shot": "028-case-queries-proposal-1440.png",
       "state": "case-queries",
       "mode": "proposal",
       "viewport": "1440x900"
     },
     {
-      "shot": "026-case-queries-proposal-760.png",
+      "shot": "028-case-queries-proposal-760.png",
       "state": "case-queries",
       "mode": "proposal",
       "viewport": "760x1000"
     },
     {
-      "shot": "027-case-queries-assign-today-1580.png",
+      "shot": "029-case-queries-assign-today-1580.png",
       "state": "case-queries-assign",
       "mode": "today",
       "viewport": "1580x1000"
     },
     {
-      "shot": "027-case-queries-assign-today-full.png",
+      "shot": "029-case-queries-assign-today-full.png",
       "state": "case-queries-assign",
       "mode": "today",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "027-case-queries-assign-today-1440.png",
+      "shot": "029-case-queries-assign-today-1440.png",
       "state": "case-queries-assign",
       "mode": "today",
       "viewport": "1440x900"
     },
     {
-      "shot": "027-case-queries-assign-today-760.png",
+      "shot": "029-case-queries-assign-today-760.png",
       "state": "case-queries-assign",
       "mode": "today",
       "viewport": "760x1000"
     },
     {
-      "shot": "028-case-queries-assign-proposal-1580.png",
+      "shot": "030-case-queries-assign-proposal-1580.png",
       "state": "case-queries-assign",
       "mode": "proposal",
       "viewport": "1580x1000"
     },
     {
-      "shot": "028-case-queries-assign-proposal-full.png",
+      "shot": "030-case-queries-assign-proposal-full.png",
       "state": "case-queries-assign",
       "mode": "proposal",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "028-case-queries-assign-proposal-1440.png",
+      "shot": "030-case-queries-assign-proposal-1440.png",
       "state": "case-queries-assign",
       "mode": "proposal",
       "viewport": "1440x900"
     },
     {
-      "shot": "028-case-queries-assign-proposal-760.png",
+      "shot": "030-case-queries-assign-proposal-760.png",
       "state": "case-queries-assign",
       "mode": "proposal",
       "viewport": "760x1000"
     },
     {
-      "shot": "029-case-aside-query-today-1580.png",
+      "shot": "031-case-aside-query-today-1580.png",
       "state": "case-aside-query",
       "mode": "today",
       "viewport": "1580x1000"
     },
     {
-      "shot": "029-case-aside-query-today-full.png",
+      "shot": "031-case-aside-query-today-full.png",
       "state": "case-aside-query",
       "mode": "today",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "029-case-aside-query-today-1440.png",
+      "shot": "031-case-aside-query-today-1440.png",
       "state": "case-aside-query",
       "mode": "today",
       "viewport": "1440x900"
     },
     {
-      "shot": "029-case-aside-query-today-760.png",
+      "shot": "031-case-aside-query-today-760.png",
       "state": "case-aside-query",
       "mode": "today",
       "viewport": "760x1000"
     },
     {
-      "shot": "030-case-aside-query-proposal-1580.png",
+      "shot": "032-case-aside-query-proposal-1580.png",
       "state": "case-aside-query",
       "mode": "proposal",
       "viewport": "1580x1000"
     },
     {
-      "shot": "030-case-aside-query-proposal-full.png",
+      "shot": "032-case-aside-query-proposal-full.png",
       "state": "case-aside-query",
       "mode": "proposal",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "030-case-aside-query-proposal-1440.png",
+      "shot": "032-case-aside-query-proposal-1440.png",
       "state": "case-aside-query",
       "mode": "proposal",
       "viewport": "1440x900"
     },
     {
-      "shot": "030-case-aside-query-proposal-760.png",
+      "shot": "032-case-aside-query-proposal-760.png",
       "state": "case-aside-query",
       "mode": "proposal",
       "viewport": "760x1000"
     },
     {
-      "shot": "031-case-qdos26220-today-1580.png",
+      "shot": "033-case-qdos26220-today-1580.png",
       "state": "case-qdos26220",
       "mode": "today",
       "viewport": "1580x1000"
     },
     {
-      "shot": "031-case-qdos26220-today-full.png",
+      "shot": "033-case-qdos26220-today-full.png",
       "state": "case-qdos26220",
       "mode": "today",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "031-case-qdos26220-today-1440.png",
+      "shot": "033-case-qdos26220-today-1440.png",
       "state": "case-qdos26220",
       "mode": "today",
       "viewport": "1440x900"
     },
     {
-      "shot": "031-case-qdos26220-today-760.png",
+      "shot": "033-case-qdos26220-today-760.png",
       "state": "case-qdos26220",
       "mode": "today",
       "viewport": "760x1000"
     },
     {
-      "shot": "032-case-qdos26220-proposal-1580.png",
+      "shot": "034-case-qdos26220-proposal-1580.png",
       "state": "case-qdos26220",
       "mode": "proposal",
       "viewport": "1580x1000"
     },
     {
-      "shot": "032-case-qdos26220-proposal-full.png",
+      "shot": "034-case-qdos26220-proposal-full.png",
       "state": "case-qdos26220",
       "mode": "proposal",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "032-case-qdos26220-proposal-1440.png",
+      "shot": "034-case-qdos26220-proposal-1440.png",
       "state": "case-qdos26220",
       "mode": "proposal",
       "viewport": "1440x900"
     },
     {
-      "shot": "032-case-qdos26220-proposal-760.png",
+      "shot": "034-case-qdos26220-proposal-760.png",
       "state": "case-qdos26220",
       "mode": "proposal",
       "viewport": "760x1000"
     },
     {
-      "shot": "033-work-centre-today-1580.png",
+      "shot": "035-work-centre-today-1580.png",
       "state": "work-centre",
       "mode": "today",
       "viewport": "1580x1000"
     },
     {
-      "shot": "033-work-centre-today-full.png",
+      "shot": "035-work-centre-today-full.png",
       "state": "work-centre",
       "mode": "today",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "033-work-centre-today-1440.png",
+      "shot": "035-work-centre-today-1440.png",
       "state": "work-centre",
       "mode": "today",
       "viewport": "1440x900"
     },
     {
-      "shot": "033-work-centre-today-760.png",
+      "shot": "035-work-centre-today-760.png",
       "state": "work-centre",
       "mode": "today",
       "viewport": "760x1000"
     },
     {
-      "shot": "034-work-centre-proposal-1580.png",
+      "shot": "036-work-centre-proposal-1580.png",
       "state": "work-centre",
       "mode": "proposal",
       "viewport": "1580x1000"
     },
     {
-      "shot": "034-work-centre-proposal-full.png",
+      "shot": "036-work-centre-proposal-full.png",
       "state": "work-centre",
       "mode": "proposal",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "034-work-centre-proposal-1440.png",
+      "shot": "036-work-centre-proposal-1440.png",
       "state": "work-centre",
       "mode": "proposal",
       "viewport": "1440x900"
     },
     {
-      "shot": "034-work-centre-proposal-760.png",
+      "shot": "036-work-centre-proposal-760.png",
       "state": "work-centre",
       "mode": "proposal",
       "viewport": "760x1000"
     },
     {
-      "shot": "035-work-centre-mine-today-1580.png",
+      "shot": "037-work-centre-mine-today-1580.png",
       "state": "work-centre-mine",
       "mode": "today",
       "viewport": "1580x1000"
     },
     {
-      "shot": "035-work-centre-mine-today-full.png",
+      "shot": "037-work-centre-mine-today-full.png",
       "state": "work-centre-mine",
       "mode": "today",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "035-work-centre-mine-today-1440.png",
+      "shot": "037-work-centre-mine-today-1440.png",
       "state": "work-centre-mine",
       "mode": "today",
       "viewport": "1440x900"
     },
     {
-      "shot": "035-work-centre-mine-today-760.png",
+      "shot": "037-work-centre-mine-today-760.png",
       "state": "work-centre-mine",
       "mode": "today",
       "viewport": "760x1000"
     },
     {
-      "shot": "036-work-centre-mine-proposal-1580.png",
+      "shot": "038-work-centre-mine-proposal-1580.png",
       "state": "work-centre-mine",
       "mode": "proposal",
       "viewport": "1580x1000"
     },
     {
-      "shot": "036-work-centre-mine-proposal-full.png",
+      "shot": "038-work-centre-mine-proposal-full.png",
       "state": "work-centre-mine",
       "mode": "proposal",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "036-work-centre-mine-proposal-1440.png",
+      "shot": "038-work-centre-mine-proposal-1440.png",
       "state": "work-centre-mine",
       "mode": "proposal",
       "viewport": "1440x900"
     },
     {
-      "shot": "036-work-centre-mine-proposal-760.png",
+      "shot": "038-work-centre-mine-proposal-760.png",
       "state": "work-centre-mine",
       "mode": "proposal",
       "viewport": "760x1000"
     },
     {
-      "shot": "037-cases-query-today-1580.png",
+      "shot": "039-cases-query-today-1580.png",
       "state": "cases-query",
       "mode": "today",
       "viewport": "1580x1000"
     },
     {
-      "shot": "037-cases-query-today-full.png",
+      "shot": "039-cases-query-today-full.png",
       "state": "cases-query",
       "mode": "today",
       "viewport": "1580 whole page"
     },
     {
-      "shot": "037-cases-query-today-1440.png",
+      "shot": "039-cases-query-today-1440.png",
       "state": "cases-query",
       "mode": "today",
       "viewport": "1440x900"
     },
     {
-      "shot": "037-cases-query-today-760.png",
+      "shot": "039-cases-query-today-760.png",
       "state": "cases-query",
       "mode": "today",
       "viewport": "760x1000"

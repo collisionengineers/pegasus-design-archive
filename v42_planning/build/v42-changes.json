@@ -1,16 +1,16 @@
 [
   {
     "key": "inbox",
-    "label": "Inbox \u00b7 All incoming",
+    "label": "Inbox \u00b7 All",
     "group": "Inbox",
     "changes": [
       {
         "id": "I",
-        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Type filters in a single-bar full-width ledger."
       },
       {
         "id": "A",
-        "summary": "Row category text only for New instruction, Triage request and Cancellation."
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
       },
       {
         "id": "B",
@@ -25,11 +25,30 @@
     "changes": [
       {
         "id": "I",
-        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Type filters in a single-bar full-width ledger."
       },
       {
         "id": "A",
-        "summary": "Row category text only for New instruction, Triage request and Cancellation."
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
+      }
+    ]
+  },
+  {
+    "key": "inbox-dismissed",
+    "label": "Inbox \u00b7 Dismissed",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "I",
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Type filters in a single-bar full-width ledger."
+      },
+      {
+        "id": "A",
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
       },
       {
         "id": "B",
@@ -44,11 +63,11 @@
     "changes": [
       {
         "id": "I",
-        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Type filters in a single-bar full-width ledger."
       },
       {
         "id": "A",
-        "summary": "Row category text only for New instruction, Triage request and Cancellation."
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
       },
       {
         "id": "B",
@@ -63,11 +82,11 @@
     "changes": [
       {
         "id": "I",
-        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Type filters in a single-bar full-width ledger."
       },
       {
         "id": "A",
-        "summary": "Row category text only for New instruction, Triage request and Cancellation."
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
       },
       {
         "id": "B",
@@ -75,11 +94,11 @@
       },
       {
         "id": "G",
-        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Type, Query, Change case, with an at-a-glance context bar above the full-width message."
+        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Email type, Query, Change case, with a quiet context line above the full-width message."
       },
       {
         "id": "H",
-        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
+        "summary": "Clicky category chip cloud replaced by a single streamlined Email type select combining Case correspondence, New instruction (Inspection / Audit / Inspection and Audit), Triage request and Cancellation."
       }
     ]
   },
@@ -90,11 +109,11 @@
     "changes": [
       {
         "id": "I",
-        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Type filters in a single-bar full-width ledger."
       },
       {
         "id": "A",
-        "summary": "Row category text only for New instruction, Triage request and Cancellation."
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
       },
       {
         "id": "B",
@@ -102,7 +121,7 @@
       },
       {
         "id": "N",
-        "summary": "Query row in Message settings: Open query on an e-mail on a Report sent Case that holds no query."
+        "summary": "Query action in Message settings: Open query on an e-mail on a Report sent Case that holds no query."
       },
       {
         "id": "C",
@@ -110,11 +129,11 @@
       },
       {
         "id": "G",
-        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Type, Query, Change case, with an at-a-glance context bar above the full-width message."
+        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Email type, Query, Change case, with a quiet context line above the full-width message."
       },
       {
         "id": "H",
-        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
+        "summary": "Clicky category chip cloud replaced by a single streamlined Email type select combining Case correspondence, New instruction (Inspection / Audit / Inspection and Audit), Triage request and Cancellation."
       }
     ]
   },
@@ -125,11 +144,11 @@
     "changes": [
       {
         "id": "I",
-        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Type filters in a single-bar full-width ledger."
       },
       {
         "id": "A",
-        "summary": "Row category text only for New instruction, Triage request and Cancellation."
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
       },
       {
         "id": "B",
@@ -137,15 +156,15 @@
       },
       {
         "id": "K",
-        "summary": "Query row in Message settings: open query, Unassigned, Mark done marks this query done."
+        "summary": "Query action in Message settings: Mark query done closes this e-mail's open query."
       },
       {
         "id": "G",
-        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Type, Query, Change case, with an at-a-glance context bar above the full-width message."
+        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Email type, Query, Change case, with a quiet context line above the full-width message."
       },
       {
         "id": "H",
-        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
+        "summary": "Clicky category chip cloud replaced by a single streamlined Email type select combining Case correspondence, New instruction (Inspection / Audit / Inspection and Audit), Triage request and Cancellation."
       }
     ]
   },
@@ -156,11 +175,11 @@
     "changes": [
       {
         "id": "I",
-        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Type filters in a single-bar full-width ledger."
       },
       {
         "id": "A",
-        "summary": "Row category text only for New instruction, Triage request and Cancellation."
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
       },
       {
         "id": "B",
@@ -179,11 +198,11 @@
     "changes": [
       {
         "id": "I",
-        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Type filters in a single-bar full-width ledger."
       },
       {
         "id": "A",
-        "summary": "Row category text only for New instruction, Triage request and Cancellation."
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
       },
       {
         "id": "B",
@@ -191,11 +210,11 @@
       },
       {
         "id": "G",
-        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Type, Query, Change case, with an at-a-glance context bar above the full-width message."
+        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Email type, Query, Change case, with a quiet context line above the full-width message."
       },
       {
         "id": "H",
-        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
+        "summary": "Clicky category chip cloud replaced by a single streamlined Email type select combining Case correspondence, New instruction (Inspection / Audit / Inspection and Audit), Triage request and Cancellation."
       },
       {
         "id": "R",
@@ -210,11 +229,11 @@
     "changes": [
       {
         "id": "I",
-        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Type filters in a single-bar full-width ledger."
       },
       {
         "id": "A",
-        "summary": "Row category text only for New instruction, Triage request and Cancellation."
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
       },
       {
         "id": "B",
@@ -222,11 +241,11 @@
       },
       {
         "id": "G",
-        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Type, Query, Change case, with an at-a-glance context bar above the full-width message."
+        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Email type, Query, Change case, with a quiet context line above the full-width message."
       },
       {
         "id": "H",
-        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
+        "summary": "Clicky category chip cloud replaced by a single streamlined Email type select combining Case correspondence, New instruction (Inspection / Audit / Inspection and Audit), Triage request and Cancellation."
       }
     ]
   },
@@ -237,11 +256,11 @@
     "changes": [
       {
         "id": "I",
-        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Type filters in a single-bar full-width ledger."
       },
       {
         "id": "A",
-        "summary": "Row category text only for New instruction, Triage request and Cancellation."
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
       },
       {
         "id": "B",
@@ -249,7 +268,7 @@
       },
       {
         "id": "G",
-        "summary": "Change case in Message settings: Place on Hold and Close case open the Case with that dialog."
+        "summary": "Change case in Message settings: Place Case on Hold and Close Case open the Case with that dialog."
       },
       {
         "id": "E",
@@ -257,7 +276,7 @@
       },
       {
         "id": "H",
-        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
+        "summary": "Clicky category chip cloud replaced by a single streamlined Email type select combining Case correspondence, New instruction (Inspection / Audit / Inspection and Audit), Triage request and Cancellation."
       }
     ]
   },
@@ -268,11 +287,11 @@
     "changes": [
       {
         "id": "I",
-        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Type filters in a single-bar full-width ledger."
       },
       {
         "id": "A",
-        "summary": "Row category text only for New instruction, Triage request and Cancellation."
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
       },
       {
         "id": "B",
@@ -280,7 +299,7 @@
       },
       {
         "id": "N",
-        "summary": "Query row in Message settings: Open query on an e-mail on a Report sent Case that holds no query."
+        "summary": "Query action in Message settings: Open query on an e-mail on a Report sent Case that holds no query."
       },
       {
         "id": "C",
@@ -288,11 +307,11 @@
       },
       {
         "id": "G",
-        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Type, Query, Change case, with an at-a-glance context bar above the full-width message."
+        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Email type, Query, Change case, with a quiet context line above the full-width message."
       },
       {
         "id": "H",
-        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
+        "summary": "Clicky category chip cloud replaced by a single streamlined Email type select combining Case correspondence, New instruction (Inspection / Audit / Inspection and Audit), Triage request and Cancellation."
       }
     ]
   },
@@ -303,7 +322,7 @@
     "changes": [
       {
         "id": "X",
-        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip."
+        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip; Subject opens the message."
       },
       {
         "id": "N",
@@ -319,7 +338,7 @@
       },
       {
         "id": "O",
-        "summary": "Assign and Take on each open query; Take on an Unassigned row assigns the viewer."
+        "summary": "Inline Assigned to selector and Take on each open query; Subject opens the message."
       },
       {
         "id": "M",
@@ -342,7 +361,7 @@
     "changes": [
       {
         "id": "X",
-        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip."
+        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip; Subject opens the message."
       },
       {
         "id": "N",
@@ -358,7 +377,7 @@
       },
       {
         "id": "O",
-        "summary": "Assign and Take on each open query; Take on an Unassigned row assigns the viewer."
+        "summary": "Inline Assigned to selector and Take on each open query; Subject opens the message."
       },
       {
         "id": "M",
@@ -381,7 +400,7 @@
     "changes": [
       {
         "id": "X",
-        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip."
+        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip; Subject opens the message."
       },
       {
         "id": "N",
@@ -397,7 +416,7 @@
       },
       {
         "id": "O",
-        "summary": "Assign and Take on each open query; Take on an Unassigned row assigns the viewer."
+        "summary": "Inline Assigned to selector and Take on each open query; Subject opens the message."
       },
       {
         "id": "M",
@@ -420,7 +439,7 @@
     "changes": [
       {
         "id": "X",
-        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip."
+        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip; Subject opens the message."
       },
       {
         "id": "N",
@@ -436,7 +455,7 @@
       },
       {
         "id": "O",
-        "summary": "Assign and Take on each open query; Take on an Unassigned row assigns the viewer."
+        "summary": "Inline Assigned to selector and Take on each open query; Subject opens the message."
       },
       {
         "id": "M",
@@ -459,7 +478,7 @@
     "changes": [
       {
         "id": "X",
-        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip."
+        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip; Subject opens the message."
       },
       {
         "id": "AA",

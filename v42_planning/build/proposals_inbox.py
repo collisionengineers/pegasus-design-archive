@@ -1,61 +1,49 @@
-"""Inbox Proposal patches: the list, No Case Found and #mailMessageDialog's cog settings menu.
+"""Inbox Proposal patches: full-width structured Inbox ledger, 1-line toolbar with 3 scopes
+(All, No Case Found, Dismissed), Principal/Type filters, and #mailMessageDialog's
+streamlined cog settings menu.
 
-Letters are the v42 sign-off items (v42-notes.md §6): A, B and C are settled; G, H,
-I, K, L, N and R are drawn here for sign-off.
-
-In the live application (v41 Stage 2), clicking an e-mail on /Inbox opens
-#mailMessageDialog (_MessageDialog.cshtml) over the list. In Today, #mailMessageDialog
-carries a 380px right-hand Decision column alongside the message body. In the v42
-Proposal (G, H), that right-hand Decision column is replaced by a cog settings menu
-(#icon-settings, [data-mail-settings]) in the dialog header's tool bar, paired with
-an at-a-glance context pill bar (.mail-context-bar) beneath the From/To route line so
-the message body reads at full width.
+Letters are the v42 sign-off items (v42-notes.md §6): A–F are settled; G, H, I, K,
+L, N and R are drawn here for sign-off.
 """
 from __future__ import annotations
 
 import html as html_mod
-import re
 
 from bs4 import Tag
 
-from mail_dialogs import FIXTURES
+from mail_dialogs import EMAIL_TYPE_OPTIONS, FIXTURES, load_ids
 from proposals_v42 import Ctx, patch, presets
 
 KEPT = ("New instruction", "Triage request", "Cancellation")
-CODES = {
-    "Correspondence": "correspondence",
-    "New instruction": "new-instruction",
-    "Triage request": "triage-request",
-    "Cancellation": "cancellation",
-}
 REMOVED = (
     "Pre-instruction", "Images received", "Case update", "Query", "Billing",
     "General", "Not client related", "Internal CC", "Unclassified",
 )
-I_SUMMARY = "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+I_SUMMARY = (
+    "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items "
+    "removed); Category select and bulk Correct classification replaced by Principal and Type "
+    "filters in a single-bar full-width ledger."
+)
 G_SUMMARY = (
     "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, "
-    "ordered Case, Type, Query, Change case, with an at-a-glance context bar above the full-width message."
+    "ordered Case, Email type, Query, Change case, with a quiet context line above the full-width message."
 )
-H_SUMMARY = "Row label Type; default chip Correspondence replaces Unclassified."
+H_SUMMARY = (
+    "Clicky category chip cloud replaced by a single streamlined Email type select combining "
+    "Case correspondence, New instruction (Inspection / Audit / Inspection and Audit), Triage request and Cancellation."
+)
 MESSAGE_STATES = (
     "message-m1", "message-m2", "message-m3", "message-m4", "message-m4-ai-reply",
     "message-m7", "message-m11", "message-m12",
 )
-ALL_INBOX_STATES = ("inbox", "inbox-no-case-found", "inbox-rows-ticked") + MESSAGE_STATES
-INCOMING_SCOPE_STATES = (
-    "inbox", "inbox-rows-ticked",
-    "message-m1", "message-m2", "message-m4", "message-m4-ai-reply", "message-m11", "message-m12",
-)
+ALL_INBOX_STATES = ("inbox", "inbox-no-case-found", "inbox-dismissed", "inbox-rows-ticked") + MESSAGE_STATES
 
-# What each linked message's Query row offers (N, K, C): Case QDOS26214 is Report
-# sent, so m2 and m12 offer Open query and m4 holds an open query. QDOS26220 is in
-# Report preparation, so m11 has no Query row; m1, m3, m5, m7..m10 have no Case.
-QUERY_ROW_BY_KEY = {
-    "m2": "offer",
-    "m12": "offer",
-    "m4": "open",
+SCOPE_KEYS: dict[str, list[str]] = {
+    "all": ["m1", "m13", "m2", "m14", "m11", "m12", "m4", "m15"],
+    "no_case_found": ["m1", "m13", "m7", "m8", "m9", "m10", "m3", "m5"],
+    "dismissed": ["m16", "m17"],
 }
+
 CHANGE_CASE_BY_KEY = {"m11": True}
 
 REGISTER_IMAGES_DIALOG = """
@@ -80,22 +68,174 @@ REGISTER_IMAGES_DIALOG = """
 """
 
 
-# ---------------------------------------------------------------------------
-# The Inbox list
-# ---------------------------------------------------------------------------
+def _active_scope(state_key: str) -> str:
+    if state_key in ("inbox-no-case-found", "message-m3", "message-m7"):
+        return "no_case_found"
+    if state_key == "inbox-dismissed":
+        return "dismissed"
+    return "all"
 
-def _row_category(row: Tag) -> Tag | None:
-    return row.select_one(".cluster > .row-meta")
+
+def _type_group(fx: dict) -> str:
+    if fx.get("query_state") == "open":
+        return "queries"
+    if fx["short_type"] in ("New instruction", "Triage request"):
+        return "instructions"
+    if fx["short_type"] == "Cancellation":
+        return "cancellations"
+    return "correspondence"
 
 
-def _unlinked(row: Tag) -> bool:
-    chip = row.select_one(".cluster > .status")
-    return chip is not None and chip.get_text(" ", strip=True) == "No Case Found"
+def _build_ledger_row(key: str, msg_id: str, scope: str, *, ticked: bool = False) -> str:
+    fx = FIXTURES[key]
+    unread_cls = " unread" if fx["unread"] else ""
+    checked_attr = ' checked="checked"' if ticked else ""
+    unread_dot = (
+        '<span class="unread-indicator" aria-hidden="true"></span><span class="sr-only">Unread</span>'
+        if fx["unread"] else ""
+    )
+    principal = fx["principal"] or ""
+    mailbox = fx["mailbox"]
+    tgroup = _type_group(fx)
+
+    # Cell 2: Case / Stage (typography-first: bold monospace Case link + muted vehicle sub-line)
+    if fx["case_ref"] and fx["case_id"]:
+        sub = f'<small class="inbox-cell-sub">{html_mod.escape(fx["vehicle"] or "Linked Case")}</small>'
+        case_cell = (
+            f'<div class="inbox-cell-case">'
+            f'<a class="mail-row-case" href="/Cases/{fx["case_id"]}">{html_mod.escape(fx["case_ref"])}</a>'
+            f'{sub}</div>'
+        )
+    else:
+        if fx.get("suggested_case"):
+            sub = f'<small class="inbox-cell-sub inbox-cell-sub--match">Matches {html_mod.escape(fx["suggested_case"])}</small>'
+        elif fx.get("vehicle"):
+            sub = f'<small class="inbox-cell-sub">{html_mod.escape(fx["vehicle"])}</small>'
+        else:
+            sub = '<small class="inbox-cell-sub">Unlinked</small>'
+        case_cell = (
+            f'<div class="inbox-cell-case">'
+            f'<span class="inbox-unlinked-label">No Case Found</span>'
+            f'{sub}</div>'
+        )
+
+    # Cell 3: Type / Signal (status badge only when actionable; quiet text for plain Correspondence)
+    if fx.get("query_state") == "open":
+        assignee = fx.get("query_assignee") or "Unassigned"
+        type_cell = (
+            f'<div class="inbox-cell-type cluster">'
+            f'<span class="status status--purple" data-row-query>Query</span>'
+            f'<small class="inbox-cell-sub">{html_mod.escape(assignee)}</small></div>'
+        )
+    elif fx["short_type"] == "New instruction":
+        sub = html_mod.escape(fx.get("work_type_sub") or "Inspection")
+        type_cell = (
+            f'<div class="inbox-cell-type cluster">'
+            f'<span class="status status--navy">New instruction</span>'
+            f'<span class="row-meta" hidden>New instruction</span>'
+            f'<small class="inbox-cell-sub">{sub}</small></div>'
+        )
+    elif fx["short_type"] == "Triage request":
+        type_cell = (
+            '<div class="inbox-cell-type cluster">'
+            '<span class="status status--amber">Triage request</span>'
+            '<span class="row-meta" hidden>Triage request</span>'
+            '<small class="inbox-cell-sub">Early triage</small></div>'
+        )
+    elif fx["short_type"] == "Cancellation":
+        type_cell = (
+            '<div class="inbox-cell-type cluster">'
+            '<span class="status status--red">Cancellation</span>'
+            '<span class="row-meta" hidden>Cancellation</span>'
+            '<small class="inbox-cell-sub">Withdrawn claim</small></div>'
+        )
+    else:
+        sub_html = (
+            f'<small class="inbox-cell-sub">{html_mod.escape(fx["work_type_sub"])}</small>'
+            if fx.get("work_type_sub") else ""
+        )
+        type_cell = (
+            f'<div class="inbox-cell-type cluster">'
+            f'<span class="inbox-type-correspondence">Correspondence</span>'
+            f'{sub_html}</div>'
+        )
+
+    # Cell 4: Message (Subject + quiet attachment count + single-line excerpt)
+    att_count = len(fx["attachments"])
+    att_pill = (
+        f'<span class="mail-att-pill" title="{att_count} attachment(s)">'
+        f'<svg class="icon" aria-hidden="true"><use href="#icon-file"></use></svg>'
+        f'<span>{att_count}</span></span>'
+        if att_count > 0 else ""
+    )
+    msg_cell = (
+        f'<div class="inbox-cell-message">'
+        f'<div class="inbox-subject-line">'
+        f'<a class="row-title" data-mail-open href="/Inbox/{msg_id}">{html_mod.escape(fx["subject"])}</a>'
+        f'{att_pill}'
+        f'</div>'
+        f'<span class="row-excerpt">{html_mod.escape(fx["excerpt"])}</span>'
+        f'</div>'
+    )
+
+    # Cell 5: Sender & Principal
+    principal_line = (
+        f'<span class="inbox-principal-text" data-principal-badge>{html_mod.escape(principal)}</span>'
+        if principal else f'<small class="inbox-cell-sub">{html_mod.escape(mailbox.split("@")[0])}</small>'
+    )
+    sender_cell = (
+        f'<div class="inbox-cell-sender">'
+        f'<span class="inbox-sender-addr">{html_mod.escape(fx["sender"])}</span>'
+        f'{principal_line}</div>'
+    )
+
+    # Cell 6: Received
+    time_cell = (
+        f'<div class="inbox-cell-time">'
+        f'<time datetime="{fx["iso"]}">{fx["date"]}</time>'
+        f'<small class="tabular">{fx["clock"]}</small></div>'
+    )
+
+    # Cell 7: Actions (subtle hover-revealed icons)
+    is_dismissed = scope == "dismissed"
+    act_handler = "Restore" if is_dismissed else "Dismiss"
+    act_icon = "icon-undo" if is_dismissed else "icon-x"
+    act_busy = "Restoring…" if is_dismissed else "Dismissing…"
+    reply_btn = (
+        f'<a class="icon-button" href="/Inbox/{msg_id}?compose=reply" data-mail-row-reply data-mail-open '
+        f'title="Reply" aria-label="Reply {html_mod.escape(fx["subject"])}">'
+        f'<svg class="icon" aria-hidden="true"><use href="#icon-reply"></use></svg></a>'
+        if fx["sender"] != "Sender not recorded" and not is_dismissed else ""
+    )
+    actions_cell = (
+        f'<div class="inbox-row-actions">'
+        f'{reply_btn}'
+        f'<form action="/Inbox?handler={act_handler}" method="post" class="inbox-row-action" '
+        f'data-mail-row-action="{act_handler.lower()}">'
+        f'<input type="hidden" name="id" value="{msg_id}">'
+        f'<button type="submit" class="icon-button" data-busy-label="{act_busy}" '
+        f'title="{act_handler}" aria-label="{act_handler} {html_mod.escape(fx["subject"])}">'
+        f'<svg class="icon" aria-hidden="true"><use href="#{act_icon}"></use></svg></button>'
+        f'</form></div>'
+    )
+
+    return (
+        f'<div class="row-button inbox-row inbox-ledger-row{unread_cls}" '
+        f'data-mail-row="{msg_id}" data-mail-key="{key}" '
+        f'data-principal="{html_mod.escape(principal)}" data-mailbox="{html_mod.escape(mailbox)}" '
+        f'data-type-group="{tgroup}">'
+        f'<label class="inbox-row-tick">'
+        f'<input type="checkbox" form="mail-bulk" name="ids" value="{msg_id}" '
+        f'aria-label="{html_mod.escape(fx["subject"])}" data-mail-tick{checked_attr}>'
+        f'{unread_dot}</label>'
+        f'{case_cell}{type_cell}{msg_cell}{sender_cell}{time_cell}{actions_cell}'
+        f'</div>'
+    )
 
 
 @presets("inbox-rows-ticked")
 def tick_two_rows(body: Tag, state: dict) -> None:
-    """Two linked rows ticked (m2 and m4), so the bulk bar shows its count and buttons."""
+    """Two linked rows ticked (m2 and m4) in Today's list."""
     for row in body.select("div.inbox-row"):
         title = row.select_one("a.row-title")
         if title and title.get_text(" ", strip=True).startswith(("Update — QDOS26214", "Query — QDOS26214")):
@@ -105,126 +245,160 @@ def tick_two_rows(body: Tag, state: dict) -> None:
 
 
 @patch(*ALL_INBOX_STATES)
-def category_filter_removed(ctx: Ctx) -> None:
-    select = ctx.one("select#queue-filter")
-    if select is None:
-        return
-    form = select.find_parent("form")
-    ctx.remove(select.find_parent("div", class_="field"), "I", I_SUMMARY)
-    ctx.mark(form, "I", I_SUMMARY)
+def inbox_workspace_overhaul(ctx: Ctx) -> None:
+    """Transform /Inbox into a full-width ledger with a single toolbar (3 scopes, Search, Principal/Type selects)."""
+    ids = load_ids()
+    scope = _active_scope(ctx.key)
+    keys = SCOPE_KEYS[scope]
+    is_dismissed = scope == "dismissed"
+    ticked_keys = {"m2", "m4"} if ctx.key == "inbox-rows-ticked" else set()
 
-
-@patch(*ALL_INBOX_STATES)
-def bulk_classify_removed(ctx: Ctx) -> None:
-    button = ctx.one("[data-bulk-classify]")
-    bulk = ctx.one("form#mail-bulk")
-    ctx.remove(button, "I", I_SUMMARY)
     ctx.remove(ctx.one("#bulkClassifyDialog"), "I", I_SUMMARY)
-    ctx.mark(bulk, "I", I_SUMMARY)
 
+    layout = ctx.one("section.inbox-layout")
+    if layout is None:
+        return
+    layout["class"] = ["pane-layout", "inbox-layout", "inbox-layout--v42"]
 
-@patch(*ALL_INBOX_STATES)
-def row_category_and_case_badges(ctx: Ctx) -> None:
-    for row in ctx.all("div.inbox-row"):
-        cluster = row.select_one(".cluster")
-        meta = _row_category(row)
-        cat_text = meta.get_text(" ", strip=True) if meta is not None else ""
-        if meta is not None and cat_text in REMOVED:
-            meta.decompose()
-            ctx.mark(cluster, "A", "Row category text only for New instruction, Triage request and Cancellation.")
-        # On linked rows, surface the Case reference pill and any open Query chip right in the cluster.
-        status_chip = cluster.select_one(".status") if cluster else None
-        if status_chip is not None and status_chip.get_text(" ", strip=True) == "Case created":
-            right_case_link = row.select_one(".row-top:last-of-type > .row-meta > a[href^='/Cases/']")
-            if right_case_link is not None:
-                case_href = right_case_link["href"]
-                case_ref = right_case_link.get_text(" ", strip=True)
-                case_pill = Ctx.html(f'<a class="mail-row-case" href="{case_href}">{html_mod.escape(case_ref)}</a>')
-                status_chip.replace_with(case_pill)
-                # Keep only attachment count on the right if present.
-                right_meta = right_case_link.parent
-                full_right = right_meta.get_text(" ", strip=True)
-                if "·" in full_right:
-                    right_meta.clear()
-                    right_meta.append(full_right.split("·", 1)[1].strip())
-                else:
-                    right_meta.decompose()
-        title_link = row.select_one("a.row-title[data-mail-open]")
-        if cluster is not None and title_link and title_link.get_text(" ", strip=True).startswith("Query — QDOS26214"):
-            if cluster.select_one(".status--purple") is None:
-                cluster.append(Ctx.html('<span class="status status--purple">Query</span>'))
+    aside = layout.select_one("aside.pane")
+    if aside is not None:
+        aside.decompose()
 
+    pane = layout.select_one("div.pane")
+    if pane is None:
+        return
 
-@patch(*ALL_INBOX_STATES)
-def unlinked_correspondence_leaves_all_incoming(ctx: Ctx) -> None:
-    summary = "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
-    removed = 0
-    if ctx.key in INCOMING_SCOPE_STATES:
-        for row in ctx.all("div.inbox-row"):
-            meta = _row_category(row)
-            category = meta.get_text(" ", strip=True) if meta is not None else ""
-            if _unlinked(row) and category not in ("New instruction", "Triage request"):
-                row.decompose()
-                removed += 1
-        for meta in ctx.all("span.meta"):
-            match = re.match(r"^\s*(\d+)\s+messages\s*$", meta.get_text(" ", strip=True))
-            if match:
-                meta.string = f"{int(match.group(1)) - removed} messages"
-                ctx.mark(meta, "B", summary)
-    ctx.record("B", summary)
-    for form in ctx.all(".scope-list form"):
-        if form.get_text(" ", strip=True).startswith("All incoming"):
-            for node in form.find_all(string=re.compile(r"^\s*\d+\s*$")):
-                node.replace_with("5")
-                break
-            ctx.mark(form, "B", summary)
+    all_cnt = len(SCOPE_KEYS["all"])
+    ncf_cnt = len(SCOPE_KEYS["no_case_found"])
+    dis_cnt = len(SCOPE_KEYS["dismissed"])
 
-
-# ---------------------------------------------------------------------------
-# The message dialog (#mailMessageDialog): replace Decision column with cog menu
-# ---------------------------------------------------------------------------
-
-def _chip(label: str, pressed: bool) -> str:
-    if pressed:
-        return (
-            '<button type="button" class="chip" aria-pressed="true">'
-            '<svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg>'
-            f'<span>{label}</span></button>'
-        )
-    return (
-        f'<button type="submit" class="chip" name="ClassificationKey" value="{CODES[label]}" '
-        f'aria-pressed="false" data-busy-label="Saving…">{label}</button>'
+    # Single unified toolbar row: 3 scope tabs + Search + Principal & Type compact selects + count & sort
+    toolbar = Ctx.html(
+        '<div class="inbox-toolbar" data-inbox-command-top>'
+        '<nav class="inbox-scope-tabs scope-list" data-mail-scopes aria-label="Inbox views">'
+        f'<button type="button" class="inbox-scope-tab" data-scope-switch="all" '
+        f'aria-pressed="{"true" if scope == "all" else "false"}" '
+        f'{"aria-current=\"page\"" if scope == "all" else ""}>'
+        f'<span>All</span><span class="tab-count tabular" data-scope-count="all">{all_cnt}</span></button>'
+        f'<button type="button" class="inbox-scope-tab" data-scope-switch="no_case_found" '
+        f'aria-pressed="{"true" if scope == "no_case_found" else "false"}" '
+        f'{"aria-current=\"page\"" if scope == "no_case_found" else ""}>'
+        f'<span>No Case Found</span><span class="tab-count tabular" data-scope-count="no_case_found">{ncf_cnt}</span></button>'
+        f'<button type="button" class="inbox-scope-tab" data-scope-switch="dismissed" '
+        f'aria-pressed="{"true" if scope == "dismissed" else "false"}" '
+        f'{"aria-current=\"page\"" if scope == "dismissed" else ""}>'
+        f'<span>Dismissed</span><span class="tab-count tabular" data-scope-count="dismissed">{dis_cnt}</span></button>'
+        '</nav>'
+        '<form method="get" class="inbox-filter" data-auto-submit aria-label="Mail filters">'
+        '<div class="inbox-search-box">'
+        '<svg class="icon" aria-hidden="true"><use href="#icon-search"></use></svg>'
+        '<input id="mail-search" type="search" name="search" maxlength="200" '
+        'placeholder="Search subject, sender, Case / PO, VRM, claim ref…">'
+        '</div>'
+        '<select id="principal-filter" name="principal" class="inbox-compact-select" aria-label="Principal" data-principal-filter>'
+        '<option value="">All Principals</option>'
+        '<option value="QDOS">QDOS</option>'
+        '<option value="Northline">Northline</option>'
+        '<option value="Meridian">Meridian</option>'
+        '<option value="Connexus">Connexus (PCH)</option>'
+        '</select>'
+        '<select id="type-filter" name="type" class="inbox-compact-select" aria-label="Filter by signal" data-type-filter>'
+        '<option value="all">All signals</option>'
+        '<option value="instructions">Instructions (3)</option>'
+        '<option value="queries">Open queries (2)</option>'
+        '<option value="cancellations">Cancellations (1)</option>'
+        '<option value="unread">Unread only</option>'
+        '</select>'
+        '<div class="inbox-toolbar-meta">'
+        f'<span class="meta tabular" data-inbox-count>{len(keys)} messages</span>'
+        '<a class="inbox-sort-link sort-toggle" href="/Inbox?sort=oldest" '
+        'aria-label="Received order: newest first; activate for oldest first">Received ↓</a>'
+        '</div>'
+        '</form>'
+        '</div>'
     )
 
+    # Contextual bulk bar: hidden when 0 rows are ticked, visible when >=1 ticked
+    bulk_hidden = "" if ticked_keys else " hidden"
+    bulk_btn = (
+        '<button type="submit" class="btn btn--small" formaction="/Inbox?handler=BulkRestore" formnovalidate data-busy-label="Restoring…">'
+        '<svg class="icon" aria-hidden="true"><use href="#icon-undo"></use></svg><span>Restore</span></button>'
+        if is_dismissed else
+        '<button type="submit" class="btn btn--small" formaction="/Inbox?handler=BulkDismiss" formnovalidate data-busy-label="Dismissing…">'
+        '<svg class="icon" aria-hidden="true"><use href="#icon-x"></use></svg><span>Dismiss</span></button>'
+    )
+    bulk_bar = Ctx.html(
+        f'<form id="mail-bulk" method="post" class="inbox-bulk"{bulk_hidden}>'
+        '<input type="hidden" name="operationKey" value="e58d0fa34c7b4226aef8552887b03865">'
+        '<span class="inbox-bulk-summary"><span class="inbox-bulk-count tabular" data-bulk-count>'
+        f'{len(ticked_keys)}</span> selected</span>'
+        f'{bulk_btn}'
+        '</form>'
+    )
 
-def _build_context_bar(key: str, selected_type: str, case_ref: str | None, case_href: str | None, query_kind: str | None) -> Tag:
-    pills: list[str] = []
+    ledger_head = Ctx.html(
+        '<div class="inbox-ledger-head" aria-hidden="true">'
+        '<span></span>'
+        '<span>Case / Stage</span>'
+        '<span>Type / Signal</span>'
+        '<span>Message</span>'
+        '<span>Sender / Principal</span>'
+        '<span>Received</span>'
+        '<span></span>'
+        '</div>'
+    )
+
+    rows_html = "".join(
+        _build_ledger_row(k, ids[k], scope, ticked=(k in ticked_keys))
+        for k in keys
+    )
+    scroll_body = Ctx.html(
+        f'<div class="pane-body pane-scroll" tabindex="0">'
+        f'<div data-row-list>{rows_html}</div>'
+        f'</div>'
+    )
+
+    pane.clear()
+    pane.append(toolbar)
+    pane.append(bulk_bar)
+    pane.append(ledger_head)
+    pane.append(scroll_body)
+
+    ctx.mark(toolbar, "I", I_SUMMARY)
+    if ticked_keys:
+        ctx.mark(bulk_bar, "I", I_SUMMARY)
+    ctx.record("A", "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found.")
+    ctx.record("B", "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found.")
+
+
+# ---------------------------------------------------------------------------
+# The message dialog (#mailMessageDialog): calm header + streamlined cog menu
+# ---------------------------------------------------------------------------
+
+def _build_context_bar(key: str, fx: dict, case_ref: str | None, case_href: str | None, query_kind: str | None) -> Tag:
+    """Quiet one-line metadata strip under From/To/Time (not a row of boxy buttons)."""
+    parts: list[str] = []
     if case_ref and case_href:
-        pills.append(
-            f'<a class="mail-pill mail-pill--case" href="{case_href}" data-context-case>'
-            '<svg class="icon" aria-hidden="true"><use href="#icon-folder-open"></use></svg>'
-            f'<span>Case</span><strong>{html_mod.escape(case_ref)}</strong></a>'
+        veh = f" ({fx['vehicle']})" if fx.get("vehicle") else ""
+        parts.append(
+            f'<span data-context-case>Case <a class="mail-context-case-link" href="{case_href}">'
+            f'{html_mod.escape(case_ref)}</a>{html_mod.escape(veh)}</span>'
         )
     else:
-        pills.append('<span class="status status--amber" data-context-case>No Case Found</span>')
-        pills.append(
-            '<button type="button" class="mail-pill mail-pill--action" data-open-settings-case>'
-            '<svg class="icon" aria-hidden="true"><use href="#icon-link"></use></svg>'
-            '<span>Link to Case</span></button>'
+        parts.append(
+            '<span data-context-case><span class="status status--amber">No Case Found</span> · '
+            '<button type="button" class="mail-context-inline-link" data-open-settings-case>Link to Case</button></span>'
         )
-    pills.append(
-        '<button type="button" class="mail-pill" data-open-settings-type title="Change type in Message settings">'
-        f'<span>Type</span><strong data-context-type>{html_mod.escape(selected_type)}</strong></button>'
+    if fx.get("principal"):
+        parts.append(f'<span>Principal <strong>{html_mod.escape(fx["principal"])}</strong></span>')
+    parts.append(
+        f'<span>Type <strong data-context-type>{html_mod.escape(fx["type_label"])}</strong></span>'
     )
     if query_kind == "open":
-        pills.append('<span class="status status--purple" data-context-query>Query · Unassigned</span>')
-    elif query_kind == "offer":
-        pills.append(
-            '<button type="button" class="mail-pill mail-pill--action" data-quick-open-query>'
-            '<svg class="icon" aria-hidden="true"><use href="#icon-flag"></use></svg>'
-            '<span>Open query</span></button>'
-        )
-    return Ctx.html(f'<div class="mail-context-bar" data-mail-context-bar>{"".join(pills)}</div>')
+        assignee = fx.get("query_assignee") or "Unassigned"
+        parts.append(f'<span class="status status--purple" data-context-query>Query · {html_mod.escape(assignee)}</span>')
+    joined = '<span class="mail-context-sep">·</span>'.join(parts)
+    return Ctx.html(f'<div class="mail-context-bar" data-mail-context-bar>{joined}</div>')
 
 
 def _build_inline_attachments(key: str, msg_id: str) -> Tag | None:
@@ -249,14 +423,13 @@ def transform_dialog_to_proposal(
     settings_open: bool = False,
     ctx: Ctx | None = None,
 ) -> Tag:
-    """Replace the right-hand Decision column in #mailMessageDialog with the cog settings menu."""
+    """Replace the right-hand Decision column in #mailMessageDialog with a clean, button-minimal cog settings menu."""
     dialog = dialog_wrapper.select_one("#mailMessageDialog")
     if dialog is None:
         return dialog_wrapper
     msg_id = dialog.get("data-mail-message", "")
     fx = FIXTURES.get(key, FIXTURES["m2"])
 
-    # If this is a composer dialog (e.g. message-m4-ai-reply), update the query checkbox label (L).
     tick = dialog.select_one("input[data-resolve-query]")
     if tick is not None:
         lbl = tick.find_parent("label")
@@ -270,46 +443,61 @@ def transform_dialog_to_proposal(
     section = dialog.select_one("section.mail-decision")
     form = dialog.select_one("form#mailClassificationForm")
     if section is not None and form is not None:
-        pressed_now = form.select_one('button[aria-pressed="true"]')
-        current = pressed_now.get_text(" ", strip=True) if pressed_now else fx["category"]
-        selected = current if current in KEPT else "Correspondence"
+        current = fx["category"]
         if current in REMOVED and ctx is not None:
             ctx.record("A", f"{current} removed: this e-mail is Case correspondence when linked, No Case Found when not.")
 
-        label = form.select_one(".mail-decision-label")
-        label.string = "Type"
-        chips = form.select_one(".mail-chips")
-        chips.clear()
-        for name in CODES:
-            chips.append(Ctx.html(_chip(name, name == selected)))
+        case_link_a = section.select_one(".decision-row a[href^='/Cases/']")
+        case_href = case_link_a["href"] if case_link_a else (f"/Cases/{fx['case_id']}" if fx.get("case_id") else None)
+        case_ref = case_link_a.get_text(" ", strip=True) if case_link_a else fx.get("case_ref")
 
-        case_row = None
-        decided_row = None
-        for row in section.select(".decision-row"):
-            sp = row.find("span")
-            txt = sp.get_text(" ", strip=True) if sp else ""
-            if txt == "Case":
-                case_row = row
-            elif txt == "Decided":
-                decided_row = row
+        # 1. Case section (G): compact Case header + single Case / PO search input (no pair of boxy buttons!)
+        if case_ref and case_href:
+            case_head_right = (
+                f'<strong><a class="mail-row-case" href="{case_href}">{html_mod.escape(case_ref)}</a>'
+                f' · <button type="button" class="mail-settings-link" data-dialog-open="unlinkCaseDialog">Unlink</button></strong>'
+            )
+            picker_form = "changeLinkedCaseForm"
+            picker_placeholder = "Switch to another Case / PO or VRM…"
+        else:
+            sug_html = (
+                f' · <button type="button" class="mail-context-inline-link" data-quick-link-case="{fx["suggested_case"]}">'
+                f'Link {html_mod.escape(fx["suggested_case"])}</button>'
+                if fx.get("suggested_case") else ""
+            )
+            case_head_right = f'<strong class="quiet">None{sug_html}</strong>'
+            picker_form = "linkCaseForm"
+            picker_placeholder = "Link to Case / PO, VRM or claim ref…"
 
-        picker_block = section.select_one(".mail-decision-block:not(form)")
-        work_type = picker_block.select_one("[data-work-type-field]") if picker_block else None
-        actions_row = section.select_one(".mail-decision-actions")
-        if work_type is not None:
-            chips.insert_after(work_type.extract())
-        if picker_block is not None:
-            hint = picker_block.select_one(".field-hint")
-            inp = picker_block.select_one("input#mailLinkCaseReference")
-            if inp is not None:
-                inp["placeholder"] = "Search Case / PO, VRM, claimant…"
-            if hint is not None:
-                hint.decompose()
-            if not picker_block.select(".field"):
-                picker_block.decompose()
-                picker_block = None
+        case_section = Ctx.html(
+            '<div class="mail-settings-section">'
+            f'<div class="decision-row mail-settings-row-head"><span>Case</span>{case_head_right}</div>'
+            f'<div class="field case-picker" data-case-picker data-case-picker-fill '
+            f'data-case-picker-url="/Inbox/{msg_id}?handler=LinkCaseOptions">'
+            f'<input id="mailLinkCaseReference" name="caseReference" form="{picker_form}" type="text" '
+            f'maxlength="100" autocomplete="off" role="combobox" aria-label="Case / PO" '
+            f'aria-autocomplete="list" aria-expanded="false" aria-controls="mailLinkCaseOptions" '
+            f'placeholder="{picker_placeholder}">'
+            '<div id="mailLinkCaseOptions" class="case-picker-options" data-case-picker-options hidden></div>'
+            '</div></div>'
+        )
 
-        # Build the cog settings menu (<details class="menu mail-settings-menu" data-menu data-mail-settings>)
+        # 2. Email type section (H): ONE streamlined <select> (replaces the clicky chip cloud + second Case type select)
+        type_options_html = "".join(
+            f'<option value="{val}"{" selected" if val == fx["type_value"] else ""}>{html_mod.escape(opt_label)}</option>'
+            for val, opt_label, _short in EMAIL_TYPE_OPTIONS
+        )
+        new_type_form = Ctx.html(
+            f'<form method="post" id="mailClassificationForm" class="mail-settings-section" '
+            f'action="/Inbox/{msg_id}?handler=CorrectClassification">'
+            '<label class="mail-decision-label" id="mailClassificationLabel" for="mailTypeSelect">Email type</label>'
+            f'<select id="mailTypeSelect" name="ClassificationKey" class="mail-type-select" '
+            f'aria-labelledby="mailClassificationLabel" data-mail-type-select>'
+            f'{type_options_html}</select>'
+            '</form>'
+        )
+
+        # 3. Clean borderless menu items for Query (K, N, C) and Change case (G, E)
         open_attr = " open" if settings_open else ""
         menu = Ctx.html(
             f'<details class="menu mail-settings-menu" data-menu data-mail-settings{open_attr}>'
@@ -318,40 +506,38 @@ def transform_dialog_to_proposal(
             '<svg class="icon" aria-hidden="true"><use href="#icon-settings"></use></svg>'
             '</summary>'
             '<div class="mail-settings-popover" data-mail-settings-popover>'
-            '<div class="mail-settings-head"><span>Message settings</span></div>'
             '<div class="decision-facts"></div>'
             '</div></details>'
         )
         facts = menu.select_one(".decision-facts")
-        for node in (case_row, picker_block, actions_row):
-            if node is not None:
-                facts.append(node.extract())
-        facts.append(form.extract())
+        facts.append(case_section)
+        facts.append(new_type_form)
 
-        case_link_a = case_row.select_one("a") if case_row else None
-        case_href = case_link_a["href"] if case_link_a else (f"/Cases/{fx['case_id']}" if fx.get("case_id") else None)
-        case_ref = case_link_a.get_text(" ", strip=True) if case_link_a else fx.get("case_ref")
-
-        query_kind = QUERY_ROW_BY_KEY.get(key)
+        query_kind = fx.get("query_state")
         if query_kind and case_href:
             if query_kind == "open":
-                q_body = (
-                    '<span class="status status--purple">Query</span><span class="muted">Unassigned</span>'
+                assignee = fx.get("query_assignee") or "Unassigned"
+                q_row = Ctx.html(
+                    '<div class="mail-settings-list" data-mail-query>'
                     f'<form method="post" action="/Inbox/{msg_id}?handler=MarkQueryDone">'
-                    '<button class="btn btn--small" type="submit" data-busy-label="Saving…">Mark done</button></form>'
+                    '<button class="mail-settings-item" type="submit" data-busy-label="Saving…">'
+                    '<span class="mail-settings-item-left"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg>'
+                    '<span>Mark query done</span></span>'
+                    f'<span class="status status--purple">Query · {html_mod.escape(assignee)}</span>'
+                    '</button></form></div>'
                 )
-                q_change, q_summary = "K", "Query row in Message settings: open query, Unassigned, Mark done marks this query done."
+                q_change, q_summary = "K", "Query action in Message settings: Mark query done closes this e-mail's open query."
             else:
-                q_body = (
+                q_row = Ctx.html(
+                    '<div class="mail-settings-list" data-mail-query>'
                     f'<form method="post" action="/Inbox/{msg_id}?handler=OpenQuery">'
-                    '<button class="btn btn--small" type="submit" data-busy-label="Saving…">Open query</button></form>'
+                    '<button class="mail-settings-item" type="submit" data-busy-label="Saving…">'
+                    '<span class="mail-settings-item-left"><svg class="icon" aria-hidden="true"><use href="#icon-flag"></use></svg>'
+                    '<span>Open query</span></span>'
+                    f'<small class="muted">{html_mod.escape(case_ref)}</small>'
+                    '</button></form></div>'
                 )
-                q_change, q_summary = "N", "Query row in Message settings: Open query on an e-mail on a Report sent Case that holds no query."
-            q_row = Ctx.html(
-                '<div class="mail-decision-block" data-mail-query>'
-                '<span class="mail-decision-label">Query</span>'
-                f'<div class="mail-decision-actions">{q_body}</div></div>'
-            )
+                q_change, q_summary = "N", "Query action in Message settings: Open query on an e-mail on a Report sent Case that holds no query."
             facts.append(q_row)
             if ctx is not None:
                 ctx.mark(q_row, q_change, q_summary)
@@ -360,43 +546,40 @@ def transform_dialog_to_proposal(
 
         if CHANGE_CASE_BY_KEY.get(key) and case_href:
             cc_row = Ctx.html(
-                '<div class="mail-decision-block" data-mail-change-case>'
-                '<span class="mail-decision-label">Change case</span>'
-                '<div class="mail-decision-actions">'
-                f'<a class="btn btn--small" href="{case_href}?dialog=case-hold-dialog">Place on Hold</a>'
-                f'<a class="btn btn--small" href="{case_href}?dialog=case-close-dialog">Close case</a>'
-                '</div></div>'
+                '<div class="mail-settings-list" data-mail-change-case>'
+                f'<a class="mail-settings-item" href="{case_href}?dialog=case-hold-dialog">'
+                '<span class="mail-settings-item-left"><svg class="icon" aria-hidden="true"><use href="#icon-pause"></use></svg>'
+                '<span>Place Case on Hold…</span></span></a>'
+                f'<a class="mail-settings-item" href="{case_href}?dialog=case-close-dialog">'
+                '<span class="mail-settings-item-left"><svg class="icon" aria-hidden="true"><use href="#icon-archive"></use></svg>'
+                '<span>Close Case…</span></span></a>'
+                '</div>'
             )
             facts.append(cc_row)
             if ctx is not None:
-                ctx.mark(cc_row, "G", "Change case in Message settings: Place on Hold and Close case open the Case with that dialog.")
+                ctx.mark(cc_row, "G", "Change case in Message settings: Place Case on Hold and Close Case open the Case with that dialog.")
                 ctx.record("E", "The Cancellation type stays, with its Case aside row and notification.")
 
-        if decided_row is not None:
-            decided_row["class"] = ["decision-row", "mail-settings-decided"]
-            facts.append(decided_row.extract())
+        facts.append(Ctx.html(
+            f'<div class="mail-settings-foot"><span>Decided</span>'
+            f'<span><time datetime="{fx["iso"]}">{fx["decided"]}</time> · Automatic</span></div>'
+        ))
 
-        # Remove the entire right-hand <aside class="stack"> (Decision + Corrections cards)
         aside = section.find_parent("aside")
         if aside is not None:
             aside.decompose()
         else:
             section.decompose()
 
-        # Mount the cog menu at the start of .mail-dialog-tools in .dialog-head
         tools = dialog.select_one(".mail-dialog-tools")
         if tools is not None:
             tools.insert(0, menu)
 
-        # Add the at-a-glance context bar (.mail-context-bar) beneath .mail-route in .mail-dialog-title
         title_box = dialog.select_one(".mail-dialog-title")
         if title_box is not None and title_box.select_one("[data-mail-context-bar]") is None:
-            cbar = _build_context_bar(key, selected, case_ref, case_href, query_kind)
+            cbar = _build_context_bar(key, fx, case_ref, case_href, query_kind)
             title_box.append(cbar)
-            if ctx is not None:
-                ctx.mark(cbar, "G", G_SUMMARY)
 
-        # Add inline attachment chips under .mail-body when attachments exist
         mail_read = dialog.select_one(".mail-read")
         if mail_read is not None and mail_read.select_one("[data-mail-inline-attachments]") is None:
             att_strip = _build_inline_attachments(key, msg_id)
@@ -405,9 +588,8 @@ def transform_dialog_to_proposal(
 
         if ctx is not None:
             ctx.mark(menu.select_one(".mail-settings-trigger"), "G", G_SUMMARY)
-            ctx.mark(case_row, "G", G_SUMMARY)
-            ctx.mark(label, "H", H_SUMMARY)
-            ctx.mark(chips, "H", H_SUMMARY)
+            ctx.mark(case_section, "G", G_SUMMARY)
+            ctx.mark(new_type_form, "H", H_SUMMARY)
 
     # R: Register images offered on unlinked image-only Correspondence (m3 and m5).
     if key in ("m3", "m5"):
@@ -435,6 +617,13 @@ def message_dialog_proposal(ctx: Ctx) -> None:
     mount = ctx.one("[data-mail-dialog-root]")
     if mount is None:
         return
+    ids = load_ids()
+    msg_id = ids.get(base_key, "")
+    for row in ctx.all("[data-mail-row]"):
+        if row.get("data-mail-row") == msg_id:
+            row["aria-current"] = "true"
+        else:
+            row.attrs.pop("aria-current", None)
     transform_dialog_to_proposal(
         mount,
         base_key,

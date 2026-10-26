@@ -2,9 +2,9 @@
 
 In the live application (v41 Stage 2), clicking an e-mail on /Inbox opens #mailMessageDialog
 (_MessageDialog.cshtml) inside [data-mail-dialog-root] over /Inbox. Every message-m* state
-mounts that dialog over its Inbox scope (All incoming or No Case Found) in both Today and
-Proposal. In Today the dialog carries the 380px right-hand Decision column with twelve
-Classification chips; in Proposal the Decision column is replaced by the cog settings menu
+mounts that dialog over its Inbox scope (All or No Case Found) in both Today and Proposal.
+In Today the dialog carries the 380px right-hand Decision column with twelve Classification
+chips; in Proposal the Decision column is replaced by the streamlined cog settings menu
 (#icon-settings) in the dialog header.
 """
 from __future__ import annotations
@@ -17,8 +17,9 @@ def s(key: str, label: str, group: str, lane: str, capture: str | None = None, *
 
 
 STATES: list[dict] = [
-    s("inbox", "Inbox · All incoming", INBOX, "inbox"),
+    s("inbox", "Inbox · All", INBOX, "inbox"),
     s("inbox-no-case-found", "Inbox · No Case Found", INBOX, "inbox"),
+    s("inbox-dismissed", "Inbox · Dismissed", INBOX, "inbox"),
     s("inbox-rows-ticked", "Inbox · two rows ticked", INBOX, "inbox", "inbox"),
     s("message-m1", "Message dialog · New instruction, no Case (settings open)", INBOX, "inbox", "inbox",
       dialog="m1", settings_open=True),
@@ -52,6 +53,7 @@ ROUTES: list[tuple[str, str]] = [
     ("/Index", "work-centre"),
     ("/Inbox", "inbox"),
     ("/Inbox?queue=no_case_found", "inbox-no-case-found"),
+    ("/Inbox?folder=dismissed", "inbox-dismissed"),
     ("/Cases", "cases-query"),
     ("/Cases/bee37ce3-c710-4a5b-8e2c-67e8ed6ad8cb", "case-qdos26220"),
     ("/Cases/85de4c48-ed02-445f-a2ce-d97a087c19dd", "case"),

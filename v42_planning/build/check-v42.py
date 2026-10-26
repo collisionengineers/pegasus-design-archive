@@ -78,36 +78,46 @@ def v42_checks(page: Page) -> None:
     rows = lambda: frame_eval(page, "Array.from(d.querySelectorAll('div.inbox-row a.row-title')).map(a => a.innerText.trim())")
     stray_category = lambda: frame_eval(
         page, "Array.from(d.querySelectorAll('.cluster > .row-meta')).some(e => "
-              f"!{json.dumps(KEPT)}.includes(e.innerText.trim()))")
+              f"!{json.dumps(KEPT)}.includes(e.textContent.trim()))")
 
-    # Inbox list (A, B, I)
+    # Inbox list (A, B, I): 3 scopes (All, No Case Found, Dismissed), no Sent/Deleted, Principal & Signal filters
     go(page, "inbox", "today")
     check("inbox today: live Category select", q("select#queue-filter"))
     check("inbox today: live bulk Correct classification", q("[data-bulk-classify]"))
     check("inbox today: All incoming lists m7 to m10", all(s in rows() for s in REMOVED_SUBJECTS))
     go(page, "inbox", "proposal")
-    check("I: inbox has no Category select", not q("select#queue-filter"))
-    check("I: inbox has no bulk Correct classification or its dialog",
-          not q("[data-bulk-classify]") and not q("#bulkClassifyDialog"))
+    check("I: inbox has no Category select and no left aside pane",
+          not q("select#queue-filter") and not q("section.inbox-layout > aside.pane"))
+    check("I: inbox has exactly three scope tabs (All, No Case Found, Dismissed) and no Sent or Deleted Items",
+          frame_eval(page, "Array.from(d.querySelectorAll('[data-scope-switch]')).map(b => b.getAttribute('data-scope-switch')).join(',')") == "all,no_case_found,dismissed")
+    check("I: inbox has Principal and Signal filter selects",
+          q("select#principal-filter") and q("select#type-filter"))
+    check("I: inbox has no bulk Correct classification or its dialog, and bulk bar is hidden when 0 ticked",
+          not q("[data-bulk-classify]") and not q("#bulkClassifyDialog")
+          and frame_eval(page, "d.getElementById('mail-bulk').hidden === true"))
     listed = rows()
-    check("B: All incoming omits m7 to m10", not any(s in listed for s in REMOVED_SUBJECTS))
-    check("B: All incoming keeps m1, m2, m4, m11 and m12 only", len(listed) == 5)
-    check("B: All incoming count reads 5",
-          frame_eval(page, "Array.from(d.querySelectorAll('.scope-list form')).find(f => f.innerText.trim().startsWith('All incoming')).innerText.replace(/\\s+/g, ' ').trim()") == "All incoming 5")
-    check("A: no removed category text on an All incoming row", not stray_category())
+    check("B: All omits unlinked non-instruction m7 to m10", not any(s in listed for s in REMOVED_SUBJECTS))
+    check("B: All lists 8 instructions, triage requests and Case-linked messages", len(listed) == 8)
+    check("A: no removed category text on an All row", not stray_category())
     go(page, "inbox-no-case-found", "proposal")
     listed = rows()
     check("B: No Case Found lists m7 to m10", all(s in listed for s in REMOVED_SUBJECTS))
     check("A: No Case Found rows carry no removed category text", not stray_category())
     check("I: No Case Found has no Category select", not q("select#queue-filter"))
+    go(page, "inbox-dismissed", "proposal")
+    check("I: Dismissed scope lists dismissed messages with Restore",
+          n("div.inbox-row") == 2 and q('form[data-mail-row-action="restore"]'))
     go(page, "inbox-rows-ticked", "today")
     check("inbox-rows-ticked today: two ticks, count 2", text("[data-bulk-count]") == "2")
     go(page, "inbox-rows-ticked", "proposal")
-    check("I: ticked rows keep the count 2", text("[data-bulk-count]") == "2")
-    check("I: bulk bar keeps Dismiss only", n("form#mail-bulk button") == 1 and "Dismiss" in text("form#mail-bulk"))
+    check("I: ticked rows reveal the contextual bulk bar with count 2 and Dismiss only",
+          frame_eval(page, "d.getElementById('mail-bulk').hidden === false")
+          and text("[data-bulk-count]") == "2"
+          and n("form#mail-bulk button") == 1 and "Dismiss" in text("form#mail-bulk"))
 
-    # Message dialog over /Inbox + cog settings menu (G, H, K, L, N, R)
+    # Message dialog over /Inbox + streamlined cog settings menu (G, H, K, L, N, R)
     tc = lambda s: frame_eval(page, f"(d.querySelector({json.dumps(s)}) || {{textContent: ''}}).textContent.trim()")
+    val = lambda s: frame_eval(page, f"(d.querySelector({json.dumps(s)}) || {{value: ''}}).value")
     for key in MESSAGES:
         for mode in ("today", "proposal"):
             go(page, key, mode)
@@ -122,35 +132,34 @@ def v42_checks(page: Page) -> None:
         check(f"G: {key} replaces Decision sidebar with cog settings menu and context bar",
               not q("section.mail-decision") and q("details[data-mail-settings] [data-mail-settings-toggle]")
               and q("[data-mail-context-bar]"))
-        check(f"H: {key} has four Type chips in cog menu", n("#mailClassificationForm .mail-chips .chip") == 4)
-        check(f"H: {key} has exactly one pressed chip", n('#mailClassificationForm .chip[aria-pressed="true"]') == 1)
-        check(f"H: {key} row label is Type", tc("#mailClassificationForm .mail-decision-label") == "Type")
-        check(f"G: {key} Case row comes first in cog menu", frame_eval(
+        check(f"H: {key} replaces clicky chips with one streamlined Email type select (6 options)",
+              not q("#mailClassificationForm .mail-chips") and n("#mailTypeSelect option") == 6)
+        check(f"H: {key} label is Email type", tc("#mailClassificationForm .mail-decision-label") == "Email type")
+        check(f"G: {key} Case section comes first in cog menu", frame_eval(
             page, "(() => { const f = d.querySelector('[data-mail-settings-popover] .decision-facts');"
                   " const first = f && f.firstElementChild;"
-                  " return !!first && first.classList.contains('decision-row') && first.textContent.trim().startsWith('Case'); })()"))
+                  " return !!first && first.textContent.trim().startsWith('Case'); })()"))
         has_query = q("[data-mail-query]")
         if key in WITH_QUERY_ROW:
-            check(f"N/K: {key} has the Query row after Type", has_query and frame_eval(
+            check(f"N/K: {key} has the Query action after Email type", has_query and frame_eval(
                 page, "d.querySelector('#mailClassificationForm').nextElementSibling.hasAttribute('data-mail-query')"))
         else:
             check(f"N: {key} has no Query row", not has_query)
         check(f"G: {key} Change case only on m11", q("[data-mail-change-case]") == (key == "message-m11"))
     go(page, "message-m1", "proposal")
-    check("H: m1 New instruction pressed", tc('.chip[aria-pressed="true"]') == "New instruction")
-    check("H: m1 Case type select in the Type row", q("#mailClassificationForm [data-work-type-field] select#mailWorkType"))
+    check("H: m1 selects New instruction — Inspection", val("#mailTypeSelect") == "new-instruction:Inspection")
     for key in ("message-m2", "message-m3", "message-m7", "message-m12"):
         go(page, key, "proposal")
-        check(f"A/H: {key} pressed Correspondence", tc('.chip[aria-pressed="true"]') == "Correspondence")
+        check(f"A/H: {key} selects Case correspondence", val("#mailTypeSelect") == "correspondence")
     go(page, "message-m4", "proposal")
     query_row = tc("[data-mail-query]")
-    check("K: m4 Query row has the Query chip, Unassigned and Mark done",
-          all(word in query_row for word in ("Query", "Unassigned", "Mark done")))
+    check("K: m4 Query item has Mark query done and Query · Unassigned",
+          all(word in query_row for word in ("Query", "Unassigned", "Mark query done")))
     for key in ("message-m2", "message-m12"):
         go(page, key, "proposal")
-        check(f"N: {key} Query row offers Open query", "Open query" in tc("[data-mail-query]"))
+        check(f"N: {key} Query item offers Open query", "Open query" in tc("[data-mail-query]"))
     go(page, "message-m11", "proposal")
-    check("E: m11 Cancellation pressed", tc('.chip[aria-pressed="true"]') == "Cancellation")
+    check("E: m11 selects Cancellation", val("#mailTypeSelect") == "cancellation")
     check("G: m11 Change case links to the hold and close dialogs",
           q('[data-mail-change-case] a[href$="?dialog=case-hold-dialog"]')
           and q('[data-mail-change-case] a[href$="?dialog=case-close-dialog"]'))
@@ -177,9 +186,14 @@ def v42_checks(page: Page) -> None:
     second_id = frame_eval(page, "d.getElementById('mailMessageDialog').getAttribute('data-mail-message')")
     check("interactive: Next message button steps to the next email in the list",
           bool(second_id) and second_id != first_id)
-    frame_click(page, "#mailMessageDialog [data-quick-open-query]")
-    page.wait_for_timeout(100)
-    check("interactive: clicking Open query updates the dialog context bar to Query · Unassigned",
+    # Next once more reaches m2 (which has Open query in its cog menu)
+    frame_click(page, "#mailMessageDialog [data-mail-next]")
+    page.wait_for_timeout(150)
+    frame_click(page, "#mailMessageDialog [data-mail-settings-toggle]")
+    page.wait_for_timeout(80)
+    frame_click(page, '#mailMessageDialog [data-mail-query] button[type="submit"]')
+    page.wait_for_timeout(120)
+    check("interactive: clicking Open query in cog menu updates the dialog context bar to Query · Unassigned",
           "Query · Unassigned" in tc("#mailMessageDialog [data-mail-context-bar]"))
 
     # Case (D, J, K, M, N, O, X, AA)

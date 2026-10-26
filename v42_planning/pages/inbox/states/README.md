@@ -4,8 +4,9 @@ Today is the page captured from the application; it is not redrawn. The Proposal
 
 | State | Page | Changes |
 | --- | --- | --- |
-| `inbox` | Inbox · All incoming | A, B, I |
+| `inbox` | Inbox · All | A, B, I |
 | `inbox-no-case-found` | Inbox · No Case Found | A, B, I |
+| `inbox-dismissed` | Inbox · Dismissed | A, B, I |
 | `inbox-rows-ticked` | Inbox · two rows ticked | A, B, I |
 | `message-m1` | Message dialog · New instruction, no Case (settings open) | A, B, G, H, I |
 | `message-m2` | Message dialog · Case update on a Report sent Case (settings open) | A, B, C, G, H, I, N |
@@ -18,14 +19,14 @@ Today is the page captured from the application; it is not redrawn. The Proposal
 
 ## Changes
 
-- **A**: Row category text only for New instruction, Triage request and Cancellation.
+- **A**: Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found.
 - **B**: Unlinked e-mail that is not an instruction or triage request waits only in No Case Found.
 - **C**: Joining a Report sent Case opens no query by itself; criteria and the AI classifier may.
 - **E**: The Cancellation type stays, with its Case aside row and notification.
-- **G**: Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Type, Query, Change case, with an at-a-glance context bar above the full-width message.
-- **H**: Row label Type; default chip Correspondence replaces Unclassified.
-- **I**: Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay.
-- **K**: Query row in Message settings: open query, Unassigned, Mark done marks this query done.
+- **G**: Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Email type, Query, Change case, with a quiet context line above the full-width message.
+- **H**: Clicky category chip cloud replaced by a single streamlined Email type select combining Case correspondence, New instruction (Inspection / Audit / Inspection and Audit), Triage request and Cancellation.
+- **I**: Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Type filters in a single-bar full-width ledger.
+- **K**: Query action in Message settings: Mark query done closes this e-mail's open query.
 - **L**: Composer tick Mark query done: marks only the replied e-mail's query done once the Sent item is observed.
-- **N**: Query row in Message settings: Open query on an e-mail on a Report sent Case that holds no query.
+- **N**: Query action in Message settings: Open query on an e-mail on a Report sent Case that holds no query.
 - **R**: Register images on any image-only unlinked e-mail with no instruction, triage or cancellation type.

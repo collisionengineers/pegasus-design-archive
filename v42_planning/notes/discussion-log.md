@@ -94,3 +94,24 @@ What changed:
 - **Inbox list & filter UX:** Fixed `.inbox-filter` to a 3-column grid once `Category` is removed so the `Search` input fills the bar and the `Search` button stays compact; surfaced prominent Case reference pills (`.mail-row-case`) and open `Query` chips directly in each linked row's status cluster; made clicking anywhere on an `.inbox-row` open `#mailMessageDialog`.
 - **Full interactivity across all 12 fake emails (`m1`–`m12`):** Built `mail_dialogs.py` and updated `bridge-v42.js` (including a `window.URL` wrapper and `<base href>` for `about:srcdoc`) so clicking any email row on `/Inbox`, stepping with `Previous`/`Next`, switching `Message`/`Attachments`/`Thread` tabs, composing `Reply`/`Reply all`/`Forward`, searching/filtering/sorting, dismissing rows, and changing `Case`, `Type` or `Query` inside the cog settings menu all work live in the browser.
 - Re-ran `python build/build-v42.py && python build/pagedocs-v42.py && python build/check-v42.py`: `RESULT {"fail": [], "okCount": 335}`, 148 screenshots updated in `shots/`.
+
+## 26 October 2026: 3-scope full-width Inbox ledger, Principal filter, 1-step Email type select and button-minimal Case tables
+
+The operator reviewed the second iteration and directed:
+
+> *"we dont really need sent or deleted items on the inbox either.*
+>
+> *just all, no case found, dismissed and maybe filters for principles and such*
+>
+> *Your inbox design was very bad and basic. you need to enhance this. I also dont want the clicky thing for changing the emails category anymore, make that different and more streamlined.*
+>
+> *Try a lot harder on the design to make it GOOD and make it look good too ultrathink"*
+>
+> *"make sure the pages arent just messes of buttons. thats a critique of the last design. you added the buttons but everything looks kinda... bad. e.g. the case page"*
+
+What changed:
+
+- **Full-width 6-column Inbox ledger with 3 scopes (`All`, `No Case Found`, `Dismissed`) and Principal / Signal filters:** Removed `Sent Items`, `Deleted Items` and the 220px left scope `<aside>`, replacing them with a single unified toolbar (`All 8` · `No Case Found 8` · `Dismissed 2` segmented tabs, live search, `All Principals` select for `QDOS` / `Northline` / `Meridian` / `Connexus`, `All signals` select for `Instructions` / `Open queries` / `Cancellations` / `Unread`, and a contextual bulk bar that stays hidden when `0` rows are ticked). Replaced the tall 4-line cards with a structured 6-column ledger (`Case / Stage`, `Type / Signal`, `Message`, `Sender / Principal`, `Received`, and hover-revealed row actions) seeded with 17 realistic emails (`m1`–`m17`).
+- **1-step `Email type` `<select>` and borderless menu items inside the `#icon-settings` cog menu:** Replaced the clicky category chip cloud + conditional `Case type` dropdown with a single `<select id="mailTypeSelect">` (`Case correspondence`, `New instruction — Inspection`, `New instruction — Audit`, `New instruction — Inspection and Audit`, `Triage request`, `Cancellation`), and styled `Open query` / `Mark query done` and `Place Case on Hold…` / `Close Case…` as clean borderless menu rows inside the cog popover.
+- **Button-minimal Case `Correspondence` and `Queries` tables:** Made the message **Subject** itself the link that opens the message dialog in both `Correspondence` and `Queries` (removing the redundant `[Open message]` button from every row), and moved query assignment into the **`Assigned to` cell** (`Unassigned ▾` + inline `Take` link) so each `Queries` row carries only `Reply` + `Mark done` (mail), `Mark done` (logged), or `Reopen` (`Done` rows) on a single clean line.
+- Re-ran `python build/build-v42.py && python build/pagedocs-v42.py && python build/check-v42.py`: `RESULT {"fail": [], "okCount": 339}`, 156 screenshots updated in `shots/`.

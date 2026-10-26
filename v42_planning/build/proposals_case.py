@@ -3,6 +3,14 @@
 Letters are the v42 sign-off items (v42-notes.md §6). Every QDOS26214 state is the
 same page, so each carries the whole Case Proposal; the Assign query dialog opens on
 load only in case-queries-assign.
+
+Design discipline: no multi-button soup in table rows.
+  - In Correspondence and Queries, the message Subject itself is the link that opens
+    the message dialog, eliminating the redundant [Open message] button on every row.
+  - In Queries, the Assigned to column carries the interactive assignee control
+    (Unassigned ▾ + inline Take link), eliminating the separate [Assign] and [Take]
+    buttons from the Action column so each row has at most Reply + Mark done (mail)
+    or a single Mark done / Reopen button.
 """
 from __future__ import annotations
 
@@ -13,12 +21,12 @@ from bs4 import Tag
 from proposals_v42 import Ctx, patch, presets
 
 QDOS26214 = ("case", "case-queries", "case-queries-assign", "case-aside-query")
-REMOVED = ("Pre-instruction", "Images received", "Case update", "Query", "Billing", "General",
-           "Not client related", "Internal CC", "Unclassified")
+REMOVED = (
+    "Pre-instruction", "Images received", "Case update", "Query", "Billing",
+    "General", "Not client related", "Internal CC", "Unclassified",
+)
 VIEWER = "development-offline-administrator"
 COLLEAGUES = ("e.mawdsley", "r.okafor")
-ICON_SPARKLES = '<svg class="icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg>'
-
 
 
 @presets("case", "case-qdos26220")
@@ -32,6 +40,7 @@ def open_actions_menu(body: Tag, state: dict) -> None:
     menu = log_btn.find_parent("details") if log_btn else None
     if menu is not None:
         menu["open"] = ""
+
 
 def _case_id(ctx: Ctx) -> str:
     section = ctx.one("[data-case-id]")
@@ -64,7 +73,7 @@ def _query_message_row(ctx: Ctx) -> Tag | None:
 
 
 # ---------------------------------------------------------------------------
-# Correspondence (X, N)
+# Correspondence (X, N): Subject link opens message; at most one action per row
 # ---------------------------------------------------------------------------
 
 @patch(*QDOS26214, "case-qdos26220")
@@ -73,7 +82,7 @@ def correspondence_type_column(ctx: Ctx) -> None:
     if table is None:
         return
     case_id = _case_id(ctx)
-    summary = "Correspondence column Type: Correspondence or the e-mail's type, with its query chip."
+    summary = "Correspondence column Type: Correspondence or the e-mail's type, with its query chip; Subject opens the message."
     for th in table.select("thead th"):
         if th.get_text(" ", strip=True) == "Classification":
             th.string = "Type"
@@ -83,6 +92,20 @@ def correspondence_type_column(ctx: Ctx) -> None:
         cells = row.find_all("td", recursive=False)
         if len(cells) < 5:
             continue
+        message = row["data-correspondence-row"]
+        dialog = f"case-message-{message.replace('-', '')}"
+        # Make Subject cell the link that opens the message dialog, and remove redundant [Open message] button
+        subj_cell = cells[2]
+        subj_text = subj_cell.get_text(" ", strip=True)
+        subj_cell.clear()
+        subj_cell.append(Ctx.html(
+            f'<a class="correspondence-subject-link" href="/Inbox/{message}" data-dialog-open="{dialog}">'
+            f'{subj_text}</a>'
+        ))
+        open_btn = cells[4].select_one("a[data-dialog-open]")
+        if open_btn is not None:
+            open_btn.decompose()
+
         type_cell = cells[3]
         text = type_cell.get_text(" ", strip=True)
         if text in REMOVED:
@@ -95,40 +118,44 @@ def correspondence_type_column(ctx: Ctx) -> None:
             ctx.mark(type_cell, "X", summary)
         tag = row.select_one("form[data-tag-as-query]")
         if tag is not None and ctx.key not in QDOS26214:
-            # QDOS26220 is in Report preparation: a query opens only once the report is sent (AA).
             cell = tag.parent
             tag.decompose()
             ctx.mark(cell, "AA", "Open query is offered only once the Case's report is sent.")
         elif tag is not None:
-            message = row["data-correspondence-row"]
             opener = Ctx.html(
                 f'<form method="post" action="/Cases/{case_id}?handler=OpenQuery" class="inline-form" data-open-query="{message}">'
                 f'<input type="hidden" name="retainedMessageId" value="{message}">'
                 '<input type="hidden" name="section" value="files">'
-                '<button class="btn btn--small" type="submit" data-busy-label="Saving…">Open query</button></form>')
+                '<button class="btn btn--small" type="submit" data-busy-label="Saving…">Open query</button></form>'
+            )
             tag.replace_with(opener)
             ctx.mark(opener, "N", "Tag as query becomes Open query: one query per e-mail, opened through the one route.")
 
 
 # ---------------------------------------------------------------------------
-# Queries (D, K, M, O, J)
+# Queries (D, K, M, O, J): inline Assigned to control + single-line actions
 # ---------------------------------------------------------------------------
 
-def _actions(case_id: str, query_id: str, *, open_: bool, assigned_to_viewer: bool = False) -> str:
-    if not open_:
-        return (f'<form method="post" action="/Cases/{case_id}?handler=ReopenQuery" data-reopen-query="{query_id}">'
-                f'<input type="hidden" name="queryId" value="{query_id}">'
-                '<button class="btn btn--small" type="submit" data-busy-label="Saving…">Reopen</button></form>')
-    markup = (f'<form method="post" action="/Cases/{case_id}?handler=MarkQueryDone" data-mark-query-done="{query_id}">'
-              f'<input type="hidden" name="queryId" value="{query_id}">'
-              '<button class="btn btn--small" type="submit" data-busy-label="Saving…">Mark done</button></form>'
-              f'<button class="btn btn--small" type="button" data-dialog-open="case-assign-query-dialog" data-assign-query="{query_id}">Assign</button>')
-    if not assigned_to_viewer:
-        markup += (f'<form method="post" action="/Cases/{case_id}?handler=AssignQuery" data-take-query="{query_id}">'
-                   f'<input type="hidden" name="queryId" value="{query_id}">'
-                   '<input type="hidden" name="assignee" value="d47fbbae-ea22-4ca6-b983-01e2ed1fbd13">'
-                   '<button class="btn btn--small btn--primary" type="submit" data-busy-label="Assigning…">Take</button></form>')
-    return markup
+def _assignee_cell_html(case_id: str, query_id: str) -> str:
+    return (
+        f'<td><span class="query-assignee-control">'
+        f'<button type="button" class="query-assignee-btn" data-dialog-open="case-assign-query-dialog" data-assign-query="{query_id}">'
+        '<span>Unassigned</span>'
+        '<svg class="icon" aria-hidden="true"><use href="#icon-chevron-down"></use></svg></button>'
+        f'<form method="post" action="/Cases/{case_id}?handler=AssignQuery" class="inline-form" data-take-query="{query_id}">'
+        f'<input type="hidden" name="queryId" value="{query_id}">'
+        '<input type="hidden" name="assignee" value="d47fbbae-ea22-4ca6-b983-01e2ed1fbd13">'
+        '<button type="submit" class="query-take-link" data-busy-label="Assigning…">Take</button></form>'
+        '</span></td>'
+    )
+
+
+def _mark_done_form(case_id: str, query_id: str) -> str:
+    return (
+        f'<form method="post" action="/Cases/{case_id}?handler=MarkQueryDone" class="inline-form" data-mark-query-done="{query_id}">'
+        f'<input type="hidden" name="queryId" value="{query_id}">'
+        '<button class="btn btn--small" type="submit" data-busy-label="Saving…">Mark done</button></form>'
+    )
 
 
 @patch(*QDOS26214)
@@ -145,11 +172,12 @@ def queries_section(ctx: Ctx) -> None:
             ctx.mark(head, "D", "Assigned to column; a new query is Unassigned until taken or assigned.")
     body = table.select_one("tbody")
     for row in body.select("tr[data-case-query]"):
+        qid = row["data-case-query"]
         cells = row.find_all("td", recursive=False)
-        cells[5].insert_before(Ctx.html("<td>Unassigned</td>"))
+        cells[5].insert_before(Ctx.html(_assignee_cell_html(case_id, qid)))
         actions = row.select_one("td.row-actions")
         actions.clear()
-        actions.append(Ctx.html(f'<span class="cluster">{_actions(case_id, row["data-case-query"], open_=True)}</span>'))
+        actions.append(Ctx.html(f'<span class="query-row-bar">{_mark_done_form(case_id, qid)}</span>'))
         ctx.mark(actions, "K", "Per-query Mark done replaces Resolve query (which closed every open query).")
 
     query_row = _query_message_row(ctx)
@@ -163,16 +191,18 @@ def queries_section(ctx: Ctx) -> None:
             '<td><span class="status status--purple">Query</span></td>'
             '<td><time datetime="2026-10-12T11:20:00.0000000+01:00">12 Oct 2026 11:20</time></td>'
             '<td>Automatic</td><td>E-mail</td>'
-            '<td class="wrap"><span>claims@northline.example</span><br><span>Query — QDOS26214 — hire charges</span></td>'
-            '<td>Unassigned</td><td>Not recorded</td>'
-            '<td class="row-actions nowrap"><span class="cluster">'
-            f'<a class="btn btn--small" href="/Inbox/{message}" data-dialog-open="{dialog}">Open message</a>'
+            f'<td class="wrap"><a class="query-subject-link" href="/Inbox/{message}" data-dialog-open="{dialog}">'
+            'Query — QDOS26214 — hire charges</a>'
+            '<span class="query-sender-sub">claims@northline.example</span></td>'
+            f'{_assignee_cell_html(case_id, mail_id)}'
+            '<td>Not recorded</td>'
+            '<td class="row-actions nowrap"><span class="query-row-bar">'
             f'<a class="btn btn--small" href="{reply}" data-query-reply="{message}">Reply</a>'
-            f'<form method="post" action="/Cases/{case_id}?handler=DraftQueryReply" data-query-ai-draft-start="{message}">'
-            f'<button class="btn btn--small" type="submit" data-busy-label="Drafting…">{ICON_SPARKLES}<span>Draft reply with AI</span></button></form>'
-            f'{_actions(case_id, mail_id, open_=True)}</span></td></tr>')
+            f'{_mark_done_form(case_id, mail_id)}'
+            '</span></td></tr>'
+        )
         body.insert(0, mail)
-        ctx.mark(mail, "O", "Assign and Take on each open query; Take on an Unassigned row assigns the viewer.")
+        ctx.mark(mail, "O", "Inline Assigned to selector and Take on each open query; Subject opens the message.")
     done_id = "00000000-0000-4000-8000-0000000c0e40"
     done = Ctx.html(
         f'<tr data-case-query="{done_id}" data-case-query-open="false">'
@@ -182,14 +212,16 @@ def queries_section(ctx: Ctx) -> None:
         '<td class="wrap">Asked for a copy of the engineer\'s report</td>'
         '<td>e.mawdsley</td>'
         '<td><time datetime="2026-10-11T09:12:00.0000000+01:00">11 Oct 2026 09:12</time><br><span>e.mawdsley</span></td>'
-        f'<td class="row-actions nowrap">{_actions(case_id, done_id, open_=False)}</td></tr>')
+        '<td class="row-actions nowrap"><span class="query-row-bar">'
+        f'<form method="post" action="/Cases/{case_id}?handler=ReopenQuery" class="inline-form" data-reopen-query="{done_id}">'
+        f'<input type="hidden" name="queryId" value="{done_id}">'
+        '<button class="btn btn--small" type="submit" data-busy-label="Saving…">Reopen</button></form>'
+        '</span></td></tr>'
+    )
     body.append(done)
     ctx.mark(done, "M", "Reopen on a Done row: any staff role and Automation, no reason, while the Case is not archived or closed.")
     ctx.record("K", "Done replaces Resolved as the closed query's chip and column.")
     ctx.record("J", "Query acts need no edit session, expected version or reason.")
-    ctx.style("[data-queries-table] td.row-actions{display:table-cell;height:auto}"
-              "[data-queries-table] td.row-actions .cluster{justify-content:flex-end;gap:6px}",
-              "K", "Per-query Mark done replaces Resolve query (which closed every open query).")
 
 
 ASSIGN_DIALOG = """

@@ -1,7 +1,8 @@
 /* v42 mockup bridge. Runs first inside every composed page.
    Provides interactive Inbox message dialogs (#mailMessageDialog), cog settings
-   menu actions (Type chips, Case / PO autocomplete & link/unlink, Open query &
-   Mark done, Change case), composer replies, row dismissal, search and sorting. */
+   menu actions (1-step Email type select, Case / PO autocomplete & 1-click link/unlink,
+   Open query & Mark done, Change case), scope tabs, Principal/quick filters,
+   composer replies, row dismissal, search and sorting. */
 (function () {
   'use strict';
   var host = window.parent;
@@ -39,19 +40,27 @@
   var fragments = (host && host.__mockFragments) || {};
   var dialogs = (host && host.__mockDialogs) || { today: {}, proposal: {} };
 
-  // Seeded Cases for the interactive Case / PO autocomplete picker.
   var CASES = [
-    { ref: 'QDOS26214', id: '85de4c48-ed02-445f-a2ce-d97a087c19dd', vrm: 'MA59BDY', claimant: 'R. Whitfield', reportSent: true, canHoldClose: false },
-    { ref: 'QDOS26220', id: 'bee37ce3-c710-4a5b-8e2c-67e8ed6ad8cb', vrm: 'LK21ABC', claimant: 'Meridian Claims', reportSent: false, canHoldClose: true },
-    { ref: 'QDOS26190', id: '2dc71cf4-debc-403d-be99-241d73c16bd2', vrm: 'PO16DDF', claimant: 'K. Osei', reportSent: true, canHoldClose: false },
-    { ref: 'QDOS26217', id: '8a63804e-c66d-4725-a5db-312d9870311e', vrm: 'AB12CDE', claimant: 'S. Whitfield', reportSent: false, canHoldClose: true }
+    { ref: 'QDOS26214', id: '85de4c48-ed02-445f-a2ce-d97a087c19dd', vrm: 'MA59BDY', vehicle: 'Ford Focus · MA59 BDY', claimant: 'R. Whitfield', reportSent: true, canHoldClose: false },
+    { ref: 'QDOS26220', id: 'bee37ce3-c710-4a5b-8e2c-67e8ed6ad8cb', vrm: 'LK21ABC', vehicle: 'Vauxhall Corsa · LK21 ABC', claimant: 'Meridian Claims', reportSent: false, canHoldClose: true },
+    { ref: 'QDOS26190', id: '2dc71cf4-debc-403d-be99-241d73c16bd2', vrm: 'PO16DDF', vehicle: 'Mercedes A180 · PO16 DDF', claimant: 'K. Osei', reportSent: true, canHoldClose: false },
+    { ref: 'PCH26102', id: '8a63804e-c66d-4725-a5db-312d9870311e', vrm: 'EF56GHJ', vehicle: 'BMW 320d · EF56 GHJ', claimant: 'P. Marsh', reportSent: false, canHoldClose: true }
   ];
   function findCase(ref) {
     var upper = String(ref || '').trim().toUpperCase();
     return CASES.filter(function (c) { return c.ref === upper || c.vrm === upper; })[0] || null;
   }
 
-  // Per-message interactive overrides within the current frame session.
+  var TYPE_INFO = {
+    'correspondence': { value: 'correspondence', display: 'Case correspondence', short: 'Correspondence', sub: null, group: 'correspondence' },
+    'new-instruction': { value: 'new-instruction:Inspection', display: 'New instruction · Inspection', short: 'New instruction', sub: 'Inspection', group: 'instructions' },
+    'new-instruction:Inspection': { value: 'new-instruction:Inspection', display: 'New instruction · Inspection', short: 'New instruction', sub: 'Inspection', group: 'instructions' },
+    'new-instruction:Audit': { value: 'new-instruction:Audit', display: 'New instruction · Audit', short: 'New instruction', sub: 'Audit', group: 'instructions' },
+    'new-instruction:InspectionAndAudit': { value: 'new-instruction:InspectionAndAudit', display: 'New instruction · Inspection & Audit', short: 'New instruction', sub: 'Inspection & Audit', group: 'instructions' },
+    'triage-request': { value: 'triage-request', display: 'Triage request', short: 'Triage request', sub: 'Early triage', group: 'instructions' },
+    'cancellation': { value: 'cancellation', display: 'Cancellation', short: 'Cancellation', sub: 'Withdrawn claim', group: 'cancellations' }
+  };
+
   var overrides = {};
   function getOverride(msgId) {
     if (!overrides[msgId]) overrides[msgId] = {};
@@ -85,7 +94,7 @@
 
   function applyOverridesToDialogHtml(msgId, html) {
     var ov = overrides[msgId];
-    if (!ov || (!ov.typeLabel && !ov.queryState && ov.caseRef === undefined && !ov.notice)) return html;
+    if (!ov || (!ov.typeInfo && !ov.queryState && ov.caseRef === undefined && !ov.notice)) return html;
     var doc = new DOMParser().parseFromString('<div>' + html + '</div>', 'text/html');
     var root = doc.body.firstElementChild;
     syncDialogDom(root, msgId);
@@ -143,28 +152,6 @@
     } });
   }
 
-  var CODE_TO_LABEL = {
-    'correspondence': 'Correspondence',
-    'new-instruction': 'New instruction',
-    'triage-request': 'Triage request',
-    'cancellation': 'Cancellation',
-    'pre-instruction': 'Pre-instruction',
-    'images-received': 'Images received',
-    'case-update': 'Case update',
-    'query': 'Query',
-    'billing': 'Billing',
-    'general': 'General',
-    'not-client-related': 'Not client related',
-    'internal-cc': 'Internal CC',
-    'unclassified': 'Unclassified'
-  };
-  var LABEL_TO_CODE = {
-    'Correspondence': 'correspondence',
-    'New instruction': 'new-instruction',
-    'Triage request': 'triage-request',
-    'Cancellation': 'cancellation'
-  };
-
   function markRowRead(row) {
     if (!row) return;
     row.classList.remove('unread');
@@ -178,38 +165,43 @@
     var row = document.querySelector('.inbox-row[data-mail-row="' + msgId + '"]');
     if (!row) return;
     var ov = overrides[msgId] || {};
-    var cluster = row.querySelector('.cluster');
-    if (!cluster) return;
-    if (ov.caseRef !== undefined) {
-      var existingCase = cluster.querySelector('.mail-row-case');
-      var existingStatus = cluster.querySelector('.status--amber, .status--green');
+    var caseCell = row.querySelector('.inbox-cell-case');
+    if (caseCell && ov.caseRef !== undefined) {
       if (ov.caseRef) {
-        var cObj = findCase(ov.caseRef) || { ref: ov.caseRef, id: '85de4c48-ed02-445f-a2ce-d97a087c19dd' };
-        var pillHtml = '<a class="mail-row-case" href="/Cases/' + cObj.id + '">' + cObj.ref + '</a>';
-        if (existingCase) existingCase.outerHTML = pillHtml;
-        else if (existingStatus) existingStatus.outerHTML = pillHtml;
-        else cluster.insertAdjacentHTML('afterbegin', pillHtml);
+        var cObj = findCase(ov.caseRef) || { ref: ov.caseRef, id: '85de4c48-ed02-445f-a2ce-d97a087c19dd', vehicle: 'Linked Case' };
+        caseCell.innerHTML = '<a class="mail-row-case" href="/Cases/' + cObj.id + '">' + cObj.ref + '</a>'
+          + '<small class="inbox-cell-sub">' + cObj.vehicle + '</small>';
       } else {
-        var noCaseHtml = '<span class="status status--amber">No Case Found</span>';
-        if (existingCase) existingCase.outerHTML = noCaseHtml;
+        caseCell.innerHTML = '<span class="status status--amber">No Case Found</span>'
+          + '<small class="inbox-cell-sub">Unlinked</small>';
       }
     }
-    if (ov.typeLabel) {
-      var meta = cluster.querySelector('.row-meta');
-      if (['New instruction', 'Triage request', 'Cancellation'].indexOf(ov.typeLabel) !== -1) {
-        if (meta) meta.textContent = ov.typeLabel;
-        else cluster.insertAdjacentHTML('beforeend', '<span class="row-meta">' + ov.typeLabel + '</span>');
-      } else if (meta) {
-        meta.remove();
-      }
-    }
-    if (ov.queryState) {
-      var qChip = cluster.querySelector('.status--purple, .status--green[data-row-query]');
+    var typeCell = row.querySelector('.inbox-cell-type');
+    if (typeCell) {
       if (ov.queryState === 'open') {
-        if (qChip) qChip.outerHTML = '<span class="status status--purple" data-row-query>Query</span>';
-        else cluster.insertAdjacentHTML('beforeend', '<span class="status status--purple" data-row-query>Query</span>');
+        row.setAttribute('data-type-group', 'queries');
+        typeCell.innerHTML = '<span class="status status--purple" data-row-query>Query</span>'
+          + '<small class="inbox-cell-sub">Unassigned</small>';
       } else if (ov.queryState === 'done') {
-        if (qChip) qChip.outerHTML = '<span class="status status--green" data-row-query>Done</span>';
+        typeCell.innerHTML = '<span class="status status--green" data-row-query>Done</span>';
+      } else if (ov.typeInfo) {
+        var ti = ov.typeInfo;
+        row.setAttribute('data-type-group', ti.group);
+        if (ti.short === 'New instruction') {
+          typeCell.innerHTML = '<span class="status status--navy">New instruction</span>'
+            + '<span class="row-meta" hidden>New instruction</span>'
+            + '<small class="inbox-cell-sub">' + (ti.sub || 'Inspection') + '</small>';
+        } else if (ti.short === 'Triage request') {
+          typeCell.innerHTML = '<span class="status status--amber">Triage request</span>'
+            + '<span class="row-meta" hidden>Triage request</span>'
+            + '<small class="inbox-cell-sub">Early triage</small>';
+        } else if (ti.short === 'Cancellation') {
+          typeCell.innerHTML = '<span class="status status--red">Cancellation</span>'
+            + '<span class="row-meta" hidden>Cancellation</span>'
+            + '<small class="inbox-cell-sub">Withdrawn claim</small>';
+        } else {
+          typeCell.innerHTML = '<span class="inbox-type-correspondence">Correspondence</span>';
+        }
       }
     }
   }
@@ -231,32 +223,23 @@
       }
     }
 
-    if (ov.typeLabel) {
+    if (ov.typeInfo) {
+      var ti = ov.typeInfo;
       var ctxType = dialog.querySelector('[data-context-type]');
-      if (ctxType) ctxType.textContent = ov.typeLabel;
-      var chipsBox = dialog.querySelector('#mailClassificationForm .mail-chips');
-      if (chipsBox && currentMode() === 'proposal') {
-        chipsBox.innerHTML = ['Correspondence', 'New instruction', 'Triage request', 'Cancellation'].map(function (name) {
-          if (name === ov.typeLabel) {
-            return '<button type="button" class="chip" aria-pressed="true">'
-              + '<svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg>'
-              + '<span>' + name + '</span></button>';
-          }
-          return '<button type="submit" class="chip" name="ClassificationKey" value="' + LABEL_TO_CODE[name] + '" '
-            + 'aria-pressed="false" data-busy-label="Saving…">' + name + '</button>';
-        }).join('');
-      }
-      var wtField = dialog.querySelector('[data-work-type-field]');
-      if (wtField) wtField.hidden = ov.typeLabel !== 'New instruction';
+      if (ctxType) ctxType.textContent = ti.display;
+      var sel = dialog.querySelector('#mailTypeSelect');
+      if (sel) sel.value = ti.value;
     }
 
     if (ov.caseRef !== undefined) {
-      var cObj = ov.caseRef ? (findCase(ov.caseRef) || { ref: ov.caseRef, id: '85de4c48-ed02-445f-a2ce-d97a087c19dd', reportSent: true }) : null;
+      var cObj = ov.caseRef ? (findCase(ov.caseRef) || { ref: ov.caseRef, id: '85de4c48-ed02-445f-a2ce-d97a087c19dd', vehicle: 'Linked Case', reportSent: true }) : null;
       var caseRowStrong = dialog.querySelector('.decision-facts .decision-row strong');
       if (caseRowStrong) {
         caseRowStrong.className = cObj ? '' : 'quiet';
         caseRowStrong.innerHTML = cObj ? '<a href="/Cases/' + cObj.id + '">' + cObj.ref + '</a>' : 'None';
       }
+      var sugBanner = dialog.querySelector('[data-suggested-case]');
+      if (sugBanner && cObj) sugBanner.remove();
       var ctxBar = dialog.querySelector('[data-mail-context-bar]');
       if (ctxBar) {
         var ctxCase = ctxBar.querySelector('[data-context-case]');
@@ -266,7 +249,8 @@
           if (ctxCase) {
             ctxCase.outerHTML = '<a class="mail-pill mail-pill--case" href="/Cases/' + cObj.id + '" data-context-case>'
               + '<svg class="icon" aria-hidden="true"><use href="#icon-folder-open"></use></svg>'
-              + '<span>Case</span><strong>' + cObj.ref + '</strong></a>';
+              + '<span>Case</span><strong>' + cObj.ref + '</strong>'
+              + (cObj.vehicle ? '<small> · ' + cObj.vehicle + '</small>' : '') + '</a>';
           }
         } else if (ctxCase) {
           ctxCase.outerHTML = '<span class="status status--amber" data-context-case>No Case Found</span>'
@@ -277,35 +261,160 @@
     }
 
     if (ov.queryState) {
-      var qBlock = dialog.querySelector('[data-mail-query] .mail-decision-actions');
+      var qBlock = dialog.querySelector('[data-mail-query]');
       var ctxBar2 = dialog.querySelector('[data-mail-context-bar]');
       var oldCtxQ = ctxBar2 && ctxBar2.querySelector('[data-context-query], [data-quick-open-query]');
       if (ov.queryState === 'open') {
         if (qBlock) {
-          qBlock.innerHTML = '<span class="status status--purple">Query</span><span class="muted">Unassigned</span>'
-            + '<form method="post" action="/Inbox/' + msgId + '?handler=MarkQueryDone">'
-            + '<button class="btn btn--small" type="submit" data-busy-label="Saving…">Mark done</button></form>';
+          qBlock.innerHTML = '<form method="post" action="/Inbox/' + msgId + '?handler=MarkQueryDone">'
+            + '<button class="mail-settings-item" type="submit" data-busy-label="Saving…">'
+            + '<span class="mail-settings-item-left"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg>'
+            + '<span>Mark query done</span></span>'
+            + '<span class="status status--purple">Query · Unassigned</span></button></form>';
         }
         var openPill = '<span class="status status--purple" data-context-query>Query · Unassigned</span>';
         if (oldCtxQ) oldCtxQ.outerHTML = openPill;
-        else if (ctxBar2) ctxBar2.insertAdjacentHTML('beforeend', openPill);
+        else if (ctxBar2) ctxBar2.insertAdjacentHTML('beforeend', '<span class="mail-context-sep">·</span>' + openPill);
       } else if (ov.queryState === 'done') {
         if (qBlock) {
-          qBlock.innerHTML = '<span class="status status--green">Done</span>';
+          qBlock.innerHTML = '<div class="mail-settings-item"><span>Query</span><span class="status status--green">Done</span></div>';
         }
         var donePill = '<span class="status status--green" data-context-query>Query · Done</span>';
         if (oldCtxQ) oldCtxQ.outerHTML = donePill;
-        else if (ctxBar2) ctxBar2.insertAdjacentHTML('beforeend', donePill);
+        else if (ctxBar2) ctxBar2.insertAdjacentHTML('beforeend', '<span class="mail-context-sep">·</span>' + donePill);
       }
     }
   }
 
-  // Click handling for row opening, quick context pills, sort toggle, attachment preview and navigation.
+  // Live Inbox filtering (Principal, Mailbox, Quick Filter pills, Search text)
+  function applyInboxFilters() {
+    var pSel = document.getElementById('principal-filter');
+    var mSel = document.getElementById('mailbox-filter');
+    var tSel = document.getElementById('type-filter');
+    var sInp = document.getElementById('mail-search');
+    var activeQ = document.querySelector('.inbox-qpill[aria-pressed="true"]');
+    var principal = pSel ? pSel.value : '';
+    var mailbox = mSel ? mSel.value : '';
+    var search = (sInp ? sInp.value : '').trim().toLowerCase();
+    var qfilter = tSel ? tSel.value : (activeQ ? activeQ.getAttribute('data-mail-qfilter') : 'all');
+
+    var shown = 0;
+    document.querySelectorAll('.inbox-row[data-mail-row]').forEach(function (row) {
+      var ok = true;
+      if (principal && row.getAttribute('data-principal') !== principal) ok = false;
+      if (mailbox && row.getAttribute('data-mailbox') !== mailbox) ok = false;
+      if (qfilter && qfilter !== 'all') {
+        if (qfilter === 'unread') {
+          if (!row.classList.contains('unread')) ok = false;
+        } else if (row.getAttribute('data-type-group') !== qfilter) {
+          ok = false;
+        }
+      }
+      if (search && row.textContent.toLowerCase().indexOf(search) === -1) ok = false;
+      row.hidden = !ok;
+      if (ok) shown++;
+    });
+    var meta = document.querySelector('[data-inbox-count], .inbox-messages-head .meta');
+    if (meta) meta.textContent = shown + (shown === 1 ? ' message' : ' messages');
+  }
+
+  window.addEventListener('change', function (ev) {
+    var target = ev.target instanceof Element ? ev.target : null;
+    if (!target) return;
+    if (target.matches('input[data-mail-tick]')) {
+      var bulkForm = document.getElementById('mail-bulk');
+      var nTicked = document.querySelectorAll('input[data-mail-tick]:checked').length;
+      if (bulkForm && currentMode() === 'proposal') bulkForm.hidden = nTicked === 0;
+      return;
+    }
+    if (target.matches('#principal-filter, #mailbox-filter, #type-filter')) {
+      applyInboxFilters();
+      toast('Filtered Inbox list');
+      return;
+    }
+    if (target.matches('#mailTypeSelect, [data-mail-type-select]')) {
+      var dlg = target.closest('#mailMessageDialog');
+      var msgId = dlg && dlg.getAttribute('data-mail-message');
+      var ti = TYPE_INFO[target.value] || TYPE_INFO.correspondence;
+      if (msgId) {
+        var ov = getOverride(msgId);
+        ov.typeInfo = ti;
+        ov.notice = 'Email type updated to ' + ti.display + '.';
+        syncDialogDom(document, msgId);
+        syncRowDom(msgId);
+      }
+      toast('Email type set to ' + ti.display);
+    }
+  });
+
+  window.addEventListener('input', function (ev) {
+    var target = ev.target instanceof Element ? ev.target : null;
+    if (target && target.id === 'mail-search') {
+      applyInboxFilters();
+    }
+  });
+
   window.addEventListener('click', function (ev) {
     var target = ev.target instanceof Element ? ev.target : null;
     if (!target) return;
 
-    // Quick context bar triggers inside #mailMessageDialog
+    // 0. Choosing an option in the cog menu's Case / PO autocomplete links immediately
+    var pickerChoice = target.closest('#mailLinkCaseOptions [data-case-picker-choice]');
+    if (pickerChoice) {
+      var pickedRef = pickerChoice.getAttribute('data-case-picker-choice');
+      var dlgPick = pickerChoice.closest('#mailMessageDialog');
+      var mIdPick = dlgPick && dlgPick.getAttribute('data-mail-message');
+      if (mIdPick && pickedRef) {
+        var ovPick = getOverride(mIdPick);
+        ovPick.caseRef = pickedRef;
+        ovPick.notice = 'Linked to Case ' + pickedRef + '.';
+        syncDialogDom(document, mIdPick);
+        syncRowDom(mIdPick);
+        toast('Linked to ' + pickedRef);
+      }
+      return;
+    }
+    // 1. Scope tabs (All, No Case Found, Dismissed)
+    var scopeBtn = target.closest('[data-scope-switch]');
+    if (scopeBtn) {
+      ev.preventDefault();
+      var sc = scopeBtn.getAttribute('data-scope-switch');
+      if (sc === 'no_case_found') post({ type: 'nav', href: '/Inbox?queue=no_case_found' });
+      else if (sc === 'dismissed') post({ type: 'nav', href: '/Inbox?folder=dismissed' });
+      else post({ type: 'nav', href: '/Inbox' });
+      return;
+    }
+
+    // 2. Quick filter pills (All types, Instructions, Queries, Cancellations, Unread)
+    var qpill = target.closest('[data-mail-qfilter]');
+    if (qpill) {
+      ev.preventDefault();
+      document.querySelectorAll('[data-mail-qfilter]').forEach(function (b) {
+        b.setAttribute('aria-pressed', b === qpill ? 'true' : 'false');
+      });
+      applyInboxFilters();
+      return;
+    }
+
+    // 3. 1-click Suggested Case link inside cog settings menu
+    var quickLinkBtn = target.closest('[data-quick-link-case]');
+    if (quickLinkBtn) {
+      ev.preventDefault();
+      var sugRef = quickLinkBtn.getAttribute('data-quick-link-case');
+      var dlgSug = quickLinkBtn.closest('#mailMessageDialog');
+      var mIdSug = dlgSug && dlgSug.getAttribute('data-mail-message');
+      if (mIdSug && sugRef) {
+        var ovSug = getOverride(mIdSug);
+        ovSug.caseRef = sugRef;
+        ovSug.notice = 'Linked to Case ' + sugRef + '.';
+        syncDialogDom(document, mIdSug);
+        syncRowDom(mIdSug);
+        toast('Linked to ' + sugRef);
+      }
+      return;
+    }
+
+    // 4. Context bar triggers inside #mailMessageDialog
     var openCaseBtn = target.closest('[data-open-settings-case]');
     if (openCaseBtn) {
       ev.preventDefault();
@@ -323,8 +432,8 @@
       var menu2 = document.querySelector('details[data-mail-settings]');
       if (menu2) {
         menu2.open = true;
-        var chip = menu2.querySelector('#mailClassificationForm .chip');
-        if (chip) setTimeout(function () { chip.focus(); }, 20);
+        var sel = menu2.querySelector('#mailTypeSelect');
+        if (sel) setTimeout(function () { sel.focus(); }, 20);
       }
       return;
     }
@@ -350,7 +459,7 @@
       return;
     }
 
-    // Sort toggle on /Inbox (Received ↓ / Received ↑)
+    // 5. Sort toggle on /Inbox (Received ↓ / Received ↑)
     var sortLink = target.closest('a.sort-toggle');
     if (sortLink) {
       ev.preventDefault();
@@ -365,7 +474,7 @@
       return;
     }
 
-    // Clicking anywhere on an .inbox-row (outside checkboxes, links, buttons, forms) opens the email dialog.
+    // 6. Clicking anywhere on an .inbox-row opens the email dialog.
     var clickedRow = target.closest('.inbox-row[data-mail-row]');
     if (clickedRow && !target.closest('a, button, form, label, input, select, textarea')) {
       markRowRead(clickedRow);
@@ -390,7 +499,7 @@
   });
 
   function updateInboxCounts(delta) {
-    var meta = document.querySelector('.inbox-messages-head .meta');
+    var meta = document.querySelector('[data-inbox-count], .inbox-messages-head .meta');
     if (meta) {
       var m = meta.textContent.match(/(\d+)/);
       if (m) {
@@ -398,14 +507,13 @@
         meta.textContent = next + (next === 1 ? ' message' : ' messages');
       }
     }
-    var pressedScope = document.querySelector('.scope-list .scope-button[aria-pressed="true"] .tabular');
+    var pressedScope = document.querySelector('.inbox-scope-tab[aria-pressed="true"] .tab-count, .scope-list .scope-button[aria-pressed="true"] .tabular');
     if (pressedScope) {
       var n = parseInt(pressedScope.textContent.trim(), 10);
       if (!isNaN(n)) pressedScope.textContent = String(Math.max(0, n + delta));
     }
   }
 
-  // Form submission handling: GET scope/search forms and POST interactive actions.
   window.addEventListener('submit', function (ev) {
     if (ev.defaultPrevented) return;
     var form = ev.target;
@@ -415,20 +523,9 @@
     var action = form.getAttribute('action') || '';
     var method = (form.getAttribute('method') || 'get').toLowerCase();
 
-    // 1. GET forms on /Inbox (left rail scopes and Search filter bar)
     if (method === 'get') {
       if (form.classList.contains('inbox-filter')) {
-        var qInput = form.querySelector('#mail-search');
-        var term = (qInput ? qInput.value : '').trim().toLowerCase();
-        var shown = 0;
-        document.querySelectorAll('.inbox-row[data-mail-row]').forEach(function (r) {
-          var match = !term || r.textContent.toLowerCase().indexOf(term) !== -1;
-          r.hidden = !match;
-          if (match) shown++;
-        });
-        var meta = document.querySelector('.inbox-messages-head .meta');
-        if (meta) meta.textContent = shown + (shown === 1 ? ' message' : ' messages');
-        toast(term ? ('Filtered by "' + term + '" (' + shown + ')') : 'Showing all messages');
+        applyInboxFilters();
         return;
       }
       var queueInput = form.querySelector('input[name="queue"]');
@@ -437,38 +534,33 @@
         post({ type: 'nav', href: '/Inbox?queue=no_case_found' });
         return;
       }
+      if (folderInput && folderInput.value === 'dismissed') {
+        post({ type: 'nav', href: '/Inbox?folder=dismissed' });
+        return;
+      }
       if (!folderInput && !queueInput && form.closest('.scope-list')) {
         post({ type: 'nav', href: '/Inbox' });
         return;
       }
     }
 
-    // 2. Classification / Type chip press inside #mailClassificationForm
     if (form.id === 'mailClassificationForm') {
       var dlg = form.closest('#mailMessageDialog');
       var msgId = dlg && dlg.getAttribute('data-mail-message');
-      var code = (button && button.getAttribute('value')) || '';
-      var label = CODE_TO_LABEL[code] || 'Correspondence';
-      var wtField = form.querySelector('[data-work-type-field]');
-      var wtSelect = form.querySelector('#mailWorkType');
-      if (code === 'new-instruction' && wtField && wtField.hidden) {
-        wtField.hidden = false;
-        if (wtSelect) wtSelect.focus();
-        toast('Choose a Case type for New instruction');
-        return;
-      }
+      var sel = form.querySelector('#mailTypeSelect');
+      var val = sel ? sel.value : ((button && button.getAttribute('value')) || 'correspondence');
+      var ti = TYPE_INFO[val] || TYPE_INFO.correspondence;
       if (msgId) {
         var ov = getOverride(msgId);
-        ov.typeLabel = label;
-        ov.notice = 'Type updated to ' + label + '.';
+        ov.typeInfo = ti;
+        ov.notice = 'Email type updated to ' + ti.display + '.';
         syncDialogDom(document, msgId);
         syncRowDom(msgId);
       }
-      toast('Type set to ' + label);
+      toast('Email type set to ' + ti.display);
       return;
     }
 
-    // 3. Open query / Mark query done inside #mailMessageDialog
     if (action.indexOf('handler=OpenQuery') !== -1 && form.closest('#mailMessageDialog')) {
       var dlgOpen = form.closest('#mailMessageDialog');
       var mIdOpen = dlgOpen.getAttribute('data-mail-message');
@@ -492,7 +584,6 @@
       return;
     }
 
-    // 4. Link / Change linked Case / Unlink confirmation dialogs
     if (action.indexOf('handler=LinkCase') !== -1 || action.indexOf('handler=ChangeLinkedCase') !== -1) {
       var pickerInput = document.getElementById('mailLinkCaseReference');
       var chosenRef = (pickerInput && pickerInput.value.trim().toUpperCase()) || 'QDOS26214';
@@ -527,7 +618,6 @@
       return;
     }
 
-    // 5. Reply / Reply all / Forward composer submit
     if (form.id === 'mailComposerForm') {
       var dlgComp = form.closest('#mailMessageDialog');
       var mIdComp = dlgComp && dlgComp.getAttribute('data-mail-message');
@@ -548,7 +638,6 @@
       return;
     }
 
-    // 6. Dismiss on a row, inside #mailMessageDialog, or bulk Dismiss
     if (form.hasAttribute('data-message-dismissal')) {
       var dlgDis = form.closest('#mailMessageDialog');
       var mIdDis = dlgDis && dlgDis.getAttribute('data-mail-message');
@@ -573,12 +662,13 @@
       return;
     }
     if (form.hasAttribute('data-mail-row-action')) {
+      var isRestore = form.getAttribute('data-mail-row-action') === 'restore';
       var rowAct = form.closest('.inbox-row[data-mail-row]');
       if (rowAct) {
         rowAct.remove();
         updateInboxCounts(-1);
       }
-      toast('Message dismissed');
+      toast(isRestore ? 'Message restored to Inbox' : 'Message dismissed');
       return;
     }
     if (form.id === 'mail-bulk') {
@@ -591,7 +681,7 @@
         updateInboxCounts(-ticked.length);
         var bulkCnt = document.querySelector('[data-bulk-count]');
         if (bulkCnt) bulkCnt.textContent = '0';
-        toast('Dismissed ' + ticked.length + ' message(s)');
+        toast('Updated ' + ticked.length + ' message(s)');
       } else {
         toast('Tick one or more rows first');
       }
