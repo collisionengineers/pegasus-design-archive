@@ -52,13 +52,13 @@
   }
 
   var TYPE_INFO = {
-    'correspondence': { value: 'correspondence', display: 'Case correspondence', short: 'Correspondence', sub: null, group: 'correspondence' },
-    'new-instruction': { value: 'new-instruction:Inspection', display: 'New instruction · Inspection', short: 'New instruction', sub: 'Inspection', group: 'instructions' },
-    'new-instruction:Inspection': { value: 'new-instruction:Inspection', display: 'New instruction · Inspection', short: 'New instruction', sub: 'Inspection', group: 'instructions' },
-    'new-instruction:Audit': { value: 'new-instruction:Audit', display: 'New instruction · Audit', short: 'New instruction', sub: 'Audit', group: 'instructions' },
-    'new-instruction:InspectionAndAudit': { value: 'new-instruction:InspectionAndAudit', display: 'New instruction · Inspection & Audit', short: 'New instruction', sub: 'Inspection & Audit', group: 'instructions' },
-    'triage-request': { value: 'triage-request', display: 'Triage request', short: 'Triage request', sub: 'Early triage', group: 'instructions' },
-    'cancellation': { value: 'cancellation', display: 'Cancellation', short: 'Cancellation', sub: 'Withdrawn claim', group: 'cancellations' }
+    'correspondence': { value: 'correspondence', display: 'Correspondence', short: 'Correspondence', sub: null },
+    'new-instruction': { value: 'new-instruction:Inspection', display: 'New instruction · Inspection', short: 'New instruction', sub: 'Inspection' },
+    'new-instruction:Inspection': { value: 'new-instruction:Inspection', display: 'New instruction · Inspection', short: 'New instruction', sub: 'Inspection' },
+    'new-instruction:Audit': { value: 'new-instruction:Audit', display: 'New instruction · Audit', short: 'New instruction', sub: 'Audit' },
+    'new-instruction:InspectionAndAudit': { value: 'new-instruction:InspectionAndAudit', display: 'New instruction · Inspection and Audit', short: 'New instruction', sub: 'Inspection and Audit' },
+    'triage-request': { value: 'triage-request', display: 'Triage request', short: 'Triage request', sub: null },
+    'cancellation': { value: 'cancellation', display: 'Cancellation', short: 'Cancellation', sub: null }
   };
 
   var overrides = {};
@@ -172,33 +172,28 @@
         caseCell.innerHTML = '<a class="mail-row-case" href="/Cases/' + cObj.id + '">' + cObj.ref + '</a>'
           + '<small class="inbox-cell-sub">' + cObj.vehicle + '</small>';
       } else {
-        caseCell.innerHTML = '<span class="status status--amber">No Case Found</span>'
-          + '<small class="inbox-cell-sub">Unlinked</small>';
+        caseCell.innerHTML = '<span class="quiet">None</span>';
       }
     }
     var typeCell = row.querySelector('.inbox-cell-type');
     if (typeCell) {
       if (ov.queryState === 'open') {
-        row.setAttribute('data-type-group', 'queries');
         typeCell.innerHTML = '<span class="status status--purple" data-row-query>Query</span>'
           + '<small class="inbox-cell-sub">Unassigned</small>';
       } else if (ov.queryState === 'done') {
         typeCell.innerHTML = '<span class="status status--green" data-row-query>Done</span>';
       } else if (ov.typeInfo) {
         var ti = ov.typeInfo;
-        row.setAttribute('data-type-group', ti.group);
         if (ti.short === 'New instruction') {
           typeCell.innerHTML = '<span class="status status--navy">New instruction</span>'
             + '<span class="row-meta" hidden>New instruction</span>'
             + '<small class="inbox-cell-sub">' + (ti.sub || 'Inspection') + '</small>';
         } else if (ti.short === 'Triage request') {
           typeCell.innerHTML = '<span class="status status--amber">Triage request</span>'
-            + '<span class="row-meta" hidden>Triage request</span>'
-            + '<small class="inbox-cell-sub">Early triage</small>';
+            + '<span class="row-meta" hidden>Triage request</span>';
         } else if (ti.short === 'Cancellation') {
-          typeCell.innerHTML = '<span class="status status--red">Cancellation</span>'
-            + '<span class="row-meta" hidden>Cancellation</span>'
-            + '<small class="inbox-cell-sub">Withdrawn claim</small>';
+          typeCell.innerHTML = '<span class="status status--neutral">Cancellation</span>'
+            + '<span class="row-meta" hidden>Cancellation</span>';
         } else {
           typeCell.innerHTML = '<span class="inbox-type-correspondence">Correspondence</span>';
         }
@@ -247,15 +242,11 @@
         if (cObj) {
           if (linkBtn) linkBtn.remove();
           if (ctxCase) {
-            ctxCase.outerHTML = '<a class="mail-pill mail-pill--case" href="/Cases/' + cObj.id + '" data-context-case>'
-              + '<svg class="icon" aria-hidden="true"><use href="#icon-folder-open"></use></svg>'
-              + '<span>Case</span><strong>' + cObj.ref + '</strong>'
-              + (cObj.vehicle ? '<small> · ' + cObj.vehicle + '</small>' : '') + '</a>';
+            ctxCase.outerHTML = '<span data-context-case>Case <a class="mail-context-case-link" href="/Cases/' + cObj.id + '">' + cObj.ref + '</a></span>';
           }
         } else if (ctxCase) {
-          ctxCase.outerHTML = '<span class="status status--amber" data-context-case>No Case Found</span>'
-            + '<button type="button" class="mail-pill mail-pill--action" data-open-settings-case>'
-            + '<svg class="icon" aria-hidden="true"><use href="#icon-link"></use></svg><span>Link to Case</span></button>';
+          ctxCase.outerHTML = '<span data-context-case>Case <span class="quiet">None</span> · '
+            + '<button type="button" class="mail-context-inline-link" data-open-settings-case>Link to Case</button></span>';
         }
       }
     }
@@ -269,7 +260,7 @@
           qBlock.innerHTML = '<form method="post" action="/Inbox/' + msgId + '?handler=MarkQueryDone">'
             + '<button class="mail-settings-item" type="submit" data-busy-label="Saving…">'
             + '<span class="mail-settings-item-left"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg>'
-            + '<span>Mark query done</span></span>'
+            + '<span>Mark done</span></span>'
             + '<span class="status status--purple">Query · Unassigned</span></button></form>';
         }
         var openPill = '<span class="status status--purple" data-context-query>Query · Unassigned</span>';

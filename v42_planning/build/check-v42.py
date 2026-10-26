@@ -90,8 +90,9 @@ def v42_checks(page: Page) -> None:
           not q("select#queue-filter") and not q("section.inbox-layout > aside.pane"))
     check("I: inbox has exactly three scope tabs (All, No Case Found, Dismissed) and no Sent or Deleted Items",
           frame_eval(page, "Array.from(d.querySelectorAll('[data-scope-switch]')).map(b => b.getAttribute('data-scope-switch')).join(',')") == "all,no_case_found,dismissed")
-    check("I: inbox has Principal and Signal filter selects",
-          q("select#principal-filter") and q("select#type-filter"))
+    check("I: inbox has Principal and Mailbox filter selects and exact column headers",
+          q("select#principal-filter") and q("select#mailbox-filter")
+          and frame_eval(page, "Array.from(d.querySelectorAll('.inbox-ledger-head > span')).map(s => s.textContent.trim()).filter(Boolean).join(',')") == "Case,Type,Subject,Sender,Received")
     check("I: inbox has no bulk Correct classification or its dialog, and bulk bar is hidden when 0 ticked",
           not q("[data-bulk-classify]") and not q("#bulkClassifyDialog")
           and frame_eval(page, "d.getElementById('mail-bulk').hidden === true"))
@@ -132,9 +133,9 @@ def v42_checks(page: Page) -> None:
         check(f"G: {key} replaces Decision sidebar with cog settings menu and context bar",
               not q("section.mail-decision") and q("details[data-mail-settings] [data-mail-settings-toggle]")
               and q("[data-mail-context-bar]"))
-        check(f"H: {key} replaces clicky chips with one streamlined Email type select (6 options)",
+        check(f"H: {key} replaces clicky chips with one streamlined Type select (6 options)",
               not q("#mailClassificationForm .mail-chips") and n("#mailTypeSelect option") == 6)
-        check(f"H: {key} label is Email type", tc("#mailClassificationForm .mail-decision-label") == "Email type")
+        check(f"H: {key} label is Type", tc("#mailClassificationForm .mail-decision-label") == "Type")
         check(f"G: {key} Case section comes first in cog menu", frame_eval(
             page, "(() => { const f = d.querySelector('[data-mail-settings-popover] .decision-facts');"
                   " const first = f && f.firstElementChild;"
@@ -153,8 +154,8 @@ def v42_checks(page: Page) -> None:
         check(f"A/H: {key} selects Case correspondence", val("#mailTypeSelect") == "correspondence")
     go(page, "message-m4", "proposal")
     query_row = tc("[data-mail-query]")
-    check("K: m4 Query item has Mark query done and Query · Unassigned",
-          all(word in query_row for word in ("Query", "Unassigned", "Mark query done")))
+    check("K: m4 Query item has Mark done and Query · Unassigned",
+          all(word in query_row for word in ("Query", "Unassigned", "Mark done")))
     for key in ("message-m2", "message-m12"):
         go(page, key, "proposal")
         check(f"N: {key} Query item offers Open query", "Open query" in tc("[data-mail-query]"))
@@ -195,6 +196,12 @@ def v42_checks(page: Page) -> None:
     page.wait_for_timeout(120)
     check("interactive: clicking Open query in cog menu updates the dialog context bar to Query · Unassigned",
           "Query · Unassigned" in tc("#mailMessageDialog [data-mail-context-bar]"))
+    # Verify table row-action buttons fit inside their td / .table-wrap container
+    go(page, "case", "proposal")
+    check("layout: Case Correspondence and Queries buttons fit inside their row and table-wrap",
+          frame_eval(page, "Array.from(d.querySelectorAll('#section-files td.row-actions .btn, #section-queries td.row-actions .btn')).every(b => {"
+                           " const br = b.getBoundingClientRect(); const tdr = b.closest('td').getBoundingClientRect();"
+                           " return br.top >= tdr.top - 0.5 && br.bottom <= tdr.bottom + 0.5; })"))
 
     # Case (D, J, K, M, N, O, X, AA)
     go(page, "case", "today")
