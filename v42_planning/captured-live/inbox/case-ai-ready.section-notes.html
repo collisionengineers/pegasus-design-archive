@@ -1,0 +1,43 @@
+
+<section class="record-section panel" id="section-notes" data-section="notes" data-collapse="case.notes" aria-labelledby="section-notes-title">
+    <div class="panel-head">
+        <h2 id="section-notes-title">Notes</h2>
+        <div class="panel-actions">
+            <button type="button" class="icon-button panel-collapse" data-collapse-toggle
+        aria-expanded="true"
+        aria-label="Collapse section"
+        data-label-collapse="Collapse section"
+        data-label-expand="Expand section"
+        title="Collapse section">
+    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-down" /></svg>
+</button>
+
+        </div>
+    </div>
+    <div class="panel-body stack">
+            <form method="post" class="note-form" data-case-note-form action="/Cases/85de4c48-ed02-445f-a2ce-d97a087c19dd/Tasks?handler=AddNote">
+                <input type="hidden" name="id" value="85de4c48-ed02-445f-a2ce-d97a087c19dd" />
+                <input type="hidden" name="operationKey" value="7add52eca900463a995ce408fd944c63" />
+                <input type="hidden" name="view" />
+                <label class="lbl" for="case-note">Case note</label>
+                <textarea id="case-note" name="note" rows="2" required
+                          maxlength="2000"></textarea>
+                <div class="button-row">
+                    <button type="submit" data-busy-label="Adding&#x2026;" class="btn">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-plus" /></svg>
+                        <span>Add Case note</span>
+                    </button>
+                </div>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAACKP2IENNE8r8Aa4dtn2H5-QAiR1cPUTqlzmoRZh0IzgCtXLcz_QJzvRflZz-eUrXiV1LCqJhZTHMEd9s8RGaY4vwvZL5lYxTHtsbrO6TR4z4SFHuf2WDJEHQWlXbFUmWc" /></form>
+
+            <div class="notes-timeline" data-case-history>
+                        <div class="note sys" data-history-event="case_query_logged">
+                            <div class="nw"><span>06 May 2031</span> <span>11:30</span></div>
+                            <div class="nb">
+                                <b>development-offline-administrator</b>
+ — Query logged — Query logged.                            </div>
+                        </div>
+            </div>
+    </div>
+</section>
+

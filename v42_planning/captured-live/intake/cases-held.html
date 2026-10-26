@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" data-busy-label="Working&#x2026;" data-busy-still="Still" data-icon-sprite="/images/lucide-sprite.04agn8pzs5.svg">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cases · Pegasus</title>
+    <link rel="stylesheet" href="/css/site.d6ldj11w7l.css" />
+    
+    <link rel="stylesheet" href="/css/cases-index.bkwyll6i10.css" />
+
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell" data-app-shell>
+        <header class="app-rail">
+            <a class="brand" aria-label="Pegasus home" href="/">
+                <img src="/images/pegasus-mark-refined-128.tctmpgz0uo.png" alt="" aria-hidden="true" />
+                <span class="brand-copy"><strong>PEGASUS</strong><span>Case management</span></span>
+            </a>
+            <nav class="primary-nav" aria-label="Primary">
+                <div class="nav-label">Work</div>
+                <a class="nav-link" href="/">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                    <span>Work Centre</span>
+                </a>
+                    <a class="nav-link" href="/Inbox">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                        <span>Inbox</span>
+                    </a>
+                    <a class="nav-link" href="/Upload">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                        <span>Upload</span>
+                    </a>
+                <a class="nav-link" aria-current="page" href="/Cases">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list-checks" /></svg>
+                    <span>Cases</span>
+                </a>
+                <a class="nav-link" href="/Search">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <span>Search</span>
+                </a>
+                    <div class="nav-label">Manage</div>
+                    <a class="nav-link" href="/Administration">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+                        <span>Administration</span>
+                    </a>
+            </nav>
+            <div class="rail-spacer"></div>
+            <button type="button" class="rail-collapse" data-rail-toggle aria-expanded="true" aria-label="Collapse navigation"
+                    data-label-collapse="Collapse navigation" data-label-expand="Expand navigation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-left" /></svg>
+                <span>Collapse</span>
+            </button>
+            <div class="rail-health">
+                <div class="rail-health-line"><span class="health-dot"></span><span>Current · 11:30</span></div>
+            </div>
+                <div class="rail-user" role="group" aria-label="User">
+                    <span class="avatar" aria-hidden="true">IU</span>
+                    <div><strong>integration-user</strong><small>Administrator</small></div>
+                    <button type="button" class="icon-button" data-dialog-open="account-dialog" aria-label="Account menu">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                    </button>
+                </div>
+        </header>
+        <div class="app-column">
+            <section class="utility-bar" aria-label="Utility bar">
+                <form class="utility-search" role="search" method="get" action="/Search">
+                    <label class="sr-only" for="global-search">Search Pegasus</label>
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <input id="global-search" type="search" name="query" data-command-input aria-label="Search Pegasus" placeholder="Search cases, references or people" autocomplete="off" />
+                    <span class="shortcut-hint" aria-hidden="true">Ctrl K</span>
+                </form>
+                <div class="utility-actions">
+                    <a class="btn btn--primary" href="/Cases/Create">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-plus" /></svg>
+                        <span>New case</span>
+                    </a>
+                    <span class="bell-wrap">
+                        <button type="button" class="icon-button" data-dialog-open="notifications-dialog" aria-label="Notifications">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bell" /></svg>
+                        </button>
+                    </span>
+                        <button type="button" class="icon-button utility-account" data-dialog-open="account-dialog" aria-label="Account menu">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                        </button>
+                </div>
+            </section>
+            <main id="main-content" class="app-main" tabindex="-1">
+                <div class="content">
+                    
+
+<header class="page-header">
+    <div class="page-title">
+        <h1>Cases</h1>
+    </div>
+    <div class="page-actions">
+        <div class="freshness">
+    <span class="freshness-status">
+        <span class="health-dot"></span>
+            <span><time datetime="2026-10-13T10:30:00.0000000&#x2B;00:00">Current · 11:30</time></span>
+    </span>
+    <div class="refresh-button" data-refresh-region role="status" aria-live="polite">
+    <form method="get" data-refresh-form>
+                <input type="hidden" name="tab" value="held" data-refresh-field="tab" />
+                <input type="hidden" name="selected" value="11cab332-2227-4b78-b026-ea3a06eb3620" data-refresh-field="selected" />
+        <button type="submit" class="btn btn--small" title="Refresh">
+            <svg class="icon icon--spin" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-refresh-cw" /></svg>
+            <span data-refresh-label>Refresh</span>
+        </button>
+    </form>
+</div>
+
+</div>
+
+    </div>
+</header>
+
+
+<section class="pane-layout pane-layout--3 queue-layout cases-queue" data-cases-queue="held">
+    <aside class="pane">
+        <form method="get" action="/Cases" class="scope-list" data-row-list>
+                <button type="submit" name="tab" value="not_ready" class="scope-button"
+                        aria-pressed="false">
+                    <span class="scope-visual-icon">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-clock" /></svg>
+                    </span>
+                    <span>Not ready</span>
+                    <span>3</span>
+                </button>
+                <button type="submit" name="tab" value="unassigned" class="scope-button"
+                        aria-pressed="false">
+                    <span class="scope-visual-icon">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-image" /></svg>
+                    </span>
+                    <span>Unassigned Images</span>
+                    <span>5</span>
+                </button>
+                <button type="submit" name="tab" value="review" class="scope-button"
+                        aria-pressed="false">
+                    <span class="scope-visual-icon">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-check-circle" /></svg>
+                    </span>
+                    <span>Review</span>
+                    <span>5</span>
+                </button>
+                <button type="submit" name="tab" value="with_engineer" class="scope-button"
+                        aria-pressed="false">
+                    <span class="scope-visual-icon">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-user" /></svg>
+                    </span>
+                    <span>With Engineer</span>
+                    <span>3</span>
+                </button>
+                <button type="submit" name="tab" value="query" class="scope-button"
+                        aria-pressed="false">
+                    <span class="scope-visual-icon">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-reply" /></svg>
+                    </span>
+                    <span>Queries</span>
+                    <span>2</span>
+                </button>
+                <button type="submit" name="tab" value="triage" class="scope-button"
+                        aria-pressed="false">
+                    <span class="scope-visual-icon">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-file-text" /></svg>
+                    </span>
+                    <span>Triage</span>
+                    <span>3</span>
+                </button>
+                <button type="submit" name="tab" value="held" class="scope-button"
+                        aria-pressed="true">
+                    <span class="scope-visual-icon">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-pause" /></svg>
+                    </span>
+                    <span>Held</span>
+                    <span>2</span>
+                </button>
+        </form>
+    </aside>
+
+    <div class="pane cases-list">
+        <div class="pane-head">
+            <h2>Held</h2>
+            <span class="meta">2 cases</span>
+                <form method="get" class="filter-bar cases-filters" data-auto-submit>
+                    <input type="hidden" name="tab" value="held" />
+                    <div class="field">
+                        <label class="sr-only" for="queue-principal">Principal</label>
+                        <select id="queue-principal" name="principal">
+                            <option value="">All principals</option>
+                                <option value="AX">AX</option>
+                                <option value="PCH">PCH</option>
+                                <option value="QDOS">QDOS</option>
+                        </select>
+                    </div>
+                    <noscript><button type="submit" class="btn">Apply</button></noscript>
+                </form>
+        </div>
+        <div class="cases-table" data-row-list>
+                <table class="table">
+                    <thead>
+                        <tr>
+                                <th scope="col">Case/PO</th>
+                                <th scope="col">Registration</th>
+                                <th scope="col">Claimant</th>
+                                <th scope="col">Principal</th>
+                                <th scope="col">Received</th>
+                                <th scope="col">Due</th>
+                                <th scope="col">State</th>
+                                <th scope="col">Editing</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr data-cases-row="11cab332-2227-4b78-b026-ea3a06eb3620" data-select-url="/Cases?tab=held&amp;selected=11cab332-2227-4b78-b026-ea3a06eb3620"
+                                aria-selected="true">
+                                            <td class="mono nowrap">
+                                                <a class="table-row-link" href="/Cases/11cab332-2227-4b78-b026-ea3a06eb3620">QDOS26221</a>
+                                            </td>
+                                            <td class="mono nowrap">HX65WLM</td>
+                                            <td>E. Walsh</td>
+                                            <td>QDOS</td>
+                                            <td class="nowrap">25 Sep 2026</td>
+                                            <td class="nowrap">20 Oct 2026</td>
+                                            <td>
+                                                <span class="status status--amber">Held</span>
+
+                                            </td>
+                                            <td>&#x2014;</td>
+                            </tr>
+                            <tr data-cases-row="a9589cfb-d341-48f9-93ce-ad905bc40289" data-select-url="/Cases?tab=held&amp;selected=a9589cfb-d341-48f9-93ce-ad905bc40289"
+                                aria-selected="false">
+                                            <td class="mono nowrap">
+                                                <a class="table-row-link" href="/Cases/a9589cfb-d341-48f9-93ce-ad905bc40289">AX26002</a>
+                                            </td>
+                                            <td class="mono nowrap">EO19SDR</td>
+                                            <td>G. Romano</td>
+                                            <td>AX</td>
+                                            <td class="nowrap">23 Sep 2026</td>
+                                            <td class="nowrap">20 Oct 2026</td>
+                                            <td>
+                                                <span class="status status--amber">Held</span>
+
+                                            </td>
+                                            <td>&#x2014;</td>
+                            </tr>
+                    </tbody>
+                </table>
+        </div>
+        <nav class="pagination" aria-label="Pages">
+            <span>Newest first</span>
+            <div class="button-row">
+            </div>
+        </nav>
+    </div>
+
+    <div class="pane cases-detail">
+        <div class="pane-head">
+            <h2>Quick detail</h2>
+                <a class="btn btn--small btn--dark" href="/Cases/11cab332-2227-4b78-b026-ea3a06eb3620">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-arrow-right" /></svg>
+                    <span>Open full Case</span>
+                </a>
+        </div>
+        <div class="pane-body">
+                <div class="detail-canvas stack" data-cases-detail="Case">
+                    <div>
+                        <p class="eyebrow">Manual</p>
+                        <h2>QDOS26221 &#xB7; HX65WLM</h2>
+                    </div>
+                    <dl class="fact-grid cases-facts">
+                            <div class="fact"><dt>Vehicle</dt><dd>Volkswagen Golf</dd></div>
+                            <div class="fact"><dt>Type</dt><dd>Inspection</dd></div>
+                            <div class="fact">
+                                <dt>State</dt>
+                                <dd><span class="status status--amber">Held</span>
+</dd>
+                            </div>
+                                <div class="fact"><dt>Current work</dt><dd>Images incomplete</dd></div>
+                                <div class="fact"><dt>Engineer</dt><dd>Not assigned</dd></div>
+                                <div class="fact"><dt>Due</dt><dd>20 Oct 2026</dd></div>
+                    </dl>
+                </div>
+        </div>
+    </div>
+</section>
+
+
+                </div>
+            </main>
+        </div>
+    </div>
+    
+<div class="dialog-backdrop" data-dialog="account-dialog" data-dialog-fragment="/Notifications?name=account&amp;handler=ShellDialog" hidden></div>
+
+<div class="dialog-backdrop" data-dialog="notifications-dialog" data-dialog-open-on-load="" data-notifications-url="/Notifications?handler=List" data-notifications-failed="Notifications unavailable." hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="notifications-dialog-title">
+        <div class="dialog-head">
+            <h2 id="notifications-dialog-title" tabindex="-1">Notifications</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+            <div class="dialog-body dialog-body--list" data-notifications-body aria-busy="true">
+                <div class="spinner" aria-hidden="true"></div>
+            </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn btn--dark" data-dialog-close>Close</button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="command-dialog" data-dialog-fragment="/Notifications?name=command&amp;handler=ShellDialog" hidden></div>
+
+
+<div class="dialog-backdrop" data-dialog="problem-dialog" data-dialog-fragment="/Notifications?name=problem&amp;traceId=00-f6110d3b44abc31a0860329d11da038b-c6908ad6581b5ed5-00&amp;method=GET&amp;handler=ShellDialog" hidden></div>
+
+    <div class="toast-region" aria-live="polite" data-toast-region></div>
+
+    <script src="/js/site.623y3cuxic.js"></script>
+    
+    <script src="/js/cases-index.f4o2e2d2yi.js"></script>
+
+</body>
+</html>

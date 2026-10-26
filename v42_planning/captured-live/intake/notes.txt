@@ -1,0 +1,2 @@
+triage-link: no query opens the dialog; use data-dialog="triage-link-case-dialog" in triage.html.
+pre-case-images: /PreCaseImages is post-only (GET is 404); its crop and tag tools render inside unidentified.html.

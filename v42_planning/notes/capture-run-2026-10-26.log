@@ -1,0 +1,20 @@
+  Determining projects to restore...
+  Restored C:\Users\Alex\Documents\GitHub\pegasus-worktrees\v42-capture\src\Pegasus.Core\Pegasus.Core.csproj (in 1.08 sec).
+  Restored C:\Users\Alex\Documents\GitHub\pegasus-worktrees\v42-capture\scripts\reference-data-loader\Pegasus.ReferenceDataLoader.csproj (in 1.64 sec).
+  Restored C:\Users\Alex\Documents\GitHub\pegasus-worktrees\v42-capture\tests\Pegasus.IntegrationTests\Pegasus.IntegrationTests.csproj (in 1.64 sec).
+  Restored C:\Users\Alex\Documents\GitHub\pegasus-worktrees\v42-capture\src\Pegasus.Worker\Pegasus.Worker.csproj (in 1.74 sec).
+  Restored C:\Users\Alex\Documents\GitHub\pegasus-worktrees\v42-capture\src\Pegasus.Infrastructure\Pegasus.Infrastructure.csproj (in 1.81 sec).
+  Restored C:\Users\Alex\Documents\GitHub\pegasus-worktrees\v42-capture\src\Pegasus.Web\Pegasus.Web.csproj (in 1.83 sec).
+  Pegasus.Core -> C:\Users\Alex\Documents\GitHub\pegasus-worktrees\v42-capture\src\Pegasus.Core\bin\Debug\net10.0\Pegasus.Core.dll
+  Pegasus.Infrastructure -> C:\Users\Alex\Documents\GitHub\pegasus-worktrees\v42-capture\src\Pegasus.Infrastructure\bin\Debug\net10.0\Pegasus.Infrastructure.dll
+  Pegasus.ReferenceDataLoader -> C:\Users\Alex\Documents\GitHub\pegasus-worktrees\v42-capture\scripts\reference-data-loader\bin\Debug\net10.0\Pegasus.ReferenceDataLoader.dll
+  Determining projects to restore...
+  Restored C:\Users\Alex\Documents\GitHub\pegasus-worktrees\v42-capture\src\Pegasus.Worker\obj\Debug\net10.0\WorkerExtensions\WorkerExtensions.csproj (in 2.96 sec).
+  WorkerExtensions -> C:\Users\Alex\Documents\GitHub\pegasus-worktrees\v42-capture\src\Pegasus.Worker\obj\Debug\net10.0\WorkerExtensions\bin\Release\net8.0\Microsoft.Azure.Functions.Worker.Extensions.dll
+  Pegasus.Worker -> C:\Users\Alex\Documents\GitHub\pegasus-worktrees\v42-capture\src\Pegasus.Worker\bin\Debug\net10.0\Pegasus.Worker.dll
+  Pegasus.Web -> C:\Users\Alex\Documents\GitHub\pegasus-worktrees\v42-capture\src\Pegasus.Web\bin\Debug\net10.0\Pegasus.Web.dll
+  Pegasus.IntegrationTests -> C:\Users\Alex\Documents\GitHub\pegasus-worktrees\v42-capture\tests\Pegasus.IntegrationTests\bin\Debug\net10.0\Pegasus.IntegrationTests.dll
+Test run for C:\Users\Alex\Documents\GitHub\pegasus-worktrees\v42-capture\tests\Pegasus.IntegrationTests\bin\Debug\net10.0\Pegasus.IntegrationTests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:     5, Skipped:     0, Total:     5, Duration: 1 m 20 s - Pegasus.IntegrationTests.dll (net10.0)

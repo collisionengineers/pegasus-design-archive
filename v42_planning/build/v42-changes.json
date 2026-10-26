@@ -1,0 +1,438 @@
+[
+  {
+    "key": "inbox",
+    "label": "Inbox \u00b7 All incoming",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "I",
+        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+      },
+      {
+        "id": "A",
+        "summary": "Row category text only for New instruction, Triage request and Cancellation."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
+      }
+    ]
+  },
+  {
+    "key": "inbox-no-case-found",
+    "label": "Inbox \u00b7 No Case Found",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "I",
+        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+      },
+      {
+        "id": "A",
+        "summary": "Row category text only for New instruction, Triage request and Cancellation."
+      }
+    ]
+  },
+  {
+    "key": "inbox-rows-ticked",
+    "label": "Inbox \u00b7 two rows ticked",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "I",
+        "summary": "Category filter and bulk Correct classification (with its dialog) removed; bulk Dismiss and Restore stay."
+      },
+      {
+        "id": "A",
+        "summary": "Row category text only for New instruction, Triage request and Cancellation."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
+      }
+    ]
+  },
+  {
+    "key": "message-m1",
+    "label": "Message \u00b7 New instruction, no Case",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "H",
+        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
+      },
+      {
+        "id": "G",
+        "summary": "Decision order: Case, Type, Query, Change case."
+      }
+    ]
+  },
+  {
+    "key": "message-m2",
+    "label": "Message \u00b7 Case update on a Report sent Case",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "Case update removed: this e-mail is Case correspondence when linked, No Case Found when not."
+      },
+      {
+        "id": "H",
+        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
+      },
+      {
+        "id": "G",
+        "summary": "Decision order: Case, Type, Query, Change case."
+      },
+      {
+        "id": "N",
+        "summary": "Query row: Open query on an e-mail on a Report sent Case that holds no query."
+      },
+      {
+        "id": "C",
+        "summary": "Joining a Report sent Case opens no query by itself; criteria and the AI classifier may."
+      }
+    ]
+  },
+  {
+    "key": "message-m4",
+    "label": "Message \u00b7 Query on a Report sent Case",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "Query removed: this e-mail is Case correspondence when linked, No Case Found when not."
+      },
+      {
+        "id": "H",
+        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
+      },
+      {
+        "id": "G",
+        "summary": "Decision order: Case, Type, Query, Change case."
+      },
+      {
+        "id": "K",
+        "summary": "Query row: open query, Unassigned, Mark done marks this query done."
+      }
+    ]
+  },
+  {
+    "key": "message-m4-ai-reply",
+    "label": "Message \u00b7 Query, composer on the AI draft",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "Query removed: this e-mail is Case correspondence when linked, No Case Found when not."
+      },
+      {
+        "id": "H",
+        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
+      },
+      {
+        "id": "G",
+        "summary": "Decision order: Case, Type, Query, Change case."
+      },
+      {
+        "id": "K",
+        "summary": "Query row: open query, Unassigned, Mark done marks this query done."
+      },
+      {
+        "id": "L",
+        "summary": "Composer tick Mark query done: marks only the replied e-mail's query done once the Sent item is observed."
+      }
+    ]
+  },
+  {
+    "key": "message-m3",
+    "label": "Message \u00b7 photographs, no Case",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "Unclassified removed: this e-mail is Case correspondence when linked, No Case Found when not."
+      },
+      {
+        "id": "H",
+        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
+      },
+      {
+        "id": "G",
+        "summary": "Decision order: Case, Type, Query, Change case."
+      },
+      {
+        "id": "R",
+        "summary": "Register images on any image-only unlinked e-mail with no instruction, triage or cancellation type."
+      }
+    ]
+  },
+  {
+    "key": "message-m7",
+    "label": "Message \u00b7 Billing, no Case",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "Billing removed: this e-mail is Case correspondence when linked, No Case Found when not."
+      },
+      {
+        "id": "H",
+        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
+      },
+      {
+        "id": "G",
+        "summary": "Decision order: Case, Type, Query, Change case."
+      }
+    ]
+  },
+  {
+    "key": "message-m11",
+    "label": "Message \u00b7 Cancellation on a Case in Report preparation",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "H",
+        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
+      },
+      {
+        "id": "G",
+        "summary": "Decision order: Case, Type, Query, Change case."
+      },
+      {
+        "id": "E",
+        "summary": "The Cancellation type stays, with its Case aside row and notification."
+      }
+    ]
+  },
+  {
+    "key": "message-m12",
+    "label": "Message \u00b7 thank-you on a Report sent Case",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "Case update removed: this e-mail is Case correspondence when linked, No Case Found when not."
+      },
+      {
+        "id": "H",
+        "summary": "Row label Type; default chip Correspondence replaces Unclassified."
+      },
+      {
+        "id": "G",
+        "summary": "Decision order: Case, Type, Query, Change case."
+      },
+      {
+        "id": "N",
+        "summary": "Query row: Open query on an e-mail on a Report sent Case that holds no query."
+      },
+      {
+        "id": "C",
+        "summary": "Joining a Report sent Case opens no query by itself; criteria and the AI classifier may."
+      }
+    ]
+  },
+  {
+    "key": "case",
+    "label": "Case \u00b7 Correspondence",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "X",
+        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip."
+      },
+      {
+        "id": "N",
+        "summary": "Tag as query becomes Open query: one query per e-mail, opened through the one route."
+      },
+      {
+        "id": "D",
+        "summary": "Assigned to column; a new query is Unassigned until taken or assigned."
+      },
+      {
+        "id": "K",
+        "summary": "Per-query Mark done replaces Resolve query (which closed every open query)."
+      },
+      {
+        "id": "O",
+        "summary": "Assign and Take on each open query; Take on an Unassigned row assigns the viewer."
+      },
+      {
+        "id": "M",
+        "summary": "Reopen on a Done row: any staff role and Automation, no reason, while the Case is not archived or closed."
+      },
+      {
+        "id": "J",
+        "summary": "Query acts need no edit session, expected version or reason."
+      },
+      {
+        "id": "AA",
+        "summary": "Query stays the purple stage word while any query is open."
+      }
+    ]
+  },
+  {
+    "key": "case-queries",
+    "label": "Case \u00b7 Queries",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "X",
+        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip."
+      },
+      {
+        "id": "N",
+        "summary": "Tag as query becomes Open query: one query per e-mail, opened through the one route."
+      },
+      {
+        "id": "D",
+        "summary": "Assigned to column; a new query is Unassigned until taken or assigned."
+      },
+      {
+        "id": "K",
+        "summary": "Per-query Mark done replaces Resolve query (which closed every open query)."
+      },
+      {
+        "id": "O",
+        "summary": "Assign and Take on each open query; Take on an Unassigned row assigns the viewer."
+      },
+      {
+        "id": "M",
+        "summary": "Reopen on a Done row: any staff role and Automation, no reason, while the Case is not archived or closed."
+      },
+      {
+        "id": "J",
+        "summary": "Query acts need no edit session, expected version or reason."
+      },
+      {
+        "id": "AA",
+        "summary": "Query stays the purple stage word while any query is open."
+      }
+    ]
+  },
+  {
+    "key": "case-queries-assign",
+    "label": "Case \u00b7 Assign query dialog",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "X",
+        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip."
+      },
+      {
+        "id": "N",
+        "summary": "Tag as query becomes Open query: one query per e-mail, opened through the one route."
+      },
+      {
+        "id": "D",
+        "summary": "Assigned to column; a new query is Unassigned until taken or assigned."
+      },
+      {
+        "id": "K",
+        "summary": "Per-query Mark done replaces Resolve query (which closed every open query)."
+      },
+      {
+        "id": "O",
+        "summary": "Assign and Take on each open query; Take on an Unassigned row assigns the viewer."
+      },
+      {
+        "id": "M",
+        "summary": "Reopen on a Done row: any staff role and Automation, no reason, while the Case is not archived or closed."
+      },
+      {
+        "id": "J",
+        "summary": "Query acts need no edit session, expected version or reason."
+      },
+      {
+        "id": "AA",
+        "summary": "Query stays the purple stage word while any query is open."
+      }
+    ]
+  },
+  {
+    "key": "case-aside-query",
+    "label": "Case \u00b7 Next action and Actions menu with an open query",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "X",
+        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip."
+      },
+      {
+        "id": "N",
+        "summary": "Tag as query becomes Open query: one query per e-mail, opened through the one route."
+      },
+      {
+        "id": "D",
+        "summary": "Assigned to column; a new query is Unassigned until taken or assigned."
+      },
+      {
+        "id": "K",
+        "summary": "Per-query Mark done replaces Resolve query (which closed every open query)."
+      },
+      {
+        "id": "O",
+        "summary": "Assign and Take on each open query; Take on an Unassigned row assigns the viewer."
+      },
+      {
+        "id": "M",
+        "summary": "Reopen on a Done row: any staff role and Automation, no reason, while the Case is not archived or closed."
+      },
+      {
+        "id": "J",
+        "summary": "Query acts need no edit session, expected version or reason."
+      },
+      {
+        "id": "AA",
+        "summary": "Query stays the purple stage word while any query is open."
+      }
+    ]
+  },
+  {
+    "key": "case-qdos26220",
+    "label": "Case \u00b7 Cancellation received",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "X",
+        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip."
+      },
+      {
+        "id": "AA",
+        "summary": "Open query is offered only once the Case's report is sent."
+      },
+      {
+        "id": "E",
+        "summary": "The Cancellation type and its Case aside row stay."
+      }
+    ]
+  },
+  {
+    "key": "work-centre",
+    "label": "Work Centre \u00b7 Needs attention",
+    "group": "Work Centre",
+    "changes": [
+      {
+        "id": "P",
+        "summary": "Open queries in Needs attention: Unassigned ones with Take, the viewer's own in Mine."
+      }
+    ]
+  },
+  {
+    "key": "work-centre-mine",
+    "label": "Work Centre \u00b7 Mine",
+    "group": "Work Centre",
+    "changes": [
+      {
+        "id": "P",
+        "summary": "Open queries in Needs attention: Unassigned ones with Take, the viewer's own in Mine."
+      }
+    ]
+  },
+  {
+    "key": "cases-query",
+    "label": "Cases \u00b7 Queries",
+    "group": "Work Centre",
+    "changes": []
+  }
+]

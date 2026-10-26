@@ -1,0 +1,19 @@
+<details id="mock-strip" open>
+  <summary><span>Mockup controls</span><small>v42 mail simplification</small></summary>
+  <div class="mock-body">
+    <label><small>Page</small>
+      <select id="mock-state" aria-label="Page"></select>
+    </label>
+    <div class="mock-seg" role="group" aria-label="View">
+      <button type="button" data-mode="today" title="The page as it is on dev today, captured from the application">Today</button>
+      <button type="button" data-mode="proposal" title="The same page with the proposed changes">Proposal</button>
+    </div>
+    <div class="mock-seg" role="group" aria-label="Overlays">
+      <button type="button" data-diff>Diff badges</button>
+      <button type="button" data-hide-strip>Hide controls</button>
+    </div>
+    <small>Proposed on this page</small>
+    <ul id="mock-changes"></ul>
+  </div>
+</details>
+<div id="mock-toast" role="status" aria-live="polite" hidden></div>

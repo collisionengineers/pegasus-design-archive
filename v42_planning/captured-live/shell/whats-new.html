@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en" data-busy-label="Working&#x2026;" data-busy-still="Still" data-icon-sprite="/images/lucide-sprite.04agn8pzs5.svg">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work Centre · Pegasus</title>
+    <link rel="stylesheet" href="/css/site.d6ldj11w7l.css" />
+    
+    <link rel="stylesheet" href="/css/work-centre.7rpi8cfim9.css" />
+
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell" data-app-shell>
+        <header class="app-rail">
+            <a class="brand" aria-label="Pegasus home" href="/">
+                <img src="/images/pegasus-mark-refined-128.tctmpgz0uo.png" alt="" aria-hidden="true" />
+                <span class="brand-copy"><strong>PEGASUS</strong><span>Case management</span></span>
+            </a>
+            <nav class="primary-nav" aria-label="Primary">
+                <div class="nav-label">Work</div>
+                <a class="nav-link" aria-current="page" href="/">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                    <span>Work Centre</span>
+                </a>
+                    <a class="nav-link" href="/Inbox">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                        <span>Inbox</span>
+                    </a>
+                    <a class="nav-link" href="/Upload">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                        <span>Upload</span>
+                    </a>
+                <a class="nav-link" href="/Cases">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list-checks" /></svg>
+                    <span>Cases</span>
+                </a>
+                <a class="nav-link" href="/Search">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <span>Search</span>
+                </a>
+                    <div class="nav-label">Manage</div>
+                    <a class="nav-link" href="/Administration">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+                        <span>Administration</span>
+                    </a>
+            </nav>
+            <div class="rail-spacer"></div>
+            <button type="button" class="rail-collapse" data-rail-toggle aria-expanded="true" aria-label="Collapse navigation"
+                    data-label-collapse="Collapse navigation" data-label-expand="Expand navigation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-left" /></svg>
+                <span>Collapse</span>
+            </button>
+            <div class="rail-health">
+                <div class="rail-health-line"><span class="health-dot"></span><span>Current · 19:29</span></div>
+            </div>
+                <div class="rail-user" role="group" aria-label="User">
+                    <span class="avatar" aria-hidden="true">EM</span>
+                    <div><strong>e.mawdsley</strong><small>Administrator</small></div>
+                    <button type="button" class="icon-button" data-dialog-open="account-dialog" aria-label="Account menu">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                    </button>
+                </div>
+        </header>
+        <div class="app-column">
+            <section class="utility-bar" aria-label="Utility bar">
+                <form class="utility-search" role="search" method="get" action="/Search">
+                    <label class="sr-only" for="global-search">Search Pegasus</label>
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <input id="global-search" type="search" name="query" data-command-input aria-label="Search Pegasus" placeholder="Search cases, references or people" autocomplete="off" />
+                    <span class="shortcut-hint" aria-hidden="true">Ctrl K</span>
+                </form>
+                <div class="utility-actions">
+                    <a class="btn btn--primary" href="/Cases/Create">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-plus" /></svg>
+                        <span>New case</span>
+                    </a>
+                    <span class="bell-wrap">
+                        <button type="button" class="icon-button" data-dialog-open="notifications-dialog" aria-label="Notifications &#xB7; 3 unread">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bell" /></svg>
+                        </button>
+                            <span class="bell-count" aria-hidden="true">3</span>
+                    </span>
+                        <button type="button" class="icon-button utility-account" data-dialog-open="account-dialog" aria-label="Account menu">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                        </button>
+                </div>
+            </section>
+            <main id="main-content" class="app-main" tabindex="-1">
+                <div class="content">
+                    
+
+
+<div class="work-centre" data-work-centre data-wc-scope="office" data-wc-scope-named="false" data-wc-refresh-outcome="current" data-wc-tab="attention"  data-wc-since="2026-10-26T17:29:24.4151392+00:00">
+<header class="page-header">
+    <div class="page-title">
+        <p class="eyebrow">Office-wide work</p>
+        <h1>Work Centre</h1>
+    </div>
+    <div class="page-actions">
+        <div class="wc-refresh">
+            <span class="meta wc-refresh-outcome" data-wc-refresh-outcome-label>Updated 19:29</span>
+            <div class="refresh-button" data-refresh-region role="status" aria-live="polite">
+    <form method="get" data-refresh-form>
+                <input type="hidden" name="scope" value="office" data-refresh-field="scope" />
+                <input type="hidden" name="refresh" value="true" data-refresh-field="refresh" />
+                <input type="hidden" name="since" value="2026-10-26T17:29:24.4151392&#x2B;00:00" data-refresh-field="since" />
+        <button type="submit" class="btn btn--small" title="Refresh">
+            <svg class="icon icon--spin" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-refresh-cw" /></svg>
+            <span data-refresh-label>Refresh</span>
+        </button>
+    </form>
+</div>
+
+        </div>
+    </div>
+</header>
+
+<div class="wc-metrics-section" data-wc-refresh-section="metrics" data-wc-refresh-state="current">
+    <nav class="wc-metrics" aria-label="Office queue totals">
+        <a class="metric" data-value="not_ready" href="/Cases?tab=not_ready">
+            <span class="metric-label"><span>Not ready</span></span>
+            <span class="metric-value">6</span>
+        </a>
+        <a class="metric" data-value="review" href="/Cases?tab=review">
+            <span class="metric-label"><span>Review</span></span>
+            <span class="metric-value">3</span>
+        </a>
+        <a class="metric" data-value="held" href="/Cases?tab=held">
+            <span class="metric-label"><span>Held</span></span>
+            <span class="metric-value">2</span>
+        </a>
+        <a class="metric" data-value="unidentified" href="/Cases?tab=unassigned&amp;show=unidentified">
+            <span class="metric-label"><span>Unidentified</span></span>
+            <span class="metric-value">1</span>
+        </a>
+        <a class="metric" data-value="triage" href="/Cases?tab=triage">
+            <span class="metric-label"><span>Triages</span></span>
+            <span class="metric-value">1</span>
+        </a>
+    </nav>
+</div>
+
+<section class="panel wc-activity" aria-labelledby="wc-activity-title" data-wc-activity data-wc-refresh-section="activity" data-wc-refresh-state="current">
+    <div class="panel-head"><h2 id="wc-activity-title">Activity</h2></div>
+    <table class="wc-activity-table">
+        <thead>
+            <tr>
+                <th scope="col"><span class="sr-only">Activity</span></th>
+                <th scope="col" data-figure="new-cases">
+                        <a href="/?scope=office&amp;tab=new-cases" data-wc-goto-tab="new-cases">New cases</a>
+                </th>
+                <th scope="col" data-figure="sent">Sent to Engineer</th>
+                <th scope="col" data-figure="reports">Reports sent</th>
+                <th scope="col" data-figure="emails">E-mails received</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Today</th>
+                <td data-figure="new-cases-today">3</td>
+                <td data-figure="sent-today">6</td>
+                <td data-figure="reports-today">3</td>
+                <td data-figure="emails-today">18</td>
+            </tr>
+            <tr>
+                <th scope="row">This week</th>
+                <td data-figure="new-cases-week">5</td>
+                <td data-figure="sent-week">17</td>
+                <td data-figure="reports-week">11</td>
+                <td data-figure="emails-week">64</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="panel wc-ledger">
+    <div class="tabs wc-tabs" role="tablist" aria-label="Work Centre sections">
+            <a class="tab" role="tab" id="wc-tab-attention" href="/?scope=office" data-wc-tab-link="attention"
+               aria-selected="true" aria-controls="wc-panel-attention" tabindex="0">Needs attention<span class="tab-count">9</span></a>
+            <a class="tab" role="tab" id="wc-tab-new-cases" href="/?scope=office&amp;tab=new-cases" data-wc-tab-link="new-cases"
+               aria-selected="false" aria-controls="wc-panel-new-cases" tabindex="-1">New cases<span class="tab-count">5</span></a>
+            <a class="tab" role="tab" id="wc-tab-ai-jobs" href="/?scope=office&amp;tab=ai-jobs" data-wc-tab-link="ai-jobs"
+               aria-selected="false" aria-controls="wc-panel-ai-jobs" tabindex="-1">AI jobs<span class="tab-count">4</span></a>
+    </div>
+
+    <div role="tabpanel" id="wc-panel-attention" aria-labelledby="wc-tab-attention" data-wc-attention
+         data-wc-refresh-section="attention" data-wc-refresh-state="current">
+        <div class="wc-toolbar">
+            <div class="wc-toolbar-left">
+                <h2 id="wc-attention-title" tabindex="-1">Needs attention</h2>
+                <span class="meta">9 items</span>
+                <div class="wc-switch" role="group" aria-label="Scope">
+                        <a href="/?scope=office" data-wc-scope-link="office"
+                           aria-current="true">Office</a>
+                        <a href="/?scope=mine" data-wc-scope-link="mine"
+                           aria-current="false">Mine</a>
+                </div>
+            </div>
+            <form class="wc-search" method="get" role="search">
+                <input type="hidden" name="scope" value="office" />
+                <label class="sr-only" for="wc-search">Find in Needs attention</label>
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                <input id="wc-search" type="search" name="q" placeholder="Find in this work" autocomplete="off" data-wc-search />
+            </form>
+        </div>
+        <nav class="chips wc-filters" aria-label="Kinds">
+                <a class="chip" href="/?scope=office&amp;kind=case"
+                   aria-current="false" data-wc-kind="case">Case<span class="n">1</span></a>
+                <a class="chip" href="/?scope=office&amp;kind=held"
+                   aria-current="false" data-wc-kind="held">Held<span class="n">1</span></a>
+                <a class="chip" href="/?scope=office&amp;kind=review"
+                   aria-current="false" data-wc-kind="review">Review<span class="n">1</span></a>
+                <a class="chip" href="/?scope=office&amp;kind=unassigned"
+                   aria-current="false" data-wc-kind="unassigned">Unassigned<span class="n">1</span></a>
+                <a class="chip" href="/?scope=office&amp;kind=images"
+                   aria-current="false" data-wc-kind="images">Vehicle images paired<span class="n">1</span></a>
+                <a class="chip" href="/?scope=office&amp;kind=unidentified"
+                   aria-current="false" data-wc-kind="unidentified">Unidentified<span class="n">1</span></a>
+                <a class="chip" href="/?scope=office&amp;kind=triage"
+                   aria-current="false" data-wc-kind="triage">Triage<span class="n">1</span></a>
+                <a class="chip" href="/?scope=office&amp;kind=tasks"
+                   aria-current="false" data-wc-kind="tasks">Tasks<span class="n">1</span></a>
+                <a class="chip" href="/?scope=office&amp;kind=ai"
+                   aria-current="false" data-wc-kind="ai">AI draft<span class="n">1</span></a>
+        </nav>
+            <div class="wc-table">
+                <table class="table wc-ledger-table wc-table--fold">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="wc-col-task">Next action</th>
+                            <th scope="col" class="wc-col-record">Record / detail</th>
+                            <th scope="col" class="wc-col-owner">Owner</th>
+                            <th scope="col" class="wc-col-due">Due</th>
+                            <th scope="col" class="wc-col-received">Received</th>
+                            <th scope="col" class="wc-col-action"><span class="sr-only">Action</span></th>
+                            <th scope="col" class="wc-col-dismiss"><span class="sr-only">Dismiss</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="wc-group-row" data-wc-group="overdue"><td colspan="7"><h3>Overdue (2)</h3></td></tr>
+                            <tr id="wc-row-c7237fdc-6c1d-4a12-a354-f546320a5ac0" data-wc-row="c7237fdc-6c1d-4a12-a354-f546320a5ac0" data-wc-row-kind="held" data-wc-record="c7237fdc-6c1d-4a12-a354-f546320a5ac0" aria-selected="false">
+                                <td class="wc-col-task">
+                                    <a class="wc-task-link" href="/?scope=office&amp;selected=c7237fdc-6c1d-4a12-a354-f546320a5ac0"
+                                       aria-expanded="false">Held decision</a>
+                                    <small>Held</small>
+                                    <span class="wc-fold">e.mawdsley · 8 d ago</span>
+                                </td>
+                                <td class="wc-col-record">
+                                    <span class="mono">
+                                            <a href="/Cases/c7237fdc-6c1d-4a12-a354-f546320a5ac0">QDOS26198</a>
+                                    </span>
+                                        <small>R. Whitfield</small>
+                                </td>
+                                <td class="wc-col-owner">e.mawdsley</td>
+                                <td class="wc-col-due"><span class="wc-due wc-due--overdue">2 days overdue</span></td>
+                                <td class="wc-col-received">8 d ago</td>
+                                <td class="wc-col-action">
+                                        <a class="btn btn--small" href="/Cases/c7237fdc-6c1d-4a12-a354-f546320a5ac0">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-arrow-right" /></svg>
+                                            <span>Open Case</span>
+                                        </a>
+                                </td>
+                                <td class="wc-col-dismiss">
+                                    <form method="post" class="wc-dismiss" data-wc-dismiss action="/?handler=Dismiss">
+                                        <input type="hidden" name="recordId" value="c7237fdc-6c1d-4a12-a354-f546320a5ac0" />
+                                        <input type="hidden" name="returnUrl" value="/?scope=office#wc-row-b3d58471-7bc2-404b-8b15-81740a82d0f2" />
+                                        <button type="submit" class="btn btn--small btn--icon" aria-label="Dismiss QDOS26198" title="Dismiss QDOS26198" data-busy-label="Dismissing&#x2026;">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                        </button>
+                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+                                </td>
+                            </tr>
+                            <tr id="wc-row-b3d58471-7bc2-404b-8b15-81740a82d0f2" data-wc-row="b3d58471-7bc2-404b-8b15-81740a82d0f2" data-wc-row-kind="case" data-wc-record="b3d58471-7bc2-404b-8b15-81740a82d0f2" aria-selected="false">
+                                <td class="wc-col-task">
+                                    <a class="wc-task-link" href="/?scope=office&amp;selected=b3d58471-7bc2-404b-8b15-81740a82d0f2"
+                                       aria-expanded="false">Instruction form</a>
+                                    <small>Case</small>
+                                    <span class="wc-fold">No owner · 5 d ago</span>
+                                </td>
+                                <td class="wc-col-record">
+                                    <span class="mono">
+                                            <a href="/Cases/b3d58471-7bc2-404b-8b15-81740a82d0f2">QDOS26203</a>
+                                    </span>
+                                </td>
+                                <td class="wc-col-owner">No owner</td>
+                                <td class="wc-col-due"><span class="wc-due wc-due--overdue">1 day overdue</span></td>
+                                <td class="wc-col-received">5 d ago</td>
+                                <td class="wc-col-action">
+                                        <a class="btn btn--small" href="/Cases/b3d58471-7bc2-404b-8b15-81740a82d0f2">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-arrow-right" /></svg>
+                                            <span>Open Case</span>
+                                        </a>
+                                </td>
+                                <td class="wc-col-dismiss">
+                                    <form method="post" class="wc-dismiss" data-wc-dismiss action="/?handler=Dismiss">
+                                        <input type="hidden" name="recordId" value="b3d58471-7bc2-404b-8b15-81740a82d0f2" />
+                                        <input type="hidden" name="returnUrl" value="/?scope=office#wc-row-88733835-479b-423e-bacc-df8ed714ebc0" />
+                                        <button type="submit" class="btn btn--small btn--icon" aria-label="Dismiss QDOS26203" title="Dismiss QDOS26203" data-busy-label="Dismissing&#x2026;">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                        </button>
+                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+                                </td>
+                            </tr>
+                        <tr class="wc-group-row" data-wc-group="today"><td colspan="7"><h3>Due today (3)</h3></td></tr>
+                            <tr id="wc-row-88733835-479b-423e-bacc-df8ed714ebc0" data-wc-row="88733835-479b-423e-bacc-df8ed714ebc0" data-wc-row-kind="review" data-wc-record="88733835-479b-423e-bacc-df8ed714ebc0" aria-selected="false">
+                                <td class="wc-col-task">
+                                    <a class="wc-task-link" href="/?scope=office&amp;selected=88733835-479b-423e-bacc-df8ed714ebc0"
+                                       aria-expanded="false">Review Case</a>
+                                    <small>Review</small>
+                                    <span class="wc-fold">e.mawdsley · 1 d ago</span>
+                                </td>
+                                <td class="wc-col-record">
+                                    <span class="mono">
+                                            <a href="/Cases/88733835-479b-423e-bacc-df8ed714ebc0">QDOS26214</a>
+                                    </span>
+                                        <small>Ford Focus MA59BDY</small>
+                                </td>
+                                <td class="wc-col-owner">e.mawdsley</td>
+                                <td class="wc-col-due"><span class="wc-due wc-due--today">Due today</span></td>
+                                <td class="wc-col-received">1 d ago</td>
+                                <td class="wc-col-action">
+                                        <a class="btn btn--small" href="/Cases/88733835-479b-423e-bacc-df8ed714ebc0">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-arrow-right" /></svg>
+                                            <span>Review Case</span>
+                                        </a>
+                                </td>
+                                <td class="wc-col-dismiss">
+                                    <form method="post" class="wc-dismiss" data-wc-dismiss action="/?handler=Dismiss">
+                                        <input type="hidden" name="recordId" value="88733835-479b-423e-bacc-df8ed714ebc0" />
+                                        <input type="hidden" name="returnUrl" value="/?scope=office#wc-row-8a63804e-c66d-4725-a5db-312d9870311e" />
+                                        <button type="submit" class="btn btn--small btn--icon" aria-label="Dismiss QDOS26214" title="Dismiss QDOS26214" data-busy-label="Dismissing&#x2026;">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                        </button>
+                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+                                </td>
+                            </tr>
+                            <tr id="wc-row-8a63804e-c66d-4725-a5db-312d9870311e" data-wc-row="8a63804e-c66d-4725-a5db-312d9870311e" data-wc-row-kind="unassigned" data-wc-record="8a63804e-c66d-4725-a5db-312d9870311e" aria-selected="false">
+                                <td class="wc-col-task">
+                                    <a class="wc-task-link" href="/?scope=office&amp;selected=8a63804e-c66d-4725-a5db-312d9870311e"
+                                       aria-expanded="false">Assign Engineer</a>
+                                    <small>Unassigned</small>
+                                    <span class="wc-fold">Unassigned · Today</span>
+                                </td>
+                                <td class="wc-col-record">
+                                    <span class="mono">
+                                            <a href="/Cases/8a63804e-c66d-4725-a5db-312d9870311e">QDOS26217</a>
+                                    </span>
+                                        <small>Vauxhall Corsa AB12CDE</small>
+                                </td>
+                                <td class="wc-col-owner">Unassigned</td>
+                                <td class="wc-col-due"><span class="wc-due wc-due--today">Due today</span></td>
+                                <td class="wc-col-received">Today</td>
+                                <td class="wc-col-action">
+                                        <div class="wc-row-actions">
+                                            <a class="btn btn--small" href="/?scope=office&amp;selected=8a63804e-c66d-4725-a5db-312d9870311e&amp;assign=true" data-wc-dialog="wc-assign-dialog">
+                                                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-arrow-right" /></svg>
+                                                <span>Assign Engineer</span>
+                                            </a>
+                                                <form method="post" data-wc-take action="/?handler=AssignEngineer">
+                                                    <input type="hidden" name="caseId" value="8a63804e-c66d-4725-a5db-312d9870311e" />
+                                                    <input type="hidden" name="engineerId" value="00000000-0000-4000-8000-0000000000e1" />
+                                                    <input type="hidden" name="operationKey" value="792c7efe5c824fd29ca8f43df0b877bf" />
+                                                    <input type="hidden" name="returnUrl" value="/?scope=office" />
+                                                    <button type="submit" class="btn btn--primary btn--small" data-busy-label="Assigning&#x2026;">Take</button>
+                                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+                                        </div>
+                                </td>
+                                <td class="wc-col-dismiss">
+                                    <form method="post" class="wc-dismiss" data-wc-dismiss action="/?handler=Dismiss">
+                                        <input type="hidden" name="recordId" value="8a63804e-c66d-4725-a5db-312d9870311e" />
+                                        <input type="hidden" name="returnUrl" value="/?scope=office#wc-row-2ca7c99a-ccc9-4ab5-99ba-6848bc88f965" />
+                                        <button type="submit" class="btn btn--small btn--icon" aria-label="Dismiss QDOS26217" title="Dismiss QDOS26217" data-busy-label="Dismissing&#x2026;">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                        </button>
+                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+                                </td>
+                            </tr>
+                            <tr id="wc-row-2ca7c99a-ccc9-4ab5-99ba-6848bc88f965" data-wc-row="2ca7c99a-ccc9-4ab5-99ba-6848bc88f965" data-wc-row-kind="triage" data-wc-record="2ca7c99a-ccc9-4ab5-99ba-6848bc88f965" aria-selected="false">
+                                <td class="wc-col-task">
+                                    <a class="wc-task-link" href="/?scope=office&amp;selected=2ca7c99a-ccc9-4ab5-99ba-6848bc88f965"
+                                       aria-expanded="false">Finding required</a>
+                                    <small>Triage</small>
+                                    <span class="wc-fold">Unassigned · 1 d ago</span>
+                                </td>
+                                <td class="wc-col-record">
+                                    <span class="mono">
+                                            <a href="/Cases/2ca7c99a-ccc9-4ab5-99ba-6848bc88f965">t.QDOS26219</a>
+                                    </span>
+                                        <small>BK21XYZ</small>
+                                </td>
+                                <td class="wc-col-owner">Unassigned</td>
+                                <td class="wc-col-due"><span class="wc-due wc-due--today">Due tomorrow</span></td>
+                                <td class="wc-col-received">1 d ago</td>
+                                <td class="wc-col-action">
+                                        <a class="btn btn--small" href="/Cases/2ca7c99a-ccc9-4ab5-99ba-6848bc88f965">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-arrow-right" /></svg>
+                                            <span>Open Triage</span>
+                                        </a>
+                                </td>
+                                <td class="wc-col-dismiss">
+                                    <form method="post" class="wc-dismiss" data-wc-dismiss action="/?handler=Dismiss">
+                                        <input type="hidden" name="recordId" value="2ca7c99a-ccc9-4ab5-99ba-6848bc88f965" />
+                                        <input type="hidden" name="returnUrl" value="/?scope=office#wc-row-e794a46c-8393-492e-b996-06f4cb217df9" />
+                                        <button type="submit" class="btn btn--small btn--icon" aria-label="Dismiss t.QDOS26219" title="Dismiss t.QDOS26219" data-busy-label="Dismissing&#x2026;">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                        </button>
+                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+                                </td>
+                            </tr>
+                        <tr class="wc-group-row" data-wc-group="later"><td colspan="7"><h3>Later (4)</h3></td></tr>
+                            <tr id="wc-row-e794a46c-8393-492e-b996-06f4cb217df9" data-wc-row="e794a46c-8393-492e-b996-06f4cb217df9" data-wc-row-kind="ai" data-wc-record="e794a46c-8393-492e-b996-06f4cb217df9" aria-selected="false">
+                                <td class="wc-col-task">
+                                    <a class="wc-task-link" href="/?scope=office&amp;selected=e794a46c-8393-492e-b996-06f4cb217df9"
+                                       aria-expanded="false">AI Proposal draft ready</a>
+                                    <small>AI draft</small>
+                                    <span class="wc-fold">No owner · Today</span>
+                                </td>
+                                <td class="wc-col-record">
+                                    <span class="mono">
+                                            <a href="/Cases/e794a46c-8393-492e-b996-06f4cb217df9">QDOS26208</a>
+                                    </span>
+                                        <small>Front bumper and offside wing</small>
+                                </td>
+                                <td class="wc-col-owner">No owner</td>
+                                <td class="wc-col-due"><span class="wc-due wc-due--later">Due tomorrow</span></td>
+                                <td class="wc-col-received">Today</td>
+                                <td class="wc-col-action">
+                                        <a class="btn btn--small" href="/Cases/e794a46c-8393-492e-b996-06f4cb217df9?section=estimate">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-arrow-right" /></svg>
+                                            <span>Review AI Proposal</span>
+                                        </a>
+                                </td>
+                                <td class="wc-col-dismiss">
+                                    <form method="post" class="wc-dismiss" data-wc-dismiss action="/?handler=Dismiss">
+                                        <input type="hidden" name="recordId" value="e794a46c-8393-492e-b996-06f4cb217df9" />
+                                        <input type="hidden" name="returnUrl" value="/?scope=office#wc-row-2f93f288-ffe3-4301-8ffa-ef7964432f9c" />
+                                        <button type="submit" class="btn btn--small btn--icon" aria-label="Dismiss QDOS26208" title="Dismiss QDOS26208" data-busy-label="Dismissing&#x2026;">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                        </button>
+                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+                                </td>
+                            </tr>
+                            <tr id="wc-row-2f93f288-ffe3-4301-8ffa-ef7964432f9c" data-wc-row="2f93f288-ffe3-4301-8ffa-ef7964432f9c" data-wc-row-kind="images" data-wc-record="2f93f288-ffe3-4301-8ffa-ef7964432f9c" aria-selected="false">
+                                <td class="wc-col-task">
+                                    <a class="wc-task-link" href="/?scope=office&amp;selected=2f93f288-ffe3-4301-8ffa-ef7964432f9c"
+                                       aria-expanded="false">Vehicle images paired</a>
+                                    <small>Vehicle images paired</small>
+                                    <span class="wc-fold">Unassigned · Today</span>
+                                </td>
+                                <td class="wc-col-record">
+                                    <span class="mono">
+                                            <a href="/Cases/2f93f288-ffe3-4301-8ffa-ef7964432f9c">QDOS26221</a>
+                                    </span>
+                                        <small>FD70NJK-01</small>
+                                </td>
+                                <td class="wc-col-owner">Unassigned</td>
+                                <td class="wc-col-due"><span class="wc-due wc-due--later">Due Wed</span></td>
+                                <td class="wc-col-received">Today</td>
+                                <td class="wc-col-action">
+                                        <a class="btn btn--small" href="/Cases/2f93f288-ffe3-4301-8ffa-ef7964432f9c">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-arrow-right" /></svg>
+                                            <span>Open Case</span>
+                                        </a>
+                                </td>
+                                <td class="wc-col-dismiss">
+                                    <form method="post" class="wc-dismiss" data-wc-dismiss action="/?handler=Dismiss">
+                                        <input type="hidden" name="recordId" value="2f93f288-ffe3-4301-8ffa-ef7964432f9c" />
+                                        <input type="hidden" name="returnUrl" value="/?scope=office#wc-row-9fa5016c-cf22-44d0-9935-aa3c6be085ac" />
+                                        <button type="submit" class="btn btn--small btn--icon" aria-label="Dismiss QDOS26221" title="Dismiss QDOS26221" data-busy-label="Dismissing&#x2026;">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                        </button>
+                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+                                </td>
+                            </tr>
+                            <tr id="wc-row-9fa5016c-cf22-44d0-9935-aa3c6be085ac" data-wc-row="9fa5016c-cf22-44d0-9935-aa3c6be085ac" data-wc-row-kind="unidentified" data-wc-record="9fa5016c-cf22-44d0-9935-aa3c6be085ac" aria-selected="false">
+                                <td class="wc-col-task">
+                                    <a class="wc-task-link" href="/?scope=office&amp;selected=9fa5016c-cf22-44d0-9935-aa3c6be085ac"
+                                       aria-expanded="false">No usable identification</a>
+                                    <small>Unidentified</small>
+                                    <span class="wc-fold">No owner · 1 d ago</span>
+                                </td>
+                                <td class="wc-col-record">
+                                    <span class="mono">
+U26031                                    </span>
+                                        <small>IMG_4471.jpg</small>
+                                </td>
+                                <td class="wc-col-owner">No owner</td>
+                                <td class="wc-col-due"><span class="wc-due wc-due--later">Due Thu</span></td>
+                                <td class="wc-col-received">1 d ago</td>
+                                <td class="wc-col-action">
+                                        <a class="btn btn--small" href="/Unidentified">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-arrow-right" /></svg>
+                                            <span>Review source</span>
+                                        </a>
+                                </td>
+                                <td class="wc-col-dismiss">
+                                    <form method="post" class="wc-dismiss" data-wc-dismiss action="/?handler=Dismiss">
+                                        <input type="hidden" name="recordId" value="9fa5016c-cf22-44d0-9935-aa3c6be085ac" />
+                                        <input type="hidden" name="returnUrl" value="/?scope=office#wc-row-2dc71cf4-debc-403d-be99-241d73c16bd2" />
+                                        <button type="submit" class="btn btn--small btn--icon" aria-label="Dismiss U26031" title="Dismiss U26031" data-busy-label="Dismissing&#x2026;">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                        </button>
+                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+                                </td>
+                            </tr>
+                            <tr id="wc-row-2dc71cf4-debc-403d-be99-241d73c16bd2" data-wc-row="2dc71cf4-debc-403d-be99-241d73c16bd2" data-wc-row-kind="tasks" data-wc-record="2dc71cf4-debc-403d-be99-241d73c16bd2" aria-selected="false">
+                                <td class="wc-col-task">
+                                    <a class="wc-task-link" href="/?scope=office&amp;selected=2dc71cf4-debc-403d-be99-241d73c16bd2"
+                                       aria-expanded="false">Chase the payment (&#x2B;1 more)</a>
+                                    <small>Tasks</small>
+                                    <span class="wc-fold">r.okafor · 10 d ago</span>
+                                </td>
+                                <td class="wc-col-record">
+                                    <span class="mono">
+                                            <a href="/Cases/2dc71cf4-debc-403d-be99-241d73c16bd2">QDOS26190</a>
+                                    </span>
+                                        <small>Mercedes A180 PO16DDF</small>
+                                </td>
+                                <td class="wc-col-owner">r.okafor</td>
+                                <td class="wc-col-due"><span class="wc-due wc-due--later">No due date</span></td>
+                                <td class="wc-col-received">10 d ago</td>
+                                <td class="wc-col-action">
+                                        <a class="btn btn--small" href="/Cases/2dc71cf4-debc-403d-be99-241d73c16bd2">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-arrow-right" /></svg>
+                                            <span>Open tasks</span>
+                                        </a>
+                                </td>
+                                <td class="wc-col-dismiss">
+                                    <form method="post" class="wc-dismiss" data-wc-dismiss action="/?handler=Dismiss">
+                                        <input type="hidden" name="recordId" value="2dc71cf4-debc-403d-be99-241d73c16bd2" />
+                                        <input type="hidden" name="returnUrl" value="/?scope=office#wc-attention-title" />
+                                        <button type="submit" class="btn btn--small btn--icon" aria-label="Dismiss QDOS26190" title="Dismiss QDOS26190" data-busy-label="Dismissing&#x2026;">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                        </button>
+                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+        <div class="pagination" data-wc-paging>
+            <span>Page 1 of 1 &#xB7; earliest due first</span>
+            <div class="button-row">
+            </div>
+        </div>
+    </div>
+
+    <div role="tabpanel" id="wc-panel-new-cases" aria-labelledby="wc-tab-new-cases" data-wc-new-cases
+         data-wc-refresh-section="new-cases" data-wc-refresh-state="current"
+         hidden="hidden">
+        <div class="wc-section-head">
+            <h2 id="wc-new-cases-title" tabindex="-1">New cases</h2>
+                <span class="meta">Last 7 days &#xB7; 5 rows</span>
+        </div>
+                <div class="wc-table">
+                    <table class="table wc-ledger-table wc-new-cases-table">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="wc-col-ref">Case</th>
+                                <th scope="col">Detail</th>
+                                <th scope="col" class="wc-col-arrival">Arrival</th>
+                                <th scope="col" class="wc-col-time">Received</th>
+                                <th scope="col" class="wc-col-dismiss"><span class="sr-only">Dismiss</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="wc-new-0" data-wc-new-case-row data-wc-record="2f93f288-ffe3-4301-8ffa-ef7964432f9c">
+                                <td class="wc-col-ref">
+                                    <a class="wc-task-link" href="/Cases/2f93f288-ffe3-4301-8ffa-ef7964432f9c">QDOS26221</a>
+                                </td>
+                                <td>FD70NJK &#xB7; T. Nowak &#xB7; QDOS</td>
+                                <td class="wc-col-arrival"><span class="status status--navy" data-wc-arrival>Principal API</span></td>
+                                <td class="wc-col-time"><time datetime="2026-10-26T18:29:21.8882666&#x2B;00:00">26 Oct 2026 18:29</time></td>
+                                <td class="wc-col-dismiss">
+                                    <form method="post" class="wc-dismiss" data-wc-dismiss action="/?handler=Dismiss">
+                                        <input type="hidden" name="recordId" value="2f93f288-ffe3-4301-8ffa-ef7964432f9c" />
+                                        <input type="hidden" name="returnUrl" value="/?scope=office&amp;tab=new-cases#wc-new-1" />
+                                        <button type="submit" class="btn btn--small btn--icon" aria-label="Dismiss QDOS26221" title="Dismiss QDOS26221" data-busy-label="Dismissing&#x2026;">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                        </button>
+                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+                                </td>
+                            </tr>
+                                <tr class="wc-group-row" data-wc-divider><td colspan="5"><h3>Since you last looked</h3></td></tr>
+                            <tr id="wc-new-1" data-wc-new-case-row data-wc-record="8a63804e-c66d-4725-a5db-312d9870311e">
+                                <td class="wc-col-ref">
+                                    <a class="wc-task-link" href="/Cases/8a63804e-c66d-4725-a5db-312d9870311e">QDOS26217</a>
+                                </td>
+                                <td>AB12CDE &#xB7; S. Whitfield &#xB7; QDOS</td>
+                                <td class="wc-col-arrival"><span class="status status--neutral" data-wc-arrival>E-mail</span></td>
+                                <td class="wc-col-time"><time datetime="2026-10-26T16:29:21.8882666&#x2B;00:00">26 Oct 2026 16:29</time></td>
+                                <td class="wc-col-dismiss">
+                                    <form method="post" class="wc-dismiss" data-wc-dismiss action="/?handler=Dismiss">
+                                        <input type="hidden" name="recordId" value="8a63804e-c66d-4725-a5db-312d9870311e" />
+                                        <input type="hidden" name="returnUrl" value="/?scope=office&amp;tab=new-cases#wc-new-2" />
+                                        <button type="submit" class="btn btn--small btn--icon" aria-label="Dismiss QDOS26217" title="Dismiss QDOS26217" data-busy-label="Dismissing&#x2026;">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                        </button>
+                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+                                </td>
+                            </tr>
+                            <tr id="wc-new-2" data-wc-new-case-row data-wc-record="88733835-479b-423e-bacc-df8ed714ebc0">
+                                <td class="wc-col-ref">
+                                    <a class="wc-task-link" href="/Cases/88733835-479b-423e-bacc-df8ed714ebc0">QDOS26214</a>
+                                </td>
+                                <td>MA59BDY &#xB7; J. Patel &#xB7; QDOS</td>
+                                <td class="wc-col-arrival"><span class="status status--neutral" data-wc-arrival>E-mail</span></td>
+                                <td class="wc-col-time"><time datetime="2026-10-25T19:29:21.8882666&#x2B;00:00">25 Oct 2026 19:29</time></td>
+                                <td class="wc-col-dismiss">
+                                    <form method="post" class="wc-dismiss" data-wc-dismiss action="/?handler=Dismiss">
+                                        <input type="hidden" name="recordId" value="88733835-479b-423e-bacc-df8ed714ebc0" />
+                                        <input type="hidden" name="returnUrl" value="/?scope=office&amp;tab=new-cases#wc-new-3" />
+                                        <button type="submit" class="btn btn--small btn--icon" aria-label="Dismiss QDOS26214" title="Dismiss QDOS26214" data-busy-label="Dismissing&#x2026;">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                        </button>
+                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+                                </td>
+                            </tr>
+                            <tr id="wc-new-3" data-wc-new-case-row data-wc-record="abfa6e1e-bb3a-4352-9250-34292282dd1f">
+                                <td class="wc-col-ref">
+                                    <a class="wc-task-link" href="/Cases/abfa6e1e-bb3a-4352-9250-34292282dd1f">PCH26102</a>
+                                </td>
+                                <td>EF56GHJ &#xB7; P. Marsh &#xB7; PCH</td>
+                                <td class="wc-col-arrival"><span class="status status--neutral" data-wc-arrival>Manual</span></td>
+                                <td class="wc-col-time"><time datetime="2026-10-24T19:29:21.8882666&#x2B;00:00">24 Oct 2026 20:29</time></td>
+                                <td class="wc-col-dismiss">
+                                    <form method="post" class="wc-dismiss" data-wc-dismiss action="/?handler=Dismiss">
+                                        <input type="hidden" name="recordId" value="abfa6e1e-bb3a-4352-9250-34292282dd1f" />
+                                        <input type="hidden" name="returnUrl" value="/?scope=office&amp;tab=new-cases#wc-new-4" />
+                                        <button type="submit" class="btn btn--small btn--icon" aria-label="Dismiss PCH26102" title="Dismiss PCH26102" data-busy-label="Dismissing&#x2026;">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                        </button>
+                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+                                </td>
+                            </tr>
+                            <tr id="wc-new-4" data-wc-new-case-row data-wc-record="e794a46c-8393-492e-b996-06f4cb217df9">
+                                <td class="wc-col-ref">
+                                    <a class="wc-task-link" href="/Cases/e794a46c-8393-492e-b996-06f4cb217df9">QDOS26208</a>
+                                </td>
+                                <td>KP68LHT &#xB7; M. Brennan &#xB7; QDOS</td>
+                                <td class="wc-col-arrival"><span class="status status--blue" data-wc-arrival>Automation</span></td>
+                                <td class="wc-col-time"><time datetime="2026-10-23T19:29:21.8882666&#x2B;00:00">23 Oct 2026 20:29</time></td>
+                                <td class="wc-col-dismiss">
+                                    <form method="post" class="wc-dismiss" data-wc-dismiss action="/?handler=Dismiss">
+                                        <input type="hidden" name="recordId" value="e794a46c-8393-492e-b996-06f4cb217df9" />
+                                        <input type="hidden" name="returnUrl" value="/?scope=office&amp;tab=new-cases#wc-new-cases-title" />
+                                        <button type="submit" class="btn btn--small btn--icon" aria-label="Dismiss QDOS26208" title="Dismiss QDOS26208" data-busy-label="Dismissing&#x2026;">
+                                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                        </button>
+                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            <div class="pagination">
+                <span>Page 1 of 1 &#xB7; newest first</span>
+                <div class="button-row">
+                </div>
+            </div>
+    </div>
+
+    <div role="tabpanel" id="wc-panel-ai-jobs" aria-labelledby="wc-tab-ai-jobs" data-wc-ai-jobs
+         data-wc-refresh-section="ai-jobs" data-wc-refresh-state="current"
+         hidden="hidden">
+        <div class="wc-section-head">
+            <h2 id="wc-ai-jobs-title" tabindex="-1">AI jobs</h2>
+                <span class="meta">1 draft ready &#xB7; 1 failed</span>
+        </div>
+            <div class="wc-table">
+                <table class="table wc-ledger-table wc-jobs-table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="wc-col-job">Job</th>
+                            <th scope="col" class="wc-col-state">State</th>
+                            <th scope="col" class="wc-col-instruction">Instruction</th>
+                            <th scope="col" class="wc-col-record">Record</th>
+                            <th scope="col" class="wc-col-started">Started</th>
+                            <th scope="col" class="wc-col-note">Note</th>
+                            <th scope="col" class="wc-col-action"><span class="sr-only">Action</span></th>
+                            <th scope="col" class="wc-col-dismiss"><span class="sr-only">Dismiss</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="wc-job-c8b8d1f3-b2a2-4e2a-b473-3c6efff6f1bc" data-wc-job="c8b8d1f3-b2a2-4e2a-b473-3c6efff6f1bc" data-wc-job-state="DraftReady" data-wc-record="c8b8d1f3-b2a2-4e2a-b473-3c6efff6f1bc">
+                            <td class="wc-col-job"><strong>AI Proposal</strong></td>
+                            <td class="wc-col-state">
+                                <span class="status status--amber">Draft ready</span>
+
+                            </td>
+                            <td class="wc-col-instruction">Front bumper and offside wing</td>
+                            <td class="wc-col-record">
+                                <span class="mono">
+                                        <a href="/Cases/e794a46c-8393-492e-b996-06f4cb217df9">QDOS26208</a>
+                                </span>
+                            </td>
+                            <td class="wc-col-started">e.mawdsley<small><time datetime="2026-10-26T13:29:21.8932758&#x2B;00:00">26 Oct 2026 13:29</time></small></td>
+                            <td class="wc-col-note">
+                            </td>
+                            <td class="wc-col-action">
+                                <div class="wc-row-actions wc-job-actions">
+                                        <a class="btn btn--small" href="/Cases/e794a46c-8393-492e-b996-06f4cb217df9?section=estimate">Review AI Proposal</a>
+                                </div>
+                            </td>
+                            <td class="wc-col-dismiss">
+                                <form method="post" class="wc-dismiss" data-wc-dismiss action="/?handler=Dismiss">
+                                    <input type="hidden" name="recordId" value="c8b8d1f3-b2a2-4e2a-b473-3c6efff6f1bc" />
+                                    <input type="hidden" name="returnUrl" value="/?scope=office&amp;tab=ai-jobs#wc-job-f604648e-c83b-4a1d-b5e7-cc94a2f15838" />
+                                    <button type="submit" class="btn btn--small btn--icon" aria-label="Dismiss QDOS26208" title="Dismiss QDOS26208" data-busy-label="Dismissing&#x2026;">
+                                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                    </button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+                            </td>
+                        </tr>
+                        <tr id="wc-job-f604648e-c83b-4a1d-b5e7-cc94a2f15838" data-wc-job="f604648e-c83b-4a1d-b5e7-cc94a2f15838" data-wc-job-state="Taken" data-wc-record="f604648e-c83b-4a1d-b5e7-cc94a2f15838">
+                            <td class="wc-col-job"><strong>AI Proposal</strong></td>
+                            <td class="wc-col-state">
+                                <span class="status status--navy">Taken</span>
+
+                            </td>
+                            <td class="wc-col-instruction">Rear bumper replacement</td>
+                            <td class="wc-col-record">
+                                <span class="mono">
+                                        <a href="/Cases/88733835-479b-423e-bacc-df8ed714ebc0">QDOS26214</a>
+                                </span>
+                            </td>
+                            <td class="wc-col-started">e.mawdsley<small><time datetime="2026-10-26T13:29:21.8938644&#x2B;00:00">26 Oct 2026 13:29</time></small></td>
+                            <td class="wc-col-note">
+Taken until 19:59                            </td>
+                            <td class="wc-col-action">
+                                <div class="wc-row-actions wc-job-actions">
+                                </div>
+                            </td>
+                            <td class="wc-col-dismiss">
+                                <form method="post" class="wc-dismiss" data-wc-dismiss action="/?handler=Dismiss">
+                                    <input type="hidden" name="recordId" value="f604648e-c83b-4a1d-b5e7-cc94a2f15838" />
+                                    <input type="hidden" name="returnUrl" value="/?scope=office&amp;tab=ai-jobs#wc-job-feed16ea-80f2-450c-b294-a2bb6239c3a0" />
+                                    <button type="submit" class="btn btn--small btn--icon" aria-label="Dismiss QDOS26214" title="Dismiss QDOS26214" data-busy-label="Dismissing&#x2026;">
+                                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                    </button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+                            </td>
+                        </tr>
+                        <tr id="wc-job-feed16ea-80f2-450c-b294-a2bb6239c3a0" data-wc-job="feed16ea-80f2-450c-b294-a2bb6239c3a0" data-wc-job-state="Queued" data-wc-record="feed16ea-80f2-450c-b294-a2bb6239c3a0">
+                            <td class="wc-col-job"><strong>Query response</strong></td>
+                            <td class="wc-col-state">
+                                <span class="status status--amber">Queued</span>
+
+                            </td>
+                            <td class="wc-col-instruction">Draft a reply to the query</td>
+                            <td class="wc-col-record">
+                                <span class="mono">
+                                        <a href="/Cases/2dc71cf4-debc-403d-be99-241d73c16bd2">QDOS26190</a>
+                                </span>
+                            </td>
+                            <td class="wc-col-started">e.mawdsley<small><time datetime="2026-10-26T13:29:21.8940219&#x2B;00:00">26 Oct 2026 13:29</time></small></td>
+                            <td class="wc-col-note">
+                            </td>
+                            <td class="wc-col-action">
+                                <div class="wc-row-actions wc-job-actions">
+                                </div>
+                            </td>
+                            <td class="wc-col-dismiss">
+                                <form method="post" class="wc-dismiss" data-wc-dismiss action="/?handler=Dismiss">
+                                    <input type="hidden" name="recordId" value="feed16ea-80f2-450c-b294-a2bb6239c3a0" />
+                                    <input type="hidden" name="returnUrl" value="/?scope=office&amp;tab=ai-jobs#wc-job-723e8941-81cd-4e42-97ec-1c9a5fbbe203" />
+                                    <button type="submit" class="btn btn--small btn--icon" aria-label="Dismiss QDOS26190" title="Dismiss QDOS26190" data-busy-label="Dismissing&#x2026;">
+                                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                    </button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+                            </td>
+                        </tr>
+                        <tr id="wc-job-723e8941-81cd-4e42-97ec-1c9a5fbbe203" data-wc-job="723e8941-81cd-4e42-97ec-1c9a5fbbe203" data-wc-job-state="Failed" data-wc-record="723e8941-81cd-4e42-97ec-1c9a5fbbe203">
+                            <td class="wc-col-job"><strong>AI Proposal</strong></td>
+                            <td class="wc-col-state">
+                                <span class="status status--red">Failed</span>
+
+                            </td>
+                            <td class="wc-col-instruction">Offside door and sill</td>
+                            <td class="wc-col-record">
+                                <span class="mono">
+                                        <a href="/Cases/b3d58471-7bc2-404b-8b15-81740a82d0f2">QDOS26203</a>
+                                </span>
+                            </td>
+                            <td class="wc-col-started">e.mawdsley<small><time datetime="2026-10-26T13:29:21.8942177&#x2B;00:00">26 Oct 2026 13:29</time></small></td>
+                            <td class="wc-col-note wc-failed">
+The client refused the job: the estimate lines could not be read                            </td>
+                            <td class="wc-col-action">
+                                <div class="wc-row-actions wc-job-actions">
+                                        <a class="btn btn--small" href="/Cases/b3d58471-7bc2-404b-8b15-81740a82d0f2">Open Case</a>
+                                </div>
+                            </td>
+                            <td class="wc-col-dismiss">
+                                <form method="post" class="wc-dismiss" data-wc-dismiss action="/?handler=Dismiss">
+                                    <input type="hidden" name="recordId" value="723e8941-81cd-4e42-97ec-1c9a5fbbe203" />
+                                    <input type="hidden" name="returnUrl" value="/?scope=office&amp;tab=ai-jobs#wc-ai-jobs-title" />
+                                    <button type="submit" class="btn btn--small btn--icon" aria-label="Dismiss QDOS26203" title="Dismiss QDOS26203" data-busy-label="Dismissing&#x2026;">
+                                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                    </button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+</section>
+
+</div>
+
+
+
+                </div>
+            </main>
+        </div>
+    </div>
+    
+<div class="dialog-backdrop" data-dialog="account-dialog" data-dialog-fragment="/Notifications?name=account&amp;handler=ShellDialog" hidden></div>
+
+<div class="dialog-backdrop" data-dialog="notifications-dialog" data-dialog-open-on-load="" data-notifications-url="/Notifications?handler=List" data-notifications-failed="Notifications unavailable." hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="notifications-dialog-title">
+        <div class="dialog-head">
+            <h2 id="notifications-dialog-title" tabindex="-1">Notifications</h2>
+                <form method="post" action="/Notifications?handler=MarkAllRead">
+                    <input type="hidden" name="returnUrl" value="/" />
+                    <button type="submit" class="btn" data-busy-label="Marking&#x2026;">Mark all read</button>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+            <div class="dialog-body dialog-body--list" data-notifications-body aria-busy="true">
+                <div class="spinner" aria-hidden="true"></div>
+            </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn btn--dark" data-dialog-close>Close</button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="command-dialog" data-dialog-fragment="/Notifications?name=command&amp;handler=ShellDialog" hidden></div>
+
+    <div class="dialog-backdrop" data-dialog="whats-new-dialog" data-dialog-open-on-load="true" hidden>
+        <section class="dialog release-note" role="dialog" aria-modal="true" aria-labelledby="whats-new-dialog-title" data-release-note="853b8f1d-13d6-4be4-877c-1b7746dcb0c3">
+            <div class="dialog-head">
+                <h2 id="whats-new-dialog-title" tabindex="-1">What&#x2019;s new</h2>
+                <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                </button>
+            </div>
+            <div class="dialog-body stack release-note__body">
+                <h3>Report sending and query handling</h3>
+                <p class="muted"><time datetime="2026-10-14T08:30:00.0000000&#x2B;00:00">14 Oct 2026 09:30</time> · <span class="mono">Release 105</span></p>
+                        <p>Sent reports now list under Report sent, and a query on a Case is a record rather than a state.</p>
+        <ul class="release-note__list">
+                <li>Open queries are listed on the Case</li>
+                <li>Search keeps its filters between visits</li>
+        </ul>
+
+            </div>
+            <div class="dialog-foot">
+                <a class="btn left" href="/ReleaseNotes">Release notes</a>
+                <form method="post" action="/ReleaseNotes?id=853b8f1d-13d6-4be4-877c-1b7746dcb0c3&amp;handler=Acknowledge">
+                    <input type="hidden" name="returnUrl" value="/" />
+                    <button type="submit" class="btn btn--dark" data-release-note-acknowledge data-busy-label="Saving&#x2026;">Got it</button>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAUB2dd45tFhdNyiiJqlVmtvAmrsb5W3-tXcrXApemY9R5FAS0N7MexGxkVwXbeKcypVKzPoY831vnBAtlplsbEZre-wpWtLTX8ZTpVS4C21dh9vv-u6q3IwKfBYd681E0" /></form>
+            </div>
+        </section>
+    </div>
+
+<div class="dialog-backdrop" data-dialog="problem-dialog" data-dialog-fragment="/Notifications?name=problem&amp;traceId=00-a804e97ce1893ff0df1a572682198d91-093df721ba599f76-00&amp;method=GET&amp;handler=ShellDialog" hidden></div>
+
+    <div class="toast-region" aria-live="polite" data-toast-region></div>
+
+    <script src="/js/site.623y3cuxic.js"></script>
+    
+    <script src="/js/work-centre.hor3szmat7.js"></script>
+
+</body>
+</html>
