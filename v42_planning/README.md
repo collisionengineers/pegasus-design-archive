@@ -45,8 +45,7 @@ python build/build-v42.py && python build/pagedocs-v42.py && python build/check-
 
 ## Status
 
-**Stage 1 — awaiting operator sign-off.** Items **A** to **F** were settled with the
-operator on 26 October 2026 ([notes/v42-notes.md §4](notes/v42-notes.md#4-decisions-taken-and-their-authority)).
-Items **G** to **AA** in [notes/v42-notes.md §6](notes/v42-notes.md#6-sign-off) await
-confirmation before any Stage 2 code is written. Nothing under `src/` or `tests/` in the
-application repository has been modified.
+**Signed off (27 October 2026).** Items **A** to **AA** are settled and signed off by the
+operator ([notes/v42-notes.md §6](notes/v42-notes.md#6-sign-off)). Ready for Stage 2
+implementation. Nothing under `src/` or `tests/` in the application repository has been
+modified yet.

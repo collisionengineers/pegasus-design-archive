@@ -96,6 +96,7 @@ def v42_checks(page: Page) -> None:
     check("I: inbox has no bulk Correct classification or its dialog, and bulk bar is hidden when 0 ticked",
           not q("[data-bulk-classify]") and not q("#bulkClassifyDialog")
           and frame_eval(page, "d.getElementById('mail-bulk').hidden === true"))
+    check("I: inbox header has Select all checkbox", q("input[data-mail-tick-all]"))
     listed = rows()
     check("B: All omits unlinked non-instruction m7 to m10", not any(s in listed for s in REMOVED_SUBJECTS))
     check("B: All lists 8 instructions, triage requests and Case-linked messages", len(listed) == 8)
@@ -115,6 +116,10 @@ def v42_checks(page: Page) -> None:
           frame_eval(page, "d.getElementById('mail-bulk').hidden === false")
           and text("[data-bulk-count]") == "2"
           and n("form#mail-bulk button") == 1 and "Dismiss" in text("form#mail-bulk"))
+    check("I: Select all checkbox ticks all visible rows and updates bulk count",
+          frame_eval(page, "(() => { const a = d.querySelector('input[data-mail-tick-all]'); a.click();"
+                           " const ok = d.querySelector('[data-bulk-count]').textContent.trim() === '8';"
+                           " a.click(); return ok; })()"))
 
     # Message dialog over /Inbox + streamlined cog settings menu (G, H, K, L, N, R)
     tc = lambda s: frame_eval(page, f"(d.querySelector({json.dumps(s)}) || {{textContent: ''}}).textContent.trim()")

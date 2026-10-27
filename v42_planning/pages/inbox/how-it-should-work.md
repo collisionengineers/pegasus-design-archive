@@ -53,3 +53,7 @@ and proposed for sign-off (rules **D7**–**D17**, open items **G**–**I**, **K
 
 - New `ADR-0085` superseding `ADR-0069` and `ADR-0070` and amending `ADR-0067`.
 - Update `FRD-08`, `FRD-09`, `FRD-10`, `FRD-19`, `FRD-20`, `FRD-22`, `CONTEXT.md`, `docs/capabilities.md` (`MAIL-22`), `docs/current-architecture.md` and `docs/principal-profiles/qdos.md`.
+
+## Decided 27 October 2026
+
+Signed off by the operator ("I sign off on this design"): all rules **D1**–**D16** and items **A**–**I**, **K**, **L**, **N**, **R**–**W** are settled as drawn in `pegasus_v42.html` (`9fd9869`).

@@ -27,3 +27,7 @@ taken or assigned) and proposed for sign-off (rule **D1**, open item **P**).
 ## Documentation impact when the FRD is written
 
 - Update `FRD-15` (`Needs attention` kinds, `Office`/`Mine` rules and `Take` on open queries).
+
+## Decided 27 October 2026
+
+Signed off by the operator ("I sign off on this design"): rule **D1** and item **P** are settled as drawn in `pegasus_v42.html` (`9fd9869`).

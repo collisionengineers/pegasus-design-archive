@@ -116,6 +116,16 @@ Items **G** to **AA** are open: confirm each item as drawn, or state the change.
 - **Z** Confirm that the Engineer activity report's `Queries` column and the Case list's query count count `CaseQueries` records (any source, not withdrawn) rather than `Query`-classified e-mails, or specify another metric definition.
 - **AA** Confirm that `Query` remains the purple stage word over the Case's stored state while any query is open (returning to `Report sent` once the last open query is marked done) and that queries open only once the report is sent (`CaseLifecycleRules.ReportIsSent`), or allow pre-report queries.
 
+### Decided (27 October 2026)
+
+The operator's words, 27 October 2026: **"I sign off on this design."**
+
+Every item **A** through **AA** is confirmed as drawn in the signed-off v42 mockup (`pegasus_v42.html`, commit `9fd9869`), including the 26–27 October review rulings:
+- **Inbox (`/Inbox`, items A, B, I):** Three `.tabs` scopes (**All**, **No Case Found**, **Dismissed**; `Sent Items` and `Deleted Items` removed from the Inbox workspace); full-width structured ledger with exact column headers **Case** (`None` in `--quiet` grey when unlinked), **Type**, **Subject**, **Sender** (with Principal sub-label) and **Received**; unified toolbar with live **Search** (`Subject, sender, reference`), **All principals** filter and **All Mailboxes** filter; contextual bulk **Dismiss** / **Restore** bar hidden when `0` rows are ticked (`Correct classification` removed).
+- **Email dialog (`#mailMessageDialog`, items C, E, G, H, K, L, N, R):** Replaces the right-hand `Decision` column with the header **cog settings menu (`#icon-settings`, `details[data-mail-settings]`)** and a quiet metadata line (`Case`, `Type`, `Query`) above the full-width message and inline attachment strip. Inside the cog menu, the order is **Case** (`Case / PO` picker + `Unlink`), **Type** (one 1-step `<select>` with `Correspondence`, `New instruction · Inspection`, `New instruction · Audit`, `New instruction · Inspection and Audit`, `Triage request`, `Cancellation` — replacing the clicky chip cloud and separate `Case type` dropdown), **Query** (`Open query` or `Mark done`), **Change case** (`Place on Hold`, `Close case`), and **Decided**.
+- **Case workspace (`/Cases/{id}`, items D, E, J, K, M, N, O, X, AA):** In `Correspondence` and `Queries`, the message **Subject** is the link that opens the message dialog (no separate `[Open message]` button); in `Queries`, the **Assigned to** column carries the compact inline assignee selector (`Unassigned ▾` + inline `Take` link) so row actions stay on a single line (`Reply` + `Mark done`, `Mark done`, or `Reopen`). `.table td.row-actions` uses `display: table-cell; height: auto` so compact table buttons never overflow their container.
+- **Work Centre (`/`, item P) & Linking v2 (items F, S–W, Y, Z):** Confirmed as specified.
+
 ## 7. Self-check result
 
 `python build/build-v42.py && python build/pagedocs-v42.py && python build/check-v42.py`

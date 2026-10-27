@@ -315,8 +315,8 @@ def inbox_workspace_overhaul(ctx: Ctx) -> None:
 
     # Exact Pegasus table header words: Case, Type, Subject, Sender, Received
     ledger_head = Ctx.html(
-        '<div class="inbox-ledger-head" aria-hidden="true">'
-        '<span></span>'
+        '<div class="inbox-ledger-head">'
+        '<label class="inbox-row-tick"><input type="checkbox" aria-label="Select all" data-mail-tick-all></label>'
         '<span>Case</span>'
         '<span>Type</span>'
         '<span>Subject</span>'

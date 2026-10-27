@@ -98,6 +98,14 @@ html[data-v42-diff] [data-v42-change]:not(input):not(select):not(textarea):not(i
 .inbox-ledger-head > span:nth-child(6),
 .inbox-ledger-head > span:nth-child(7) { text-align: right; }
 
+.inbox-ledger-head .inbox-row-tick {
+  position: static; transform: none;
+  display: inline-flex; align-items: center;
+  margin: 0; padding: 0;
+}
+.inbox-ledger-head .inbox-row-tick input {
+  width: 16px; height: 16px; margin: 0; accent-color: var(--navy); cursor: pointer;
+}
 /* Structured Ledger Row (.inbox-row.inbox-ledger-row) — exact match to site.css table/row-button */
 .inbox-row.inbox-ledger-row {
   display: grid;

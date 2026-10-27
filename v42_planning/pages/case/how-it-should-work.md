@@ -50,3 +50,7 @@ and proposed for sign-off (rules **D3**–**D12**, open items **J**, **K**, **M*
 
 - `ADR-0085` amends `ADR-0067` (all-at-once resolution and no-assignee consequences).
 - Update `FRD-10`, `FRD-12`, `FRD-13`, `FRD-16`, `FRD-17` and `CONTEXT.md`.
+
+## Decided 27 October 2026
+
+Signed off by the operator ("I sign off on this design"): all rules **D1**–**D12** and items **D**, **E**, **J**, **K**, **M**–**O**, **Q**, **X**–**AA** are settled as drawn in `pegasus_v42.html` (`9fd9869`).

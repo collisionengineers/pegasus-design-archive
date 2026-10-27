@@ -309,13 +309,35 @@
     if (meta) meta.textContent = shown + (shown === 1 ? ' message' : ' messages');
   }
 
+  function syncBulkAndSelectAll() {
+    var visibleBoxes = Array.prototype.slice.call(
+      document.querySelectorAll('.inbox-row:not([hidden]) input[data-mail-tick]')
+    );
+    var checkedBoxes = visibleBoxes.filter(function (cb) { return cb.checked; });
+    var allBox = document.querySelector('input[data-mail-tick-all]');
+    if (allBox) {
+      allBox.checked = visibleBoxes.length > 0 && checkedBoxes.length === visibleBoxes.length;
+      allBox.indeterminate = checkedBoxes.length > 0 && checkedBoxes.length < visibleBoxes.length;
+    }
+    var bulkCnt = document.querySelector('[data-bulk-count]');
+    if (bulkCnt) bulkCnt.textContent = String(checkedBoxes.length);
+    var bulkForm = document.getElementById('mail-bulk');
+    if (bulkForm && currentMode() === 'proposal') bulkForm.hidden = checkedBoxes.length === 0;
+  }
+
   window.addEventListener('change', function (ev) {
     var target = ev.target instanceof Element ? ev.target : null;
     if (!target) return;
+    if (target.matches('input[data-mail-tick-all]')) {
+      var want = target.checked;
+      document.querySelectorAll('.inbox-row:not([hidden]) input[data-mail-tick]').forEach(function (cb) {
+        cb.checked = want;
+      });
+      syncBulkAndSelectAll();
+      return;
+    }
     if (target.matches('input[data-mail-tick]')) {
-      var bulkForm = document.getElementById('mail-bulk');
-      var nTicked = document.querySelectorAll('input[data-mail-tick]:checked').length;
-      if (bulkForm && currentMode() === 'proposal') bulkForm.hidden = nTicked === 0;
+      syncBulkAndSelectAll();
       return;
     }
     if (target.matches('#principal-filter, #mailbox-filter, #type-filter')) {
@@ -670,8 +692,7 @@
           if (r) r.remove();
         });
         updateInboxCounts(-ticked.length);
-        var bulkCnt = document.querySelector('[data-bulk-count]');
-        if (bulkCnt) bulkCnt.textContent = '0';
+        syncBulkAndSelectAll();
         toast('Updated ' + ticked.length + ' message(s)');
       } else {
         toast('Tick one or more rows first');
@@ -683,5 +704,5 @@
   });
 
   window.open = function (url) { post({ type: 'nav', href: local(url) }); return null; };
-  window.addEventListener('load', function () { post({ type: 'loaded' }); });
+  window.addEventListener('load', function () { syncBulkAndSelectAll(); post({ type: 'loaded' }); });
 })();

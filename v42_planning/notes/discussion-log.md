@@ -115,3 +115,9 @@ What changed:
 - **1-step `Email type` `<select>` and borderless menu items inside the `#icon-settings` cog menu:** Replaced the clicky category chip cloud + conditional `Case type` dropdown with a single `<select id="mailTypeSelect">` (`Case correspondence`, `New instruction — Inspection`, `New instruction — Audit`, `New instruction — Inspection and Audit`, `Triage request`, `Cancellation`), and styled `Open query` / `Mark query done` and `Place Case on Hold…` / `Close Case…` as clean borderless menu rows inside the cog popover.
 - **Button-minimal Case `Correspondence` and `Queries` tables:** Made the message **Subject** itself the link that opens the message dialog in both `Correspondence` and `Queries` (removing the redundant `[Open message]` button from every row), and moved query assignment into the **`Assigned to` cell** (`Unassigned ▾` + inline `Take` link) so each `Queries` row carries only `Reply` + `Mark done` (mail), `Mark done` (logged), or `Reopen` (`Done` rows) on a single clean line.
 - Re-ran `python build/build-v42.py && python build/pagedocs-v42.py && python build/check-v42.py`: `RESULT {"fail": [], "okCount": 339}`, 156 screenshots updated in `shots/`.
+
+## 27 October 2026: operator sign-off
+
+After reviewing the exact Pegasus `Inter` font, colour tokens, `Case` / `Type` / `Subject` / `Sender` / `Received` headers, `None` for unlinked Cases, removal of `"Early triage"` / `"Signal"`, `.table td.row-actions` button containment fix, and default-to-Proposal mode (`9fd9869`), the operator signed off:
+
+> *"I sign off on this design. Consider the existing session plan, and create a full plan for the integration of this into our design, taking into consideration concerns regarding blast radius, existing features, and documentation that may contradict. Do not proceed to integration yet."*
