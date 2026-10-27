@@ -414,6 +414,53 @@
       setUploadSampleFiles(wantOn, true);
       return;
     }
+    // 0b. Work Centre v42 design switcher, view tabs, sub-filters, and Design B inspector
+    var wcSwitchBtn = target.closest('[data-wc-switch-state]');
+    if (wcSwitchBtn) {
+      var wcTargetState = wcSwitchBtn.getAttribute('data-wc-switch-state');
+      if (wcTargetState) {
+        ev.preventDefault();
+        post({ type: 'state', key: wcTargetState });
+        return;
+      }
+    }
+    var wcTabBtn = target.closest('[data-wc-view-tab], [data-wc-view-switch]');
+    if (wcTabBtn) {
+      ev.preventDefault();
+      var tabKey = wcTabBtn.getAttribute('data-wc-view-tab') || wcTabBtn.getAttribute('data-wc-view-switch');
+      if (tabKey) setWcActiveTab(tabKey, true);
+      return;
+    }
+    var wcBoardAllBtn = target.closest('[data-wc-board-all]');
+    if (wcBoardAllBtn) {
+      ev.preventDefault();
+      var board = document.querySelector('.wc-c-board');
+      if (board) {
+        board.setAttribute('data-wc-board-focus', 'all');
+        board.querySelectorAll('[data-wc-view-panel]').forEach(function (p) { p.hidden = false; });
+      }
+      wcBoardAllBtn.setAttribute('aria-pressed', 'true');
+      return;
+    }
+    var wcSubBtn = target.closest('[data-wc-subfilter]');
+    if (wcSubBtn) {
+      ev.preventDefault();
+      var panelKey = wcSubBtn.getAttribute('data-wc-target-panel');
+      var group = wcSubBtn.closest('.wc-v42-chips');
+      if (group) {
+        group.querySelectorAll('[data-wc-subfilter]').forEach(function (b) {
+          b.setAttribute('aria-pressed', String(b === wcSubBtn));
+        });
+      }
+      applyWcFilters(panelKey);
+      return;
+    }
+    var wcInspectRow = target.closest('tr[data-wc-inspect-row]');
+    if (wcInspectRow && !target.closest('a, button, form, input')) {
+      ev.preventDefault();
+      selectWcInspectorRow(wcInspectRow.getAttribute('data-wc-inspect-row'));
+      return;
+    }
     // 0. Choosing an option in the cog menu's Case / PO autocomplete links immediately
     var pickerChoice = target.closest('#mailLinkCaseOptions [data-case-picker-choice]');
     if (pickerChoice) {
@@ -743,6 +790,33 @@
       return;
     }
 
+    if (form.hasAttribute('data-wc-take')) {
+      var itemRow = form.closest('[data-wc-item]');
+      if (itemRow) {
+        var pill = itemRow.querySelector('[data-wc-stage-pill]');
+        if (pill) {
+          pill.className = 'status status--blue';
+          pill.textContent = 'Assigned · e.mawdsley';
+        }
+      }
+      form.remove();
+      toast('Assigned to e.mawdsley');
+      return;
+    }
+    if (form.hasAttribute('data-wc-dismiss')) {
+      var disItem = form.closest('[data-wc-item]');
+      var panelName = disItem && disItem.getAttribute('data-wc-panel-item');
+      if (disItem) disItem.remove();
+      if (panelName) {
+        document.querySelectorAll('[data-wc-tab-count="' + panelName + '"]').forEach(function (c) {
+          var n = parseInt(c.textContent.trim(), 10);
+          if (!isNaN(n)) c.textContent = String(Math.max(0, n - 1));
+        });
+        applyWcFilters(panelName);
+      }
+      toast('Dismissed from Work Centre');
+      return;
+    }
     toast((button && button.textContent.trim()) || 'Submitted');
   });
 
@@ -778,11 +852,81 @@
       }, 10);
     }
   }
+  function selectWcInspectorRow(itemId) {
+    if (!itemId) return;
+    document.querySelectorAll('tr[data-wc-inspect-row]').forEach(function (r) {
+      r.setAttribute('aria-selected', String(r.getAttribute('data-wc-inspect-row') === itemId));
+    });
+    document.querySelectorAll('[data-wc-inspector-card]').forEach(function (c) {
+      c.hidden = c.getAttribute('data-wc-inspector-card') !== itemId;
+    });
+  }
+
+  function setWcActiveTab(tabKey, notifyHost) {
+    if (!tabKey) return;
+    document.querySelectorAll('[data-wc-view-tab]').forEach(function (t) {
+      t.setAttribute('aria-selected', String(t.getAttribute('data-wc-view-tab') === tabKey));
+    });
+    document.querySelectorAll('[data-wc-view-switch]').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.getAttribute('data-wc-view-switch') === tabKey));
+    });
+    var board = document.querySelector('.wc-c-board');
+    var allBtn = document.querySelector('[data-wc-board-all]');
+    if (board) {
+      board.setAttribute('data-wc-board-focus', tabKey);
+      if (allBtn) allBtn.setAttribute('aria-pressed', 'false');
+    }
+    document.querySelectorAll('[data-wc-view-panel]').forEach(function (p) {
+      p.hidden = p.getAttribute('data-wc-view-panel') !== tabKey;
+    });
+    var firstRow = document.querySelector('[data-wc-view-panel="' + tabKey + '"] tr[data-wc-inspect-row]');
+    if (firstRow) selectWcInspectorRow(firstRow.getAttribute('data-wc-inspect-row'));
+    if (notifyHost) post({ type: 'wc-tab-sync', tab: tabKey });
+  }
+
+  function applyWcFilters(panelKey) {
+    var searchInput = document.querySelector('[data-wc-live-search]');
+    var q = searchInput ? searchInput.value.trim().toLowerCase() : '';
+    var panels = panelKey
+      ? document.querySelectorAll('[data-wc-view-panel="' + panelKey + '"]')
+      : document.querySelectorAll('[data-wc-view-panel]');
+    panels.forEach(function (panel) {
+      var pKey = panel.getAttribute('data-wc-view-panel');
+      var pressedChip = panel.querySelector('[data-wc-subfilter][aria-pressed="true"]');
+      var cat = pressedChip ? pressedChip.getAttribute('data-wc-subfilter') : 'all';
+      var visible = 0;
+      panel.querySelectorAll('[data-wc-item]').forEach(function (item) {
+        var itemCat = item.getAttribute('data-wc-filter-cat') || '';
+        var catOk = !cat || cat === 'all' || itemCat === cat;
+        var textOk = !q || item.textContent.toLowerCase().indexOf(q) !== -1;
+        var show = catOk && textOk;
+        item.hidden = !show;
+        if (show) visible++;
+      });
+      panel.querySelectorAll('[data-wc-group-divider]').forEach(function (div) {
+        div.hidden = (cat && cat !== 'all') || !!q;
+      });
+      var meta = panel.querySelector('[data-wc-visible-count="' + pKey + '"]');
+      if (meta) {
+        meta.textContent = visible + (visible === 1 ? ' item shown' : ' items shown');
+      }
+    });
+  }
+
+  window.addEventListener('input', function (ev) {
+    var t = ev.target;
+    if (t instanceof HTMLInputElement && t.hasAttribute('data-wc-live-search')) {
+      applyWcFilters();
+    }
+  });
 
   window.addEventListener('message', function (ev) {
     var msg = ev.data || {};
     if (msg.type === 'upload-sample') {
       setUploadSampleFiles(!!msg.on, false);
+    }
+    if (msg.type === 'wc-tab' && msg.tab) {
+      setWcActiveTab(msg.tab, false);
     }
   });
   window.addEventListener('reset', function (ev) {

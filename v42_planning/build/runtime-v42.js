@@ -14,8 +14,11 @@
   var changeList = document.getElementById('mock-changes');
   var toastEl = document.getElementById('mock-toast');
   var uploadControls = document.getElementById('mock-upload-controls');
-  var lastUploadDesign = 'a';
+  var wcControls = document.getElementById('mock-wc-controls');
+  var lastUploadDesign = 'e';
   var uploadSampleOn = false;
+  var lastWcDesign = 'a';
+  var lastWcTab = 'new-cases';
 
   var query = new URLSearchParams(location.search);
   var current = {
@@ -69,6 +72,8 @@
     if (!state) return Promise.resolve();
     var mUpload = current.key.match(/^upload-([a-e])(-case)?$/);
     if (mUpload) lastUploadDesign = mUpload[1];
+    var mWc = current.key.match(/^work-centre-([a-e])$/);
+    if (mWc) lastWcDesign = mWc[1];
     var proposal = current.mode === 'proposal' && state.hasProposal;
     return body(state.key + '-' + (proposal ? 'proposal' : 'today')).then(function (markup) {
       return new Promise(function (resolve) {
@@ -89,6 +94,9 @@
     }
     if (uploadSampleOn && /^upload-[a-e]/.test(current.key) && frame.contentWindow) {
       try { frame.contentWindow.postMessage({ type: 'upload-sample', on: true }, '*'); } catch (e) {}
+    }
+    if (lastWcTab !== 'new-cases' && /^work-centre-[a-e]$/.test(current.key) && frame.contentWindow) {
+      try { frame.contentWindow.postMessage({ type: 'wc-tab', tab: lastWcTab }, '*'); } catch (e) {}
     }
     if (done) setTimeout(done, 30);
   });
@@ -127,6 +135,19 @@
         });
       }
     }
+    var mWc = current.key.match(/^work-centre-([a-e])$/);
+    if (wcControls) {
+      wcControls.hidden = !mWc;
+      if (mWc) {
+        var wcDKey = mWc[1];
+        wcControls.querySelectorAll('[data-strip-wc-design]').forEach(function (b) {
+          b.setAttribute('aria-pressed', String(b.getAttribute('data-strip-wc-design') === wcDKey));
+        });
+        wcControls.querySelectorAll('[data-strip-wc-tab]').forEach(function (b) {
+          b.setAttribute('aria-pressed', String(b.getAttribute('data-strip-wc-tab') === lastWcTab));
+        });
+      }
+    }
     changeList.innerHTML = state.changes && state.changes.length
       ? state.changes.map(function (c) { return '<li><strong>' + esc(c.id) + '</strong> ' + esc(c.summary) + '</li>'; }).join('')
       : '<li class="mock-none">No change proposed on this page.</li>';
@@ -148,6 +169,9 @@
   function resolveRoute(href) {
     var path = String(href || '').split('#')[0];
     var bare = path.split('?')[0];
+    if (bare === '/' || bare === '/Index') {
+      return 'work-centre-' + lastWcDesign;
+    }
     if (bare === '/Upload') {
       return 'upload-' + lastUploadDesign + (path.indexOf('caseId=') !== -1 ? '-case' : '');
     }
@@ -183,6 +207,11 @@
     }
     if (msg.type === 'upload-sample-sync') {
       uploadSampleOn = !!msg.on;
+      if (byKey[current.key]) syncStrip(byKey[current.key]);
+      return;
+    }
+    if (msg.type === 'wc-tab-sync') {
+      lastWcTab = msg.tab || 'new-cases';
       if (byKey[current.key]) syncStrip(byKey[current.key]);
       return;
     }
@@ -226,6 +255,24 @@
         if (byKey[current.key]) syncStrip(byKey[current.key]);
         if (frame.contentWindow) {
           try { frame.contentWindow.postMessage({ type: 'upload-sample', on: uploadSampleOn }, '*'); } catch (e) {}
+        }
+      });
+    });
+  }
+  if (wcControls) {
+    wcControls.querySelectorAll('[data-strip-wc-design]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var d = b.getAttribute('data-strip-wc-design') || 'a';
+        var nextKey = 'work-centre-' + d;
+        if (byKey[nextKey]) { current.key = nextKey; render(); }
+      });
+    });
+    wcControls.querySelectorAll('[data-strip-wc-tab]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        lastWcTab = b.getAttribute('data-strip-wc-tab') || 'new-cases';
+        if (byKey[current.key]) syncStrip(byKey[current.key]);
+        if (frame.contentWindow) {
+          try { frame.contentWindow.postMessage({ type: 'wc-tab', tab: lastWcTab }, '*'); } catch (e) {}
         }
       });
     });

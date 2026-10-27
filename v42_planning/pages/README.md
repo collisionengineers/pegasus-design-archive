@@ -4,5 +4,5 @@ One folder per area the mail simplification changes. Each area carries its [How 
 
 - [**Inbox**](inbox/README.md) — [How it works](inbox/how-it-works.md) · [How it should work](inbox/how-it-should-work.md) · [Dialogs](inbox/dialogs/README.md) · [Panels](inbox/panels/README.md) · [States (12)](inbox/states/README.md)
 - [**Case**](case/README.md) — [How it works](case/how-it-works.md) · [How it should work](case/how-it-should-work.md) · [Dialogs](case/dialogs/README.md) · [Panels](case/panels/README.md) · [States (5)](case/states/README.md)
-- [**Work Centre**](work-centre/README.md) — [How it works](work-centre/how-it-works.md) · [How it should work](work-centre/how-it-should-work.md) · [Dialogs](work-centre/dialogs/README.md) · [Panels](work-centre/panels/README.md) · [States (3)](work-centre/states/README.md)
+- [**Work Centre**](work-centre/README.md) — [How it works](work-centre/how-it-works.md) · [How it should work](work-centre/how-it-should-work.md) · [Dialogs](work-centre/dialogs/README.md) · [Panels](work-centre/panels/README.md) · [States (6)](work-centre/states/README.md)
 - [**Upload**](upload/README.md) — [How it works](upload/how-it-works.md) · [How it should work](upload/how-it-should-work.md) · [Dialogs](upload/dialogs/README.md) · [Panels](upload/panels/README.md) · [States (10)](upload/states/README.md)

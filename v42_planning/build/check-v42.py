@@ -248,19 +248,54 @@ def v42_checks(page: Page) -> None:
     check("AA: no Open query before the report is sent", not q("form[data-open-query]") and not q("form[data-tag-as-query]"))
     check("E: Cancellation received stays in the aside", "Cancellation received" in text("main"))
 
-    # Work Centre (P)
-    go(page, "work-centre", "proposal")
-    check("P: Work Centre has the Query kind chip", q('nav.wc-filters a[data-wc-kind="query"]'))
-    check("P: Work Centre Query row is Unassigned with Take",
-          q('tr[data-wc-row-kind="query"] [data-wc-take]') and text('tr[data-wc-row-kind="query"] .wc-col-owner') == "Unassigned")
-    check("P: Needs attention count reads 10", text("#wc-tab-attention .tab-count") == "10")
-    go(page, "work-centre-mine", "proposal")
-    check("P: Mine Query row assigned to the viewer, no Take",
-          q('tr[data-wc-row-kind="query"]') and not q('tr[data-wc-row-kind="query"] [data-wc-take]')
-          and text('tr[data-wc-row-kind="query"] .wc-col-owner') == "e.mawdsley")
+    # Work Centre 5 candidate designs (WC1..WC5, AC)
+    wc_markers = {
+        "a": ".wc-v42--a .wc-a-stats-grid",
+        "b": ".wc-v42--b .pane-layout.wc-b-workbench",
+        "c": ".wc-v42--c .wc-c-board",
+        "d": ".wc-v42--d .wc-d-layout",
+        "e": ".wc-v42--e .record.wc-e-deck",
+    }
+    for d_key, marker in wc_markers.items():
+        wc_state = f"work-centre-{d_key}"
+        go(page, wc_state, "today")
+        check(f"{wc_state} today: live Needs attention Work Centre",
+              q("#wc-tab-attention") and not q(".wc-v42-root"))
+        go(page, wc_state, "proposal")
+        body_text = text("main")
+        check(f"AC/{d_key.upper()}: {wc_state} removes Needs attention and renders distinct design marker ({marker})",
+              not q("#wc-tab-attention") and q(marker) and q("[data-wc-design-bar]"))
+        check(f"AC/{d_key.upper()}: {wc_state} preserves Queue totals and Activity Today/Week stats",
+              all(lbl in body_text for lbl in ("Not ready", "Review", "Held", "Unidentified", "Triages"))
+              and q('[data-figure="new-cases-today"]') and q('[data-figure="sent-today"]')
+              and q('[data-figure="reports-today"]') and q('[data-figure="emails-today"]'))
+        check(f"AC/{d_key.upper()}: {wc_state} defaults to New Cases first view with API, E-mail, Manual and Automation arrivals",
+              q('[data-wc-view-tab="new-cases"][aria-selected="true"]')
+              and q('[data-wc-channel="api"]') and q('[data-wc-channel="email"]')
+              and q('[data-wc-channel="manual"]') and q('[data-wc-channel="automation"]'))
+        check(f"AC/{d_key.upper()}: {wc_state} includes System Actions and AI Actions panels",
+              q('[data-wc-view-panel="system-actions"] [data-wc-sys-kind="auto-match"]')
+              and q('[data-wc-view-panel="system-actions"] [data-wc-sys-kind="images"]')
+              and q('[data-wc-view-panel="ai-actions"] [data-wc-ai-kind="estimate"]')
+              and q('[data-wc-view-panel="ai-actions"] [data-wc-ai-kind="query-draft"]'))
+        check(f"AC/{d_key.upper()}: {wc_state} has no horizontal overflow",
+              frame_eval(page, "d.documentElement.scrollWidth <= d.documentElement.clientWidth"))
+    # Interactive tab switching and Design B inspector verification
+    go(page, "work-centre-a", "proposal")
+    frame_click(page, '[data-wc-view-tab="system-actions"]')
+    check("AC: clicking System Actions tab reveals system-actions panel",
+          frame_eval(page, "!d.querySelector('[data-wc-view-panel=\"system-actions\"]').hidden"))
+    frame_click(page, '[data-wc-view-tab="ai-actions"]')
+    check("AC: clicking AI Actions tab reveals ai-actions panel with Estimate done and Draft to a query",
+          frame_eval(page, "!d.querySelector('[data-wc-view-panel=\"ai-actions\"]').hidden")
+          and "Estimate done" in text('[data-wc-view-panel="ai-actions"]')
+          and "Draft to a query" in text('[data-wc-view-panel="ai-actions"]'))
+    go(page, "work-centre-b", "proposal")
+    frame_click(page, 'tr[data-wc-inspect-row="nc-26217"]')
+    check("AC/B: clicking a row in Design B updates the right-hand split inspector",
+          frame_eval(page, "!d.querySelector('[data-wc-inspector-card=\"nc-26217\"]').hidden"))
     go(page, "cases-query", "proposal")
     check("P: Cases › Queries unchanged", not page.evaluate("window.__mock.meta('cases-query').hasProposal"))
-
     # Upload 5 candidate designs (UB1..UB5, AB) for both /Upload and Case /Upload?caseId=…
     design_markers = {
         "a": ".up-v42--a .pane-layout.up-a-workbench",
@@ -296,11 +331,11 @@ def v42_checks(page: Page) -> None:
                       and all(tok in body_text for tok in (
                           "QDOS26214", "MA59BDY · R. Whitfield", "QDOS", "Report sent",
                           "They appear under Files once processed.", "Back to QDOS26214")))
-    check("AB: clicking Back to QDOS26214 on upload-a-case returns to case",
-          click_to_state(page, "upload-a-case", "[data-upload-back-case]", "case"))
-    check("AB: clicking Add evidence on case opens upload-a-case",
-          click_to_state(page, "case", "[data-add-evidence]", "upload-a-case"))
-    go(page, "upload-a", "proposal")
+    check("AB: clicking Back to QDOS26214 on upload-e-case returns to case",
+          click_to_state(page, "upload-e-case", "[data-upload-back-case]", "case"))
+    check("AB: clicking Add evidence on case opens upload-e-case",
+          click_to_state(page, "case", "[data-add-evidence]", "upload-e-case"))
+    go(page, "upload-e", "proposal")
     frame_click(page, '[data-upload-sample-toggle="1"]')
     page.wait_for_timeout(120)
     check("AB: 3 sample files toggle populates 3 files via upload.js and updates submit button",

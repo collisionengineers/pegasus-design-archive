@@ -491,24 +491,77 @@
     ]
   },
   {
-    "key": "work-centre",
-    "label": "Work Centre \u00b7 Needs attention",
+    "key": "work-centre-a",
+    "label": "Work Centre \u00b7 Design A \u2014 Streamlined ledger",
     "group": "Work Centre",
     "changes": [
       {
-        "id": "P",
-        "summary": "Open queries in Needs attention: Unassigned ones with Take, the viewer's own in Mine."
+        "id": "WC1",
+        "summary": "Design A (Streamlined ledger): side-by-side Office queues and Activity stat cards above a unified 3-tab ledger (New Cases, System Actions, AI Actions) with channel/kind sub-filters."
+      },
+      {
+        "id": "AC",
+        "summary": "Work Centre simplification (/): choose Design A, B, C, D or E to replace Needs attention with New Cases (first view across API, E-mail, Manual & Automation), System Actions, AI Actions, and preserved Queue + Activity stats."
       }
     ]
   },
   {
-    "key": "work-centre-mine",
-    "label": "Work Centre \u00b7 Mine",
+    "key": "work-centre-b",
+    "label": "Work Centre \u00b7 Design B \u2014 KPI ribbon & split inspector",
     "group": "Work Centre",
     "changes": [
       {
-        "id": "P",
-        "summary": "Open queries in Needs attention: Unassigned ones with Take, the viewer's own in Mine."
+        "id": "WC2",
+        "summary": "Design B (KPI ribbon & split inspector): ultra-compact single-row Queue + Activity ribbon above a 2-pane workbench with selectable stream rows on the left and a live Case / AI output inspector pane on the right."
+      },
+      {
+        "id": "AC",
+        "summary": "Work Centre simplification (/): choose Design A, B, C, D or E to replace Needs attention with New Cases (first view across API, E-mail, Manual & Automation), System Actions, AI Actions, and preserved Queue + Activity stats."
+      }
+    ]
+  },
+  {
+    "key": "work-centre-c",
+    "label": "Work Centre \u00b7 Design C \u2014 Three-column live board",
+    "group": "Work Centre",
+    "changes": [
+      {
+        "id": "WC3",
+        "summary": "Design C (Three-column live board): 9-cell unified metric bar above a 3-column simultaneous operations board showing New Cases, System Actions, and AI Actions side by side (or single-stream focus)."
+      },
+      {
+        "id": "AC",
+        "summary": "Work Centre simplification (/): choose Design A, B, C, D or E to replace Needs attention with New Cases (first view across API, E-mail, Manual & Automation), System Actions, AI Actions, and preserved Queue + Activity stats."
+      }
+    ]
+  },
+  {
+    "key": "work-centre-d",
+    "label": "Work Centre \u00b7 Design D \u2014 Telemetry sidebar & priority stream",
+    "group": "Work Centre",
+    "changes": [
+      {
+        "id": "WC4",
+        "summary": "Design D (Telemetry sidebar & priority stream): 280px left telemetry rail for Office queues and Today/Week Activity beside a full-height time-grouped stream starting at the top of the viewport."
+      },
+      {
+        "id": "AC",
+        "summary": "Work Centre simplification (/): choose Design A, B, C, D or E to replace Needs attention with New Cases (first view across API, E-mail, Manual & Automation), System Actions, AI Actions, and preserved Queue + Activity stats."
+      }
+    ]
+  },
+  {
+    "key": "work-centre-e",
+    "label": "Work Centre \u00b7 Design E \u2014 Command deck & action cards",
+    "group": "Work Centre",
+    "changes": [
+      {
+        "id": "WC5",
+        "summary": "Design E (Command deck & action cards): dark charcoal .record-head command deck with Queue and Activity tiles above 3 view selector cards and structured 4-zone Case action cards."
+      },
+      {
+        "id": "AC",
+        "summary": "Work Centre simplification (/): choose Design A, B, C, D or E to replace Needs attention with New Cases (first view across API, E-mail, Manual & Automation), System Actions, AI Actions, and preserved Queue + Activity stats."
       }
     ]
   },
@@ -585,7 +638,7 @@
     "changes": [
       {
         "id": "UB5",
-        "summary": "Design E (Focused record sheet): bounded 880px .record sheet with dark charcoal .record-head header band, 4px .record-accent stripe, and 4 accepted-media category tiles."
+        "summary": "Design E (Full-width record workspace & category tiles): full-width .record workspace with 4 accepted-media category tiles across the top, a Case identity ribbon on Case upload, and a 2-pane drop well + live Selected files queue."
       },
       {
         "id": "AB",
@@ -660,7 +713,7 @@
     "changes": [
       {
         "id": "UB5",
-        "summary": "Design E (Focused record sheet): bounded 880px .record sheet with dark charcoal .record-head header band, 4px .record-accent stripe, and 4 accepted-media category tiles."
+        "summary": "Design E (Full-width record workspace & category tiles): full-width .record workspace with 4 accepted-media category tiles across the top, a Case identity ribbon on Case upload, and a 2-pane drop well + live Selected files queue."
       },
       {
         "id": "AB",

@@ -42,8 +42,11 @@ STATES: list[dict] = [
     s("case-queries-assign", "Case · Assign query dialog", CASE, "inbox", "case", scroll="#section-queries"),
     s("case-aside-query", "Case · Next action and Actions menu with an open query", CASE, "inbox", "case"),
     s("case-qdos26220", "Case · Cancellation received", CASE, "inbox", "case-qdos26220"),
-    s("work-centre", "Work Centre · Needs attention", WORK, "shell"),
-    s("work-centre-mine", "Work Centre · Mine", WORK, "shell"),
+    s("work-centre-a", "Work Centre · Design A — Streamlined ledger", WORK, "shell", "work-centre", wc_design="a"),
+    s("work-centre-b", "Work Centre · Design B — KPI ribbon & split inspector", WORK, "shell", "work-centre", wc_design="b"),
+    s("work-centre-c", "Work Centre · Design C — Three-column live board", WORK, "shell", "work-centre", wc_design="c"),
+    s("work-centre-d", "Work Centre · Design D — Telemetry sidebar & priority stream", WORK, "shell", "work-centre", wc_design="d"),
+    s("work-centre-e", "Work Centre · Design E — Command deck & action cards", WORK, "shell", "work-centre", wc_design="e"),
     s("cases-query", "Cases · Queries", WORK, "intake"),
     s("upload-a", "Upload · Design A — Split workbench", UPLOAD, "intake", "upload",
       upload_design="a", case_upload=False),
@@ -69,8 +72,8 @@ STATES: list[dict] = [
 
 # Live routes with no captured path of their own, mapped to the nearest state.
 ROUTES: list[tuple[str, str]] = [
-    ("/", "work-centre"),
-    ("/Index", "work-centre"),
+    ("/", "work-centre-a"),
+    ("/Index", "work-centre-a"),
     ("/Inbox", "inbox"),
     ("/Inbox?queue=no_case_found", "inbox-no-case-found"),
     ("/Inbox?folder=dismissed", "inbox-dismissed"),
@@ -78,7 +81,7 @@ ROUTES: list[tuple[str, str]] = [
     ("/Cases/bee37ce3-c710-4a5b-8e2c-67e8ed6ad8cb", "case-qdos26220"),
     ("/Cases/85de4c48-ed02-445f-a2ce-d97a087c19dd", "case"),
     ("/Cases/", "case"),
-    ("/Upload", "upload-a"),
-    ("/Upload?caseId=85de4c48-ed02-445f-a2ce-d97a087c19dd", "upload-a-case"),
-    ("/Upload?caseId=bee37ce3-c710-4a5b-8e2c-67e8ed6ad8cb", "upload-a-case"),
+    ("/Upload", "upload-e"),
+    ("/Upload?caseId=85de4c48-ed02-445f-a2ce-d97a087c19dd", "upload-e-case"),
+    ("/Upload?caseId=bee37ce3-c710-4a5b-8e2c-67e8ed6ad8cb", "upload-e-case"),
 ]

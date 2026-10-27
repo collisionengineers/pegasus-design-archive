@@ -74,8 +74,9 @@ DESIGN_META: dict[str, tuple[str, str, str]] = {
     "e": (
         "UB5",
         "Design E · Focused record sheet",
-        "Design E (Focused record sheet): bounded 880px .record sheet with dark charcoal "
-        ".record-head header band, 4px .record-accent stripe, and 4 accepted-media category tiles.",
+        "Design E (Full-width record workspace & category tiles): full-width .record workspace with "
+        "4 accepted-media category tiles across the top, a Case identity ribbon on Case upload, "
+        "and a 2-pane drop well + live Selected files queue.",
     ),
 }
 
@@ -636,48 +637,51 @@ def _build_design_d(case_upload: bool) -> tuple[str, str]:
 
 
 def _build_design_e(case_upload: bool) -> tuple[str, str]:
-    header = (
-        '<header class="page-header up-head up-e-page-head" hidden>'
-        '<div class="page-title"><h1>Upload</h1></div>'
-        "</header>"
-    )
     if case_upload:
-        record_head = (
-            '<header class="record-head up-e-head" data-upload-declared>'
-            '<span class="up-e-head-badge" aria-hidden="true">'
-            '<svg class="icon" aria-hidden="true"><use href="#icon-upload"></use></svg>'
-            "</span>"
-            '<div data-upload-destination>'
-            '<p class="up-eyebrow">Adding to</p>'
-            f'<h1 class="mono"><a href="{CASE_HREF}">{CASE_REF}</a></h1>'
-            '<div class="record-identity">'
-            f"<span><b>{CASE_PERSON}</b></span>"
-            f"<span><b>{CASE_PRINCIPAL}</b></span>"
-            f'<span class="status status--blue">{CASE_STAGE}</span>'
-            f"<span>{APPEAR_UNDER_FILES}</span>"
+        header = (
+            '<header class="page-header up-head">'
+            '<div class="page-title">'
+            f'<p class="eyebrow">Adding to {CASE_REF}</p>'
+            "<h1>Upload</h1>"
             "</div>"
-            "</div>"
-            f'{_back_to_case_btn("btn--dark")}'
+            f'<div class="page-actions">{_back_to_case_btn()}</div>'
             "</header>"
+        )
+        case_ribbon = (
+            '<div class="case-identity up-e-case-ribbon" data-upload-declared>'
+            '<div class="up-e-ribbon-grid" data-upload-destination>'
+            '<div class="ribbon-item ribbon-ref">'
+            '<span class="ribbon-label">Adding to</span>'
+            f'<strong class="ribbon-value mono"><a href="{CASE_HREF}">{CASE_REF}</a></strong>'
+            "</div>"
+            '<div class="ribbon-item">'
+            '<span class="ribbon-label">Registration · Claimant</span>'
+            f'<span class="ribbon-value">{CASE_PERSON}</span>'
+            "</div>"
+            '<div class="ribbon-item">'
+            '<span class="ribbon-label">Principal</span>'
+            f'<span class="ribbon-value">{CASE_PRINCIPAL}</span>'
+            "</div>"
+            '<div class="ribbon-item">'
+            '<span class="ribbon-label">Stage</span>'
+            f'<span class="ribbon-value"><span class="status status--blue">{CASE_STAGE}</span></span>'
+            "</div>"
+            '<div class="ribbon-item">'
+            '<span class="ribbon-label">Filing destination</span>'
+            f'<span class="ribbon-value muted">{APPEAR_UNDER_FILES}</span>'
+            "</div>"
+            "</div>"
+            "</div>"
         )
     else:
-        record_head = (
-            '<header class="record-head up-e-head">'
-            '<span class="up-e-head-badge" aria-hidden="true">'
-            '<svg class="icon" aria-hidden="true"><use href="#icon-upload"></use></svg>'
-            "</span>"
-            "<div>"
-            '<p class="up-eyebrow">Add files to Pegasus</p>'
+        header = (
+            '<header class="page-header up-head">'
+            '<div class="page-title">'
             "<h1>Upload</h1>"
-            '<div class="record-identity">'
-            "<span><b>20 files maximum</b></span>"
-            "<span>100.0 MB per file</span>"
-            "<span>200.0 MB per upload</span>"
             "</div>"
-            "</div>"
-            '<span class="status status--neutral">Step 1 of 2</span>'
             "</header>"
         )
+        case_ribbon = ""
 
     surface = (
         '<div class="up-surface up-v42-root up-v42--e" data-upload-design="e">'
@@ -685,54 +689,69 @@ def _build_design_e(case_upload: bool) -> tuple[str, str]:
         'data-max-files="20" data-max-bytes="100000000" data-max-total="200000000">'
         '<form method="post" enctype="multipart/form-data" class="up-v42-form record up-e-sheet" data-upload-form>'
         f"{_hidden_inputs(case_upload)}"
-        f"{record_head}"
-        '<div class="record-accent"></div>'
-        '<div class="record-body up-e-body">'
+        f"{case_ribbon}"
+        '<div class="up-e-top-section">'
         '<div class="up-e-title-row">'
+        "<div>"
+        '<p class="eyebrow">Add files to Pegasus</p>'
         '<h2 data-select-heading>Choose the files for this upload</h2>'
-        '<span class="muted">20 files maximum · 100.0 MB per file · 200.0 MB per upload</span>'
+        "</div>"
+        '<div class="up-b-limits-pills">'
+        '<span class="up-limit-pill">20 files maximum</span>'
+        '<span class="up-limit-pill">100.0 MB per file</span>'
+        '<span class="up-limit-pill">200.0 MB per upload</span>'
+        "</div>"
         "</div>"
         '<div class="up-e-kinds" aria-label="Accepted file categories">'
         '<div class="up-e-kind">'
-        '<svg class="icon" aria-hidden="true"><use href="#icon-image"></use></svg>'
+        '<span class="up-e-kind-icon"><svg class="icon" aria-hidden="true"><use href="#icon-image"></use></svg></span>'
         '<div><strong>Images</strong><small class="mono">JPG, JPEG, PNG</small></div>'
         "</div>"
         '<div class="up-e-kind">'
-        '<svg class="icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>'
+        '<span class="up-e-kind-icon"><svg class="icon" aria-hidden="true"><use href="#icon-file-text"></use></svg></span>'
         '<div><strong>Documents</strong><small class="mono">PDF, DOC, DOCX</small></div>'
         "</div>"
         '<div class="up-e-kind">'
-        '<svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>'
+        '<span class="up-e-kind-icon"><svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg></span>'
         '<div><strong>Emails</strong><small class="mono">EML, MSG</small></div>'
         "</div>"
         '<div class="up-e-kind">'
-        '<svg class="icon" aria-hidden="true"><use href="#icon-file"></use></svg>'
+        '<span class="up-e-kind-icon"><svg class="icon" aria-hidden="true"><use href="#icon-file"></use></svg></span>'
         '<div><strong>Video</strong><small class="mono">MP4, MOV</small></div>'
         "</div>"
         "</div>"
+        "</div>"
+        '<div class="up-e-main-grid">'
+        '<div class="up-e-left-pane">'
         f"{_error_alert()}"
         f"{_drop_box('up-e-drop')}"
+        "</div>"
         '<section class="up-e-files up-v42-keep-visible" aria-labelledby="up-selected-title" data-select-files>'
-        '<header class="up-section-head">'
+        '<header class="pane-head up-e-files-head">'
         '<h2 id="up-selected-title">Selected files</h2>'
-        '<span class="tabular" data-select-count data-empty-text="0 files · 0.0 MB">0 files · 0.0 MB</span>'
+        '<span class="meta tabular" data-select-count data-empty-text="0 files · 0.0 MB">0 files · 0.0 MB</span>'
         "</header>"
-        '<div class="up-e-empty" data-select-empty>'
-        "No files selected yet — choose or drop files above."
+        '<div class="up-e-files-body">'
+        '<div class="up-e-empty-state" data-select-empty>'
+        '<span class="up-empty-icon" aria-hidden="true">'
+        '<svg class="icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>'
+        "</span>"
+        "<h3>No files selected yet</h3>"
+        "<p>Drop files on the left or click Choose files to stage them here before uploading.</p>"
         "</div>"
         '<ul class="up-file-list" data-select-list role="status" aria-live="polite"></ul>'
-        "</section>"
         "</div>"
         '<footer class="record-bar up-e-foot up-select-actions up-v42-keep-visible" data-select-actions>'
         '<p data-select-summary data-empty-text="No files selected">No files selected</p>'
         f'<div class="record-bar-end">{_action_buttons()}</div>'
         "</footer>"
+        "</section>"
+        "</div>"
         "</form>"
         "</div>"
         "</div>"
     )
     return header, surface
-
 
 BUILDERS = {
     "a": _build_design_a,
