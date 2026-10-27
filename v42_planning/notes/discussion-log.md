@@ -121,3 +121,24 @@ What changed:
 After reviewing the exact Pegasus `Inter` font, colour tokens, `Case` / `Type` / `Subject` / `Sender` / `Received` headers, `None` for unlinked Cases, removal of `"Early triage"` / `"Signal"`, `.table td.row-actions` button containment fix, and default-to-Proposal mode (`9fd9869`), the operator signed off:
 
 > *"I sign off on this design. Consider the existing session plan, and create a full plan for the integration of this into our design, taking into consideration concerns regarding blast radius, existing features, and documentation that may contradict. Do not proceed to integration yet."*
+
+## 27 October 2026: 5 visual designs for the initial Upload screen (`/Upload` and `/Upload?caseId=…`)
+
+The operator shared a screenshot of the live `/Upload` screen (`Upload.cshtml` + `upload.css`) and requested:
+
+> *"This is the initial upload screen (which can be accessed from the left hand nav bar or from a case to upload to a case).*
+>
+> *It is pretty ugly and basic.*
+>
+> *Give me 5 different designs for this page, integrate them into our v42 mockup for me to view alongside the existing changes."*
+
+What changed:
+
+- **10 Upload states added to `states_v42.py` (`upload-a`..`upload-e` and `upload-a-case`..`upload-e-case`):** Backed by `captured-live/intake/upload.html`, with a `seed_live_declared_case` preset on `upload-*-case` that injects the exact live `DeclaredCaseId` + `_UploadDestinationCard.cshtml` markup in Today mode.
+- **Five distinct Proposal layouts (`proposals_upload.py`, `frame-v42.css`, `UB1`–`UB5`, sign-off item `AB`):**
+  1. **Design A (`UB1` — Split workbench):** Permanent 2-pane `.pane-layout` with the tactile drop well + 3-cell `.fact-grid` limit strip (and framed navy Case destination banner on Case upload) on the left, and a permanently visible `Selected files` queue pane + `.pane-foot` action bar on the right.
+  2. **Design B (`UB2` — Structured panel & format guide):** `.panel` workspace pairing the drop well and `Selected files` list with a `310px` **Accepted formats** reference card (`Images`, `Documents`, `Emails`, `Video` with Lucide icons and extensions), topped on Case upload by a 5-cell horizontal Case identity ribbon card (`.up-b-case-ribbon`).
+  3. **Design C (`UB3` — Intake staging ledger):** Mirrors the full-width v42 Inbox ledger directly above `/Upload` in the rail — combining a Case `.presence-strip` (on Case upload) and compact horizontal 3-part `.up-c-dropbar` with a full-width staging ledger (`Selected files`, `Destination`, `Remove`).
+  4. **Design D (`UB4` — Destination-first split):** 2-column `.up-d-split` separating a `350px` left **Destination & limits** `.context-card.panel` (showing either the unassigned review rule or the full `QDOS26214` target Case card + `Back to QDOS26214` and 2×2 `.fact-grid`) from the right-hand **Choose & review files** `.panel`.
+  5. **Design E (`UB5` — Focused record sheet):** Bounded `880px` `.record.up-e-sheet` with Pegasus's dark charcoal `.record-head` header band, 4px `.record-accent` stripe, 4 accepted-media category tiles, drop well, `Selected files` list, and `.record-bar` footer.
+- **Interactive design switcher & 3-file sample preview (`strip-v42.html`, `runtime-v42.js`, `bridge-v42.js`):** Both the in-page comparison bar (`.up-design-bar`) and the floating `Mockup controls` strip let the operator switch between Designs `A`–`E`, toggle `Left-nav (/Upload)` vs `Case (QDOS26214)`, and toggle `Empty` vs `3 sample files` (`front-offside.jpg · 2.4 MB`, `rear-quarter.png · 1.8 MB`, `Bodyshopsuppreport.pdf · 0.6 MB`) using `upload.js`'s live `DataTransfer` pipeline.

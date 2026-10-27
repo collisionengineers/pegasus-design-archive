@@ -17,6 +17,7 @@ SLUGS = {
     "Inbox": "inbox",
     "Case": "case",
     "Work Centre": "work-centre",
+    "Upload": "upload",
 }
 
 

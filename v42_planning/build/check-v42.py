@@ -261,6 +261,56 @@ def v42_checks(page: Page) -> None:
     go(page, "cases-query", "proposal")
     check("P: Cases › Queries unchanged", not page.evaluate("window.__mock.meta('cases-query').hasProposal"))
 
+    # Upload 5 candidate designs (UB1..UB5, AB) for both /Upload and Case /Upload?caseId=…
+    design_markers = {
+        "a": ".up-v42--a .pane-layout.up-a-workbench",
+        "b": ".up-v42--b .up-b-guide",
+        "c": ".up-v42--c .up-c-dropbar",
+        "d": ".up-v42--d .up-d-split",
+        "e": ".up-v42--e .record.up-e-sheet",
+    }
+    for d_key, marker in design_markers.items():
+        rail_state = f"upload-{d_key}"
+        case_state = f"upload-{d_key}-case"
+        go(page, rail_state, "today")
+        check(f"{rail_state} today: live .up-surface without DeclaredCaseId",
+              q(".up-surface") and not q(".up-v42-root") and not q("[data-upload-declared]"))
+        go(page, case_state, "today")
+        check(f"{case_state} today: live .up-surface with DeclaredCaseId for QDOS26214",
+              q(".up-surface") and not q(".up-v42-root") and q("[data-upload-declared]")
+              and "QDOS26214" in text("[data-upload-destination]"))
+        for st, is_case in ((rail_state, False), (case_state, True)):
+            go(page, st, "proposal")
+            body_text = text("main")
+            check(f"AB/{d_key.upper()}: {st} renders distinct design marker ({marker}) and upload.js enhancement",
+                  q(marker) and q("[data-upload-select].is-enhanced") and q("input#Upload[type='file']"))
+            check(f"AB/{d_key.upper()}: {st} preserves exact limits and accepted extensions",
+                  all(lim in body_text for lim in (
+                      "20 files maximum", "100.0 MB per file", "200.0 MB per upload",
+                      "JPG, JPEG, PNG, PDF, DOC, DOCX, EML, MSG, MP4 or MOV")))
+            check(f"AB/{d_key.upper()}: {st} has no horizontal overflow",
+                  frame_eval(page, "d.documentElement.scrollWidth <= d.documentElement.clientWidth"))
+            if is_case:
+                check(f"AB/{d_key.upper()}: {st} displays QDOS26214 Case identity, filing rule and Back to QDOS26214",
+                      q("[data-upload-declared]") and q("[data-upload-back-case]")
+                      and all(tok in body_text for tok in (
+                          "QDOS26214", "MA59BDY · R. Whitfield", "QDOS", "Report sent",
+                          "They appear under Files once processed.", "Back to QDOS26214")))
+    check("AB: clicking Back to QDOS26214 on upload-a-case returns to case",
+          click_to_state(page, "upload-a-case", "[data-upload-back-case]", "case"))
+    check("AB: clicking Add evidence on case opens upload-a-case",
+          click_to_state(page, "case", "[data-add-evidence]", "upload-a-case"))
+    go(page, "upload-a", "proposal")
+    frame_click(page, '[data-upload-sample-toggle="1"]')
+    page.wait_for_timeout(120)
+    check("AB: 3 sample files toggle populates 3 files via upload.js and updates submit button",
+          n("ul[data-select-list] li.up-file") == 3
+          and text("[data-select-submit-label]") == "Upload 3 files")
+    frame_click(page, '[data-upload-sample-toggle="0"]')
+    page.wait_for_timeout(120)
+    check("AB: Empty toggle clears sample files",
+          n("ul[data-select-list] li.up-file") == 0)
+
 
 def main() -> None:
     shots_wanted = "--no-shots" not in sys.argv

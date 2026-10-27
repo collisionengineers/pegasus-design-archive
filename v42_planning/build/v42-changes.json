@@ -517,5 +517,155 @@
     "label": "Cases \u00b7 Queries",
     "group": "Work Centre",
     "changes": []
+  },
+  {
+    "key": "upload-a",
+    "label": "Upload \u00b7 Design A \u2014 Split workbench",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB1",
+        "summary": "Design A (Split workbench): permanent 2-pane .pane-layout with drop zone + limit fact strip on the left and a live Selected files queue pane + action footer on the right."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
+  },
+  {
+    "key": "upload-b",
+    "label": "Upload \u00b7 Design B \u2014 Structured panel & format guide",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB2",
+        "summary": "Design B (Structured panel & format guide): .panel workspace pairing the drop well with a 310px Accepted formats reference card and, on Case upload, a top Case identity ribbon."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
+  },
+  {
+    "key": "upload-c",
+    "label": "Upload \u00b7 Design C \u2014 Intake staging ledger",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB3",
+        "summary": "Design C (Intake staging ledger): compact horizontal drop & pick bar over a full-width .table-wrap staging ledger with File, Kind & size, Destination and Remove columns."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
+  },
+  {
+    "key": "upload-d",
+    "label": "Upload \u00b7 Design D \u2014 Destination-first split",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB4",
+        "summary": "Design D (Destination-first split): 350px left context .panel for target Case / routing rules and 2\u00d72 batch limits beside a right-hand Choose & review files .panel."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
+  },
+  {
+    "key": "upload-e",
+    "label": "Upload \u00b7 Design E \u2014 Focused record sheet",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB5",
+        "summary": "Design E (Focused record sheet): bounded 880px .record sheet with dark charcoal .record-head header band, 4px .record-accent stripe, and 4 accepted-media category tiles."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
+  },
+  {
+    "key": "upload-a-case",
+    "label": "Upload (Case QDOS26214) \u00b7 Design A \u2014 Split workbench",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB1",
+        "summary": "Design A (Split workbench): permanent 2-pane .pane-layout with drop zone + limit fact strip on the left and a live Selected files queue pane + action footer on the right."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
+  },
+  {
+    "key": "upload-b-case",
+    "label": "Upload (Case QDOS26214) \u00b7 Design B \u2014 Structured panel & format guide",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB2",
+        "summary": "Design B (Structured panel & format guide): .panel workspace pairing the drop well with a 310px Accepted formats reference card and, on Case upload, a top Case identity ribbon."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
+  },
+  {
+    "key": "upload-c-case",
+    "label": "Upload (Case QDOS26214) \u00b7 Design C \u2014 Intake staging ledger",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB3",
+        "summary": "Design C (Intake staging ledger): compact horizontal drop & pick bar over a full-width .table-wrap staging ledger with File, Kind & size, Destination and Remove columns."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
+  },
+  {
+    "key": "upload-d-case",
+    "label": "Upload (Case QDOS26214) \u00b7 Design D \u2014 Destination-first split",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB4",
+        "summary": "Design D (Destination-first split): 350px left context .panel for target Case / routing rules and 2\u00d72 batch limits beside a right-hand Choose & review files .panel."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
+  },
+  {
+    "key": "upload-e-case",
+    "label": "Upload (Case QDOS26214) \u00b7 Design E \u2014 Focused record sheet",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB5",
+        "summary": "Design E (Focused record sheet): bounded 880px .record sheet with dark charcoal .record-head header band, 4px .record-accent stripe, and 4 accepted-media category tiles."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
   }
 ]

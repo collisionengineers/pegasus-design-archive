@@ -117,5 +117,5 @@ def apply(key: str, body: Tag, state: dict) -> list[dict]:
     return changes
 
 
-for _module in ("proposals_inbox", "proposals_case", "proposals_work"):
+for _module in ("proposals_inbox", "proposals_case", "proposals_work", "proposals_upload"):
     importlib.import_module(_module)

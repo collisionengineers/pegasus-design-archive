@@ -33,8 +33,26 @@
   }
   PatchedURL.prototype = NativeURL.prototype;
   Object.setPrototypeOf(PatchedURL, NativeURL);
-  if (NativeURL.createObjectURL) PatchedURL.createObjectURL = NativeURL.createObjectURL.bind(NativeURL);
-  if (NativeURL.revokeObjectURL) PatchedURL.revokeObjectURL = NativeURL.revokeObjectURL.bind(NativeURL);
+  var SAMPLE_THUMBS = {
+    'front-offside.jpg': 'data:image/svg+xml;utf8,' + encodeURIComponent(
+      '<svg xmlns="http://www.w3.org/2000/svg" width="84" height="72" viewBox="0 0 84 72">'
+      + '<rect width="84" height="72" fill="#dce3e8"/><path d="M10 50 L24 30 L58 30 L74 48 L74 58 L10 58 Z" fill="#274f70"/>'
+      + '<circle cx="24" cy="58" r="8" fill="#202629"/><circle cx="60" cy="58" r="8" fill="#202629"/></svg>'
+    ),
+    'rear-quarter.png': 'data:image/svg+xml;utf8,' + encodeURIComponent(
+      '<svg xmlns="http://www.w3.org/2000/svg" width="84" height="72" viewBox="0 0 84 72">'
+      + '<rect width="84" height="72" fill="#e4e9ec"/><path d="M12 48 L30 28 L66 28 L74 46 L74 58 L12 58 Z" fill="#3b6990"/>'
+      + '<circle cx="28" cy="58" r="8" fill="#202629"/><circle cx="62" cy="58" r="8" fill="#202629"/></svg>'
+    )
+  };
+  PatchedURL.createObjectURL = function (obj) {
+    if (obj && obj.name && SAMPLE_THUMBS[obj.name]) return SAMPLE_THUMBS[obj.name];
+    return NativeURL.createObjectURL ? NativeURL.createObjectURL(obj) : '';
+  };
+  PatchedURL.revokeObjectURL = function (url) {
+    if (typeof url === 'string' && url.indexOf('data:') === 0) return;
+    if (NativeURL.revokeObjectURL) NativeURL.revokeObjectURL(url);
+  };
   window.URL = PatchedURL;
 
   var fragments = (host && host.__mockFragments) || {};
@@ -101,9 +119,19 @@
     return root.innerHTML;
   }
 
-  window.fetch = function (input) {
+  window.fetch = function (input, init) {
     var raw = typeof input === 'string' ? input : (input && input.url);
     var pathAndQuery = local(raw);
+    if (init && String(init.method || '').toUpperCase() === 'POST' && document.querySelector('[data-upload-form]')) {
+      var declared = document.getElementById('DeclaredCaseId');
+      if (declared && declared.value) {
+        toast('Files received for QDOS26214. They appear under Files once processed.');
+        post({ type: 'nav', href: '/Cases/' + declared.value });
+      } else {
+        toast('Uploaded batch — opening Upload review');
+      }
+      return new Promise(function () {});
+    }
     if (typeof fragments[pathAndQuery] === 'string') {
       return htmlResponse(fragments[pathAndQuery]);
     }
@@ -371,6 +399,21 @@
     var target = ev.target instanceof Element ? ev.target : null;
     if (!target) return;
 
+    // 0a. Upload in-page design switcher & sample files preview bar
+    var upSwitchBtn = target.closest('[data-upload-switch-state]');
+    if (upSwitchBtn) {
+      ev.preventDefault();
+      var targetState = upSwitchBtn.getAttribute('data-upload-switch-state');
+      if (targetState) post({ type: 'state', key: targetState });
+      return;
+    }
+    var upSampleBtn = target.closest('[data-upload-sample-toggle]');
+    if (upSampleBtn) {
+      ev.preventDefault();
+      var wantOn = upSampleBtn.getAttribute('data-upload-sample-toggle') === '1';
+      setUploadSampleFiles(wantOn, true);
+      return;
+    }
     // 0. Choosing an option in the cog menu's Case / PO autocomplete links immediately
     var pickerChoice = target.closest('#mailLinkCaseOptions [data-case-picker-choice]');
     if (pickerChoice) {
@@ -703,6 +746,52 @@
     toast((button && button.textContent.trim()) || 'Submitted');
   });
 
+  function syncUploadSamplePills(on) {
+    document.querySelectorAll('[data-upload-sample-toggle]').forEach(function (b) {
+      var isOne = b.getAttribute('data-upload-sample-toggle') === '1';
+      b.setAttribute('aria-pressed', String(isOne === !!on));
+    });
+  }
+
+  function setUploadSampleFiles(on, notifyHost) {
+    var select = document.querySelector('[data-upload-select]');
+    var form = select && select.querySelector('[data-upload-form]');
+    var input = form && form.querySelector('input[type="file"]');
+    if (!select || !form || !input || typeof DataTransfer !== 'function') return;
+    if (on) {
+      form.reset();
+      setTimeout(function () {
+        var dt = new DataTransfer();
+        dt.items.add(new File([new ArrayBuffer(2400000)], 'front-offside.jpg', { type: 'image/jpeg', lastModified: 1729940000000 }));
+        dt.items.add(new File([new ArrayBuffer(1800000)], 'rear-quarter.png', { type: 'image/png', lastModified: 1729940001000 }));
+        dt.items.add(new File([new ArrayBuffer(600000)], 'Bodyshopsuppreport.pdf', { type: 'application/pdf', lastModified: 1729940002000 }));
+        input.files = dt.files;
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+        syncUploadSamplePills(true);
+        if (notifyHost) post({ type: 'upload-sample-sync', on: true });
+      }, 10);
+    } else {
+      form.reset();
+      setTimeout(function () {
+        syncUploadSamplePills(false);
+        if (notifyHost) post({ type: 'upload-sample-sync', on: false });
+      }, 10);
+    }
+  }
+
+  window.addEventListener('message', function (ev) {
+    var msg = ev.data || {};
+    if (msg.type === 'upload-sample') {
+      setUploadSampleFiles(!!msg.on, false);
+    }
+  });
+  window.addEventListener('reset', function (ev) {
+    var form = ev.target;
+    if (form instanceof HTMLFormElement && form.hasAttribute('data-upload-form')) {
+      syncUploadSamplePills(false);
+      post({ type: 'upload-sample-sync', on: false });
+    }
+  });
   window.open = function (url) { post({ type: 'nav', href: local(url) }); return null; };
   window.addEventListener('load', function () { syncBulkAndSelectAll(); post({ type: 'loaded' }); });
 })();

@@ -9,7 +9,7 @@ chips; in Proposal the Decision column is replaced by the streamlined cog settin
 """
 from __future__ import annotations
 
-INBOX, CASE, WORK = "Inbox", "Case", "Work Centre"
+INBOX, CASE, WORK, UPLOAD = "Inbox", "Case", "Work Centre", "Upload"
 
 
 def s(key: str, label: str, group: str, lane: str, capture: str | None = None, **extra) -> dict:
@@ -45,6 +45,26 @@ STATES: list[dict] = [
     s("work-centre", "Work Centre · Needs attention", WORK, "shell"),
     s("work-centre-mine", "Work Centre · Mine", WORK, "shell"),
     s("cases-query", "Cases · Queries", WORK, "intake"),
+    s("upload-a", "Upload · Design A — Split workbench", UPLOAD, "intake", "upload",
+      upload_design="a", case_upload=False),
+    s("upload-b", "Upload · Design B — Structured panel & format guide", UPLOAD, "intake", "upload",
+      upload_design="b", case_upload=False),
+    s("upload-c", "Upload · Design C — Intake staging ledger", UPLOAD, "intake", "upload",
+      upload_design="c", case_upload=False),
+    s("upload-d", "Upload · Design D — Destination-first split", UPLOAD, "intake", "upload",
+      upload_design="d", case_upload=False),
+    s("upload-e", "Upload · Design E — Focused record sheet", UPLOAD, "intake", "upload",
+      upload_design="e", case_upload=False),
+    s("upload-a-case", "Upload (Case QDOS26214) · Design A — Split workbench", UPLOAD, "intake", "upload",
+      upload_design="a", case_upload=True),
+    s("upload-b-case", "Upload (Case QDOS26214) · Design B — Structured panel & format guide", UPLOAD, "intake", "upload",
+      upload_design="b", case_upload=True),
+    s("upload-c-case", "Upload (Case QDOS26214) · Design C — Intake staging ledger", UPLOAD, "intake", "upload",
+      upload_design="c", case_upload=True),
+    s("upload-d-case", "Upload (Case QDOS26214) · Design D — Destination-first split", UPLOAD, "intake", "upload",
+      upload_design="d", case_upload=True),
+    s("upload-e-case", "Upload (Case QDOS26214) · Design E — Focused record sheet", UPLOAD, "intake", "upload",
+      upload_design="e", case_upload=True),
 ]
 
 # Live routes with no captured path of their own, mapped to the nearest state.
@@ -58,4 +78,7 @@ ROUTES: list[tuple[str, str]] = [
     ("/Cases/bee37ce3-c710-4a5b-8e2c-67e8ed6ad8cb", "case-qdos26220"),
     ("/Cases/85de4c48-ed02-445f-a2ce-d97a087c19dd", "case"),
     ("/Cases/", "case"),
+    ("/Upload", "upload-a"),
+    ("/Upload?caseId=85de4c48-ed02-445f-a2ce-d97a087c19dd", "upload-a-case"),
+    ("/Upload?caseId=bee37ce3-c710-4a5b-8e2c-67e8ed6ad8cb", "upload-a-case"),
 ]

@@ -13,6 +13,9 @@
   var select = document.getElementById('mock-state');
   var changeList = document.getElementById('mock-changes');
   var toastEl = document.getElementById('mock-toast');
+  var uploadControls = document.getElementById('mock-upload-controls');
+  var lastUploadDesign = 'a';
+  var uploadSampleOn = false;
 
   var query = new URLSearchParams(location.search);
   var current = {
@@ -64,6 +67,8 @@
   function render() {
     var state = byKey[current.key];
     if (!state) return Promise.resolve();
+    var mUpload = current.key.match(/^upload-([a-e])(-case)?$/);
+    if (mUpload) lastUploadDesign = mUpload[1];
     var proposal = current.mode === 'proposal' && state.hasProposal;
     return body(state.key + '-' + (proposal ? 'proposal' : 'today')).then(function (markup) {
       return new Promise(function (resolve) {
@@ -81,6 +86,9 @@
     if (state && state.scroll) {
       var target = frame.contentDocument && frame.contentDocument.querySelector(state.scroll);
       if (target) target.scrollIntoView({ block: 'start', behavior: 'instant' });
+    }
+    if (uploadSampleOn && /^upload-[a-e]/.test(current.key) && frame.contentWindow) {
+      try { frame.contentWindow.postMessage({ type: 'upload-sample', on: true }, '*'); } catch (e) {}
     }
     if (done) setTimeout(done, 30);
   });
@@ -100,6 +108,25 @@
       b.setAttribute('aria-pressed', String(b.getAttribute('data-mode') === current.mode));
     });
     strip.querySelector('[data-diff]').setAttribute('aria-pressed', String(current.diff));
+    var mUp = current.key.match(/^upload-([a-e])(-case)?$/);
+    if (uploadControls) {
+      uploadControls.hidden = !mUp;
+      if (mUp) {
+        var dKey = mUp[1];
+        var isCase = !!mUp[2];
+        uploadControls.querySelectorAll('[data-strip-upload-design]').forEach(function (b) {
+          b.setAttribute('aria-pressed', String(b.getAttribute('data-strip-upload-design') === dKey));
+        });
+        uploadControls.querySelectorAll('[data-strip-upload-entry]').forEach(function (b) {
+          var want = isCase ? 'case' : 'rail';
+          b.setAttribute('aria-pressed', String(b.getAttribute('data-strip-upload-entry') === want));
+        });
+        uploadControls.querySelectorAll('[data-strip-upload-sample]').forEach(function (b) {
+          var wantSample = uploadSampleOn ? '1' : '0';
+          b.setAttribute('aria-pressed', String(b.getAttribute('data-strip-upload-sample') === wantSample));
+        });
+      }
+    }
     changeList.innerHTML = state.changes && state.changes.length
       ? state.changes.map(function (c) { return '<li><strong>' + esc(c.id) + '</strong> ' + esc(c.summary) + '</li>'; }).join('')
       : '<li class="mock-none">No change proposed on this page.</li>';
@@ -121,6 +148,9 @@
   function resolveRoute(href) {
     var path = String(href || '').split('#')[0];
     var bare = path.split('?')[0];
+    if (bare === '/Upload') {
+      return 'upload-' + lastUploadDesign + (path.indexOf('caseId=') !== -1 ? '-case' : '');
+    }
     var best = null;
     ROUTES.forEach(function (r) {
       if (r[0] === path) best = best || r[1];
@@ -146,6 +176,16 @@
   window.addEventListener('message', function (ev) {
     var msg = ev.data || {};
     if (msg.type === 'toast') toast(msg.text);
+    if (msg.type === 'state' && msg.key && byKey[msg.key]) {
+      current.key = msg.key;
+      render();
+      return;
+    }
+    if (msg.type === 'upload-sample-sync') {
+      uploadSampleOn = !!msg.on;
+      if (byKey[current.key]) syncStrip(byKey[current.key]);
+      return;
+    }
     if (msg.type === 'nav') {
       var key = resolveRoute(msg.href);
       if (key && byKey[key]) { current.key = key; render(); }
@@ -162,6 +202,34 @@
     document.body.classList.add('mock-strip-hidden');
     syncUrl();
   });
+  if (uploadControls) {
+    uploadControls.querySelectorAll('[data-strip-upload-design]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var d = b.getAttribute('data-strip-upload-design') || 'a';
+        var isCase = /-case$/.test(current.key);
+        var nextKey = 'upload-' + d + (isCase ? '-case' : '');
+        if (byKey[nextKey]) { current.key = nextKey; render(); }
+      });
+    });
+    uploadControls.querySelectorAll('[data-strip-upload-entry]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var wantCase = b.getAttribute('data-strip-upload-entry') === 'case';
+        var m = current.key.match(/^upload-([a-e])/);
+        var d = (m && m[1]) || lastUploadDesign || 'a';
+        var nextKey = 'upload-' + d + (wantCase ? '-case' : '');
+        if (byKey[nextKey]) { current.key = nextKey; render(); }
+      });
+    });
+    uploadControls.querySelectorAll('[data-strip-upload-sample]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        uploadSampleOn = b.getAttribute('data-strip-upload-sample') === '1';
+        if (byKey[current.key]) syncStrip(byKey[current.key]);
+        if (frame.contentWindow) {
+          try { frame.contentWindow.postMessage({ type: 'upload-sample', on: uploadSampleOn }, '*'); } catch (e) {}
+        }
+      });
+    });
+  }
 
   window.__mock = {
     states: STATES.map(function (s) { return s.key; }),

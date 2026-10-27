@@ -389,3 +389,503 @@ html[data-v42-diff] [data-v42-change]:not(input):not(select):not(textarea):not(i
 [data-queries-table] td.row-actions .query-row-bar {
   display: inline-flex; align-items: center; justify-content: flex-end; gap: 6px;
 }
+
+/* ==========================================================================
+   v42 Upload Initial Screen — 5 Visual Designs (UB1..UB5, Sign-off AB)
+   Scoped to .up-v42-root so Today mode (.up-surface:not(.up-v42-root)) stays untouched.
+   ========================================================================== */
+
+/* In-page design switcher bar (demo comparison toolbar) */
+.up-design-bar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px;
+  margin: 0 0 14px; padding: 8px 12px;
+  background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--navy);
+  border-radius: var(--radius-lg); box-shadow: 0 1px 2px rgba(20, 30, 35, .04);
+}
+.up-design-right {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px;
+}
+.up-design-group {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+}
+.up-design-label {
+  font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--muted); margin-right: 2px;
+}
+.up-design-pills {
+  display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px;
+}
+.up-design-pill {
+  min-height: 27px; padding: 3px 9px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface-2); color: var(--ink);
+  font-size: 11.5px; font-weight: 600; cursor: pointer;
+  transition: background-color .12s ease, border-color .12s ease, color .12s ease;
+}
+.up-design-pill:hover {
+  background: var(--surface-3); border-color: var(--line-strong);
+}
+.up-design-pill[aria-pressed="true"] {
+  background: var(--navy); border-color: var(--navy); color: #fff;
+}
+
+/* Shared v42 Upload root resets over upload.css */
+.up-surface.up-v42-root {
+  background: transparent; border: 0; border-radius: 0; overflow: visible;
+}
+.up-v42-root > .up-workspace,
+.up-v42-root > .up-workspace.is-choosing,
+.up-v42-root > .up-workspace.has-files {
+  display: block;
+}
+.up-v42-root [data-select-files].up-v42-keep-visible[hidden] {
+  display: flex !important;
+  flex-direction: column;
+}
+.up-v42-root [data-select-actions].up-v42-keep-visible[hidden] {
+  display: flex !important;
+}
+.up-v42-root [data-select-count]:empty::before {
+  content: attr(data-empty-text);
+}
+.up-v42-root [data-select-summary]:empty::before {
+  content: attr(data-empty-text);
+}
+.up-v42-root .up-workspace.has-files [data-select-empty] {
+  display: none !important;
+}
+.up-v42-root .up-workspace:not(.has-files) [data-select-list] {
+  display: none !important;
+}
+.up-v42-root .up-workspace:not(.has-files) [data-select-actions] .button-row button {
+  opacity: .5;
+}
+
+/* Shared tactile drop badge & footer bar */
+.up-drop-badge {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--surface); border: 1px solid var(--line);
+  box-shadow: 0 2px 6px rgba(20, 30, 35, .06);
+  display: grid; place-items: center; color: var(--navy);
+}
+.up-drop-badge .icon { width: 22px; height: 22px; }
+.up-v42-root .up-drop {
+  border: 1.5px dashed var(--line-strong);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, #fafbfb 0%, var(--surface-2) 100%);
+  transition: border-color .14s ease, background-color .14s ease;
+}
+.up-v42-root .up-drop:hover,
+.up-v42-root .up-drop.is-over {
+  border-color: var(--navy);
+  background: var(--navy-bg);
+}
+.up-v42-root .up-final-destination a {
+  color: var(--ink); text-decoration: none;
+}
+.up-v42-root .up-final-destination a:hover {
+  color: var(--blue); text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Design A (UB1): Split Workbench (.up-v42--a)
+   -------------------------------------------------------------------------- */
+.up-v42--a .up-a-workbench {
+  grid-template-columns: minmax(400px, 1.08fr) minmax(340px, 0.92fr);
+  min-height: 510px;
+  border-radius: var(--radius-lg);
+}
+.up-a-left-body {
+  padding: 20px;
+  display: flex; flex-direction: column; gap: 16px; flex: 1;
+}
+.up-a-left-body .up-a-drop {
+  flex: 1; justify-content: center; padding: 36px 24px;
+}
+.up-a-facts {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-radius: var(--radius);
+}
+.up-a-facts .fact {
+  border-bottom: 0;
+  border-right: 1px solid var(--line);
+}
+.up-a-facts .fact:last-child { border-right: 0; }
+
+.up-a-case-banner {
+  padding: 14px 16px;
+  border: 1px solid #b7c7d8; border-left: 4px solid var(--navy);
+  border-radius: var(--radius);
+  background: var(--navy-bg);
+  display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px;
+}
+.up-a-case-banner .up-eyebrow { margin-bottom: 4px; color: var(--navy); }
+.up-a-case-banner .up-final-destination {
+  margin: 0; padding: 0; border: 0;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px;
+}
+.up-a-case-banner .up-final-destination strong { font-size: 18px; }
+.up-a-case-banner .up-final-destination p { font-size: 12.5px; color: var(--ink); font-weight: 550; }
+.up-a-case-caption {
+  margin: 0; font-size: 11.5px; color: var(--muted);
+}
+
+.up-a-pane-right {
+  background: var(--surface);
+}
+.up-a-right-body {
+  flex: 1; display: flex; flex-direction: column; min-height: 280px;
+}
+.up-empty-slate {
+  flex: 1; padding: 36px 24px; margin: 18px;
+  border: 1px dashed var(--line); border-radius: var(--radius-lg);
+  background: var(--surface-2);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; gap: 8px;
+}
+.up-empty-icon {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--surface); border: 1px solid var(--line);
+  display: grid; place-items: center; color: var(--muted);
+}
+.up-empty-slate h3 { font-size: 14px; color: var(--ink); }
+.up-empty-slate p { font-size: 12px; color: var(--muted); max-width: 34ch; line-height: 1.5; }
+.up-a-pane-right .pane-foot {
+  margin-top: auto; padding: 12px 18px;
+  border-top: 1px solid var(--line); background: var(--surface-2);
+}
+
+/* --------------------------------------------------------------------------
+   Design B (UB2): Structured Panel & Format Guide (.up-v42--b)
+   -------------------------------------------------------------------------- */
+.up-b-stack {
+  display: flex; flex-direction: column; gap: 14px;
+}
+.up-b-case-ribbon {
+  border-left: 4px solid var(--navy);
+  box-shadow: 0 1px 2px rgba(20, 30, 35, .05);
+}
+.up-b-ribbon-grid {
+  display: grid;
+  grid-template-columns: 150px minmax(180px, 1fr) 120px 140px minmax(220px, 1.2fr);
+  align-items: stretch;
+}
+.up-b-panel {
+  box-shadow: 0 1px 2px rgba(20, 30, 35, .06), 0 8px 22px rgba(20, 30, 35, .035);
+}
+.up-b-panel-head {
+  padding: 12px 18px;
+  background: linear-gradient(180deg, #fff 0%, #f5f7f7 100%);
+}
+.up-b-limits-pills {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+}
+.up-limit-pill {
+  padding: 4px 9px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--surface);
+  font-size: 11px; font-weight: 600; color: var(--muted);
+}
+.up-b-body {
+  padding: 18px;
+  display: grid; grid-template-columns: minmax(0, 1fr) 310px; gap: 18px; align-items: stretch;
+}
+.up-b-main {
+  display: flex; flex-direction: column; gap: 14px; min-width: 0;
+}
+.up-b-drop {
+  padding: 36px 24px;
+}
+.up-b-files {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface); overflow: hidden;
+}
+.up-b-empty-row {
+  padding: 14px 18px; font-size: 12px; color: var(--muted);
+}
+.up-b-guide {
+  border: 1px solid var(--line); border-radius: var(--radius-lg);
+  background: var(--surface-2); padding: 16px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.up-b-guide-head h3 { font-size: 13.5px; color: var(--ink); }
+.up-b-guide-head p { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+.up-b-format-list {
+  display: grid; gap: 8px;
+}
+.up-b-format-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 11px; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface);
+}
+.up-b-format-icon {
+  width: 32px; height: 32px; border-radius: var(--radius);
+  background: var(--navy-bg); color: var(--navy);
+  display: grid; place-items: center; flex: none;
+}
+.up-b-format-icon .icon { width: 16px; height: 16px; }
+.up-b-format-item strong { display: block; font-size: 12px; color: var(--ink); }
+.up-b-format-item small { display: block; font-size: 10.5px; color: var(--muted); margin-top: 1px; }
+.up-b-guide-foot {
+  margin-top: auto; padding-top: 10px; border-top: 1px solid var(--line);
+  display: grid; gap: 4px; font-size: 11px; color: var(--muted);
+}
+.up-b-panel > .panel-foot {
+  padding: 12px 18px; border-top: 1px solid var(--line); background: var(--surface-2);
+  margin-top: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Design C (UB3): Full-Width Intake Staging Ledger (.up-v42--c)
+   -------------------------------------------------------------------------- */
+.up-c-panel {
+  box-shadow: 0 1px 2px rgba(20, 30, 35, .06), 0 8px 22px rgba(20, 30, 35, .035);
+  overflow: hidden;
+}
+.up-c-head {
+  padding: 12px 18px;
+}
+.up-c-head-limits {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  font-size: 11.5px; color: var(--muted);
+}
+.up-c-case-strip {
+  margin: 0; padding: 10px 18px;
+  border-width: 0 0 1px 4px;
+  justify-content: space-between; flex-wrap: wrap;
+}
+.up-c-case-info {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px;
+  font-size: 12.5px; color: var(--ink);
+}
+.up-c-case-info .up-eyebrow { margin: 0; color: var(--navy); }
+.up-c-case-info strong { font-size: 15px; }
+.up-c-dest-note { font-size: 11.5px; color: var(--muted); font-weight: 500; }
+
+.up-v42--c .up-c-dropbar {
+  margin: 16px 18px; padding: 18px 20px;
+  display: grid; grid-template-columns: 44px minmax(0, 1fr) auto;
+  align-items: center; gap: 16px; text-align: left;
+}
+.up-c-drop-icon {
+  width: 44px; height: 44px; border-radius: var(--radius-lg);
+  background: var(--surface); border: 1px solid var(--line);
+  display: grid; place-items: center; color: var(--navy);
+}
+.up-c-drop-icon .icon { width: 20px; height: 20px; }
+.up-c-drop-copy h2 { font-size: 15.5px; margin: 0 0 3px; }
+.up-c-drop-copy p { max-width: none; font-size: 12px; color: var(--muted); line-height: 1.45; }
+
+.up-c-ledger {
+  border-top: 1px solid var(--line);
+}
+.up-c-ledger-head {
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) 210px 72px;
+  align-items: center; gap: 12px;
+  height: 36px; padding: 0 18px;
+  background: linear-gradient(180deg, #eef1f2, #e7ebed);
+  border-bottom: 1px solid var(--line);
+  color: #485156; font-size: 10px; font-weight: 850;
+  letter-spacing: .04em; text-transform: uppercase;
+}
+.up-c-ledger-empty {
+  padding: 28px 18px;
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  color: var(--muted); font-size: 12px; background: var(--surface);
+}
+.up-c-ledger-empty .icon { width: 22px; height: 22px; color: var(--quiet); flex: none; }
+.up-c-ledger-empty strong { display: block; color: var(--ink); font-size: 13px; margin-bottom: 2px; }
+.up-c-ledger-empty p { margin: 0; font-size: 12px; color: var(--muted); }
+
+.up-c-file-list > .up-file {
+  grid-template-columns: 42px minmax(190px, 1fr) 210px 72px;
+  padding: 8px 18px;
+}
+.up-c-file-list > .up-file > .up-thumb { order: 0; }
+.up-c-file-list > .up-file > .up-file-name { order: 1; }
+.up-c-file-list > .up-file::before {
+  content: attr(data-dest-col);
+  order: 2;
+  font-size: 11.5px; font-weight: 600; color: var(--navy);
+}
+.up-c-file-list[data-dest-col="QDOS26214 · Files"] > .up-file::before {
+  content: "QDOS26214 · Files";
+  font-family: var(--mono);
+}
+.up-c-file-list[data-dest-col="Chosen after upload"] > .up-file::before {
+  content: "Chosen after upload";
+  color: var(--muted); font-weight: 500;
+}
+.up-c-file-list > .up-file > .up-remove,
+.up-c-file-list > .up-file > .up-file-state {
+  order: 3; justify-self: end;
+}
+.up-c-panel > .panel-foot {
+  padding: 12px 18px; border-top: 1px solid var(--line); background: var(--surface-2);
+  margin-top: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Design D (UB4): Destination-First Split Cards (.up-v42--d)
+   -------------------------------------------------------------------------- */
+.up-d-split {
+  display: grid;
+  grid-template-columns: 350px minmax(0, 1fr);
+  gap: 14px; align-items: start;
+}
+.up-d-left,
+.up-d-right {
+  box-shadow: 0 1px 2px rgba(20, 30, 35, .06), 0 8px 22px rgba(20, 30, 35, .035);
+}
+.up-d-dest-box,
+.up-d-case-card {
+  padding: 14px;
+  border: 1px solid var(--line); border-left: 4px solid var(--navy);
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  display: grid; gap: 8px;
+}
+.up-d-case-card {
+  background: var(--navy-bg); border-color: #b7c7d8; border-left-color: var(--navy);
+}
+.up-d-case-card .up-eyebrow,
+.up-d-dest-box .up-eyebrow { margin: 0; color: var(--navy); }
+.up-d-dest-box h3 { font-size: 14.5px; color: var(--ink); }
+.up-d-dest-box p { font-size: 12px; color: var(--muted); line-height: 1.5; }
+.up-d-case-card .up-final-destination {
+  margin: 0; padding: 4px 0 8px; border-top: 0; border-bottom: 1px solid rgba(39, 79, 112, .16);
+}
+.up-d-case-rule { font-size: 11.5px; color: var(--muted); }
+.up-d-back-btn { width: 100%; justify-content: center; }
+.up-d-ext {
+  padding: 8px 10px; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface-2); font-size: 10.5px; color: var(--muted);
+}
+.up-d-drop { padding: 36px 24px; }
+.up-d-files {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface); overflow: hidden;
+}
+.up-d-empty {
+  padding: 14px 18px; font-size: 12px; color: var(--muted);
+}
+.up-d-right > .panel-foot {
+  padding: 12px 18px; border-top: 1px solid var(--line); background: var(--surface-2);
+  margin-top: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Design E (UB5): Focused Record Sheet with Category Tiles (.up-v42--e)
+   -------------------------------------------------------------------------- */
+.up-e-sheet {
+  max-width: 880px; margin-inline: auto;
+  border-radius: var(--radius-lg); overflow: hidden;
+}
+.up-e-head {
+  padding: 16px 20px;
+}
+.up-e-head .up-eyebrow {
+  margin: 0 0 4px; color: var(--nav-muted);
+}
+.up-e-head h1 a {
+  color: #fff; text-decoration: none;
+}
+.up-e-head h1 a:hover {
+  text-decoration: underline;
+}
+.up-e-head-badge {
+  width: 44px; height: 44px; border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .18);
+  display: grid; place-items: center; color: #fff;
+}
+.up-e-head-badge .icon { width: 20px; height: 20px; }
+.up-e-body {
+  padding: 20px 22px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.up-e-title-row {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px;
+}
+.up-e-kinds {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px;
+}
+.up-e-kind {
+  padding: 10px 12px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface-2);
+  display: flex; align-items: center; gap: 10px; min-width: 0;
+}
+.up-e-kind .icon { width: 18px; height: 18px; color: var(--navy); flex: none; }
+.up-e-kind strong { display: block; font-size: 12px; color: var(--ink); }
+.up-e-kind small { display: block; font-size: 10px; color: var(--muted); margin-top: 1px; }
+.up-e-drop { padding: 34px 24px; }
+.up-e-files {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface); overflow: hidden;
+}
+.up-e-empty {
+  padding: 14px 18px; font-size: 12px; color: var(--muted);
+}
+.up-e-foot {
+  padding: 12px 22px;
+  border-top: 1px solid var(--line); border-bottom: 0;
+  background: var(--surface-2); margin-top: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive reflow for Upload Designs A..E (1180px and 760px viewports)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1180px) {
+  .up-b-ribbon-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .up-b-ribbon-grid .ribbon-item {
+    border-bottom: 1px solid var(--line);
+  }
+  .up-b-body {
+    grid-template-columns: minmax(0, 1fr) 270px;
+  }
+  .up-d-split {
+    grid-template-columns: 300px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 960px) {
+  .up-v42--a .up-a-workbench {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .up-v42--a .pane + .pane {
+    border-left: 0; border-top: 1px solid var(--line);
+  }
+  .up-b-ribbon-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .up-b-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .up-v42--c .up-c-dropbar {
+    grid-template-columns: 44px minmax(0, 1fr);
+  }
+  .up-v42--c .up-c-drop-cta {
+    grid-column: 1 / -1;
+  }
+  .up-c-ledger-head {
+    grid-template-columns: minmax(0, 1fr) 150px 64px;
+  }
+  .up-c-file-list > .up-file {
+    grid-template-columns: 38px minmax(0, 1fr) 150px 64px;
+  }
+  .up-d-split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .up-e-kinds {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .up-e-head {
+    grid-template-columns: 44px minmax(0, 1fr);
+  }
+  .up-e-head > .btn,
+  .up-e-head > .status {
+    grid-column: 1 / -1; justify-self: start;
+  }
+}
