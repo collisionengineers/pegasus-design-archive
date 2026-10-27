@@ -638,7 +638,7 @@
     "changes": [
       {
         "id": "UB5",
-        "summary": "Design E (Full-width record workspace & category tiles): full-width .record workspace with 4 accepted-media category tiles across the top, a Case identity ribbon on Case upload, and a 2-pane drop well + live Selected files queue."
+        "summary": "Design E (Focused record sheet): full-width .record sheet with dark .record-head header, 4px .record-accent stripe, and a clean full-bleed drop zone with zero redundant copy (Selected files and the Upload action bar appear only once files are chosen)."
       },
       {
         "id": "AB",
@@ -713,7 +713,7 @@
     "changes": [
       {
         "id": "UB5",
-        "summary": "Design E (Full-width record workspace & category tiles): full-width .record workspace with 4 accepted-media category tiles across the top, a Case identity ribbon on Case upload, and a 2-pane drop well + live Selected files queue."
+        "summary": "Design E (Focused record sheet): full-width .record sheet with dark .record-head header, 4px .record-accent stripe, and a clean full-bleed drop zone with zero redundant copy (Selected files and the Upload action bar appear only once files are chosen)."
       },
       {
         "id": "AB",

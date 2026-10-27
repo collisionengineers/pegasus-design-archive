@@ -775,103 +775,72 @@ html[data-v42-diff] [data-v42-change]:not(input):not(select):not(textarea):not(i
 }
 
 /* --------------------------------------------------------------------------
-   Design E (UB5): Full-Width Record Workspace with Category Tiles (.up-v42--e)
+   Design E (UB5): Focused Record Sheet (.up-v42--e)
+   Full-width, full-height sheet with zero redundant copy.
    -------------------------------------------------------------------------- */
 .up-e-sheet {
   width: 100%; max-width: none;
+  min-height: calc(100vh - 150px);
+  display: flex; flex-direction: column;
   border-radius: var(--radius-lg); overflow: hidden;
 }
-.up-e-case-ribbon {
-  background: var(--navy-bg);
-  border-left: 4px solid var(--navy);
-  border-bottom: 1px solid #b7c7d8;
+.up-e-head {
+  padding: 18px 26px;
+  min-height: 76px;
 }
-.up-e-ribbon-grid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 150px minmax(190px, 1fr) 120px 140px minmax(240px, 1.3fr);
-  align-items: stretch;
+.up-e-head h1 {
+  font-size: 22px;
 }
-.up-e-ribbon-grid .ribbon-item {
-  border-right-color: rgba(39, 79, 112, .14);
+.up-e-head h1 a {
+  color: #fff; text-decoration: none;
 }
-.up-e-ribbon-grid .ribbon-label {
-  color: var(--navy);
+.up-e-head h1 a:hover {
+  text-decoration: underline;
 }
-.up-e-ribbon-grid .ribbon-ref a {
-  color: var(--ink); text-decoration: none;
+.up-e-head .record-identity {
+  margin-top: 4px; font-size: 12px; gap: 14px;
 }
-.up-e-ribbon-grid .ribbon-ref a:hover {
-  color: var(--blue); text-decoration: underline;
+.up-e-head-badge {
+  width: 44px; height: 44px; border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .18);
+  display: grid; place-items: center; color: #fff;
 }
-.up-e-top-section {
-  padding: 18px 22px;
-  background: linear-gradient(180deg, #fff 0%, var(--surface-2) 100%);
-  border-bottom: 1px solid var(--line);
-  display: flex; flex-direction: column; gap: 14px;
-}
-.up-e-title-row {
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;
-}
-.up-e-title-row h2 {
-  font-size: 16px; margin-top: 2px;
-}
-.up-e-kinds {
-  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;
-}
-.up-e-kind {
-  padding: 11px 14px;
-  border: 1px solid var(--line); border-radius: var(--radius-lg);
-  background: var(--surface);
-  box-shadow: 0 1px 2px rgba(20, 30, 35, .03);
-  display: flex; align-items: center; gap: 12px; min-width: 0;
-}
-.up-e-kind-icon {
-  width: 36px; height: 36px; border-radius: var(--radius);
-  background: var(--navy-bg); color: var(--navy);
-  display: grid; place-items: center; flex: none;
-}
-.up-e-kind-icon .icon { width: 18px; height: 18px; }
-.up-e-kind strong { display: block; font-size: 12.5px; color: var(--ink); }
-.up-e-kind small { display: block; font-size: 10.5px; color: var(--muted); margin-top: 2px; }
-
-.up-e-main-grid {
-  display: grid;
-  grid-template-columns: minmax(440px, 1.18fr) minmax(360px, 0.82fr);
-  min-height: 440px;
-  background: var(--surface);
-}
-.up-e-left-pane {
-  padding: 22px;
-  display: flex; flex-direction: column; gap: 14px; min-width: 0;
+.up-e-head-badge .icon { width: 20px; height: 20px; }
+.up-e-body {
+  padding: 24px 26px;
+  flex: 1;
+  display: flex; flex-direction: column; gap: 18px;
 }
 .up-e-drop {
-  flex: 1; justify-content: center;
-  padding: 44px 28px; min-height: 360px;
+  flex: 1;
+  min-height: 420px;
+  justify-content: center;
+  padding: 56px 32px;
+  gap: 16px;
+}
+.up-v42--e .up-workspace.has-files .up-e-drop {
+  min-height: 220px;
+  padding: 32px 24px;
+}
+.up-e-drop .up-drop-badge {
+  width: 60px; height: 60px;
+}
+.up-e-drop .up-drop-badge .icon {
+  width: 26px; height: 26px;
+}
+.up-e-drop h2 {
+  font-size: 20px;
 }
 .up-e-files {
-  border-left: 1px solid var(--line);
-  background: var(--surface);
-  display: flex; flex-direction: column; min-width: 0;
+  border: 1px solid var(--line); border-radius: var(--radius-lg);
+  background: var(--surface); overflow: hidden;
 }
-.up-e-files-head {
-  padding: 12px 18px;
-}
-.up-e-files-body {
-  flex: 1; display: flex; flex-direction: column; min-height: 280px;
-}
-.up-e-empty-state {
-  flex: 1; padding: 36px 24px;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  text-align: center; gap: 8px;
-}
-.up-e-empty-state h3 { font-size: 14px; color: var(--ink); }
-.up-e-empty-state p { font-size: 12px; color: var(--muted); max-width: 34ch; line-height: 1.5; }
 .up-e-foot {
-  margin-top: auto; padding: 12px 18px;
+  padding: 14px 26px;
   border-top: 1px solid var(--line); border-bottom: 0;
-  background: var(--surface-2);
+  background: var(--surface-2); margin-top: auto;
 }
+
 /* --------------------------------------------------------------------------
    Responsive reflow for Upload Designs A..E (1180px and 760px viewports)
    -------------------------------------------------------------------------- */
@@ -888,12 +857,6 @@ html[data-v42-diff] [data-v42-change]:not(input):not(select):not(textarea):not(i
   .up-d-split {
     grid-template-columns: 300px minmax(0, 1fr);
   }
-  .up-e-ribbon-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .up-e-ribbon-grid .ribbon-item {
-    border-bottom: 1px solid var(--line);
-  }
 }
 
 @media (max-width: 960px) {
@@ -903,8 +866,7 @@ html[data-v42-diff] [data-v42-change]:not(input):not(select):not(textarea):not(i
   .up-v42--a .pane + .pane {
     border-left: 0; border-top: 1px solid var(--line);
   }
-  .up-b-ribbon-grid,
-  .up-e-ribbon-grid {
+  .up-b-ribbon-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .up-b-body {
@@ -922,15 +884,18 @@ html[data-v42-diff] [data-v42-change]:not(input):not(select):not(textarea):not(i
   .up-c-file-list > .up-file {
     grid-template-columns: 38px minmax(0, 1fr) 150px 64px;
   }
-  .up-d-split,
-  .up-e-main-grid {
+  .up-d-split {
     grid-template-columns: minmax(0, 1fr);
-  }
-  .up-e-files {
-    border-left: 0; border-top: 1px solid var(--line);
   }
   .up-e-kinds {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .up-e-head {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+  .up-e-head > .btn,
+  .up-e-head > .status {
+    grid-column: 1 / -1; justify-self: start;
   }
 }
 

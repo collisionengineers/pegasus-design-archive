@@ -319,18 +319,27 @@ def v42_checks(page: Page) -> None:
             body_text = text("main")
             check(f"AB/{d_key.upper()}: {st} renders distinct design marker ({marker}) and upload.js enhancement",
                   q(marker) and q("[data-upload-select].is-enhanced") and q("input#Upload[type='file']"))
-            check(f"AB/{d_key.upper()}: {st} preserves exact limits and accepted extensions",
-                  all(lim in body_text for lim in (
-                      "20 files maximum", "100.0 MB per file", "200.0 MB per upload",
-                      "JPG, JPEG, PNG, PDF, DOC, DOCX, EML, MSG, MP4 or MOV")))
+            if d_key != "e":
+                check(f"AB/{d_key.upper()}: {st} preserves exact limits and accepted extensions",
+                      all(lim in body_text for lim in (
+                          "20 files maximum", "100.0 MB per file", "200.0 MB per upload",
+                          "JPG, JPEG, PNG, PDF, DOC, DOCX, EML, MSG, MP4 or MOV")))
+            else:
+                check(f"AB/E: {st} omits redundant limit, extension and empty-files copy",
+                      not any(noise in body_text for noise in (
+                          "20 files maximum", "Images, documents, emails and video", "No files selected yet")))
             check(f"AB/{d_key.upper()}: {st} has no horizontal overflow",
                   frame_eval(page, "d.documentElement.scrollWidth <= d.documentElement.clientWidth"))
             if is_case:
-                check(f"AB/{d_key.upper()}: {st} displays QDOS26214 Case identity, filing rule and Back to QDOS26214",
+                required_case_tokens = (
+                    ("QDOS26214", "MA59BDY · R. Whitfield", "QDOS", "Report sent", "Back to QDOS26214")
+                    if d_key == "e"
+                    else ("QDOS26214", "MA59BDY · R. Whitfield", "QDOS", "Report sent",
+                          "They appear under Files once processed.", "Back to QDOS26214")
+                )
+                check(f"AB/{d_key.upper()}: {st} displays QDOS26214 Case identity and Back to QDOS26214",
                       q("[data-upload-declared]") and q("[data-upload-back-case]")
-                      and all(tok in body_text for tok in (
-                          "QDOS26214", "MA59BDY · R. Whitfield", "QDOS", "Report sent",
-                          "They appear under Files once processed.", "Back to QDOS26214")))
+                      and all(tok in body_text for tok in required_case_tokens))
     check("AB: clicking Back to QDOS26214 on upload-e-case returns to case",
           click_to_state(page, "upload-e-case", "[data-upload-back-case]", "case"))
     check("AB: clicking Add evidence on case opens upload-e-case",
