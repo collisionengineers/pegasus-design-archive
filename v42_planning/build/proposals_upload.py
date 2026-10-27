@@ -156,7 +156,7 @@ def _back_to_case_btn(extra_class: str = "") -> str:
     cls = f"btn {extra_class}".strip()
     return (
         f'<a class="{cls}" href="{CASE_HREF}" data-upload-back-case>'
-        '<svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>'
+        '<svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>'
         f"<span>Back to {CASE_REF}</span>"
         "</a>"
     )
@@ -656,7 +656,7 @@ def _build_design_e(case_upload: bool) -> tuple[str, str]:
             f'<span class="status status--blue">{CASE_STAGE}</span>'
             "</div>"
             "</div>"
-            f'{_back_to_case_btn("btn--dark")}'
+            f"{_back_to_case_btn()}"
             "</header>"
         )
     else:
