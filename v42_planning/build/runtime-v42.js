@@ -17,7 +17,7 @@
   var query = new URLSearchParams(location.search);
   var current = {
     key: byKey[query.get('state')] ? query.get('state') : (STATES[0] && STATES[0].key),
-    mode: query.get('mode') === 'proposal' ? 'proposal' : 'today',
+    mode: query.get('mode') === 'today' ? 'today' : 'proposal',
     diff: query.get('diff') === '1'
   };
   if (query.get('strip') === '0') document.body.classList.add('mock-strip-hidden');
