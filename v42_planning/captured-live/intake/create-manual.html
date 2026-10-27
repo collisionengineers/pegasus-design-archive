@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-busy-label="Working&#x2026;" data-busy-still="Still" data-icon-sprite="/images/lucide-sprite.04agn8pzs5.svg">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New case · Pegasus</title>
+    <link rel="stylesheet" href="/css/site.d6ldj11w7l.css" />
+    
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell" data-app-shell>
+        <header class="app-rail">
+            <a class="brand" aria-label="Pegasus home" href="/">
+                <img src="/images/pegasus-mark-refined-128.tctmpgz0uo.png" alt="" aria-hidden="true" />
+                <span class="brand-copy"><strong>PEGASUS</strong><span>Case management</span></span>
+            </a>
+            <nav class="primary-nav" aria-label="Primary">
+                <div class="nav-label">Work</div>
+                <a class="nav-link" href="/">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                    <span>Work Centre</span>
+                </a>
+                    <a class="nav-link" href="/Inbox">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                        <span>Inbox</span>
+                    </a>
+                    <a class="nav-link" href="/Upload">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                        <span>Upload</span>
+                    </a>
+                <a class="nav-link" aria-current="page" href="/Cases">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list-checks" /></svg>
+                    <span>Cases</span>
+                </a>
+                <a class="nav-link" href="/Search">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <span>Search</span>
+                </a>
+                    <div class="nav-label">Manage</div>
+                    <a class="nav-link" href="/Administration">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+                        <span>Administration</span>
+                    </a>
+            </nav>
+            <div class="rail-spacer"></div>
+            <button type="button" class="rail-collapse" data-rail-toggle aria-expanded="true" aria-label="Collapse navigation"
+                    data-label-collapse="Collapse navigation" data-label-expand="Expand navigation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-left" /></svg>
+                <span>Collapse</span>
+            </button>
+            <div class="rail-health">
+                <div class="rail-health-line"><span class="health-dot"></span><span>Current · 11:30</span></div>
+            </div>
+                <div class="rail-user" role="group" aria-label="User">
+                    <span class="avatar" aria-hidden="true">IU</span>
+                    <div><strong>integration-user</strong><small>Administrator</small></div>
+                    <button type="button" class="icon-button" data-dialog-open="account-dialog" aria-label="Account menu">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                    </button>
+                </div>
+        </header>
+        <div class="app-column">
+            <section class="utility-bar" aria-label="Utility bar">
+                <form class="utility-search" role="search" method="get" action="/Search">
+                    <label class="sr-only" for="global-search">Search Pegasus</label>
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <input id="global-search" type="search" name="query" data-command-input aria-label="Search Pegasus" placeholder="Search cases, references or people" autocomplete="off" />
+                    <span class="shortcut-hint" aria-hidden="true">Ctrl K</span>
+                </form>
+                <div class="utility-actions">
+                    <a class="btn btn--primary" href="/Cases/Create">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-plus" /></svg>
+                        <span>New case</span>
+                    </a>
+                    <span class="bell-wrap">
+                        <button type="button" class="icon-button" data-dialog-open="notifications-dialog" aria-label="Notifications">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bell" /></svg>
+                        </button>
+                    </span>
+                        <button type="button" class="icon-button utility-account" data-dialog-open="account-dialog" aria-label="Account menu">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                        </button>
+                </div>
+            </section>
+            <main id="main-content" class="app-main" tabindex="-1">
+                <div class="content">
+                    
+
+    <header class="page-header">
+        <div class="page-title">
+            <p class="eyebrow">New case</p>
+            <h1>Create case</h1>
+        </div>
+    </header>
+    <form method="post" class="stack create-form" action="/Cases/Create?handler=Create">
+        <input type="hidden" data-val="true" data-val-required="The IsManual field is required." id="IsManual" name="IsManual" value="True" />
+        <input type="hidden" id="OperationId" name="OperationId" value="98f01340f5764e4eb13c6c49ea08167b" />
+        
+
+        <section class="panel" aria-labelledby="case-title">
+            <div class="panel-head"><h2 id="case-title">Case</h2></div>
+            <div class="panel-body stack">
+                <div class="grid grid-3">
+                    <div class="field">
+                        <label class="req" for="PrincipalCode">Principal code</label>
+                        <input maxlength="20" autocomplete="off" required type="text" id="PrincipalCode" name="PrincipalCode" value="" />
+                        <span class="field-error field-validation-valid" data-valmsg-for="PrincipalCode" data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="field" data-triage-hidden>
+                        <label for="ClaimSourceId">Claim Source</label>
+                        <select id="ClaimSourceId" name="ClaimSourceId">
+                            <option value="">Not recorded</option>
+                                <option value="00000000-0000-4000-8000-00000000f001">Car 2 Go</option>
+                                <option value="00000000-0000-4000-8000-00000000f003">CarClaims</option>
+                                <option value="00000000-0000-4000-8000-00000000f006">Easdons</option>
+                                <option value="00000000-0000-4000-8000-00000000f004">Expert Claims</option>
+                                <option value="00000000-0000-4000-8000-00000000f007">Guardian Accident Claims</option>
+                                <option value="00000000-0000-4000-8000-00000000f008">Hackney Solutions</option>
+                                <option value="00000000-0000-4000-8000-00000000f00b">iRevolution Repair Network</option>
+                                <option value="00000000-0000-4000-8000-00000000f009">James Claims</option>
+                                <option value="00000000-0000-4000-8000-00000000f005">Rapid Rental Solutions</option>
+                                <option value="00000000-0000-4000-8000-00000000f002">SMC</option>
+                                <option value="00000000-0000-4000-8000-00000000f00a">Swinton</option>
+                        </select>
+                        <span class="field-error field-validation-valid" data-valmsg-for="ClaimSourceId" data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="field">
+                        <label for="CaseType">Case type</label>
+                        <select data-manual-case-type="Triage" data-val="true" data-val-required="The CaseType field is required." id="CaseType" name="CaseType">
+                            <option value="Inspection" selected="selected">Inspection</option>
+                            <option value="InspectionAndAudit">Inspection and Audit</option>
+                            <option value="Triage">Triage</option>
+                        </select>
+                        <span class="field-error field-validation-valid" data-valmsg-for="CaseType" data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="field" data-triage-hidden>
+                        <label class="req" for="ClaimantName">Claimant</label>
+                        <input maxlength="300" required type="text" id="ClaimantName" name="ClaimantName" value="" />
+                        <span class="field-error field-validation-valid" data-valmsg-for="ClaimantName" data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="field" data-triage-hidden>
+                        <label class="req" for="ClaimNumber">Claim number</label>
+                        <input maxlength="100" required type="text" id="ClaimNumber" name="ClaimNumber" value="" />
+                        <span class="field-error field-validation-valid" data-valmsg-for="ClaimNumber" data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="field">
+                        <label class="req" for="VehicleRegistration">Registration</label>
+                        <input maxlength="20" required type="text" id="VehicleRegistration" name="VehicleRegistration" value="" />
+                        <span class="field-error field-validation-valid" data-valmsg-for="VehicleRegistration" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel" aria-labelledby="vehicle-title">
+            <div class="panel-head"><h2 id="vehicle-title">Vehicle and inspection</h2></div>
+            <div class="panel-body stack">
+                <div class="grid grid-3">
+                    <div class="field" data-triage-hidden><label for="VehicleMake">Make</label><input maxlength="100" type="text" id="VehicleMake" name="VehicleMake" value="" /></div>
+                    <div class="field" data-triage-hidden><label for="VehicleModel">Model</label><input maxlength="100" type="text" id="VehicleModel" name="VehicleModel" value="" /></div>
+                    <div class="field" data-triage-hidden><label for="VehicleMileage">Mileage</label><input type="number" min="0" id="VehicleMileage" name="VehicleMileage" value="" /><input name="__Invariant" type="hidden" value="VehicleMileage" /></div>
+                    <div class="field" data-triage-hidden>
+                        <label for="VehicleMileageUnit">Mileage unit</label>
+                        <select id="VehicleMileageUnit" name="VehicleMileageUnit"><option value="">Not recorded</option><option value="miles">Miles</option><option value="kilometres">Kilometres</option></select>
+                    </div>
+                    <div class="field" data-triage-hidden><label for="DateOfIncident">Incident date</label><input type="date" id="DateOfIncident" name="DateOfIncident" value="" /><input name="__Invariant" type="hidden" value="DateOfIncident" /></div>
+                    <div class="field" data-triage-hidden><label for="InspectionDate">Inspection date</label><input type="date" id="InspectionDate" name="InspectionDate" value="" /><input name="__Invariant" type="hidden" value="InspectionDate" /></div>
+                </div>
+                <div class="field" data-triage-hidden><label for="InspectionAddress">Inspection address</label><textarea maxlength="1000" rows="3" id="InspectionAddress" name="InspectionAddress">
+</textarea></div>
+                <div class="field" data-triage-hidden><label for="AccidentCircumstances">Accident circumstances</label><textarea maxlength="2000" rows="4" id="AccidentCircumstances" name="AccidentCircumstances">
+</textarea></div>
+            </div>
+        </section>
+
+        <div class="cluster">
+            <a class="btn" href="/Cases">Cancel</a>
+            <button type="submit" data-busy-label="Creating&#x2026;" class="btn btn--primary">Create case</button>
+        </div>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAACvTOIJXp6uIGthaApyZJgq8Ry7_W6Hxp1cGjKASKWzjcZP0hSNJeYG8vv4uIRQvWzEGuy2ttW-fzOtswHFWZXUVUSa8EcWd2uIcKJlPfRsPnetnFsJ_QTaB1EKEzjMR8" /></form>
+
+                </div>
+            </main>
+        </div>
+    </div>
+    
+<div class="dialog-backdrop" data-dialog="account-dialog" data-dialog-fragment="/Notifications?name=account&amp;handler=ShellDialog" hidden></div>
+
+<div class="dialog-backdrop" data-dialog="notifications-dialog" data-dialog-open-on-load="" data-notifications-url="/Notifications?handler=List" data-notifications-failed="Notifications unavailable." hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="notifications-dialog-title">
+        <div class="dialog-head">
+            <h2 id="notifications-dialog-title" tabindex="-1">Notifications</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+            <div class="dialog-body dialog-body--list" data-notifications-body aria-busy="true">
+                <div class="spinner" aria-hidden="true"></div>
+            </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn btn--dark" data-dialog-close>Close</button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="command-dialog" data-dialog-fragment="/Notifications?name=command&amp;handler=ShellDialog" hidden></div>
+
+
+<div class="dialog-backdrop" data-dialog="problem-dialog" data-dialog-fragment="/Notifications?name=problem&amp;traceId=00-9e7db78fdc3bd6b693572f53714209c3-b27e79006ff1cb59-00&amp;method=GET&amp;handler=ShellDialog" hidden></div>
+
+    <div class="toast-region" aria-live="polite" data-toast-region></div>
+
+    <script src="/js/site.623y3cuxic.js"></script>
+    
+</body>
+</html>

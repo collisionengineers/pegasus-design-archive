@@ -1,0 +1,19 @@
+consent	400	/authorize?response_type=code&client_id=pegasus-automation&redirect_uri=https%3A%2F%2Fconnector.example%2Fapi%2Fmcp%2Fauth_callback&scope=automation.cases%20automation.documents&state=state-4c1c0d0f&resource=http%3A%2F%2Flocalhost%2Fmcp&code_challenge=ahA93LDR3rLNzrnfmFPUl1l7Qn9LHK1ctv90obrAJcA&code_challenge_method=S256	
+auth-access-denied	200	/Account/AccessDenied?ReturnUrl=%2FAdministration%2FMailboxes	
+error	200	/Error?capturePath=%2FCases%2F88733835-479b-423e-bacc-df8ed714ebc0	
+status-404	404	/Cases/9239b107-81f2-428a-a572-a4dc59cbab7d	
+work-centre	200	/	
+work-centre-selected	200	/?selected=88733835-479b-423e-bacc-df8ed714ebc0	
+work-centre-assign	200	/?selected=8a63804e-c66d-4725-a5db-312d9870311e&assign=true	
+work-centre-mine	200	/?scope=mine	
+work-centre-new-cases	200	/?tab=new-cases	
+work-centre-ai-jobs	200	/?tab=ai-jobs	
+search	200	/Search?query=QDOS262&selected=88733835-479b-423e-bacc-df8ed714ebc0	
+search-filters	200	/Search?query=QDOS262&origin=Email&fromDate=2026-10-12&selected=88733835-479b-423e-bacc-df8ed714ebc0	
+whats-new	200	/	
+release-notes	200	/ReleaseNotes	
+auth-signin	200	/Account/SignIn	
+auth-signed-out	200	/Account/SignIn?signedOut=true	
+auth-signin-failed	200	POST /Account/SignIn	
+auth-password-forced	200	/Account/PasswordChange	
+auth-password-voluntary	200	/Account/PasswordChange	

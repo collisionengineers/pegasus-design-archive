@@ -1,0 +1,724 @@
+[
+  {
+    "key": "inbox",
+    "label": "Inbox \u00b7 All",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "I",
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Mailbox filters over a full-width ledger with columns Case, Type, Subject, Sender and Received."
+      },
+      {
+        "id": "A",
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
+      }
+    ]
+  },
+  {
+    "key": "inbox-no-case-found",
+    "label": "Inbox \u00b7 No Case Found",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "I",
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Mailbox filters over a full-width ledger with columns Case, Type, Subject, Sender and Received."
+      },
+      {
+        "id": "A",
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
+      }
+    ]
+  },
+  {
+    "key": "inbox-dismissed",
+    "label": "Inbox \u00b7 Dismissed",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "I",
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Mailbox filters over a full-width ledger with columns Case, Type, Subject, Sender and Received."
+      },
+      {
+        "id": "A",
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
+      }
+    ]
+  },
+  {
+    "key": "inbox-rows-ticked",
+    "label": "Inbox \u00b7 two rows ticked",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "I",
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Mailbox filters over a full-width ledger with columns Case, Type, Subject, Sender and Received."
+      },
+      {
+        "id": "A",
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
+      }
+    ]
+  },
+  {
+    "key": "message-m1",
+    "label": "Message dialog \u00b7 New instruction, no Case (settings open)",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "I",
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Mailbox filters over a full-width ledger with columns Case, Type, Subject, Sender and Received."
+      },
+      {
+        "id": "A",
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
+      },
+      {
+        "id": "G",
+        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Type, Query, Change case, with a quiet context line above the full-width message."
+      },
+      {
+        "id": "H",
+        "summary": "Clicky category chip cloud replaced by a single streamlined Type select combining Correspondence, New instruction (Inspection / Audit / Inspection and Audit), Triage request and Cancellation."
+      }
+    ]
+  },
+  {
+    "key": "message-m2",
+    "label": "Message dialog \u00b7 Case update on a Report sent Case (settings open)",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "I",
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Mailbox filters over a full-width ledger with columns Case, Type, Subject, Sender and Received."
+      },
+      {
+        "id": "A",
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
+      },
+      {
+        "id": "N",
+        "summary": "Query action in settings menu: Open query on an e-mail on a Report sent Case that holds no query."
+      },
+      {
+        "id": "C",
+        "summary": "Joining a Report sent Case opens no query by itself; criteria and the AI classifier may."
+      },
+      {
+        "id": "G",
+        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Type, Query, Change case, with a quiet context line above the full-width message."
+      },
+      {
+        "id": "H",
+        "summary": "Clicky category chip cloud replaced by a single streamlined Type select combining Correspondence, New instruction (Inspection / Audit / Inspection and Audit), Triage request and Cancellation."
+      }
+    ]
+  },
+  {
+    "key": "message-m4",
+    "label": "Message dialog \u00b7 Query on a Report sent Case (settings open)",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "I",
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Mailbox filters over a full-width ledger with columns Case, Type, Subject, Sender and Received."
+      },
+      {
+        "id": "A",
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
+      },
+      {
+        "id": "K",
+        "summary": "Query action in settings menu: Mark done closes this e-mail's open query."
+      },
+      {
+        "id": "G",
+        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Type, Query, Change case, with a quiet context line above the full-width message."
+      },
+      {
+        "id": "H",
+        "summary": "Clicky category chip cloud replaced by a single streamlined Type select combining Correspondence, New instruction (Inspection / Audit / Inspection and Audit), Triage request and Cancellation."
+      }
+    ]
+  },
+  {
+    "key": "message-m4-ai-reply",
+    "label": "Message dialog \u00b7 Query, composer on the AI draft",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "I",
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Mailbox filters over a full-width ledger with columns Case, Type, Subject, Sender and Received."
+      },
+      {
+        "id": "A",
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
+      },
+      {
+        "id": "L",
+        "summary": "Composer tick Mark query done: marks only the replied e-mail's query done once the Sent item is observed."
+      }
+    ]
+  },
+  {
+    "key": "message-m3",
+    "label": "Message dialog \u00b7 photographs, no Case",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "I",
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Mailbox filters over a full-width ledger with columns Case, Type, Subject, Sender and Received."
+      },
+      {
+        "id": "A",
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
+      },
+      {
+        "id": "G",
+        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Type, Query, Change case, with a quiet context line above the full-width message."
+      },
+      {
+        "id": "H",
+        "summary": "Clicky category chip cloud replaced by a single streamlined Type select combining Correspondence, New instruction (Inspection / Audit / Inspection and Audit), Triage request and Cancellation."
+      },
+      {
+        "id": "R",
+        "summary": "Register images on any image-only unlinked e-mail with no instruction, triage or cancellation type."
+      }
+    ]
+  },
+  {
+    "key": "message-m7",
+    "label": "Message dialog \u00b7 Billing, no Case (settings open)",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "I",
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Mailbox filters over a full-width ledger with columns Case, Type, Subject, Sender and Received."
+      },
+      {
+        "id": "A",
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
+      },
+      {
+        "id": "G",
+        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Type, Query, Change case, with a quiet context line above the full-width message."
+      },
+      {
+        "id": "H",
+        "summary": "Clicky category chip cloud replaced by a single streamlined Type select combining Correspondence, New instruction (Inspection / Audit / Inspection and Audit), Triage request and Cancellation."
+      }
+    ]
+  },
+  {
+    "key": "message-m11",
+    "label": "Message dialog \u00b7 Cancellation on a Case in Report preparation (settings open)",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "I",
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Mailbox filters over a full-width ledger with columns Case, Type, Subject, Sender and Received."
+      },
+      {
+        "id": "A",
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
+      },
+      {
+        "id": "G",
+        "summary": "Change case in settings menu: Place on Hold and Close case open the Case with that dialog."
+      },
+      {
+        "id": "E",
+        "summary": "The Cancellation type stays, with its Case aside row and notification."
+      },
+      {
+        "id": "H",
+        "summary": "Clicky category chip cloud replaced by a single streamlined Type select combining Correspondence, New instruction (Inspection / Audit / Inspection and Audit), Triage request and Cancellation."
+      }
+    ]
+  },
+  {
+    "key": "message-m12",
+    "label": "Message dialog \u00b7 thank-you on a Report sent Case (settings open)",
+    "group": "Inbox",
+    "changes": [
+      {
+        "id": "I",
+        "summary": "Inbox scopes simplified to All, No Case Found and Dismissed (Sent Items and Deleted Items removed); Category select and bulk Correct classification replaced by Principal and Mailbox filters over a full-width ledger with columns Case, Type, Subject, Sender and Received."
+      },
+      {
+        "id": "A",
+        "summary": "Three categories (New instruction, Triage request, Cancellation); everything else is Case correspondence or No Case Found."
+      },
+      {
+        "id": "B",
+        "summary": "Unlinked e-mail that is not an instruction or triage request waits only in No Case Found."
+      },
+      {
+        "id": "N",
+        "summary": "Query action in settings menu: Open query on an e-mail on a Report sent Case that holds no query."
+      },
+      {
+        "id": "C",
+        "summary": "Joining a Report sent Case opens no query by itself; criteria and the AI classifier may."
+      },
+      {
+        "id": "G",
+        "summary": "Decision sidebar replaced by the cog settings menu (#icon-settings) in the dialog header, ordered Case, Type, Query, Change case, with a quiet context line above the full-width message."
+      },
+      {
+        "id": "H",
+        "summary": "Clicky category chip cloud replaced by a single streamlined Type select combining Correspondence, New instruction (Inspection / Audit / Inspection and Audit), Triage request and Cancellation."
+      }
+    ]
+  },
+  {
+    "key": "case",
+    "label": "Case \u00b7 Correspondence",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "X",
+        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip; Subject opens the message."
+      },
+      {
+        "id": "N",
+        "summary": "Tag as query becomes Open query: one query per e-mail, opened through the one route."
+      },
+      {
+        "id": "D",
+        "summary": "Assigned to column; a new query is Unassigned until taken or assigned."
+      },
+      {
+        "id": "K",
+        "summary": "Per-query Mark done replaces Resolve query (which closed every open query)."
+      },
+      {
+        "id": "O",
+        "summary": "Inline Assigned to selector and Take on each open query; Subject opens the message."
+      },
+      {
+        "id": "M",
+        "summary": "Reopen on a Done row: any staff role and Automation, no reason, while the Case is not archived or closed."
+      },
+      {
+        "id": "J",
+        "summary": "Query acts need no edit session, expected version or reason."
+      },
+      {
+        "id": "AA",
+        "summary": "Query stays the purple stage word while any query is open."
+      }
+    ]
+  },
+  {
+    "key": "case-queries",
+    "label": "Case \u00b7 Queries",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "X",
+        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip; Subject opens the message."
+      },
+      {
+        "id": "N",
+        "summary": "Tag as query becomes Open query: one query per e-mail, opened through the one route."
+      },
+      {
+        "id": "D",
+        "summary": "Assigned to column; a new query is Unassigned until taken or assigned."
+      },
+      {
+        "id": "K",
+        "summary": "Per-query Mark done replaces Resolve query (which closed every open query)."
+      },
+      {
+        "id": "O",
+        "summary": "Inline Assigned to selector and Take on each open query; Subject opens the message."
+      },
+      {
+        "id": "M",
+        "summary": "Reopen on a Done row: any staff role and Automation, no reason, while the Case is not archived or closed."
+      },
+      {
+        "id": "J",
+        "summary": "Query acts need no edit session, expected version or reason."
+      },
+      {
+        "id": "AA",
+        "summary": "Query stays the purple stage word while any query is open."
+      }
+    ]
+  },
+  {
+    "key": "case-queries-assign",
+    "label": "Case \u00b7 Assign query dialog",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "X",
+        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip; Subject opens the message."
+      },
+      {
+        "id": "N",
+        "summary": "Tag as query becomes Open query: one query per e-mail, opened through the one route."
+      },
+      {
+        "id": "D",
+        "summary": "Assigned to column; a new query is Unassigned until taken or assigned."
+      },
+      {
+        "id": "K",
+        "summary": "Per-query Mark done replaces Resolve query (which closed every open query)."
+      },
+      {
+        "id": "O",
+        "summary": "Inline Assigned to selector and Take on each open query; Subject opens the message."
+      },
+      {
+        "id": "M",
+        "summary": "Reopen on a Done row: any staff role and Automation, no reason, while the Case is not archived or closed."
+      },
+      {
+        "id": "J",
+        "summary": "Query acts need no edit session, expected version or reason."
+      },
+      {
+        "id": "AA",
+        "summary": "Query stays the purple stage word while any query is open."
+      }
+    ]
+  },
+  {
+    "key": "case-aside-query",
+    "label": "Case \u00b7 Next action and Actions menu with an open query",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "X",
+        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip; Subject opens the message."
+      },
+      {
+        "id": "N",
+        "summary": "Tag as query becomes Open query: one query per e-mail, opened through the one route."
+      },
+      {
+        "id": "D",
+        "summary": "Assigned to column; a new query is Unassigned until taken or assigned."
+      },
+      {
+        "id": "K",
+        "summary": "Per-query Mark done replaces Resolve query (which closed every open query)."
+      },
+      {
+        "id": "O",
+        "summary": "Inline Assigned to selector and Take on each open query; Subject opens the message."
+      },
+      {
+        "id": "M",
+        "summary": "Reopen on a Done row: any staff role and Automation, no reason, while the Case is not archived or closed."
+      },
+      {
+        "id": "J",
+        "summary": "Query acts need no edit session, expected version or reason."
+      },
+      {
+        "id": "AA",
+        "summary": "Query stays the purple stage word while any query is open."
+      }
+    ]
+  },
+  {
+    "key": "case-qdos26220",
+    "label": "Case \u00b7 Cancellation received",
+    "group": "Case",
+    "changes": [
+      {
+        "id": "X",
+        "summary": "Correspondence column Type: Correspondence or the e-mail's type, with its query chip; Subject opens the message."
+      },
+      {
+        "id": "AA",
+        "summary": "Open query is offered only once the Case's report is sent."
+      },
+      {
+        "id": "E",
+        "summary": "The Cancellation type and its Case aside row stay."
+      }
+    ]
+  },
+  {
+    "key": "work-centre-a",
+    "label": "Work Centre \u00b7 Design A \u2014 Streamlined ledger",
+    "group": "Work Centre",
+    "changes": [
+      {
+        "id": "WC1",
+        "summary": "Design A (Streamlined ledger): side-by-side Office queues and Activity stat cards above a unified 3-tab ledger (New Cases, System Actions, AI Actions) with channel/kind sub-filters."
+      },
+      {
+        "id": "AC",
+        "summary": "Work Centre simplification (/): choose Design A, B, C, D or E to replace Needs attention with New Cases (first view across API, E-mail, Manual & Automation), System Actions, AI Actions, and preserved Queue + Activity stats."
+      }
+    ]
+  },
+  {
+    "key": "work-centre-b",
+    "label": "Work Centre \u00b7 Design B \u2014 KPI ribbon & split inspector",
+    "group": "Work Centre",
+    "changes": [
+      {
+        "id": "WC2",
+        "summary": "Design B (KPI ribbon & split inspector): ultra-compact single-row Queue + Activity ribbon above a 2-pane workbench with selectable stream rows on the left and a live Case / AI output inspector pane on the right."
+      },
+      {
+        "id": "AC",
+        "summary": "Work Centre simplification (/): choose Design A, B, C, D or E to replace Needs attention with New Cases (first view across API, E-mail, Manual & Automation), System Actions, AI Actions, and preserved Queue + Activity stats."
+      }
+    ]
+  },
+  {
+    "key": "work-centre-c",
+    "label": "Work Centre \u00b7 Design C \u2014 Three-column live board",
+    "group": "Work Centre",
+    "changes": [
+      {
+        "id": "WC3",
+        "summary": "Design C (Three-column live board): 9-cell unified metric bar above a 3-column simultaneous operations board showing New Cases, System Actions, and AI Actions side by side (or single-stream focus)."
+      },
+      {
+        "id": "AC",
+        "summary": "Work Centre simplification (/): choose Design A, B, C, D or E to replace Needs attention with New Cases (first view across API, E-mail, Manual & Automation), System Actions, AI Actions, and preserved Queue + Activity stats."
+      }
+    ]
+  },
+  {
+    "key": "work-centre-d",
+    "label": "Work Centre \u00b7 Design D \u2014 Telemetry sidebar & priority stream",
+    "group": "Work Centre",
+    "changes": [
+      {
+        "id": "WC4",
+        "summary": "Design D (Telemetry sidebar & priority stream): 280px left telemetry rail for Office queues and Today/Week Activity beside a full-height time-grouped stream starting at the top of the viewport."
+      },
+      {
+        "id": "AC",
+        "summary": "Work Centre simplification (/): choose Design A, B, C, D or E to replace Needs attention with New Cases (first view across API, E-mail, Manual & Automation), System Actions, AI Actions, and preserved Queue + Activity stats."
+      }
+    ]
+  },
+  {
+    "key": "work-centre-e",
+    "label": "Work Centre \u00b7 Design E \u2014 Command deck & action cards",
+    "group": "Work Centre",
+    "changes": [
+      {
+        "id": "WC5",
+        "summary": "Design E (Command deck & action cards): dark charcoal .record-head command deck with Queue and Activity tiles above 3 view selector cards and structured 4-zone Case action cards."
+      },
+      {
+        "id": "AC",
+        "summary": "Work Centre simplification (/): choose Design A, B, C, D or E to replace Needs attention with New Cases (first view across API, E-mail, Manual & Automation), System Actions, AI Actions, and preserved Queue + Activity stats."
+      }
+    ]
+  },
+  {
+    "key": "cases-query",
+    "label": "Cases \u00b7 Queries",
+    "group": "Work Centre",
+    "changes": []
+  },
+  {
+    "key": "upload-a",
+    "label": "Upload \u00b7 Design A \u2014 Split workbench",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB1",
+        "summary": "Design A (Split workbench): permanent 2-pane .pane-layout with drop zone + limit fact strip on the left and a live Selected files queue pane + action footer on the right."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
+  },
+  {
+    "key": "upload-b",
+    "label": "Upload \u00b7 Design B \u2014 Structured panel & format guide",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB2",
+        "summary": "Design B (Structured panel & format guide): .panel workspace pairing the drop well with a 310px Accepted formats reference card and, on Case upload, a top Case identity ribbon."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
+  },
+  {
+    "key": "upload-c",
+    "label": "Upload \u00b7 Design C \u2014 Intake staging ledger",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB3",
+        "summary": "Design C (Intake staging ledger): compact horizontal drop & pick bar over a full-width .table-wrap staging ledger with File, Kind & size, Destination and Remove columns."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
+  },
+  {
+    "key": "upload-d",
+    "label": "Upload \u00b7 Design D \u2014 Destination-first split",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB4",
+        "summary": "Design D (Destination-first split): 350px left context .panel for target Case / routing rules and 2\u00d72 batch limits beside a right-hand Choose & review files .panel."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
+  },
+  {
+    "key": "upload-e",
+    "label": "Upload \u00b7 Design E \u2014 Focused record sheet",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB5",
+        "summary": "Design E (Focused record sheet): full-width .record sheet with dark .record-head header, 4px .record-accent stripe, and a clean full-bleed drop zone with zero redundant copy (Selected files and the Upload action bar appear only once files are chosen)."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
+  },
+  {
+    "key": "upload-a-case",
+    "label": "Upload (Case QDOS26214) \u00b7 Design A \u2014 Split workbench",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB1",
+        "summary": "Design A (Split workbench): permanent 2-pane .pane-layout with drop zone + limit fact strip on the left and a live Selected files queue pane + action footer on the right."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
+  },
+  {
+    "key": "upload-b-case",
+    "label": "Upload (Case QDOS26214) \u00b7 Design B \u2014 Structured panel & format guide",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB2",
+        "summary": "Design B (Structured panel & format guide): .panel workspace pairing the drop well with a 310px Accepted formats reference card and, on Case upload, a top Case identity ribbon."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
+  },
+  {
+    "key": "upload-c-case",
+    "label": "Upload (Case QDOS26214) \u00b7 Design C \u2014 Intake staging ledger",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB3",
+        "summary": "Design C (Intake staging ledger): compact horizontal drop & pick bar over a full-width .table-wrap staging ledger with File, Kind & size, Destination and Remove columns."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
+  },
+  {
+    "key": "upload-d-case",
+    "label": "Upload (Case QDOS26214) \u00b7 Design D \u2014 Destination-first split",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB4",
+        "summary": "Design D (Destination-first split): 350px left context .panel for target Case / routing rules and 2\u00d72 batch limits beside a right-hand Choose & review files .panel."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
+  },
+  {
+    "key": "upload-e-case",
+    "label": "Upload (Case QDOS26214) \u00b7 Design E \u2014 Focused record sheet",
+    "group": "Upload",
+    "changes": [
+      {
+        "id": "UB5",
+        "summary": "Design E (Focused record sheet): full-width .record sheet with dark .record-head header, 4px .record-accent stripe, and a clean full-bleed drop zone with zero redundant copy (Selected files and the Upload action bar appear only once files are chosen)."
+      },
+      {
+        "id": "AB",
+        "summary": "Initial Upload screen (/Upload and /Upload?caseId=\u2026): choose Design A, B, C, D or E to replace the floating 760px single-column picker and frame the Case destination."
+      }
+    ]
+  }
+]

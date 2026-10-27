@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en" data-busy-label="Working&#x2026;" data-busy-still="Still" data-icon-sprite="/images/lucide-sprite.04agn8pzs5.svg">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inbox · Pegasus</title>
+    <link rel="stylesheet" href="/css/site.d6ldj11w7l.css" />
+    
+    <link rel="stylesheet" href="/css/inbox.ljg7bkcc4c.css" />
+
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell" data-app-shell>
+        <header class="app-rail">
+            <a class="brand" aria-label="Pegasus home" href="/">
+                <img src="/images/pegasus-mark-refined-128.tctmpgz0uo.png" alt="" aria-hidden="true" />
+                <span class="brand-copy"><strong>PEGASUS</strong><span>Case management</span></span>
+            </a>
+            <nav class="primary-nav" aria-label="Primary">
+                <div class="nav-label">Work</div>
+                <a class="nav-link" href="/">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-layout-dashboard" /></svg>
+                    <span>Work Centre</span>
+                </a>
+                    <a class="nav-link" aria-current="page" href="/Inbox">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                        <span>Inbox</span>
+                    </a>
+                    <a class="nav-link" href="/Upload">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                        <span>Upload</span>
+                    </a>
+                <a class="nav-link" href="/Cases">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-list-checks" /></svg>
+                    <span>Cases</span>
+                </a>
+                <a class="nav-link" href="/Search">
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <span>Search</span>
+                </a>
+                    <div class="nav-label">Manage</div>
+                    <a class="nav-link" href="/Administration">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-settings" /></svg>
+                        <span>Administration</span>
+                    </a>
+            </nav>
+            <div class="rail-spacer"></div>
+            <button type="button" class="rail-collapse" data-rail-toggle aria-expanded="true" aria-label="Collapse navigation"
+                    data-label-collapse="Collapse navigation" data-label-expand="Expand navigation">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-left" /></svg>
+                <span>Collapse</span>
+            </button>
+            <div class="rail-health">
+                <div class="rail-health-line"><span class="health-dot"></span><span>Current · 11:30</span></div>
+            </div>
+                <div class="rail-user" role="group" aria-label="User">
+                    <span class="avatar" aria-hidden="true">IU</span>
+                    <div><strong>integration-user</strong><small>Administrator</small></div>
+                    <button type="button" class="icon-button" data-dialog-open="account-dialog" aria-label="Account menu">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                    </button>
+                </div>
+        </header>
+        <div class="app-column">
+            <section class="utility-bar" aria-label="Utility bar">
+                <form class="utility-search" role="search" method="get" action="/Search">
+                    <label class="sr-only" for="global-search">Search Pegasus</label>
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                    <input id="global-search" type="search" name="query" data-command-input aria-label="Search Pegasus" placeholder="Search cases, references or people" autocomplete="off" />
+                    <span class="shortcut-hint" aria-hidden="true">Ctrl K</span>
+                </form>
+                <div class="utility-actions">
+                    <a class="btn btn--primary" href="/Cases/Create">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-plus" /></svg>
+                        <span>New case</span>
+                    </a>
+                    <span class="bell-wrap">
+                        <button type="button" class="icon-button" data-dialog-open="notifications-dialog" aria-label="Notifications">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-bell" /></svg>
+                        </button>
+                    </span>
+                        <button type="button" class="icon-button utility-account" data-dialog-open="account-dialog" aria-label="Account menu">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-more-horizontal" /></svg>
+                        </button>
+                </div>
+            </section>
+            <main id="main-content" class="app-main" tabindex="-1">
+                <div class="content">
+                    
+
+
+<header class="page-header">
+    <div class="page-title">
+        <p class="eyebrow">Emails</p>
+        <h1>Inbox</h1>
+    </div>
+    <div class="page-actions">
+        <div class="page-action-group">
+            <div class="freshness">
+    <span class="freshness-status">
+        <span class="health-dot"></span>
+            <span><time datetime="2031-05-06T10:29:00.0000000&#x2B;00:00">Current · 11:29</time></span>
+    </span>
+    <div class="refresh-button" data-refresh-region role="status" aria-live="polite">
+    <form method="get" data-refresh-form>
+        <button type="submit" class="btn btn--small" title="Refresh">
+            <svg class="icon icon--spin" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-refresh-cw" /></svg>
+            <span data-refresh-label>Refresh</span>
+        </button>
+    </form>
+</div>
+
+</div>
+
+        </div>
+    </div>
+</header>
+
+<section class="pane-layout pane-layout--2 inbox-layout" data-mail-workspace aria-label="Emails">
+    <aside class="pane">
+        <div class="pane-body pane-scroll">
+            <div class="scope-list" data-mail-scopes data-row-list>
+                    <form method="get">
+                        <button type="submit" class="scope-button" aria-pressed="true">
+                            <span class="scope-visual-icon">
+                                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-inbox" /></svg>
+                            </span>
+                            <span>All incoming</span>
+                            <span class="tabular">11</span>
+                        </button>
+                    </form>
+                    <form method="get">
+                            <input type="hidden" name="queue" value="no_case_found" />
+                        <button type="submit" class="scope-button" aria-pressed="false">
+                            <span class="scope-visual-icon">
+                                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-search" /></svg>
+                            </span>
+                            <span>No Case Found</span>
+                            <span class="tabular">7</span>
+                        </button>
+                    </form>
+                    <form method="get">
+                            <input type="hidden" name="folder" value="sent" />
+                        <button type="submit" class="scope-button" aria-pressed="false">
+                            <span class="scope-visual-icon">
+                                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-send" /></svg>
+                            </span>
+                            <span>Sent Items</span>
+                            <span class="tabular">1</span>
+                        </button>
+                    </form>
+                    <form method="get">
+                            <input type="hidden" name="folder" value="dismissed" />
+                        <button type="submit" class="scope-button" aria-pressed="false">
+                            <span class="scope-visual-icon">
+                                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                            </span>
+                            <span>Dismissed</span>
+                            <span class="tabular">0</span>
+                        </button>
+                    </form>
+                    <form method="get">
+                            <input type="hidden" name="folder" value="deleted" />
+                        <button type="submit" class="scope-button" aria-pressed="false">
+                            <span class="scope-visual-icon">
+                                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-trash-2" /></svg>
+                            </span>
+                            <span>Deleted Items</span>
+                            <span class="tabular">0</span>
+                        </button>
+                    </form>
+            </div>
+        </div>
+    </aside>
+
+    <div class="pane">
+        <form method="get" class="inbox-filter" data-auto-submit aria-label="Mail view">
+            <div class="field">
+                <label for="mailbox-filter">Mailbox</label>
+                <select id="mailbox-filter" name="mailbox">
+                    <option value="" selected="selected">All Mailboxes</option>
+                        <option value="7a41be49-40d7-a080-031b-636b44cfc26f">
+                            desk@collisionengineers.co.uk
+                        </option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="queue-filter">Category</label>
+                <select id="queue-filter" name="queue">
+                    <option value="" selected="selected">All categories</option>
+                        <option value="new-instruction">New instruction</option>
+                        <option value="triage-request">Triage request</option>
+                        <option value="pre-instruction">Pre-instruction</option>
+                        <option value="images-received">Images received</option>
+                        <option value="case-update">Case update</option>
+                        <option value="cancellation">Cancellation</option>
+                        <option value="query">Query</option>
+                        <option value="billing">Billing</option>
+                        <option value="general">General</option>
+                        <option value="not-client-related">Not client related</option>
+                        <option value="internal-cc">Internal CC</option>
+                </select>
+            </div>
+            <div class="field inbox-filter__search">
+                <label for="mail-search">Search</label>
+                <input id="mail-search" type="search" name="search" maxlength="200" placeholder="Subject, sender, reference" />
+            </div>
+            <button class="btn btn--dark" type="submit">Search</button>
+        </form>
+
+        <div class="pane-head inbox-messages-head">
+            <div class="inbox-message-title"><h2>Messages</h2></div>
+            <span class="meta">11 messages</span>
+                <a class="btn btn--small sort-toggle" aria-label="Received order: newest first; activate for oldest first" href="/Inbox?sort=oldest">
+                    Received &#x2193;
+                </a>
+        </div>
+
+            <form id="mail-bulk" method="post" class="inbox-bulk">
+                <input type="hidden" name="operationKey" value="d523d1bd4af34abda7c8c67d33abebc4" />
+                <span class="inbox-bulk-count tabular" data-bulk-count>0</span>
+                    <button type="submit" class="btn btn--small" formnovalidate data-busy-label="Dismissing&#x2026;" formaction="/Inbox?handler=BulkDismiss">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                        <span>Dismiss</span>
+                    </button>
+                    <button type="button" class="btn btn--small" data-bulk-classify data-dialog-open="bulkClassifyDialog">Correct classification</button>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAaPzOI23ByVSn5j11CoBNumwqCKhurP9edy6iC7zvMnqszHAFA3aQ9FTd5UFxmtwJNBR_acUxdc5U5N4R1qMVUVO_XxO1Dpuv24jhMqgYVfM7AAWVhJdy0l8lPEFaemt0" /></form>
+        <div class="pane-body pane-scroll" tabindex="0">
+                <div data-row-list>
+                    <div class="row-button inbox-row unread inbox-row--two-actions inbox-row--ticks"
+                         data-mail-row="e6fdec5c-c0f7-478e-a5b5-be72f2cfcef6">
+                            <label class="inbox-row-tick">
+                                <input type="checkbox" form="mail-bulk" name="ids" value="e6fdec5c-c0f7-478e-a5b5-be72f2cfcef6"
+                                       aria-label="New instruction &#x2014; MA59 BDY &#x2014; rear impact" data-mail-tick />
+                            </label>
+                                <input type="hidden" form="mail-bulk" name="versions[e6fdec5c-c0f7-478e-a5b5-be72f2cfcef6]" value="1" />
+                        <span class="row-top">
+                            <span class="row-title">
+                                    <span class="unread-indicator" aria-hidden="true"></span><span class="sr-only">Unread</span>
+                                instructions@northline.example
+                            </span>
+                            <span class="row-time">
+                                <time datetime="2026-10-13T09:14:00.0000000&#x2B;01:00">13 Oct 2026</time>
+                                <time>09:14</time>
+                            </span>
+                        </span>
+                        <a class="row-title" data-mail-open href="/Inbox/e6fdec5c-c0f7-478e-a5b5-be72f2cfcef6">New instruction &#x2014; MA59 BDY &#x2014; rear impact</a>
+                            <span class="row-excerpt">Please instruct an engineer to inspect our insured vehicle following a rear impact on 24 September.&#xA;The vehicle is at the policyholder&#x27;s address.</span>
+                        <span class="row-top">
+                            <span class="cluster">
+                                    <span class="status status--amber">No Case Found</span>
+
+                                    <span class="row-meta">New instruction</span>
+                            </span>
+                                <span class="row-meta">2 attachments</span>
+                        </span>
+                            <div class="inbox-row-actions">
+                                <a class="icon-button" href="/Inbox/e6fdec5c-c0f7-478e-a5b5-be72f2cfcef6?compose=reply" data-mail-row-reply data-mail-open
+                                   title="Reply"
+                                   aria-label="Reply New instruction &#x2014; MA59 BDY &#x2014; rear impact">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-reply" /></svg>
+                                </a>
+                            <form method="post" class="inbox-row-action" data-mail-row-action="dismiss" action="/Inbox?handler=Dismiss">
+                                <input type="hidden" name="id" value="e6fdec5c-c0f7-478e-a5b5-be72f2cfcef6" />
+                                <input type="hidden" name="operationKey" value="27da1ee6fc3d4c1b810ada744a2e9643" />
+                                <button type="submit" class="icon-button" data-busy-label="Dismissing&#x2026;"
+                                        title="Dismiss"
+                                        aria-label="Dismiss New instruction &#x2014; MA59 BDY &#x2014; rear impact">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                </button>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAaPzOI23ByVSn5j11CoBNumwqCKhurP9edy6iC7zvMnqszHAFA3aQ9FTd5UFxmtwJNBR_acUxdc5U5N4R1qMVUVO_XxO1Dpuv24jhMqgYVfM7AAWVhJdy0l8lPEFaemt0" /></form>
+                            </div>
+                    </div>
+                    <div class="row-button inbox-row inbox-row--two-actions inbox-row--ticks"
+                         data-mail-row="9d1e6d82-99a6-4a87-bc4d-3a2df59efe0f">
+                            <label class="inbox-row-tick">
+                                <input type="checkbox" form="mail-bulk" name="ids" value="9d1e6d82-99a6-4a87-bc4d-3a2df59efe0f"
+                                       aria-label="Update &#x2014; QDOS26214 &#x2014; repair authority" data-mail-tick />
+                            </label>
+                                <input type="hidden" form="mail-bulk" name="versions[9d1e6d82-99a6-4a87-bc4d-3a2df59efe0f]" value="1" />
+                        <span class="row-top">
+                            <span class="row-title">
+                                claims@northline.example
+                            </span>
+                            <span class="row-time">
+                                <time datetime="2026-10-13T08:02:00.0000000&#x2B;01:00">13 Oct 2026</time>
+                                <time>08:02</time>
+                            </span>
+                        </span>
+                        <a class="row-title" data-mail-open href="/Inbox/9d1e6d82-99a6-4a87-bc4d-3a2df59efe0f">Update &#x2014; QDOS26214 &#x2014; repair authority</a>
+                            <span class="row-excerpt">Repair authority is attached. Please proceed on QDOS26214 and confirm the engineer.</span>
+                        <span class="row-top">
+                            <span class="cluster">
+                                    <span class="status status--green">Case created</span>
+
+                                    <span class="row-meta">Case update</span>
+                            </span>
+                                <span class="row-meta">
+                                    <a href="/Cases/85de4c48-ed02-445f-a2ce-d97a087c19dd">QDOS26214</a> &#xB7; 1 attachment
+                                </span>
+                        </span>
+                            <div class="inbox-row-actions">
+                                <a class="icon-button" href="/Inbox/9d1e6d82-99a6-4a87-bc4d-3a2df59efe0f?compose=reply" data-mail-row-reply data-mail-open
+                                   title="Reply"
+                                   aria-label="Reply Update &#x2014; QDOS26214 &#x2014; repair authority">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-reply" /></svg>
+                                </a>
+                            <form method="post" class="inbox-row-action" data-mail-row-action="dismiss" action="/Inbox?handler=Dismiss">
+                                <input type="hidden" name="id" value="9d1e6d82-99a6-4a87-bc4d-3a2df59efe0f" />
+                                <input type="hidden" name="operationKey" value="e6bd64fa04324739ba2532a67dc1732a" />
+                                <button type="submit" class="icon-button" data-busy-label="Dismissing&#x2026;"
+                                        title="Dismiss"
+                                        aria-label="Dismiss Update &#x2014; QDOS26214 &#x2014; repair authority">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                </button>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAaPzOI23ByVSn5j11CoBNumwqCKhurP9edy6iC7zvMnqszHAFA3aQ9FTd5UFxmtwJNBR_acUxdc5U5N4R1qMVUVO_XxO1Dpuv24jhMqgYVfM7AAWVhJdy0l8lPEFaemt0" /></form>
+                            </div>
+                    </div>
+                    <div class="row-button inbox-row unread inbox-row--two-actions inbox-row--ticks"
+                         data-mail-row="8e72669b-d126-4139-ade9-045c5033448a">
+                            <label class="inbox-row-tick">
+                                <input type="checkbox" form="mail-bulk" name="ids" value="8e72669b-d126-4139-ade9-045c5033448a"
+                                       aria-label="Remittance advice &#x2014; October" data-mail-tick />
+                            </label>
+                                <input type="hidden" form="mail-bulk" name="versions[8e72669b-d126-4139-ade9-045c5033448a]" value="1" />
+                        <span class="row-top">
+                            <span class="row-title">
+                                    <span class="unread-indicator" aria-hidden="true"></span><span class="sr-only">Unread</span>
+                                accounts@northline.example
+                            </span>
+                            <span class="row-time">
+                                <time datetime="2026-10-13T07:41:00.0000000&#x2B;01:00">13 Oct 2026</time>
+                                <time>07:41</time>
+                            </span>
+                        </span>
+                        <a class="row-title" data-mail-open href="/Inbox/8e72669b-d126-4139-ade9-045c5033448a">Remittance advice &#x2014; October</a>
+                            <span class="row-excerpt">Please find attached our remittance advice for October.</span>
+                        <span class="row-top">
+                            <span class="cluster">
+                                    <span class="status status--amber">No Case Found</span>
+
+                                    <span class="row-meta">Billing</span>
+                            </span>
+                        </span>
+                            <div class="inbox-row-actions">
+                                <a class="icon-button" href="/Inbox/8e72669b-d126-4139-ade9-045c5033448a?compose=reply" data-mail-row-reply data-mail-open
+                                   title="Reply"
+                                   aria-label="Reply Remittance advice &#x2014; October">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-reply" /></svg>
+                                </a>
+                            <form method="post" class="inbox-row-action" data-mail-row-action="dismiss" action="/Inbox?handler=Dismiss">
+                                <input type="hidden" name="id" value="8e72669b-d126-4139-ade9-045c5033448a" />
+                                <input type="hidden" name="operationKey" value="f1b586e0b9d541c3839d49e64e97888d" />
+                                <button type="submit" class="icon-button" data-busy-label="Dismissing&#x2026;"
+                                        title="Dismiss"
+                                        aria-label="Dismiss Remittance advice &#x2014; October">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                </button>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAaPzOI23ByVSn5j11CoBNumwqCKhurP9edy6iC7zvMnqszHAFA3aQ9FTd5UFxmtwJNBR_acUxdc5U5N4R1qMVUVO_XxO1Dpuv24jhMqgYVfM7AAWVhJdy0l8lPEFaemt0" /></form>
+                            </div>
+                    </div>
+                    <div class="row-button inbox-row unread inbox-row--two-actions inbox-row--ticks"
+                         data-mail-row="eb10d65e-a0ab-4fd1-861b-f4b1e74a6d3a">
+                            <label class="inbox-row-tick">
+                                <input type="checkbox" form="mail-bulk" name="ids" value="eb10d65e-a0ab-4fd1-861b-f4b1e74a6d3a"
+                                       aria-label="Your October product update" data-mail-tick />
+                            </label>
+                                <input type="hidden" form="mail-bulk" name="versions[eb10d65e-a0ab-4fd1-861b-f4b1e74a6d3a]" value="1" />
+                        <span class="row-top">
+                            <span class="row-title">
+                                    <span class="unread-indicator" aria-hidden="true"></span><span class="sr-only">Unread</span>
+                                news@toolvendor.example
+                            </span>
+                            <span class="row-time">
+                                <time datetime="2026-10-13T06:30:00.0000000&#x2B;01:00">13 Oct 2026</time>
+                                <time>06:30</time>
+                            </span>
+                        </span>
+                        <a class="row-title" data-mail-open href="/Inbox/eb10d65e-a0ab-4fd1-861b-f4b1e74a6d3a">Your October product update</a>
+                            <span class="row-excerpt">New diagnostic tools are now available. View our catalogue online.</span>
+                        <span class="row-top">
+                            <span class="cluster">
+                                    <span class="status status--amber">No Case Found</span>
+
+                                    <span class="row-meta">Not client related</span>
+                            </span>
+                        </span>
+                            <div class="inbox-row-actions">
+                                <a class="icon-button" href="/Inbox/eb10d65e-a0ab-4fd1-861b-f4b1e74a6d3a?compose=reply" data-mail-row-reply data-mail-open
+                                   title="Reply"
+                                   aria-label="Reply Your October product update">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-reply" /></svg>
+                                </a>
+                            <form method="post" class="inbox-row-action" data-mail-row-action="dismiss" action="/Inbox?handler=Dismiss">
+                                <input type="hidden" name="id" value="eb10d65e-a0ab-4fd1-861b-f4b1e74a6d3a" />
+                                <input type="hidden" name="operationKey" value="0c258ae848fe43ef9903fc4d15f04171" />
+                                <button type="submit" class="icon-button" data-busy-label="Dismissing&#x2026;"
+                                        title="Dismiss"
+                                        aria-label="Dismiss Your October product update">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                </button>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAaPzOI23ByVSn5j11CoBNumwqCKhurP9edy6iC7zvMnqszHAFA3aQ9FTd5UFxmtwJNBR_acUxdc5U5N4R1qMVUVO_XxO1Dpuv24jhMqgYVfM7AAWVhJdy0l8lPEFaemt0" /></form>
+                            </div>
+                    </div>
+                    <div class="row-button inbox-row unread inbox-row--two-actions inbox-row--ticks"
+                         data-mail-row="cd1db358-5da7-4fc2-8dad-2505b651d980">
+                            <label class="inbox-row-tick">
+                                <input type="checkbox" form="mail-bulk" name="ids" value="cd1db358-5da7-4fc2-8dad-2505b651d980"
+                                       aria-label="FW: QDOS26214 &#x2014; engineer note" data-mail-tick />
+                            </label>
+                                <input type="hidden" form="mail-bulk" name="versions[cd1db358-5da7-4fc2-8dad-2505b651d980]" value="1" />
+                        <span class="row-top">
+                            <span class="row-title">
+                                    <span class="unread-indicator" aria-hidden="true"></span><span class="sr-only">Unread</span>
+                                alex@collisionengineers.co.uk
+                            </span>
+                            <span class="row-time">
+                                <time datetime="2026-10-13T05:55:00.0000000&#x2B;01:00">13 Oct 2026</time>
+                                <time>05:55</time>
+                            </span>
+                        </span>
+                        <a class="row-title" data-mail-open href="/Inbox/cd1db358-5da7-4fc2-8dad-2505b651d980">FW: QDOS26214 &#x2014; engineer note</a>
+                            <span class="row-excerpt">Forwarding for the file. Engineer&#x27;s note on the rear quarter.</span>
+                        <span class="row-top">
+                            <span class="cluster">
+                                    <span class="status status--amber">No Case Found</span>
+
+                                    <span class="row-meta">Internal CC</span>
+                            </span>
+                        </span>
+                            <div class="inbox-row-actions">
+                                <a class="icon-button" href="/Inbox/cd1db358-5da7-4fc2-8dad-2505b651d980?compose=reply" data-mail-row-reply data-mail-open
+                                   title="Reply"
+                                   aria-label="Reply FW: QDOS26214 &#x2014; engineer note">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-reply" /></svg>
+                                </a>
+                            <form method="post" class="inbox-row-action" data-mail-row-action="dismiss" action="/Inbox?handler=Dismiss">
+                                <input type="hidden" name="id" value="cd1db358-5da7-4fc2-8dad-2505b651d980" />
+                                <input type="hidden" name="operationKey" value="fcc0e69d184d45a992878dcbc5b76a19" />
+                                <button type="submit" class="icon-button" data-busy-label="Dismissing&#x2026;"
+                                        title="Dismiss"
+                                        aria-label="Dismiss FW: QDOS26214 &#x2014; engineer note">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                </button>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAaPzOI23ByVSn5j11CoBNumwqCKhurP9edy6iC7zvMnqszHAFA3aQ9FTd5UFxmtwJNBR_acUxdc5U5N4R1qMVUVO_XxO1Dpuv24jhMqgYVfM7AAWVhJdy0l8lPEFaemt0" /></form>
+                            </div>
+                    </div>
+                    <div class="row-button inbox-row unread inbox-row--two-actions inbox-row--ticks"
+                         data-mail-row="7d660597-3f9f-46b3-94a8-a0b1c1cb05df">
+                            <label class="inbox-row-tick">
+                                <input type="checkbox" form="mail-bulk" name="ids" value="7d660597-3f9f-46b3-94a8-a0b1c1cb05df"
+                                       aria-label="Possible instruction &#x2014; LK21 ABC" data-mail-tick />
+                            </label>
+                                <input type="hidden" form="mail-bulk" name="versions[7d660597-3f9f-46b3-94a8-a0b1c1cb05df]" value="1" />
+                        <span class="row-top">
+                            <span class="row-title">
+                                    <span class="unread-indicator" aria-hidden="true"></span><span class="sr-only">Unread</span>
+                                claims@northline.example
+                            </span>
+                            <span class="row-time">
+                                <time datetime="2026-10-13T05:12:00.0000000&#x2B;01:00">13 Oct 2026</time>
+                                <time>05:12</time>
+                            </span>
+                        </span>
+                        <a class="row-title" data-mail-open href="/Inbox/7d660597-3f9f-46b3-94a8-a0b1c1cb05df">Possible instruction &#x2014; LK21 ABC</a>
+                            <span class="row-excerpt">We may need an inspection on LK21 ABC next week. We will confirm.</span>
+                        <span class="row-top">
+                            <span class="cluster">
+                                    <span class="status status--amber">No Case Found</span>
+
+                                    <span class="row-meta">Pre-instruction</span>
+                            </span>
+                        </span>
+                            <div class="inbox-row-actions">
+                                <a class="icon-button" href="/Inbox/7d660597-3f9f-46b3-94a8-a0b1c1cb05df?compose=reply" data-mail-row-reply data-mail-open
+                                   title="Reply"
+                                   aria-label="Reply Possible instruction &#x2014; LK21 ABC">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-reply" /></svg>
+                                </a>
+                            <form method="post" class="inbox-row-action" data-mail-row-action="dismiss" action="/Inbox?handler=Dismiss">
+                                <input type="hidden" name="id" value="7d660597-3f9f-46b3-94a8-a0b1c1cb05df" />
+                                <input type="hidden" name="operationKey" value="ba63d7da7f634bba81aad2a06b822de5" />
+                                <button type="submit" class="icon-button" data-busy-label="Dismissing&#x2026;"
+                                        title="Dismiss"
+                                        aria-label="Dismiss Possible instruction &#x2014; LK21 ABC">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                </button>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAaPzOI23ByVSn5j11CoBNumwqCKhurP9edy6iC7zvMnqszHAFA3aQ9FTd5UFxmtwJNBR_acUxdc5U5N4R1qMVUVO_XxO1Dpuv24jhMqgYVfM7AAWVhJdy0l8lPEFaemt0" /></form>
+                            </div>
+                    </div>
+                    <div class="row-button inbox-row unread inbox-row--two-actions inbox-row--ticks"
+                         data-mail-row="23707566-25cb-4004-ae26-604014fb2a95">
+                            <label class="inbox-row-tick">
+                                <input type="checkbox" form="mail-bulk" name="ids" value="23707566-25cb-4004-ae26-604014fb2a95"
+                                       aria-label="Cancellation &#x2014; QDOS26220" data-mail-tick />
+                            </label>
+                                <input type="hidden" form="mail-bulk" name="versions[23707566-25cb-4004-ae26-604014fb2a95]" value="1" />
+                        <span class="row-top">
+                            <span class="row-title">
+                                    <span class="unread-indicator" aria-hidden="true"></span><span class="sr-only">Unread</span>
+                                claims@meridian.example
+                            </span>
+                            <span class="row-time">
+                                <time datetime="2026-10-13T04:48:00.0000000&#x2B;01:00">13 Oct 2026</time>
+                                <time>04:48</time>
+                            </span>
+                        </span>
+                        <a class="row-title" data-mail-open href="/Inbox/23707566-25cb-4004-ae26-604014fb2a95">Cancellation &#x2014; QDOS26220</a>
+                            <span class="row-excerpt">Please cancel the instruction on QDOS26220. The claim has been withdrawn.</span>
+                        <span class="row-top">
+                            <span class="cluster">
+                                    <span class="status status--green">Case created</span>
+
+                                    <span class="row-meta">Cancellation</span>
+                            </span>
+                                <span class="row-meta">
+                                    <a href="/Cases/bee37ce3-c710-4a5b-8e2c-67e8ed6ad8cb">QDOS26220</a>
+                                </span>
+                        </span>
+                            <div class="inbox-row-actions">
+                                <a class="icon-button" href="/Inbox/23707566-25cb-4004-ae26-604014fb2a95?compose=reply" data-mail-row-reply data-mail-open
+                                   title="Reply"
+                                   aria-label="Reply Cancellation &#x2014; QDOS26220">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-reply" /></svg>
+                                </a>
+                            <form method="post" class="inbox-row-action" data-mail-row-action="dismiss" action="/Inbox?handler=Dismiss">
+                                <input type="hidden" name="id" value="23707566-25cb-4004-ae26-604014fb2a95" />
+                                <input type="hidden" name="operationKey" value="246c2fc75a0a425899f0ee2ac66e8aca" />
+                                <button type="submit" class="icon-button" data-busy-label="Dismissing&#x2026;"
+                                        title="Dismiss"
+                                        aria-label="Dismiss Cancellation &#x2014; QDOS26220">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                </button>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAaPzOI23ByVSn5j11CoBNumwqCKhurP9edy6iC7zvMnqszHAFA3aQ9FTd5UFxmtwJNBR_acUxdc5U5N4R1qMVUVO_XxO1Dpuv24jhMqgYVfM7AAWVhJdy0l8lPEFaemt0" /></form>
+                            </div>
+                    </div>
+                    <div class="row-button inbox-row unread inbox-row--two-actions inbox-row--ticks"
+                         data-mail-row="83cf8571-6828-488f-b0e3-ab69c09cab24">
+                            <label class="inbox-row-tick">
+                                <input type="checkbox" form="mail-bulk" name="ids" value="83cf8571-6828-488f-b0e3-ab69c09cab24"
+                                       aria-label="Re: QDOS26214 &#x2014; thank you" data-mail-tick />
+                            </label>
+                                <input type="hidden" form="mail-bulk" name="versions[83cf8571-6828-488f-b0e3-ab69c09cab24]" value="1" />
+                        <span class="row-top">
+                            <span class="row-title">
+                                    <span class="unread-indicator" aria-hidden="true"></span><span class="sr-only">Unread</span>
+                                claims@northline.example
+                            </span>
+                            <span class="row-time">
+                                <time datetime="2026-10-13T04:03:00.0000000&#x2B;01:00">13 Oct 2026</time>
+                                <time>04:03</time>
+                            </span>
+                        </span>
+                        <a class="row-title" data-mail-open href="/Inbox/83cf8571-6828-488f-b0e3-ab69c09cab24">Re: QDOS26214 &#x2014; thank you</a>
+                            <span class="row-excerpt">Thank you for the report on QDOS26214.</span>
+                        <span class="row-top">
+                            <span class="cluster">
+                                    <span class="status status--green">Case created</span>
+
+                                    <span class="row-meta">Case update</span>
+                            </span>
+                                <span class="row-meta">
+                                    <a href="/Cases/85de4c48-ed02-445f-a2ce-d97a087c19dd">QDOS26214</a>
+                                </span>
+                        </span>
+                            <div class="inbox-row-actions">
+                                <a class="icon-button" href="/Inbox/83cf8571-6828-488f-b0e3-ab69c09cab24?compose=reply" data-mail-row-reply data-mail-open
+                                   title="Reply"
+                                   aria-label="Reply Re: QDOS26214 &#x2014; thank you">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-reply" /></svg>
+                                </a>
+                            <form method="post" class="inbox-row-action" data-mail-row-action="dismiss" action="/Inbox?handler=Dismiss">
+                                <input type="hidden" name="id" value="83cf8571-6828-488f-b0e3-ab69c09cab24" />
+                                <input type="hidden" name="operationKey" value="eecc986f0bf94ae5953b18aea7207cd3" />
+                                <button type="submit" class="icon-button" data-busy-label="Dismissing&#x2026;"
+                                        title="Dismiss"
+                                        aria-label="Dismiss Re: QDOS26214 &#x2014; thank you">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                </button>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAaPzOI23ByVSn5j11CoBNumwqCKhurP9edy6iC7zvMnqszHAFA3aQ9FTd5UFxmtwJNBR_acUxdc5U5N4R1qMVUVO_XxO1Dpuv24jhMqgYVfM7AAWVhJdy0l8lPEFaemt0" /></form>
+                            </div>
+                    </div>
+                    <div class="row-button inbox-row unread inbox-row--ticks"
+                         data-mail-row="483d0560-44c8-4a82-bfe8-4aaafddc0910">
+                            <label class="inbox-row-tick">
+                                <input type="checkbox" form="mail-bulk" name="ids" value="483d0560-44c8-4a82-bfe8-4aaafddc0910"
+                                       aria-label="Please see attached" data-mail-tick />
+                            </label>
+                                <input type="hidden" form="mail-bulk" name="versions[483d0560-44c8-4a82-bfe8-4aaafddc0910]" value="1" />
+                        <span class="row-top">
+                            <span class="row-title">
+                                    <span class="unread-indicator" aria-hidden="true"></span><span class="sr-only">Unread</span>
+                                Sender not recorded
+                            </span>
+                            <span class="row-time">
+                                <time datetime="2026-10-12T17:48:00.0000000&#x2B;01:00">12 Oct 2026</time>
+                                <time>17:48</time>
+                            </span>
+                        </span>
+                        <a class="row-title" data-mail-open href="/Inbox/483d0560-44c8-4a82-bfe8-4aaafddc0910">Please see attached</a>
+                            <span class="row-excerpt">Photographs attached. No reference in the message.</span>
+                        <span class="row-top">
+                            <span class="cluster">
+                                    <span class="status status--amber">No Case Found</span>
+
+                                    <span class="row-meta">Unclassified</span>
+                            </span>
+                                <span class="row-meta">3 attachments</span>
+                        </span>
+                            <div class="inbox-row-actions">
+                            <form method="post" class="inbox-row-action" data-mail-row-action="dismiss" action="/Inbox?handler=Dismiss">
+                                <input type="hidden" name="id" value="483d0560-44c8-4a82-bfe8-4aaafddc0910" />
+                                <input type="hidden" name="operationKey" value="4829fdce330343ff9e98b13100c5ba58" />
+                                <button type="submit" class="icon-button" data-busy-label="Dismissing&#x2026;"
+                                        title="Dismiss"
+                                        aria-label="Dismiss Please see attached">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                </button>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAaPzOI23ByVSn5j11CoBNumwqCKhurP9edy6iC7zvMnqszHAFA3aQ9FTd5UFxmtwJNBR_acUxdc5U5N4R1qMVUVO_XxO1Dpuv24jhMqgYVfM7AAWVhJdy0l8lPEFaemt0" /></form>
+                            </div>
+                    </div>
+                    <div class="row-button inbox-row inbox-row--two-actions inbox-row--ticks"
+                         data-mail-row="62334696-72a8-4bb9-9815-f8c76bb24d73">
+                            <label class="inbox-row-tick">
+                                <input type="checkbox" form="mail-bulk" name="ids" value="62334696-72a8-4bb9-9815-f8c76bb24d73"
+                                       aria-label="Query &#x2014; QDOS26214 &#x2014; hire charges" data-mail-tick />
+                            </label>
+                                <input type="hidden" form="mail-bulk" name="versions[62334696-72a8-4bb9-9815-f8c76bb24d73]" value="1" />
+                        <span class="row-top">
+                            <span class="row-title">
+                                claims@northline.example
+                            </span>
+                            <span class="row-time">
+                                <time datetime="2026-10-12T11:20:00.0000000&#x2B;01:00">12 Oct 2026</time>
+                                <time>11:20</time>
+                            </span>
+                        </span>
+                        <a class="row-title" data-mail-open href="/Inbox/62334696-72a8-4bb9-9815-f8c76bb24d73">Query &#x2014; QDOS26214 &#x2014; hire charges</a>
+                            <span class="row-excerpt">Please explain the hire charges on the report for QDOS26214.</span>
+                        <span class="row-top">
+                            <span class="cluster">
+                                    <span class="status status--green">Case created</span>
+
+                                    <span class="row-meta">Query</span>
+                            </span>
+                                <span class="row-meta">
+                                    <a href="/Cases/85de4c48-ed02-445f-a2ce-d97a087c19dd">QDOS26214</a>
+                                </span>
+                        </span>
+                            <div class="inbox-row-actions">
+                                <a class="icon-button" href="/Inbox/62334696-72a8-4bb9-9815-f8c76bb24d73?compose=reply" data-mail-row-reply data-mail-open
+                                   title="Reply"
+                                   aria-label="Reply Query &#x2014; QDOS26214 &#x2014; hire charges">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-reply" /></svg>
+                                </a>
+                            <form method="post" class="inbox-row-action" data-mail-row-action="dismiss" action="/Inbox?handler=Dismiss">
+                                <input type="hidden" name="id" value="62334696-72a8-4bb9-9815-f8c76bb24d73" />
+                                <input type="hidden" name="operationKey" value="cb0dfb96bad643458957bc0aa29deec7" />
+                                <button type="submit" class="icon-button" data-busy-label="Dismissing&#x2026;"
+                                        title="Dismiss"
+                                        aria-label="Dismiss Query &#x2014; QDOS26214 &#x2014; hire charges">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                </button>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAaPzOI23ByVSn5j11CoBNumwqCKhurP9edy6iC7zvMnqszHAFA3aQ9FTd5UFxmtwJNBR_acUxdc5U5N4R1qMVUVO_XxO1Dpuv24jhMqgYVfM7AAWVhJdy0l8lPEFaemt0" /></form>
+                            </div>
+                    </div>
+                    <div class="row-button inbox-row unread inbox-row--two-actions inbox-row--ticks"
+                         data-mail-row="045b9b39-e285-4203-bb0f-fcdadca338f5">
+                            <label class="inbox-row-tick">
+                                <input type="checkbox" form="mail-bulk" name="ids" value="045b9b39-e285-4203-bb0f-fcdadca338f5"
+                                       aria-label="Images &#x2014; MA59 BDY" data-mail-tick />
+                            </label>
+                                <input type="hidden" form="mail-bulk" name="versions[045b9b39-e285-4203-bb0f-fcdadca338f5]" value="1" />
+                        <span class="row-top">
+                            <span class="row-title">
+                                    <span class="unread-indicator" aria-hidden="true"></span><span class="sr-only">Unread</span>
+                                photos@northline.example
+                            </span>
+                            <span class="row-time">
+                                <time datetime="2026-10-11T15:05:00.0000000&#x2B;01:00">11 Oct 2026</time>
+                                <time>15:05</time>
+                            </span>
+                        </span>
+                        <a class="row-title" data-mail-open href="/Inbox/045b9b39-e285-4203-bb0f-fcdadca338f5">Images &#x2014; MA59 BDY</a>
+                            <span class="row-excerpt">Further photographs of the rear quarter and the odometer.</span>
+                        <span class="row-top">
+                            <span class="cluster">
+                                    <span class="status status--amber">No Case Found</span>
+
+                                    <span class="row-meta">Images received</span>
+                            </span>
+                                <span class="row-meta">2 attachments</span>
+                        </span>
+                            <div class="inbox-row-actions">
+                                <a class="icon-button" href="/Inbox/045b9b39-e285-4203-bb0f-fcdadca338f5?compose=reply" data-mail-row-reply data-mail-open
+                                   title="Reply"
+                                   aria-label="Reply Images &#x2014; MA59 BDY">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-reply" /></svg>
+                                </a>
+                            <form method="post" class="inbox-row-action" data-mail-row-action="dismiss" action="/Inbox?handler=Dismiss">
+                                <input type="hidden" name="id" value="045b9b39-e285-4203-bb0f-fcdadca338f5" />
+                                <input type="hidden" name="operationKey" value="26bb32d963a147c297469f815d2c3f0f" />
+                                <button type="submit" class="icon-button" data-busy-label="Dismissing&#x2026;"
+                                        title="Dismiss"
+                                        aria-label="Dismiss Images &#x2014; MA59 BDY">
+                                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+                                </button>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAAAaPzOI23ByVSn5j11CoBNumwqCKhurP9edy6iC7zvMnqszHAFA3aQ9FTd5UFxmtwJNBR_acUxdc5U5N4R1qMVUVO_XxO1Dpuv24jhMqgYVfM7AAWVhJdy0l8lPEFaemt0" /></form>
+                            </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<div data-mail-dialog-root></div>
+
+    <div id="bulkClassifyDialog" class="dialog-backdrop" role="dialog" aria-modal="true"
+         aria-labelledby="bulkClassifyDialog_title" data-dialog="bulkClassifyDialog"
+         data-dialog-open-on-load="false" hidden="hidden">
+        <section class="dialog">
+            <div class="dialog-head">
+                <h2 id="bulkClassifyDialog_title" tabindex="-1">Correct classification</h2>
+            </div>
+            <div class="dialog-body stack">
+                <div class="field">
+                    <label for="bulkClassificationKey">Classification</label>
+                    <select id="bulkClassificationKey" name="ClassificationKey" form="mail-bulk" data-work-type-toggle>
+                        <option value="">Choose classification</option>
+                            <option value="new-instruction">New instruction</option>
+                            <option value="triage-request">Triage request</option>
+                            <option value="pre-instruction">Pre-instruction</option>
+                            <option value="images-received">Images received</option>
+                            <option value="case-update">Case update</option>
+                            <option value="cancellation">Cancellation</option>
+                            <option value="query">Query</option>
+                            <option value="billing">Billing</option>
+                            <option value="general">General</option>
+                            <option value="not-client-related">Not client related</option>
+                            <option value="internal-cc">Internal CC</option>
+                            <option value="unclassified">Unclassified</option>
+                    </select>
+                    <span class="field-validation-valid" data-valmsg-for="ClassificationKey" data-valmsg-replace="true"></span>
+                </div>
+                <div class="field" data-work-type-field hidden>
+                    <label class="req" for="bulkWorkType">Case type</label>
+                    <select id="bulkWorkType" name="WorkType" form="mail-bulk">
+                        <option value="">Choose case type</option>
+                            <option value="Inspection">Inspection</option>
+                            <option value="Audit">Audit</option>
+                            <option value="InspectionAndAudit">Inspection and Audit</option>
+                    </select>
+                    <span class="field-validation-valid" data-valmsg-for="WorkType" data-valmsg-replace="true"></span>
+                </div>
+                <div class="field">
+                    <label class="req" for="bulkCorrectionReason">Reason for correction</label>
+                    <textarea id="bulkCorrectionReason" name="CorrectionReason" form="mail-bulk" rows="3" maxlength="500" required></textarea>
+                    <span class="field-validation-valid" data-valmsg-for="CorrectionReason" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+            <div class="dialog-foot">
+                <button type="button" class="btn" data-dialog-close>Cancel</button>
+                <button type="submit" form="mail-bulk" class="btn btn--dark" data-busy-label="Saving&#x2026;" formaction="/Inbox?handler=BulkClassify">Save correction</button>
+            </div>
+        </section>
+    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+    
+<div class="dialog-backdrop" data-dialog="account-dialog" data-dialog-fragment="/Notifications?name=account&amp;handler=ShellDialog" hidden></div>
+
+<div class="dialog-backdrop" data-dialog="notifications-dialog" data-dialog-open-on-load="" data-notifications-url="/Notifications?handler=List" data-notifications-failed="Notifications unavailable." hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="notifications-dialog-title">
+        <div class="dialog-head">
+            <h2 id="notifications-dialog-title" tabindex="-1">Notifications</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+            <div class="dialog-body dialog-body--list" data-notifications-body aria-busy="true">
+                <div class="spinner" aria-hidden="true"></div>
+            </div>
+        <div class="dialog-foot">
+            <button type="button" class="btn btn--dark" data-dialog-close>Close</button>
+        </div>
+    </section>
+</div>
+
+<div class="dialog-backdrop" data-dialog="command-dialog" data-dialog-fragment="/Notifications?name=command&amp;handler=ShellDialog" hidden></div>
+
+
+<div class="dialog-backdrop" data-dialog="problem-dialog" data-dialog-fragment="/Notifications?name=problem&amp;traceId=00-e14c69d593b6d00b90df69e50e11db0e-7d0b4e0cb54f6d36-00&amp;method=GET&amp;handler=ShellDialog" hidden></div>
+
+    <div class="toast-region" aria-live="polite" data-toast-region></div>
+
+    <script src="/js/site.623y3cuxic.js"></script>
+    
+    <script src="/js/case-picker.x5qw9duq0z.js"></script>
+
+</body>
+</html>

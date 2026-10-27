@@ -1,0 +1,54 @@
+<details id="mock-strip" open>
+  <summary><span>Mockup controls</span><small>v42 mail simplification</small></summary>
+  <div class="mock-body">
+    <label><small>Page</small>
+      <select id="mock-state" aria-label="Page"></select>
+    </label>
+    <div class="mock-seg" role="group" aria-label="View">
+      <button type="button" data-mode="today" title="The page as it is on dev today, captured from the application">Today</button>
+      <button type="button" data-mode="proposal" title="The same page with the proposed changes">Proposal</button>
+    </div>
+    <div class="mock-seg" role="group" aria-label="Overlays">
+      <button type="button" data-diff>Diff badges</button>
+      <button type="button" data-hide-strip>Hide controls</button>
+    </div>
+    <div id="mock-upload-controls" hidden>
+      <small>Upload design (A–E)</small>
+      <div class="mock-seg mock-seg--5" role="group" aria-label="Upload design">
+        <button type="button" data-strip-upload-design="a" title="Design A — Split workbench">A</button>
+        <button type="button" data-strip-upload-design="b" title="Design B — Structured panel & format guide">B</button>
+        <button type="button" data-strip-upload-design="c" title="Design C — Intake staging ledger">C</button>
+        <button type="button" data-strip-upload-design="d" title="Design D — Destination-first split">D</button>
+        <button type="button" data-strip-upload-design="e" title="Design E — Focused record sheet">E</button>
+      </div>
+      <small>Entry point &amp; sample files</small>
+      <div class="mock-seg" role="group" aria-label="Upload entry point">
+        <button type="button" data-strip-upload-entry="rail">Left-nav (/Upload)</button>
+        <button type="button" data-strip-upload-entry="case">Case (QDOS26214)</button>
+      </div>
+      <div class="mock-seg" role="group" aria-label="Sample files">
+        <button type="button" data-strip-upload-sample="0">Empty</button>
+        <button type="button" data-strip-upload-sample="1">3 sample files</button>
+      </div>
+    </div>
+    <div id="mock-wc-controls" hidden>
+      <small>Work Centre design (A–E)</small>
+      <div class="mock-seg mock-seg--5" role="group" aria-label="Work Centre design">
+        <button type="button" data-strip-wc-design="a" title="Design A — Streamlined ledger">A</button>
+        <button type="button" data-strip-wc-design="b" title="Design B — KPI ribbon &amp; split inspector">B</button>
+        <button type="button" data-strip-wc-design="c" title="Design C — Three-column live board">C</button>
+        <button type="button" data-strip-wc-design="d" title="Design D — Telemetry sidebar &amp; priority stream">D</button>
+        <button type="button" data-strip-wc-design="e" title="Design E — Command deck &amp; action cards">E</button>
+      </div>
+      <small>Active Work Centre view</small>
+      <div class="mock-seg mock-seg--3" role="group" aria-label="Work Centre view">
+        <button type="button" data-strip-wc-tab="new-cases">New Cases</button>
+        <button type="button" data-strip-wc-tab="system-actions">System Actions</button>
+        <button type="button" data-strip-wc-tab="ai-actions">AI Actions</button>
+      </div>
+    </div>
+    <small>Proposed on this page</small>
+    <ul id="mock-changes"></ul>
+  </div>
+</details>
+<div id="mock-toast" role="status" aria-live="polite" hidden></div>

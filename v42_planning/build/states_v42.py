@@ -1,0 +1,87 @@
+"""The v42 mockup's states: one per captured live page the mail simplification changes.
+
+In the live application (v41 Stage 2), clicking an e-mail on /Inbox opens #mailMessageDialog
+(_MessageDialog.cshtml) inside [data-mail-dialog-root] over /Inbox. Every message-m* state
+mounts that dialog over its Inbox scope (All or No Case Found) in both Today and Proposal.
+In Today the dialog carries the 380px right-hand Decision column with twelve Classification
+chips; in Proposal the Decision column is replaced by the streamlined cog settings menu
+(#icon-settings) in the dialog header.
+"""
+from __future__ import annotations
+
+INBOX, CASE, WORK, UPLOAD = "Inbox", "Case", "Work Centre", "Upload"
+
+
+def s(key: str, label: str, group: str, lane: str, capture: str | None = None, **extra) -> dict:
+    return {"key": key, "label": label, "group": group, "lane": lane, "capture": capture or key, **extra}
+
+
+STATES: list[dict] = [
+    s("inbox", "Inbox · All", INBOX, "inbox"),
+    s("inbox-no-case-found", "Inbox · No Case Found", INBOX, "inbox"),
+    s("inbox-dismissed", "Inbox · Dismissed", INBOX, "inbox"),
+    s("inbox-rows-ticked", "Inbox · two rows ticked", INBOX, "inbox", "inbox"),
+    s("message-m1", "Message dialog · New instruction, no Case (settings open)", INBOX, "inbox", "inbox",
+      dialog="m1", settings_open=True),
+    s("message-m2", "Message dialog · Case update on a Report sent Case (settings open)", INBOX, "inbox", "inbox",
+      dialog="m2", settings_open=True),
+    s("message-m4", "Message dialog · Query on a Report sent Case (settings open)", INBOX, "inbox", "inbox",
+      dialog="m4", settings_open=True),
+    s("message-m4-ai-reply", "Message dialog · Query, composer on the AI draft", INBOX, "inbox", "inbox",
+      dialog="m4-ai-reply", settings_open=False),
+    s("message-m3", "Message dialog · photographs, no Case", INBOX, "inbox", "inbox-no-case-found",
+      dialog="m3", settings_open=False),
+    s("message-m7", "Message dialog · Billing, no Case (settings open)", INBOX, "inbox", "inbox-no-case-found",
+      dialog="m7", settings_open=True),
+    s("message-m11", "Message dialog · Cancellation on a Case in Report preparation (settings open)", INBOX, "inbox", "inbox",
+      dialog="m11", settings_open=True),
+    s("message-m12", "Message dialog · thank-you on a Report sent Case (settings open)", INBOX, "inbox", "inbox",
+      dialog="m12", settings_open=True),
+    s("case", "Case · Correspondence", CASE, "inbox", "case", scroll="#section-files"),
+    s("case-queries", "Case · Queries", CASE, "inbox", "case", scroll="#section-queries"),
+    s("case-queries-assign", "Case · Assign query dialog", CASE, "inbox", "case", scroll="#section-queries"),
+    s("case-aside-query", "Case · Next action and Actions menu with an open query", CASE, "inbox", "case"),
+    s("case-qdos26220", "Case · Cancellation received", CASE, "inbox", "case-qdos26220"),
+    s("work-centre-a", "Work Centre · Design A — Streamlined ledger", WORK, "shell", "work-centre", wc_design="a"),
+    s("work-centre-b", "Work Centre · Design B — KPI ribbon & split inspector", WORK, "shell", "work-centre", wc_design="b"),
+    s("work-centre-c", "Work Centre · Design C — Three-column live board", WORK, "shell", "work-centre", wc_design="c"),
+    s("work-centre-d", "Work Centre · Design D — Telemetry sidebar & priority stream", WORK, "shell", "work-centre", wc_design="d"),
+    s("work-centre-e", "Work Centre · Design E — Command deck & action cards", WORK, "shell", "work-centre", wc_design="e"),
+    s("cases-query", "Cases · Queries", WORK, "intake"),
+    s("upload-a", "Upload · Design A — Split workbench", UPLOAD, "intake", "upload",
+      upload_design="a", case_upload=False),
+    s("upload-b", "Upload · Design B — Structured panel & format guide", UPLOAD, "intake", "upload",
+      upload_design="b", case_upload=False),
+    s("upload-c", "Upload · Design C — Intake staging ledger", UPLOAD, "intake", "upload",
+      upload_design="c", case_upload=False),
+    s("upload-d", "Upload · Design D — Destination-first split", UPLOAD, "intake", "upload",
+      upload_design="d", case_upload=False),
+    s("upload-e", "Upload · Design E — Focused record sheet", UPLOAD, "intake", "upload",
+      upload_design="e", case_upload=False),
+    s("upload-a-case", "Upload (Case QDOS26214) · Design A — Split workbench", UPLOAD, "intake", "upload",
+      upload_design="a", case_upload=True),
+    s("upload-b-case", "Upload (Case QDOS26214) · Design B — Structured panel & format guide", UPLOAD, "intake", "upload",
+      upload_design="b", case_upload=True),
+    s("upload-c-case", "Upload (Case QDOS26214) · Design C — Intake staging ledger", UPLOAD, "intake", "upload",
+      upload_design="c", case_upload=True),
+    s("upload-d-case", "Upload (Case QDOS26214) · Design D — Destination-first split", UPLOAD, "intake", "upload",
+      upload_design="d", case_upload=True),
+    s("upload-e-case", "Upload (Case QDOS26214) · Design E — Focused record sheet", UPLOAD, "intake", "upload",
+      upload_design="e", case_upload=True),
+]
+
+# Live routes with no captured path of their own, mapped to the nearest state.
+ROUTES: list[tuple[str, str]] = [
+    ("/", "work-centre-a"),
+    ("/Index", "work-centre-a"),
+    ("/Inbox", "inbox"),
+    ("/Inbox?queue=no_case_found", "inbox-no-case-found"),
+    ("/Inbox?folder=dismissed", "inbox-dismissed"),
+    ("/Cases", "cases-query"),
+    ("/Cases/bee37ce3-c710-4a5b-8e2c-67e8ed6ad8cb", "case-qdos26220"),
+    ("/Cases/85de4c48-ed02-445f-a2ce-d97a087c19dd", "case"),
+    ("/Cases/", "case"),
+    ("/Upload", "upload-e"),
+    ("/Upload?caseId=85de4c48-ed02-445f-a2ce-d97a087c19dd", "upload-e-case"),
+    ("/Upload?caseId=bee37ce3-c710-4a5b-8e2c-67e8ed6ad8cb", "upload-e-case"),
+]
