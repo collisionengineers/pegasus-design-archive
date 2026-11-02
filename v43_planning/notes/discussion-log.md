@@ -55,3 +55,16 @@ was none: staff and the MCP Case-edit tool are the only writers.
 Open items **F** (Accident circumstances width), **G** (this Case's Principal notes cell
 when the record has none) and **H** (the DFD *Contact details if not client* review line).
 See [v43-notes.md §6](v43-notes.md#6-sign-off).
+
+## 2 November 2026: feedback round 1
+
+The operator, on the read Proposal (shot 002): "too big a gap here". The Case card
+stretched to the height of the Claim source card, leaving empty space under Matter line.
+
+### What changed
+
+The Claim source card lays its cells two across, as the Case card does: Claim source beside
+its contact name, phone beside e-mail, and the record's notes beside this Case's notes. Both
+cards now end level at 1580 and 1440 (shots 002, 004). Side effect: at 1580, with the aside
+beside the sections, the live single-line label "Claim source notes · this Case" ends in an
+ellipsis, and a long e-mail address wraps.

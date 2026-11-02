@@ -124,3 +124,12 @@ itself; it is not application evidence.
   either retargets the rule to the Principal panel or drops it; the mockup is not shot at
   those widths.
 - Only the Case details section is proposed. The rest of the page is the capture unchanged.
+
+## 9. Feedback round 1 (2 November 2026)
+
+"too big a gap here" (shot 002). The Claim source card now lays its cells two across
+(`.fg.g2`, as the Case card), so the Case and Claim source cards end level at 1580 and 1440.
+Recorded under B. The self-check is still `{"fail": [], "okCount": 112}` (2 November 2026).
+At 1580 the label "Claim source notes · this Case" is cut with an ellipsis (live `.lbl` is one
+line), and a long contact e-mail wraps. If that matters, the alternative is to stack the two
+notes cells at the card's full width, which leaves a smaller gap under the Case card.

@@ -55,6 +55,10 @@ def claim_source_card(ctx: Ctx) -> None:
     grid = card.select_one(".fg")
     if band is None or grid is None:
         return
+    # B (2 November 2026 feedback, "too big a gap"): the card lays its cells two across,
+    # as the Case card does, so the two cards stand about the same height.
+    grid["class"] = grid.get("class", []) + ["g2"]
+    ctx.mark(grid, "B", "The Claim source card lays its cells two across, like the Case card, so the two cards match in height.")
     # B: the Claim source notes cells (the record's, its edit slot, this Case's) move
     # under the contact cells, each spanning the card.
     moved = []

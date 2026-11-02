@@ -7,7 +7,8 @@ Decided with the operator on 2 November 2026 (brief and answers in the
 - **D2** The Claim source card shows, under its contact cells, the Claim source record's
   notes on every Case (read-only, absent when the record has none) and then this Case's
   Claim source notes. While editing, the record's notes follow the Claim source select
-  before Save. (B)
+  before Save. The card lays its cells two across, like the Case card (feedback,
+  2 November 2026). (B)
 - **D3** The Principal's notes on every Case (read-only, absent when the record has none)
   and this Case's Principal notes form their own full-width sub-panel headed
   **Principal**, below the Case and Claim source cards. (C)
