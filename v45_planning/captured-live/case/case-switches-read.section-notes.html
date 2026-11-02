@@ -1,0 +1,36 @@
+
+<section class="record-section panel" id="section-notes" data-section="notes" data-collapse="case.notes" aria-labelledby="section-notes-title">
+    <div class="panel-head">
+        <h2 id="section-notes-title">Notes</h2>
+        <div class="panel-actions">
+            <button type="button" class="icon-button panel-collapse" data-collapse-toggle
+        aria-expanded="true"
+        aria-label="Collapse section"
+        data-label-collapse="Collapse section"
+        data-label-expand="Expand section"
+        title="Collapse section">
+    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-down" /></svg>
+</button>
+
+        </div>
+    </div>
+    <div class="panel-body stack">
+            <form method="post" class="note-form" data-case-note-form action="/Cases/8cf85c8b-7400-4014-a160-f952e53937e0/Tasks?handler=AddNote">
+                <input type="hidden" name="id" value="8cf85c8b-7400-4014-a160-f952e53937e0" />
+                <input type="hidden" name="operationKey" value="b5a5c46fb35d4c1386a2457feb1645bd" />
+                <input type="hidden" name="view" />
+                <label class="lbl" for="case-note">Case note</label>
+                <textarea id="case-note" name="note" rows="2" required
+                          maxlength="2000"></textarea>
+                <div class="button-row">
+                    <button type="submit" data-busy-label="Adding&#x2026;" class="btn">
+                        <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-plus" /></svg>
+                        <span>Add Case note</span>
+                    </button>
+                </div>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAACHg_8Tl1MdplxqHSu7OSQkIrjtDU-OIKkSrykOLmS3ceTF6vqvsCbSr9uSdI1IxECHE-Dhrr9sXc0A7P70oY4dVUKlC4kilekDnnfXYOqEYGrtpOby7FO9WEt79Y1bdLE" /></form>
+
+            <p class="empty-line" data-notes-empty>No notes</p>
+    </div>
+</section>
+

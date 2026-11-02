@@ -1,0 +1,412 @@
+[
+  {
+    "key": "case-read",
+    "label": "Read \u00b7 default inclusions",
+    "group": "Case \u00b7 Report wording",
+    "changes": [
+      {
+        "id": "R1",
+        "summary": "On the report leaves the Valuation section; its five ticks move to Report wording."
+      },
+      {
+        "id": "R5",
+        "summary": "The Statement of truth sub-panel goes; the statement is a read-only block in Report wording."
+      },
+      {
+        "id": "E",
+        "summary": "The Valuation commentary field goes; the commentary is written in its block."
+      },
+      {
+        "id": "C",
+        "summary": "Read mode: the settings as static ticks, replacing the On the report summary line."
+      },
+      {
+        "id": "R3",
+        "summary": "Only the ticked items have a block."
+      },
+      {
+        "id": "R2",
+        "summary": "Settings checklist and read-only block styling."
+      }
+    ]
+  },
+  {
+    "key": "case-edit",
+    "label": "Editing \u00b7 default inclusions",
+    "group": "Case \u00b7 Report wording",
+    "changes": [
+      {
+        "id": "R1",
+        "summary": "On the report leaves the Valuation section; its five ticks move to Report wording."
+      },
+      {
+        "id": "R5",
+        "summary": "The Statement of truth sub-panel goes; the statement is a read-only block in Report wording."
+      },
+      {
+        "id": "E",
+        "summary": "The Valuation commentary field goes; the commentary is written in its block."
+      },
+      {
+        "id": "R4",
+        "summary": "PAV commentary has its own block, shown while its tick is on; its text box writes the commentary (E)."
+      },
+      {
+        "id": "R2",
+        "summary": "One settings checklist opens Report wording: every block, then Disclose guide source, FAO The Court and Include statement of truth, defaulting as today."
+      },
+      {
+        "id": "R3",
+        "summary": "Each block's own On report tick goes; an unticked item has no block."
+      },
+      {
+        "id": "A",
+        "summary": "Commentary and unrelated damage: the one tick writes the switch; the block's own flag is not offered."
+      },
+      {
+        "id": "H",
+        "summary": "The commentary tick reads as its block's heading (PAV commentary), not Valuation commentary."
+      },
+      {
+        "id": "R6",
+        "summary": "Disclose guide source shows its sentence in its print place; FAO The Court has no block."
+      },
+      {
+        "id": "D",
+        "summary": "The read-only blocks are pinned last, with the guide sentence where it prints."
+      },
+      {
+        "id": "I",
+        "summary": "With the statement off, its block keeps the paragraphs that still print (R609)."
+      }
+    ]
+  },
+  {
+    "key": "case-switches-read",
+    "label": "Read \u00b7 guide source, commentary, unrelated damage on",
+    "group": "Case \u00b7 Report wording",
+    "changes": [
+      {
+        "id": "R1",
+        "summary": "On the report leaves the Valuation section; its five ticks move to Report wording."
+      },
+      {
+        "id": "R5",
+        "summary": "The Statement of truth sub-panel goes; the statement is a read-only block in Report wording."
+      },
+      {
+        "id": "E",
+        "summary": "The Valuation commentary field goes; the commentary is written in its block."
+      },
+      {
+        "id": "C",
+        "summary": "Read mode: the settings as static ticks, replacing the On the report summary line."
+      },
+      {
+        "id": "R3",
+        "summary": "Only the ticked items have a block."
+      },
+      {
+        "id": "R2",
+        "summary": "Settings checklist and read-only block styling."
+      }
+    ]
+  },
+  {
+    "key": "case-switches-edit",
+    "label": "Editing \u00b7 guide source, commentary, unrelated damage on",
+    "group": "Case \u00b7 Report wording",
+    "changes": [
+      {
+        "id": "R1",
+        "summary": "On the report leaves the Valuation section; its five ticks move to Report wording."
+      },
+      {
+        "id": "R5",
+        "summary": "The Statement of truth sub-panel goes; the statement is a read-only block in Report wording."
+      },
+      {
+        "id": "E",
+        "summary": "The Valuation commentary field goes; the commentary is written in its block."
+      },
+      {
+        "id": "R4",
+        "summary": "PAV commentary has its own block, shown while its tick is on; its text box writes the commentary (E)."
+      },
+      {
+        "id": "R2",
+        "summary": "One settings checklist opens Report wording: every block, then Disclose guide source, FAO The Court and Include statement of truth, defaulting as today."
+      },
+      {
+        "id": "R3",
+        "summary": "Each block's own On report tick goes; an unticked item has no block."
+      },
+      {
+        "id": "A",
+        "summary": "Commentary and unrelated damage: the one tick writes the switch; the block's own flag is not offered."
+      },
+      {
+        "id": "H",
+        "summary": "The commentary tick reads as its block's heading (PAV commentary), not Valuation commentary."
+      },
+      {
+        "id": "R6",
+        "summary": "Disclose guide source shows its sentence in its print place; FAO The Court has no block."
+      },
+      {
+        "id": "D",
+        "summary": "The read-only blocks are pinned last, with the guide sentence where it prints."
+      },
+      {
+        "id": "I",
+        "summary": "With the statement off, its block keeps the paragraphs that still print (R609)."
+      }
+    ]
+  },
+  {
+    "key": "case-court-off-read",
+    "label": "Read \u00b7 FAO The Court and statement of truth off",
+    "group": "Case \u00b7 Report wording",
+    "changes": [
+      {
+        "id": "R1",
+        "summary": "On the report leaves the Valuation section; its five ticks move to Report wording."
+      },
+      {
+        "id": "R5",
+        "summary": "The Statement of truth sub-panel goes; the statement is a read-only block in Report wording."
+      },
+      {
+        "id": "E",
+        "summary": "The Valuation commentary field goes; the commentary is written in its block."
+      },
+      {
+        "id": "C",
+        "summary": "Read mode: the settings as static ticks, replacing the On the report summary line."
+      },
+      {
+        "id": "R3",
+        "summary": "Only the ticked items have a block."
+      },
+      {
+        "id": "R2",
+        "summary": "Settings checklist and read-only block styling."
+      }
+    ]
+  },
+  {
+    "key": "case-court-off-edit",
+    "label": "Editing \u00b7 FAO The Court and statement of truth off",
+    "group": "Case \u00b7 Report wording",
+    "changes": [
+      {
+        "id": "R1",
+        "summary": "On the report leaves the Valuation section; its five ticks move to Report wording."
+      },
+      {
+        "id": "R5",
+        "summary": "The Statement of truth sub-panel goes; the statement is a read-only block in Report wording."
+      },
+      {
+        "id": "E",
+        "summary": "The Valuation commentary field goes; the commentary is written in its block."
+      },
+      {
+        "id": "R4",
+        "summary": "PAV commentary has its own block, shown while its tick is on; its text box writes the commentary (E)."
+      },
+      {
+        "id": "R2",
+        "summary": "One settings checklist opens Report wording: every block, then Disclose guide source, FAO The Court and Include statement of truth, defaulting as today."
+      },
+      {
+        "id": "R3",
+        "summary": "Each block's own On report tick goes; an unticked item has no block."
+      },
+      {
+        "id": "A",
+        "summary": "Commentary and unrelated damage: the one tick writes the switch; the block's own flag is not offered."
+      },
+      {
+        "id": "H",
+        "summary": "The commentary tick reads as its block's heading (PAV commentary), not Valuation commentary."
+      },
+      {
+        "id": "R6",
+        "summary": "Disclose guide source shows its sentence in its print place; FAO The Court has no block."
+      },
+      {
+        "id": "D",
+        "summary": "The read-only blocks are pinned last, with the guide sentence where it prints."
+      },
+      {
+        "id": "I",
+        "summary": "With the statement off, its block keeps the paragraphs that still print (R609)."
+      }
+    ]
+  },
+  {
+    "key": "case-edit-unprojected",
+    "label": "Editing \u00b7 report cannot be projected (item B)",
+    "group": "Case \u00b7 Report wording",
+    "changes": [
+      {
+        "id": "R1",
+        "summary": "On the report leaves the Valuation section; its five ticks move to Report wording."
+      },
+      {
+        "id": "R5",
+        "summary": "The Statement of truth sub-panel goes; the statement is a read-only block in Report wording."
+      },
+      {
+        "id": "E",
+        "summary": "The Valuation commentary field goes; the commentary is written in its block."
+      },
+      {
+        "id": "B",
+        "summary": "The report cannot be projected: the settings still show, with no blocks."
+      },
+      {
+        "id": "R2",
+        "summary": "Settings checklist styling."
+      }
+    ]
+  },
+  {
+    "key": "case-edit-columns",
+    "label": "Editing \u00b7 item G variant: settings in columns",
+    "group": "Case \u00b7 Report wording",
+    "changes": [
+      {
+        "id": "R1",
+        "summary": "On the report leaves the Valuation section; its five ticks move to Report wording."
+      },
+      {
+        "id": "R5",
+        "summary": "The Statement of truth sub-panel goes; the statement is a read-only block in Report wording."
+      },
+      {
+        "id": "E",
+        "summary": "The Valuation commentary field goes; the commentary is written in its block."
+      },
+      {
+        "id": "R4",
+        "summary": "PAV commentary has its own block, shown while its tick is on; its text box writes the commentary (E)."
+      },
+      {
+        "id": "R2",
+        "summary": "One settings checklist opens Report wording: every block, then Disclose guide source, FAO The Court and Include statement of truth, defaulting as today."
+      },
+      {
+        "id": "G",
+        "summary": "Item G variant: the settings in columns."
+      },
+      {
+        "id": "R3",
+        "summary": "Each block's own On report tick goes; an unticked item has no block."
+      },
+      {
+        "id": "A",
+        "summary": "Commentary and unrelated damage: the one tick writes the switch; the block's own flag is not offered."
+      },
+      {
+        "id": "H",
+        "summary": "The commentary tick reads as its block's heading (PAV commentary), not Valuation commentary."
+      },
+      {
+        "id": "R6",
+        "summary": "Disclose guide source shows its sentence in its print place; FAO The Court has no block."
+      },
+      {
+        "id": "D",
+        "summary": "The read-only blocks are pinned last, with the guide sentence where it prints."
+      },
+      {
+        "id": "I",
+        "summary": "With the statement off, its block keeps the paragraphs that still print (R609)."
+      }
+    ]
+  },
+  {
+    "key": "valuation-read",
+    "label": "Valuation section \u00b7 read",
+    "group": "Case \u00b7 Report wording",
+    "changes": [
+      {
+        "id": "R1",
+        "summary": "On the report leaves the Valuation section; its five ticks move to Report wording."
+      },
+      {
+        "id": "R5",
+        "summary": "The Statement of truth sub-panel goes; the statement is a read-only block in Report wording."
+      },
+      {
+        "id": "E",
+        "summary": "The Valuation commentary field goes; the commentary is written in its block."
+      },
+      {
+        "id": "C",
+        "summary": "Read mode: the settings as static ticks, replacing the On the report summary line."
+      },
+      {
+        "id": "R3",
+        "summary": "Only the ticked items have a block."
+      },
+      {
+        "id": "R2",
+        "summary": "Settings checklist and read-only block styling."
+      }
+    ]
+  },
+  {
+    "key": "valuation-edit",
+    "label": "Valuation section \u00b7 editing",
+    "group": "Case \u00b7 Report wording",
+    "changes": [
+      {
+        "id": "R1",
+        "summary": "On the report leaves the Valuation section; its five ticks move to Report wording."
+      },
+      {
+        "id": "R5",
+        "summary": "The Statement of truth sub-panel goes; the statement is a read-only block in Report wording."
+      },
+      {
+        "id": "E",
+        "summary": "The Valuation commentary field goes; the commentary is written in its block."
+      },
+      {
+        "id": "R4",
+        "summary": "PAV commentary has its own block, shown while its tick is on; its text box writes the commentary (E)."
+      },
+      {
+        "id": "R2",
+        "summary": "One settings checklist opens Report wording: every block, then Disclose guide source, FAO The Court and Include statement of truth, defaulting as today."
+      },
+      {
+        "id": "R3",
+        "summary": "Each block's own On report tick goes; an unticked item has no block."
+      },
+      {
+        "id": "A",
+        "summary": "Commentary and unrelated damage: the one tick writes the switch; the block's own flag is not offered."
+      },
+      {
+        "id": "H",
+        "summary": "The commentary tick reads as its block's heading (PAV commentary), not Valuation commentary."
+      },
+      {
+        "id": "R6",
+        "summary": "Disclose guide source shows its sentence in its print place; FAO The Court has no block."
+      },
+      {
+        "id": "D",
+        "summary": "The read-only blocks are pinned last, with the guide sentence where it prints."
+      },
+      {
+        "id": "I",
+        "summary": "With the statement off, its block keeps the paragraphs that still print (R609)."
+      }
+    ]
+  }
+]
