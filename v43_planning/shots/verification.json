@@ -1,0 +1,597 @@
+{
+  "checkedAtUtc": "2026-11-02T11:08:13.611033+00:00",
+  "result": {
+    "fail": [],
+    "okCount": 112
+  },
+  "shots": [
+    {
+      "shot": "001-case-read-today-1580.png",
+      "state": "case-read",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "001-case-read-today-1580-case-details.png",
+      "state": "case-read",
+      "mode": "today",
+      "viewport": "1580 Case details section"
+    },
+    {
+      "shot": "001-case-read-today-full.png",
+      "state": "case-read",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "001-case-read-today-1440.png",
+      "state": "case-read",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "001-case-read-today-1440-case-details.png",
+      "state": "case-read",
+      "mode": "today",
+      "viewport": "1440 Case details section"
+    },
+    {
+      "shot": "001-case-read-today-760.png",
+      "state": "case-read",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "001-case-read-today-760-case-details.png",
+      "state": "case-read",
+      "mode": "today",
+      "viewport": "760 Case details section"
+    },
+    {
+      "shot": "002-case-read-proposal-1580.png",
+      "state": "case-read",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "002-case-read-proposal-1580-case-details.png",
+      "state": "case-read",
+      "mode": "proposal",
+      "viewport": "1580 Case details section"
+    },
+    {
+      "shot": "002-case-read-proposal-full.png",
+      "state": "case-read",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "002-case-read-proposal-1440.png",
+      "state": "case-read",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "002-case-read-proposal-1440-case-details.png",
+      "state": "case-read",
+      "mode": "proposal",
+      "viewport": "1440 Case details section"
+    },
+    {
+      "shot": "002-case-read-proposal-760.png",
+      "state": "case-read",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "002-case-read-proposal-760-case-details.png",
+      "state": "case-read",
+      "mode": "proposal",
+      "viewport": "760 Case details section"
+    },
+    {
+      "shot": "003-case-edit-today-1580.png",
+      "state": "case-edit",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "003-case-edit-today-1580-case-details.png",
+      "state": "case-edit",
+      "mode": "today",
+      "viewport": "1580 Case details section"
+    },
+    {
+      "shot": "003-case-edit-today-full.png",
+      "state": "case-edit",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "003-case-edit-today-1440.png",
+      "state": "case-edit",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "003-case-edit-today-1440-case-details.png",
+      "state": "case-edit",
+      "mode": "today",
+      "viewport": "1440 Case details section"
+    },
+    {
+      "shot": "003-case-edit-today-760.png",
+      "state": "case-edit",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "003-case-edit-today-760-case-details.png",
+      "state": "case-edit",
+      "mode": "today",
+      "viewport": "760 Case details section"
+    },
+    {
+      "shot": "004-case-edit-proposal-1580.png",
+      "state": "case-edit",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "004-case-edit-proposal-1580-case-details.png",
+      "state": "case-edit",
+      "mode": "proposal",
+      "viewport": "1580 Case details section"
+    },
+    {
+      "shot": "004-case-edit-proposal-full.png",
+      "state": "case-edit",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "004-case-edit-proposal-1440.png",
+      "state": "case-edit",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "004-case-edit-proposal-1440-case-details.png",
+      "state": "case-edit",
+      "mode": "proposal",
+      "viewport": "1440 Case details section"
+    },
+    {
+      "shot": "004-case-edit-proposal-760.png",
+      "state": "case-edit",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "004-case-edit-proposal-760-case-details.png",
+      "state": "case-edit",
+      "mode": "proposal",
+      "viewport": "760 Case details section"
+    },
+    {
+      "shot": "005-case-read-bare-today-1580.png",
+      "state": "case-read-bare",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "005-case-read-bare-today-1580-case-details.png",
+      "state": "case-read-bare",
+      "mode": "today",
+      "viewport": "1580 Case details section"
+    },
+    {
+      "shot": "005-case-read-bare-today-full.png",
+      "state": "case-read-bare",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "005-case-read-bare-today-1440.png",
+      "state": "case-read-bare",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "005-case-read-bare-today-1440-case-details.png",
+      "state": "case-read-bare",
+      "mode": "today",
+      "viewport": "1440 Case details section"
+    },
+    {
+      "shot": "005-case-read-bare-today-760.png",
+      "state": "case-read-bare",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "005-case-read-bare-today-760-case-details.png",
+      "state": "case-read-bare",
+      "mode": "today",
+      "viewport": "760 Case details section"
+    },
+    {
+      "shot": "006-case-read-bare-proposal-1580.png",
+      "state": "case-read-bare",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "006-case-read-bare-proposal-1580-case-details.png",
+      "state": "case-read-bare",
+      "mode": "proposal",
+      "viewport": "1580 Case details section"
+    },
+    {
+      "shot": "006-case-read-bare-proposal-full.png",
+      "state": "case-read-bare",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "006-case-read-bare-proposal-1440.png",
+      "state": "case-read-bare",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "006-case-read-bare-proposal-1440-case-details.png",
+      "state": "case-read-bare",
+      "mode": "proposal",
+      "viewport": "1440 Case details section"
+    },
+    {
+      "shot": "006-case-read-bare-proposal-760.png",
+      "state": "case-read-bare",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "006-case-read-bare-proposal-760-case-details.png",
+      "state": "case-read-bare",
+      "mode": "proposal",
+      "viewport": "760 Case details section"
+    },
+    {
+      "shot": "007-case-edit-bare-today-1580.png",
+      "state": "case-edit-bare",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "007-case-edit-bare-today-1580-case-details.png",
+      "state": "case-edit-bare",
+      "mode": "today",
+      "viewport": "1580 Case details section"
+    },
+    {
+      "shot": "007-case-edit-bare-today-full.png",
+      "state": "case-edit-bare",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "007-case-edit-bare-today-1440.png",
+      "state": "case-edit-bare",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "007-case-edit-bare-today-1440-case-details.png",
+      "state": "case-edit-bare",
+      "mode": "today",
+      "viewport": "1440 Case details section"
+    },
+    {
+      "shot": "007-case-edit-bare-today-760.png",
+      "state": "case-edit-bare",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "007-case-edit-bare-today-760-case-details.png",
+      "state": "case-edit-bare",
+      "mode": "today",
+      "viewport": "760 Case details section"
+    },
+    {
+      "shot": "008-case-edit-bare-proposal-1580.png",
+      "state": "case-edit-bare",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "008-case-edit-bare-proposal-1580-case-details.png",
+      "state": "case-edit-bare",
+      "mode": "proposal",
+      "viewport": "1580 Case details section"
+    },
+    {
+      "shot": "008-case-edit-bare-proposal-full.png",
+      "state": "case-edit-bare",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "008-case-edit-bare-proposal-1440.png",
+      "state": "case-edit-bare",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "008-case-edit-bare-proposal-1440-case-details.png",
+      "state": "case-edit-bare",
+      "mode": "proposal",
+      "viewport": "1440 Case details section"
+    },
+    {
+      "shot": "008-case-edit-bare-proposal-760.png",
+      "state": "case-edit-bare",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "008-case-edit-bare-proposal-760-case-details.png",
+      "state": "case-edit-bare",
+      "mode": "proposal",
+      "viewport": "760 Case details section"
+    },
+    {
+      "shot": "009-case-edit-claim-source-changed-today-1580.png",
+      "state": "case-edit-claim-source-changed",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "009-case-edit-claim-source-changed-today-1580-case-details.png",
+      "state": "case-edit-claim-source-changed",
+      "mode": "today",
+      "viewport": "1580 Case details section"
+    },
+    {
+      "shot": "009-case-edit-claim-source-changed-today-full.png",
+      "state": "case-edit-claim-source-changed",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "009-case-edit-claim-source-changed-today-1440.png",
+      "state": "case-edit-claim-source-changed",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "009-case-edit-claim-source-changed-today-1440-case-details.png",
+      "state": "case-edit-claim-source-changed",
+      "mode": "today",
+      "viewport": "1440 Case details section"
+    },
+    {
+      "shot": "009-case-edit-claim-source-changed-today-760.png",
+      "state": "case-edit-claim-source-changed",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "009-case-edit-claim-source-changed-today-760-case-details.png",
+      "state": "case-edit-claim-source-changed",
+      "mode": "today",
+      "viewport": "760 Case details section"
+    },
+    {
+      "shot": "010-case-edit-claim-source-changed-proposal-1580.png",
+      "state": "case-edit-claim-source-changed",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "010-case-edit-claim-source-changed-proposal-1580-case-details.png",
+      "state": "case-edit-claim-source-changed",
+      "mode": "proposal",
+      "viewport": "1580 Case details section"
+    },
+    {
+      "shot": "010-case-edit-claim-source-changed-proposal-full.png",
+      "state": "case-edit-claim-source-changed",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "010-case-edit-claim-source-changed-proposal-1440.png",
+      "state": "case-edit-claim-source-changed",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "010-case-edit-claim-source-changed-proposal-1440-case-details.png",
+      "state": "case-edit-claim-source-changed",
+      "mode": "proposal",
+      "viewport": "1440 Case details section"
+    },
+    {
+      "shot": "010-case-edit-claim-source-changed-proposal-760.png",
+      "state": "case-edit-claim-source-changed",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "010-case-edit-claim-source-changed-proposal-760-case-details.png",
+      "state": "case-edit-claim-source-changed",
+      "mode": "proposal",
+      "viewport": "760 Case details section"
+    },
+    {
+      "shot": "011-case-read-f-half-today-1580.png",
+      "state": "case-read-f-half",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "011-case-read-f-half-today-1580-case-details.png",
+      "state": "case-read-f-half",
+      "mode": "today",
+      "viewport": "1580 Case details section"
+    },
+    {
+      "shot": "011-case-read-f-half-today-full.png",
+      "state": "case-read-f-half",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "011-case-read-f-half-today-1440.png",
+      "state": "case-read-f-half",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "011-case-read-f-half-today-1440-case-details.png",
+      "state": "case-read-f-half",
+      "mode": "today",
+      "viewport": "1440 Case details section"
+    },
+    {
+      "shot": "011-case-read-f-half-today-760.png",
+      "state": "case-read-f-half",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "011-case-read-f-half-today-760-case-details.png",
+      "state": "case-read-f-half",
+      "mode": "today",
+      "viewport": "760 Case details section"
+    },
+    {
+      "shot": "012-case-read-f-half-proposal-1580.png",
+      "state": "case-read-f-half",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "012-case-read-f-half-proposal-1580-case-details.png",
+      "state": "case-read-f-half",
+      "mode": "proposal",
+      "viewport": "1580 Case details section"
+    },
+    {
+      "shot": "012-case-read-f-half-proposal-full.png",
+      "state": "case-read-f-half",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "012-case-read-f-half-proposal-1440.png",
+      "state": "case-read-f-half",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "012-case-read-f-half-proposal-1440-case-details.png",
+      "state": "case-read-f-half",
+      "mode": "proposal",
+      "viewport": "1440 Case details section"
+    },
+    {
+      "shot": "012-case-read-f-half-proposal-760.png",
+      "state": "case-read-f-half",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "012-case-read-f-half-proposal-760-case-details.png",
+      "state": "case-read-f-half",
+      "mode": "proposal",
+      "viewport": "760 Case details section"
+    },
+    {
+      "shot": "013-case-read-bare-g-span-today-1580.png",
+      "state": "case-read-bare-g-span",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "013-case-read-bare-g-span-today-1580-case-details.png",
+      "state": "case-read-bare-g-span",
+      "mode": "today",
+      "viewport": "1580 Case details section"
+    },
+    {
+      "shot": "013-case-read-bare-g-span-today-full.png",
+      "state": "case-read-bare-g-span",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "013-case-read-bare-g-span-today-1440.png",
+      "state": "case-read-bare-g-span",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "013-case-read-bare-g-span-today-1440-case-details.png",
+      "state": "case-read-bare-g-span",
+      "mode": "today",
+      "viewport": "1440 Case details section"
+    },
+    {
+      "shot": "013-case-read-bare-g-span-today-760.png",
+      "state": "case-read-bare-g-span",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "013-case-read-bare-g-span-today-760-case-details.png",
+      "state": "case-read-bare-g-span",
+      "mode": "today",
+      "viewport": "760 Case details section"
+    },
+    {
+      "shot": "014-case-read-bare-g-span-proposal-1580.png",
+      "state": "case-read-bare-g-span",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "014-case-read-bare-g-span-proposal-1580-case-details.png",
+      "state": "case-read-bare-g-span",
+      "mode": "proposal",
+      "viewport": "1580 Case details section"
+    },
+    {
+      "shot": "014-case-read-bare-g-span-proposal-full.png",
+      "state": "case-read-bare-g-span",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "014-case-read-bare-g-span-proposal-1440.png",
+      "state": "case-read-bare-g-span",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "014-case-read-bare-g-span-proposal-1440-case-details.png",
+      "state": "case-read-bare-g-span",
+      "mode": "proposal",
+      "viewport": "1440 Case details section"
+    },
+    {
+      "shot": "014-case-read-bare-g-span-proposal-760.png",
+      "state": "case-read-bare-g-span",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "014-case-read-bare-g-span-proposal-760-case-details.png",
+      "state": "case-read-bare-g-span",
+      "mode": "proposal",
+      "viewport": "760 Case details section"
+    }
+  ]
+}

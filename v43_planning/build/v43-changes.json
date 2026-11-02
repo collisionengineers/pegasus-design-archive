@@ -1,0 +1,223 @@
+[
+  {
+    "key": "case-read",
+    "label": "Read \u00b7 filled",
+    "group": "Case \u00b7 Case details",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "The card holding the Claim source and its contact is headed Claim source, not Principal."
+      },
+      {
+        "id": "B",
+        "summary": "The Claim source notes (the record's on every Case, then this Case's) sit in the Claim source card under its contact."
+      },
+      {
+        "id": "C",
+        "summary": "The Principal's notes (the record's, read-only, and this Case's) are their own full-width sub-panel headed Principal, where the Notes band was."
+      },
+      {
+        "id": "D",
+        "summary": "The Case contact sub-panel and its three cells are removed."
+      },
+      {
+        "id": "E",
+        "summary": "Notes from client is removed."
+      },
+      {
+        "id": "F",
+        "summary": "Accident circumstances, now alone, spans the full width."
+      }
+    ]
+  },
+  {
+    "key": "case-edit",
+    "label": "Editing \u00b7 filled",
+    "group": "Case \u00b7 Case details",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "The card holding the Claim source and its contact is headed Claim source, not Principal."
+      },
+      {
+        "id": "B",
+        "summary": "The Claim source notes (the record's on every Case, then this Case's) sit in the Claim source card under its contact."
+      },
+      {
+        "id": "C",
+        "summary": "The Principal's notes (the record's, read-only, and this Case's) are their own full-width sub-panel headed Principal, where the Notes band was."
+      },
+      {
+        "id": "D",
+        "summary": "The Case contact sub-panel and its three cells are removed."
+      },
+      {
+        "id": "E",
+        "summary": "Notes from client is removed."
+      },
+      {
+        "id": "F",
+        "summary": "Accident circumstances, now alone, spans the full width."
+      }
+    ]
+  },
+  {
+    "key": "case-read-bare",
+    "label": "Read \u00b7 no Claim source, no notes",
+    "group": "Case \u00b7 Case details",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "The card holding the Claim source and its contact is headed Claim source, not Principal."
+      },
+      {
+        "id": "B",
+        "summary": "The Claim source notes (the record's on every Case, then this Case's) sit in the Claim source card under its contact."
+      },
+      {
+        "id": "C",
+        "summary": "The Principal's notes (the record's, read-only, and this Case's) are their own full-width sub-panel headed Principal, where the Notes band was."
+      },
+      {
+        "id": "D",
+        "summary": "The Case contact sub-panel and its three cells are removed."
+      },
+      {
+        "id": "E",
+        "summary": "Notes from client is removed."
+      },
+      {
+        "id": "F",
+        "summary": "Accident circumstances, now alone, spans the full width."
+      }
+    ]
+  },
+  {
+    "key": "case-edit-bare",
+    "label": "Editing \u00b7 no Claim source, no notes",
+    "group": "Case \u00b7 Case details",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "The card holding the Claim source and its contact is headed Claim source, not Principal."
+      },
+      {
+        "id": "B",
+        "summary": "The Claim source notes (the record's on every Case, then this Case's) sit in the Claim source card under its contact."
+      },
+      {
+        "id": "C",
+        "summary": "The Principal's notes (the record's, read-only, and this Case's) are their own full-width sub-panel headed Principal, where the Notes band was."
+      },
+      {
+        "id": "D",
+        "summary": "The Case contact sub-panel and its three cells are removed."
+      },
+      {
+        "id": "E",
+        "summary": "Notes from client is removed."
+      },
+      {
+        "id": "F",
+        "summary": "Accident circumstances, now alone, spans the full width."
+      }
+    ]
+  },
+  {
+    "key": "case-edit-claim-source-changed",
+    "label": "Editing \u00b7 Claim source chosen (notes follow the select)",
+    "group": "Case \u00b7 Case details",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "The card holding the Claim source and its contact is headed Claim source, not Principal."
+      },
+      {
+        "id": "B",
+        "summary": "The Claim source notes (the record's on every Case, then this Case's) sit in the Claim source card under its contact."
+      },
+      {
+        "id": "C",
+        "summary": "The Principal's notes (the record's, read-only, and this Case's) are their own full-width sub-panel headed Principal, where the Notes band was."
+      },
+      {
+        "id": "D",
+        "summary": "The Case contact sub-panel and its three cells are removed."
+      },
+      {
+        "id": "E",
+        "summary": "Notes from client is removed."
+      },
+      {
+        "id": "F",
+        "summary": "Accident circumstances, now alone, spans the full width."
+      }
+    ]
+  },
+  {
+    "key": "case-read-f-half",
+    "label": "Read \u00b7 item F variant: Accident circumstances half width",
+    "group": "Case \u00b7 Case details",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "The card holding the Claim source and its contact is headed Claim source, not Principal."
+      },
+      {
+        "id": "B",
+        "summary": "The Claim source notes (the record's on every Case, then this Case's) sit in the Claim source card under its contact."
+      },
+      {
+        "id": "C",
+        "summary": "The Principal's notes (the record's, read-only, and this Case's) are their own full-width sub-panel headed Principal, where the Notes band was."
+      },
+      {
+        "id": "D",
+        "summary": "The Case contact sub-panel and its three cells are removed."
+      },
+      {
+        "id": "E",
+        "summary": "Notes from client is removed."
+      },
+      {
+        "id": "F",
+        "summary": "Variant: Accident circumstances keeps its live half-width cell."
+      }
+    ]
+  },
+  {
+    "key": "case-read-bare-g-span",
+    "label": "Read \u00b7 item G variant: this Case's Principal notes span the panel",
+    "group": "Case \u00b7 Case details",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "The card holding the Claim source and its contact is headed Claim source, not Principal."
+      },
+      {
+        "id": "B",
+        "summary": "The Claim source notes (the record's on every Case, then this Case's) sit in the Claim source card under its contact."
+      },
+      {
+        "id": "C",
+        "summary": "The Principal's notes (the record's, read-only, and this Case's) are their own full-width sub-panel headed Principal, where the Notes band was."
+      },
+      {
+        "id": "D",
+        "summary": "The Case contact sub-panel and its three cells are removed."
+      },
+      {
+        "id": "E",
+        "summary": "Notes from client is removed."
+      },
+      {
+        "id": "F",
+        "summary": "Accident circumstances, now alone, spans the full width."
+      },
+      {
+        "id": "G",
+        "summary": "Variant: with no Principal record notes, this Case's Principal notes span the panel."
+      }
+    ]
+  }
+]
