@@ -19,3 +19,15 @@ Work done:
   items A–F.
 
 Open: A–F.
+
+## 2 November 2026 — sign-off
+
+> B - shorten
+> c - keep
+> E = yes
+> F = yes
+> use recommendeds for any other answers. proceed to /razor-html-mockup-conversion
+
+Settled: A dialog picker, B `Change`, C keep `Change case`, D buttons, E yes, F yes.
+The mockup default for `changelabel` is now `Change`. Stage 2 began on Pegasus
+`task/v44-mail-link-settings`.

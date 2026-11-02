@@ -1,14 +1,14 @@
 # Inbox message settings: how it should work (proposal)
 
-Status: proposed on 2 November 2026; items A–F are open
-([notes §5](../../notes/v44-notes.md#5-sign-off)). Behaviour, availability rules and
+Status: settled on 2 November 2026 (R607–R612,
+[notes §5](../../notes/v44-notes.md#5-sign-off)). Behaviour, availability rules and
 handlers are unchanged from [how-it-works.md](how-it-works.md); only the presentation
 changes.
 
 ## Menu
 
 1. **Case** (label). One row:
-   - linked: the reference link, then `Change linked Case` and `Unlink` as `btn--small`
+   - linked: the reference link, then `Change` and `Unlink` as `btn--small`
      buttons (A, B);
    - not linked: `None`, then `Link to Case` as a `btn--small` button.
 
@@ -27,6 +27,15 @@ There is a 1px divider between sections, and every section label uses one style 
 - `Link to Case` and `Change linked Case` hold the `Case / PO` picker, with initial
   focus, above `Reason for action` (A).
 - `Unlink` is unchanged.
+
+## Decided (2 November 2026)
+
+- A: the picker is in the dialogs (R607).
+- B: the menu button reads `Change`; the dialog is titled `Change linked Case` (R608).
+- C: `Change case` stays (R609).
+- D: small buttons in a row (R610).
+- E: one label style, dividers, Decided foot line (R611).
+- F: the Query section is labelled `Query` and shows only its button (R612).
 
 ## Evidence
 

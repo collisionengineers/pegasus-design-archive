@@ -1,0 +1,96 @@
+{
+  "fail": [],
+  "facts": {
+    "unlinked": {
+      "labels": [
+        "Case 10px/400",
+        "Type 10px/400"
+      ],
+      "buttons": [
+        "Link to Case"
+      ],
+      "sections": [
+        "0px",
+        "1px"
+      ],
+      "inputs": 0,
+      "width": 364
+    },
+    "linked": {
+      "labels": [
+        "Case 10px/400",
+        "Type 10px/400",
+        "Change case 10px/400"
+      ],
+      "buttons": [
+        "Change",
+        "Unlink",
+        "Place on Hold",
+        "Close case"
+      ],
+      "sections": [
+        "0px",
+        "1px",
+        "1px"
+      ],
+      "inputs": 0,
+      "width": 364
+    },
+    "query": {
+      "labels": [
+        "Case 10px/400",
+        "Type 10px/400",
+        "Query 10px/400"
+      ],
+      "buttons": [
+        "Change",
+        "Unlink",
+        "Mark query done"
+      ],
+      "sections": [
+        "0px",
+        "1px",
+        "1px"
+      ],
+      "inputs": 0,
+      "width": 364
+    },
+    "triage": {
+      "labels": [
+        "Case 10px/400"
+      ],
+      "buttons": [
+        "Change",
+        "Unlink"
+      ],
+      "sections": [
+        "0px"
+      ],
+      "inputs": 0,
+      "width": 364
+    }
+  },
+  "shots": [
+    "002-proposal-linked-live-1580.png",
+    "004-proposal-unlinked-live-1580.png",
+    "006-proposal-query-live-1580.png",
+    "008-proposal-triage-live-1580.png",
+    "009-proposal-change-dialog-live-1580.png",
+    "010-proposal-link-dialog-live-1580.png",
+    "011-proposal-unlink-dialog-live-1580.png",
+    "002-proposal-linked-live-1440.png",
+    "004-proposal-unlinked-live-1440.png",
+    "006-proposal-query-live-1440.png",
+    "008-proposal-triage-live-1440.png",
+    "009-proposal-change-dialog-live-1440.png",
+    "010-proposal-link-dialog-live-1440.png",
+    "011-proposal-unlink-dialog-live-1440.png",
+    "002-proposal-linked-live-760.png",
+    "004-proposal-unlinked-live-760.png",
+    "006-proposal-query-live-760.png",
+    "008-proposal-triage-live-760.png",
+    "009-proposal-change-dialog-live-760.png",
+    "010-proposal-link-dialog-live-760.png",
+    "011-proposal-unlink-dialog-live-760.png"
+  ]
+}

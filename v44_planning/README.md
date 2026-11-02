@@ -47,7 +47,11 @@ python -X utf8 build/build-v44.py; python -X utf8 build/check-v44.py
 
 ## Status
 
-**Awaiting sign-off (2 November 2026).** Items A–F are open. No file under `src/` or
-`tests/` in the application repository has been changed.
+**Signed off and implemented (2 November 2026).** Items A–F are settled (R607–R612), and
+Stage 2 is on Pegasus `task/v44-mail-link-settings`, with routed-page conformance shots in
+`shots/live/` ([notes §7](notes/v44-notes.md#7-stage-2-conformance-2-november-2026)). This
+folder is now historical reference. Current behaviour is owned by
+[FRD-20](https://github.com/collisionengineers/pegasus/blob/dev/docs/frd/frd-20-mailbox-workspace.md)
+and rulings R607–R612 in the application repository.
 
 The screenshots and self-check are mockup evidence only, not application evidence.

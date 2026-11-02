@@ -83,7 +83,20 @@ replaces the live `.mail-settings-*` rules in `inbox.css`.
 
 ## 5. Sign-off
 
-Each item is phrased "Confirm, or …". None is settled.
+Settled by the operator on 2 November 2026 (rulings R607–R612 in the application
+repository's `docs/rulings.md`). The operator's words: "B - shorten", "c - keep",
+"E = yes", "F = yes", "use recommendeds for any other answers".
+
+| Item | Outcome |
+| --- | --- |
+| A | Recommended: picker in the Link to Case and Change linked Case dialogs (R607) |
+| B | **Shorten**: the menu button reads `Change`; the dialog keeps `Change linked Case` (R608) |
+| C | **Keep** `Change case` (R609) |
+| D | Recommended: small buttons in a row (R610) |
+| E | **Yes** (R611) |
+| F | **Yes** (R612) |
+
+The list as raised:
 
 - **A** — Confirm that the `Case / PO` picker moves into the Link to Case and Change linked
   Case reason dialogs, so the cog menu shows no input (amends v42 D6). Or keep it in the
@@ -108,7 +121,41 @@ Each item is phrased "Confirm, or …". None is settled.
   unlink consequence rule, divider and label-style checks, the 760px viewport and the
   strip. Screenshots: 48 (`shots/verification.json`).
 
-## 7. Stage 2 (planned, not started)
+## 7. Stage 2 conformance (2 November 2026)
+
+Pegasus `task/v44-mail-link-settings` (commits `b431dadb1`, `2b0e46b9b`). The routed
+Inbox message dialog was served by a scratch Kestrel host over the integration-test
+fixtures (four states) and driven with Playwright. Shots are in `shots/live/`, named
+after the mockup shot of the same number (`002`, `004`, `006`, `008`–`011`) at 1580, 1440
+and 760, plus `009b` (the picker's live options in the Change linked Case dialog).
+`shots/live/conformance.json` records the result: no failures and no console errors.
+It checked that:
+
+- the menu has no field;
+- the menu uses one label style, with dividers;
+- each state shows the expected buttons: Change, Unlink, Place on Hold and Close case
+  when linked; Link to Case when unlinked; Mark query done with a query; no Change case
+  on a Triage;
+- the picker in the Change linked Case dialog has initial focus, comes before Reason,
+  lists the Case from the live `LinkCaseOptions` handler, fills on choice and returns
+  focus to the field;
+- at 760px the menu stays inside the viewport.
+
+The walk found one defect in the picker script: choosing an option re-entered
+`close()` through `focusout`, which threw and dropped focus. Inside a dialog, focus
+left the modal. It is fixed in `2b0e46b9b`.
+
+Differences from the mockup:
+
+- The fixtures name their own subjects and references (`MAIL44001`), not the mockup's
+  synthetic ones.
+- The fixture's linked Case was not created by its message's acceptance, so the
+  Change linked Case dialog carries no consequence sentence there. The rule is
+  unchanged.
+- The query state was reached by pressing `Open query` in the menu (Case in Report
+  sent).
+
+## 8. Stage 2 (delivered)
 
 - `src/Pegasus.Web/Pages/Mail/Shared/_MessageDecision.cshtml`: the Case row with
   `btn--small` actions and no inline picker (A); Query and Change case as sections
