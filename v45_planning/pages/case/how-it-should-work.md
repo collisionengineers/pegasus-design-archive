@@ -64,3 +64,14 @@ These are the lettered items in the sign-off list.
   offered. The readiness paragraph names the new home of the switches.
 - **Rulings:** a new ruling supersedes R611's placement ("one home on Valuation") and R616's
   summary line.
+
+## Decided 2 November 2026
+
+The operator approved the round on 2 November 2026 (R624, R625).
+
+- A, B, C, D, E, G and I are as proposed. B also keeps the read-only Statement of truth, which is
+  shown in every state.
+- H: the commentary tick reads **Valuation commentary**, and the block's printed heading stays
+  **PAV commentary**.
+- F: the readiness messages say "… under Report wording on the Report section."
+

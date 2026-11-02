@@ -1,0 +1,50 @@
+[
+  {
+    "key": "case-read",
+    "label": "Read \u00b7 default inclusions",
+    "group": "Case \u00b7 Report wording (implemented)",
+    "changes": []
+  },
+  {
+    "key": "case-edit",
+    "label": "Editing \u00b7 default inclusions",
+    "group": "Case \u00b7 Report wording (implemented)",
+    "changes": []
+  },
+  {
+    "key": "case-switches-read",
+    "label": "Read \u00b7 guide source, commentary, unrelated damage on",
+    "group": "Case \u00b7 Report wording (implemented)",
+    "changes": []
+  },
+  {
+    "key": "case-switches-edit",
+    "label": "Editing \u00b7 guide source, commentary, unrelated damage on",
+    "group": "Case \u00b7 Report wording (implemented)",
+    "changes": []
+  },
+  {
+    "key": "case-court-off-read",
+    "label": "Read \u00b7 FAO The Court and statement of truth off",
+    "group": "Case \u00b7 Report wording (implemented)",
+    "changes": []
+  },
+  {
+    "key": "case-court-off-edit",
+    "label": "Editing \u00b7 FAO The Court and statement of truth off",
+    "group": "Case \u00b7 Report wording (implemented)",
+    "changes": []
+  },
+  {
+    "key": "valuation-read",
+    "label": "Valuation section \u00b7 read",
+    "group": "Case \u00b7 Report wording (implemented)",
+    "changes": []
+  },
+  {
+    "key": "valuation-edit",
+    "label": "Valuation section \u00b7 editing",
+    "group": "Case \u00b7 Report wording (implemented)",
+    "changes": []
+  }
+]

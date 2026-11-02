@@ -1,0 +1,674 @@
+
+<section class="record-section panel" id="section-files" data-section="files" data-collapse="case.files" aria-labelledby="section-files-title" data-file-tabs-wrap>
+    <div class="panel-head">
+        <h2 id="section-files-title">Files</h2>
+            <span class="status status--amber status--plain" data-custody-chip>Box case folder: preparing</span>
+        <div class="panel-actions">
+            <a class="btn btn--small btn--primary" data-add-evidence href="/Upload?caseId=58e384cf-b197-4621-bbb6-35e0ff3aeeb3">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-upload" /></svg>
+                <span>Add evidence</span>
+            </a>
+                <a class="btn btn--small" href="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Images" target="_blank" rel="noopener" data-images-popout>
+                    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-external-link" /></svg>
+                    <span>Pop out</span>
+                </a>
+            <button type="button" class="icon-button panel-collapse" data-collapse-toggle
+        aria-expanded="true"
+        aria-label="Collapse section"
+        data-label-collapse="Collapse section"
+        data-label-expand="Expand section"
+        title="Collapse section">
+    <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-chevron-down" /></svg>
+</button>
+
+        </div>
+    </div>
+    <div class="panel-body stack">
+        <div class="tabs" role="tablist" aria-label="Files" data-file-tabs hidden>
+            <button type="button" class="tab" role="tab" aria-selected="true" aria-controls="case-files-documents" data-file-tab="documents">Documents · 1</button>
+            <button type="button" class="tab" role="tab" aria-selected="false" aria-controls="case-files-images" data-file-tab="images">Images · 5</button>
+            <button type="button" class="tab" role="tab" aria-selected="false" aria-controls="case-files-correspondence" data-file-tab="correspondence">Correspondence · 2</button>
+        </div>
+        <div id="case-files-documents" role="tabpanel" data-file-tab-panel="documents">
+            <h3 class="tab-panel-title">Documents</h3>
+            
+    <div class="doc-list stack" data-evidence-set data-document-list>
+            <div class="doc-row" data-document-row="5d2239ed-52f4-4cba-81f9-b924548a2c64">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-file-text" /></svg>
+                <div class="doc-row-name">
+                    <b>instruction.pdf</b>
+                    <small>E-mail · 05 May 2031 10:00 · under 0.1 MB</small>
+                </div>
+                <span class="doc-row-tags">
+                    <span class="src-tag">Instruction</span>
+                </span>
+                <span class="doc-row-actions">
+                            <a class="btn btn--small"
+                               href="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/5d2239ed-52f4-4cba-81f9-b924548a2c64/Download?versionId=f11e7110-3a7c-4951-bc53-9f8b45434a8d&amp;inline=true"
+                               data-evidence-item
+                               data-download-href="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/5d2239ed-52f4-4cba-81f9-b924548a2c64/Download?versionId=f11e7110-3a7c-4951-bc53-9f8b45434a8d"
+                               data-media-type="application/pdf"
+                               data-file-name="instruction.pdf">
+                                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-eye" /></svg>
+                                <span>View</span>
+                            </a>
+                        <a class="btn btn--small btn--icon" href="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/5d2239ed-52f4-4cba-81f9-b924548a2c64/Download?versionId=f11e7110-3a7c-4951-bc53-9f8b45434a8d" download title="Save as" aria-label="Save as instruction.pdf">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-download" /></svg>
+                        </a>
+                            <button type="button" class="btn btn--small" data-dialog-open="type-doc-5d2239ed-52f4-4cba-81f9-b924548a2c64">Change type</button>
+                        <button type="button" class="btn btn--small btn--icon btn--danger" data-dialog-open="remove-doc-5d2239ed-52f4-4cba-81f9-b924548a2c64" title="Remove" aria-label="Remove instruction.pdf">
+                            <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-trash-2" /></svg>
+                        </button>
+                </span>
+            </div>
+    </div>
+            <div id="remove-doc-5d2239ed-52f4-4cba-81f9-b924548a2c64" class="dialog-backdrop" data-dialog="remove-doc-5d2239ed-52f4-4cba-81f9-b924548a2c64" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="remove-doc-5d2239ed-52f4-4cba-81f9-b924548a2c64_title">
+        <div class="dialog-head">
+            <h2 id="remove-doc-5d2239ed-52f4-4cba-81f9-b924548a2c64_title" tabindex="-1">Remove file</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <form method="post" action="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Custody?handler=RemoveDocument">
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABUtegDFZOd-5POaOvYB_aLhO7PtoG3LXpIvTsJvPj0PjrGhYSTyp--xlVzACR9DLn5ifQI5IcDpbhEjWfkuUKqnV7yaKh1WdsGwISA-Qm2HvUDMUGgnPsFIfnVsizLzcU" />
+                <input type="hidden" name="id" value="58e384cf-b197-4621-bbb6-35e0ff3aeeb3" />
+                <input type="hidden" name="occurrenceId" value="5d2239ed-52f4-4cba-81f9-b924548a2c64" />
+                <input type="hidden" name="expectedVersion" value="7" />
+                <input type="hidden" name="operationKey" value="392103c660d444c78c89a964a55aec43" />
+                <input type="hidden" name="editLeaseToken" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+                <input type="hidden" name="view" />
+            <div class="dialog-body stack">
+                <div class="field">
+                    <label class="req" for="remove-doc-5d2239ed-52f4-4cba-81f9-b924548a2c64_reason">Reason for action</label>
+                    <textarea id="remove-doc-5d2239ed-52f4-4cba-81f9-b924548a2c64_reason" name="Reason" rows="3" required maxlength="500"></textarea>
+                </div>
+            </div>
+            <div class="dialog-foot">
+                <button type="button" class="btn" data-dialog-close>Cancel</button>
+                <button type="submit" class="btn btn--primary" data-busy-label="Confirming&#x2026;">Confirm Action</button>
+            </div>
+        </form>
+    </section>
+</div>
+
+                <div id="type-doc-5d2239ed-52f4-4cba-81f9-b924548a2c64" class="dialog-backdrop" data-dialog="type-doc-5d2239ed-52f4-4cba-81f9-b924548a2c64" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="type-doc-5d2239ed-52f4-4cba-81f9-b924548a2c64_title">
+        <div class="dialog-head">
+            <h2 id="type-doc-5d2239ed-52f4-4cba-81f9-b924548a2c64_title" tabindex="-1">Change document type</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <form method="post" action="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Custody?handler=SetDocumentType">
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABUtegDFZOd-5POaOvYB_aLhO7PtoG3LXpIvTsJvPj0PjrGhYSTyp--xlVzACR9DLn5ifQI5IcDpbhEjWfkuUKqnV7yaKh1WdsGwISA-Qm2HvUDMUGgnPsFIfnVsizLzcU" />
+                <input type="hidden" name="id" value="58e384cf-b197-4621-bbb6-35e0ff3aeeb3" />
+                <input type="hidden" name="occurrenceId" value="5d2239ed-52f4-4cba-81f9-b924548a2c64" />
+                <input type="hidden" name="versionId" value="f11e7110-3a7c-4951-bc53-9f8b45434a8d" />
+                <input type="hidden" name="expectedVersion" value="7" />
+                <input type="hidden" name="operationKey" value="c327a7a63a84421ab28b1721205b071c" />
+                <input type="hidden" name="editLeaseToken" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+                <input type="hidden" name="view" />
+            <div class="dialog-body stack">
+                    <div class="field">
+                        <label class="req" for="type-doc-5d2239ed-52f4-4cba-81f9-b924548a2c64_choice">Type</label>
+                        <select id="type-doc-5d2239ed-52f4-4cba-81f9-b924548a2c64_choice" name="semanticRole" required>
+                                <option value="Correspondence">Correspondence</option>
+                                <option value="EngineerReport">Engineer report</option>
+                                <option value="Estimate">Estimate</option>
+                                <option value="ValuationEvidence">Valuation Evidence</option>
+                                <option value="Other">Other</option>
+                        </select>
+                    </div>
+                <div class="field">
+                    <label class="req" for="type-doc-5d2239ed-52f4-4cba-81f9-b924548a2c64_reason">Reason for action</label>
+                    <textarea id="type-doc-5d2239ed-52f4-4cba-81f9-b924548a2c64_reason" name="Reason" rows="3" required maxlength="500"></textarea>
+                </div>
+            </div>
+            <div class="dialog-foot">
+                <button type="button" class="btn" data-dialog-close>Cancel</button>
+                <button type="submit" class="btn btn--primary" data-busy-label="Confirming&#x2026;">Confirm Action</button>
+            </div>
+        </form>
+    </section>
+</div>
+
+
+        </div>
+        <div id="case-files-images" role="tabpanel" data-file-tab-panel="images">
+            <h3 class="tab-panel-title">Images</h3>
+            
+    <ul class="thumbs image-grid" data-evidence-set data-image-grid>
+            <li class="image-tile image-tile--tools" data-image-tile="db30e5b9-e74d-49ef-bce2-674077e4f88d" >
+                <a href="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/db30e5b9-e74d-49ef-bce2-674077e4f88d/Download?versionId=db30e546-e74d-49ef-bce2-674077e4f88d&amp;inline=true"
+                   class="th"
+                   data-evidence-item
+                   data-download-href="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/db30e5b9-e74d-49ef-bce2-674077e4f88d/Download?versionId=db30e546-e74d-49ef-bce2-674077e4f88d"
+                   data-media-type="image/jpeg"
+                   data-file-name="front-nearside.jpg"
+                   data-thumb="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/db30e5b9-e74d-49ef-bce2-674077e4f88d/Download?versionId=db30e546-e74d-49ef-bce2-674077e4f88d&amp;inline=true&amp;size=thumb&amp;prep=0&amp;renderer=r2"
+                   data-tag=""
+                   data-evidence-occurrence="db30e5b9-e74d-49ef-bce2-674077e4f88d"
+                   data-evidence-preparation-occurrence="">
+                    <img src="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/db30e5b9-e74d-49ef-bce2-674077e4f88d/Download?versionId=db30e546-e74d-49ef-bce2-674077e4f88d&amp;inline=true&amp;size=thumb&amp;prep=0&amp;renderer=r2" alt="front-nearside.jpg" loading="lazy" data-gallery-image />
+                    <span class="rot" data-tile-rotation hidden="hidden"></span>
+                    <span class="th-name">front-nearside.jpg</span>
+                </a>
+                    <div class="image-tile-panel image-tile-actions">
+                        <div class="image-tile-row image-tile-toolbar">
+                            <details class="tag-picker" data-tag-picker data-menu>
+    <summary class="icon-button" title="Tag"><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-tag" /></svg><span class="sr-only">Tag</span></summary>
+    <div class="tag-picker-body">
+        <form method="post" action="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Custody?handler=TagImage" data-document-action>
+            <input type="hidden" name="id" value="58e384cf-b197-4621-bbb6-35e0ff3aeeb3" />
+            <input type="hidden" name="occurrenceId" value="db30e5b9-e74d-49ef-bce2-674077e4f88d" />
+            <input type="hidden" name="expectedVersion" value="7" />
+            <input type="hidden" name="operationKey" value="0b0199d6b6504d36983ba2f0c9065087" />
+            <input type="hidden" name="editLeaseToken" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+            <input type="hidden" name="view" />
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a2"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--green" aria-hidden="true"></span>
+                    <span>Close-up</span>
+                </button>
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a1"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--blue" aria-hidden="true"></span>
+                    <span>Overview</span>
+                </button>
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a4"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--navy" aria-hidden="true"></span>
+                    <span>Reflection</span>
+                </button>
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a3"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--amber" aria-hidden="true"></span>
+                    <span>Third party</span>
+                </button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABUtegDFZOd-5POaOvYB_aLhO7PtoG3LXpIvTsJvPj0PjrGhYSTyp--xlVzACR9DLn5ifQI5IcDpbhEjWfkuUKqnV7yaKh1WdsGwISA-Qm2HvUDMUGgnPsFIfnVsizLzcU" /></form>
+        <form method="post" class="tag-picker-new" action="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Custody?handler=CreateImageTag" data-document-action>
+            <input type="hidden" name="id" value="58e384cf-b197-4621-bbb6-35e0ff3aeeb3" />
+            <input type="hidden" name="operationKey" value="5bacd9553d644d72ac34321bbdceb7a6" />
+            <input type="hidden" name="editLeaseToken" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+            <input type="hidden" name="view" />
+            <label class="sr-only" for="tag-name-db30e5b9e74d49efbce2674077e4f88d">Name</label>
+            <input id="tag-name-db30e5b9e74d49efbce2674077e4f88d"
+                   name="name"
+                   maxlength="40"
+                   placeholder="New tag" />
+            <label class="sr-only" for="tag-colour-db30e5b9e74d49efbce2674077e4f88d">Colour</label>
+            <select id="tag-colour-db30e5b9e74d49efbce2674077e4f88d" name="colour">
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                    <option value="Amber">Amber</option>
+                    <option value="Navy">Navy</option>
+                    <option value="Red">Red</option>
+                    <option value="Grey">Grey</option>
+            </select>
+            <button type="submit" data-busy-label="Creating&#x2026;" class="btn btn--small">Create</button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABUtegDFZOd-5POaOvYB_aLhO7PtoG3LXpIvTsJvPj0PjrGhYSTyp--xlVzACR9DLn5ifQI5IcDpbhEjWfkuUKqnV7yaKh1WdsGwISA-Qm2HvUDMUGgnPsFIfnVsizLzcU" /></form>
+    </div>
+</details>
+
+                        </div>
+                    </div>
+            </li>
+            <li class="image-tile image-tile--tools" data-image-tile="b6f2b98f-0033-4527-9ca7-612d57392fc6" >
+                <a href="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/b6f2b98f-0033-4527-9ca7-612d57392fc6/Download?versionId=b6f2b970-0033-4527-9ca7-612d57392fc6&amp;inline=true"
+                   class="th"
+                   data-evidence-item
+                   data-download-href="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/b6f2b98f-0033-4527-9ca7-612d57392fc6/Download?versionId=b6f2b970-0033-4527-9ca7-612d57392fc6"
+                   data-media-type="image/jpeg"
+                   data-file-name="vehicle-overview.jpg"
+                   data-thumb="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/b6f2b98f-0033-4527-9ca7-612d57392fc6/Download?versionId=b6f2b970-0033-4527-9ca7-612d57392fc6&amp;inline=true&amp;size=thumb&amp;prep=0&amp;renderer=r2"
+                   data-tag=""
+                   data-evidence-occurrence="b6f2b98f-0033-4527-9ca7-612d57392fc6"
+                   data-evidence-preparation-occurrence="">
+                    <img src="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/b6f2b98f-0033-4527-9ca7-612d57392fc6/Download?versionId=b6f2b970-0033-4527-9ca7-612d57392fc6&amp;inline=true&amp;size=thumb&amp;prep=0&amp;renderer=r2" alt="vehicle-overview.jpg" loading="lazy" data-gallery-image />
+                    <span class="rot" data-tile-rotation hidden="hidden"></span>
+                    <span class="th-name">vehicle-overview.jpg</span>
+                </a>
+                    <div class="image-tile-panel image-tile-actions">
+                        <div class="image-tile-row image-tile-toolbar">
+                            <details class="tag-picker" data-tag-picker data-menu>
+    <summary class="icon-button" title="Tag"><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-tag" /></svg><span class="sr-only">Tag</span></summary>
+    <div class="tag-picker-body">
+        <form method="post" action="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Custody?handler=TagImage" data-document-action>
+            <input type="hidden" name="id" value="58e384cf-b197-4621-bbb6-35e0ff3aeeb3" />
+            <input type="hidden" name="occurrenceId" value="b6f2b98f-0033-4527-9ca7-612d57392fc6" />
+            <input type="hidden" name="expectedVersion" value="7" />
+            <input type="hidden" name="operationKey" value="230c30fc1b7b4aa9a8a6991494b7a9d5" />
+            <input type="hidden" name="editLeaseToken" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+            <input type="hidden" name="view" />
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a2"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--green" aria-hidden="true"></span>
+                    <span>Close-up</span>
+                </button>
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a1"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--blue" aria-hidden="true"></span>
+                    <span>Overview</span>
+                </button>
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a4"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--navy" aria-hidden="true"></span>
+                    <span>Reflection</span>
+                </button>
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a3"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--amber" aria-hidden="true"></span>
+                    <span>Third party</span>
+                </button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABUtegDFZOd-5POaOvYB_aLhO7PtoG3LXpIvTsJvPj0PjrGhYSTyp--xlVzACR9DLn5ifQI5IcDpbhEjWfkuUKqnV7yaKh1WdsGwISA-Qm2HvUDMUGgnPsFIfnVsizLzcU" /></form>
+        <form method="post" class="tag-picker-new" action="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Custody?handler=CreateImageTag" data-document-action>
+            <input type="hidden" name="id" value="58e384cf-b197-4621-bbb6-35e0ff3aeeb3" />
+            <input type="hidden" name="operationKey" value="da69a5b749724f2cba214d8492e5b7cb" />
+            <input type="hidden" name="editLeaseToken" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+            <input type="hidden" name="view" />
+            <label class="sr-only" for="tag-name-b6f2b98f003345279ca7612d57392fc6">Name</label>
+            <input id="tag-name-b6f2b98f003345279ca7612d57392fc6"
+                   name="name"
+                   maxlength="40"
+                   placeholder="New tag" />
+            <label class="sr-only" for="tag-colour-b6f2b98f003345279ca7612d57392fc6">Colour</label>
+            <select id="tag-colour-b6f2b98f003345279ca7612d57392fc6" name="colour">
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                    <option value="Amber">Amber</option>
+                    <option value="Navy">Navy</option>
+                    <option value="Red">Red</option>
+                    <option value="Grey">Grey</option>
+            </select>
+            <button type="submit" data-busy-label="Creating&#x2026;" class="btn btn--small">Create</button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABUtegDFZOd-5POaOvYB_aLhO7PtoG3LXpIvTsJvPj0PjrGhYSTyp--xlVzACR9DLn5ifQI5IcDpbhEjWfkuUKqnV7yaKh1WdsGwISA-Qm2HvUDMUGgnPsFIfnVsizLzcU" /></form>
+    </div>
+</details>
+
+                        </div>
+                    </div>
+            </li>
+            <li class="image-tile image-tile--tools" data-image-tile="288ef821-8a11-4075-971d-b8ef1e83c64e" >
+                <a href="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/288ef821-8a11-4075-971d-b8ef1e83c64e/Download?versionId=288ef8de-8a11-4075-971d-b8ef1e83c64e&amp;inline=true"
+                   class="th"
+                   data-evidence-item
+                   data-download-href="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/288ef821-8a11-4075-971d-b8ef1e83c64e/Download?versionId=288ef8de-8a11-4075-971d-b8ef1e83c64e"
+                   data-media-type="image/jpeg"
+                   data-file-name="rear-offside.jpg"
+                   data-thumb="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/288ef821-8a11-4075-971d-b8ef1e83c64e/Download?versionId=288ef8de-8a11-4075-971d-b8ef1e83c64e&amp;inline=true&amp;size=thumb&amp;prep=0&amp;renderer=r2"
+                   data-tag=""
+                   data-evidence-occurrence="288ef821-8a11-4075-971d-b8ef1e83c64e"
+                   data-evidence-preparation-occurrence="">
+                    <img src="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/288ef821-8a11-4075-971d-b8ef1e83c64e/Download?versionId=288ef8de-8a11-4075-971d-b8ef1e83c64e&amp;inline=true&amp;size=thumb&amp;prep=0&amp;renderer=r2" alt="rear-offside.jpg" loading="lazy" data-gallery-image />
+                    <span class="rot" data-tile-rotation hidden="hidden"></span>
+                    <span class="th-name">rear-offside.jpg</span>
+                </a>
+                    <div class="image-tile-panel image-tile-actions">
+                        <div class="image-tile-row image-tile-toolbar">
+                            <details class="tag-picker" data-tag-picker data-menu>
+    <summary class="icon-button" title="Tag"><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-tag" /></svg><span class="sr-only">Tag</span></summary>
+    <div class="tag-picker-body">
+        <form method="post" action="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Custody?handler=TagImage" data-document-action>
+            <input type="hidden" name="id" value="58e384cf-b197-4621-bbb6-35e0ff3aeeb3" />
+            <input type="hidden" name="occurrenceId" value="288ef821-8a11-4075-971d-b8ef1e83c64e" />
+            <input type="hidden" name="expectedVersion" value="7" />
+            <input type="hidden" name="operationKey" value="995a1abd7d8d4216aa06e440e372835e" />
+            <input type="hidden" name="editLeaseToken" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+            <input type="hidden" name="view" />
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a2"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--green" aria-hidden="true"></span>
+                    <span>Close-up</span>
+                </button>
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a1"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--blue" aria-hidden="true"></span>
+                    <span>Overview</span>
+                </button>
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a4"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--navy" aria-hidden="true"></span>
+                    <span>Reflection</span>
+                </button>
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a3"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--amber" aria-hidden="true"></span>
+                    <span>Third party</span>
+                </button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABUtegDFZOd-5POaOvYB_aLhO7PtoG3LXpIvTsJvPj0PjrGhYSTyp--xlVzACR9DLn5ifQI5IcDpbhEjWfkuUKqnV7yaKh1WdsGwISA-Qm2HvUDMUGgnPsFIfnVsizLzcU" /></form>
+        <form method="post" class="tag-picker-new" action="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Custody?handler=CreateImageTag" data-document-action>
+            <input type="hidden" name="id" value="58e384cf-b197-4621-bbb6-35e0ff3aeeb3" />
+            <input type="hidden" name="operationKey" value="e767fe683c734dfd8a640c00a2bd8870" />
+            <input type="hidden" name="editLeaseToken" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+            <input type="hidden" name="view" />
+            <label class="sr-only" for="tag-name-288ef8218a114075971db8ef1e83c64e">Name</label>
+            <input id="tag-name-288ef8218a114075971db8ef1e83c64e"
+                   name="name"
+                   maxlength="40"
+                   placeholder="New tag" />
+            <label class="sr-only" for="tag-colour-288ef8218a114075971db8ef1e83c64e">Colour</label>
+            <select id="tag-colour-288ef8218a114075971db8ef1e83c64e" name="colour">
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                    <option value="Amber">Amber</option>
+                    <option value="Navy">Navy</option>
+                    <option value="Red">Red</option>
+                    <option value="Grey">Grey</option>
+            </select>
+            <button type="submit" data-busy-label="Creating&#x2026;" class="btn btn--small">Create</button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABUtegDFZOd-5POaOvYB_aLhO7PtoG3LXpIvTsJvPj0PjrGhYSTyp--xlVzACR9DLn5ifQI5IcDpbhEjWfkuUKqnV7yaKh1WdsGwISA-Qm2HvUDMUGgnPsFIfnVsizLzcU" /></form>
+    </div>
+</details>
+
+                        </div>
+                    </div>
+            </li>
+            <li class="image-tile image-tile--tools" data-image-tile="59555ac9-c0ad-4e3f-8969-3066abbea21d" >
+                <a href="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/59555ac9-c0ad-4e3f-8969-3066abbea21d/Download?versionId=59555a36-c0ad-4e3f-8969-3066abbea21d&amp;inline=true"
+                   class="th"
+                   data-evidence-item
+                   data-download-href="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/59555ac9-c0ad-4e3f-8969-3066abbea21d/Download?versionId=59555a36-c0ad-4e3f-8969-3066abbea21d"
+                   data-media-type="image/jpeg"
+                   data-file-name="interior.jpg"
+                   data-thumb="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/59555ac9-c0ad-4e3f-8969-3066abbea21d/Download?versionId=59555a36-c0ad-4e3f-8969-3066abbea21d&amp;inline=true&amp;size=thumb&amp;prep=0&amp;renderer=r2"
+                   data-tag=""
+                   data-evidence-occurrence="59555ac9-c0ad-4e3f-8969-3066abbea21d"
+                   data-evidence-preparation-occurrence="">
+                    <img src="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/59555ac9-c0ad-4e3f-8969-3066abbea21d/Download?versionId=59555a36-c0ad-4e3f-8969-3066abbea21d&amp;inline=true&amp;size=thumb&amp;prep=0&amp;renderer=r2" alt="interior.jpg" loading="lazy" data-gallery-image />
+                    <span class="rot" data-tile-rotation hidden="hidden"></span>
+                    <span class="th-name">interior.jpg</span>
+                </a>
+                    <div class="image-tile-panel image-tile-actions">
+                        <div class="image-tile-row image-tile-toolbar">
+                            <details class="tag-picker" data-tag-picker data-menu>
+    <summary class="icon-button" title="Tag"><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-tag" /></svg><span class="sr-only">Tag</span></summary>
+    <div class="tag-picker-body">
+        <form method="post" action="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Custody?handler=TagImage" data-document-action>
+            <input type="hidden" name="id" value="58e384cf-b197-4621-bbb6-35e0ff3aeeb3" />
+            <input type="hidden" name="occurrenceId" value="59555ac9-c0ad-4e3f-8969-3066abbea21d" />
+            <input type="hidden" name="expectedVersion" value="7" />
+            <input type="hidden" name="operationKey" value="cb6e21077ff346c1ab5090e1788e8f6f" />
+            <input type="hidden" name="editLeaseToken" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+            <input type="hidden" name="view" />
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a2"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--green" aria-hidden="true"></span>
+                    <span>Close-up</span>
+                </button>
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a1"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--blue" aria-hidden="true"></span>
+                    <span>Overview</span>
+                </button>
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a4"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--navy" aria-hidden="true"></span>
+                    <span>Reflection</span>
+                </button>
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a3"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--amber" aria-hidden="true"></span>
+                    <span>Third party</span>
+                </button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABUtegDFZOd-5POaOvYB_aLhO7PtoG3LXpIvTsJvPj0PjrGhYSTyp--xlVzACR9DLn5ifQI5IcDpbhEjWfkuUKqnV7yaKh1WdsGwISA-Qm2HvUDMUGgnPsFIfnVsizLzcU" /></form>
+        <form method="post" class="tag-picker-new" action="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Custody?handler=CreateImageTag" data-document-action>
+            <input type="hidden" name="id" value="58e384cf-b197-4621-bbb6-35e0ff3aeeb3" />
+            <input type="hidden" name="operationKey" value="aaa2fb41e3cb45f4b7c5a8d531cace00" />
+            <input type="hidden" name="editLeaseToken" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+            <input type="hidden" name="view" />
+            <label class="sr-only" for="tag-name-59555ac9c0ad4e3f89693066abbea21d">Name</label>
+            <input id="tag-name-59555ac9c0ad4e3f89693066abbea21d"
+                   name="name"
+                   maxlength="40"
+                   placeholder="New tag" />
+            <label class="sr-only" for="tag-colour-59555ac9c0ad4e3f89693066abbea21d">Colour</label>
+            <select id="tag-colour-59555ac9c0ad4e3f89693066abbea21d" name="colour">
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                    <option value="Amber">Amber</option>
+                    <option value="Navy">Navy</option>
+                    <option value="Red">Red</option>
+                    <option value="Grey">Grey</option>
+            </select>
+            <button type="submit" data-busy-label="Creating&#x2026;" class="btn btn--small">Create</button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABUtegDFZOd-5POaOvYB_aLhO7PtoG3LXpIvTsJvPj0PjrGhYSTyp--xlVzACR9DLn5ifQI5IcDpbhEjWfkuUKqnV7yaKh1WdsGwISA-Qm2HvUDMUGgnPsFIfnVsizLzcU" /></form>
+    </div>
+</details>
+
+                        </div>
+                    </div>
+            </li>
+            <li class="image-tile image-tile--tools" data-image-tile="dfcf644f-92b2-4707-8d0b-daf381a69566" >
+                <a href="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/dfcf644f-92b2-4707-8d0b-daf381a69566/Download?versionId=dfcf64b0-92b2-4707-8d0b-daf381a69566&amp;inline=true"
+                   class="th"
+                   data-evidence-item
+                   data-download-href="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/dfcf644f-92b2-4707-8d0b-daf381a69566/Download?versionId=dfcf64b0-92b2-4707-8d0b-daf381a69566"
+                   data-media-type="image/jpeg"
+                   data-file-name="plate.jpg"
+                   data-thumb="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/dfcf644f-92b2-4707-8d0b-daf381a69566/Download?versionId=dfcf64b0-92b2-4707-8d0b-daf381a69566&amp;inline=true&amp;size=thumb&amp;prep=0&amp;renderer=r2"
+                   data-tag=""
+                   data-evidence-occurrence="dfcf644f-92b2-4707-8d0b-daf381a69566"
+                   data-evidence-preparation-occurrence="">
+                    <img src="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Documents/dfcf644f-92b2-4707-8d0b-daf381a69566/Download?versionId=dfcf64b0-92b2-4707-8d0b-daf381a69566&amp;inline=true&amp;size=thumb&amp;prep=0&amp;renderer=r2" alt="plate.jpg" loading="lazy" data-gallery-image />
+                    <span class="rot" data-tile-rotation hidden="hidden"></span>
+                    <span class="th-name">plate.jpg</span>
+                </a>
+                    <div class="image-tile-panel image-tile-actions">
+                        <div class="image-tile-row image-tile-toolbar">
+                            <details class="tag-picker" data-tag-picker data-menu>
+    <summary class="icon-button" title="Tag"><svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-tag" /></svg><span class="sr-only">Tag</span></summary>
+    <div class="tag-picker-body">
+        <form method="post" action="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Custody?handler=TagImage" data-document-action>
+            <input type="hidden" name="id" value="58e384cf-b197-4621-bbb6-35e0ff3aeeb3" />
+            <input type="hidden" name="occurrenceId" value="dfcf644f-92b2-4707-8d0b-daf381a69566" />
+            <input type="hidden" name="expectedVersion" value="7" />
+            <input type="hidden" name="operationKey" value="f63aef7daade4f17ad1d2d8aaf1c54c3" />
+            <input type="hidden" name="editLeaseToken" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+            <input type="hidden" name="view" />
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a2"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--green" aria-hidden="true"></span>
+                    <span>Close-up</span>
+                </button>
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a1"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--blue" aria-hidden="true"></span>
+                    <span>Overview</span>
+                </button>
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a4"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--navy" aria-hidden="true"></span>
+                    <span>Reflection</span>
+                </button>
+                <button type="submit" name="tagId" value="00000000-0000-4000-8000-0000000017a3"
+                        data-busy-label="Tagging&#x2026;"
+                        data-busy-solo
+                        class="tag-option"
+                        aria-pressed="false">
+                    <span class="tag-swatch tag-swatch--amber" aria-hidden="true"></span>
+                    <span>Third party</span>
+                </button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABUtegDFZOd-5POaOvYB_aLhO7PtoG3LXpIvTsJvPj0PjrGhYSTyp--xlVzACR9DLn5ifQI5IcDpbhEjWfkuUKqnV7yaKh1WdsGwISA-Qm2HvUDMUGgnPsFIfnVsizLzcU" /></form>
+        <form method="post" class="tag-picker-new" action="/Cases/58e384cf-b197-4621-bbb6-35e0ff3aeeb3/Custody?handler=CreateImageTag" data-document-action>
+            <input type="hidden" name="id" value="58e384cf-b197-4621-bbb6-35e0ff3aeeb3" />
+            <input type="hidden" name="operationKey" value="20f417a3f9aa45cbba8927a0988cce41" />
+            <input type="hidden" name="editLeaseToken" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+            <input type="hidden" name="view" />
+            <label class="sr-only" for="tag-name-dfcf644f92b247078d0bdaf381a69566">Name</label>
+            <input id="tag-name-dfcf644f92b247078d0bdaf381a69566"
+                   name="name"
+                   maxlength="40"
+                   placeholder="New tag" />
+            <label class="sr-only" for="tag-colour-dfcf644f92b247078d0bdaf381a69566">Colour</label>
+            <select id="tag-colour-dfcf644f92b247078d0bdaf381a69566" name="colour">
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                    <option value="Amber">Amber</option>
+                    <option value="Navy">Navy</option>
+                    <option value="Red">Red</option>
+                    <option value="Grey">Grey</option>
+            </select>
+            <button type="submit" data-busy-label="Creating&#x2026;" class="btn btn--small">Create</button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AAAAAAAAAAAAAAAAAAAAABUtegDFZOd-5POaOvYB_aLhO7PtoG3LXpIvTsJvPj0PjrGhYSTyp--xlVzACR9DLn5ifQI5IcDpbhEjWfkuUKqnV7yaKh1WdsGwISA-Qm2HvUDMUGgnPsFIfnVsizLzcU" /></form>
+    </div>
+</details>
+
+                        </div>
+                    </div>
+            </li>
+    </ul>
+    <p class="muted image-grid-count"><b data-image-report-count>0 of 0 in report</b></p>
+
+        </div>
+        <div id="case-files-correspondence" role="tabpanel" data-file-tab-panel="correspondence">
+            <h3 class="tab-panel-title">Correspondence</h3>
+            
+<div class="correspondence" data-correspondence>
+        <div class="table-wrap">
+            <table class="table table--compact">
+                <thead>
+                    <tr>
+                        <th>Received</th>
+                        <th>Sender</th>
+                        <th>Subject</th>
+                        <th>Type</th>
+                        <th><span class="sr-only">Action</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr data-correspondence-row="143483f4-abcd-4142-815f-b096eca81928">
+                            <td><time datetime="2031-05-04T09:00:00.0000000&#x2B;00:00">04 May 2031 10:00</time></td>
+                            <td>claims@northline.example</td>
+                            <td class="wrap">
+                                <a class="correspondence-subject-link" data-dialog-open="case-message-143483f4abcd4142815fb096eca81928" href="/Inbox/143483f4-abcd-4142-815f-b096eca81928">New instruction &#x2014; AB12CDE &#x2014; rear impact</a>
+                            </td>
+                            <td>
+                                New instruction
+                            </td>
+                            <td class="row-actions nowrap">
+                                <span class="cluster">
+                                </span>
+                            </td>
+                        </tr>
+                        <tr data-correspondence-row="0d79c287-9572-41ae-8e32-4f3f0fced183">
+                            <td><time datetime="2031-05-05T09:00:00.0000000&#x2B;00:00">05 May 2031 10:00</time></td>
+                            <td>photos@northline.example</td>
+                            <td class="wrap">
+                                <a class="correspondence-subject-link" data-dialog-open="case-message-0d79c287957241ae8e324f3f0fced183" href="/Inbox/0d79c287-9572-41ae-8e32-4f3f0fced183">Images &#x2014; AB12CDE</a>
+                            </td>
+                            <td>
+                                Correspondence
+                            </td>
+                            <td class="row-actions nowrap">
+                                <span class="cluster">
+                                </span>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+            <div id="case-message-143483f4abcd4142815fb096eca81928" class="dialog-backdrop" data-dialog="case-message-143483f4abcd4142815fb096eca81928" data-case-message-dialog
+     data-case-message-url="/Inbox/143483f4-abcd-4142-815f-b096eca81928?correspondenceCaseReference=QDOS3100042&amp;handler=Content" hidden>
+    <section class="dialog dialog--wide" role="dialog" aria-modal="true" aria-labelledby="case-message-143483f4abcd4142815fb096eca81928-title">
+        <div class="dialog-head">
+            <h2 id="case-message-143483f4abcd4142815fb096eca81928-title" class="wrap" tabindex="-1">New instruction &#x2014; AB12CDE &#x2014; rear impact</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body" data-case-message-body aria-busy="true">
+            <div class="spinner" aria-hidden="true"></div>
+        </div>
+        <div class="dialog-foot" data-case-message-foot>
+            <a class="btn btn--dark" href="/Inbox?open=143483f4-abcd-4142-815f-b096eca81928" data-case-message-record>
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-external-link" /></svg>
+                <span>Open full message</span>
+            </a>
+        </div>
+    </section>
+</div>
+
+            <div id="case-message-0d79c287957241ae8e324f3f0fced183" class="dialog-backdrop" data-dialog="case-message-0d79c287957241ae8e324f3f0fced183" data-case-message-dialog
+     data-case-message-url="/Inbox/0d79c287-9572-41ae-8e32-4f3f0fced183?correspondenceCaseReference=QDOS3100042&amp;handler=Content" hidden>
+    <section class="dialog dialog--wide" role="dialog" aria-modal="true" aria-labelledby="case-message-0d79c287957241ae8e324f3f0fced183-title">
+        <div class="dialog-head">
+            <h2 id="case-message-0d79c287957241ae8e324f3f0fced183-title" class="wrap" tabindex="-1">Images &#x2014; AB12CDE</h2>
+            <button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-x" /></svg>
+            </button>
+        </div>
+        <div class="dialog-body" data-case-message-body aria-busy="true">
+            <div class="spinner" aria-hidden="true"></div>
+        </div>
+        <div class="dialog-foot" data-case-message-foot>
+            <a class="btn btn--dark" href="/Inbox?open=0d79c287-9572-41ae-8e32-4f3f0fced183" data-case-message-record>
+                <svg class="icon" aria-hidden="true"><use href="/images/lucide-sprite.04agn8pzs5.svg#icon-external-link" /></svg>
+                <span>Open full message</span>
+            </a>
+        </div>
+    </section>
+</div>
+
+</div>
+
+        </div>
+    </div>
+</section>

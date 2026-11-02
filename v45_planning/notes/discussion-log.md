@@ -72,4 +72,25 @@ row (`_CaseValuation.cshtml`, v28 P38). Valuation sits directly under Vehicle in
 
 ### What was raised
 
-These are sign-off items A–H in [v45-notes.md §6](v45-notes.md#6-sign-off).
+These are sign-off items A–I in [v45-notes.md §6](v45-notes.md#6-sign-off).
+
+## 2 November 2026: approval and sign-off
+
+The operator's words: "approved for /razor-html-mockup-conversion. convert, integrate and submit a PR
+when done". A–E, G and I were taken as proposed.
+
+For **F**, the agent offered replacement words that used "PAV commentary". The operator asked: "It
+should not say PAV commentary unless you got that from me, did you make it up?". The agent answered
+that "PAV commentary" is the live title of the commentary wording block. It came into the report
+work of 28 September 2026 (`2af629ff8`) from the operator's reference file
+`pegasus_case_dashboard_2026-09-15.html`, line 1724, and FRD-11 lists it. The operator did not give
+it in this round, so item H was reopened. The operator asked "what was that report work" and was
+shown the commit. They then answered:
+
+- **H, the tick label:** **"Valuation commentary"**.
+- **The commentary block's printed heading:** **"Leave it as PAV commentary"**.
+- **F:** **"Swap the place only"**. Both messages now say "… under Report wording on the Report
+  section."
+
+These answers are recorded as rulings R624 (the brief) and R625 (the sign-off) in the application
+repository.

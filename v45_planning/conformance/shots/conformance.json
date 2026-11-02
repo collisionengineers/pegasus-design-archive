@@ -1,0 +1,369 @@
+{
+  "checkedAtUtc": "2026-11-02T18:47:52.295267+00:00",
+  "result": {
+    "fail": [],
+    "okCount": 35
+  },
+  "pairs": [
+    {
+      "state": "case-read",
+      "width": 1580,
+      "mockup": "002-case-read-proposal-1580-panel.png",
+      "implemented": "002-case-read-1580-implemented.png",
+      "sideBySide": "002-case-read-1580-side-by-side.png",
+      "mockupSize": [
+        977,
+        1047
+      ],
+      "implementedSize": [
+        977,
+        1063
+      ]
+    },
+    {
+      "state": "case-read",
+      "width": 1440,
+      "mockup": "002-case-read-proposal-1440-panel.png",
+      "implemented": "002-case-read-1440-implemented.png",
+      "sideBySide": "002-case-read-1440-side-by-side.png",
+      "mockupSize": [
+        1132,
+        1029
+      ],
+      "implementedSize": [
+        1132,
+        1045
+      ]
+    },
+    {
+      "state": "case-read",
+      "width": 760,
+      "mockup": "002-case-read-proposal-760-panel.png",
+      "implemented": "002-case-read-760-implemented.png",
+      "sideBySide": "002-case-read-760-side-by-side.png",
+      "mockupSize": [
+        688,
+        1122
+      ],
+      "implementedSize": [
+        688,
+        1138
+      ]
+    },
+    {
+      "state": "case-edit",
+      "width": 1580,
+      "mockup": "004-case-edit-proposal-1580-panel.png",
+      "implemented": "004-case-edit-1580-implemented.png",
+      "sideBySide": "004-case-edit-1580-side-by-side.png",
+      "mockupSize": [
+        977,
+        1228
+      ],
+      "implementedSize": [
+        977,
+        1244
+      ]
+    },
+    {
+      "state": "case-edit",
+      "width": 1440,
+      "mockup": "004-case-edit-proposal-1440-panel.png",
+      "implemented": "004-case-edit-1440-implemented.png",
+      "sideBySide": "004-case-edit-1440-side-by-side.png",
+      "mockupSize": [
+        1132,
+        1210
+      ],
+      "implementedSize": [
+        1132,
+        1226
+      ]
+    },
+    {
+      "state": "case-edit",
+      "width": 760,
+      "mockup": "004-case-edit-proposal-760-panel.png",
+      "implemented": "004-case-edit-760-implemented.png",
+      "sideBySide": "004-case-edit-760-side-by-side.png",
+      "mockupSize": [
+        688,
+        1304
+      ],
+      "implementedSize": [
+        688,
+        1320
+      ]
+    },
+    {
+      "state": "case-switches-read",
+      "width": 1580,
+      "mockup": "006-case-switches-read-proposal-1580-panel.png",
+      "implemented": "006-case-switches-read-1580-implemented.png",
+      "sideBySide": "006-case-switches-read-1580-side-by-side.png",
+      "mockupSize": [
+        977,
+        1449
+      ],
+      "implementedSize": [
+        977,
+        1331
+      ]
+    },
+    {
+      "state": "case-switches-read",
+      "width": 1440,
+      "mockup": "006-case-switches-read-proposal-1440-panel.png",
+      "implemented": "006-case-switches-read-1440-implemented.png",
+      "sideBySide": "006-case-switches-read-1440-side-by-side.png",
+      "mockupSize": [
+        1132,
+        1431
+      ],
+      "implementedSize": [
+        1132,
+        1313
+      ]
+    },
+    {
+      "state": "case-switches-read",
+      "width": 760,
+      "mockup": "006-case-switches-read-proposal-760-panel.png",
+      "implemented": "006-case-switches-read-760-implemented.png",
+      "sideBySide": "006-case-switches-read-760-side-by-side.png",
+      "mockupSize": [
+        688,
+        1524
+      ],
+      "implementedSize": [
+        688,
+        1406
+      ]
+    },
+    {
+      "state": "case-switches-edit",
+      "width": 1580,
+      "mockup": "008-case-switches-edit-proposal-1580-panel.png",
+      "implemented": "008-case-switches-edit-1580-implemented.png",
+      "sideBySide": "008-case-switches-edit-1580-side-by-side.png",
+      "mockupSize": [
+        977,
+        1689
+      ],
+      "implementedSize": [
+        977,
+        1571
+      ]
+    },
+    {
+      "state": "case-switches-edit",
+      "width": 1440,
+      "mockup": "008-case-switches-edit-proposal-1440-panel.png",
+      "implemented": "008-case-switches-edit-1440-implemented.png",
+      "sideBySide": "008-case-switches-edit-1440-side-by-side.png",
+      "mockupSize": [
+        1132,
+        1671
+      ],
+      "implementedSize": [
+        1132,
+        1553
+      ]
+    },
+    {
+      "state": "case-switches-edit",
+      "width": 760,
+      "mockup": "008-case-switches-edit-proposal-760-panel.png",
+      "implemented": "008-case-switches-edit-760-implemented.png",
+      "sideBySide": "008-case-switches-edit-760-side-by-side.png",
+      "mockupSize": [
+        688,
+        1765
+      ],
+      "implementedSize": [
+        688,
+        1647
+      ]
+    },
+    {
+      "state": "case-court-off-read",
+      "width": 1580,
+      "mockup": "010-case-court-off-read-proposal-1580-panel.png",
+      "implemented": "010-case-court-off-read-1580-implemented.png",
+      "sideBySide": "010-case-court-off-read-1580-side-by-side.png",
+      "mockupSize": [
+        977,
+        928
+      ],
+      "implementedSize": [
+        977,
+        940
+      ]
+    },
+    {
+      "state": "case-court-off-read",
+      "width": 1440,
+      "mockup": "010-case-court-off-read-proposal-1440-panel.png",
+      "implemented": "010-case-court-off-read-1440-implemented.png",
+      "sideBySide": "010-case-court-off-read-1440-side-by-side.png",
+      "mockupSize": [
+        1132,
+        928
+      ],
+      "implementedSize": [
+        1132,
+        940
+      ]
+    },
+    {
+      "state": "case-court-off-read",
+      "width": 760,
+      "mockup": "010-case-court-off-read-proposal-760-panel.png",
+      "implemented": "010-case-court-off-read-760-implemented.png",
+      "sideBySide": "010-case-court-off-read-760-side-by-side.png",
+      "mockupSize": [
+        688,
+        986
+      ],
+      "implementedSize": [
+        688,
+        998
+      ]
+    },
+    {
+      "state": "case-court-off-edit",
+      "width": 1580,
+      "mockup": "012-case-court-off-edit-proposal-1580-panel.png",
+      "implemented": "012-case-court-off-edit-1580-implemented.png",
+      "sideBySide": "012-case-court-off-edit-1580-side-by-side.png",
+      "mockupSize": [
+        977,
+        1109
+      ],
+      "implementedSize": [
+        977,
+        1121
+      ]
+    },
+    {
+      "state": "case-court-off-edit",
+      "width": 1440,
+      "mockup": "012-case-court-off-edit-proposal-1440-panel.png",
+      "implemented": "012-case-court-off-edit-1440-implemented.png",
+      "sideBySide": "012-case-court-off-edit-1440-side-by-side.png",
+      "mockupSize": [
+        1132,
+        1109
+      ],
+      "implementedSize": [
+        1132,
+        1121
+      ]
+    },
+    {
+      "state": "case-court-off-edit",
+      "width": 760,
+      "mockup": "012-case-court-off-edit-proposal-760-panel.png",
+      "implemented": "012-case-court-off-edit-760-implemented.png",
+      "sideBySide": "012-case-court-off-edit-760-side-by-side.png",
+      "mockupSize": [
+        688,
+        1168
+      ],
+      "implementedSize": [
+        688,
+        1180
+      ]
+    },
+    {
+      "state": "valuation-read",
+      "width": 1580,
+      "mockup": "018-valuation-read-proposal-1580-panel.png",
+      "implemented": "018-valuation-read-1580-implemented.png",
+      "sideBySide": "018-valuation-read-1580-side-by-side.png",
+      "mockupSize": [
+        1003,
+        618
+      ],
+      "implementedSize": [
+        1003,
+        618
+      ]
+    },
+    {
+      "state": "valuation-read",
+      "width": 1440,
+      "mockup": "018-valuation-read-proposal-1440-panel.png",
+      "implemented": "018-valuation-read-1440-implemented.png",
+      "sideBySide": "018-valuation-read-1440-side-by-side.png",
+      "mockupSize": [
+        1158,
+        618
+      ],
+      "implementedSize": [
+        1158,
+        618
+      ]
+    },
+    {
+      "state": "valuation-read",
+      "width": 760,
+      "mockup": "018-valuation-read-proposal-760-panel.png",
+      "implemented": "018-valuation-read-760-implemented.png",
+      "sideBySide": "018-valuation-read-760-side-by-side.png",
+      "mockupSize": [
+        714,
+        1304
+      ],
+      "implementedSize": [
+        714,
+        1304
+      ]
+    },
+    {
+      "state": "valuation-edit",
+      "width": 1580,
+      "mockup": "020-valuation-edit-proposal-1580-panel.png",
+      "implemented": "020-valuation-edit-1580-implemented.png",
+      "sideBySide": "020-valuation-edit-1580-side-by-side.png",
+      "mockupSize": [
+        1003,
+        887
+      ],
+      "implementedSize": [
+        1003,
+        887
+      ]
+    },
+    {
+      "state": "valuation-edit",
+      "width": 1440,
+      "mockup": "020-valuation-edit-proposal-1440-panel.png",
+      "implemented": "020-valuation-edit-1440-implemented.png",
+      "sideBySide": "020-valuation-edit-1440-side-by-side.png",
+      "mockupSize": [
+        1158,
+        887
+      ],
+      "implementedSize": [
+        1158,
+        887
+      ]
+    },
+    {
+      "state": "valuation-edit",
+      "width": 760,
+      "mockup": "020-valuation-edit-proposal-760-panel.png",
+      "implemented": "020-valuation-edit-760-implemented.png",
+      "sideBySide": "020-valuation-edit-760-side-by-side.png",
+      "mockupSize": [
+        714,
+        1873
+      ],
+      "implementedSize": [
+        714,
+        1873
+      ]
+    }
+  ]
+}

@@ -58,5 +58,11 @@ python -X utf8 build/build-v45.py; python -X utf8 build/check-v45.py
 
 ## Status
 
-**Stage 1. Awaiting sign-off** on items A–I
-([notes/v45-notes.md §6](notes/v45-notes.md#6-sign-off)). Stage 2 has not started.
+**Signed off and implemented (2 November 2026).** Items A–I are settled
+([notes/v45-notes.md §6](notes/v45-notes.md#6-sign-off); rulings R624 and R625).
+
+- **Stage 2** is `task/report-wording-settings` in the application repository. Its conformance
+  evidence is in [conformance/](conformance/README.md).
+- **Once that PR merges,** this folder is historical reference only. Current behaviour is then
+  owned by the FRDs (FRD-11 Report wording blocks, FRD-16 Report), by rulings R609–R611 and
+  R624–R625, and by the design authority, not by this mockup.

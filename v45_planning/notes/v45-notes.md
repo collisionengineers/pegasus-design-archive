@@ -87,35 +87,44 @@ Each item reads "Confirm, or …".
   - No migration.
   - Confirm, or make the block flag the owner and retire the two switches, which needs a
     data migration.
+  - *Settled 2 November 2026 (R625): as proposed.*
 - **B. Report cannot be projected** (state `case-edit-unprojected`, shots 013–014).
   - The proposal is that the settings show the five former switches, with no blocks.
   - Today the whole panel is absent, while the switches stay editable on Valuation.
   - Confirm, or hide the settings too.
+  - *Settled 2 November 2026 (R625): as proposed. Stage 2 also keeps the read-only Statement of truth, which live shows in every state.*
 - **C. Read mode.** The settings are shown as static ticks, which replace R616's summary line
   ("Guide source disclosed · … · No FAO The Court"). Confirm, or keep the line.
+  - *Settled 2 November 2026 (R625): as proposed.*
 - **D. Read-only blocks.**
   - The Statement of truth block is pinned after New paragraph, with no move controls.
   - The guide sentence sits inside it, between paragraphs 2 and 3, where it prints.
   - Confirm, or show the guide sentence as its own block before the statement.
+  - *Settled 2 November 2026 (R625): as proposed.*
 - **E. Commentary text.**
   - The PAV commentary block's text box writes `report.valuation_commentary_text`, so the
     block has one owner, and the separate field goes.
   - Confirm, or keep the field and let the block hand-edit as other blocks do.
+  - *Settled 2 November 2026 (R625): as proposed.*
 - **F. Blocker wording.**
   - The readiness and render blockers for commentary and unrelated damage say "turn off …
     under On the report on the Valuation section" (`CaseReportGeneration.cs:794–813`).
   - The operator supplies the replacement words. The mockup does not draw them.
+  - *Settled 2 November 2026 (R625): "Swap the place only". The messages say "… under Report wording on the Report section."*
 - **G. Settings layout.**
   - The proposal is one wrapping line, as the live On the report row is (shot 008).
   - Confirm, or use columns (`case-edit-columns`, shot 016).
+  - *Settled 2 November 2026 (R625): one wrapping line.*
 - **H. Commentary tick label.**
   - The tick reads the block's heading, "PAV commentary", so each item has one name.
   - Confirm, or use the live switch label "Valuation commentary".
+  - *Settled 2 November 2026 (R625): the proposal was rejected. The tick reads "Valuation commentary", and the block's printed heading stays "PAV commentary".*
 - **I. Statement off** (shots 010, 012).
   - With Include statement of truth off, the block keeps the paragraphs that still print
     (3–4, R609) and hides paragraphs 1–2.
   - Confirm, or hide the whole block.
 
+  - *Settled 2 November 2026 (R625): as proposed.*
 ## 7. Self-check
 
 `build/check-v45.py`, run on 2 November 2026 at 18:15 UTC:
@@ -155,3 +164,10 @@ Each item reads "Confirm, or …".
 - **Not drawn.** The blocker words (item F) and the Audit view's wording.
 - **Not evidence.** The self-check and shots test the mockup against itself. They are not
   application evidence.
+
+## 9. Approval, 2 November 2026
+
+The operator approved the round for Stage 2, and items A–I are settled as recorded in §6 (R624,
+R625). Stage 2 is on branch `task/report-wording-settings` in the application repository. Its
+conformance evidence is in [../conformance/](../conformance/README.md).
+
