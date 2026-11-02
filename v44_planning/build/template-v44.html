@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pegasus v44 · Message settings (Case linking) mockup</title>
+<style id="live-font">@font-face{font-family:Inter;font-style:normal;font-weight:100 900;font-display:block;src:url(data:font/woff2;base64,/*INTER_B64*/) format("woff2")}</style>
+<style id="live-site-css">/*SITE_CSS*/</style>
+<style id="live-inbox-css">/*INBOX_CSS*/</style>
+<style id="mockup-frame-css">
+/* Mockup frame only: not product CSS. The dialog is drawn in place over a plain page. */
+body{margin:0;min-height:100vh;background:var(--bg)}
+.v44-stage{min-height:100vh}
+.v44-stage > .dialog-backdrop{position:fixed}
+.v44-msg-body{padding:16px 20px;font-size:13.5px;line-height:1.5}
+.v44-msg-body p{margin:0 0 12px;max-width:72ch}
+.v44-strip{position:fixed;left:12px;bottom:12px;z-index:5000;width:300px;background:#1c2428;color:#e9eef0;font:12px/1.4 system-ui,sans-serif;border-radius:4px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.v44-strip summary{padding:8px 12px;cursor:pointer;font-weight:700}
+.v44-strip .rows{padding:0 12px 12px;display:grid;gap:8px}
+.v44-strip .row{display:grid;gap:4px}
+.v44-strip .row > span{color:#9fb0b7;font-size:10px;text-transform:uppercase;letter-spacing:.06em}
+.v44-strip .opts{display:flex;flex-wrap:wrap;gap:4px}
+.v44-strip button{font:inherit;font-size:11px;padding:3px 7px;border:1px solid #4b5a60;background:#263136;color:#e9eef0;border-radius:3px;cursor:pointer}
+.v44-strip button[aria-pressed="true"]{background:#e9eef0;color:#1c2428;border-color:#e9eef0;font-weight:700}
+.v44-strip .items{margin:0;padding-left:16px;color:#c9d4d8}
+.v44-strip .items li{margin:2px 0}
+.v44-mode-tag{position:fixed;right:12px;bottom:12px;z-index:5000;padding:4px 8px;border-radius:3px;font:700 11px system-ui,sans-serif;background:#1c2428;color:#fff}
+.v44-mode-tag[data-mode="proposal"]{background:#274f70}
+.v44-diff .v44-changed{outline:2px dashed #b25a00;outline-offset:2px}
+</style>
+<style id="proposal-css">
+/* PROPOSAL: the inbox.css additions Stage 2 would make. Scoped to .v44-proposal here only
+   so Today and Proposal can share one file; in the app they replace the live rules. */
+.v44-proposal .mail-settings-popover{gap:0;padding:4px 14px}
+.v44-proposal .mail-settings-section{display:grid;gap:6px;padding:10px 0}
+.v44-proposal .mail-settings-section + .mail-settings-section{border-top:1px solid var(--line)}
+.v44-proposal .mail-settings-section .mail-decision-label,
+.v44-proposal .mail-settings-section .field label{font-size:10px;font-weight:400;color:var(--muted)}
+.v44-proposal .mail-settings-case{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:32px}
+.v44-proposal .mail-settings-case > a,.v44-proposal .mail-settings-case > strong{font-size:13px;font-weight:600;overflow-wrap:anywhere;min-width:0}
+.v44-proposal .mail-settings-actions{display:flex;flex-wrap:wrap;gap:6px}
+.v44-proposal .mail-settings-picker{display:grid;gap:6px}
+.v44-proposal .mail-settings-picker[hidden]{display:none}
+.v44-proposal .mail-settings-picker .mail-settings-actions{justify-content:flex-end}
+.v44-proposal .mail-settings-links{display:grid;gap:2px}
+.v44-proposal .mail-settings-links a{display:flex;align-items:center;min-height:32px;padding:4px 0}
+.v44-proposal .mail-settings-foot{padding:8px 0 10px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
+</style>
+</head>
+<body>
+<!--SPRITE-->
+<div class="v44-stage" id="stage"></div>
+<div class="v44-mode-tag" id="modeTag"></div>
+<details class="v44-strip" id="strip" open>
+  <summary>Mockup controls</summary>
+  <div class="rows" id="stripRows"></div>
+</details>
+<script>
+(function () {
+  "use strict";
+  var V = "v44";
+  var LABEL = {
+    case: "Case", none: "None", casePo: "Case / PO", type: "Type", changeCase: "Change case",
+    decided: "Decided", linkToCase: "Link to Case", changeLinked: "Change linked Case", unlink: "Unlink",
+    placeOnHold: "Place on Hold", closeCase: "Close case", openQuery: "Open query", markQueryDone: "Mark query done",
+    query: "Query", unassigned: "Unassigned", done: "Done", settings: "Message settings",
+    reason: "Reason for action", cancel: "Cancel", confirm: "Confirm Action",
+    prev: "Previous message", next: "Next message", automatic: "Automatic", noCase: "None"
+  };
+  var TYPES = ["Correspondence", "New instruction · Inspection", "New instruction · Audit",
+    "New instruction · Inspection and Audit", "Triage request", "Cancellation"];
+  var STATES = {
+    unlinked: { title: "Unlinked, a Case to link to", caseRef: null, type: "Correspondence", query: null, changeCase: false, triage: false },
+    linked: { title: "Linked (operator screenshot)", caseRef: "a.QDOS26157", type: "New instruction · Audit", query: null, changeCase: true, triage: false, cancels: true },
+    query: { title: "Linked, open query", caseRef: "QDOS26149", type: "Correspondence", query: "open", changeCase: true, triage: false },
+    triage: { title: "Linked to a Triage", caseRef: "t.QDOS26160", type: "Triage request", query: null, changeCase: false, triage: true }
+  };
+  var OPTS = {
+    picker: { label: "Case / PO picker (A)", values: ["dialog", "inline"], def: "dialog" },
+    changelabel: { label: "Change button label (B)", values: ["Change linked Case", "Change"], def: "Change linked Case" },
+    caseactions: { label: "Change case actions (D)", values: ["buttons", "links"], def: "buttons" }
+  };
+  var CANDIDATES = [
+    ["QDOS26162", "MA59 BDY", "J. Patel"],
+    ["QDOS26163", "LK21 XOP", "No claimant"]
+  ];
+
+  var params = new URLSearchParams(location.search);
+  var store = function (k, v) { try { if (v === undefined) return localStorage.getItem(V + "." + k); localStorage.setItem(V + "." + k, v); } catch (e) { return null; } };
+  var S = {
+    state: params.get("state") || store("state") || "linked",
+    mode: params.get("mode") || store("mode") || "proposal",
+    dialog: params.get("dialog") || "",
+    menu: params.get("menu") !== "0",
+    diff: params.get("diff") === "1",
+    inlineOpen: params.get("inline") === "1",
+    opt: {}
+  };
+  Object.keys(OPTS).forEach(function (k) { S.opt[k] = store("opt." + k) || OPTS[k].def; });
+  (params.get("opt") || "").split(",").filter(Boolean).forEach(function (pair) {
+    var i = pair.indexOf(":"); if (i > 0) S.opt[pair.slice(0, i)] = decodeURIComponent(pair.slice(i + 1));
+  });
+  if (params.get("strip") === "0") document.getElementById("strip").hidden = true;
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function icon(id) { return '<svg class="icon" aria-hidden="true"><use href="#' + id + '"></use></svg>'; }
+  function typeSelect(current) {
+    return '<select id="mailTypeSelect" name="ClassificationKey" class="mail-type-select" aria-labelledby="mailClassificationLabel">' +
+      TYPES.map(function (t) { return '<option' + (t === current ? " selected" : "") + ">" + esc(t) + "</option>"; }).join("") + "</select>";
+  }
+  function decidedTime() { return '<time datetime="2026-11-02T12:35:00Z">02 Nov 2026 12:35</time>'; }
+  function chg(html) { return S.diff ? '<div class="v44-changed">' + html + "</div>" : html; }
+
+  /* ---------- Today: transcribed from _MessageDecision.cshtml at origin/dev (see build/live/source.txt) ---------- */
+  function todayPopover(st) {
+    var linked = !!st.caseRef;
+    var h = '<div class="mail-settings-popover">';
+    h += '<div class="mail-settings-section"><div class="decision-row mail-settings-row-head"><span>' + LABEL.case + "</span>";
+    h += linked
+      ? '<strong><a href="#">' + esc(st.caseRef) + '</a><span> · </span><button type="button" class="mail-settings-link" data-dialog-open="unlinkCaseDialog">' + LABEL.unlink + "</button></strong>"
+      : '<strong class="quiet">' + LABEL.noCase + "</strong>";
+    h += "</div>";
+    h += '<div class="field case-picker" data-case-picker><label class="mail-decision-label" for="mailLinkCaseReference">' + LABEL.casePo + '</label>' +
+      '<input id="mailLinkCaseReference" name="caseReference" type="text" maxlength="100" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" /></div>';
+    h += '<div class="mail-settings-list">' + (linked
+      ? '<button class="mail-settings-item" type="button" data-dialog-open="changeLinkedCaseDialog">' + LABEL.changeLinked + "</button>"
+      : '<button class="mail-settings-item" type="button" data-dialog-open="linkCaseDialog">' + LABEL.linkToCase + "</button>") + "</div>";
+    h += "</div>";
+    h += '<form class="mail-settings-section"><label class="mail-decision-label" id="mailClassificationLabel" for="mailTypeSelect">' + LABEL.type + "</label>" + typeSelect(st.type) + "</form>";
+    if (linked && !st.triage) {
+      h += '<div class="mail-settings-list" data-mail-query>';
+      if (st.query === "open") h += '<form><button class="mail-settings-item" type="button"><span>' + LABEL.markQueryDone + "</span></button></form>";
+      h += "</div>";
+    }
+    if (st.changeCase) {
+      h += '<div class="mail-settings-list" data-mail-change-case><span class="mail-decision-label">' + LABEL.changeCase + "</span>" +
+        '<a class="mail-settings-item" href="#"><span>' + LABEL.placeOnHold + "</span></a>" +
+        '<a class="mail-settings-item" href="#"><span>' + LABEL.closeCase + "</span></a></div>";
+    }
+    h += '<div class="mail-settings-foot"><span>' + LABEL.decided + "</span> <span>" + decidedTime() + " · " + LABEL.automatic + "</span></div>";
+    return h + "</div>";
+  }
+
+  /* ---------- Proposal ---------- */
+  function picker(idSuffix) {
+    return '<div class="field case-picker" data-case-picker data-v44-picker="' + idSuffix + '">' +
+      '<label class="req" for="casePo_' + idSuffix + '">' + LABEL.casePo + "</label>" +
+      '<input id="casePo_' + idSuffix + '" name="caseReference" type="text" maxlength="100" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="casePoOptions_' + idSuffix + '" />' +
+      '<div id="casePoOptions_' + idSuffix + '" class="case-picker-options" data-case-picker-options hidden><ul class="command-results" role="listbox">' +
+      CANDIDATES.map(function (c, i) { return '<li role="none"><button type="button" role="option" class="command-result" aria-selected="false" data-case-picker-choice="' + c[0] + '">' + esc(c.join(" · ")) + "</button></li>"; }).join("") +
+      "</ul></div></div>";
+  }
+  function proposalPopover(st) {
+    var linked = !!st.caseRef;
+    var inline = S.opt.picker === "inline";
+    var changeText = S.opt.changelabel;
+    var h = '<div class="mail-settings-popover">';
+    // Case
+    var caseInner = '<span class="mail-decision-label">' + LABEL.case + '</span><div class="mail-settings-case">';
+    if (linked) {
+      caseInner += '<a href="#" data-v44-case-ref>' + esc(st.caseRef) + "</a>";
+      caseInner += '<span class="mail-settings-actions">' +
+        '<button type="button" class="btn btn--small" data-v44-change ' + (inline ? 'aria-expanded="' + S.inlineOpen + '" aria-controls="v44InlinePicker"' : 'data-dialog-open="changeLinkedCaseDialog"') + ">" + esc(changeText) + "</button>" +
+        '<button type="button" class="btn btn--small" data-dialog-open="unlinkCaseDialog">' + LABEL.unlink + "</button></span>";
+    } else {
+      caseInner += '<strong class="quiet">' + LABEL.noCase + "</strong>";
+      caseInner += '<span class="mail-settings-actions"><button type="button" class="btn btn--small" data-v44-change ' +
+        (inline ? 'aria-expanded="' + S.inlineOpen + '" aria-controls="v44InlinePicker"' : 'data-dialog-open="linkCaseDialog"') + ">" + LABEL.linkToCase + "</button></span>";
+    }
+    caseInner += "</div>";
+    if (inline) {
+      caseInner += '<div class="mail-settings-picker" id="v44InlinePicker"' + (S.inlineOpen ? "" : " hidden") + ">" + picker("inline") +
+        '<span class="mail-settings-actions"><button type="button" class="btn btn--small" data-v44-inline-cancel>' + LABEL.cancel + "</button>" +
+        '<button type="button" class="btn btn--small btn--dark" data-dialog-open="' + (linked ? "changeLinkedCaseDialog" : "linkCaseDialog") + '">' + (linked ? LABEL.changeLinked : LABEL.linkToCase) + "</button></span></div>";
+    }
+    h += '<section class="mail-settings-section" data-v44-section="case">' + chg(caseInner) + "</section>";
+    // Type
+    h += '<form class="mail-settings-section" data-v44-section="type"><label class="mail-decision-label" id="mailClassificationLabel" for="mailTypeSelect">' + LABEL.type + "</label>" + typeSelect(st.type) + "</form>";
+    // Query (unchanged rule: linked, not Triage)
+    if (linked && !st.triage && st.query) {
+      h += '<section class="mail-settings-section" data-v44-section="query" data-mail-query>' + chg('<span class="mail-decision-label">' + LABEL.query + "</span>" +
+        '<span class="mail-settings-actions"><button type="button" class="btn btn--small">' + LABEL.markQueryDone + "</button></span>") + "</section>";
+    }
+    // Change case
+    if (st.changeCase) {
+      var actions = S.opt.caseactions === "buttons"
+        ? '<span class="mail-settings-actions"><a class="btn btn--small" href="#">' + LABEL.placeOnHold + '</a><a class="btn btn--small" href="#">' + LABEL.closeCase + "</a></span>"
+        : '<span class="mail-settings-links"><a href="#">' + LABEL.placeOnHold + '</a><a href="#">' + LABEL.closeCase + "</a></span>";
+      h += '<section class="mail-settings-section" data-v44-section="change-case" data-mail-change-case>' + chg('<span class="mail-decision-label">' + LABEL.changeCase + "</span>" + actions) + "</section>";
+    }
+    h += chg('<div class="mail-settings-foot" data-v44-section="decided">' + LABEL.decided + " " + decidedTime() + " · " + LABEL.automatic + "</div>");
+    return h + "</div>";
+  }
+
+  /* ---------- Dialogs (shape of _ReasonDialog.cshtml) ---------- */
+  function reasonDialog(id, title, withPicker, consequence) {
+    return '<div id="' + id + '" class="dialog-backdrop" data-dialog="' + id + '" style="z-index:1100"' + (S.dialog === id ? "" : " hidden") + ">" +
+      '<section class="dialog" role="dialog" aria-modal="true" aria-labelledby="' + id + '_title">' +
+      '<div class="dialog-head"><h2 id="' + id + '_title" tabindex="-1">' + esc(title) + '</h2><button type="button" class="dialog-close" data-dialog-close aria-label="Close dialog">' + icon("icon-x") + "</button></div>" +
+      '<form><div class="dialog-body stack">' +
+      (consequence ? '<div class="notice notice--warning">' + icon("icon-alert-triangle") + "<span>" + esc(consequence) + "</span></div>" : "") +
+      (withPicker ? chg(picker(id)) : "") +
+      '<div class="field"><label class="req" for="' + id + '_reason">' + LABEL.reason + '</label><textarea id="' + id + '_reason" name="Reason" rows="3" required maxlength="500"></textarea></div>' +
+      '</div><div class="dialog-foot"><button type="button" class="btn" data-dialog-close>' + LABEL.cancel + '</button><button type="button" class="btn btn--primary">' + LABEL.confirm + "</button></div></form></section></div>";
+  }
+
+  function render() {
+    var st = STATES[S.state] || STATES.linked;
+    var proposal = S.mode === "proposal";
+    var pickerInDialog = proposal && S.opt.picker === "dialog";
+    var linked = !!st.caseRef;
+    var bar = '<div class="mail-context-bar" data-mail-context-bar><span data-context-case>' + LABEL.case + " " +
+      (linked ? '<a class="mail-context-case-link" href="#">' + esc(st.caseRef) + "</a>" : '<span class="quiet">' + LABEL.noCase + "</span>") +
+      '</span><span class="mail-context-sep" aria-hidden="true">·</span><span>' + LABEL.type + " <strong data-context-type>" + esc(st.type) + "</strong></span>" +
+      (st.query === "open" ? '<span class="mail-context-sep" aria-hidden="true">·</span><span class="status status--purple" data-context-query>' + LABEL.query + " · " + LABEL.unassigned + "</span>" : "") + "</div>";
+    var html = '<div id="mailMessageDialog" class="dialog-backdrop ' + (proposal ? "v44-proposal" : "v44-today") + (S.diff ? " v44-diff" : "") + '" data-dialog="mailMessageDialog">' +
+      '<section class="dialog dialog--mail" role="dialog" aria-modal="true" aria-labelledby="mailMessageDialog_title">' +
+      '<div class="dialog-head"><div class="mail-dialog-title"><h2 id="mailMessageDialog_title" class="wrap" tabindex="-1">MA59 BDY · Instruction · Audit required</h2>' +
+      '<p class="mail-route">From desk@principal.example · To desk@collisionengineers.example · <time>02 Nov 2026 12:31</time></p>' + bar + "</div>" +
+      '<span class="mail-dialog-tools"><details class="menu mail-settings-menu" data-menu data-mail-settings' + (S.menu ? " open" : "") + ">" +
+      '<summary class="icon-button mail-settings-trigger" aria-label="' + LABEL.settings + '" title="' + LABEL.settings + '">' + icon("icon-settings") + "</summary>" +
+      (proposal ? proposalPopover(st) : todayPopover(st)) + "</details>" +
+      '<span class="cluster mail-dialog-nav"><button type="button" class="icon-button" aria-label="' + LABEL.prev + '">' + icon("icon-chevron-left") + '</button><button type="button" class="icon-button" aria-label="' + LABEL.next + '">' + icon("icon-chevron-right") + "</button></span>" +
+      '<button type="button" class="dialog-close" aria-label="Close dialog">' + icon("icon-x") + "</button></span></div>" +
+      '<div class="dialog-body v44-msg-body"><p>Please find attached our instruction for an audit of the repair estimate for the above vehicle.</p><p>Kind regards,<br>Claims desk</p></div>' +
+      "</section></div>";
+    if (linked) {
+      var consequence = st.cancels ? "Unlinking this email cancels case " + st.caseRef + "." : null;
+      html += reasonDialog("unlinkCaseDialog", "Unlink from " + st.caseRef, false, consequence);
+      html += reasonDialog("changeLinkedCaseDialog", LABEL.changeLinked, pickerInDialog, consequence);
+    } else {
+      html += reasonDialog("linkCaseDialog", LABEL.linkToCase, pickerInDialog, null);
+    }
+    document.getElementById("stage").innerHTML = html;
+    var tag = document.getElementById("modeTag");
+    tag.textContent = (proposal ? "Proposal" : "Today") + " · " + st.title;
+    tag.setAttribute("data-mode", S.mode);
+    renderStrip();
+    wire();
+  }
+
+  function wire() {
+    var stage = document.getElementById("stage");
+    stage.querySelectorAll("[data-dialog-open]").forEach(function (b) {
+      b.addEventListener("click", function () { S.dialog = b.getAttribute("data-dialog-open"); render(); });
+    });
+    stage.querySelectorAll("[data-dialog-close]").forEach(function (b) {
+      b.addEventListener("click", function () { S.dialog = ""; render(); });
+    });
+    var change = stage.querySelector("[data-v44-change][aria-controls]");
+    if (change) change.addEventListener("click", function () { S.inlineOpen = !S.inlineOpen; render(); });
+    var cancel = stage.querySelector("[data-v44-inline-cancel]");
+    if (cancel) cancel.addEventListener("click", function () { S.inlineOpen = false; render(); });
+    stage.querySelectorAll("[data-v44-picker] input").forEach(function (input) {
+      var opts = input.parentNode.querySelector("[data-case-picker-options]");
+      input.addEventListener("input", function () { opts.hidden = input.value.trim() === ""; input.setAttribute("aria-expanded", String(!opts.hidden)); });
+      opts.querySelectorAll("[data-case-picker-choice]").forEach(function (o) {
+        o.addEventListener("click", function () { input.value = o.getAttribute("data-case-picker-choice"); opts.hidden = true; input.setAttribute("aria-expanded", "false"); });
+      });
+    });
+    var open = stage.querySelector('.dialog-backdrop[data-dialog]:not(#mailMessageDialog):not([hidden]) textarea, .dialog-backdrop[data-dialog]:not(#mailMessageDialog):not([hidden]) [data-v44-picker] input');
+    if (open) open.focus();
+  }
+
+  function btnRow(name, values, current, onPick, labels) {
+    return '<div class="row"><span>' + esc(name) + '</span><div class="opts">' + values.map(function (v, i) {
+      return '<button type="button" data-strip="' + esc(name) + '" data-value="' + esc(v) + '" aria-pressed="' + (v === current) + '">' + esc(labels ? labels[i] : v) + "</button>";
+    }).join("") + "</div></div>";
+  }
+  var ITEMS = {
+    proposal: [
+      "A: Case / PO picker moves into the Link to Case / Change linked Case dialog",
+      "B: Change button label",
+      "C: 'Change case' heading clashes with 'Change linked Case'",
+      "D: Place on Hold / Close case as small buttons",
+      "E: Sections divided; Decided as a muted footer"
+    ]
+  };
+  function renderStrip() {
+    var rows = document.getElementById("stripRows");
+    var h = "";
+    h += btnRow("Mode", ["today", "proposal"], S.mode, null, ["Today", "Proposal"]);
+    h += btnRow("State", Object.keys(STATES), S.state);
+    h += btnRow("Dialog", ["", "linkCaseDialog", "changeLinkedCaseDialog", "unlinkCaseDialog"], S.dialog, null, ["None", "Link to Case", "Change linked Case", "Unlink"]);
+    h += btnRow("Menu", ["open", "closed"], S.menu ? "open" : "closed");
+    h += btnRow("Diff", ["off", "on"], S.diff ? "on" : "off");
+    Object.keys(OPTS).forEach(function (k) { h += btnRow(OPTS[k].label, OPTS[k].values, S.opt[k]); });
+    h += '<div class="row"><span>Variables</span><div class="opts"><button type="button" data-strip-reset>Reset</button></div></div>';
+    h += '<div class="row"><span>Sign-off items</span><ol class="items">' + ITEMS.proposal.map(function (i) { return "<li>" + esc(i) + "</li>"; }).join("") + "</ol></div>";
+    rows.innerHTML = h;
+    rows.querySelectorAll("[data-strip]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var n = b.getAttribute("data-strip"), v = b.getAttribute("data-value");
+        if (n === "Mode") { S.mode = v; store("mode", v); }
+        else if (n === "State") { S.state = v; store("state", v); S.inlineOpen = false; if (S.dialog) S.dialog = ""; }
+        else if (n === "Dialog") { S.dialog = v; }
+        else if (n === "Menu") { S.menu = v === "open"; }
+        else if (n === "Diff") { S.diff = v === "on"; }
+        else Object.keys(OPTS).forEach(function (k) { if (OPTS[k].label === n) { S.opt[k] = v; store("opt." + k, v); S.inlineOpen = false; } });
+        render();
+      });
+    });
+    rows.querySelector("[data-strip-reset]").addEventListener("click", function () {
+      Object.keys(OPTS).forEach(function (k) { S.opt[k] = OPTS[k].def; store("opt." + k, OPTS[k].def); }); render();
+    });
+  }
+
+  window.v44 = { S: S, STATES: STATES, OPTS: OPTS, render: render };
+  render();
+})();
+</script>
+</body>
+</html>
