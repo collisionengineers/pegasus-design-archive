@@ -1,7 +1,7 @@
 # Case details: how it should work
 
 Decided with the operator on 2 November 2026 (brief and answers in the
-[discussion log](../../notes/discussion-log.md)). Open lines await sign-off.
+[discussion log](../../notes/discussion-log.md)).
 
 - **D1** The card holding the Claim source and its contact is headed **Claim source**. (A)
 - **D2** The Claim source card shows, under its contact cells, the Claim source record's
@@ -20,8 +20,8 @@ Decided with the operator on 2 November 2026 (brief and answers in the
   2 November 2026)
 - **D7** With no Principal record notes, this Case's Principal notes cell keeps its
   half-width place. (G, 2 November 2026)
-- Open: **H** — The DFD form's *Contact details if not client* review line stays, or goes
-  with the Case contact.
+- **D8** The DFD form's *Contact details if not client* line stays among the instruction's
+  extracted fields; it fills no Case field. (H, 2 November 2026)
 
 ## Where this lands
 

@@ -81,3 +81,8 @@ The operator: "f - circs - full width", "g - half width", "h - what is the DFD f
   - `DfdInstructionExtractionPolicy` reads that form box by box.
   - Box `Text14`, *Contact details if not client*, becomes a labelled line among the
     instruction's extracted fields. It fills no Case field.
+
+## 2 November 2026: sign-off round 2
+
+The operator: "keep it". **H** is settled: the DFD *Contact details if not client* line stays.
+Every item is settled, and the round passes to Stage 2.

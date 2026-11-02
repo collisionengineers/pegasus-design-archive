@@ -49,6 +49,6 @@ evidence.
 
 ## Status
 
-**Awaiting sign-off (2 November 2026).** Items **A**–**E** are the operator's brief and
-answers and are settled. Items **F**, **G** and **H** are open. Nothing under `src/` or
-`tests/` in the application repository has been modified.
+**Signed off (2 November 2026).** Items **A**–**H** are settled
+([notes/v43-notes.md §6](notes/v43-notes.md#6-sign-off)). Stage 2 implementation is in progress
+on `task/case-details-claim-source` in the application repository.

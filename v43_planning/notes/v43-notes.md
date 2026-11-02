@@ -74,7 +74,8 @@ The operator's brief, 2 November 2026 (quoted in full in the
 
 ## 6. Sign-off
 
-Settled (§4): **A**, **B**, **C**, **D**, **E**; **F** and **G** on 2 November 2026.
+Settled (§4): **A**, **B**, **C**, **D**, **E**; **F**, **G** and **H** on 2 November 2026. Every item is
+settled; Stage 2 begins (see §10).
 
 Open, each "Confirm, or …":
 
@@ -91,6 +92,7 @@ Open, each "Confirm, or …":
   (`DfdInstructionExtractionPolicy.cs:24`) is read into the instruction review as a
   labelled line. It fills no Case field, and not the Case contact. Confirm it stays, or
   remove it with the Case contact.
+  *Settled 2 November 2026: "keep it".*
 
 Consequences Stage 2 carries without a further question (from §4):
 
@@ -135,3 +137,10 @@ Recorded under B. The self-check is still `{"fail": [], "okCount": 112}` (2 Nove
 At 1580 the label "Claim source notes · this Case" is cut with an ellipsis (live `.lbl` is one
 line), and a long contact e-mail wraps. If that matters, the alternative is to stack the two
 notes cells at the card's full width, which leaves a smaller gap under the Case card.
+
+## 10. Approval (2 November 2026)
+
+All items A–H are settled. A–E come from the brief and its answers, the two-across Claim
+source card from feedback round 1, F (full width), G (half width) and H (keep) from sign-off
+round 1. The operator was told the round would then pass to Stage 2 and answered "keep it"
+to the last item. Stage 2 follows [stage-2-plan.md](stage-2-plan.md) on `task/case-details-claim-source`.
