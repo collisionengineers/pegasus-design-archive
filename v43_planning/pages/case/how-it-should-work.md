@@ -16,10 +16,10 @@ Decided with the operator on 2 November 2026 (brief and answers in the
   or signature, and not the Principal API, whose instruction has no `fileHandler`. Stored
   values are deleted. This supersedes R462. (D)
 - **D5** A Case has no Notes from client. Stored values are deleted. (E)
-- Open: **F** — Accident circumstances spans the accident band's full width, or keeps its
-  half-width cell.
-- Open: **G** — With no Principal record notes, this Case's Principal notes cell keeps its
-  half-width place, or spans the panel.
+- **D6** Accident circumstances, alone in the accident band, spans its full width. (F,
+  2 November 2026)
+- **D7** With no Principal record notes, this Case's Principal notes cell keeps its
+  half-width place. (G, 2 November 2026)
 - Open: **H** — The DFD form's *Contact details if not client* review line stays, or goes
   with the Case contact.
 
@@ -27,7 +27,7 @@ Decided with the operator on 2 November 2026 (brief and answers in the
 
 | Page or owner | Entry |
 | --- | --- |
-| Case record, Case details | D1–D5, F, G |
+| Case record, Case details | D1–D7 |
 | Triage Case | Unchanged: its read-only Principal notes cell stays |
 | Principal API | D4: no `fileHandler` |
 | MCP Case edit | D4, D5: no contact or Notes from client parameters |
@@ -35,7 +35,7 @@ Decided with the operator on 2 November 2026 (brief and answers in the
 
 ## Documentation impact when the FRD is written
 
-- FRD-16 §Case details: D1–D5 (and F, G once settled), dated 2 November 2026, citing the
+- FRD-16 §Case details: D1–D7, dated 2 November 2026, citing the
   new rulings.
 - FRD-23 instruction field table: the *Contact name, e-mail and phone* row is removed.
 - `docs/rulings.md`: new rows for the brief and answers; R462 marked superseded.

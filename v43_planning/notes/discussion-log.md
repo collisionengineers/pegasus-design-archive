@@ -68,3 +68,16 @@ its contact name, phone beside e-mail, and the record's notes beside this Case's
 cards now end level at 1580 and 1440 (shots 002, 004). Side effect: at 1580, with the aside
 beside the sections, the live single-line label "Claim source notes · this Case" ends in an
 ellipsis, and a long e-mail address wraps.
+
+## 2 November 2026: sign-off round 1
+
+The operator: "f - circs - full width", "g - half width", "h - what is the DFD form?"
+
+- **F** settled: Accident circumstances spans the full width.
+- **G** settled: this Case's Principal notes cell keeps its half-width place.
+- **H** still open. The operator asked what the DFD form is, and it was explained:
+  - DFD (Davison Flynn Duke Solicitors) is a Principal that sends instructions as a
+    fillable PDF form.
+  - `DfdInstructionExtractionPolicy` reads that form box by box.
+  - Box `Text14`, *Contact details if not client*, becomes a labelled line among the
+    instruction's extracted fields. It fills no Case field.

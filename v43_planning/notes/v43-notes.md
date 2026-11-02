@@ -74,17 +74,19 @@ The operator's brief, 2 November 2026 (quoted in full in the
 
 ## 6. Sign-off
 
-Settled (§4): **A**, **B**, **C**, **D**, **E**.
+Settled (§4): **A**, **B**, **C**, **D**, **E**; **F** and **G** on 2 November 2026.
 
 Open, each "Confirm, or …":
 
 - **F** — Accident circumstances is alone in the accident band once Notes from client goes.
   Confirm it spans the band's full width (shots 002, 012), or keep its live half-width cell
   (state `case-read-f-half`, shot 012 vs 011).
+  *Settled 2 November 2026: "circs - full width". The half-width variant is rejected.*
 - **G** — A Case whose Principal record has no notes shows only this Case's Principal notes
   in the Principal panel. Confirm the cell keeps its half-width place, as the live grid
   does today (shot 006), or let it span the panel (state `case-read-bare-g-span`,
   shot 014).
+  *Settled 2 November 2026: "half width". The spanning variant is rejected.*
 - **H** — The DFD instruction form's *Contact details if not client* line
   (`DfdInstructionExtractionPolicy.cs:24`) is read into the instruction review as a
   labelled line. It fills no Case field, and not the Case contact. Confirm it stays, or
