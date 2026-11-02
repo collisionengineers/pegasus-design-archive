@@ -49,6 +49,8 @@ evidence.
 
 ## Status
 
-**Signed off (2 November 2026).** Items **A**–**H** are settled
-([notes/v43-notes.md §6](notes/v43-notes.md#6-sign-off)). Stage 2 implementation is in progress
-on `task/case-details-claim-source` in the application repository.
+**Signed off and implemented (2 November 2026).** Items **A**–**H** are settled
+([notes/v43-notes.md §6](notes/v43-notes.md#6-sign-off)). Stage 2 is `task/case-details-claim-source`
+in the application repository; its conformance evidence is in [conformance/](conformance/README.md).
+Once that PR merges, this folder is historical reference: current behaviour is owned by the FRDs
+(FRD-16 §Case details, FRD-23, FRD-04), the rulings R594–R599 and the ADRs, not by this mockup.

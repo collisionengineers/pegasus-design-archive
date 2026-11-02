@@ -1,0 +1,140 @@
+{
+  "errors": [],
+  "shots": [
+    {
+      "state": "case-read",
+      "width": 1580,
+      "mockup": "002-case-read-proposal-1580-case-details.png",
+      "built": "c002-case-read-1580.png",
+      "sideBySide": "s002-case-read-1580.png",
+      "heightMockup": 674,
+      "heightBuilt": 674
+    },
+    {
+      "state": "case-read",
+      "width": 1440,
+      "mockup": "002-case-read-proposal-1440-case-details.png",
+      "built": "c002-case-read-1440.png",
+      "sideBySide": "s002-case-read-1440.png",
+      "heightMockup": 674,
+      "heightBuilt": 674
+    },
+    {
+      "state": "case-read",
+      "width": 760,
+      "mockup": "002-case-read-proposal-760-case-details.png",
+      "built": "c002-case-read-760.png",
+      "sideBySide": "s002-case-read-760.png",
+      "heightMockup": 1422,
+      "heightBuilt": 1422
+    },
+    {
+      "state": "case-edit",
+      "width": 1580,
+      "mockup": "004-case-edit-proposal-1580-case-details.png",
+      "built": "c004-case-edit-1580.png",
+      "sideBySide": "s004-case-edit-1580.png",
+      "heightMockup": 674,
+      "heightBuilt": 674
+    },
+    {
+      "state": "case-edit",
+      "width": 1440,
+      "mockup": "004-case-edit-proposal-1440-case-details.png",
+      "built": "c004-case-edit-1440.png",
+      "sideBySide": "s004-case-edit-1440.png",
+      "heightMockup": 674,
+      "heightBuilt": 674
+    },
+    {
+      "state": "case-edit",
+      "width": 760,
+      "mockup": "004-case-edit-proposal-760-case-details.png",
+      "built": "c004-case-edit-760.png",
+      "sideBySide": "s004-case-edit-760.png",
+      "heightMockup": 1422,
+      "heightBuilt": 1422
+    },
+    {
+      "state": "case-read-bare",
+      "width": 1580,
+      "mockup": "006-case-read-bare-proposal-1580-case-details.png",
+      "built": "c006-case-read-bare-1580.png",
+      "sideBySide": "s006-case-read-bare-1580.png",
+      "heightMockup": 674,
+      "heightBuilt": 674
+    },
+    {
+      "state": "case-read-bare",
+      "width": 1440,
+      "mockup": "006-case-read-bare-proposal-1440-case-details.png",
+      "built": "c006-case-read-bare-1440.png",
+      "sideBySide": "s006-case-read-bare-1440.png",
+      "heightMockup": 674,
+      "heightBuilt": 674
+    },
+    {
+      "state": "case-read-bare",
+      "width": 760,
+      "mockup": "006-case-read-bare-proposal-760-case-details.png",
+      "built": "c006-case-read-bare-760.png",
+      "sideBySide": "s006-case-read-bare-760.png",
+      "heightMockup": 1221,
+      "heightBuilt": 1221
+    },
+    {
+      "state": "case-edit-bare",
+      "width": 1580,
+      "mockup": "008-case-edit-bare-proposal-1580-case-details.png",
+      "built": "c008-case-edit-bare-1580.png",
+      "sideBySide": "s008-case-edit-bare-1580.png",
+      "heightMockup": 674,
+      "heightBuilt": 674
+    },
+    {
+      "state": "case-edit-bare",
+      "width": 1440,
+      "mockup": "008-case-edit-bare-proposal-1440-case-details.png",
+      "built": "c008-case-edit-bare-1440.png",
+      "sideBySide": "s008-case-edit-bare-1440.png",
+      "heightMockup": 674,
+      "heightBuilt": 674
+    },
+    {
+      "state": "case-edit-bare",
+      "width": 760,
+      "mockup": "008-case-edit-bare-proposal-760-case-details.png",
+      "built": "c008-case-edit-bare-760.png",
+      "sideBySide": "s008-case-edit-bare-760.png",
+      "heightMockup": 1221,
+      "heightBuilt": 1221
+    },
+    {
+      "state": "case-edit-claim-source-changed",
+      "width": 1580,
+      "mockup": "010-case-edit-claim-source-changed-proposal-1580-case-details.png",
+      "built": "c010-case-edit-claim-source-changed-1580.png",
+      "sideBySide": "s010-case-edit-claim-source-changed-1580.png",
+      "heightMockup": 674,
+      "heightBuilt": 674
+    },
+    {
+      "state": "case-edit-claim-source-changed",
+      "width": 1440,
+      "mockup": "010-case-edit-claim-source-changed-proposal-1440-case-details.png",
+      "built": "c010-case-edit-claim-source-changed-1440.png",
+      "sideBySide": "s010-case-edit-claim-source-changed-1440.png",
+      "heightMockup": 674,
+      "heightBuilt": 674
+    },
+    {
+      "state": "case-edit-claim-source-changed",
+      "width": 760,
+      "mockup": "010-case-edit-claim-source-changed-proposal-760-case-details.png",
+      "built": "c010-case-edit-claim-source-changed-760.png",
+      "sideBySide": "s010-case-edit-claim-source-changed-760.png",
+      "heightMockup": 1322,
+      "heightBuilt": 1322
+    }
+  ]
+}
