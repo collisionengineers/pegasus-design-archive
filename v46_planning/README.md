@@ -1,0 +1,67 @@
+# v46: impacts entered by hand, damage markers for the picture only
+
+**Temporary design review artifact.**
+
+- Created at the operator's request on 3 November 2026. It is built over live captures of
+  Pegasus `origin/dev` (`fb4c5e741`, 3 November 2026), which includes PR 1862.
+- It is not application code, not design authority and not implementation evidence. The
+  self-check and screenshots test the mockup against itself, not the application.
+- Behaviour is owned by the FRDs (FRD-24 Damage record, FRD-11 report wording). Presentation is
+  owned by the [design authority](https://github.com/collisionengineers/pegasus/blob/dev/docs/design/README.md).
+- The sign-off list in [notes/v46-notes.md §6](notes/v46-notes.md#6-sign-off) decides what
+  Stage 2 changes.
+- Once Stage 2 lands and FRD-24 and FRD-11 carry the settled behaviour, this folder is
+  historical provenance only.
+
+Open [pegasus_v46.html](pegasus_v46.html) in a browser. It is one self-contained file with 10
+states of the Case record's Damage section and the Report wording's Nature of Incident block.
+
+- **Today** is the page as captured from the running application. Impact location and severity
+  are derived from the markers (PR 1862), and each marker has its own list row.
+- **Proposal** is the same page with the changes applied:
+  - Staff type the impacts as rows: Impact · Severity · Location · Note · ×, and add more rows
+    with Add impact.
+  - The Incident narrative and Nature of Incident follow the rows. With no impact, Nature of
+    Incident is skipped and the report is not blocked.
+  - The markers are bursts on the plan and nothing else.
+  - The derived cells, the per-marker list, the Underside/Interior/Mechanical chips and the area
+    readout are gone.
+
+The floating strip at the bottom left (`Mockup controls`) is a demo control, not product UI. It
+switches states, Today / Proposal and **Diff badges**, and lists the changes on the current
+state. Hide it with `?strip=0`.
+
+Query string: `?state=<key>&mode=today|proposal&diff=1&strip=0`. The state keys are
+`damage-two-read`, `damage-two-edit`, `damage-apart-read`, `damage-apart-edit`,
+`damage-apart-edit-under`, `damage-none-read`, `damage-none-edit`, `wording-apart`,
+`wording-none` and `wording-row1`.
+
+## Layout
+
+| Path | What it is |
+| --- | --- |
+| `pegasus_v46.html` | The interactive mockup: 10 states, Today and Proposal. It is built, so do not edit it by hand |
+| `notes/v46-notes.md` | Change table, live rules mirrored, frame numbers, coverage audit and departures, sign-off items A–L, self-check record, known limits |
+| `notes/discussion-log.md` | The operator's brief and answers of 3 November 2026 |
+| `notes/stage-2-plan.md` | The Stage 2 implementation plan, written during Stage 1. Not started |
+| `notes/capture-run-2026-11-03.log` | Output of the `ZzMockupCaptureCase` v46 lane against `fb4c5e741` |
+| `pages/` | The Case page folder: how it works today, how it should work, states and panels |
+| `captured-live/case/` | The server-rendered pages the mockup is built over |
+| `captured-live/_source/` | The live `wwwroot` the captures reference, and `source.txt` naming the commit |
+| `build/` | `build-v46.py` (assemble), `proposals_damage.py` (the patches), `check-v46.py` (self-check and shots), `preview_patch.py` |
+| `shots/` | Screenshots at 1580×1000, 1440×900 and 760×1000 with section crops and `verification.json` |
+
+## Rebuild
+
+```powershell
+python -X utf8 build/build-v46.py
+python -X utf8 build/check-v46.py            # add --no-shots to skip screenshots
+```
+
+To recapture, run the `ZzMockupCaptureCase.CaptureV46*` facts in a capture worktree with
+`MOCKUP_CAPTURE=1` and `MOCKUP_CAPTURE_DIR` set to this folder's `captured-live`.
+
+## Status
+
+Stage 1 is delivered and waiting for sign-off on items A–F and H–L, and on G2. G was settled in
+round 2. Stage 2 has not started.
