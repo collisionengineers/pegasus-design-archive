@@ -1,7 +1,7 @@
 # v46: impacts entered by hand, damage markers for the picture only
 
 **Historical reference.** Stage 2 is delivered on Pegasus branch `task/v46-impact-entry`
-(PR to follow). Current behaviour is owned by the PRDs, FRDs and ADRs (FRD-24 Damage record, FRD-11
+(PR #1869, https://github.com/collisionengineers/pegasus/pull/1869). Current behaviour is owned by the PRDs, FRDs and ADRs (FRD-24 Damage record, FRD-11
 report wording blocks, FRD-16 Damage, FRD-10 MCP) and by rulings R642–R646 in
 [docs/rulings.md](https://github.com/collisionengineers/pegasus/blob/dev/docs/rulings.md), not by
 this folder.
@@ -70,5 +70,5 @@ To recapture, run the `ZzMockupCaptureCase.CaptureV46*` facts in a capture workt
 
 Every item is settled. G was settled in round 2, A and J in rounds 3 and 4, and B–F, G2, H,
 I, K and L on 3 November 2026: "Based on the mockup, assume the outstanding points are
-approved" (R646). Stage 2 is delivered (PR to follow); the conformance evidence is in
+approved" (R646). Stage 2 is delivered (PR #1869, https://github.com/collisionengineers/pegasus/pull/1869); the conformance evidence is in
 [conformance/](conformance/README.md).
