@@ -1,8 +1,8 @@
 {
-  "checkedAtUtc": "2026-11-03T09:54:10.403831+00:00",
+  "checkedAtUtc": "2026-11-03T10:02:28.010491+00:00",
   "result": {
     "fail": [],
-    "okCount": 262
+    "okCount": 256
   },
   "shots": [
     {
@@ -758,90 +758,6 @@
     {
       "shot": "018-wording-none-proposal-760-panel.png",
       "state": "wording-none",
-      "mode": "proposal",
-      "viewport": "760 panel crop"
-    },
-    {
-      "shot": "019-wording-row1-today-1580.png",
-      "state": "wording-row1",
-      "mode": "today",
-      "viewport": "1580x1000"
-    },
-    {
-      "shot": "019-wording-row1-today-1580-panel.png",
-      "state": "wording-row1",
-      "mode": "today",
-      "viewport": "1580 panel crop"
-    },
-    {
-      "shot": "019-wording-row1-today-full.png",
-      "state": "wording-row1",
-      "mode": "today",
-      "viewport": "1580 whole page"
-    },
-    {
-      "shot": "019-wording-row1-today-1440.png",
-      "state": "wording-row1",
-      "mode": "today",
-      "viewport": "1440x900"
-    },
-    {
-      "shot": "019-wording-row1-today-1440-panel.png",
-      "state": "wording-row1",
-      "mode": "today",
-      "viewport": "1440 panel crop"
-    },
-    {
-      "shot": "019-wording-row1-today-760.png",
-      "state": "wording-row1",
-      "mode": "today",
-      "viewport": "760x1000"
-    },
-    {
-      "shot": "019-wording-row1-today-760-panel.png",
-      "state": "wording-row1",
-      "mode": "today",
-      "viewport": "760 panel crop"
-    },
-    {
-      "shot": "020-wording-row1-proposal-1580.png",
-      "state": "wording-row1",
-      "mode": "proposal",
-      "viewport": "1580x1000"
-    },
-    {
-      "shot": "020-wording-row1-proposal-1580-panel.png",
-      "state": "wording-row1",
-      "mode": "proposal",
-      "viewport": "1580 panel crop"
-    },
-    {
-      "shot": "020-wording-row1-proposal-full.png",
-      "state": "wording-row1",
-      "mode": "proposal",
-      "viewport": "1580 whole page"
-    },
-    {
-      "shot": "020-wording-row1-proposal-1440.png",
-      "state": "wording-row1",
-      "mode": "proposal",
-      "viewport": "1440x900"
-    },
-    {
-      "shot": "020-wording-row1-proposal-1440-panel.png",
-      "state": "wording-row1",
-      "mode": "proposal",
-      "viewport": "1440 panel crop"
-    },
-    {
-      "shot": "020-wording-row1-proposal-760.png",
-      "state": "wording-row1",
-      "mode": "proposal",
-      "viewport": "760x1000"
-    },
-    {
-      "shot": "020-wording-row1-proposal-760-panel.png",
-      "state": "wording-row1",
       "mode": "proposal",
       "viewport": "760 panel crop"
     }

@@ -32,6 +32,9 @@ VIEWPORTS = [(1580, 1000), (1440, 900), (760, 1000)]
 DS = "#section-damage"
 WP = "#section-report [data-report-wording]"
 ROW = "[data-v46-impact-row]"
+APART = ("The vehicle has suffered light collision/impact damage to the front.\n"
+         "The vehicle has suffered moderate collision/impact damage to the right side.\n"
+         "The vehicle has suffered moderate to heavy collision/impact damage to the rear.")
 
 ok: list[str] = []
 fail: list[str] = []
@@ -170,20 +173,19 @@ def damage_checks(page: Page) -> None:
                      "s.value = 'underside'; s.dispatchEvent(new Event('change', {bubbles: true})); })()")
     check("fill: the row's value follows its control",
           frame_eval(page, f"d.querySelectorAll('{ROW}')[3].querySelectorAll('.fv')[1].textContent") == "Underside")
-    check("narrative: a filled new row joins the sentence", text_in(page, "[data-damage-narrative]").startswith(
-        "The vehicle has suffered light collision/impact damage to the front,")
-        and text_in(page, "[data-damage-narrative]").strip().endswith("rear.")
-        and "underside" not in text_in(page, "[data-damage-narrative]"))
+    check("narrative: a row without a severity adds no sentence",
+          text_in(page, "[data-damage-narrative]").strip() == APART)
     frame_eval(page, f"(() => {{ const s = d.querySelectorAll('{ROW}')[3].querySelector('[data-v46-impact-severity]'); "
                      "s.value = 'heavy'; s.dispatchEvent(new Event('change', {bubbles: true})); })()")
-    check("narrative: completing the row adds it", text_in(page, "[data-damage-narrative]").strip().endswith(
-        "moderate to heavy collision/impact damage to the rear and heavy collision/impact damage to the underside."))
-    check("nature: the report block follows", nature_text(page).endswith("heavy collision/impact damage to the underside."))
+    check("narrative: completing the row adds its own sentence", text_in(page, "[data-damage-narrative]").strip() ==
+          APART + "\nThe vehicle has suffered heavy collision/impact damage to the underside.")
+    check("nature: the report block follows",
+          nature_text(page) == APART + "\nThe vehicle has suffered heavy collision/impact damage to the underside.")
     check("clear: the × is labelled Clear", frame_eval(
         page, "(() => { const b = d.querySelector('[data-v46-impact-clear]'); return b.textContent.trim() === '×' && b.getAttribute('aria-label') === 'Clear'; })()"))
     click(page, "[data-v46-impact-clear]", 0)
-    check("narrative: clearing the first impact drops it", text_in(page, "[data-damage-narrative]").startswith(
-        "The vehicle has suffered moderate collision/impact damage to the right side,"))
+    check("narrative: clearing the first impact drops its sentence", text_in(page, "[data-damage-narrative]").startswith(
+        "The vehicle has suffered moderate collision/impact damage to the right side.\n"))
     check("clear: removes the row", n(page, ROW) == 3)
     check("clear: rows renumber", frame_eval(page, f"[...d.querySelectorAll('{ROW}')].map(r => r.getAttribute('data-v46-impact-row')).join()") == "0,1,2")
     go(page, "damage-two-edit", "proposal")
@@ -205,14 +207,23 @@ def damage_checks(page: Page) -> None:
     before, after = drag_mark_off(page)
     check(f"J proposal: a burst dragged off the vehicle is removed ({before}->{after})", before == 3 and after == 2)
     check("J proposal: removing a burst leaves the impacts alone", n(page, ROW) == 3)
+    check("J: Clear markers is drawn while editing", shown(page, "[data-v46-clear-markers]")
+          and text_in(page, "[data-v46-clear-markers]").strip() == "Clear markers")
+    click(page, "[data-v46-clear-markers]")
+    check("J: Clear markers removes every burst", n(page, f"{DS} [data-mark]") == 0)
+    check("J: Clear markers leaves the impacts alone", n(page, ROW) == 3)
+    click(page, "[data-damage-reset]")
+    check("J: Reset brings the markers back", n(page, f"{DS} [data-mark]") == 3)
+    go(page, "damage-apart-read", "proposal")
+    check("J: no Clear markers while reading", not q(page, "[data-v46-clear-markers]"))
+    go(page, "damage-apart-edit", "today")
+    check("J today: live has no Clear markers", not q(page, "[data-v46-clear-markers]"))
 
     # A: the Nature of Incident composition.
     go(page, "wording-apart", "today")
     check("A today: live lists the following areas", "following areas" in nature_text(page))
     go(page, "wording-apart", "proposal")
-    check("A: one sentence naming every impact in order", nature_text(page) ==
-          "The vehicle has suffered light collision/impact damage to the front, moderate collision/impact "
-          "damage to the right side and moderate to heavy collision/impact damage to the rear.")
+    check("A: a separate sentence for each impact, in order", nature_text(page) == APART)
     # G (ruled 3 November 2026): no impact, no Nature of Incident, no impact blockers.
     go(page, "wording-none", "today")
     check("G today: live blocks the report on Impact location and severity",
@@ -231,17 +242,15 @@ def damage_checks(page: Page) -> None:
         click(page, "[data-v46-impact-clear]", 0)
     check("G: clearing every impact hides the Nature of Incident block",
           not shown(page, '[data-wording-block="nature"]') and not shown(page, '[data-wording-toggle="nature"]'))
-    go(page, "wording-row1", "proposal")
-    check("A variant: the first impact only",
-          nature_text(page) == "The vehicle has suffered light collision/impact damage to the front.")
     go(page, "damage-two-read", "proposal")
-    check("A read: the block reads the composed sentence", "right rear and light collision/impact damage to the rear"
+    check("A read: the block reads a sentence for each impact",
+          "right rear.\nThe vehicle has suffered light collision/impact damage to the rear."
           in text_in(page, '[data-wording-block="nature"]'))
 
     # A: the Damage section's Incident narrative reads the same composition.
     go(page, "damage-apart-read", "proposal")
-    check("A: the Incident narrative reads the composed sentence",
-          text_in(page, "[data-damage-narrative]").startswith("The vehicle has suffered light collision/impact damage to the front,"))
+    check("A: the Incident narrative reads a sentence for each impact, one to a line",
+          text_in(page, "[data-damage-narrative]").strip() == APART)
     go(page, "damage-apart-read", "today")
     check("A today: the Incident narrative lists the following areas", "following areas" in text_in(page, "[data-damage-narrative]"))
 

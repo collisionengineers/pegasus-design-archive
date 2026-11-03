@@ -54,7 +54,7 @@ FIXTURES["v46-none-edit"] = FIXTURES["v46-none-read"]
 
 DAMAGE_STATES = ("damage-two-read", "damage-two-edit", "damage-apart-read", "damage-apart-edit",
                  "damage-apart-edit-under", "damage-none-read", "damage-none-edit",
-                 "wording-apart", "wording-none", "wording-row1")
+                 "wording-apart", "wording-none")
 
 E = html.escape
 
@@ -146,10 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var location = word(r.querySelector('[data-v46-impact-location]'));
       if (severity && location) parts.push(severity + ' collision/impact damage to the ' + location);
     });
-    if (root.getAttribute('data-v46-compose') === 'first') parts = parts.slice(0, 1);
-    if (!parts.length) return '';
-    var joined = parts.length === 1 ? parts[0] : parts.slice(0, -1).join(', ') + ' and ' + parts[parts.length - 1];
-    return 'The vehicle has suffered ' + joined + '.';
+    return parts.map(function (part) { return 'The vehicle has suffered ' + part + '.'; }).join('\\n');
   }
   function recompose() {
     var sentence = compose();
@@ -157,6 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (narrative) {
       narrative.textContent = sentence || absent;
       narrative.classList.toggle('empty', !sentence);
+      narrative.classList.toggle('multi', sentence.indexOf('\\n') >= 0);
     }
     var nature = document.querySelector('[data-wording-block="nature"]');
     if (nature) {
@@ -216,7 +214,7 @@ def damage_section(ctx: Ctx) -> None:
     derived = facts.select_one(".fg.g2") if facts else None
     marker_list = facts.select_one("[data-damage-impact-list]") if facts else None
     # K: the impacts take the place of the derived cells and the list, beside the plan.
-    entry = ctx.html(block(FIXTURES.get(capture, []), "first" if ctx.key == "wording-row1" else "all"))
+    entry = ctx.html(block(FIXTURES.get(capture, [])))
     if derived is not None:
         derived.insert_before(entry)
     elif facts is not None:
@@ -239,6 +237,14 @@ def damage_section(ctx: Ctx) -> None:
     extra = section.select_one(".damage-extra")
     if extra is not None and not extra.find(True):
         extra.decompose()
+    reset = section.select_one("[data-damage-reset]")
+    if reset is not None:
+        clear_markers = ctx.html('<button type="button" class="btn btn--small" data-v46-clear-markers>'
+                                 '<svg class="icon" aria-hidden="true"><use href="#icon-x" /></svg>'
+                                 '<span>Clear markers</span></button>')
+        reset.insert_before(clear_markers)
+        ctx.mark(clear_markers, "J", "Clear markers (round 3) removes every marker; Reset returns the "
+                 "markers held when the edit opened. The impacts are untouched.")
     # The hidden plan-area keyboard controls named an area for a new damage.
     for control in section.select("[data-damage-plan-area]"):
         control.decompose()
@@ -260,24 +266,19 @@ def words(code: str) -> str:
         .replace("lh ", "left ").replace("rh ", "right ")
 
 
-def nature(rows: list[tuple[str, str, str]], first_only: bool) -> str:
-    chosen = rows[:1] if first_only else rows
-    parts = [f"{words(severity)} collision/impact damage to the {words(location)}"
-             for severity, location, _note in chosen]
-    if not parts:
-        return ""
-    joined = parts[0] if len(parts) == 1 else ", ".join(parts[:-1]) + " and " + parts[-1]
-    return f"The vehicle has suffered {joined}."
+def nature(rows: list[tuple[str, str, str]]) -> str:
+    """Round 3 (A): a separate sentence for each impact, one to a line, in row order."""
+    return "\n".join(f"The vehicle has suffered {words(severity)} collision/impact damage to the {words(location)}."
+                     for severity, location, _note in rows)
 
 
-@patch("wording-apart", "wording-row1", "damage-two-read", "damage-two-edit", "damage-apart-read",
+@patch("wording-apart", "damage-two-read", "damage-two-edit", "damage-apart-read",
        "damage-apart-edit", "damage-apart-edit-under")
 def nature_of_incident(ctx: Ctx) -> None:
     block_el = ctx.one('[data-wording-block="nature"]')
     if block_el is None:
         return
-    first_only = ctx.key == "wording-row1"
-    sentence = nature(FIXTURES.get(ctx.state["capture"], []), first_only)
+    sentence = nature(FIXTURES.get(ctx.state["capture"], []))
     if not sentence:
         return
     if block_el.has_attr("data-wording-composed"):
@@ -291,12 +292,11 @@ def nature_of_incident(ctx: Ctx) -> None:
     narrative = ctx.one("[data-damage-narrative]")
     if narrative is not None:
         narrative.string = sentence
-        narrative["class"] = [c for c in narrative.get("class", []) if c != "multi"]
+        classes = [c for c in narrative.get("class", []) if c != "multi"]
+        narrative["class"] = classes + (["multi"] if "\n" in sentence else [])
         ctx.mark(narrative, "A", "")
-    summary = ("Nature of Incident composes from the first impact only."
-               if first_only else
-               "Nature of Incident composes one sentence naming every impact in row order; "
-               "the report's Impact Magnitude prints the first impact (\"Light — Front\").")
+    summary = ("Nature of Incident is a separate sentence for each impact, one to a line, in row "
+               "order (round 3); the report's Impact Magnitude prints the first impact.")
     ctx.mark(block_el, "A", summary)
 
 

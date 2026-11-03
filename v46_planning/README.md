@@ -13,7 +13,7 @@
 - Once Stage 2 lands and FRD-24 and FRD-11 carry the settled behaviour, this folder is
   historical provenance only.
 
-Open [pegasus_v46.html](pegasus_v46.html) in a browser. It is one self-contained file with 10
+Open [pegasus_v46.html](pegasus_v46.html) in a browser. It is one self-contained file with 9
 states of the Case record's Damage section and the Report wording's Nature of Incident block.
 
 - **Today** is the page as captured from the running application. Impact location and severity
@@ -21,9 +21,9 @@ states of the Case record's Damage section and the Report wording's Nature of In
 - **Proposal** is the same page with the changes applied:
   - Staff type the impacts as rows: Impact · Severity · Location · Note · ×, and add more rows
     with Add impact.
-  - The Incident narrative and Nature of Incident follow the rows. With no impact, Nature of
+  - The Incident narrative and Nature of Incident are a sentence for each impact and follow the rows. With no impact, Nature of
     Incident is skipped and the report is not blocked.
-  - The markers are bursts on the plan and nothing else.
+  - The markers are bursts on the plan and nothing else. Clear markers removes them all.
   - The derived cells, the per-marker list, the Underside/Interior/Mechanical chips and the area
     readout are gone.
 
@@ -33,14 +33,14 @@ state. Hide it with `?strip=0`.
 
 Query string: `?state=<key>&mode=today|proposal&diff=1&strip=0`. The state keys are
 `damage-two-read`, `damage-two-edit`, `damage-apart-read`, `damage-apart-edit`,
-`damage-apart-edit-under`, `damage-none-read`, `damage-none-edit`, `wording-apart`,
-`wording-none` and `wording-row1`.
+`damage-apart-edit-under`, `damage-none-read`, `damage-none-edit`, `wording-apart` and
+`wording-none`.
 
 ## Layout
 
 | Path | What it is |
 | --- | --- |
-| `pegasus_v46.html` | The interactive mockup: 10 states, Today and Proposal. It is built, so do not edit it by hand |
+| `pegasus_v46.html` | The interactive mockup: 9 states, Today and Proposal. It is built, so do not edit it by hand |
 | `notes/v46-notes.md` | Change table, live rules mirrored, frame numbers, coverage audit and departures, sign-off items A–L, self-check record, known limits |
 | `notes/discussion-log.md` | The operator's brief and answers of 3 November 2026 |
 | `notes/stage-2-plan.md` | The Stage 2 implementation plan, written during Stage 1. Not started |
@@ -63,5 +63,5 @@ To recapture, run the `ZzMockupCaptureCase.CaptureV46*` facts in a capture workt
 
 ## Status
 
-Stage 1 is delivered and waiting for sign-off on items A–F and H–L, and on G2. G was settled in
-round 2. Stage 2 has not started.
+Stage 1 is delivered and waiting for sign-off on A2, B–F, G2, H, I, J2, K and L. G was settled
+in round 2, and A's composition and J in round 3. Stage 2 has not started.

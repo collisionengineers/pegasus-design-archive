@@ -1,6 +1,6 @@
 # Case record: Damage, how it should work
 
-Proposed on 3 November 2026 from the operator's brief and answers. D1–D7 come from the brief and
+Proposed on 3 November 2026 from the operator's brief and answers. D1–D9 come from the brief and
 answers and are settled. The open lines wait for the sign-off list in
 [v46-notes §6](../../notes/v46-notes.md#6-sign-off).
 
@@ -17,10 +17,14 @@ answers and are settled. The open lines wait for the sign-off list in
 - **D6.** The Incident narrative follows the impacts.
 - **D7.** With no impact recorded, the report skips the Nature of Incident block. Impacts are
   optional, so Impact location and Impact severity no longer block the report.
+- **D8.** Nature of Incident, and the Incident narrative, are a separate sentence for each
+  impact, in row order: "The vehicle has suffered {severity} collision/impact damage to the
+  {location}."
+- **D9.** While the Damage section edits, a Clear markers button removes every marker.
 
 ## Open
 
-- Open: how several impacts reach Nature of Incident and Impact Magnitude (A).
+- Open: what Impact Magnitude prints for several impacts, and whether the sentences sit one to a line (A2).
 - Open: the Location list (B).
 - Open: the × removes or empties its row (C).
 - Open: the captions, "Add impact" and the empty state (D).
@@ -29,7 +33,7 @@ answers and are settled. The open lines wait for the sign-off list in
 - Open: whether an incomplete row counts as an impact (G2).
 - Open: the MCP shape (H).
 - Open: the removals and superseding R639 (I).
-- Open: removing a marker (J).
+- Open: whether dragging a marker off the plan also removes it (J2).
 - Open: where the impacts stand (K).
 - Open: a new row's defaults (L).
 

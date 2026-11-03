@@ -108,6 +108,16 @@ JS_CORRECTIONS = {
             "                    }\n"
             "                    // A press on a disc that did not move it changes nothing.\n",
         ),
+        (
+            "            if (reset) {\n                reset.addEventListener('click', function () {\n"
+            "                    marks = JSON.parse(JSON.stringify(opening));",
+            "            var clearMarkers = editor.querySelector('[data-v46-clear-markers]');\n"
+            "            if (clearMarkers) {\n"
+            "                clearMarkers.addEventListener('click', function () { marks = []; render(); persist(); });\n"
+            "            }\n"
+            "            if (reset) {\n                reset.addEventListener('click', function () {\n"
+            "                    marks = JSON.parse(JSON.stringify(opening));",
+        ),
     ],
 }
 

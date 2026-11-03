@@ -41,7 +41,7 @@
       },
       {
         "id": "J",
-        "summary": "A marker is pressed, sized and moved as today; dragged and let go outside the plan, it is removed."
+        "summary": "Clear markers (round 3) removes every marker; Reset returns the markers held when the edit opened. The impacts are untouched."
       },
       {
         "id": "K",
@@ -95,7 +95,7 @@
       },
       {
         "id": "J",
-        "summary": "A marker is pressed, sized and moved as today; dragged and let go outside the plan, it is removed."
+        "summary": "Clear markers (round 3) removes every marker; Reset returns the markers held when the edit opened. The impacts are untouched."
       },
       {
         "id": "K",
@@ -122,7 +122,7 @@
       },
       {
         "id": "J",
-        "summary": "A marker is pressed, sized and moved as today; dragged and let go outside the plan, it is removed."
+        "summary": "Clear markers (round 3) removes every marker; Reset returns the markers held when the edit opened. The impacts are untouched."
       },
       {
         "id": "K",
@@ -176,7 +176,7 @@
       },
       {
         "id": "J",
-        "summary": "A marker is pressed, sized and moved as today; dragged and let go outside the plan, it is removed."
+        "summary": "Clear markers (round 3) removes every marker; Reset returns the markers held when the edit opened. The impacts are untouched."
       },
       {
         "id": "K",
@@ -190,7 +190,7 @@
   },
   {
     "key": "wording-apart",
-    "label": "Nature of Incident \u00b7 every impact in one sentence (item A)",
+    "label": "Nature of Incident \u00b7 a sentence for each impact (item A)",
     "group": "Case \u00b7 Report wording",
     "changes": [
       {
@@ -203,7 +203,7 @@
       },
       {
         "id": "J",
-        "summary": "A marker is pressed, sized and moved as today; dragged and let go outside the plan, it is removed."
+        "summary": "Clear markers (round 3) removes every marker; Reset returns the markers held when the edit opened. The impacts are untouched."
       },
       {
         "id": "K",
@@ -230,7 +230,7 @@
       },
       {
         "id": "J",
-        "summary": "A marker is pressed, sized and moved as today; dragged and let go outside the plan, it is removed."
+        "summary": "Clear markers (round 3) removes every marker; Reset returns the markers held when the edit opened. The impacts are untouched."
       },
       {
         "id": "K",
@@ -238,33 +238,6 @@
       },
       {
         "id": "G",
-        "summary": ""
-      }
-    ]
-  },
-  {
-    "key": "wording-row1",
-    "label": "Nature of Incident \u00b7 first impact only (item A variant)",
-    "group": "Case \u00b7 Report wording",
-    "changes": [
-      {
-        "id": "B C D K",
-        "summary": "Impacts are rows typed in by staff: Impact \u00b7 Severity \u00b7 Location \u00b7 Note \u00b7 \u00d7 (Clear), with Add impact. They stand where the derived cells and the marker list stood. Location is one of the 11 recorded areas, with no Multiple."
-      },
-      {
-        "id": "I",
-        "summary": "Removed: the derived Impact location and Impact severity cells, the per-marker list (areas, severity, note, \u00d7), the Underside, Interior and Mechanical chips (now Location values) and the area readout. A marker is a burst on the plan and nothing else."
-      },
-      {
-        "id": "J",
-        "summary": "A marker is pressed, sized and moved as today; dragged and let go outside the plan, it is removed."
-      },
-      {
-        "id": "K",
-        "summary": "Impact rows laid out in one line per impact; two columns below 1100px."
-      },
-      {
-        "id": "A",
         "summary": ""
       }
     ]

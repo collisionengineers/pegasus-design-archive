@@ -9,8 +9,7 @@
 | `damage-apart-edit-under` | Item K variant: the impacts under the plan at full width | `v46-apart-edit` | 009, 010 |
 | `damage-none-read` | Read mode, nothing recorded; the report is not blocked (G) | `v46-none-read` (+ `v46-apart-read` report) | 011, 012 |
 | `damage-none-edit` | The edit session, nothing recorded: Add impact | `v46-none-edit` (+ `v46-apart-edit` report) | 013, 014 |
-| `wording-apart` | Report wording: Nature of Incident names every impact (item A) | `v46-apart-edit` | 015, 016 |
+| `wording-apart` | Report wording: Nature of Incident, a sentence for each impact (A) | `v46-apart-edit` | 015, 016 |
 | `wording-none` | G (ruled): no impact recorded. Today the report is blocked; the Proposal skips Nature of Incident | `v46-none-edit` (+ `v46-apart-edit` report) | 017, 018 |
-| `wording-row1` | Item A variant: Nature of Incident from the first impact only | `v46-apart-edit` | 019, 020 |
 
 Odd shot numbers are Today and even are Proposal.

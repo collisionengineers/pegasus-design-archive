@@ -66,3 +66,22 @@ settle how several rows reach the report (A).
 
 **Closed.** G is settled by the third line. It leaves G2 open: whether a row missing its Severity
 or Location counts as an impact.
+
+## Round 3: sign-off answers, 3 November 2026
+
+**Operator:**
+
+> A - No, there should be a seperate sentence for each impact
+>
+> J - Include a clear markers button
+
+**Changed.**
+
+- Nature of Incident and the Incident narrative are a separate sentence for each impact, one to a
+  line, in row order. The single joined sentence and the `wording-row1` variant are gone (A).
+- While editing, a Clear markers button beside Reset removes every marker and leaves the impacts
+  alone. Dragging a single marker off the plan still removes it (J).
+
+**Raised.** A2: what Impact Magnitude prints when there are several impacts, and whether the
+sentences sit one to a line. J2: whether dragging a marker off the plan stays as a way to remove
+one. The other items (B–F, G2, H, I, K, L) still wait for an answer.

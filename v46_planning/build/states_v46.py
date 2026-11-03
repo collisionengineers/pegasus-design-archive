@@ -9,7 +9,6 @@ Captures (captured-live/case/, ZzMockupCaptureCase.cs on origin/dev fb4c5e741, 3
 
 Derived states (a preset on a capture, in Today and Proposal alike):
   damage-apart-edit-under  item K variant: the impacts full width under the plan
-  wording-row1   item A variant: the Nature of Incident composes from the first impact only
 """
 from __future__ import annotations
 
@@ -32,11 +31,9 @@ STATES: list[dict] = [
     s("damage-apart-edit-under", "Editing · item K variant: impacts under the plan", "v46-apart-edit"),
     s("damage-none-read", "Read · nothing recorded", "v46-none-read"),
     s("damage-none-edit", "Editing · nothing recorded", "v46-none-edit"),
-    s("wording-apart", "Nature of Incident · every impact in one sentence (item A)", "v46-apart-edit",
+    s("wording-apart", "Nature of Incident · a sentence for each impact (item A)", "v46-apart-edit",
       group=REPORT, scroll=REPORT_SCROLL),
     s("wording-none", "Report wording · no impact recorded: Nature of Incident skipped (G)", "v46-none-edit",
-      group=REPORT, scroll=REPORT_SCROLL),
-    s("wording-row1", "Nature of Incident · first impact only (item A variant)", "v46-apart-edit",
       group=REPORT, scroll=REPORT_SCROLL),
 ]
 
