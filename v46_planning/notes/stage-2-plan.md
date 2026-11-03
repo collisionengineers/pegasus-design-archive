@@ -1,4 +1,4 @@
-# v46 Stage 2 plan (not started)
+# v46 Stage 2 plan (built 3 November 2026)
 
 Written during Stage 1 on 3 November 2026 against `origin/dev` `fb4c5e741`. It is built only
 after items A–L are settled, and is re-derived if the head moves more than a week. Branch

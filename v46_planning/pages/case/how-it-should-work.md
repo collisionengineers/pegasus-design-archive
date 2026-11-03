@@ -1,8 +1,7 @@
 # Case record: Damage, how it should work
 
-Proposed on 3 November 2026 from the operator's brief and answers. D1–D10 come from the brief and
-answers and are settled. The open lines wait for the sign-off list in
-[v46-notes §6](../../notes/v46-notes.md#6-sign-off).
+Proposed on 3 November 2026 from the operator's brief and answers. Every rule is settled; the
+behaviour is now owned by FRD-24, FRD-11, FRD-16 and FRD-10 (R642–R646).
 
 ## Rules
 
@@ -25,18 +24,22 @@ answers and are settled. The open lines wait for the sign-off list in
 - **D10.** Where several impacts exist, the report's Impact Magnitude and Nature of Incident
   give one impact to a line.
 
-## Open
+## Decided (3 November 2026, R646)
 
-- Open: the Location list (B).
-- Open: the × removes or empties its row (C).
-- Open: the captions, "Add impact" and the empty state (D).
-- Open: whether the note prints (E).
-- Open: existing Cases (F).
-- Open: whether an incomplete row counts as an impact (G2).
-- Open: the MCP shape (H).
-- Open: the removals and superseding R639 (I).
-- Open: where the impacts stand (K).
-- Open: a new row's defaults (L).
+"Based on the mockup, assume the outstanding points are approved."
+
+- **D11 (B).** The Location list is the eleven areas, with no Multiple.
+- **D12 (C).** The × removes its row.
+- **D13 (D).** The words are "Impact", "Severity", "Location", "Note", "Clear", "Add impact",
+  "Clear markers" and "No damage recorded.".
+- **D14 (E).** The note does not print on the report.
+- **D15 (F).** Existing Cases start with no impacts; markers keep their disc.
+- **D16 (G2).** A row missing its severity or location is kept but not printed.
+- **D17 (H).** No new MCP tool: `pegasus_assessment_update` writes `assessment.impacts`.
+- **D18 (I).** The derived cells, the per-marker list, the chips, the readout and the plan-area
+  controls are removed, superseding R639.
+- **D19 (K).** The impacts stand beside the plan.
+- **D20 (L).** A new row starts blank.
 
 ## Where this lands
 

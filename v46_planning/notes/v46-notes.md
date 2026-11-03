@@ -94,7 +94,9 @@ Departures with no item of their own:
 
 ## 6. Sign-off
 
-Each item reads "Confirm, or …". Nothing here is built until every item is settled.
+Each item reads "Confirm, or …". Every item is settled (3 November 2026): B–F, G2, H, I, K and
+L by the operator's "Based on the mockup, assume the outstanding points are approved", each as
+proposed (R646).
 
 - **A. How the impacts reach the report.** *Settled 3 November 2026. Round 3: "No, there should
   be a seperate sentence for each impact" (the single joined sentence and the first-impact-only
@@ -161,3 +163,21 @@ A's sentence for each impact, K and its variant, the 760 fold, and the 1580 sing
 - The van and motorbike plans are not drawn separately (unchanged by this round).
 - Item J is shown by changing the live script in Proposal only (`JS_CORRECTIONS` in
   `build-v46.py`, each matched once).
+
+## 9. Stage 2
+
+Approved 3 November 2026: "Based on the mockup, assume the outstanding points are approved.
+Create a full integration into our existing UI and backend for these changes, removing any old
+tests/features as appropriate" (R646). Built on Pegasus `task/v46-impact-entry` from `origin/dev`
+`fb4c5e741`.
+
+- The impacts are `assessment.impacts` (severity, location, note); the markers stay at
+  `damage.impacts` as discs `{x, y, r}`; the derived pair, `DerivedPaths`, `SeveralAreas`, the
+  derivation and the area geometry are deleted. Migration `ImpactsEnteredByHand` applies item F.
+- Conformance: [../conformance/README.md](../conformance/README.md), `RESULT {"fail": [],
+  "okCount": 65}` on the implemented page with its own script.
+- Departures from the mockup, each recorded in the conformance README: the Report wording's
+  Nature of Incident block refreshes on save rather than as the rows change (the save compares
+  the posted wording with the composed sentence, so recomposing it in the browser would record
+  the new sentence as the Engineer's own); a row with nothing chosen or written is not saved.
+

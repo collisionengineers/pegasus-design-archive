@@ -1,0 +1,324 @@
+{
+  "checkedAtUtc": "2026-11-03T10:56:29.310236+00:00",
+  "result": {
+    "fail": [],
+    "okCount": 65
+  },
+  "shots": [
+    {
+      "shot": "damage-two-read-routed-1580.png",
+      "state": "damage-two-read",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "damage-two-read-routed-1580-panel.png",
+      "state": "damage-two-read",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "damage-two-read-routed-full.png",
+      "state": "damage-two-read",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "damage-two-read-routed-1440.png",
+      "state": "damage-two-read",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "damage-two-read-routed-1440-panel.png",
+      "state": "damage-two-read",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "damage-two-read-routed-760.png",
+      "state": "damage-two-read",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "damage-two-read-routed-760-panel.png",
+      "state": "damage-two-read",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "damage-two-edit-routed-1580.png",
+      "state": "damage-two-edit",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "damage-two-edit-routed-1580-panel.png",
+      "state": "damage-two-edit",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "damage-two-edit-routed-full.png",
+      "state": "damage-two-edit",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "damage-two-edit-routed-1440.png",
+      "state": "damage-two-edit",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "damage-two-edit-routed-1440-panel.png",
+      "state": "damage-two-edit",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "damage-two-edit-routed-760.png",
+      "state": "damage-two-edit",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "damage-two-edit-routed-760-panel.png",
+      "state": "damage-two-edit",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "damage-apart-read-routed-1580.png",
+      "state": "damage-apart-read",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "damage-apart-read-routed-1580-panel.png",
+      "state": "damage-apart-read",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "damage-apart-read-routed-full.png",
+      "state": "damage-apart-read",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "damage-apart-read-routed-1440.png",
+      "state": "damage-apart-read",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "damage-apart-read-routed-1440-panel.png",
+      "state": "damage-apart-read",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "damage-apart-read-routed-760.png",
+      "state": "damage-apart-read",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "damage-apart-read-routed-760-panel.png",
+      "state": "damage-apart-read",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "damage-apart-edit-routed-1580.png",
+      "state": "damage-apart-edit",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "damage-apart-edit-routed-1580-panel.png",
+      "state": "damage-apart-edit",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "damage-apart-edit-routed-full.png",
+      "state": "damage-apart-edit",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "damage-apart-edit-routed-1440.png",
+      "state": "damage-apart-edit",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "damage-apart-edit-routed-1440-panel.png",
+      "state": "damage-apart-edit",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "damage-apart-edit-routed-760.png",
+      "state": "damage-apart-edit",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "damage-apart-edit-routed-760-panel.png",
+      "state": "damage-apart-edit",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "damage-apart-edit-under-routed-1580.png",
+      "state": "damage-apart-edit-under",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "damage-apart-edit-under-routed-1580-panel.png",
+      "state": "damage-apart-edit-under",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "damage-apart-edit-under-routed-full.png",
+      "state": "damage-apart-edit-under",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "damage-apart-edit-under-routed-1440.png",
+      "state": "damage-apart-edit-under",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "damage-apart-edit-under-routed-1440-panel.png",
+      "state": "damage-apart-edit-under",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "damage-apart-edit-under-routed-760.png",
+      "state": "damage-apart-edit-under",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "damage-apart-edit-under-routed-760-panel.png",
+      "state": "damage-apart-edit-under",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "damage-none-read-routed-1580.png",
+      "state": "damage-none-read",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "damage-none-read-routed-1580-panel.png",
+      "state": "damage-none-read",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "damage-none-read-routed-full.png",
+      "state": "damage-none-read",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "damage-none-read-routed-1440.png",
+      "state": "damage-none-read",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "damage-none-read-routed-1440-panel.png",
+      "state": "damage-none-read",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "damage-none-read-routed-760.png",
+      "state": "damage-none-read",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "damage-none-read-routed-760-panel.png",
+      "state": "damage-none-read",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "damage-none-edit-routed-1580.png",
+      "state": "damage-none-edit",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "damage-none-edit-routed-1580-panel.png",
+      "state": "damage-none-edit",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "damage-none-edit-routed-full.png",
+      "state": "damage-none-edit",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "damage-none-edit-routed-1440.png",
+      "state": "damage-none-edit",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "damage-none-edit-routed-1440-panel.png",
+      "state": "damage-none-edit",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "damage-none-edit-routed-760.png",
+      "state": "damage-none-edit",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "damage-none-edit-routed-760-panel.png",
+      "state": "damage-none-edit",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "wording-apart-routed-1580.png",
+      "state": "wording-apart",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "wording-apart-routed-1580-panel.png",
+      "state": "wording-apart",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "wording-apart-routed-full.png",
+      "state": "wording-apart",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "wording-apart-routed-1440.png",
+      "state": "wording-apart",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "wording-apart-routed-1440-panel.png",
+      "state": "wording-apart",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "wording-apart-routed-760.png",
+      "state": "wording-apart",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "wording-apart-routed-760-panel.png",
+      "state": "wording-apart",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "wording-none-routed-1580.png",
+      "state": "wording-none",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "wording-none-routed-1580-panel.png",
+      "state": "wording-none",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "wording-none-routed-full.png",
+      "state": "wording-none",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "wording-none-routed-1440.png",
+      "state": "wording-none",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "wording-none-routed-1440-panel.png",
+      "state": "wording-none",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "wording-none-routed-760.png",
+      "state": "wording-none",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "wording-none-routed-760-panel.png",
+      "state": "wording-none",
+      "viewport": "760 panel crop"
+    }
+  ]
+}

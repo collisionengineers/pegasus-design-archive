@@ -1,6 +1,10 @@
 # v46: impacts entered by hand, damage markers for the picture only
 
-**Temporary design review artifact.**
+**Historical reference.** Stage 2 is delivered on Pegasus branch `task/v46-impact-entry`
+(PR to follow). Current behaviour is owned by the PRDs, FRDs and ADRs (FRD-24 Damage record, FRD-11
+report wording blocks, FRD-16 Damage, FRD-10 MCP) and by rulings R642–R646 in
+[docs/rulings.md](https://github.com/collisionengineers/pegasus/blob/dev/docs/rulings.md), not by
+this folder.
 
 - Created at the operator's request on 3 November 2026. It is built over live captures of
   Pegasus `origin/dev` (`fb4c5e741`, 3 November 2026), which includes PR 1862.
@@ -50,6 +54,7 @@ Query string: `?state=<key>&mode=today|proposal&diff=1&strip=0`. The state keys 
 | `captured-live/_source/` | The live `wwwroot` the captures reference, and `source.txt` naming the commit |
 | `build/` | `build-v46.py` (assemble), `proposals_damage.py` (the patches), `check-v46.py` (self-check and shots), `preview_patch.py` |
 | `shots/` | Screenshots at 1580×1000, 1440×900 and 760×1000 with section crops and `verification.json` |
+| `conformance/` | Stage 2 evidence: the implemented page captured from the same fixtures, built with its own CSS and JS, its check (`RESULT {"fail": [], "okCount": 65}`) and its shots. See [conformance/README.md](conformance/README.md) |
 
 ## Rebuild
 
@@ -63,5 +68,7 @@ To recapture, run the `ZzMockupCaptureCase.CaptureV46*` facts in a capture workt
 
 ## Status
 
-Stage 1 is delivered and waiting for sign-off on B–F, G2, H, I, K and L. G was settled in
-round 2, and A and J in rounds 3 and 4. Stage 2 has not started.
+Every item is settled. G was settled in round 2, A and J in rounds 3 and 4, and B–F, G2, H,
+I, K and L on 3 November 2026: "Based on the mockup, assume the outstanding points are
+approved" (R646). Stage 2 is delivered (PR to follow); the conformance evidence is in
+[conformance/](conformance/README.md).

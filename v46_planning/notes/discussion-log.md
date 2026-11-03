@@ -109,3 +109,19 @@ one. The other items (B–F, G2, H, I, K, L) still wait for an answer.
   full-height `btn`. The Severity column widens so "Moderate to heavy" fits.
 
 **Closed.** A and J are settled. Still open: B–F, G2, H, I, K and L.
+
+## Round 5: approval, 3 November 2026
+
+**Operator:**
+
+> Based on the mockup, assume the outstanding points are approved
+>
+> Create a full integration into our existing UI and backend for these changes, removing any old
+> tests/features as appropriate
+>
+> /razor-html-mockup-conversion
+>
+> Submit this as a PR for review when done
+
+**Closed.** B–F, G2, H, I, K and L are settled as proposed. Stage 2 is built and its
+conformance evidence is in [../conformance/](../conformance/README.md).
