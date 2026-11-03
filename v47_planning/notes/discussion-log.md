@@ -85,3 +85,18 @@ send but automation can (item B's open point; D said automation is refused).
 | Question | Operator's answer |
 | --- | --- |
 | A skip saved beside an impact row: refuse, or drop the skip silently? | "Refuse (Recommended)": the save fails with "Skip impacts can be ticked only while no impact is entered." |
+
+## Stage 2: the markers, 3 November 2026
+
+**Operator** (asked whether both the markers and the impacts were required):
+
+> The markers are always required, no matter what. The impacts section is required regardless (or skipped).
+
+> This isnt an edge case, this is intended behaviour. The markers are required. The "add impact" must either be entered, or skipped.
+
+| Question | Operator's answer |
+| --- | --- |
+| The markers blocker's words | "Damage markers (Recommended)": Damage markers · Assessment record · "No damage marker is drawn."; "Draw a marker on the plan on the Damage section." |
+
+**Changed.** A second readiness item, Damage markers, is outstanding until a marker is drawn,
+Skip impacts or not (R650).

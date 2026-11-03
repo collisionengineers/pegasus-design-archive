@@ -42,3 +42,9 @@ The operator approved the round: "Design approved." Items A–G stand as propose
 leave Skip impacts ticked beside any impact row, the operator chose **"Refuse
 (Recommended)"**. The save is refused with "Skip impacts can be ticked only while no impact is
 entered.", for staff and automation alike (D). Recorded as R647–R649 in the Pegasus rulings.
+
+During Stage 2 the operator added that the damage markers are always required: "The markers are
+always required, no matter what." Readiness names **Damage markers** ("No damage marker is
+drawn.", resolved by "Draw a marker on the plan on the Damage section.") until one is drawn,
+whether or not Skip impacts is ticked. Markers beside a ticked skip are intended. Recorded as
+R650.

@@ -80,6 +80,11 @@ def next_label(page: Page) -> str:
     return text_in(page, "[data-next-step] [data-next-label]").strip()
 
 
+def listed(page: Page, requirement: str) -> bool:
+    return frame_eval(page, "[...d.querySelectorAll('li.blocker')].some(li => "
+                            f"(li.querySelector('.blocker-name, a, span') || li).innerText.trim() === {json.dumps(requirement)})")
+
+
 def impacts_listed(page: Page) -> bool:
     return frame_eval(page, "[...d.querySelectorAll('li.blocker')].some(li => "
                             "(li.querySelector('.blocker-name, a, span') || li).innerText.trim() === 'Impacts')")
@@ -116,7 +121,9 @@ def damage_checks(page: Page) -> None:
     # A: the readiness item where there is no complete impact and no skip.
     for key in ("none-read", "none-edit", "partial-read", "partial-edit"):
         go(page, key, "today")
-        check(f"{key}: the next step is Impacts", next_label(page) == "Impacts")
+        # R650: with no marker drawn the Damage markers step comes first, the plan before the rows.
+        expected = "Damage markers" if key.startswith("none") else "Impacts"
+        check(f"{key}: the next step is {expected}", next_label(page) == expected)
         check(f"{key}: the step goes to Damage",
               frame_eval(page, "(d.querySelector('[data-next-step] a') || {}).getAttribute?.('data-section-jump')") == "damage")
         check(f"{key}: Impacts is in the outstanding list", impacts_listed(page))
@@ -126,6 +133,15 @@ def damage_checks(page: Page) -> None:
         go(page, key, "today")
         check(f"{key}: no Impacts step", next_label(page) != "Impacts")
         check(f"{key}: no Impacts blocker", not impacts_listed(page))
+
+    # R650: the markers are always required, Skip impacts or not.
+    for key, markers in (("none-read", False), ("skipped-read", False), ("skipped-edit", False),
+                         ("partial-read", True), ("two-read", True)):
+        go(page, key, "today")
+        check(f"{key}: Damage markers {'not ' if markers else ''}outstanding", listed(page, "Damage markers") != markers)
+    go(page, "none-read", "today")
+    check("none-read: the plan is the cell the markers jump outlines",
+          q(page, '#section-damage [data-damage-view][data-field="damage.impacts"]'))
 
     # C: reading, the static tick in place.
     go(page, "none-read", "today")

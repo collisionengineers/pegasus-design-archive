@@ -14,7 +14,7 @@ the implementation renders, 3 November 2026.
     patches, no presets and no script corrections;
   - every state is therefore the implementation with its own CSS and script.
 - **Check.** `check-conformance.py` is the Stage 1 self-check run against the implementation,
-  without the Today-only checks. It prints `RESULT {"fail": [], "okCount": 106}`. It proves:
+  without the Today-only checks. It prints `RESULT {"fail": [], "okCount": 112}`. It proves:
   - the Impacts step and blocker on the none and partial Cases, routed to Damage, and absent
     when skipped or with impacts;
   - the impacts block carrying the `data-field` the jump outlines;
@@ -27,6 +27,10 @@ the implementation renders, 3 November 2026.
     rows are edited;
   - at 760, the tick inside the page; at 1580, the tick on Add impact's line, and Add impact
     under Severity once rows exist.
+- **R650.** The check also proves that Damage markers is outstanding on every Case with no
+  marker, the skipped one included, and not on the Cases with markers. With no marker, Damage
+  markers is the first Next action step, because the plan comes before the rows. The plan
+  carries the `data-field` its jump outlines.
 - **Shots.** `shots/NNN-<state>-routed-<width>.png`, with `-panel` crops and a 1580 `-full`
   page. Each takes the number of the Stage 1 Proposal shot it compares with,
   `../shots/NNN-<state>-proposal-<width>.png`.
