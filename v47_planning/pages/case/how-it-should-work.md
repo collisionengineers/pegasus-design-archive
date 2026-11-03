@@ -35,6 +35,10 @@ dated "Decided" heading below is written.
   skip does not by itself make a sent report stale (E), and it is audited as any assessment
   field (F).
 
-## Decided
+## Decided 3 November 2026
 
-Not yet. The operator's settlement of A–G goes here, dated.
+The operator approved the round: "Design approved." Items A–G stand as proposed in
+[v47-notes.md §6](../../notes/v47-notes.md#6-sign-off). For B's open point, a save that would
+leave Skip impacts ticked beside any impact row, the operator chose **"Refuse
+(Recommended)"**. The save is refused with "Skip impacts can be ticked only while no impact is
+entered.", for staff and automation alike (D). Recorded as R647–R649 in the Pegasus rulings.

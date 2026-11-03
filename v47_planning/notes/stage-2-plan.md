@@ -1,4 +1,4 @@
-# v47 Stage 2 plan (not started)
+# v47 Stage 2 plan (built 3 November 2026)
 
 Written during Stage 1, 3 November 2026, against Pegasus `origin/dev` `7231a4b37`. It waits
 for items A–G and the operator's approval. Re-derive it if it is older than a week when

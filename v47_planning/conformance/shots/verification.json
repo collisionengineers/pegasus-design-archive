@@ -1,0 +1,345 @@
+{
+  "checkedAtUtc": "2026-11-03T13:32:48.914891+00:00",
+  "result": {
+    "fail": [],
+    "okCount": 106
+  },
+  "shots": [
+    {
+      "shot": "002-none-read-routed-1580.png",
+      "state": "none-read",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "002-none-read-routed-1580-panel.png",
+      "state": "none-read",
+      "mode": "today",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "002-none-read-routed-full.png",
+      "state": "none-read",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "002-none-read-routed-1440.png",
+      "state": "none-read",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "002-none-read-routed-1440-panel.png",
+      "state": "none-read",
+      "mode": "today",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "002-none-read-routed-760.png",
+      "state": "none-read",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "002-none-read-routed-760-panel.png",
+      "state": "none-read",
+      "mode": "today",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "004-none-edit-routed-1580.png",
+      "state": "none-edit",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "004-none-edit-routed-1580-panel.png",
+      "state": "none-edit",
+      "mode": "today",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "004-none-edit-routed-full.png",
+      "state": "none-edit",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "004-none-edit-routed-1440.png",
+      "state": "none-edit",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "004-none-edit-routed-1440-panel.png",
+      "state": "none-edit",
+      "mode": "today",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "004-none-edit-routed-760.png",
+      "state": "none-edit",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "004-none-edit-routed-760-panel.png",
+      "state": "none-edit",
+      "mode": "today",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "006-skipped-read-routed-1580.png",
+      "state": "skipped-read",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "006-skipped-read-routed-1580-panel.png",
+      "state": "skipped-read",
+      "mode": "today",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "006-skipped-read-routed-full.png",
+      "state": "skipped-read",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "006-skipped-read-routed-1440.png",
+      "state": "skipped-read",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "006-skipped-read-routed-1440-panel.png",
+      "state": "skipped-read",
+      "mode": "today",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "006-skipped-read-routed-760.png",
+      "state": "skipped-read",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "006-skipped-read-routed-760-panel.png",
+      "state": "skipped-read",
+      "mode": "today",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "008-skipped-edit-routed-1580.png",
+      "state": "skipped-edit",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "008-skipped-edit-routed-1580-panel.png",
+      "state": "skipped-edit",
+      "mode": "today",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "008-skipped-edit-routed-full.png",
+      "state": "skipped-edit",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "008-skipped-edit-routed-1440.png",
+      "state": "skipped-edit",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "008-skipped-edit-routed-1440-panel.png",
+      "state": "skipped-edit",
+      "mode": "today",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "008-skipped-edit-routed-760.png",
+      "state": "skipped-edit",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "008-skipped-edit-routed-760-panel.png",
+      "state": "skipped-edit",
+      "mode": "today",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "010-partial-read-routed-1580.png",
+      "state": "partial-read",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "010-partial-read-routed-1580-panel.png",
+      "state": "partial-read",
+      "mode": "today",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "010-partial-read-routed-full.png",
+      "state": "partial-read",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "010-partial-read-routed-1440.png",
+      "state": "partial-read",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "010-partial-read-routed-1440-panel.png",
+      "state": "partial-read",
+      "mode": "today",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "010-partial-read-routed-760.png",
+      "state": "partial-read",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "010-partial-read-routed-760-panel.png",
+      "state": "partial-read",
+      "mode": "today",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "012-partial-edit-routed-1580.png",
+      "state": "partial-edit",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "012-partial-edit-routed-1580-panel.png",
+      "state": "partial-edit",
+      "mode": "today",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "012-partial-edit-routed-full.png",
+      "state": "partial-edit",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "012-partial-edit-routed-1440.png",
+      "state": "partial-edit",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "012-partial-edit-routed-1440-panel.png",
+      "state": "partial-edit",
+      "mode": "today",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "012-partial-edit-routed-760.png",
+      "state": "partial-edit",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "012-partial-edit-routed-760-panel.png",
+      "state": "partial-edit",
+      "mode": "today",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "014-two-read-routed-1580.png",
+      "state": "two-read",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "014-two-read-routed-1580-panel.png",
+      "state": "two-read",
+      "mode": "today",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "014-two-read-routed-full.png",
+      "state": "two-read",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "014-two-read-routed-1440.png",
+      "state": "two-read",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "014-two-read-routed-1440-panel.png",
+      "state": "two-read",
+      "mode": "today",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "014-two-read-routed-760.png",
+      "state": "two-read",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "014-two-read-routed-760-panel.png",
+      "state": "two-read",
+      "mode": "today",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "016-two-edit-routed-1580.png",
+      "state": "two-edit",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "016-two-edit-routed-1580-panel.png",
+      "state": "two-edit",
+      "mode": "today",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "016-two-edit-routed-full.png",
+      "state": "two-edit",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "016-two-edit-routed-1440.png",
+      "state": "two-edit",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "016-two-edit-routed-1440-panel.png",
+      "state": "two-edit",
+      "mode": "today",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "016-two-edit-routed-760.png",
+      "state": "two-edit",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "016-two-edit-routed-760-panel.png",
+      "state": "two-edit",
+      "mode": "today",
+      "viewport": "760 panel crop"
+    }
+  ]
+}

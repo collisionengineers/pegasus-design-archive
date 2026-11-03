@@ -68,3 +68,20 @@ impacts stood on the row grid's columns):**
   can therefore only be added while the tick is off.
 
 **Raised.** Nothing new. Item B records the greyed Add impact as settled.
+
+## Sign-off, 3 November 2026
+
+**Operator:**
+
+> Design approved.
+>
+> /razor-html-mockup-conversion
+>
+> Integrate into our case page, with consideration to core rules, testing, and necessary files to edit
+
+**Asked:** what the save does when Skip impacts arrives with an impact row, which the page cannot
+send but automation can (item B's open point; D said automation is refused).
+
+| Question | Operator's answer |
+| --- | --- |
+| A skip saved beside an impact row: refuse, or drop the skip silently? | "Refuse (Recommended)": the save fails with "Skip impacts can be ticked only while no impact is entered." |

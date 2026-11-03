@@ -90,7 +90,12 @@ and the aside readiness (`v47-rule-none-read.html`):
 
 ## 6. Sign-off
 
-Each item reads "Confirm, or …".
+**Outcome, 3 November 2026.** The operator: "Design approved." Every item is confirmed as
+proposed. B's open point, the save given a skip beside a row, was asked separately, and the
+operator chose **"Refuse (Recommended)"**: the save is refused with "Skip impacts can be
+ticked only while no impact is entered." (R649).
+
+Each item read "Confirm, or …".
 
 - **A. The readiness item.** Requirement **Impacts**, source **Assessment record**, why **"No
   impact is entered."**, and for automation the resolution **"Enter an impact, or tick Skip
@@ -158,4 +163,5 @@ evidence.
 
 ## 9. Stage 2
 
-Planned in [stage-2-plan.md](stage-2-plan.md). Not started; it waits for A–G and approval.
+Planned in [stage-2-plan.md](stage-2-plan.md) and built on `task/v47-impact-skip`. The
+conformance evidence is in [../conformance/README.md](../conformance/README.md).

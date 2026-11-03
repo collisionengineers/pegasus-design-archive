@@ -1,6 +1,9 @@
 # v47: an impact, or a deliberate Skip impacts
 
-**Stage 1, awaiting sign-off.**
+**Approved 3 November 2026 and implemented (Stage 2).** This folder is now historical
+reference: current behaviour is owned by the FRDs (FRD-24 Damage record, FRD-11, FRD-16 Damage,
+FRD-10) and rulings R647–R649. The implementation's conformance evidence is in
+[conformance/](conformance/README.md).
 
 - Created at the operator's request on 3 November 2026, as a follow-up to v46, PR #1869
   (https://github.com/collisionengineers/pegasus/pull/1869).
@@ -68,4 +71,5 @@ To recapture, run the `ZzMockupCaptureCase.CaptureV47*` facts in a capture workt
 
 - Round 1 settled the place, the exclusivity, the label "Skip impacts" and no backfill.
 - Round 2 settled the empty state's alignment and the greyed Add impact.
-- Items A–G are open.
+- Items A–G were approved as proposed on 3 November 2026 ("Design approved."), with B's save
+  refusing a skip beside a row.
