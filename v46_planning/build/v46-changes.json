@@ -14,7 +14,7 @@
       },
       {
         "id": "J",
-        "summary": "A marker is pressed, sized and moved as today; dragged and let go outside the plan, it is removed."
+        "summary": "A marker is pressed, sized and moved as today; it is not removed by dragging (J2, round 4)."
       },
       {
         "id": "K",
@@ -41,7 +41,7 @@
       },
       {
         "id": "J",
-        "summary": "Clear markers (round 3) removes every marker; Reset returns the markers held when the edit opened. The impacts are untouched."
+        "summary": "Clear markers (round 3) removes every marker and stands where Reset stood; Reset is removed (round 4). The impacts are untouched."
       },
       {
         "id": "K",
@@ -68,7 +68,7 @@
       },
       {
         "id": "J",
-        "summary": "A marker is pressed, sized and moved as today; dragged and let go outside the plan, it is removed."
+        "summary": "A marker is pressed, sized and moved as today; it is not removed by dragging (J2, round 4)."
       },
       {
         "id": "K",
@@ -95,7 +95,7 @@
       },
       {
         "id": "J",
-        "summary": "Clear markers (round 3) removes every marker; Reset returns the markers held when the edit opened. The impacts are untouched."
+        "summary": "Clear markers (round 3) removes every marker and stands where Reset stood; Reset is removed (round 4). The impacts are untouched."
       },
       {
         "id": "K",
@@ -122,7 +122,7 @@
       },
       {
         "id": "J",
-        "summary": "Clear markers (round 3) removes every marker; Reset returns the markers held when the edit opened. The impacts are untouched."
+        "summary": "Clear markers (round 3) removes every marker and stands where Reset stood; Reset is removed (round 4). The impacts are untouched."
       },
       {
         "id": "K",
@@ -149,7 +149,7 @@
       },
       {
         "id": "J",
-        "summary": "A marker is pressed, sized and moved as today; dragged and let go outside the plan, it is removed."
+        "summary": "A marker is pressed, sized and moved as today; it is not removed by dragging (J2, round 4)."
       },
       {
         "id": "K",
@@ -176,7 +176,7 @@
       },
       {
         "id": "J",
-        "summary": "Clear markers (round 3) removes every marker; Reset returns the markers held when the edit opened. The impacts are untouched."
+        "summary": "Clear markers (round 3) removes every marker and stands where Reset stood; Reset is removed (round 4). The impacts are untouched."
       },
       {
         "id": "K",
@@ -203,7 +203,7 @@
       },
       {
         "id": "J",
-        "summary": "Clear markers (round 3) removes every marker; Reset returns the markers held when the edit opened. The impacts are untouched."
+        "summary": "Clear markers (round 3) removes every marker and stands where Reset stood; Reset is removed (round 4). The impacts are untouched."
       },
       {
         "id": "K",
@@ -230,7 +230,7 @@
       },
       {
         "id": "J",
-        "summary": "Clear markers (round 3) removes every marker; Reset returns the markers held when the edit opened. The impacts are untouched."
+        "summary": "Clear markers (round 3) removes every marker and stands where Reset stood; Reset is removed (round 4). The impacts are untouched."
       },
       {
         "id": "K",

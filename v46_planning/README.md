@@ -63,5 +63,5 @@ To recapture, run the `ZzMockupCaptureCase.CaptureV46*` facts in a capture workt
 
 ## Status
 
-Stage 1 is delivered and waiting for sign-off on A2, B–F, G2, H, I, J2, K and L. G was settled
-in round 2, and A's composition and J in round 3. Stage 2 has not started.
+Stage 1 is delivered and waiting for sign-off on B–F, G2, H, I, K and L. G was settled in
+round 2, and A and J in rounds 3 and 4. Stage 2 has not started.

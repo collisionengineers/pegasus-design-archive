@@ -85,29 +85,10 @@ def css_asset(name: str) -> str:
     return re.sub(r"url\(([^)]+)\)", repl, css)
 
 
-# Item J, in Proposal only: a marker moved and let go outside the plan is removed, because the
-# per-marker list and its × are gone. Live clamps a disc's centre to the plan box, so the
-# pointer, not the disc, decides. Each correction must match exactly once.
+# Item J: the Clear markers button (only drawn in Proposal) empties the live editor's marks.
+# Each correction must match exactly once.
 JS_CORRECTIONS = {
     "case-workspace.js": [
-        (
-            "                    drawing.changed = true;\n                    if (drawing.move) {\n",
-            "                    drawing.changed = true;\n                    if (drawing.move) {\n"
-            "                        drawing.off = point.x < box.x || point.x > box.x + box.w"
-            " || point.y < box.y || point.y > box.y + box.h;\n",
-        ),
-        (
-            "                    // A press on a disc that did not move it changes nothing.\n",
-            "                    if (drawing.move && drawing.off"
-            " && document.documentElement.getAttribute('data-v46-mode') === 'proposal') {\n"
-            "                        marks.splice(marks.indexOf(drawing.mark), 1);\n"
-            "                        drawing = null;\n"
-            "                        render();\n"
-            "                        persist();\n"
-            "                        return;\n"
-            "                    }\n"
-            "                    // A press on a disc that did not move it changes nothing.\n",
-        ),
         (
             "            if (reset) {\n                reset.addEventListener('click', function () {\n"
             "                    marks = JSON.parse(JSON.stringify(opening));",

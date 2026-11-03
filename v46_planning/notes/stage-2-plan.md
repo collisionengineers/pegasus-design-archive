@@ -15,7 +15,8 @@ after items A–L are settled, and is re-derived if the head moves more than a w
 - `damage.impacts` shrinks to markers `{x, y, r}`. `AssessmentImpact` loses areas, severity and
   note, and the reader refuses them.
 - Report: `AssessmentReportWording.ImpactMagnitude` and `ReportWording.NatureOfIncidentSentence` /
-  `NatureOfIncidentOf` read the rows per item A (a separate sentence for each impact), and with no impact Nature of Incident is not
+  `NatureOfIncidentOf` read the rows per item A (a separate sentence for each impact, and an
+  Impact Magnitude line for each impact, one to a line), and with no impact Nature of Incident is not
   offered (G, ruled). `ReportImpact` carries a disc only. `AcceptedReportSource` stops requiring
   ImpactSeverity and ImpactLocation, and the two readiness items in `AssessmentPolicy` go (G).
 - `CaseReportFreshness` watches the new field instead of the derived pair.
@@ -31,7 +32,7 @@ after items A–L are settled, and is re-derived if the head moves more than a w
 - `_CaseDamage.cshtml`: remove the derived cells, the list, the chips, the readout and the
   plan-area controls, and add the impact rows per K, with read and edit sharing one geometry.
 - `case-workspace.js`: the damage editor loses areas, severity, notes, chips and derivation, and
-  gains Clear markers per J (and drag-off removal if J2 keeps it). A small row editor handles Add and the × (C), and recomposes the Incident
+  gains Clear markers per J. Reset goes, and so does `opening`. A small row editor handles Add and the × (C), and recomposes the Incident
   narrative.
 - `CaseWorkspaceLabels.Damage` gets the item D words. `OperatorLabels.CaseWorkspace.EngineerSections`
   drops Impact location and Impact severity.

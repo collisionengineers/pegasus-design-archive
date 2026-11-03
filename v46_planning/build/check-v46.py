@@ -181,8 +181,13 @@ def damage_checks(page: Page) -> None:
           APART + "\nThe vehicle has suffered heavy collision/impact damage to the underside.")
     check("nature: the report block follows",
           nature_text(page) == APART + "\nThe vehicle has suffered heavy collision/impact damage to the underside.")
-    check("clear: the × is labelled Clear", frame_eval(
-        page, "(() => { const b = d.querySelector('[data-v46-impact-clear]'); return b.textContent.trim() === '×' && b.getAttribute('aria-label') === 'Clear'; })()"))
+    check("clear: the x is the live icon button labelled Clear", frame_eval(
+        page, "(() => { const b = d.querySelector('[data-v46-impact-clear]'); return b.classList.contains('icon-button') "
+              "&& !!b.querySelector('use[href=\"#icon-x\"]') && b.getAttribute('aria-label') === 'Clear'; })()"))
+    check("buttons: Add impact is a full-height button under Severity", frame_eval(
+        page, "(() => { const a = d.querySelector('[data-v46-impact-add]').getBoundingClientRect(); "
+              "const s = d.querySelector('[data-v46-impact-row] .fc').getBoundingClientRect(); "
+              "return Math.abs(a.left - s.left) < 2 && a.height >= 35; })()"))
     click(page, "[data-v46-impact-clear]", 0)
     check("narrative: clearing the first impact drops its sentence", text_in(page, "[data-damage-narrative]").startswith(
         "The vehicle has suffered moderate collision/impact damage to the right side.\n"))
@@ -205,15 +210,13 @@ def damage_checks(page: Page) -> None:
     check(f"J today: a burst dragged off the vehicle returns ({before}->{after})", before == 3 and after == 3)
     go(page, "damage-apart-edit", "proposal")
     before, after = drag_mark_off(page)
-    check(f"J proposal: a burst dragged off the vehicle is removed ({before}->{after})", before == 3 and after == 2)
-    check("J proposal: removing a burst leaves the impacts alone", n(page, ROW) == 3)
+    check(f"J2 proposal: a burst dragged off the vehicle is not removed ({before}->{after})", before == 3 and after == 3)
     check("J: Clear markers is drawn while editing", shown(page, "[data-v46-clear-markers]")
           and text_in(page, "[data-v46-clear-markers]").strip() == "Clear markers")
     click(page, "[data-v46-clear-markers]")
     check("J: Clear markers removes every burst", n(page, f"{DS} [data-mark]") == 0)
     check("J: Clear markers leaves the impacts alone", n(page, ROW) == 3)
-    click(page, "[data-damage-reset]")
-    check("J: Reset brings the markers back", n(page, f"{DS} [data-mark]") == 3)
+    check("Reset is removed", not q(page, "[data-damage-reset]"))
     go(page, "damage-apart-read", "proposal")
     check("J: no Clear markers while reading", not q(page, "[data-v46-clear-markers]"))
     go(page, "damage-apart-edit", "today")

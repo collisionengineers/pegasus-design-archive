@@ -85,3 +85,27 @@ or Location counts as an impact.
 **Raised.** A2: what Impact Magnitude prints when there are several impacts, and whether the
 sentences sit one to a line. J2: whether dragging a marker off the plan stays as a way to remove
 one. The other items (B–F, G2, H, I, K, L) still wait for an answer.
+
+## Round 4: sign-off answers, 3 November 2026
+
+**Operator:**
+
+> The reset button should be removed
+>
+> J2 - no dragging
+>
+> A2 - One to a line. Where several impacts exist, it should be one to a line.
+>
+> The butttons need slight improvement, they look poor design
+
+**Changed.**
+
+- Reset is removed, and Clear markers stands in its place under the plan (J).
+- Dragging a marker off the plan no longer removes it (J2).
+- Impact Magnitude prints each impact on its own line, matching the Nature of Incident sentences
+  (A2). The report PDF is not drawn in the mockup, so this is recorded in the notes.
+- The buttons now use the live components. The row's × is the `icon-button` with the Lucide x and
+  a red hover. Add impact is a full-height `btn` under the Severity column, and Clear markers is a
+  full-height `btn`. The Severity column widens so "Moderate to heavy" fits.
+
+**Closed.** A and J are settled. Still open: B–F, G2, H, I, K and L.
