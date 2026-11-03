@@ -1,0 +1,681 @@
+{
+  "checkedAtUtc": "2026-11-03T13:01:10.582308+00:00",
+  "result": {
+    "fail": [],
+    "okCount": 166
+  },
+  "shots": [
+    {
+      "shot": "001-none-read-today-1580.png",
+      "state": "none-read",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "001-none-read-today-1580-panel.png",
+      "state": "none-read",
+      "mode": "today",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "001-none-read-today-full.png",
+      "state": "none-read",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "001-none-read-today-1440.png",
+      "state": "none-read",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "001-none-read-today-1440-panel.png",
+      "state": "none-read",
+      "mode": "today",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "001-none-read-today-760.png",
+      "state": "none-read",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "001-none-read-today-760-panel.png",
+      "state": "none-read",
+      "mode": "today",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "002-none-read-proposal-1580.png",
+      "state": "none-read",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "002-none-read-proposal-1580-panel.png",
+      "state": "none-read",
+      "mode": "proposal",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "002-none-read-proposal-full.png",
+      "state": "none-read",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "002-none-read-proposal-1440.png",
+      "state": "none-read",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "002-none-read-proposal-1440-panel.png",
+      "state": "none-read",
+      "mode": "proposal",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "002-none-read-proposal-760.png",
+      "state": "none-read",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "002-none-read-proposal-760-panel.png",
+      "state": "none-read",
+      "mode": "proposal",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "003-none-edit-today-1580.png",
+      "state": "none-edit",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "003-none-edit-today-1580-panel.png",
+      "state": "none-edit",
+      "mode": "today",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "003-none-edit-today-full.png",
+      "state": "none-edit",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "003-none-edit-today-1440.png",
+      "state": "none-edit",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "003-none-edit-today-1440-panel.png",
+      "state": "none-edit",
+      "mode": "today",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "003-none-edit-today-760.png",
+      "state": "none-edit",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "003-none-edit-today-760-panel.png",
+      "state": "none-edit",
+      "mode": "today",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "004-none-edit-proposal-1580.png",
+      "state": "none-edit",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "004-none-edit-proposal-1580-panel.png",
+      "state": "none-edit",
+      "mode": "proposal",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "004-none-edit-proposal-full.png",
+      "state": "none-edit",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "004-none-edit-proposal-1440.png",
+      "state": "none-edit",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "004-none-edit-proposal-1440-panel.png",
+      "state": "none-edit",
+      "mode": "proposal",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "004-none-edit-proposal-760.png",
+      "state": "none-edit",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "004-none-edit-proposal-760-panel.png",
+      "state": "none-edit",
+      "mode": "proposal",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "005-skipped-read-today-1580.png",
+      "state": "skipped-read",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "005-skipped-read-today-1580-panel.png",
+      "state": "skipped-read",
+      "mode": "today",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "005-skipped-read-today-full.png",
+      "state": "skipped-read",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "005-skipped-read-today-1440.png",
+      "state": "skipped-read",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "005-skipped-read-today-1440-panel.png",
+      "state": "skipped-read",
+      "mode": "today",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "005-skipped-read-today-760.png",
+      "state": "skipped-read",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "005-skipped-read-today-760-panel.png",
+      "state": "skipped-read",
+      "mode": "today",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "006-skipped-read-proposal-1580.png",
+      "state": "skipped-read",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "006-skipped-read-proposal-1580-panel.png",
+      "state": "skipped-read",
+      "mode": "proposal",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "006-skipped-read-proposal-full.png",
+      "state": "skipped-read",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "006-skipped-read-proposal-1440.png",
+      "state": "skipped-read",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "006-skipped-read-proposal-1440-panel.png",
+      "state": "skipped-read",
+      "mode": "proposal",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "006-skipped-read-proposal-760.png",
+      "state": "skipped-read",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "006-skipped-read-proposal-760-panel.png",
+      "state": "skipped-read",
+      "mode": "proposal",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "007-skipped-edit-today-1580.png",
+      "state": "skipped-edit",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "007-skipped-edit-today-1580-panel.png",
+      "state": "skipped-edit",
+      "mode": "today",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "007-skipped-edit-today-full.png",
+      "state": "skipped-edit",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "007-skipped-edit-today-1440.png",
+      "state": "skipped-edit",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "007-skipped-edit-today-1440-panel.png",
+      "state": "skipped-edit",
+      "mode": "today",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "007-skipped-edit-today-760.png",
+      "state": "skipped-edit",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "007-skipped-edit-today-760-panel.png",
+      "state": "skipped-edit",
+      "mode": "today",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "008-skipped-edit-proposal-1580.png",
+      "state": "skipped-edit",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "008-skipped-edit-proposal-1580-panel.png",
+      "state": "skipped-edit",
+      "mode": "proposal",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "008-skipped-edit-proposal-full.png",
+      "state": "skipped-edit",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "008-skipped-edit-proposal-1440.png",
+      "state": "skipped-edit",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "008-skipped-edit-proposal-1440-panel.png",
+      "state": "skipped-edit",
+      "mode": "proposal",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "008-skipped-edit-proposal-760.png",
+      "state": "skipped-edit",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "008-skipped-edit-proposal-760-panel.png",
+      "state": "skipped-edit",
+      "mode": "proposal",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "009-partial-read-today-1580.png",
+      "state": "partial-read",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "009-partial-read-today-1580-panel.png",
+      "state": "partial-read",
+      "mode": "today",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "009-partial-read-today-full.png",
+      "state": "partial-read",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "009-partial-read-today-1440.png",
+      "state": "partial-read",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "009-partial-read-today-1440-panel.png",
+      "state": "partial-read",
+      "mode": "today",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "009-partial-read-today-760.png",
+      "state": "partial-read",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "009-partial-read-today-760-panel.png",
+      "state": "partial-read",
+      "mode": "today",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "010-partial-read-proposal-1580.png",
+      "state": "partial-read",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "010-partial-read-proposal-1580-panel.png",
+      "state": "partial-read",
+      "mode": "proposal",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "010-partial-read-proposal-full.png",
+      "state": "partial-read",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "010-partial-read-proposal-1440.png",
+      "state": "partial-read",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "010-partial-read-proposal-1440-panel.png",
+      "state": "partial-read",
+      "mode": "proposal",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "010-partial-read-proposal-760.png",
+      "state": "partial-read",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "010-partial-read-proposal-760-panel.png",
+      "state": "partial-read",
+      "mode": "proposal",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "011-partial-edit-today-1580.png",
+      "state": "partial-edit",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "011-partial-edit-today-1580-panel.png",
+      "state": "partial-edit",
+      "mode": "today",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "011-partial-edit-today-full.png",
+      "state": "partial-edit",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "011-partial-edit-today-1440.png",
+      "state": "partial-edit",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "011-partial-edit-today-1440-panel.png",
+      "state": "partial-edit",
+      "mode": "today",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "011-partial-edit-today-760.png",
+      "state": "partial-edit",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "011-partial-edit-today-760-panel.png",
+      "state": "partial-edit",
+      "mode": "today",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "012-partial-edit-proposal-1580.png",
+      "state": "partial-edit",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "012-partial-edit-proposal-1580-panel.png",
+      "state": "partial-edit",
+      "mode": "proposal",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "012-partial-edit-proposal-full.png",
+      "state": "partial-edit",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "012-partial-edit-proposal-1440.png",
+      "state": "partial-edit",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "012-partial-edit-proposal-1440-panel.png",
+      "state": "partial-edit",
+      "mode": "proposal",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "012-partial-edit-proposal-760.png",
+      "state": "partial-edit",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "012-partial-edit-proposal-760-panel.png",
+      "state": "partial-edit",
+      "mode": "proposal",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "013-two-read-today-1580.png",
+      "state": "two-read",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "013-two-read-today-1580-panel.png",
+      "state": "two-read",
+      "mode": "today",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "013-two-read-today-full.png",
+      "state": "two-read",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "013-two-read-today-1440.png",
+      "state": "two-read",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "013-two-read-today-1440-panel.png",
+      "state": "two-read",
+      "mode": "today",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "013-two-read-today-760.png",
+      "state": "two-read",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "013-two-read-today-760-panel.png",
+      "state": "two-read",
+      "mode": "today",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "014-two-read-proposal-1580.png",
+      "state": "two-read",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "014-two-read-proposal-1580-panel.png",
+      "state": "two-read",
+      "mode": "proposal",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "014-two-read-proposal-full.png",
+      "state": "two-read",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "014-two-read-proposal-1440.png",
+      "state": "two-read",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "014-two-read-proposal-1440-panel.png",
+      "state": "two-read",
+      "mode": "proposal",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "014-two-read-proposal-760.png",
+      "state": "two-read",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "014-two-read-proposal-760-panel.png",
+      "state": "two-read",
+      "mode": "proposal",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "015-two-edit-today-1580.png",
+      "state": "two-edit",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "015-two-edit-today-1580-panel.png",
+      "state": "two-edit",
+      "mode": "today",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "015-two-edit-today-full.png",
+      "state": "two-edit",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "015-two-edit-today-1440.png",
+      "state": "two-edit",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "015-two-edit-today-1440-panel.png",
+      "state": "two-edit",
+      "mode": "today",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "015-two-edit-today-760.png",
+      "state": "two-edit",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "015-two-edit-today-760-panel.png",
+      "state": "two-edit",
+      "mode": "today",
+      "viewport": "760 panel crop"
+    },
+    {
+      "shot": "016-two-edit-proposal-1580.png",
+      "state": "two-edit",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "016-two-edit-proposal-1580-panel.png",
+      "state": "two-edit",
+      "mode": "proposal",
+      "viewport": "1580 panel crop"
+    },
+    {
+      "shot": "016-two-edit-proposal-full.png",
+      "state": "two-edit",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "016-two-edit-proposal-1440.png",
+      "state": "two-edit",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "016-two-edit-proposal-1440-panel.png",
+      "state": "two-edit",
+      "mode": "proposal",
+      "viewport": "1440 panel crop"
+    },
+    {
+      "shot": "016-two-edit-proposal-760.png",
+      "state": "two-edit",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "016-two-edit-proposal-760-panel.png",
+      "state": "two-edit",
+      "mode": "proposal",
+      "viewport": "760 panel crop"
+    }
+  ]
+}

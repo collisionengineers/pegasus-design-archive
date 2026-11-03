@@ -1,0 +1,1 @@
+Pegasus origin/dev 7231a4b375c46d2a00aa700bdf1dc2f80c3aa453 (2026-11-03) Merge pull request #1869 from collisionengineers/task/v46-impact-entry

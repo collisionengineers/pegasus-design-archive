@@ -1,0 +1,106 @@
+[
+  {
+    "key": "none-read",
+    "label": "Read \u00b7 no impact: Impacts outstanding (A)",
+    "group": "Case \u00b7 Damage",
+    "changes": [
+      {
+        "id": "C",
+        "summary": "While reading, Skip impacts is a static tick in the place the editable tick stands"
+      },
+      {
+        "id": "A",
+        "summary": "Readiness names Impacts until an impact is entered or Skip impacts is ticked (drawn by the application with the proposed rule)"
+      }
+    ]
+  },
+  {
+    "key": "none-edit",
+    "label": "Editing \u00b7 no impact: Skip impacts offered (A, B)",
+    "group": "Case \u00b7 Damage",
+    "changes": [
+      {
+        "id": "B",
+        "summary": "Skip impacts beside Add impact, offered only while no impact row exists; ticking it greys out Add impact, a row hides it, and clearing the last row offers it again"
+      },
+      {
+        "id": "A",
+        "summary": "Readiness names Impacts until an impact is entered or Skip impacts is ticked (drawn by the application with the proposed rule)"
+      }
+    ]
+  },
+  {
+    "key": "skipped-read",
+    "label": "Read \u00b7 Skip impacts ticked and saved (C)",
+    "group": "Case \u00b7 Damage",
+    "changes": [
+      {
+        "id": "C",
+        "summary": "While reading, Skip impacts is a static tick in the place the editable tick stands"
+      }
+    ]
+  },
+  {
+    "key": "skipped-edit",
+    "label": "Editing \u00b7 Skip impacts ticked and saved (B)",
+    "group": "Case \u00b7 Damage",
+    "changes": [
+      {
+        "id": "B",
+        "summary": "Skip impacts beside Add impact, offered only while no impact row exists; ticking it greys out Add impact, a row hides it, and clearing the last row offers it again"
+      }
+    ]
+  },
+  {
+    "key": "partial-read",
+    "label": "Read \u00b7 a row with no location: still outstanding (B)",
+    "group": "Case \u00b7 Damage",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "Readiness names Impacts until an impact is entered or Skip impacts is ticked (drawn by the application with the proposed rule)"
+      }
+    ]
+  },
+  {
+    "key": "partial-edit",
+    "label": "Editing \u00b7 a row with no location: no Skip impacts (B)",
+    "group": "Case \u00b7 Damage",
+    "changes": [
+      {
+        "id": "B",
+        "summary": "Skip impacts beside Add impact, offered only while no impact row exists; ticking it greys out Add impact, a row hides it, and clearing the last row offers it again"
+      },
+      {
+        "id": "A",
+        "summary": "Readiness names Impacts until an impact is entered or Skip impacts is ticked (drawn by the application with the proposed rule)"
+      }
+    ]
+  },
+  {
+    "key": "two-read",
+    "label": "Read \u00b7 two impacts: a space between the sentences (G)",
+    "group": "Case \u00b7 Damage",
+    "changes": [
+      {
+        "id": "G",
+        "summary": "The Incident narrative puts a line's space between its sentences"
+      }
+    ]
+  },
+  {
+    "key": "two-edit",
+    "label": "Editing \u00b7 two impacts: no Skip impacts, the narrative spaced (B, G)",
+    "group": "Case \u00b7 Damage",
+    "changes": [
+      {
+        "id": "B",
+        "summary": "Skip impacts beside Add impact, offered only while no impact row exists; ticking it greys out Add impact, a row hides it, and clearing the last row offers it again"
+      },
+      {
+        "id": "G",
+        "summary": "The Incident narrative puts a line's space between its sentences"
+      }
+    ]
+  }
+]

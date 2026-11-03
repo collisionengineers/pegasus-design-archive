@@ -1,0 +1,7 @@
+Test run for C:\Users\Alex\Documents\GitHub\pegasus-worktrees\v47-capture\tests\Pegasus.IntegrationTests\bin\Debug\net10.0\Pegasus.IntegrationTests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+Passed!  - Failed:     0, Passed:     6, Skipped:     0, Total:     6, Duration: 54 s - Pegasus.IntegrationTests.dll (net10.0)
+--- MOCKUP_V47_RULE=1 ---
+Test run for C:\Users\Alex\Documents\GitHub\pegasus-worktrees\v47-capture\tests\Pegasus.IntegrationTests\bin\Debug\net10.0\Pegasus.IntegrationTests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+Passed!  - Failed:     0, Passed:     4, Skipped:     0, Total:     4, Duration: 46 s - Pegasus.IntegrationTests.dll (net10.0)
