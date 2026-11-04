@@ -48,9 +48,14 @@ rulings at Stage 2.
   draws it, none for a typed value; money as the aside draws it (L).
 - **D15.** Below 1441px the card is one more cell of the two-up strip; no new breakpoint (M).
 
-Open: whether a renamed file's name persists for the next send of the same report.
-Open: the subject's maximum length (the Triage composer's 500 is drawn).
-Open: a name for the card other than the existing label "Original report" (J).
+## Decided, 4 November 2026
+
+The operator settled A–O as drawn ("Yes, as drawn") and the three open points: the
+Subject is bounded at 500 as the Triage composer's is; filed estimates are not renameable
+(Rename on the generation's own documents only, a filed estimate row has no Rename); a
+rename holds for that send only, the next send starting from the policy name again. The
+heading stays "Original report". Rulings R659–R666 (provisional) in Pegasus
+`docs/rulings.md`; implemented on `task/v48-send-dialog-original-report` (PR #1903).
 
 ## Where this lands
 

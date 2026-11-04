@@ -1,6 +1,9 @@
 # v48: the Send report dialog and the Original report card
 
-**Stage 1, awaiting the operator's sign-off.** Nothing here is implemented.
+**Approved 4 November 2026 ("Yes, as drawn", items A–O); Stage 2 in progress** on Pegasus
+`task/v48-send-dialog-original-report` (PR #1903). Current behaviour is owned by the FRDs
+(FRD-11, FRD-16, FRD-21, FRD-10) and rulings R659–R666 once that PR lands; this folder is then
+historical reference. Conformance evidence lands in `conformance/` when CI is green.
 
 - Created at the operator's request on 4 November 2026: "Send report moves to a dialogue box
   with a composer (files clickable to preview, files renameable)" and "an additional box on
@@ -55,7 +58,7 @@ Query string: `?state=<key>&mode=today|proposal&diff=1&dialog=send-report&viewer
 | `pegasus_v48.html` | The interactive mockup: 14 states, Today and Proposal. It is built, so do not edit it by hand |
 | `notes/v48-notes.md` | Change table, live rules mirrored, frame numbers, coverage audit and departures, sign-off items A–O, self-check record, known limits |
 | `notes/discussion-log.md` | The operator's brief, the three planning questions and answers, and the note on removable recipients, 4 November 2026 |
-| `notes/stage-2-plan.md` | The Stage 2 implementation plan, written during Stage 1. Not started |
+| `notes/stage-2-plan.md` | The Stage 2 implementation plan, written during Stage 1; delivered by PR #1903 |
 | `notes/capture-run-2026-11-04.log` | Result of the `ZzMockupCaptureCase.CaptureV48*` run against `8da7957ce` |
 | `pages/` | The Case page folder: how it works today, how it should work, the dialog, the panel and the states |
 | `captured-live/case/` | The server-rendered pages the mockup is built over, each with its `.facts.json` fixture facts |
@@ -82,4 +85,5 @@ applied; they are never committed.
   while editing.
 - The operator's note during the build, "extra recipients/cc box isn't removable - adjust",
   is item O: each extra To or Cc box has its ×.
-- Items A–O await sign-off.
+- Items A–O were settled as drawn on 4 November 2026, with Subject bounded at 500, filed
+  estimates not renameable and no rename memory (Stage 2 questions, see the discussion log).

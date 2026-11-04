@@ -63,3 +63,19 @@ with no way back):
 recipient add a box with its ×; the one remaining To box keeps none, since a send needs a To.
 
 **Raised.** Item O.
+
+## Round 2: Stage 2 questions, 4 November 2026
+
+**Operator:** "Plan out full integration of this".
+
+**Questions and answers** (the recommended option first in each).
+
+| Question | Operator's answer |
+| --- | --- |
+| Stage 2 begins only once items A–O are settled. Do the mockup's defaults stand as the settlement of A–O (Send report from the head and the Next action step while editing; the 880px composer with Files below the recipients; Subject editable and prefilled; Files rows with the filed estimates listed; every generation document renameable; the viewer over the dialog; the inline form and the greyed read cells removed; the Original report card after Figures headed "Original report", pence and the guide word in brackets, no new breakpoint; a refused send reopens the dialog and the Already sent line sits under the preview card; every To/Cc box after the first To removable)? | "Yes, as drawn (Recommended)" |
+| The Subject field's maximum length: the Triage composer's 500, or the mail command's 998? | "500, as the Triage composer (Recommended)" |
+| The mockup draws Rename on every Files row, the filed estimates included, but a filed estimate row posts nothing. Should filed estimates be renameable? | "No, generation documents only (Recommended)" |
+| Should a renamed file's name be remembered for the next send of the same report, or does each send start from the policy name? | "Each send starts fresh (Recommended)" |
+
+**Recorded** as rulings R659–R666 (provisional, renumbered at combine) in Pegasus
+`docs/rulings.md` on `task/v48-send-dialog-original-report` (PR #1903).
