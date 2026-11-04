@@ -1,0 +1,488 @@
+[
+  {
+    "key": "plain-edit",
+    "label": "Editing \u00b7 Send report in the Report head; the form leaves the section (A, G)",
+    "group": "Case \u00b7 Report send",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "Send report is the Report head's primary while editing; it opens the dialog"
+      },
+      {
+        "id": "O",
+        "summary": "Every To or Cc box can be removed with its \u00d7; the one remaining To box stays"
+      },
+      {
+        "id": "C",
+        "summary": "Subject is a field of the composer, prefilled with the subject the send derives today"
+      },
+      {
+        "id": "D",
+        "summary": "Files: one row per attachment, the name opens it in the viewer, the live include tick, Rename"
+      },
+      {
+        "id": "B",
+        "summary": "The delivery form is a composer dialog in the Triage composer's shape, 880px wide"
+      },
+      {
+        "id": "E",
+        "summary": "Every attachment can be renamed: the stem is edited, .pdf stays, Reset restores the policy name"
+      },
+      {
+        "id": "F",
+        "summary": "A file's name opens it in the Case viewer over the dialog"
+      },
+      {
+        "id": "G",
+        "summary": "The Report section keeps the preview card; the inline form and the greyed read cells go"
+      }
+    ]
+  },
+  {
+    "key": "plain-dialog",
+    "label": "Send report dialog: From, To, Cc, Subject, Message, Files (B, C, D)",
+    "group": "Case \u00b7 Report send",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "Send report is the Report head's primary while editing; it opens the dialog"
+      },
+      {
+        "id": "O",
+        "summary": "Every To or Cc box can be removed with its \u00d7; the one remaining To box stays"
+      },
+      {
+        "id": "C",
+        "summary": "Subject is a field of the composer, prefilled with the subject the send derives today"
+      },
+      {
+        "id": "D",
+        "summary": "Files: one row per attachment, the name opens it in the viewer, the live include tick, Rename"
+      },
+      {
+        "id": "B",
+        "summary": "The delivery form is a composer dialog in the Triage composer's shape, 880px wide"
+      },
+      {
+        "id": "E",
+        "summary": "Every attachment can be renamed: the stem is edited, .pdf stays, Reset restores the policy name"
+      },
+      {
+        "id": "F",
+        "summary": "A file's name opens it in the Case viewer over the dialog"
+      },
+      {
+        "id": "G",
+        "summary": "The Report section keeps the preview card; the inline form and the greyed read cells go"
+      }
+    ]
+  },
+  {
+    "key": "plain-viewer",
+    "label": "A file opened in the Case viewer over the dialog (F)",
+    "group": "Case \u00b7 Report send",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "Send report is the Report head's primary while editing; it opens the dialog"
+      },
+      {
+        "id": "O",
+        "summary": "Every To or Cc box can be removed with its \u00d7; the one remaining To box stays"
+      },
+      {
+        "id": "C",
+        "summary": "Subject is a field of the composer, prefilled with the subject the send derives today"
+      },
+      {
+        "id": "D",
+        "summary": "Files: one row per attachment, the name opens it in the viewer, the live include tick, Rename"
+      },
+      {
+        "id": "B",
+        "summary": "The delivery form is a composer dialog in the Triage composer's shape, 880px wide"
+      },
+      {
+        "id": "E",
+        "summary": "Every attachment can be renamed: the stem is edited, .pdf stays, Reset restores the policy name"
+      },
+      {
+        "id": "F",
+        "summary": "A file's name opens it in the Case viewer over the dialog"
+      },
+      {
+        "id": "G",
+        "summary": "The Report section keeps the preview card; the inline form and the greyed read cells go"
+      }
+    ]
+  },
+  {
+    "key": "plain-rename",
+    "label": "Renaming the report: the stem, .pdf fixed, Reset (E)",
+    "group": "Case \u00b7 Report send",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "Send report is the Report head's primary while editing; it opens the dialog"
+      },
+      {
+        "id": "O",
+        "summary": "Every To or Cc box can be removed with its \u00d7; the one remaining To box stays"
+      },
+      {
+        "id": "C",
+        "summary": "Subject is a field of the composer, prefilled with the subject the send derives today"
+      },
+      {
+        "id": "D",
+        "summary": "Files: one row per attachment, the name opens it in the viewer, the live include tick, Rename"
+      },
+      {
+        "id": "B",
+        "summary": "The delivery form is a composer dialog in the Triage composer's shape, 880px wide"
+      },
+      {
+        "id": "E",
+        "summary": "Every attachment can be renamed: the stem is edited, .pdf stays, Reset restores the policy name"
+      },
+      {
+        "id": "F",
+        "summary": "A file's name opens it in the Case viewer over the dialog"
+      },
+      {
+        "id": "G",
+        "summary": "The Report section keeps the preview card; the inline form and the greyed read cells go"
+      }
+    ]
+  },
+  {
+    "key": "plain-read",
+    "label": "Reading \u00b7 no Send report control, no greyed cells (G, H)",
+    "group": "Case \u00b7 Report send",
+    "changes": [
+      {
+        "id": "G",
+        "summary": "The Report section keeps the preview card; the inline form and the greyed read cells go"
+      }
+    ]
+  },
+  {
+    "key": "rules-dialog",
+    "label": "Principal rules: Questions, Cc hint, After sending, Holds (D)",
+    "group": "Case \u00b7 Report send",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "Send report is the Report head's primary while editing; it opens the dialog"
+      },
+      {
+        "id": "O",
+        "summary": "Every To or Cc box can be removed with its \u00d7; the one remaining To box stays"
+      },
+      {
+        "id": "C",
+        "summary": "Subject is a field of the composer, prefilled with the subject the send derives today"
+      },
+      {
+        "id": "D",
+        "summary": "Files: one row per attachment, the name opens it in the viewer, the live include tick, Rename"
+      },
+      {
+        "id": "B",
+        "summary": "The delivery form is a composer dialog in the Triage composer's shape, 880px wide"
+      },
+      {
+        "id": "E",
+        "summary": "Every attachment can be renamed: the stem is edited, .pdf stays, Reset restores the policy name"
+      },
+      {
+        "id": "F",
+        "summary": "A file's name opens it in the Case viewer over the dialog"
+      },
+      {
+        "id": "G",
+        "summary": "The Report section keeps the preview card; the inline form and the greyed read cells go"
+      }
+    ]
+  },
+  {
+    "key": "stop-dialog",
+    "label": "A Stop with its Override reason; the filed estimate in Files (D)",
+    "group": "Case \u00b7 Report send",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "Send report is the Report head's primary while editing; it opens the dialog"
+      },
+      {
+        "id": "O",
+        "summary": "Every To or Cc box can be removed with its \u00d7; the one remaining To box stays"
+      },
+      {
+        "id": "C",
+        "summary": "Subject is a field of the composer, prefilled with the subject the send derives today"
+      },
+      {
+        "id": "D",
+        "summary": "Files: one row per attachment, the name opens it in the viewer, the live include tick, Rename"
+      },
+      {
+        "id": "B",
+        "summary": "The delivery form is a composer dialog in the Triage composer's shape, 880px wide"
+      },
+      {
+        "id": "E",
+        "summary": "Every attachment can be renamed: the stem is edited, .pdf stays, Reset restores the policy name"
+      },
+      {
+        "id": "F",
+        "summary": "A file's name opens it in the Case viewer over the dialog"
+      },
+      {
+        "id": "G",
+        "summary": "The Report section keeps the preview card; the inline form and the greyed read cells go"
+      }
+    ]
+  },
+  {
+    "key": "missing-dialog",
+    "label": "Missing companion: the notice, Cancel only (D)",
+    "group": "Case \u00b7 Report send",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "Send report is the Report head's primary while editing; it opens the dialog"
+      },
+      {
+        "id": "O",
+        "summary": "Every To or Cc box can be removed with its \u00d7; the one remaining To box stays"
+      },
+      {
+        "id": "C",
+        "summary": "Subject is a field of the composer, prefilled with the subject the send derives today"
+      },
+      {
+        "id": "D",
+        "summary": "Files: one row per attachment, the name opens it in the viewer, the live include tick, Rename"
+      },
+      {
+        "id": "B",
+        "summary": "The delivery form is a composer dialog in the Triage composer's shape, 880px wide"
+      },
+      {
+        "id": "E",
+        "summary": "Every attachment can be renamed: the stem is edited, .pdf stays, Reset restores the policy name"
+      },
+      {
+        "id": "F",
+        "summary": "A file's name opens it in the Case viewer over the dialog"
+      },
+      {
+        "id": "G",
+        "summary": "The Report section keeps the preview card; the inline form and the greyed read cells go"
+      }
+    ]
+  },
+  {
+    "key": "resend-dialog",
+    "label": "Already sent: the line and the resend name (E, G)",
+    "group": "Case \u00b7 Report send",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "Send report is the Report head's primary while editing; it opens the dialog"
+      },
+      {
+        "id": "O",
+        "summary": "Every To or Cc box can be removed with its \u00d7; the one remaining To box stays"
+      },
+      {
+        "id": "C",
+        "summary": "Subject is a field of the composer, prefilled with the subject the send derives today"
+      },
+      {
+        "id": "D",
+        "summary": "Files: one row per attachment, the name opens it in the viewer, the live include tick, Rename"
+      },
+      {
+        "id": "B",
+        "summary": "The delivery form is a composer dialog in the Triage composer's shape, 880px wide"
+      },
+      {
+        "id": "E",
+        "summary": "Every attachment can be renamed: the stem is edited, .pdf stays, Reset restores the policy name"
+      },
+      {
+        "id": "F",
+        "summary": "A file's name opens it in the Case viewer over the dialog"
+      },
+      {
+        "id": "G",
+        "summary": "The Report section keeps the preview card; the inline form and the greyed read cells go"
+      },
+      {
+        "id": "N",
+        "summary": "A report already sent says so under the preview card as well as in the dialog"
+      }
+    ]
+  },
+  {
+    "key": "audit-edit",
+    "label": "Audit view \u00b7 editing: the Original report card after Figures (I\u2013M)",
+    "group": "Case \u00b7 Inspection + Audit",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "Send report is the Report head's primary while editing; it opens the dialog"
+      },
+      {
+        "id": "O",
+        "summary": "Every To or Cc box can be removed with its \u00d7; the one remaining To box stays"
+      },
+      {
+        "id": "C",
+        "summary": "Subject is a field of the composer, prefilled with the subject the send derives today"
+      },
+      {
+        "id": "D",
+        "summary": "Files: one row per attachment, the name opens it in the viewer, the live include tick, Rename"
+      },
+      {
+        "id": "B",
+        "summary": "The delivery form is a composer dialog in the Triage composer's shape, 880px wide"
+      },
+      {
+        "id": "E",
+        "summary": "Every attachment can be renamed: the stem is edited, .pdf stays, Reset restores the policy name"
+      },
+      {
+        "id": "F",
+        "summary": "A file's name opens it in the Case viewer over the dialog"
+      },
+      {
+        "id": "G",
+        "summary": "The Report section keeps the preview card; the inline form and the greyed read cells go"
+      },
+      {
+        "id": "I",
+        "summary": "Original report: the Inspection report's figures, after Figures, in the Audit view only"
+      },
+      {
+        "id": "K",
+        "summary": "The card reads the Inspection report as generated; every figure is \u2014 until one exists"
+      },
+      {
+        "id": "L",
+        "summary": "Repair cost inc VAT, Salvage value on a Total loss, Engineer's Value with the guide's word in brackets"
+      }
+    ]
+  },
+  {
+    "key": "audit-dialog",
+    "label": "Audit send: the Inspection report and its documents in Files (D)",
+    "group": "Case \u00b7 Inspection + Audit",
+    "changes": [
+      {
+        "id": "A",
+        "summary": "Send report is the Report head's primary while editing; it opens the dialog"
+      },
+      {
+        "id": "O",
+        "summary": "Every To or Cc box can be removed with its \u00d7; the one remaining To box stays"
+      },
+      {
+        "id": "C",
+        "summary": "Subject is a field of the composer, prefilled with the subject the send derives today"
+      },
+      {
+        "id": "D",
+        "summary": "Files: one row per attachment, the name opens it in the viewer, the live include tick, Rename"
+      },
+      {
+        "id": "B",
+        "summary": "The delivery form is a composer dialog in the Triage composer's shape, 880px wide"
+      },
+      {
+        "id": "E",
+        "summary": "Every attachment can be renamed: the stem is edited, .pdf stays, Reset restores the policy name"
+      },
+      {
+        "id": "F",
+        "summary": "A file's name opens it in the Case viewer over the dialog"
+      },
+      {
+        "id": "G",
+        "summary": "The Report section keeps the preview card; the inline form and the greyed read cells go"
+      },
+      {
+        "id": "I",
+        "summary": "Original report: the Inspection report's figures, after Figures, in the Audit view only"
+      },
+      {
+        "id": "K",
+        "summary": "The card reads the Inspection report as generated; every figure is \u2014 until one exists"
+      },
+      {
+        "id": "L",
+        "summary": "Repair cost inc VAT, Salvage value on a Total loss, Engineer's Value with the guide's word in brackets"
+      }
+    ]
+  },
+  {
+    "key": "audit-read",
+    "label": "Audit view \u00b7 reading: the card (I\u2013M)",
+    "group": "Case \u00b7 Inspection + Audit",
+    "changes": [
+      {
+        "id": "G",
+        "summary": "The Report section keeps the preview card; the inline form and the greyed read cells go"
+      },
+      {
+        "id": "I",
+        "summary": "Original report: the Inspection report's figures, after Figures, in the Audit view only"
+      },
+      {
+        "id": "K",
+        "summary": "The card reads the Inspection report as generated; every figure is \u2014 until one exists"
+      },
+      {
+        "id": "L",
+        "summary": "Repair cost inc VAT, Salvage value on a Total loss, Engineer's Value with the guide's word in brackets"
+      }
+    ]
+  },
+  {
+    "key": "audit-repairable",
+    "label": "Audit view \u00b7 the Inspection was Repairable: no Salvage value row (L)",
+    "group": "Case \u00b7 Inspection + Audit",
+    "changes": [
+      {
+        "id": "G",
+        "summary": "The Report section keeps the preview card; the inline form and the greyed read cells go"
+      },
+      {
+        "id": "I",
+        "summary": "Original report: the Inspection report's figures, after Figures, in the Audit view only"
+      },
+      {
+        "id": "K",
+        "summary": "The card reads the Inspection report as generated; every figure is \u2014 until one exists"
+      },
+      {
+        "id": "L",
+        "summary": "Repair cost inc VAT, Salvage value on a Total loss, Engineer's Value with the guide's word in brackets"
+      }
+    ]
+  },
+  {
+    "key": "audit-inspection",
+    "label": "Inspection view \u00b7 no card (I)",
+    "group": "Case \u00b7 Inspection + Audit",
+    "changes": [
+      {
+        "id": "I",
+        "summary": "Original report: the Inspection report's figures, after Figures, in the Audit view only"
+      }
+    ]
+  }
+]

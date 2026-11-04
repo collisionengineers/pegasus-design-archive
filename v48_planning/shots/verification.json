@@ -1,0 +1,909 @@
+{
+  "checkedAtUtc": "2026-11-04T13:57:38.926975+00:00",
+  "result": {
+    "fail": [],
+    "okCount": 416
+  },
+  "shots": [
+    {
+      "shot": "001-plain-edit-today-1580.png",
+      "state": "plain-edit",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "001-plain-edit-today-1580-panel.png",
+      "state": "plain-edit",
+      "mode": "today",
+      "viewport": "1580 crop of #section-report"
+    },
+    {
+      "shot": "001-plain-edit-today-full.png",
+      "state": "plain-edit",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "001-plain-edit-today-1440.png",
+      "state": "plain-edit",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "001-plain-edit-today-1440-panel.png",
+      "state": "plain-edit",
+      "mode": "today",
+      "viewport": "1440 crop of #section-report"
+    },
+    {
+      "shot": "001-plain-edit-today-760.png",
+      "state": "plain-edit",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "001-plain-edit-today-760-panel.png",
+      "state": "plain-edit",
+      "mode": "today",
+      "viewport": "760 crop of #section-report"
+    },
+    {
+      "shot": "002-plain-edit-proposal-1580.png",
+      "state": "plain-edit",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "002-plain-edit-proposal-1580-panel.png",
+      "state": "plain-edit",
+      "mode": "proposal",
+      "viewport": "1580 crop of #section-report"
+    },
+    {
+      "shot": "002-plain-edit-proposal-full.png",
+      "state": "plain-edit",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "002-plain-edit-proposal-1440.png",
+      "state": "plain-edit",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "002-plain-edit-proposal-1440-panel.png",
+      "state": "plain-edit",
+      "mode": "proposal",
+      "viewport": "1440 crop of #section-report"
+    },
+    {
+      "shot": "002-plain-edit-proposal-760.png",
+      "state": "plain-edit",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "002-plain-edit-proposal-760-panel.png",
+      "state": "plain-edit",
+      "mode": "proposal",
+      "viewport": "760 crop of #section-report"
+    },
+    {
+      "shot": "003-plain-dialog-today-1580.png",
+      "state": "plain-dialog",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "003-plain-dialog-today-1580-panel.png",
+      "state": "plain-dialog",
+      "mode": "today",
+      "viewport": "1580 crop of #section-report"
+    },
+    {
+      "shot": "003-plain-dialog-today-full.png",
+      "state": "plain-dialog",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "003-plain-dialog-today-1440.png",
+      "state": "plain-dialog",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "003-plain-dialog-today-1440-panel.png",
+      "state": "plain-dialog",
+      "mode": "today",
+      "viewport": "1440 crop of #section-report"
+    },
+    {
+      "shot": "003-plain-dialog-today-760.png",
+      "state": "plain-dialog",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "003-plain-dialog-today-760-panel.png",
+      "state": "plain-dialog",
+      "mode": "today",
+      "viewport": "760 crop of #section-report"
+    },
+    {
+      "shot": "004-plain-dialog-proposal-1580.png",
+      "state": "plain-dialog",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "004-plain-dialog-proposal-1580-dialog.png",
+      "state": "plain-dialog",
+      "mode": "proposal",
+      "viewport": "1580 dialog crop"
+    },
+    {
+      "shot": "004-plain-dialog-proposal-1580-dialog-full.png",
+      "state": "plain-dialog",
+      "mode": "proposal",
+      "viewport": "1580 whole dialog"
+    },
+    {
+      "shot": "004-plain-dialog-proposal-1440.png",
+      "state": "plain-dialog",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "004-plain-dialog-proposal-1440-dialog.png",
+      "state": "plain-dialog",
+      "mode": "proposal",
+      "viewport": "1440 dialog crop"
+    },
+    {
+      "shot": "004-plain-dialog-proposal-760.png",
+      "state": "plain-dialog",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "004-plain-dialog-proposal-760-dialog.png",
+      "state": "plain-dialog",
+      "mode": "proposal",
+      "viewport": "760 dialog crop"
+    },
+    {
+      "shot": "005-plain-viewer-proposal-1580.png",
+      "state": "plain-viewer",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "005-plain-viewer-proposal-1580-dialog.png",
+      "state": "plain-viewer",
+      "mode": "proposal",
+      "viewport": "1580 dialog crop"
+    },
+    {
+      "shot": "005-plain-viewer-proposal-1580-dialog-full.png",
+      "state": "plain-viewer",
+      "mode": "proposal",
+      "viewport": "1580 whole dialog"
+    },
+    {
+      "shot": "005-plain-viewer-proposal-1440.png",
+      "state": "plain-viewer",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "005-plain-viewer-proposal-1440-dialog.png",
+      "state": "plain-viewer",
+      "mode": "proposal",
+      "viewport": "1440 dialog crop"
+    },
+    {
+      "shot": "005-plain-viewer-proposal-760.png",
+      "state": "plain-viewer",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "005-plain-viewer-proposal-760-dialog.png",
+      "state": "plain-viewer",
+      "mode": "proposal",
+      "viewport": "760 dialog crop"
+    },
+    {
+      "shot": "006-plain-rename-proposal-1580.png",
+      "state": "plain-rename",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "006-plain-rename-proposal-1580-dialog.png",
+      "state": "plain-rename",
+      "mode": "proposal",
+      "viewport": "1580 dialog crop"
+    },
+    {
+      "shot": "006-plain-rename-proposal-1580-dialog-full.png",
+      "state": "plain-rename",
+      "mode": "proposal",
+      "viewport": "1580 whole dialog"
+    },
+    {
+      "shot": "006-plain-rename-proposal-1440.png",
+      "state": "plain-rename",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "006-plain-rename-proposal-1440-dialog.png",
+      "state": "plain-rename",
+      "mode": "proposal",
+      "viewport": "1440 dialog crop"
+    },
+    {
+      "shot": "006-plain-rename-proposal-760.png",
+      "state": "plain-rename",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "006-plain-rename-proposal-760-dialog.png",
+      "state": "plain-rename",
+      "mode": "proposal",
+      "viewport": "760 dialog crop"
+    },
+    {
+      "shot": "007-plain-read-today-1580.png",
+      "state": "plain-read",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "007-plain-read-today-1580-panel.png",
+      "state": "plain-read",
+      "mode": "today",
+      "viewport": "1580 crop of #section-report"
+    },
+    {
+      "shot": "007-plain-read-today-full.png",
+      "state": "plain-read",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "007-plain-read-today-1440.png",
+      "state": "plain-read",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "007-plain-read-today-1440-panel.png",
+      "state": "plain-read",
+      "mode": "today",
+      "viewport": "1440 crop of #section-report"
+    },
+    {
+      "shot": "007-plain-read-today-760.png",
+      "state": "plain-read",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "007-plain-read-today-760-panel.png",
+      "state": "plain-read",
+      "mode": "today",
+      "viewport": "760 crop of #section-report"
+    },
+    {
+      "shot": "008-plain-read-proposal-1580.png",
+      "state": "plain-read",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "008-plain-read-proposal-1580-panel.png",
+      "state": "plain-read",
+      "mode": "proposal",
+      "viewport": "1580 crop of #section-report"
+    },
+    {
+      "shot": "008-plain-read-proposal-full.png",
+      "state": "plain-read",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "008-plain-read-proposal-1440.png",
+      "state": "plain-read",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "008-plain-read-proposal-1440-panel.png",
+      "state": "plain-read",
+      "mode": "proposal",
+      "viewport": "1440 crop of #section-report"
+    },
+    {
+      "shot": "008-plain-read-proposal-760.png",
+      "state": "plain-read",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "008-plain-read-proposal-760-panel.png",
+      "state": "plain-read",
+      "mode": "proposal",
+      "viewport": "760 crop of #section-report"
+    },
+    {
+      "shot": "009-rules-dialog-proposal-1580.png",
+      "state": "rules-dialog",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "009-rules-dialog-proposal-1580-dialog.png",
+      "state": "rules-dialog",
+      "mode": "proposal",
+      "viewport": "1580 dialog crop"
+    },
+    {
+      "shot": "009-rules-dialog-proposal-1580-dialog-full.png",
+      "state": "rules-dialog",
+      "mode": "proposal",
+      "viewport": "1580 whole dialog"
+    },
+    {
+      "shot": "009-rules-dialog-proposal-1440.png",
+      "state": "rules-dialog",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "009-rules-dialog-proposal-1440-dialog.png",
+      "state": "rules-dialog",
+      "mode": "proposal",
+      "viewport": "1440 dialog crop"
+    },
+    {
+      "shot": "009-rules-dialog-proposal-760.png",
+      "state": "rules-dialog",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "009-rules-dialog-proposal-760-dialog.png",
+      "state": "rules-dialog",
+      "mode": "proposal",
+      "viewport": "760 dialog crop"
+    },
+    {
+      "shot": "010-stop-dialog-proposal-1580.png",
+      "state": "stop-dialog",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "010-stop-dialog-proposal-1580-dialog.png",
+      "state": "stop-dialog",
+      "mode": "proposal",
+      "viewport": "1580 dialog crop"
+    },
+    {
+      "shot": "010-stop-dialog-proposal-1580-dialog-full.png",
+      "state": "stop-dialog",
+      "mode": "proposal",
+      "viewport": "1580 whole dialog"
+    },
+    {
+      "shot": "010-stop-dialog-proposal-1440.png",
+      "state": "stop-dialog",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "010-stop-dialog-proposal-1440-dialog.png",
+      "state": "stop-dialog",
+      "mode": "proposal",
+      "viewport": "1440 dialog crop"
+    },
+    {
+      "shot": "010-stop-dialog-proposal-760.png",
+      "state": "stop-dialog",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "010-stop-dialog-proposal-760-dialog.png",
+      "state": "stop-dialog",
+      "mode": "proposal",
+      "viewport": "760 dialog crop"
+    },
+    {
+      "shot": "011-missing-dialog-proposal-1580.png",
+      "state": "missing-dialog",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "011-missing-dialog-proposal-1580-dialog.png",
+      "state": "missing-dialog",
+      "mode": "proposal",
+      "viewport": "1580 dialog crop"
+    },
+    {
+      "shot": "011-missing-dialog-proposal-1580-dialog-full.png",
+      "state": "missing-dialog",
+      "mode": "proposal",
+      "viewport": "1580 whole dialog"
+    },
+    {
+      "shot": "011-missing-dialog-proposal-1440.png",
+      "state": "missing-dialog",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "011-missing-dialog-proposal-1440-dialog.png",
+      "state": "missing-dialog",
+      "mode": "proposal",
+      "viewport": "1440 dialog crop"
+    },
+    {
+      "shot": "011-missing-dialog-proposal-760.png",
+      "state": "missing-dialog",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "011-missing-dialog-proposal-760-dialog.png",
+      "state": "missing-dialog",
+      "mode": "proposal",
+      "viewport": "760 dialog crop"
+    },
+    {
+      "shot": "012-resend-dialog-proposal-1580.png",
+      "state": "resend-dialog",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "012-resend-dialog-proposal-1580-dialog.png",
+      "state": "resend-dialog",
+      "mode": "proposal",
+      "viewport": "1580 dialog crop"
+    },
+    {
+      "shot": "012-resend-dialog-proposal-1580-dialog-full.png",
+      "state": "resend-dialog",
+      "mode": "proposal",
+      "viewport": "1580 whole dialog"
+    },
+    {
+      "shot": "012-resend-dialog-proposal-1440.png",
+      "state": "resend-dialog",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "012-resend-dialog-proposal-1440-dialog.png",
+      "state": "resend-dialog",
+      "mode": "proposal",
+      "viewport": "1440 dialog crop"
+    },
+    {
+      "shot": "012-resend-dialog-proposal-760.png",
+      "state": "resend-dialog",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "012-resend-dialog-proposal-760-dialog.png",
+      "state": "resend-dialog",
+      "mode": "proposal",
+      "viewport": "760 dialog crop"
+    },
+    {
+      "shot": "013-audit-edit-today-1580.png",
+      "state": "audit-edit",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "013-audit-edit-today-1580-card.png",
+      "state": "audit-edit",
+      "mode": "today",
+      "viewport": "1580 crop of [data-case-aside] [data-figures]"
+    },
+    {
+      "shot": "013-audit-edit-today-full.png",
+      "state": "audit-edit",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "013-audit-edit-today-1440.png",
+      "state": "audit-edit",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "013-audit-edit-today-1440-card.png",
+      "state": "audit-edit",
+      "mode": "today",
+      "viewport": "1440 crop of [data-case-aside] [data-figures]"
+    },
+    {
+      "shot": "013-audit-edit-today-760.png",
+      "state": "audit-edit",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "013-audit-edit-today-760-card.png",
+      "state": "audit-edit",
+      "mode": "today",
+      "viewport": "760 crop of [data-case-aside] [data-figures]"
+    },
+    {
+      "shot": "014-audit-edit-proposal-1580.png",
+      "state": "audit-edit",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "014-audit-edit-proposal-1580-card.png",
+      "state": "audit-edit",
+      "mode": "proposal",
+      "viewport": "1580 crop of [data-v48-original-report]"
+    },
+    {
+      "shot": "014-audit-edit-proposal-full.png",
+      "state": "audit-edit",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "014-audit-edit-proposal-1440.png",
+      "state": "audit-edit",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "014-audit-edit-proposal-1440-card.png",
+      "state": "audit-edit",
+      "mode": "proposal",
+      "viewport": "1440 crop of [data-v48-original-report]"
+    },
+    {
+      "shot": "014-audit-edit-proposal-760.png",
+      "state": "audit-edit",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "014-audit-edit-proposal-760-card.png",
+      "state": "audit-edit",
+      "mode": "proposal",
+      "viewport": "760 crop of [data-v48-original-report]"
+    },
+    {
+      "shot": "015-audit-dialog-proposal-1580.png",
+      "state": "audit-dialog",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "015-audit-dialog-proposal-1580-dialog.png",
+      "state": "audit-dialog",
+      "mode": "proposal",
+      "viewport": "1580 dialog crop"
+    },
+    {
+      "shot": "015-audit-dialog-proposal-1580-dialog-full.png",
+      "state": "audit-dialog",
+      "mode": "proposal",
+      "viewport": "1580 whole dialog"
+    },
+    {
+      "shot": "015-audit-dialog-proposal-1440.png",
+      "state": "audit-dialog",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "015-audit-dialog-proposal-1440-dialog.png",
+      "state": "audit-dialog",
+      "mode": "proposal",
+      "viewport": "1440 dialog crop"
+    },
+    {
+      "shot": "015-audit-dialog-proposal-760.png",
+      "state": "audit-dialog",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "015-audit-dialog-proposal-760-dialog.png",
+      "state": "audit-dialog",
+      "mode": "proposal",
+      "viewport": "760 dialog crop"
+    },
+    {
+      "shot": "016-audit-read-today-1580.png",
+      "state": "audit-read",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "016-audit-read-today-1580-card.png",
+      "state": "audit-read",
+      "mode": "today",
+      "viewport": "1580 crop of [data-case-aside] [data-figures]"
+    },
+    {
+      "shot": "016-audit-read-today-full.png",
+      "state": "audit-read",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "016-audit-read-today-1440.png",
+      "state": "audit-read",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "016-audit-read-today-1440-card.png",
+      "state": "audit-read",
+      "mode": "today",
+      "viewport": "1440 crop of [data-case-aside] [data-figures]"
+    },
+    {
+      "shot": "016-audit-read-today-760.png",
+      "state": "audit-read",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "016-audit-read-today-760-card.png",
+      "state": "audit-read",
+      "mode": "today",
+      "viewport": "760 crop of [data-case-aside] [data-figures]"
+    },
+    {
+      "shot": "017-audit-read-proposal-1580.png",
+      "state": "audit-read",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "017-audit-read-proposal-1580-card.png",
+      "state": "audit-read",
+      "mode": "proposal",
+      "viewport": "1580 crop of [data-v48-original-report]"
+    },
+    {
+      "shot": "017-audit-read-proposal-full.png",
+      "state": "audit-read",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "017-audit-read-proposal-1440.png",
+      "state": "audit-read",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "017-audit-read-proposal-1440-card.png",
+      "state": "audit-read",
+      "mode": "proposal",
+      "viewport": "1440 crop of [data-v48-original-report]"
+    },
+    {
+      "shot": "017-audit-read-proposal-760.png",
+      "state": "audit-read",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "017-audit-read-proposal-760-card.png",
+      "state": "audit-read",
+      "mode": "proposal",
+      "viewport": "760 crop of [data-v48-original-report]"
+    },
+    {
+      "shot": "018-audit-repairable-today-1580.png",
+      "state": "audit-repairable",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "018-audit-repairable-today-1580-card.png",
+      "state": "audit-repairable",
+      "mode": "today",
+      "viewport": "1580 crop of [data-case-aside] [data-figures]"
+    },
+    {
+      "shot": "018-audit-repairable-today-full.png",
+      "state": "audit-repairable",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "018-audit-repairable-today-1440.png",
+      "state": "audit-repairable",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "018-audit-repairable-today-1440-card.png",
+      "state": "audit-repairable",
+      "mode": "today",
+      "viewport": "1440 crop of [data-case-aside] [data-figures]"
+    },
+    {
+      "shot": "018-audit-repairable-today-760.png",
+      "state": "audit-repairable",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "018-audit-repairable-today-760-card.png",
+      "state": "audit-repairable",
+      "mode": "today",
+      "viewport": "760 crop of [data-case-aside] [data-figures]"
+    },
+    {
+      "shot": "019-audit-repairable-proposal-1580.png",
+      "state": "audit-repairable",
+      "mode": "proposal",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "019-audit-repairable-proposal-1580-card.png",
+      "state": "audit-repairable",
+      "mode": "proposal",
+      "viewport": "1580 crop of [data-v48-original-report]"
+    },
+    {
+      "shot": "019-audit-repairable-proposal-full.png",
+      "state": "audit-repairable",
+      "mode": "proposal",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "019-audit-repairable-proposal-1440.png",
+      "state": "audit-repairable",
+      "mode": "proposal",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "019-audit-repairable-proposal-1440-card.png",
+      "state": "audit-repairable",
+      "mode": "proposal",
+      "viewport": "1440 crop of [data-v48-original-report]"
+    },
+    {
+      "shot": "019-audit-repairable-proposal-760.png",
+      "state": "audit-repairable",
+      "mode": "proposal",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "019-audit-repairable-proposal-760-card.png",
+      "state": "audit-repairable",
+      "mode": "proposal",
+      "viewport": "760 crop of [data-v48-original-report]"
+    },
+    {
+      "shot": "020-audit-inspection-today-1580.png",
+      "state": "audit-inspection",
+      "mode": "today",
+      "viewport": "1580x1000"
+    },
+    {
+      "shot": "020-audit-inspection-today-1580-panel.png",
+      "state": "audit-inspection",
+      "mode": "today",
+      "viewport": "1580 crop of [data-figures]"
+    },
+    {
+      "shot": "020-audit-inspection-today-full.png",
+      "state": "audit-inspection",
+      "mode": "today",
+      "viewport": "1580 whole page"
+    },
+    {
+      "shot": "020-audit-inspection-today-1440.png",
+      "state": "audit-inspection",
+      "mode": "today",
+      "viewport": "1440x900"
+    },
+    {
+      "shot": "020-audit-inspection-today-1440-panel.png",
+      "state": "audit-inspection",
+      "mode": "today",
+      "viewport": "1440 crop of [data-figures]"
+    },
+    {
+      "shot": "020-audit-inspection-today-760.png",
+      "state": "audit-inspection",
+      "mode": "today",
+      "viewport": "760x1000"
+    },
+    {
+      "shot": "020-audit-inspection-today-760-panel.png",
+      "state": "audit-inspection",
+      "mode": "today",
+      "viewport": "760 crop of [data-figures]"
+    },
+    {
+      "shot": "021-plain-dialog-proposal-1580-opt-width-1100.png",
+      "state": "plain-dialog",
+      "mode": "proposal",
+      "viewport": "1580x1000, opt=width:1100"
+    },
+    {
+      "shot": "021-plain-dialog-proposal-1580-opt-width-1100-crop.png",
+      "state": "plain-dialog",
+      "mode": "proposal",
+      "viewport": "1580 crop, opt=width:1100"
+    },
+    {
+      "shot": "022-plain-dialog-proposal-1580-opt-files-beside.png",
+      "state": "plain-dialog",
+      "mode": "proposal",
+      "viewport": "1580x1000, opt=files:beside"
+    },
+    {
+      "shot": "022-plain-dialog-proposal-1580-opt-files-beside-crop.png",
+      "state": "plain-dialog",
+      "mode": "proposal",
+      "viewport": "1580 crop, opt=files:beside"
+    },
+    {
+      "shot": "023-plain-dialog-proposal-1580-opt-width-1100-files-beside.png",
+      "state": "plain-dialog",
+      "mode": "proposal",
+      "viewport": "1580x1000, opt=width:1100,files:beside"
+    },
+    {
+      "shot": "023-plain-dialog-proposal-1580-opt-width-1100-files-beside-crop.png",
+      "state": "plain-dialog",
+      "mode": "proposal",
+      "viewport": "1580 crop, opt=width:1100,files:beside"
+    },
+    {
+      "shot": "024-audit-read-proposal-1580-opt-card-before-figures.png",
+      "state": "audit-read",
+      "mode": "proposal",
+      "viewport": "1580x1000, opt=card:before-figures"
+    },
+    {
+      "shot": "024-audit-read-proposal-1580-opt-card-before-figures-crop.png",
+      "state": "audit-read",
+      "mode": "proposal",
+      "viewport": "1580 crop, opt=card:before-figures"
+    },
+    {
+      "shot": "025-audit-read-proposal-1580-opt-money-pounds.png",
+      "state": "audit-read",
+      "mode": "proposal",
+      "viewport": "1580x1000, opt=money:pounds"
+    },
+    {
+      "shot": "025-audit-read-proposal-1580-opt-money-pounds-crop.png",
+      "state": "audit-read",
+      "mode": "proposal",
+      "viewport": "1580 crop, opt=money:pounds"
+    }
+  ]
+}

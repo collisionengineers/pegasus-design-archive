@@ -1,0 +1,59 @@
+{
+  "subject": "Re: Claim for AB12CDE \u2014 rear impact",
+  "reference": "QDOS3100042",
+  "registration": "AB12CDE",
+  "sentCount": 0,
+  "artifacts": [
+    {
+      "kind": "AssessmentReport",
+      "status": "Confirmed",
+      "fileName": "A_QDOS3100042_report.pdf"
+    },
+    {
+      "kind": "FeeNote",
+      "status": "Confirmed",
+      "fileName": "A_QDOS3100042_fee_note.pdf"
+    },
+    {
+      "kind": "RepairSpecification",
+      "status": "Confirmed",
+      "fileName": "A_QDOS3100042_repair_specification.pdf"
+    },
+    {
+      "kind": "ImagePack",
+      "status": "Confirmed",
+      "fileName": "A_QDOS3100042_images.pdf"
+    }
+  ],
+  "other": {
+    "reference": "QDOS3100042",
+    "gross": 270,
+    "outcome": "Repairable",
+    "salvageCategory": null,
+    "salvageValue": null,
+    "engineerValue": 5000.00,
+    "guide": "Glass\u0027s",
+    "artifacts": [
+      {
+        "kind": "AssessmentReport",
+        "status": "Confirmed",
+        "fileName": "QDOS3100042_report.pdf"
+      },
+      {
+        "kind": "FeeNote",
+        "status": "Confirmed",
+        "fileName": "QDOS3100042_fee_note.pdf"
+      },
+      {
+        "kind": "RepairSpecification",
+        "status": "Confirmed",
+        "fileName": "QDOS3100042_repair_specification.pdf"
+      },
+      {
+        "kind": "ImagePack",
+        "status": "Confirmed",
+        "fileName": "QDOS3100042_images.pdf"
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+<details id="mock-strip" open>
+  <summary><span>Mockup controls</span><small>v48 Send report dialog · Original report card</small></summary>
+  <div class="mock-body">
+    <label><small>Page</small>
+      <select id="mock-state" aria-label="Page"></select>
+    </label>
+    <div class="mock-seg" role="group" aria-label="View">
+      <button type="button" data-mode="today" title="The page as it is on dev today, captured from the application">Today</button>
+      <button type="button" data-mode="proposal" title="The same page with the proposed changes">Proposal</button>
+    </div>
+    <div class="mock-seg" role="group" aria-label="Overlays">
+      <button type="button" data-diff>Diff badges</button>
+      <button type="button" data-hide-strip>Hide controls</button>
+    </div>
+    <small>Dialogs (Proposal)</small>
+    <div class="mock-seg mock-seg--3" role="group" aria-label="Dialogs">
+      <button type="button" data-preset="dialog" title="Open the Send report dialog on this page">Send report</button>
+      <button type="button" data-preset="viewer" title="Open the first file in the Case viewer over the dialog">Preview</button>
+      <button type="button" data-preset="rename" title="Start renaming the report in the dialog">Rename</button>
+    </div>
+    <small>Variables</small>
+    <div class="mock-vars">
+      <label><small>Dialog width</small>
+        <select data-opt="width"><option value="880">880px (proposed)</option><option value="1100">1100px</option></select></label>
+      <label><small>Files</small>
+        <select data-opt="files"><option value="below">Below the message (proposed)</option><option value="beside">Beside the message</option></select></label>
+      <label><small>Card</small>
+        <select data-opt="card"><option value="after-figures">After Figures (proposed)</option><option value="before-figures">Before Figures</option></select></label>
+      <label><small>Money</small>
+        <select data-opt="money"><option value="pence">£5,000.00 (as the aside draws it)</option><option value="pounds">£5,000</option></select></label>
+      <button type="button" data-opt-reset>Reset variables</button>
+    </div>
+    <small>Proposed on this page</small>
+    <ul id="mock-changes"></ul>
+  </div>
+</details>
+<div id="mock-toast" role="status" aria-live="polite" hidden></div>

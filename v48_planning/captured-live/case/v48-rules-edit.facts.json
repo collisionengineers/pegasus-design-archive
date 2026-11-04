@@ -1,0 +1,19 @@
+{
+  "subject": "Re: Claim for AB12CDE \u2014 rear impact",
+  "reference": "QDOS3100042",
+  "registration": "AB12CDE",
+  "sentCount": 0,
+  "artifacts": [
+    {
+      "kind": "AssessmentReport",
+      "status": "Confirmed",
+      "fileName": "QDOS3100042_report.pdf"
+    },
+    {
+      "kind": "FeeNote",
+      "status": "Confirmed",
+      "fileName": "QDOS3100042_fee_note.pdf"
+    }
+  ],
+  "other": null
+}

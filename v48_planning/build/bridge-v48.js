@@ -1,0 +1,97 @@
+/* v48 mockup bridge. Runs first inside every composed page. There is no server
+   behind the mockup: requests for captured fragments are answered from the
+   capture, every other request never settles (so nothing flips to an error
+   state), and links between captured pages switch state in the parent. The
+   Send report form posts its fields to the parent (window.__mock.lastPost)
+   instead of the application. */
+(function () {
+  'use strict';
+  var host = window.parent;
+  function post(message) {
+    try { host.postMessage(message, '*'); } catch (e) { /* detached */ }
+  }
+  function local(url) {
+    var text = String(url || '');
+    var match = text.match(/^[a-z]+:\/\/[^/]+(\/.*)$/i);
+    return match ? match[1] : text;
+  }
+
+  // site.js builds URLs from window.location.href, which is about:srcdoc inside the frame.
+  var ORIGIN = 'https://localhost:7139';
+  var NativeURL = window.URL;
+  function PatchedURL(url, base) {
+    var u = String(url == null ? '' : url);
+    var b = base !== undefined ? String(base) : undefined;
+    if (!u || u.indexOf('about:') === 0) u = ORIGIN + '/';
+    if (b !== undefined && (!b || b.indexOf('about:') === 0)) b = ORIGIN + '/';
+    return b !== undefined ? new NativeURL(u, b) : new NativeURL(u, ORIGIN);
+  }
+  PatchedURL.prototype = NativeURL.prototype;
+  Object.setPrototypeOf(PatchedURL, NativeURL);
+  window.URL = PatchedURL;
+
+  var fragments = (host && host.__mockFragments) || {};
+  window.fetch = function (input) {
+    var url = local(typeof input === 'string' ? input : (input && input.url));
+    var html = fragments[url];
+    if (typeof html === 'string') {
+      return Promise.resolve(new Response(html, { status: 200, headers: { 'Content-Type': 'text/html; charset=utf-8' } }));
+    }
+    return new Promise(function () {});
+  };
+  window.XMLHttpRequest = function () {
+    return { open: function () {}, send: function () {}, setRequestHeader: function () {}, addEventListener: function () {}, abort: function () {} };
+  };
+  if (navigator.sendBeacon) navigator.sendBeacon = function () { return true; };
+  window.EventSource = function () { return { close: function () {}, addEventListener: function () {} }; };
+  history.pushState = function () {};
+  history.replaceState = function () {};
+  try { void window.localStorage.length; } catch (e) {
+    var store = {};
+    Object.defineProperty(window, 'localStorage', { value: {
+      getItem: function (k) { return Object.prototype.hasOwnProperty.call(store, k) ? store[k] : null; },
+      setItem: function (k, v) { store[k] = String(v); },
+      removeItem: function (k) { delete store[k]; },
+      clear: function () { store = {}; },
+      key: function (i) { return Object.keys(store)[i] || null; },
+      get length() { return Object.keys(store).length; }
+    } });
+  }
+
+  window.addEventListener('click', function (ev) {
+    if (ev.defaultPrevented) return;
+    var link = ev.target.closest && ev.target.closest('a[href]');
+    if (!link) return;
+    var href = link.getAttribute('href') || '';
+    if (!href || href.charAt(0) === '#' || /^(mailto:|tel:|javascript:)/i.test(href)) return;
+    ev.preventDefault();
+    post({ type: 'nav', href: local(href), text: (link.textContent || '').trim() });
+  });
+  // The Send report form (v48): what it would post goes to the parent, before the live
+  // in-place post can start a request that never settles. The browser's own required
+  // checks run before this, so an unanswered question or an unticked hold posts nothing.
+  window.addEventListener('submit', function (ev) {
+    var form = ev.target;
+    if (!form || !form.matches || !form.matches('form[data-send-report]')) return;
+    ev.preventDefault();
+    ev.stopImmediatePropagation();
+    var fields = [];
+    try {
+      new FormData(form, ev.submitter).forEach(function (value, key) { fields.push([key, String(value)]); });
+    } catch (e) {
+      new FormData(form).forEach(function (value, key) { fields.push([key, String(value)]); });
+    }
+    post({ type: 'posted', fields: fields, text: (ev.submitter && ev.submitter.textContent.trim()) || 'Send report' });
+    var dialog = form.closest('[data-dialog]');
+    var close = dialog && dialog.querySelector('[data-dialog-close]');
+    if (close) close.click();
+  }, true);
+  window.addEventListener('submit', function (ev) {
+    if (ev.defaultPrevented) return;
+    ev.preventDefault();
+    var button = ev.submitter;
+    post({ type: 'toast', text: (button && button.textContent.trim()) || 'Submitted' });
+  });
+  window.open = function (url) { post({ type: 'nav', href: local(url) }); return null; };
+  window.addEventListener('load', function () { post({ type: 'loaded' }); });
+})();
